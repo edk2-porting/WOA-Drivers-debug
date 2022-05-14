@@ -1,0 +1,386 @@
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+9611758f-8ec8-32a7-2451-9c2d80e2910b QcUsbFnSnps // SRC=DwcCommon.c MJ= MN=
+#typev QcUsbFnSnps_c813 47 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=QcUsbFnControllerConfigEp
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnSnps_c1272 47 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=QcUsbFnControllerGetEpStallState
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnSnps_c1083 84 "%0invalid command type" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=QcUsbFnControllerSetSEL
+{
+}
+#typev QcUsbFnSnps_c1083 82 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=QcUsbFnControllerSetSEL
+{
+}
+#typev QcUsbFnSnps_c1083 83 "%0device command is currently executing" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CommonCommand FUNC=QcUsbFnControllerSetSEL
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnSnps_c959 47 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=QcUsbFnControllerStart
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnSnpsUrb_c317 79 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=QcUsbFnUrbCancel
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnSnpsEvent_c547 32 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonInit FUNC=QcUsbFnSnpsHandleConnectDone
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnSnpsEvent_c937 94 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=QcUsbFnSnpsQueryEventBuffer
+{
+}
+#typev QcUsbFnSnpsEvent_c951 116 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=QcUsbFnSnpsQueryEventBuffer
+{
+}
+#typev QcUsbFnSnpsEvent_c949 117 "%0invalid event buffer index found, Ep: %10!d! EpDir: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=QcUsbFnSnpsQueryEventBuffer
+{
+Ep, ItemLong -- 10
+EpDir, ItemLong -- 11
+}
+#typev QcUsbFnSnpsEvent_c937 96 "%0%10!d! events available on event buffer %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonEvent FUNC=QcUsbFnSnpsQueryEventBuffer
+{
+*EvtCount, ItemLong -- 10
+EvtBufIndex, ItemLong -- 11
+}
+#typev QcUsbFnSnpsEvent_c937 95 "%0invalid event buffer index found, Ep: %10!d! EpDir: %11!d!, EvtBufIndex %12!d!, Dev->EvtBufferCount %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=QcUsbFnSnpsQueryEventBuffer
+{
+Ep, ItemLong -- 10
+EpDir, ItemLong -- 11
+EvtBufIndex, ItemLong -- 12
+Dev->EvtBufferCount, ItemLong -- 13
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev DwcCommon_c1473 75 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcCancelTransferByEp
+{
+}
+#typev DwcCommon_c1505 78 "%0failed to execute EndXfer command on physical endpoint %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcCancelTransferByEp
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c1498 77 "%0executing EndXfer command on physical endpoint %10!d!, resource ID %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonCommand FUNC=DwcCancelTransferByEp
+{
+EpIndex, ItemLong -- 10
+Dev->Ep[EpIndex].ResourceID, ItemLong -- 11
+}
+#typev DwcCommon_c1481 76 "%0no transfer to cancel on physical endpoint %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcCancelTransferByEp
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c763 35 "%0con't: TrbBuffer.Virtual %10!p!, MaxPktSize %11!d!, TrbBuffer.Physical Aligned %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonInit FUNC=DwcConfigureEP
+{
+(VOID *) TrbBuffer.Virtual, ItemPtr -- 10
+MaxPktSize, ItemLong -- 11
+TrbBuffer.Physical % DWC_TRB_ALIGN_SIZE, ItemLong -- 12
+}
+#typev DwcCommon_c756 34 "%0con't: TrbBufferSize %10!d!, Trb Buffer Size Aligned %11!d!, TrbBuffer.Physical %12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonInit FUNC=DwcConfigureEP
+{
+TrbBufferSize, ItemLong -- 10
+TrbBufferSize & DWC_TRB_ALIGN_MASK, ItemLong -- 11
+(VOID *)TrbBuffer.Physical, ItemPtr -- 12
+}
+#typev DwcCommon_c748 33 "%0invalid parameter: Dev %10!p!, Ep %11!d!, EpDir %12!d!, EvtBufferIndex %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonInit FUNC=DwcConfigureEP
+{
+Dev, ItemPtr -- 10
+Ep, ItemLong -- 11
+EpDir, ItemLong -- 12
+EvtBufferIndex, ItemLong -- 13
+}
+#typev DwcCommon_c812 38 "%0physical endpoint %10!d! uses event buffer %11!d!, max packet size %12!d!, TRB buffer size %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonInit FUNC=DwcConfigureEP
+{
+EpIndex, ItemLong -- 10
+EvtBufferIndex, ItemLong -- 11
+MaxPktSize, ItemLong -- 12
+TrbBufferSize, ItemLong -- 13
+}
+#typev DwcCommon_c786 37 "%0memory allocation failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonInit FUNC=DwcConfigureEP
+{
+}
+#typev DwcCommon_c776 36 "%0physical endpoint %10!d! already configured" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonInit FUNC=DwcConfigureEP
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c634 25 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonInit FUNC=DwcConfigureEventBuffer
+{
+}
+#typev DwcCommon_c690 31 "%0event buffer %10!d!, size %11!d! enabled" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CommonInit FUNC=DwcConfigureEventBuffer
+{
+EvtBufInd, ItemLong -- 10
+EvtBufferSize & 0x7FFFFFFF, ItemLong -- 11
+}
+#typev DwcCommon_c689 30 "%0GEVNTCOUNT = 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CommonInit FUNC=DwcConfigureEventBuffer
+{
+DWC_HWIO_INI(Dev->CoreBaseAddr. GEVNTCOUNT. EvtBufInd), ItemLong -- 10
+}
+#typev DwcCommon_c688 29 "%0GEVNTSIZ = 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CommonInit FUNC=DwcConfigureEventBuffer
+{
+DWC_HWIO_INI(Dev->CoreBaseAddr. GEVNTSIZ. EvtBufInd), ItemLong -- 10
+}
+#typev DwcCommon_c667 28 "%0GEVNTADRLO = 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CommonInit FUNC=DwcConfigureEventBuffer
+{
+DWC_HWIO_INI(Dev->CoreBaseAddr. GEVNTADRLO. EvtBufInd), ItemLong -- 10
+}
+#typev DwcCommon_c666 27 "%0GEVNTADRHI = 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CommonInit FUNC=DwcConfigureEventBuffer
+{
+DWC_HWIO_INI(Dev->CoreBaseAddr. GEVNTADRHI. EvtBufInd), ItemLong -- 10
+}
+#typev DwcCommon_c640 26 "%0the number of event buffers exceeds the hw limit" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonInit FUNC=DwcConfigureEventBuffer
+{
+}
+#typev DwcCommon_c1825 98 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=DwcCopyEvents
+{
+}
+#typev DwcCommon_c1867 100 "%0Write %10!d! bytes to GEVNTCOUNT, GEVNTCOUNT 0x%11!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CommonEvent FUNC=DwcCopyEvents
+{
+*EvtCnt, ItemLong -- 10
+DWC_HWIO_INI(Dev->CoreBaseAddr. GEVNTCOUNT. EvtBufIndex), ItemLong -- 11
+}
+#typev DwcCommon_c1841 99 "%0invalid event buffer index found, Ep: %10!d! EpDir: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=DwcCopyEvents
+{
+Ep, ItemLong -- 10
+EpDir, ItemLong -- 11
+}
+#typev DwcCommon_c1894 101 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=DwcGetNextEvent
+{
+}
+#typev DwcCommon_c1926 103 "%0Vendor Device Test LMP Received Event posted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonEvent FUNC=DwcGetNextEvent
+{
+}
+#typev DwcCommon_c1908 102 "%0invalid event buffer index found, Ep: %10!d! EpDir: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=DwcGetNextEvent
+{
+Ep, ItemLong -- 10
+EpDir, ItemLong -- 11
+}
+#typev DwcCommon_c2151 115 "%0SetupPndg is TRUE. Issued DwcCancelTransferByUrb on physical endpoint 1. Urb->TrbCtl = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcHandleEvent
+{
+Urb->TrbCtl, ItemLong -- 10
+}
+#typev DwcCommon_c2147 114 "%0SetupPndg is TRUE. But DwcCancelTransferByUrb failed for physical endpoint 1" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcHandleEvent
+{
+}
+#typev DwcCommon_c2129 113 "%0failed to synchronize trb ring for physical endpoint %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcHandleEvent
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c2095 112 "%0Pending Setup received: possible fast-forward condition" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonEvent FUNC=DwcHandleEvent
+{
+}
+#typev DwcCommon_c2090 111 "%0Short packet received: possible fast-forward condition" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonEvent FUNC=DwcHandleEvent
+{
+}
+#typev DwcCommon_c2079 110 "%0EP[%10!d!] State Incorrect: State = %11!d!, DEPCMD = 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=DwcHandleEvent
+{
+EpIndex, ItemLong -- 10
+Dev->Ep[EpIndex].State, ItemLong -- 11
+RegVal, ItemLong -- 12
+}
+#typev DwcCommon_c2066 109 "%0Urb is NULL. Skip Handling" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcHandleEvent
+{
+}
+#typev DwcCommon_c2052 17 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcHandleEvent
+{
+}
+#typev DwcCommon_c2047 108 "%0EndXfer command failed on physical endpoint %10!d!, EventStatus: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=DwcHandleEvent
+{
+EpIndex, ItemLong -- 10
+Evt->Endpoint.EventStatus, ItemLong -- 11
+}
+#typev DwcCommon_c2039 107 "%0EndXfer command complete on physical endpoint %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonEvent FUNC=DwcHandleEvent
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c2030 106 "%0StartXfer command failed on physical endpoint %10!d!, EventStatus: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=DwcHandleEvent
+{
+EpIndex, ItemLong -- 10
+Evt->Endpoint.EventStatus, ItemLong -- 11
+}
+#typev DwcCommon_c2022 105 "%0physical endpoint %10!d! using transfer resource id %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonEvent FUNC=DwcHandleEvent
+{
+EpIndex, ItemLong -- 10
+Dev->Ep[EpIndex].ResourceID, ItemLong -- 11
+}
+#typev DwcCommon_c1992 104 "%0EVENT BUFFER OVERFLOW!! Some events may have been dropped" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonEvent FUNC=DwcHandleEvent
+{
+}
+#typev DwcCommon_c519 21 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonInit FUNC=DwcInitialize
+{
+}
+#typev DwcCommon_c542 24 "%0memory allocation failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonInit FUNC=DwcInitialize
+{
+}
+#typev DwcCommon_c536 23 "%0Core base address: 0x%10!08p!, %11!d! event buffers supported" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonInit FUNC=DwcInitialize
+{
+(PVOID)Dev->CoreBaseAddr, ItemPtr -- 10
+Dev->DwcUsb3DeviceNumInt, ItemLong -- 11
+}
+#typev DwcCommon_c533 22 "%00 event buffers supported by core!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=CommonInit FUNC=DwcInitialize
+{
+}
+#typev DwcCommon_c999 48 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcPrepareURB
+{
+}
+#typev DwcCommon_c1016 50 "%0physical endpoint[%10!d!] not configured" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcPrepareURB
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c1009 49 "%0total transaction length[%10!d!] not a multiple of the maximum packet size[%11!d!] on phys ep[%12!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcPrepareURB
+{
+TotalTransactionLength, ItemLong -- 10
+Dev->Ep[EpIndex].MaxPktSize, ItemLong -- 11
+EpIndex, ItemLong -- 12
+}
+#typev DwcCommon_c837 39 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcSetEndpointStallState
+{
+}
+#typev DwcCommon_c935 46 "%0SetStall command execution times out" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcSetEndpointStallState
+{
+}
+#typev DwcCommon_c922 45 "%0Failed to execute Set/Clear Stall command on physical ep %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcSetEndpointStallState
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c898 44 "%0EndXfer command execution times out" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcSetEndpointStallState
+{
+}
+#typev DwcCommon_c883 43 "%0Failed to execute EndXfer command on physical ep %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcSetEndpointStallState
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c865 42 "%0issuing EndXfer command prior to ClearStall" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonCommand FUNC=DwcSetEndpointStallState
+{
+}
+#typev DwcCommon_c851 41 "%0can only SET stall on the OUT direction of control ep 0" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcSetEndpointStallState
+{
+}
+#typev DwcCommon_c845 40 "%0physical endpoint %10!d! is uninitialized" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcSetEndpointStallState
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c1341 63 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcSubmitURB
+{
+}
+#typev DwcCommon_c1365 64 "%0failed to get physical address of TD for physical endpoint %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcSubmitURB
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c1363 16 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcSubmitURB
+{
+}
+#typev DwcCommon_c1412 70 "%0StartXfer command succeeded" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonCommand FUNC=DwcSubmitURB
+{
+}
+#typev DwcCommon_c1409 69 "%0StartXfer command failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcSubmitURB
+{
+}
+#typev DwcCommon_c1401 68 "%0controller not running, polling for command completion" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonCommand FUNC=DwcSubmitURB
+{
+}
+#typev DwcCommon_c1392 67 "%0failed to execute StartXfer command on physical endpoint %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcSubmitURB
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c1387 66 "%0StartXfer: wake up controller" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CommonCommand FUNC=DwcSubmitURB
+{
+}
+#typev DwcCommon_c1377 65 "%0executing StartXfer command on physical endpoint %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonCommand FUNC=DwcSubmitURB
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c1447 74 "%0physical endpoint %10!d! is in invalid state %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcSubmitURB
+{
+EpIndex, ItemLong -- 10
+Dev->Ep[EpIndex].State, ItemLong -- 11
+}
+#typev DwcCommon_c1442 73 "%0failed to execute UpdateXfer command on physical endpoint %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcSubmitURB
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c1437 72 "%0UpdateXfer: wake up controller" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CommonCommand FUNC=DwcSubmitURB
+{
+}
+#typev DwcCommon_c1427 71 "%0executing UpdateXfer command on physical endpoint %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonCommand FUNC=DwcSubmitURB
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c449 18 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcSyncTrbRing
+{
+}
+#typev DwcCommon_c711 32 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonInit FUNC=DwcUpdateEPMaxPktSize
+{
+}
+#typev DwcCommon_c1063 51 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcUpdateURB
+{
+}
+#typev DwcCommon_c1268 59 "%0updated urb for phys ep %10!d! with %11!d! new TRBs and %12!d! additional length" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonTrb FUNC=DwcUpdateURB
+{
+EpIndex, ItemLong -- 10
+RingNewTRBs, ItemLong -- 11
+Urb->SGLen, ItemLong -- 12
+}
+#typev DwcCommon_c1248 58 "%0TRB is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcUpdateURB
+{
+}
+#typev DwcCommon_c1242 57 "%0TRB ring full, transfering as much as possible" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CommonTrb FUNC=DwcUpdateURB
+{
+}
+#typev DwcCommon_c1228 56 "%0FATAL ERROR CREATING TRBS!! Resetting ring and urb" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcUpdateURB
+{
+}
+#typev DwcCommon_c1109 55 "%0Control status stage submitted with nonzero length!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CommonTrb FUNC=DwcUpdateURB
+{
+}
+#typev DwcCommon_c1090 54 "%0TRB ring is full" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcUpdateURB
+{
+}
+#typev DwcCommon_c1084 53 "%0failed to synchronize TRB ring for physical endpoint %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcUpdateURB
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c1069 52 "%0invalid scatter/gather list" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonTrb FUNC=DwcUpdateURB
+{
+}
+#typev DwcCommon_c1640 85 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcWriteEndpointCommand
+{
+}
+#typev DwcCommon_c1699 92 "%0invalid command type" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonCommand FUNC=DwcWriteEndpointCommand
+{
+}
+#typev DwcCommon_c1714 93 "%0GUSB2PHYCFG = 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CommonCommand FUNC=DwcWriteEndpointCommand
+{
+DWC_HWIO_INI(Dev->CoreBaseAddr. GUSB2PHYCFG. 0), ItemLong -- 10
+}
+#typev DwcCommon_c1695 91 "%0DEPCMD = 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CommonCommand FUNC=DwcWriteEndpointCommand
+{
+DWC_HWIO_INI(Dev->CoreBaseAddr. DEPCMD. EpIndex), ItemLong -- 10
+}
+#typev DwcCommon_c1680 90 "%0DEPCMDPAR0 = 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CommonCommand FUNC=DwcWriteEndpointCommand
+{
+DWC_HWIO_INI(Dev->CoreBaseAddr. DEPCMDPAR0. EpIndex), ItemLong -- 10
+}
+#typev DwcCommon_c1679 89 "%0DEPCMDPAR1 = 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CommonCommand FUNC=DwcWriteEndpointCommand
+{
+DWC_HWIO_INI(Dev->CoreBaseAddr. DEPCMDPAR1. EpIndex), ItemLong -- 10
+}
+#typev DwcCommon_c1678 88 "%0DEPCMDPAR2 = 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CommonCommand FUNC=DwcWriteEndpointCommand
+{
+DWC_HWIO_INI(Dev->CoreBaseAddr. DEPCMDPAR2. EpIndex), ItemLong -- 10
+}
+#typev DwcCommon_c1667 87 "%0physical endpoint %10!d! command already executing" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CommonCommand FUNC=DwcWriteEndpointCommand
+{
+EpIndex, ItemLong -- 10
+}
+#typev DwcCommon_c1661 86 "%0GUSB2PHYCFG = 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CommonCommand FUNC=DwcWriteEndpointCommand
+{
+DWC_HWIO_INI(Dev->CoreBaseAddr. GUSB2PHYCFG. 0), ItemLong -- 10
+}

@@ -1,0 +1,296 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+6f237537-22da-3e83-ccac-e097d0e0ca4c WMRIL // SRC=WMRilVoiceCall.cpp MJ= MN=
+#typev WMRilSendFlash_cpp141 42 "%0%!LEVEL! %!FUNC!:Ignore Remote party flag is updated. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::SendFlashClass::Execute
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCallService_cpp1878 57 "%0%!LEVEL! %!FUNC!:Unable to translate sip character string to TCHAR" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::CallServiceClass::ProcessAllCallStatusInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCallService_cpp896 48 "%0%!LEVEL! %!FUNC!:Disconnect reason of the disconnected participants should be RIL_DISCREASON_HANDOVER_MERGE." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::CallServiceClass::SetVirtualCallStateToEnd
+{
+}
+#typev WMRilCallService_cpp896 47 "%0%!LEVEL! %!FUNC!:EndReason is updated. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::CallServiceClass::SetVirtualCallStateToEnd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp169 10 "%0%!LEVEL! %!FUNC!:%10!s! voice call is created. RIL id = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::VoiceCallClass
+{
+(Direction == CALL_DIRECTION_MO_V02)?'MO':'MT', ItemString -- 10
+dwRILCallID, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp179 11 "%0%!LEVEL! %!FUNC!:%10!s! voice call is deleted. RIL id = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::~VoiceCallClass
+{
+(m_Direction == CALL_DIRECTION_MO_V02)?'MO':'MT', ItemString -- 10
+m_CallInfo.dwID, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp1303 54 "%0%!LEVEL! %!FUNC!:Cleanup Additional call info processing" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::CleanupAdditionalCallerInfoProcessing
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp2142 71 "%0%!LEVEL! %!FUNC!:AlienCall=%10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::ReportState
+{
+IsAlienCall() ? 'True' : 'False', ItemString -- 10
+}
+#typev WMRilVoiceCall_cpp2127 70 "%0%!LEVEL! %!FUNC!:Mode=%10!s!, State=%11!s!, Type=%12!s!, RIL Call ID=%13!u!, Modem Call ID=%14!u!, Direction=%15!s!, MultiParty=%16!s!, End Reason=%17!s!(0x%18!02X!), Number="%19!s!", Name="%20!s!"" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::ReportState
+{
+Debug::QMIVoiceCallModeToStr(m_Mode), ItemWString -- 10
+Debug::WMRilCallStateToStr(m_State.Get()), ItemWString -- 11
+Debug::QMIVoiceCallTypeToStr(m_Type), ItemWString -- 12
+m_CallInfo.dwID, ItemLong -- 13
+m_ModemCallID, ItemLong -- 14
+(m_Direction == CALL_DIRECTION_MO_V02) ? 'Outgoing' : 'Incoming', ItemString -- 15
+(IsMultiParty()) ? 'True' : 'False', ItemString -- 16
+Debug::QMIVoiceEndCauseToStr(m_EndReason), ItemWString -- 17
+m_EndReason, ItemLong -- 18
+m_CallInfo.raAddress.wszAddress, ItemWString -- 19
+m_CallInfo.wszDescription, ItemWString -- 20
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp1638 59 "%0%!LEVEL! %!FUNC!:Invalid call modified cause code %10!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetCallModifiedCauseCode
+{
+CallModifiedCauseCode, ItemLong -- 10
+}
+#typev WMRilVoiceCall_cpp1634 58 "%0%!LEVEL! %!FUNC!:Ignore Call modified cause code %10!s! (%11!u!) as it is communicated via offer-answer set." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetCallModifiedCauseCode
+{
+CallModifiedCauseCode, ItemEnum(voice_call_modified_cause_enum_v02) -- 10
+CallModifiedCauseCode, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp1401 56 "%0%!LEVEL! %!FUNC!:DebugDump Path: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetDisconnectDetails
+{
+WMRIL_LOG_XSTR(&m_CallInfo.stDisconnectDetails. sizeof(m_CallInfo.stDisconnectDetails)), ItemHEXDump -- 10
+}
+#typev WMRilVoiceCall_cpp1399 55 "%0%!LEVEL! %!FUNC!:Unknown call mode %10!u!. Cannot map the call end reason %11!u! to disconnect details." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetDisconnectDetails
+{
+m_Mode, ItemLong -- 10
+EndReason, ItemLong -- 11
+}
+#typev WMRilVoiceCall_cpp1386 69 "%0%!LEVEL! %!FUNC!:Converted to SIP reason %10!s!(%11!u!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetDisconnectDetails
+{
+Debug::RILIMSSIPREASONToStr(PhraseReasonTable[i].Reason), ItemWString -- 10
+PhraseReasonTable[i].Reason, ItemLong -- 11
+}
+#typev WMRilVoiceCall_cpp1386 68 "%0%!LEVEL! %!FUNC!:Received the phrase "%10!s!"" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetDisconnectDetails
+{
+wszPhrase, ItemWString -- 10
+}
+#typev WMRilVoiceCall_cpp1380 67 "%0%!LEVEL! %!FUNC!:Converted %10!s! to SIP cause %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetDisconnectDetails
+{
+Debug::QMIVoiceEndCauseToStr(EndReason), ItemWString -- 10
+Cause, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp1348 65 "%0%!LEVEL! %!FUNC!:Converted %10!s! to cc cause %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetDisconnectDetails
+{
+Debug::QMIVoiceEndCauseToStr(EndReason), ItemWString -- 10
+CCCause, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp1359 66 "%0%!LEVEL! %!FUNC!:Converted %10!s! to reject cause %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetDisconnectDetails
+{
+Debug::QMIVoiceEndCauseToStr(EndReason), ItemWString -- 10
+RejectCause, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp1200 50 "%0%!LEVEL! %!FUNC!:VendorSpecificEndReason is updated. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetEndReason
+{
+}
+#typev WMRilVoiceCall_cpp1188 49 "%0%!LEVEL! %!FUNC!:End reason = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetEndReason
+{
+Debug::QMIVoiceEndCauseToStr(EndReason), ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp741 44 "%0%!LEVEL! %!FUNC!:EndReason is updated. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetEndReason
+{
+}
+#typev WMRilVoiceCall_cpp731 43 "%0%!LEVEL! %!FUNC!:End reason = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetEndReason
+{
+Debug::QMIVoiceEndCauseToStr(EndReason), ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp1138 46 "%0%!LEVEL! %!FUNC!:EndReason is updated. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetEndReasonAndDisconnectDetail
+{
+}
+#typev WMRilVoiceCall_cpp1133 45 "%0%!LEVEL! %!FUNC!:End reason = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetEndReasonAndDisconnectDetail
+{
+Debug::QMIVoiceEndCauseToStr(EndReason), ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp647 35 "%0%!LEVEL! %!FUNC!:IP Remote party name is updated with CI param. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetIPCallerName
+{
+}
+#typev WMRilVoiceCall_cpp692 41 "%0%!LEVEL! %!FUNC!:IP Remote party number is updated with CI description due to problem handling it. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetIPCallerName
+{
+}
+#typev WMRilVoiceCall_cpp684 40 "%0%!LEVEL! %!FUNC!:IP Remote party number is updated with CI description. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetIPCallerName
+{
+}
+#typev WMRilVoiceCall_cpp681 39 "%0%!LEVEL! %!FUNC!:Successfully updated the IP remote party name to the new one." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetIPCallerName
+{
+}
+#typev WMRilVoiceCall_cpp673 38 "%0%!LEVEL! %!FUNC!:Failed to copy the IP remote party name" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetIPCallerName
+{
+}
+#typev WMRilVoiceCall_cpp660 37 "%0%!LEVEL! %!FUNC!:IP Caller Name string will be truncated" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetIPCallerName
+{
+}
+#typev WMRilVoiceCall_cpp657 36 "%0%!LEVEL! %!FUNC!:Length of supplied IP Caller Name string is longer than expected. QMI_VOICE_IP_CALLER_NAME_MAX_LEN = %10!u!, IPCallerNameLength = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetIPCallerName
+{
+QMI_VOICE_IP_CALLER_NAME_MAX_LEN_V02, ItemLong -- 10
+IPCallerNameLength, ItemLong -- 11
+}
+#typev WMRilVoiceCall_cpp636 34 "%0%!LEVEL! %!FUNC!:IP Remote party name is updated with CI_NAME_PRES_IND. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetIPCallerName
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp345 14 "%0%!LEVEL! %!FUNC!:Default:Multi party state is updated. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetMultiParty
+{
+}
+#typev WMRilVoiceCall_cpp331 13 "%0%!LEVEL! %!FUNC!:Multi party state is updated to %10!d!. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetMultiParty
+{
+m_CallInfo.dwMultiparty, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp539 25 "%0%!LEVEL! %!FUNC!:Remote party number is updated with CI param. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyName
+{
+}
+#typev WMRilVoiceCall_cpp608 33 "%0%!LEVEL! %!FUNC!:Remote party number is updated with CI description due to problem handling it. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyName
+{
+}
+#typev WMRilVoiceCall_cpp600 32 "%0%!LEVEL! %!FUNC!:Remote party number is updated with CI description. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyName
+{
+}
+#typev WMRilVoiceCall_cpp597 31 "%0%!LEVEL! %!FUNC!:Successfully updated the name to the new one." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyName
+{
+}
+#typev WMRilVoiceCall_cpp593 30 "%0%!LEVEL! %!FUNC!:Failed to copy the remote party name" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyName
+{
+}
+#typev WMRilVoiceCall_cpp579 29 "%0%!LEVEL! %!FUNC!:Source Name or Destination NameBuffer set to NULL or length 0" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyName
+{
+}
+#typev WMRilVoiceCall_cpp574 28 "%0%!LEVEL! %!FUNC!:Unknown coding scheme %10!u!, performing default 7bit conversion" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyName
+{
+CodingScheme, ItemLong -- 10
+}
+#typev WMRilVoiceCall_cpp566 27 "%0%!LEVEL! %!FUNC!:Source Name or Destination NameBuffer set to NULL or length 0" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyName
+{
+}
+#typev WMRilVoiceCall_cpp557 26 "%0%!LEVEL! %!FUNC!:Source Name or Destination NameBuffer set to NULL or result buffer is not null terminated" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyName
+{
+}
+#typev WMRilVoiceCall_cpp528 24 "%0%!LEVEL! %!FUNC!:Remote party number is updated with CI_NAME_PRES_IND. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyName
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp412 17 "%0%!LEVEL! %!FUNC!:Remote party number is updated with ADDRESS. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyNumber
+{
+}
+#typev WMRilVoiceCall_cpp481 23 "%0%!LEVEL! %!FUNC!:Remote party number is updated with ADDRESS due to problem handling it. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyNumber
+{
+}
+#typev WMRilVoiceCall_cpp470 22 "%0%!LEVEL! %!FUNC!:Failed to copy the address number." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyNumber
+{
+}
+#typev WMRilVoiceCall_cpp466 21 "%0%!LEVEL! %!FUNC!:Remote party number is updated with ADDRESS Type. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyNumber
+{
+}
+#typev WMRilVoiceCall_cpp446 20 "%0%!LEVEL! %!FUNC!:Successfully updated the number to "%10!s!"" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyNumber
+{
+m_CallInfo.raAddress.wszAddress, ItemWString -- 10
+}
+#typev WMRilVoiceCall_cpp437 19 "%0%!LEVEL! %!FUNC!:Failed to convert the string to TCHAR" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyNumber
+{
+}
+#typev WMRilVoiceCall_cpp427 18 "%0%!LEVEL! %!FUNC!:Failed to get the length of the number string" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyNumber
+{
+}
+#typev WMRilVoiceCall_cpp399 16 "%0%!LEVEL! %!FUNC!:Remote party number is updated with PI. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyNumber
+{
+}
+#typev WMRilVoiceCall_cpp388 15 "%0%!LEVEL! %!FUNC!:Remote party number is updated with NUMPLAN. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRemotePartyNumber
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp1774 64 "%0%!LEVEL! %!FUNC!:RTT Capability is updated. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRttCapInfo
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp1736 63 "%0%!LEVEL! %!FUNC!:RTT Mode is updated. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRttModeInfo
+{
+}
+#typev WMRilVoiceCall_cpp1721 62 "%0%!LEVEL! %!FUNC!:Call Info:   m_CallInfo.dwStatus: %10!u! and GetCPIStatus: %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRttModeInfo
+{
+m_CallInfo.dwStatus, ItemLong -- 10
+GetCPIStatus(), ItemLong -- 11
+}
+#typev WMRilVoiceCall_cpp1708 61 "%0%!LEVEL! %!FUNC!:Invalid RTT Action:%10!u! or Mode received:%11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRttModeInfo
+{
+rttAction, ItemLong -- 10
+RTTMode, ItemLong -- 11
+}
+#typev WMRilVoiceCall_cpp1657 60 "%0%!LEVEL! %!FUNC!:Cached Call Info:  m_CachedCallInfo.dwStatus: %10!u! and GetCPIStatus: %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetRttModeInfo
+{
+m_CachedCallInfo.dwStatus, ItemLong -- 10
+GetCPIStatus(), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp226 12 "%0%!LEVEL! %!FUNC!:CallState is updated. Flag m_fCPIChanged set to true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::SetState
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp1292 53 "%0%!LEVEL! %!FUNC!:Additional caller info not processed as total_size expected is less than size of string" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::UpdateAdditionalCallerInfoString
+{
+}
+#typev WMRilVoiceCall_cpp1286 52 "%0%!LEVEL! %!FUNC!:Additional caller info string updated with information from sequence %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::UpdateAdditionalCallerInfoString
+{
+dwSequence, ItemLong -- 10
+}
+#typev WMRilVoiceCall_cpp1267 51 "%0%!LEVEL! %!FUNC!:Sequence number of indication %10!u! is greater than expected %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::UpdateAdditionalCallerInfoString
+{
+dwSequence+1, ItemLong -- 10
+GetAddtlCITotalNumOfSequenceExpected(), ItemLong -- 11
+}
+#enumv voice_call_modified_cause_enum_v02
+{
+VOICE_CALL_MODIFIED_CAUSE_ENUM_MIN_ENUM_VAL_V02,0x80000001
+VOICE_CALL_MODIFIED_CAUSE_NONE_V02,0x0
+VOICE_CALL_MODIFIED_CAUSE_UPGRADE_DUE_TO_LOCAL_REQ_V02,0x1
+VOICE_CALL_MODIFIED_CAUSE_UPGRADE_DUE_TO_REMOTE_REQ_V02,0x2
+VOICE_CALL_MODIFIED_CAUSE_DOWNGRADE_DUE_TO_LOCAL_REQ_V02,0x3
+VOICE_CALL_MODIFIED_CAUSE_DOWNGRADE_DUE_TO_REMOTE_REQ_V02,0x4
+VOICE_CALL_MODIFIED_CAUSE_DOWNGRADE_DUE_TO_RTP_TIMEOUT_V02,0x5
+VOICE_CALL_MODIFIED_CAUSE_DOWNGRADE_DUE_TO_QOS_V02,0x6
+VOICE_CALL_MODIFIED_CAUSE_DOWNGRADE_DUE_TO_PACKET_LOSS_V02,0x7
+VOICE_CALL_MODIFIED_CAUSE_DOWNGRADE_DUE_TO_LOW_THRPUT_V02,0x8
+VOICE_CALL_MODIFIED_CAUSE_DOWNGRADE_DUE_TO_THERM_MITIGATION_V02,0x9
+VOICE_CALL_MODIFIED_CAUSE_DOWNGRADE_DUE_TO_GENERIC_ERROR_V02,0xA
+VOICE_CALL_MODIFIED_CAUSE_DOWNGRADE_DUE_TO_LIPSYNC_V02,0xB
+VOICE_CALL_MODIFIED_CAUSE_ENUM_MAX_ENUM_VAL_V02,0x7FFFFFFF
+}

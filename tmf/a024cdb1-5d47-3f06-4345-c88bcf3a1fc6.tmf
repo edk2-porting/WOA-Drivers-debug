@@ -1,0 +1,111 @@
+// PDB:  qcremotefs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+a024cdb1-5d47-3f06-4345-c88bcf3a1fc6 10.4 // SRC=driver.c MJ= MN=
+#typev driver_c172 18 "%0RemoteFS: WdfDriverCreate failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=DriverEntry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c160 17 "%0RemoteFS DriverEntry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=DriverEntry
+{
+}
+// PDB:  qcremotefs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev driver_c634 39 "%0RFSCleanup" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RFSCleanup
+{
+}
+#typev driver_c534 36 "%0Failed to create RmtfsServer thread" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RFSD0Entry
+{
+}
+#typev driver_c510 35 "%0RFSD0Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RFSD0Entry
+{
+}
+#typev driver_c561 37 "%0RFSD0Exit, TargetState = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RFSD0Exit
+{
+TargetState, ItemLong -- 10
+}
+#typev driver_c288 24 "%0Unable to get harddisk for FS partitions, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RFSDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c275 23 "%0Failed to create GlobalVarLock, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RFSDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c262 22 "%0%!FUNC!ERROR::WdfDeviceAssignS0IdleSettings failed %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RFSDeviceAdd
+{
+Status, ItemLong -- 10
+}
+#typev driver_c234 21 "%0RemoteFS: WdfDeviceCreate failed, status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RFSDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c226 20 "%0RemoteFS: WdfDeviceInitAssignWdmIrpPreprocessCallback failed, status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RFSDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c208 19 "%0RFSDeviceAdd" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RFSDeviceAdd
+{
+}
+#typev driver_c335 26 "%0RemoteFS ResourceList is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RFSPrepareHardware
+{
+}
+#typev driver_c352 28 "%0RemoteFS SharedBufferAddr: %10!I64x!, SharedBufferSize: %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=RFSPrepareHardware
+{
+DevCtxt->RfsSharedBufferAddr, ItemLongLongX -- 10
+DevCtxt->RfsSharedBufferSize, ItemLong -- 11
+}
+#typev driver_c342 27 "%0RemoteFS Resource Type is not CmResourceTypeMemory. Skipping" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RFSPrepareHardware
+{
+}
+#typev driver_c319 25 "%0RFSPrepareHardware" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RFSPrepareHardware
+{
+}
+#typev driver_c610 38 "%0RFSSurpriseRemoval" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RFSSurpriseRemoval
+{
+}
+#typev driver_c668 40 "%0RFSUnload" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RFSUnload
+{
+}
+#typev driver_c400 30 "%0RemoteFS Incorrect Major (0x%10!x!) or Minor (0x%11!x!) Function" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RFSWdmIrpPreprocess
+{
+IrpStackLoc->MajorFunction, ItemLong -- 10
+IrpStackLoc->MinorFunction, ItemLong -- 11
+}
+#typev driver_c457 33 "%0RemoteFS WdfDeviceWdmDispatchPreprocessedIrp failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RFSWdmIrpPreprocess
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c424 32 "%0RemoteFS Can't allocate NewDevRelations" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RFSWdmIrpPreprocess
+{
+}
+#typev driver_c407 31 "%0RFSWdmIrpPreprocess DiskIoTarget NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RFSWdmIrpPreprocess
+{
+}
+#typev driver_c386 29 "%0RFSWdmIrpPreprocess" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RFSWdmIrpPreprocess
+{
+}
+#typev driver_c484 34 "%0RfsServerNotify: ServerThreadId" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RfsServerNotify
+{
+}
+#typev driver_c131 16 "%0RemoteFS server unregistered successfully" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=RmtfsServer
+{
+}
+#typev driver_c127 15 "%0Failure to unregister RemoteFS server" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RmtfsServer
+{
+}
+#typev driver_c124 14 "%0RemoteFS server Cleanup event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=RmtfsServer
+{
+}
+#typev driver_c115 13 "%0RemoteFS server QMI event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=RmtfsServer
+{
+}
+#typev driver_c102 12 "%0Remote FS Service Provider: %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=RmtfsServer
+{
+RfsServiceProvider, ItemPtr -- 10
+}
+#typev driver_c98 11 "%0Remote FS Service Registration failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RmtfsServer
+{
+}
+#typev driver_c69 10 "%0Rmtfs Server" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RmtfsServer
+{
+}

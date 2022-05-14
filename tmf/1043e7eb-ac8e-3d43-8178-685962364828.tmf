@@ -1,0 +1,531 @@
+// PDB:  ufnserialclass.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+1043e7eb-ac8e-3d43-8178-685962364828 src // SRC=ioctl.c MJ= MN=
+#typev ioctl_c2349 120 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=EvtWorkItemPopulateClientBamPipeConfigData
+{
+}
+#typev ioctl_c2340 66 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=EvtWorkItemPopulateClientBamPipeConfigData
+{
+}
+#typev ioctl_c2340 65 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=EvtWorkItemPopulateClientBamPipeConfigData
+{
+}
+#typev ioctl_c2330 119 "%0WdfRequestRetrieveOutputBuffer failed with error %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=EvtWorkItemPopulateClientBamPipeConfigData
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2321 118 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=EvtWorkItemPopulateClientBamPipeConfigData
+{
+}
+#typev ioctl_c1147 64 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=HandleUsbGetClassInfo
+{
+}
+#typev ioctl_c1140 63 "%0Ifc %10!s! - ifc num %11!d!, pipe cnt %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTL FUNC=HandleUsbGetClassInfo
+{
+pClassInfo->InterfaceName, ItemWString -- 10
+pClassInfo->HighSpeedClassInterface.InterfaceNumber, ItemLong -- 11
+pClassInfo->HighSpeedClassInterface.PipeCount, ItemLong -- 12
+}
+#typev ioctl_c1131 62 "%0Ifc %10!s! - WdfRequestRetrieveOutputBuffer failed with status code %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=HandleUsbGetClassInfo
+{
+DeviceContext->ClassInfo.InterfaceName, ItemWString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev ioctl_c1116 61 "%0OutputBufferLength [%10!Id!] != sizeof(USBFN_CLASS_INFORMATION_PACKET) [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=HandleUsbGetClassInfo
+{
+OutputBufferLength, ItemPtr -- 10
+sizeof(USBFN_CLASS_INFORMATION_PACKET), ItemLong -- 11
+}
+#typev ioctl_c1113 60 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=HandleUsbGetClassInfo
+{
+}
+#typev ioctl_c221 12 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=NotifyUsbPipeStateFromOpenParam
+{
+}
+#typev ioctl_c204 11 "%0Device %10!s! (0x%11!Ix!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTL FUNC=NotifyUsbPipeStateFromOpenParam
+{
+deviceContext->ClassInfo.InterfaceName, ItemWString -- 10
+(ULONG_PTR)device, ItemPtr -- 11
+}
+#typev ioctl_c202 10 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=NotifyUsbPipeStateFromOpenParam
+{
+}
+#typev ioctl_c2296 117 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UpdateBamConfigDataFromReg
+{
+}
+#typev ioctl_c2253 116 "%0RtlUnicodeStringInit failed with error %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UpdateBamConfigDataFromReg
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2241 115 "%0WdfDeviceOpenRegistryKey failed with error %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UpdateBamConfigDataFromReg
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2237 114 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UpdateBamConfigDataFromReg
+{
+}
+#typev ioctl_c2556 130 "%0ERROR - WdfMemoryCopyToBuffer failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxChTrafficToPipeId
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  ufnserialclass.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev ioctl_c1895 97 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientActivateBusCompletionRoutine
+{
+}
+#typev ioctl_c1880 96 "%0Dev Name (%10!s!) Handle (0x%11!p!) ifc (%12!d!) Req (0x%13!p!) Cmplt Status (%14!s!), Information (%15!Id!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxClientActivateBusCompletionRoutine
+{
+devCtxt->ClassInfo.InterfaceName, ItemWString -- 10
+devCtxt->Device, ItemPtr -- 11
+devCtxt->ClassInfo.HighSpeedClassInterface.InterfaceNumber, ItemLong -- 12
+Request, ItemPtr -- 13
+Params->IoStatus.Status, ItemNTSTATUS -- 14
+Params->IoStatus.Information, ItemPtr -- 15
+}
+#typev ioctl_c1877 95 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientActivateBusCompletionRoutine
+{
+}
+#typev ioctl_c1751 87 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientBamSetXferStateCompletionRoutine
+{
+}
+#typev ioctl_c1736 86 "%0Dev Name (%10!s!) Handle (0x%11!p!) ifc (%12!d!) Req (0x%13!p!) Cmplt Status (%14!s!), Information (%15!Id!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTL FUNC=UsbGxClientBamSetXferStateCompletionRoutine
+{
+devCtxt->ClassInfo.InterfaceName, ItemWString -- 10
+devCtxt->Device, ItemPtr -- 11
+devCtxt->ClassInfo.HighSpeedClassInterface.InterfaceNumber, ItemLong -- 12
+Request, ItemPtr -- 13
+Params->IoStatus.Status, ItemNTSTATUS -- 14
+Params->IoStatus.Information, ItemPtr -- 15
+}
+#typev ioctl_c1733 85 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientBamSetXferStateCompletionRoutine
+{
+}
+#typev ioctl_c1636 81 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientConfigBamHardware
+{
+}
+#typev ioctl_c1626 80 "%0ERROR - WdfRequestSend failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxClientConfigBamHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c1612 79 "%0ERROR - WdfIoTargetFormatRequestForInternalIoctl failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxClientConfigBamHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c1593 78 "%0ERROR - WdfRequestRetrieveInputMemory failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxClientConfigBamHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c1575 75 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientConfigBamHardware
+{
+}
+#typev ioctl_c1575 74 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientConfigBamHardware
+{
+}
+#typev ioctl_c1550 77 "%0ERROR - WdfRequestRetrieveInputBuffer failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxClientConfigBamHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c1534 76 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientConfigBamHardware
+{
+}
+#typev ioctl_c1959 100 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientConfigBamHardwareCompletionRoutine
+{
+}
+#typev ioctl_c1934 99 "%0Dev Name (%10!s!) Hand1le (0x%11!p!) ifc (%12!d!) Req (0x%13!p!) Cmplt Status (%14!s!), Information (%15!Id!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxClientConfigBamHardwareCompletionRoutine
+{
+devCtxt->ClassInfo.InterfaceName, ItemWString -- 10
+devCtxt->Device, ItemPtr -- 11
+devCtxt->ClassInfo.HighSpeedClassInterface.InterfaceNumber, ItemLong -- 12
+Request, ItemPtr -- 13
+Params->IoStatus.Status, ItemNTSTATUS -- 14
+Params->IoStatus.Information, ItemPtr -- 15
+}
+#typev ioctl_c1931 98 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientConfigBamHardwareCompletionRoutine
+{
+}
+#typev ioctl_c1844 94 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientGsiIoctlCompletionRoutine
+{
+}
+#typev ioctl_c1826 91 "%0Signal HwDLPipeClearEvent" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTL FUNC=UsbGxClientGsiIoctlCompletionRoutine
+{
+}
+#typev ioctl_c1834 93 "%0Unknown Traffic Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientGsiIoctlCompletionRoutine
+{
+pChId->ChTraffic, ItemLong -- 10
+}
+#typev ioctl_c1830 92 "%0Signal HwULPipeClearEvent" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTL FUNC=UsbGxClientGsiIoctlCompletionRoutine
+{
+}
+#typev ioctl_c1822 90 "%0hwPipeCtxt not initialized" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientGsiIoctlCompletionRoutine
+{
+}
+#typev ioctl_c1785 89 "%0Dev Name (%10!s!): IOCTL %11!s! Handle (0x%12!p!) ifc (%13!d!) Req (0x%14!p!) Cmplt Status (%15!s!), Information (%16!Id!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTL FUNC=UsbGxClientGsiIoctlCompletionRoutine
+{
+devCtxt->ClassInfo.InterfaceName, ItemWString -- 10
+DbgUsbIoctlString(Params->Parameters.Ioctl.IoControlCode), ItemString -- 11
+devCtxt->Device, ItemPtr -- 12
+devCtxt->ClassInfo.HighSpeedClassInterface.InterfaceNumber, ItemLong -- 13
+Request, ItemPtr -- 14
+Params->IoStatus.Status, ItemNTSTATUS -- 15
+Params->IoStatus.Information, ItemPtr -- 16
+}
+#typev ioctl_c1782 88 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientGsiIoctlCompletionRoutine
+{
+}
+#typev ioctl_c2129 110 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleActivateBus
+{
+}
+#typev ioctl_c2118 109 "%0ERROR - WdfRequestSend failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxClientHandleActivateBus
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2103 108 "%0ERROR - WdfIoTargetFormatRequestForInternalIoctl failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxClientHandleActivateBus
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2082 107 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleActivateBus
+{
+}
+#typev ioctl_c2447 125 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleBamSetXferState
+{
+}
+#typev ioctl_c2436 124 "%0ERROR - WdfRequestSend failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleBamSetXferState
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2421 123 "%0ERROR - WdfIoTargetFormatRequestForInternalIoctl failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleBamSetXferState
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2400 122 "%0ERROR - WdfRequestRetrieveInputMemory failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleBamSetXferState
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2384 121 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleBamSetXferState
+{
+}
+#typev ioctl_c1443 73 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleGetBamCfg
+{
+}
+#typev ioctl_c1430 72 "%0WdfWorkItemCreate failed with error %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleGetBamCfg
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c1416 69 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleGetBamCfg
+{
+}
+#typev ioctl_c1416 68 "%0WdfObjectAllocateContext failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleGetBamCfg
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c1416 67 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleGetBamCfg
+{
+}
+#typev ioctl_c1406 71 "%0Invalid OutputBufferLength [%10!Id!]. sizeof(BamPipeConfig) [%11!Id!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleGetBamCfg
+{
+BufferLength, ItemPtr -- 10
+sizeof(BamPipeConfig), ItemPtr -- 11
+}
+#typev ioctl_c1403 70 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleGetBamCfg
+{
+}
+#typev ioctl_c2732 138 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleGsiExConfig
+{
+}
+#typev ioctl_c2721 137 "%0ERROR - WdfRequestSend failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleGsiExConfig
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2700 136 "%0ERROR - WdfIoTargetFormatRequestForInternalIoctl failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleGsiExConfig
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2681 135 "%0ERROR - WdfRequestRetrieveOutputMemory failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleGsiExConfig
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2665 134 "%0ERROR - no buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleGsiExConfig
+{
+}
+#typev ioctl_c2653 133 "%0ERROR - WdfRequestRetrieveInputMemory failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleGsiExConfig
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2642 132 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleGsiExConfig
+{
+}
+#typev ioctl_c2833 144 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleGsiSetXferSt
+{
+}
+#typev ioctl_c2822 143 "%0ERROR - WdfRequestSend failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleGsiSetXferSt
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2806 142 "%0ERROR - WdfIoTargetFormatRequestForInternalIoctl failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleGsiSetXferSt
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2788 141 "%0ERROR - no buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleGsiSetXferSt
+{
+}
+#typev ioctl_c2777 140 "%0ERROR - WdfRequestRetrieveInputMemory failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxClientHandleGsiSetXferSt
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2763 139 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleGsiSetXferSt
+{
+}
+#typev ioctl_c2051 106 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleNotifyBamPipeClear
+{
+}
+#typev ioctl_c2040 105 "%0ERROR - WdfRequestSend failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxClientHandleNotifyBamPipeClear
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2025 104 "%0ERROR - WdfIoTargetFormatRequestForInternalIoctl failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxClientHandleNotifyBamPipeClear
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c2009 103 "%0hwPipeCtxt not initialized" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxClientHandleNotifyBamPipeClear
+{
+}
+#typev ioctl_c1997 102 "%0ERROR - invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxClientHandleNotifyBamPipeClear
+{
+}
+#typev ioctl_c1991 101 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientHandleNotifyBamPipeClear
+{
+}
+#typev ioctl_c2183 113 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientNotifyBamPipeClearCompletionRoutine
+{
+}
+#typev ioctl_c2166 112 "%0Dev Name (%10!s!) Handle (0x%11!p!) ifc (%12!d!) Req (0x%13!p!) Cmplt Status (%14!s!), Information (%15!Id!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxClientNotifyBamPipeClearCompletionRoutine
+{
+devCtxt->ClassInfo.InterfaceName, ItemWString -- 10
+devCtxt->Device, ItemPtr -- 11
+devCtxt->ClassInfo.HighSpeedClassInterface.InterfaceNumber, ItemLong -- 12
+Request, ItemPtr -- 13
+Params->IoStatus.Status, ItemNTSTATUS -- 14
+Params->IoStatus.Information, ItemPtr -- 15
+}
+#typev ioctl_c2163 111 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientNotifyBamPipeClearCompletionRoutine
+{
+}
+#typev ioctl_c982 52 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c944 51 "%0ERROR - INVALID IOCTL CODE 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+IoControlCode, ItemLong -- 10
+}
+#typev ioctl_c920 129 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c920 128 "%0ERROR - pGsiSupType is not BI, but %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+*pGsiSupType, ItemLong -- 10
+}
+#typev ioctl_c920 127 "%0ERROR - WdfRequestRetrieveOutputBuffer failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c920 126 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c900 84 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c900 83 "%0Invalid OutputBufferLength [%10!Id!]. sizeof(BamPipeConfig) [%11!Id!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+BufferLength, ItemPtr -- 10
+sizeof(BamPipeConfig), ItemPtr -- 11
+}
+#typev ioctl_c900 82 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c881 50 "%0ERROR - WdfRequestSend failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c866 49 "%0ERROR - Cannot forward IOCTL_USB_SEND_QMI_RESPONSE request to queue. status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev ioctl_c855 48 "%0Error: unable to add SEND_RESPONSE request to  ManualQueueRequestCollection 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev ioctl_c836 47 "%0ERROR - WdfIoTargetFormatRequestForInternalIoctl failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c814 46 "%0ERROR - Cannot find the pipe for transfer, status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev ioctl_c792 45 "%0ERROR - WdfMemoryCreate failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c769 44 "%0ERROR - WdfRequestCreate failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c751 43 "%0ERROR - zero byte input buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c720 42 "%0IOCTL_USB_GET_QMI_REQUEST enqueue Work item" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c710 41 "%0Error: Cannot forward IOCTL_USB_GET_QMI_REQUEST request to queue. status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev ioctl_c698 40 "%0Error: unable to add GET_ENCAPSULATED_COMMAND request to  ManualQueueRequestCollection 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev ioctl_c686 39 "%0Error: WdfWorkItemCreate (GetQMIRequest) failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c667 38 "%0IOCTL_USB_GET_CONTROL_LINE_STATE enqueue Work item" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c657 37 "%0Error: Cannot forward IOCTL_USB_GET_CONTROL_LINE_STATE request to queue. status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev ioctl_c645 36 "%0ERROR - Unable to add GET_CONTROL_LINE_STATE request to collection with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c629 35 "%0Error: WdfWorkItemCreate failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c611 34 "%0serial state is send to USBFn" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c598 33 "%0ERROR - WdfRequestSend failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c585 32 "%0ERROR - Unable to add Send_Serial_State request to collection with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c577 31 "%0ADD Request (%10!p!) to SentRequestCollection" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+Request, ItemPtr -- 10
+}
+#typev ioctl_c562 30 "%0ERROR - WdfIoTargetFormatRequestForInternalIoctl failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c541 29 "%0Error: Cannot find the pipe for transfer, status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev ioctl_c518 28 "%0Serial State From Client 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxEvtIoDeviceControl
+{
+notification->SerialState, ItemLong -- 10
+}
+#typev ioctl_c509 27 "%0ERROR - WdfMemoryCopyToBuffer failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c493 26 "%0ERROR - WdfMemoryCreate failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c472 25 "%0ERROR - Unable to obtain memory object from client write request, status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev ioctl_c461 24 "%0ERROR- zero byte input buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c438 23 "%0WdfObjectAllocateContext failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c416 22 "%0Pass USBFn IoTarget (0x%10!Ix!) to RMNET" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+(ULONG_PTR)ioTarget, ItemPtr -- 10
+}
+#typev ioctl_c405 21 "%0ERROR- Fail to WdfWorkItemCreate w/ status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c385 20 "%0ERROR- Input buffer is null" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c374 19 "%0ERROR- Fail to WdfRequestRetrieveInputBuffer w/ status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ioctl_c364 18 "%0ERROR- zero byte input buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c342 17 "%0IOCTL %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+DbgUsbIoctlString(IoControlCode), ItemString -- 10
+}
+#typev ioctl_c341 16 "%0Device %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControl
+{
+deviceContext->ClassInfo.InterfaceName, ItemWString -- 10
+}
+#typev ioctl_c335 15 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoDeviceControl
+{
+}
+#typev ioctl_c270 14 "%0Device %10!s! (0x%11!Ix!) - IOCTL %12!s! (0x%13!x!), Queue:0x%14!p!, Request:0x%15!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoDeviceControlParallel
+{
+deviceContext->ClassInfo.InterfaceName, ItemWString -- 10
+(ULONG_PTR)device, ItemPtr -- 11
+DbgUsbIoctlString(IoControlCode), ItemString -- 12
+IoControlCode, ItemLong -- 13
+Queue, ItemPtr -- 14
+Request, ItemPtr -- 15
+}
+#typev ioctl_c265 13 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoDeviceControlParallel
+{
+}
+#typev ioctl_c2604 131 "%0ERROR - Configurations[%10!d!].ChTraffic %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxPopulateGsiCfg
+{
+i, ItemLong -- 10
+Configurations[i].ChTraffic, ItemLong -- 11
+}
+#typev ioctl_c2599 130 "%0ERROR - WdfMemoryCopyToBuffer failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxPopulateGsiCfg
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  ufnserialclass.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev ioctl_c1101 59 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxResponseAvailableCompletionRoutine
+{
+}
+#typev ioctl_c1063 58 "%0Ifc %10!d! - return status code %11!s!, information %12!Id!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxResponseAvailableCompletionRoutine
+{
+deviceContext->ClassInfo.HighSpeedClassInterface.InterfaceNumber, ItemLong -- 10
+Params->IoStatus.Status, ItemNTSTATUS -- 11
+Params->IoStatus.Information, ItemPtr -- 12
+}
+#typev ioctl_c1061 57 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxResponseAvailableCompletionRoutine
+{
+}
+#typev ioctl_c1027 56 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxSendSerialStateCompletionRoutine
+{
+}
+#typev ioctl_c1014 55 "%0Complete Request (%10!p!) from SentRequestCollection" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTL FUNC=UsbGxSendSerialStateCompletionRoutine
+{
+Request, ItemPtr -- 10
+}
+#typev ioctl_c1001 54 "%0Ifc %10!d! - return status code %11!s!, information %12!Id!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxSendSerialStateCompletionRoutine
+{
+deviceContext->ClassInfo.HighSpeedClassInterface.InterfaceNumber, ItemLong -- 10
+Params->IoStatus.Status, ItemNTSTATUS -- 11
+Params->IoStatus.Information, ItemPtr -- 12
+}
+#typev ioctl_c997 53 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxSendSerialStateCompletionRoutine
+{
+}

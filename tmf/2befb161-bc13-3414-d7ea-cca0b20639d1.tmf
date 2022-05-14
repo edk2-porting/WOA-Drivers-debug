@@ -1,0 +1,1021 @@
+// PDB:  qcsubsys850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+2befb161-bc13-3414-d7ea-cca0b20639d1 subsys // SRC=interfaces.c MJ= MN=
+#typev interfaces_c1496 144 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=CleanupDeviceInterfaces
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c1500 145 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=CleanupDeviceInterfaces
+{
+}
+#typev interfaces_c1485 143 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Successfully unregistered for PIL Device Class Interface notifications and closed the %11!d! th interface connection." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=CleanupDeviceInterfaces
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+i, ItemLong -- 11
+}
+#typev interfaces_c1478 142 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::closing the IO target connection to the interface GUID: 0x%11!08X!, iotarget = %12!p! " //   LEVEL=LOG_WARN FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=CleanupDeviceInterfaces
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceContext->DevInterfaces[i].InterfaceGUID.Data1, ItemLong -- 11
+deviceContext->DevInterfaces[i].InterfaceIoTarget, ItemPtr -- 12
+}
+#typev interfaces_c1473 141 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Already closed the IO target connection to the interface GUID: 0x%11!08X! " //   LEVEL=LOG_WARN FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=CleanupDeviceInterfaces
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceContext->DevInterfaces[i].InterfaceGUID.Data1, ItemLong -- 11
+}
+#typev interfaces_c1455 140 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::IoUnregisterPlugPlayNotification failed  for interface GUID: 0x%11!08X! with status %12!s!" //   LEVEL=LOG_WARN FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=CleanupDeviceInterfaces
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceContext->DevInterfaces[i].InterfaceGUID.Data1, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev interfaces_c1448 139 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Already unregistered for Interface GUID: 0x%11!08X! Class notification." //   LEVEL=LOG_WARN FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=CleanupDeviceInterfaces
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceContext->DevInterfaces[i].InterfaceGUID.Data1, ItemLong -- 11
+}
+#typev interfaces_c1438 138 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Unable to acquire Interface lock!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=CleanupDeviceInterfaces
+{
+}
+#typev interfaces_c1429 137 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::PIL Device context found invalid in UnsubscribePilDeviceInterfaceClass function" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=CleanupDeviceInterfaces
+{
+}
+#typev interfaces_c1421 136 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Parameters passed to UnsubscribePilDeviceInterfaceClass function are not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=CleanupDeviceInterfaces
+{
+}
+#typev interfaces_c1415 135 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=CleanupDeviceInterfaces
+{
+}
+#typev interfaces_c1496 144 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=CleanupDeviceInterfaces$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c1500 145 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=CleanupDeviceInterfaces$fin$0
+{
+}
+#typev interfaces_c1485 143 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Successfully unregistered for PIL Device Class Interface notifications and closed the %11!d! th interface connection." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=CleanupDeviceInterfaces$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+i, ItemLong -- 11
+}
+#typev interfaces_c1478 142 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::closing the IO target connection to the interface GUID: 0x%11!08X!, iotarget = %12!p! " //   LEVEL=LOG_WARN FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=CleanupDeviceInterfaces$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceContext->DevInterfaces[i].InterfaceGUID.Data1, ItemLong -- 11
+deviceContext->DevInterfaces[i].InterfaceIoTarget, ItemPtr -- 12
+}
+#typev interfaces_c1473 141 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Already closed the IO target connection to the interface GUID: 0x%11!08X! " //   LEVEL=LOG_WARN FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=CleanupDeviceInterfaces$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceContext->DevInterfaces[i].InterfaceGUID.Data1, ItemLong -- 11
+}
+#typev interfaces_c1455 140 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::IoUnregisterPlugPlayNotification failed  for interface GUID: 0x%11!08X! with status %12!s!" //   LEVEL=LOG_WARN FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=CleanupDeviceInterfaces$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceContext->DevInterfaces[i].InterfaceGUID.Data1, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev interfaces_c1448 139 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Already unregistered for Interface GUID: 0x%11!08X! Class notification." //   LEVEL=LOG_WARN FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=CleanupDeviceInterfaces$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceContext->DevInterfaces[i].InterfaceGUID.Data1, ItemLong -- 11
+}
+#typev interfaces_c1438 138 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Unable to acquire Interface lock!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=CleanupDeviceInterfaces$fin$0
+{
+}
+#typev interfaces_c1429 137 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::PIL Device context found invalid in UnsubscribePilDeviceInterfaceClass function" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=CleanupDeviceInterfaces$fin$0
+{
+}
+#typev interfaces_c1421 136 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Parameters passed to UnsubscribePilDeviceInterfaceClass function are not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=CleanupDeviceInterfaces$fin$0
+{
+}
+#typev interfaces_c1415 135 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=CleanupDeviceInterfaces$fin$0
+{
+}
+#typev interfaces_c294 27 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c321 28 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit with status %10!s! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c284 26 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Unable to find Interfaces key for device, returned status = %10!s!" //   LEVEL=LOG_WARN FLAGS=SUBSYS FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c267 25 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlGUIDFromString with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c251 24 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::FAILURE: Could not allocated memory to hold Interfaces for device " //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=InitInterfacesFromRegistry
+{
+}
+#typev interfaces_c241 23 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed WdfRegistryQueryMultiString with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c226 22 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed WdfCollectionCreate with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c198 21 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAppendUnicodeStringToString wDriverNameStr with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c191 20 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAppendUnicodeStringToString STR_BACKSLASH with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c185 19 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAppendUnicodeStringToString chipinfo with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c179 18 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlIntegerToUnicodeString chipinfo with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c171 17 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAppendUnicodeStringToString wDriverNameStr with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c164 16 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAppendUnicodeStringToString STR_BACKSLASH with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c158 15 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAppendUnicodeStringToString chipinfo with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c152 14 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlIntegerToUnicodeString chipinfo with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c144 13 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAnsiStringToUnicodeString driverName with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c137 12 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlInitAnsiStringEx driverName with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c125 11 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed WdfDeviceOpenRegistryKey with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c97 10 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=InitInterfacesFromRegistry
+{
+}
+#typev interfaces_c294 27 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c321 28 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit with status %10!s! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c284 26 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Unable to find Interfaces key for device, returned status = %10!s!" //   LEVEL=LOG_WARN FLAGS=SUBSYS FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c267 25 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlGUIDFromString with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c251 24 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::FAILURE: Could not allocated memory to hold Interfaces for device " //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=InitInterfacesFromRegistry$fin$0
+{
+}
+#typev interfaces_c241 23 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed WdfRegistryQueryMultiString with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c226 22 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed WdfCollectionCreate with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c198 21 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAppendUnicodeStringToString wDriverNameStr with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c191 20 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAppendUnicodeStringToString STR_BACKSLASH with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c185 19 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAppendUnicodeStringToString chipinfo with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c179 18 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlIntegerToUnicodeString chipinfo with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c171 17 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAppendUnicodeStringToString wDriverNameStr with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c164 16 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAppendUnicodeStringToString STR_BACKSLASH with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c158 15 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAppendUnicodeStringToString chipinfo with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c152 14 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlIntegerToUnicodeString chipinfo with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c144 13 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlAnsiStringToUnicodeString driverName with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c137 12 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed RtlInitAnsiStringEx driverName with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c125 11 "%0 [%!LEVEL!] interfaces.c::%!FUNC!:: Failed WdfDeviceOpenRegistryKey with %10!s!" //   LEVEL=LOG_ERR_ FLAGS=Core FUNC=InitInterfacesFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c97 10 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=InitInterfacesFromRegistry$fin$0
+{
+}
+#typev interfaces_c595 55 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=InitializeAllInterfaces
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c587 54 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Driver Dependency: Waiting on the driver with Interface GUID (GUID: %11!s!)." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=context->type FUNC=InitializeAllInterfaces
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+&context->DevInterfaces[i].InterfaceGUID, ItemGuid -- 11
+}
+#typev interfaces_c582 53 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::IoRegisterPlugPlayNotification for %11!d! th interface failed with status = %12!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=context->type FUNC=InitializeAllInterfaces
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+i, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev interfaces_c560 52 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device context invalid!  status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=InitializeAllInterfaces
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c598 56 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit with status %10!s! " //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=InitializeAllInterfaces
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c551 51 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device object invalid!  status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=InitializeAllInterfaces
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c545 50 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=InitializeAllInterfaces
+{
+}
+#typev interfaces_c595 55 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=InitializeAllInterfaces$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c587 54 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Driver Dependency: Waiting on the driver with Interface GUID (GUID: %11!s!)." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=context->type FUNC=InitializeAllInterfaces$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+&context->DevInterfaces[i].InterfaceGUID, ItemGuid -- 11
+}
+#typev interfaces_c582 53 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::IoRegisterPlugPlayNotification for %11!d! th interface failed with status = %12!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=context->type FUNC=InitializeAllInterfaces$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+i, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev interfaces_c560 52 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device context invalid!  status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=InitializeAllInterfaces$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c598 56 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit with status %10!s! " //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=InitializeAllInterfaces$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c551 51 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device object invalid!  status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=InitializeAllInterfaces$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c545 50 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=InitializeAllInterfaces$fin$0
+{
+}
+#typev interfaces_c1061 98 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::LookupInterfaceFromIoTarget Failed!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LookupInterfaceWithGUID
+{
+}
+#typev interfaces_c1041 97 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::InterfaceGUID passed in is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LookupInterfaceWithGUID
+{
+}
+#typev interfaces_c1064 99 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=LookupInterfaceWithGUID
+{
+}
+#typev interfaces_c1036 96 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::DeviceContext passed in is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LookupInterfaceWithGUID
+{
+}
+#typev interfaces_c1031 95 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=LookupInterfaceWithGUID
+{
+}
+#typev interfaces_c1061 98 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::LookupInterfaceFromIoTarget Failed!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LookupInterfaceWithGUID$fin$0
+{
+}
+#typev interfaces_c1041 97 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::InterfaceGUID passed in is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LookupInterfaceWithGUID$fin$0
+{
+}
+#typev interfaces_c1064 99 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=LookupInterfaceWithGUID$fin$0
+{
+}
+#typev interfaces_c1036 96 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::DeviceContext passed in is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LookupInterfaceWithGUID$fin$0
+{
+}
+#typev interfaces_c1031 95 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=LookupInterfaceWithGUID$fin$0
+{
+}
+#typev interfaces_c1015 93 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::LookupInterfaceFromIoTarget Failed!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LookupInterfaceWithIoTarget
+{
+}
+#typev interfaces_c998 92 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget passed in is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LookupInterfaceWithIoTarget
+{
+}
+#typev interfaces_c1018 94 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=LookupInterfaceWithIoTarget
+{
+}
+#typev interfaces_c993 91 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::DeviceContext passed in is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LookupInterfaceWithIoTarget
+{
+}
+#typev interfaces_c988 90 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=LookupInterfaceWithIoTarget
+{
+}
+#typev interfaces_c1015 93 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::LookupInterfaceFromIoTarget Failed!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LookupInterfaceWithIoTarget$fin$0
+{
+}
+#typev interfaces_c998 92 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget passed in is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LookupInterfaceWithIoTarget$fin$0
+{
+}
+#typev interfaces_c1018 94 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=LookupInterfaceWithIoTarget$fin$0
+{
+}
+#typev interfaces_c993 91 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::DeviceContext passed in is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LookupInterfaceWithIoTarget$fin$0
+{
+}
+#typev interfaces_c988 90 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=LookupInterfaceWithIoTarget$fin$0
+{
+}
+#typev interfaces_c1124 106 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceQueryRemove
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c1127 107 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OnInterfaceQueryRemove
+{
+}
+#typev interfaces_c1114 105 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Closing for query remove of the Interface I/O target: %10!p! connection." //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=OnInterfaceQueryRemove
+{
+IoTarget, ItemPtr -- 10
+}
+#typev interfaces_c1110 104 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Unable to acquire Interface lock!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceQueryRemove
+{
+}
+#typev interfaces_c1101 103 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::DeviceContext extracted from IoTarget: %10!p! is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceQueryRemove
+{
+IoTarget, ItemPtr -- 10
+}
+#typev interfaces_c1094 102 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget passed into LookupInterfaceFromIoTarget has no device associated!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceQueryRemove
+{
+}
+#typev interfaces_c1085 101 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget parameter passed to OnInterfaceRemoveCanceled function is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceQueryRemove
+{
+}
+#typev interfaces_c1079 100 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OnInterfaceQueryRemove
+{
+}
+#typev interfaces_c1124 106 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceQueryRemove$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c1127 107 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OnInterfaceQueryRemove$fin$0
+{
+}
+#typev interfaces_c1114 105 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Closing for query remove of the Interface I/O target: %10!p! connection." //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=OnInterfaceQueryRemove$fin$0
+{
+IoTarget, ItemPtr -- 10
+}
+#typev interfaces_c1110 104 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Unable to acquire Interface lock!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceQueryRemove$fin$0
+{
+}
+#typev interfaces_c1101 103 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::DeviceContext extracted from IoTarget: %10!p! is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceQueryRemove$fin$0
+{
+IoTarget, ItemPtr -- 10
+}
+#typev interfaces_c1094 102 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget passed into LookupInterfaceFromIoTarget has no device associated!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceQueryRemove$fin$0
+{
+}
+#typev interfaces_c1085 101 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget parameter passed to OnInterfaceRemoveCanceled function is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceQueryRemove$fin$0
+{
+}
+#typev interfaces_c1079 100 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OnInterfaceQueryRemove$fin$0
+{
+}
+#typev interfaces_c1320 125 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveCanceled
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c1323 126 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OnInterfaceRemoveCanceled
+{
+}
+#typev interfaces_c1301 124 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::OnInterfaceRemoveCanceled failed GetInterfaceWorkItemContext call." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveCanceled
+{
+}
+#typev interfaces_c1292 123 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Warning: WdfWorkItemCreate failed with status %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveCanceled
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c1270 122 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Notification for the cancellation of iotarget: %11!p! removal." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OnInterfaceRemoveCanceled
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+IoTarget, ItemPtr -- 11
+}
+#typev interfaces_c1265 121 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::interfaceToReopen extracted in OnInterfaceRemoveCanceled function is not valid for iotarget: %11!p!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OnInterfaceRemoveCanceled
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+IoTarget, ItemPtr -- 11
+}
+#typev interfaces_c1254 120 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device Context invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveCanceled
+{
+}
+#typev interfaces_c1246 119 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget passed into LookupInterfaceFromIoTarget has no device associated!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveCanceled
+{
+}
+#typev interfaces_c1237 118 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget parameter passed to OnInterfaceRemoveCanceled function is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveCanceled
+{
+}
+#typev interfaces_c1231 117 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OnInterfaceRemoveCanceled
+{
+}
+#typev interfaces_c1320 125 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveCanceled$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c1323 126 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OnInterfaceRemoveCanceled$fin$0
+{
+}
+#typev interfaces_c1301 124 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::OnInterfaceRemoveCanceled failed GetInterfaceWorkItemContext call." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveCanceled$fin$0
+{
+}
+#typev interfaces_c1292 123 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Warning: WdfWorkItemCreate failed with status %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveCanceled$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c1270 122 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Notification for the cancellation of iotarget: %11!p! removal." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OnInterfaceRemoveCanceled$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+IoTarget, ItemPtr -- 11
+}
+#typev interfaces_c1265 121 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::interfaceToReopen extracted in OnInterfaceRemoveCanceled function is not valid for iotarget: %11!p!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OnInterfaceRemoveCanceled$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+IoTarget, ItemPtr -- 11
+}
+#typev interfaces_c1254 120 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device Context invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveCanceled$fin$0
+{
+}
+#typev interfaces_c1246 119 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget passed into LookupInterfaceFromIoTarget has no device associated!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveCanceled$fin$0
+{
+}
+#typev interfaces_c1237 118 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget parameter passed to OnInterfaceRemoveCanceled function is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveCanceled$fin$0
+{
+}
+#typev interfaces_c1231 117 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OnInterfaceRemoveCanceled$fin$0
+{
+}
+#typev interfaces_c1200 115 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveComplete
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c1203 116 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OnInterfaceRemoveComplete
+{
+}
+#typev interfaces_c1185 114 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Closing for removal of the Interface I/O target: %11!p! connection." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OnInterfaceRemoveComplete
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+IoTarget, ItemPtr -- 11
+}
+#typev interfaces_c1180 113 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::interfaceToReopen extracted in OnInterfaceRemoveCanceled function is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OnInterfaceRemoveComplete
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+}
+#typev interfaces_c1173 112 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Unable to acquire Interface lock!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveComplete
+{
+}
+#typev interfaces_c1163 111 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::DeviceContext extracted from IoTarget is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveComplete
+{
+}
+#typev interfaces_c1156 110 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget passed into LookupInterfaceFromIoTarget has no device associated!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveComplete
+{
+}
+#typev interfaces_c1147 109 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget parameter passed to OnInterfaceRemoveCanceled function is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveComplete
+{
+}
+#typev interfaces_c1141 108 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OnInterfaceRemoveComplete
+{
+}
+#typev interfaces_c1200 115 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveComplete$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c1203 116 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OnInterfaceRemoveComplete$fin$0
+{
+}
+#typev interfaces_c1185 114 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Closing for removal of the Interface I/O target: %11!p! connection." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OnInterfaceRemoveComplete$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+IoTarget, ItemPtr -- 11
+}
+#typev interfaces_c1180 113 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::interfaceToReopen extracted in OnInterfaceRemoveCanceled function is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OnInterfaceRemoveComplete$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+}
+#typev interfaces_c1173 112 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Unable to acquire Interface lock!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveComplete$fin$0
+{
+}
+#typev interfaces_c1163 111 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::DeviceContext extracted from IoTarget is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveComplete$fin$0
+{
+}
+#typev interfaces_c1156 110 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget passed into LookupInterfaceFromIoTarget has no device associated!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveComplete$fin$0
+{
+}
+#typev interfaces_c1147 109 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IoTarget parameter passed to OnInterfaceRemoveCanceled function is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OnInterfaceRemoveComplete$fin$0
+{
+}
+#typev interfaces_c1141 108 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OnInterfaceRemoveComplete$fin$0
+{
+}
+#typev interfaces_c972 88 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OpenDeviceInterface
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c959 87 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Invalid connection request to device interface." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OpenDeviceInterface
+{
+}
+#typev interfaces_c946 86 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::FAILURE: Verifying Interface Version Match for GUID: 0x%11!08X! returned with status %12!s! " //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev interfaces_c941 85 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::FAILURE: Unknown Interface GUID for device!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OpenDeviceInterface
+{
+}
+#typev interfaces_c922 84 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Opened IOTarget for interface GUID: 0x%11!08X! successfully. Iotarget = %12!p! " //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+ioTarget, ItemPtr -- 12
+}
+#typev interfaces_c914 83 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Interface GUID: 0x%11!08X! TargetOpen failed with status %12!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev interfaces_c896 82 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Connection to the dependent interface GUID: 0x%11!08X! failed with: %12!s!." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev interfaces_c878 81 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::dependent interface GUID: 0x%11!08X! already has an iotarget = %12!p!. Ignoring the interface change event" //   LEVEL=LOG_WARN FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+deviceInterface->InterfaceIoTarget, ItemPtr -- 12
+}
+#typev interfaces_c868 80 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Reopened connection to the dependent interface: GUID 0x%11!08x! succeeded. Iotarget %12!p! " //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+deviceInterface->InterfaceIoTarget, ItemPtr -- 12
+}
+#typev interfaces_c861 79 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Reopening connection to the dependent interface GUID : 0x%11!08X!, failed with: %12!s!." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev interfaces_c849 78 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Unable to acquire Interface lock!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OpenDeviceInterface
+{
+}
+#typev interfaces_c975 89 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OpenDeviceInterface
+{
+}
+#typev interfaces_c839 77 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device Context invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OpenDeviceInterface
+{
+}
+#typev interfaces_c831 76 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device object invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OpenDeviceInterface
+{
+}
+#typev interfaces_c826 75 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OpenDeviceInterface
+{
+}
+#typev interfaces_c972 88 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OpenDeviceInterface$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c959 87 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Invalid connection request to device interface." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OpenDeviceInterface$fin$0
+{
+}
+#typev interfaces_c946 86 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::FAILURE: Verifying Interface Version Match for GUID: 0x%11!08X! returned with status %12!s! " //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev interfaces_c941 85 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::FAILURE: Unknown Interface GUID for device!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OpenDeviceInterface$fin$0
+{
+}
+#typev interfaces_c922 84 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Opened IOTarget for interface GUID: 0x%11!08X! successfully. Iotarget = %12!p! " //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+ioTarget, ItemPtr -- 12
+}
+#typev interfaces_c914 83 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Interface GUID: 0x%11!08X! TargetOpen failed with status %12!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev interfaces_c896 82 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Connection to the dependent interface GUID: 0x%11!08X! failed with: %12!s!." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev interfaces_c878 81 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::dependent interface GUID: 0x%11!08X! already has an iotarget = %12!p!. Ignoring the interface change event" //   LEVEL=LOG_WARN FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+deviceInterface->InterfaceIoTarget, ItemPtr -- 12
+}
+#typev interfaces_c868 80 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Reopened connection to the dependent interface: GUID 0x%11!08x! succeeded. Iotarget %12!p! " //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+deviceInterface->InterfaceIoTarget, ItemPtr -- 12
+}
+#typev interfaces_c861 79 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Reopening connection to the dependent interface GUID : 0x%11!08X!, failed with: %12!s!." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=OpenDeviceInterface$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev interfaces_c849 78 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Unable to acquire Interface lock!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OpenDeviceInterface$fin$0
+{
+}
+#typev interfaces_c975 89 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OpenDeviceInterface$fin$0
+{
+}
+#typev interfaces_c839 77 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device Context invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OpenDeviceInterface$fin$0
+{
+}
+#typev interfaces_c831 76 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device object invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=OpenDeviceInterface$fin$0
+{
+}
+#typev interfaces_c826 75 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=OpenDeviceInterface$fin$0
+{
+}
+#typev interfaces_c696 62 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtNotifyInterfaceChange
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c700 63 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SubsysEvtNotifyInterfaceChange
+{
+}
+#typev interfaces_c676 61 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Error: Creating Workitem to notify interface change failed with status 0x%10!X!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtNotifyInterfaceChange
+{
+status, ItemLong -- 10
+}
+#typev interfaces_c650 60 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::LookupInterfaceWithGUID failed for this interface change notification!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtNotifyInterfaceChange
+{
+}
+#typev interfaces_c642 59 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::interface Change Notification invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtNotifyInterfaceChange
+{
+}
+#typev interfaces_c636 58 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device context invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtNotifyInterfaceChange
+{
+}
+#typev interfaces_c631 57 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SubsysEvtNotifyInterfaceChange
+{
+}
+#typev interfaces_c696 62 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtNotifyInterfaceChange$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c700 63 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SubsysEvtNotifyInterfaceChange$fin$0
+{
+}
+#typev interfaces_c676 61 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Error: Creating Workitem to notify interface change failed with status 0x%10!X!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtNotifyInterfaceChange$fin$0
+{
+status, ItemLong -- 10
+}
+#typev interfaces_c650 60 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::LookupInterfaceWithGUID failed for this interface change notification!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtNotifyInterfaceChange$fin$0
+{
+}
+#typev interfaces_c642 59 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::interface Change Notification invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtNotifyInterfaceChange$fin$0
+{
+}
+#typev interfaces_c636 58 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device context invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtNotifyInterfaceChange$fin$0
+{
+}
+#typev interfaces_c631 57 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SubsysEvtNotifyInterfaceChange$fin$0
+{
+}
+#typev interfaces_c1390 133 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessInterfaceReopen
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c1398 134 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SubsysEvtProcessInterfaceReopen
+{
+}
+#typev interfaces_c1381 132 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::(Driver Dependency): Successfully reopened connection to the interface." //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=SubsysEvtProcessInterfaceReopen
+{
+}
+#typev interfaces_c1377 131 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Driver Dependency: Reopening connection to the interface failed." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessInterfaceReopen
+{
+}
+#typev interfaces_c1368 130 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Workitem Context invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessInterfaceReopen
+{
+}
+#typev interfaces_c1360 129 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::WDFDEVICE extracted in SubsysEvtProcessInterfaceReopen function is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessInterfaceReopen
+{
+}
+#typev interfaces_c1352 128 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::WorkItem parameter passed to SubsysEvtProcessInterfaceReopen function is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessInterfaceReopen
+{
+}
+#typev interfaces_c1346 127 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SubsysEvtProcessInterfaceReopen
+{
+}
+#typev interfaces_c1390 133 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessInterfaceReopen$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c1398 134 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SubsysEvtProcessInterfaceReopen$fin$0
+{
+}
+#typev interfaces_c1381 132 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::(Driver Dependency): Successfully reopened connection to the interface." //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=SubsysEvtProcessInterfaceReopen$fin$0
+{
+}
+#typev interfaces_c1377 131 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Driver Dependency: Reopening connection to the interface failed." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessInterfaceReopen$fin$0
+{
+}
+#typev interfaces_c1368 130 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Workitem Context invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessInterfaceReopen$fin$0
+{
+}
+#typev interfaces_c1360 129 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::WDFDEVICE extracted in SubsysEvtProcessInterfaceReopen function is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessInterfaceReopen$fin$0
+{
+}
+#typev interfaces_c1352 128 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::WorkItem parameter passed to SubsysEvtProcessInterfaceReopen function is not valid" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessInterfaceReopen$fin$0
+{
+}
+#typev interfaces_c1346 127 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SubsysEvtProcessInterfaceReopen$fin$0
+{
+}
+#typev interfaces_c793 73 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessNotifyInterfaceChange
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c800 74 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SubsysEvtProcessNotifyInterfaceChange
+{
+}
+#typev interfaces_c781 72 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Driver Dependency: Interface removal notification for GUID: 0x%11!08X!." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=SubsysEvtProcessNotifyInterfaceChange
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+}
+#typev interfaces_c776 71 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Driver Dependency: Connection to the dependent interface failed." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=SubsysEvtProcessNotifyInterfaceChange
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+}
+#typev interfaces_c770 70 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Driver Dependency: Connection to the dependent interface successful." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=SubsysEvtProcessNotifyInterfaceChange
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+}
+#typev interfaces_c766 69 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Interface arrival notification for GUID: 0x%11!08X!." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=SubsysEvtProcessNotifyInterfaceChange
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+}
+#typev interfaces_c752 68 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Workitem Context invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessNotifyInterfaceChange
+{
+}
+#typev interfaces_c744 67 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device Context invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessNotifyInterfaceChange
+{
+}
+#typev interfaces_c736 66 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device object invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessNotifyInterfaceChange
+{
+}
+#typev interfaces_c728 65 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Workitem invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessNotifyInterfaceChange
+{
+}
+#typev interfaces_c723 64 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SubsysEvtProcessNotifyInterfaceChange
+{
+}
+#typev interfaces_c793 73 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessNotifyInterfaceChange$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c800 74 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit from %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SubsysEvtProcessNotifyInterfaceChange$fin$0
+{
+}
+#typev interfaces_c781 72 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Driver Dependency: Interface removal notification for GUID: 0x%11!08X!." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=SubsysEvtProcessNotifyInterfaceChange$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+}
+#typev interfaces_c776 71 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Driver Dependency: Connection to the dependent interface failed." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=SubsysEvtProcessNotifyInterfaceChange$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+}
+#typev interfaces_c770 70 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Driver Dependency: Connection to the dependent interface successful." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=SubsysEvtProcessNotifyInterfaceChange$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+}
+#typev interfaces_c766 69 "%0 [%!LEVEL!] [%10!s!] interfaces.c::%!FUNC!::Interface arrival notification for GUID: 0x%11!08X!." //   LEVEL=LOG_INFO FLAGS=SUBSYS SUBSYSTEM=deviceContext->type FUNC=SubsysEvtProcessNotifyInterfaceChange$fin$0
+{
+SUBSYSTEM, ItemEnum(_SOC_SUBSYSTEM_TYPE) -- 10
+deviceInterface->InterfaceGUID.Data1, ItemLong -- 11
+}
+#typev interfaces_c752 68 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Workitem Context invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessNotifyInterfaceChange$fin$0
+{
+}
+#typev interfaces_c744 67 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device Context invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessNotifyInterfaceChange$fin$0
+{
+}
+#typev interfaces_c736 66 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device object invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessNotifyInterfaceChange$fin$0
+{
+}
+#typev interfaces_c728 65 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Workitem invalid!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=SubsysEvtProcessNotifyInterfaceChange$fin$0
+{
+}
+#typev interfaces_c723 64 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry to %!FUNC! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SubsysEvtProcessNotifyInterfaceChange$fin$0
+{
+}
+#typev interfaces_c524 48 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyFastRpcInterfaceVersionMatch
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c527 49 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit with status %10!s! " //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=VerifyFastRpcInterfaceVersionMatch
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c515 47 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Subsys does not support the interface versions supported by FastRpc driver." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyFastRpcInterfaceVersionMatch
+{
+}
+#typev interfaces_c507 46 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IOCTL_FASTRPC_GET_INTERFACE_VERSION returned invalid High and Low interface versions" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyFastRpcInterfaceVersionMatch
+{
+}
+#typev interfaces_c500 45 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::FAILURE: WdfIoTargetSendIoctlSynchronously IOCTL_FASTRPC_GET_INTERFACE_VERSION request to FastRpc returned with status %10!s! " //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyFastRpcInterfaceVersionMatch
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c483 44 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device interface object invalid!  status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyFastRpcInterfaceVersionMatch
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c477 43 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=VerifyFastRpcInterfaceVersionMatch
+{
+}
+#typev interfaces_c524 48 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyFastRpcInterfaceVersionMatch$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c527 49 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit with status %10!s! " //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=VerifyFastRpcInterfaceVersionMatch$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c515 47 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Subsys does not support the interface versions supported by FastRpc driver." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyFastRpcInterfaceVersionMatch$fin$0
+{
+}
+#typev interfaces_c507 46 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IOCTL_FASTRPC_GET_INTERFACE_VERSION returned invalid High and Low interface versions" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyFastRpcInterfaceVersionMatch$fin$0
+{
+}
+#typev interfaces_c500 45 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::FAILURE: WdfIoTargetSendIoctlSynchronously IOCTL_FASTRPC_GET_INTERFACE_VERSION request to FastRpc returned with status %10!s! " //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyFastRpcInterfaceVersionMatch$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c483 44 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device interface object invalid!  status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyFastRpcInterfaceVersionMatch$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c477 43 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=VerifyFastRpcInterfaceVersionMatch$fin$0
+{
+}
+#typev interfaces_c387 34 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyPilInterfaceVersionMatch
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c390 35 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit with status %10!s! " //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=VerifyPilInterfaceVersionMatch
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c378 33 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Subsys does not support the interface versions supported by PIL driver." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyPilInterfaceVersionMatch
+{
+}
+#typev interfaces_c370 32 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IOCTL_PIL_GET_INTERFACE_VERSION returned invalid High and Low interface versions" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyPilInterfaceVersionMatch
+{
+}
+#typev interfaces_c363 31 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::FAILURE: WdfIoTargetSendIoctlSynchronously IOCTL_PIL_GET_INTERFACE_VERSION request to PIL returned with status %10!s! " //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyPilInterfaceVersionMatch
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c346 30 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device interface object invalid!  status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyPilInterfaceVersionMatch
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c340 29 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=VerifyPilInterfaceVersionMatch
+{
+}
+#typev interfaces_c387 34 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyPilInterfaceVersionMatch$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c390 35 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit with status %10!s! " //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=VerifyPilInterfaceVersionMatch$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c378 33 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Subsys does not support the interface versions supported by PIL driver." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyPilInterfaceVersionMatch$fin$0
+{
+}
+#typev interfaces_c370 32 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IOCTL_PIL_GET_INTERFACE_VERSION returned invalid High and Low interface versions" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyPilInterfaceVersionMatch$fin$0
+{
+}
+#typev interfaces_c363 31 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::FAILURE: WdfIoTargetSendIoctlSynchronously IOCTL_PIL_GET_INTERFACE_VERSION request to PIL returned with status %10!s! " //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyPilInterfaceVersionMatch$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c346 30 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device interface object invalid!  status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyPilInterfaceVersionMatch$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c340 29 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=VerifyPilInterfaceVersionMatch$fin$0
+{
+}
+#typev interfaces_c456 41 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyTftpInterfaceVersionMatch
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c459 42 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit with status %10!s! " //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=VerifyTftpInterfaceVersionMatch
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c447 40 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Subsys does not support the interface versions supported by Tftp driver." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyTftpInterfaceVersionMatch
+{
+}
+#typev interfaces_c439 39 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IOCTL_TFTP_GET_INTERFACE_VERSION returned invalid High and Low interface versions" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyTftpInterfaceVersionMatch
+{
+}
+#typev interfaces_c432 38 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::FAILURE: WdfIoTargetSendIoctlSynchronously IOCTL_TFTP_GET_INTERFACE_VERSION request to Tftp returned with status %10!s! " //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyTftpInterfaceVersionMatch
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c415 37 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device interface object invalid!  status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyTftpInterfaceVersionMatch
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c409 36 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=VerifyTftpInterfaceVersionMatch
+{
+}
+#typev interfaces_c456 41 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyTftpInterfaceVersionMatch$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c459 42 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Exit with status %10!s! " //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=VerifyTftpInterfaceVersionMatch$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c447 40 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Subsys does not support the interface versions supported by Tftp driver." //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyTftpInterfaceVersionMatch$fin$0
+{
+}
+#typev interfaces_c439 39 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::IOCTL_TFTP_GET_INTERFACE_VERSION returned invalid High and Low interface versions" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyTftpInterfaceVersionMatch$fin$0
+{
+}
+#typev interfaces_c432 38 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::FAILURE: WdfIoTargetSendIoctlSynchronously IOCTL_TFTP_GET_INTERFACE_VERSION request to Tftp returned with status %10!s! " //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyTftpInterfaceVersionMatch$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c415 37 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Device interface object invalid!  status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=VerifyTftpInterfaceVersionMatch$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev interfaces_c409 36 "%0 [%!LEVEL!] interfaces.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=VerifyTftpInterfaceVersionMatch$fin$0
+{
+}
+#enumv _SOC_SUBSYSTEM_TYPE
+{
+SOC_SUBSYS_WIRELESS_MODEM,0x0
+SOC_SUBSYS_AUDIO_DSP,0x1
+SOC_SUBSYS_WIRELSS_CONNECTIVITY,0x2
+SOC_SUBSYS_SENSORS,0x3
+SOC_SUBSYS_COMPUTE_DSP,0x4
+SOC_SUBSYS_SECURE_PROC,0x5
+SOC_SUBSYS_VENDOR_DEFINED,0x10000
+}

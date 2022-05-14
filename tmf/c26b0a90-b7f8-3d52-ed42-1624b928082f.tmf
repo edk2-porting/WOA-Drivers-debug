@@ -1,0 +1,46 @@
+// PDB:  qcpmic850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+c26b0a90-b7f8-3d52-ed42-1624b928082f src // SRC=PmicGpio.c MJ= MN=
+#typev PmicGpio_c465 20 "%0%!FUNC!: ERROR, Setting GPIO %10!d! output state failed" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Io FUNC=HandlePmicGpioRequest
+{
+((PM_GPIO_SET_GPIO_OUTPUT_TYPE *)InputBuffer)->gpio, ItemLong -- 10
+}
+#typev PmicGpio_c345 14 "%0%!FUNC!: ERROR, Setting EXT pin configuration for GPIO %10!d! failed" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Io FUNC=HandlePmicGpioRequest
+{
+((PM_GPIO_SET_EXT_PIN_CONFIG_TYPE *)InputBuffer)->gpio, ItemLong -- 10
+}
+#typev PmicGpio_c313 12 "%0%!FUNC!: ERROR, Configuring GPIO %10!d! for digital output failed" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Io FUNC=HandlePmicGpioRequest
+{
+((PM_GPIO_CONFIG_DIGITAL_OUTPUT_TYPE *)InputBuffer)->gpio, ItemLong -- 10
+}
+#typev PmicGpio_c329 13 "%0%!FUNC!: ERROR, Setting GPIO %10!d! inversion configuration failed" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Io FUNC=HandlePmicGpioRequest
+{
+((PM_GPIO_SET_INVERSION_CONFIGURATION_TYPE *)InputBuffer)->gpio, ItemLong -- 10
+}
+#typev PmicGpio_c297 11 "%0%!FUNC!: ERROR, Configuring GPIO %10!d! for digital input failed" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Io FUNC=HandlePmicGpioRequest
+{
+((PM_GPIO_CONFIG_DIGITAL_INPUT_TYPE *)InputBuffer)->gpio, ItemLong -- 10
+}
+#typev PmicGpio_c281 10 "%0%!FUNC!: ERROR, Configuring GPIO %10!d! BIAS voltage failed" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Io FUNC=HandlePmicGpioRequest
+{
+((PM_GPIO_CONFIG_BIAS_VOLTAGE_TYPE *)InputBuffer)->gpio, ItemLong -- 10
+}
+#typev PmicGpio_c445 19 "%0%!FUNC!: ERROR, PmicGpioGetGpioConfig failed for GPIO#%10!d!, PMIC#%11!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Io FUNC=HandlePmicGpioRequest
+{
+which_gpio, ItemLong -- 10
+which_pmic, ItemLong -- 11
+}
+#typev PmicGpio_c426 18 "%0%!FUNC!: ERROR, number of GPIO states requested exceeds the number of GPIOs on PMIC#%10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Io FUNC=HandlePmicGpioRequest
+{
+which_pmic, ItemLong -- 10
+}
+#typev PmicGpio_c419 17 "%0%!FUNC!: ERROR, PmicGpioGetGpioNumber failed" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Io FUNC=HandlePmicGpioRequest
+{
+}
+#typev PmicGpio_c364 15 "%0%!FUNC!: ERROR, Retrieving GPIO %10!d! state failed" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Io FUNC=HandlePmicGpioRequest
+{
+((PM_GPIO_GET_GPIO_STATE_TYPE *)InputBuffer)->gpio, ItemLong -- 10
+}
+#typev PmicGpio_c387 16 "%0%!FUNC!: ERROR, PmicGpioGetGpioNumber failed" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Io FUNC=HandlePmicGpioRequest
+{
+}

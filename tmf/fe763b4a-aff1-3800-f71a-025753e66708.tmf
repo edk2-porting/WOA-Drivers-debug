@@ -1,0 +1,384 @@
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+fe763b4a-aff1-3800-f71a-025753e66708 qca11ad // SRC=Unknown_cxx00 MJ= MN=
+#typev base_port_c332 83 "%0TxRx_AddBa sending BA_EN command with ring = %10!d!, agg size = %11!d!, timeout = %12!d!" //   FLAGS=COMP_SEND LEVEL=DBG_NORMAL FUNC=BasePort_SendAddBa
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+}
+#typev base_port_c332 82 "%0TxRx_AddBa has invalid window size (%10!d!) - not sending BA_EN command!" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=BasePort_SendAddBa
+{
+Arg, ItemLong -- 10
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c583 17 "%0Failed to allocate %10!d! bytes for TXRX_RING_CONTROL" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_AllocateRing
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c575 16 "%0No more rings available" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_AllocateRing
+{
+}
+#typev txrx_c2637 69 "%0RX Ring index %10!d! allocated" //   FLAGS=COMP_RECV LEVEL=DBG_NORMAL FUNC=TxRx_AllocateRxRing
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2635 64 "%0%10!s!: OsArmAllocateMdl returned NULL" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_AllocateRxRing
+{
+Arg, ItemString -- 10
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2628 68 "%0Config Rx Chain failed. status %10!d!" //   FLAGS=COMP_RECV LEVEL=DBG_SERIOUS FUNC=TxRx_AllocateRxRing
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2622 67 "%0TxRxSendCfgRxChain failed" //   FLAGS=COMP_RECV LEVEL=DBG_SERIOUS FUNC=TxRx_AllocateRxRing
+{
+}
+#typev txrx_c2618 19 "%0TxRx_CfgRxChain configured for HW reorder" //   FLAGS=COMP_RECV LEVEL=DBG_NORMAL FUNC=TxRx_AllocateRxRing
+{
+}
+#typev txrx_c2618 18 "%0TxRx_CfgRxChain configured for SW reorder" //   FLAGS=COMP_RECV LEVEL=DBG_NORMAL FUNC=TxRx_AllocateRxRing
+{
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2606 66 "%0%10!s!: TxRx->Rings[%11!d!] is NULL" //   FLAGS=COMP_RECV LEVEL=DBG_SERIOUS FUNC=TxRx_AllocateRxRing
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+}
+#typev txrx_c2587 65 "%0RX Ring index %10!d! "allocated"" //   FLAGS=COMP_RECV LEVEL=DBG_NORMAL FUNC=TxRx_AllocateRxRing
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c3260 84 "%0TxRx_DelBa_Tx sending BA_DIS command with ring = %10!d!, reason = %11!d!" //   FLAGS=COMP_SEND LEVEL=DBG_NORMAL FUNC=TxRx_DelBa_Tx
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+}
+#typev txrx_c980 26 "%0TxRx_FreeAllRings while ring %10!d! is enabled" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_FreeAllRings
+{
+Arg, ItemLong -- 10
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c364 10 "%0%10!s!: Invalid Ring value (%11!d!)" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_GetRing
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c897 24 "%0Failed to allocate %10!d! bytes for Descriptors Shared Memory" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_Init
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c922 25 "%0Failed to allocate %10!d! bytes for Rx MPDU Shared Memory" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_Init
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c873 23 "%0Failed to allocate %10!d! bytes for TXRX" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_Init
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c865 22 "%0Invalid NumDescriptors" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_Init
+{
+}
+#typev txrx_c856 21 "%0TxRx_Init MaxPacketLen %10!d! NumDescriptors %11!d!" //   FLAGS=COMP_SEND LEVEL=DBG_NORMAL FUNC=TxRx_Init
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2755 73 "%0TxRx_Receive: advancing SWHead to %10!d!" //   FLAGS=COMP_RECV LEVEL=DBG_LOUD FUNC=TxRx_Receive
+{
+Arg, ItemLong -- 10
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2874 76 "%0Error in received packet. Status ERR=0x%10!x!, Error type 0x%11!x!" //   FLAGS=COMP_RECV LEVEL=DBG_SERIOUS FUNC=TxRx_RingRxComplete
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+}
+#typev txrx_c2860 75 "%0Rx packet received: Packet parameters:
+   Tid=%10!d!
+   Cid=%11!d!
+   SeqNum=%12!d!
+   length=%13!d!
+   IsEncrypted=%14!d!
+   IsMulticast=%15!d!
+   KeyId=%16!d!
+   GcmpPn=0x%17!I64u!" //   FLAGS=COMP_RECV LEVEL=DBG_LOUD FUNC=TxRx_RingRxComplete
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+Arg, ItemLong -- 13
+Arg, ItemLong -- 14
+Arg, ItemLong -- 15
+Arg, ItemLong -- 16
+Arg, ItemULongLong -- 17
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2798 74 "%0%10!s!: TxRx->Rings[%11!d!] is NULL" //   FLAGS=COMP_RECV LEVEL=DBG_SERIOUS FUNC=TxRx_RingRxComplete
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2373 57 "%0Tx packet completed at index=%10!d! with status NDIS_STATUS_FAILURE" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_RingTxCleanUp
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2339 56 "%0<-- %!FUNC!" //   COMPID=COMP_SEND FUNC=TxRx_RingTxComplete
+{
+}
+#typev txrx_c2298 51 "%0TxRx_RingTxComplete break at index=%10!d! SWTail=%11!d!, status=0x%12!x!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_RingTxComplete
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2332 55 "%0TxRx_RingTxComplete: Adwancing SWTail to %10!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_RingTxComplete
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2323 54 "%0TxRx_RingTxComplete: Tx packet completed at desc index=%10!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_RingTxComplete
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2314 53 "%0TxRx_RingTxComplete: Error in transmit packet. Error type 0x%10!x!" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_RingTxComplete
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2309 52 "%0TxRx_RingTxComplete: TxPacket is not NULL" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_RingTxComplete
+{
+}
+#typev txrx_c2290 50 "%0TxRx_RingTxComplete: lf=%10!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_RingTxComplete
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2288 49 "%0TxRx_RingTxComplete: ctx->NumberOfDescriptors=%10!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_RingTxComplete
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2287 48 "%0TxRx_RingTxComplete: (1)SWTail=%10!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_RingTxComplete
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2276 47 "%0TxRx_RingTxComplete: Checking completed descriptors from SWTail=%10!d! to SWHead=%11!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_RingTxComplete
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+}
+#typev txrx_c2275 46 "%0--> %!FUNC!" //   COMPID=COMP_SEND FUNC=TxRx_RingTxComplete
+{
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2941 79 "%0Rx complete interrupt" //   FLAGS=COMP_RECV LEVEL=DBG_LOUD FUNC=TxRx_RxComplete
+{
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2930 78 "%0Error: Rx complete interrupt for Tx ring" //   FLAGS=COMP_RECV LEVEL=DBG_SERIOUS FUNC=TxRx_RxComplete
+{
+}
+#typev txrx_c2925 77 "%0Error: Rx complete interrupt for non-existing ring" //   FLAGS=COMP_RECV LEVEL=DBG_SERIOUS FUNC=TxRx_RxComplete
+{
+}
+#typev txrx_c2703 72 "%0RX Ring index %10!d! "freed"" //   FLAGS=COMP_RECV LEVEL=DBG_NORMAL FUNC=TxRx_RxRingFree
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2699 71 "%0RX Ring index %10!d! really freed" //   FLAGS=COMP_RECV LEVEL=DBG_NORMAL FUNC=TxRx_RxRingFree
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2676 15 "%0TxRx: RX Statistics: RxCompleteIndicate %10!I64u!, FragmentsReceivedWithError %11!I64u!" //   FLAGS=COMP_RECV LEVEL=DBG_NORMAL FUNC=TxRx_RxRingFree
+{
+Arg, ItemULongLong -- 10
+Arg, ItemULongLong -- 11
+}
+#typev txrx_c2676 14 "%0TxRx: RX Statistics: FragmentsReceived %10!I64u!, BytesReceived %11!I64u! " //   FLAGS=COMP_RECV LEVEL=DBG_NORMAL FUNC=TxRx_RxRingFree
+{
+Arg, ItemULongLong -- 10
+Arg, ItemULongLong -- 11
+}
+#typev txrx_c2672 70 "%0Try to free NULL ring - ring index=%10!d!" //   FLAGS=COMP_RECV LEVEL=DBG_SERIOUS FUNC=TxRx_RxRingFree
+{
+Arg, ItemLong -- 10
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c3345 86 "%0TxRx_SendAddBaResp sending ADDBA_RESP command for cidxtid = 0x%10!02x! failed with ndis status 0x%11!08x!, event status = %12!d!" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_SendAddBaResp
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+}
+#typev txrx_c3350 87 "%0TxRx_SendAddBaResp sending ADDBA_RESP command for cidxtid = 0x%10!02x! succeeded" //   FLAGS=COMP_SEND LEVEL=DBG_NORMAL FUNC=TxRx_SendAddBaResp
+{
+Arg, ItemLong -- 10
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c1549 35 "%0TxRx_SetPacketOffloads: IsIPv4=%10!d!, IsIPv6=%11!d! IpHeaderChecksum=%12!d!, TcpChecksum=%13!d!, UdpChecksum=%14!d!, TcpHeaderOffset=%15!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_SetPacketOffloads
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+Arg, ItemLong -- 13
+Arg, ItemLong -- 14
+Arg, ItemLong -- 15
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2161 44 "%0TxRx_Transmit: ring %10!d! SG list with %11!d! elements" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_Transmit
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2219 45 "%0TxRx_TransmitLSO: ring %10!d! SG list with %11!d! elements data length=%12!d! LsoOffloads=0x%13!x!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_TransmitLSO
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+Arg, ItemLong -- 13
+}
+#typev txrx_c1709 38 "%0TxRx_TransmitPacket: advancing SWHead to %10!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_TransmitPacket
+{
+Arg, ItemLong -- 10
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c1651 37 "%0TxRx_TransmitPacket: return NDIS_STATUS_RESOURCES - no room for transmit descriptorsFreeCount=%10!d!" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_TransmitPacket
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c1645 36 "%0TxRx_TransmitPacket: DataLength=%10!d!, DataOffset=%11!d! pSGList->Elements[0].Length=%12!d!, pSGList->NumberOfElements=%13!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_TransmitPacket
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+Arg, ItemLong -- 13
+}
+#typev txrx_c2122 43 "%0%10!s!: advancing SWHead to %11!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_TransmitPacketLSO
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+}
+#typev txrx_c2118 34 "%0Dump Ring: IsTx=%10!d!, FwRing=%11!d!, dump descriptor at Index=%12!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_TransmitPacketLSO
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2048 42 "%0: Seting new descriptor type=%10!d! elementLength=%11!d! seg length=%12!d! " //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_TransmitPacketLSO
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+}
+#typev txrx_c2027 41 "%0%10!s!: Element number=%11!d! length=%12!d! mss=%13!d! elementDataOffset=%14!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_TransmitPacketLSO
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+Arg, ItemLong -- 13
+Arg, ItemLong -- 14
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c1931 40 "%0%10!s!: return NDIS_STATUS_RESOURCES - no room for transmit descriptorsFreeCount=%11!d!" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_TransmitPacketLSO
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+}
+#typev txrx_c1925 39 "%0%10!s!: DataLength=%11!d!, isIpv4=%12!d! mss=%13!d! payloadLength=%14!d! numberOfDescriptorsForLso=%15!d! ipHdrLen=%16!d! tcpHdrLen=%17!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_TransmitPacketLSO
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+Arg, ItemLong -- 13
+Arg, ItemLong -- 14
+Arg, ItemLong -- 15
+Arg, ItemLong -- 16
+Arg, ItemLong -- 17
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev txrx_c2424 59 "%0Tx complete interrupt for Ring %10!d!" //   FLAGS=COMP_SEND LEVEL=DBG_LOUD FUNC=TxRx_TxComplete
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2420 58 "%0Error: Tx complete interrupt for Rx ring %10!d!" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_TxComplete
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2508 63 "%0TxRx_TxRingAbort: complete all queued Tx packets" //   FLAGS=COMP_SEND LEVEL=DBG_NORMAL FUNC=TxRx_TxRingAbort
+{
+}
+#typev txrx_c2503 62 "%0TxRx_TxRingAbort: wait for idle ring" //   FLAGS=COMP_SEND LEVEL=DBG_NORMAL FUNC=TxRx_TxRingAbort
+{
+}
+#typev txrx_c2499 61 "%0TxRx_TxRingAbort: Error: Aborting invalid ring=%10!d!" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_TxRingAbort
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c1314 33 "%0TX Ring index %10!d! allocated (ringid %11!d!) for cid %12!d!" //   FLAGS=COMP_SEND LEVEL=DBG_NORMAL FUNC=TxRx_TxRingAllocate
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+}
+#typev txrx_c1304 32 "%0VRing config failed. status %10!d!" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_TxRingAllocate
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c1296 31 "%0TxRx_VRingCfg failed" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_TxRingAllocate
+{
+}
+#typev txrx_c1285 30 "%0TxRx_VRingCfg failed for broadcast frames" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_TxRingAllocate
+{
+}
+#typev txrx_c1277 29 "%0Allocating broadcast ring" //   FLAGS=COMP_SEND LEVEL=DBG_NORMAL FUNC=TxRx_TxRingAllocate
+{
+}
+#typev txrx_c2477 60 "%0TX Ring index %10!d! freed" //   FLAGS=COMP_SEND LEVEL=DBG_NORMAL FUNC=TxRx_TxRingFree
+{
+Arg, ItemLong -- 10
+}
+#typev txrx_c2467 13 "%0TxRx: Tx Statistics: MaxPacketsInSwQ %10!I64u!, PacketsSwQueued %11!I64u!" //   FLAGS=COMP_SEND LEVEL=DBG_NORMAL FUNC=TxRx_TxRingFree
+{
+Arg, ItemULongLong -- 10
+Arg, ItemULongLong -- 11
+}
+#typev txrx_c2467 12 "%0TxRx: Tx Statistics: FragmentsCompleted %10!I64u!, BytesCompleted %11!I64u!, FragmentsCompletedWithError %12!I64u!" //   FLAGS=COMP_SEND LEVEL=DBG_NORMAL FUNC=TxRx_TxRingFree
+{
+Arg, ItemULongLong -- 10
+Arg, ItemULongLong -- 11
+Arg, ItemULongLong -- 12
+}
+#typev txrx_c2467 11 "%0TxRx: Tx Statistics: FragmentsSent %10!I64u!, BytesSent %11!I64u!" //   FLAGS=COMP_SEND LEVEL=DBG_NORMAL FUNC=TxRx_TxRingFree
+{
+Arg, ItemULongLong -- 10
+Arg, ItemULongLong -- 11
+}
+#typev txrx_c827 20 "%0Timeout waiting for ring (%10!d!) to become idle" //   FLAGS=COMP_SEND LEVEL=DBG_SERIOUS FUNC=TxRx_WaitForIdleRing
+{
+Arg, ItemLong -- 10
+}

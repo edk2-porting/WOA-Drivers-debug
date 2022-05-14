@@ -1,0 +1,357 @@
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+7e1f647a-dbf6-3a25-d055-5603c19e5a12 10.4 // SRC=RevWDSClient.c MJ= MN=
+#typev RevRmQCCI_c912 91 "%0<%!FUNC!> : MsgId 0x%10!x!. Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QCCI_GetRequestInfo
+{
+uMsgId, ItemLong -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev RevRmQCCI_c912 92 "%0<%!FUNC!> : MsgId 0x%10!x! and status = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QCCI_GetRequestInfo
+{
+uMsgId, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevRmQCCI_c912 90 "%0<%!FUNC!> : MsgId 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QCCI_GetRequestInfo
+{
+uMsgId, ItemLong -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev RevRmnet_c1219 16 "%0%10!s!<%!FUNC!> :  STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_ConnectionChange
+{
+pClient->PortName, ItemString -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev RevRmnet_c1219 17 "%0%10!s!<%!FUNC!> :  END. pClient = 0x%11!p!. status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmnet_ConnectionChange
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev RevWDSClient_c1125 93 "%0<%!FUNC!> : pClient/pQMIInd = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQWDSIndication
+{
+}
+#typev RevWDSClient_c1144 95 "%0%10!s!<%!FUNC!> :  MsgId 0x%11!x!. WDS_REVERSE_IP_TRANSPORT_CONNECTION_IND." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQWDSIndication
+{
+pClient->PortName, ItemString -- 10
+pQMIInd->uMsgId, ItemLong -- 11
+}
+#typev RevWDSClient_c1151 96 "%0%10!s!<%!FUNC!> :  MsgId 0x%11!x!. Invalid WDS IND." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQWDSIndication
+{
+pClient->PortName, ItemString -- 10
+pQMIInd->uMsgId, ItemLong -- 11
+}
+#typev RevWDSClient_c1134 94 "%0%10!s!<%!FUNC!> :  SSR in progress. Exiting WDS indication processing." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQWDSIndication
+{
+pClient->PortName, ItemString -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev RevWDSClient_c176 18 "%0<%!FUNC!> : STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+}
+#typev RevWDSClient_c315 36 "%0<%!FUNC!> : END" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+}
+#typev RevWDSClient_c311 35 "%0<%!FUNC!> : iv_len = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pResp->iv_len, ItemLong -- 10
+}
+#typev RevWDSClient_c301 34 "%0<%!FUNC!> : crypto_key_tx_len = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pResp->crypto_key_tx_len, ItemLong -- 10
+}
+#typev RevWDSClient_c292 33 "%0<%!FUNC!> : crypto_key_rx_len = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pResp->crypto_key_rx_len, ItemLong -- 10
+}
+#typev RevWDSClient_c285 32 "%0<%!FUNC!> : crypto_algo = 0x%10!02x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pReverseRMNetContext->crypto_algo, ItemLong -- 10
+}
+#typev RevWDSClient_c277 31 "%0<%!FUNC!> : ext_hash_key_tx_len = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pResp->ext_hash_key_tx_len, ItemLong -- 10
+}
+#typev RevWDSClient_c268 30 "%0<%!FUNC!> : ext_hash_key_rx_len = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pResp->ext_hash_key_rx_len, ItemLong -- 10
+}
+#typev RevWDSClient_c259 29 "%0<%!FUNC!> : hash_key_tx_len = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pResp->hash_key_tx_len, ItemLong -- 10
+}
+#typev RevWDSClient_c250 28 "%0<%!FUNC!> : hash_key_rx_len = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pResp->hash_key_rx_len, ItemLong -- 10
+}
+#typev RevWDSClient_c243 27 "%0<%!FUNC!> : hash_algo = 0x%10!02x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pReverseRMNetContext->hash_algo, ItemLong -- 10
+}
+#typev RevWDSClient_c236 26 "%0<%!FUNC!> : ipsec_sa_protocol = 0x%10!02x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pResp->ipsec_sa_protocol, ItemLong -- 10
+}
+#typev RevWDSClient_c230 25 "%0<%!FUNC!> : spi_tx = 0x%10!I64x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pResp->spi_tx, ItemLongLongX -- 10
+}
+#typev RevWDSClient_c224 24 "%0<%!FUNC!> : spi_rx = 0x%10!I64x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pResp->spi_rx, ItemLongLongX -- 10
+}
+#typev RevWDSClient_c218 23 "%0<%!FUNC!> : NAT UDP encapsulation = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+FALSE, ItemListLong(false,true) -- 10
+}
+#typev RevWDSClient_c213 22 "%0<%!FUNC!> : NAT UDP encapsulation = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pResp->is_udp_encaps, ItemListLong(false,true) -- 10
+}
+#typev RevWDSClient_c204 21 "%0<%!FUNC!> : dest_addr - IPv6 address valid." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+}
+#typev RevWDSClient_c199 20 "%0<%!FUNC!> : dest_addr - IPv4 address %10!s! valid" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pReverseRMNetContext->IWLAN_Server_addr.IP_Addr.IPv4, ItemIPAddr -- 10
+}
+#typev RevWDSClient_c185 19 "%0<%!FUNC!> : ERROR: Response failed. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSGetIPSecStaticSAConfigResp
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+#typev RevWDSClient_c89 11 "%0%10!s!<%!FUNC!> :  STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSReverseIPIndicationRegistrationReq
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevWDSClient_c98 12 "%0%10!s!<%!FUNC!> :  END. pClient = 0x%11!p!. status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSReverseIPIndicationRegistrationReq
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevWDSClient_c81 10 "%0<%!FUNC!> : STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSReverseIPIndicationRegistrationReq
+{
+}
+#typev RevWDSClient_c338 38 "%0%10!s!<%!FUNC!> :  STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSReverseIPTransportConfigCompleteReq
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevWDSClient_c348 39 "%0%10!s!<%!FUNC!> :  END. pClient = 0x%11!p!. TransactionID = %12!u!. bSuccess = %13!u!, status = %14!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSReverseIPTransportConfigCompleteReq
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+nTransactionID, ItemLong -- 12
+bSuccess, ItemLong -- 13
+status, ItemNTSTATUS -- 14
+}
+#typev RevWDSClient_c331 37 "%0<%!FUNC!> : STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendWDSReverseIPTransportConfigCompleteReq
+{
+}
+#typev RevWDSClient_c1181 41 "%0<%!FUNC!> : Response success." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQWDSResponse
+{
+}
+#typev RevWDSClient_c1181 40 "%0<%!FUNC!> : ERROR: Response failed. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQWDSResponse
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+#typev RevWDSClient_c1199 52 "%0<%!FUNC!> : Response success." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQWDSResponse
+{
+}
+#typev RevWDSClient_c1199 51 "%0<%!FUNC!> : Error in Response. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQWDSResponse
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+#typev RevWDSClient_c1210 97 "%0<%!FUNC!> : uQMIType 0x%10!x!. Invalid WDS Response." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQWDSResponse
+{
+pQMIElement->uQMIType, ItemLong -- 10
+}
+#typev RevWDSClient_c1205 47 "%0<%!FUNC!> : Response success." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQWDSResponse
+{
+}
+#typev RevWDSClient_c1205 46 "%0<%!FUNC!> : ERROR: Response failed. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQWDSResponse
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+#typev RevWDSClient_c1193 57 "%0<%!FUNC!> : Response success." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQWDSResponse
+{
+}
+#typev RevWDSClient_c1193 56 "%0<%!FUNC!> : Error in Response. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQWDSResponse
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+#typev RevWDSClient_c1175 14 "%0<%!FUNC!> : Response success." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQWDSResponse
+{
+}
+#typev RevWDSClient_c1175 13 "%0<%!FUNC!> : ERROR: Response failed. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQWDSResponse
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+#typev RevWDSClient_c770 63 "%0%10!s!<%!FUNC!> :  Posting ePDG tunnel DISCONNECTED notification." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_WDSReverseIPTransportConnectionInd
+{
+pWDSClient->client.PortName, ItemString -- 10
+}
+#typev RevWDSClient_c783 65 "%0%10!s!<%!FUNC!> :  tech_name = LOCAL_BREAKOUT." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_WDSReverseIPTransportConnectionInd
+{
+pWDSClient->client.PortName, ItemString -- 10
+}
+#typev RevWDSClient_c796 67 "%0%10!s!<%!FUNC!> :  tech_name = WDS_TECHNOLOGY_NAME_IWLAN_S2B_V01." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_WDSReverseIPTransportConnectionInd
+{
+pWDSClient->client.PortName, ItemString -- 10
+}
+#typev RevWDSClient_c794 66 "%0%10!s!<%!FUNC!> :  SA Keys shared = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_WDSReverseIPTransportConnectionInd
+{
+pWDSClient->client.PortName, ItemString -- 10
+bIsSpiShared, ItemListLong(false,true) -- 11
+}
+#typev RevWDSClient_c803 68 "%0%10!s!<%!FUNC!> :  tech_name = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_WDSReverseIPTransportConnectionInd
+{
+pWDSClient->client.PortName, ItemString -- 10
+revIPInd.tech_name, ItemLong -- 11
+}
+#typev RevWDSClient_c777 64 "%0%10!s!<%!FUNC!> :  Reverse IP Transport Connected. TxID = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_WDSReverseIPTransportConnectionInd
+{
+pWDSClient->client.PortName, ItemString -- 10
+revIPInd.transaction_id, ItemLong -- 11
+}
+#typev RevWDSClient_c830 70 "%0%10!s!<%!FUNC!> :  pClient = 0x%11!p!. status = %12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_WDSReverseIPTransportConnectionInd
+{
+pWDSClient->client.PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevWDSClient_c814 69 "%0%10!s!<%!FUNC!> :  rev_ip_transport_conn_status = %11!d!, tech_name = %12!d!. Status = %13!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevRm_WDSReverseIPTransportConnectionInd
+{
+pWDSClient->client.PortName, ItemString -- 10
+revIPInd.rev_ip_transport_conn_status, ItemLong -- 11
+revIPInd.tech_name, ItemLong -- 12
+status, ItemNTSTATUS -- 13
+}
+#typev RevWDSClient_c762 62 "%0%10!s!<%!FUNC!> :  IPv6 valid." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_WDSReverseIPTransportConnectionInd
+{
+pWDSClient->client.PortName, ItemString -- 10
+}
+#typev RevWDSClient_c754 61 "%0%10!s!<%!FUNC!> :  IPv4 valid = %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_WDSReverseIPTransportConnectionInd
+{
+pWDSClient->client.PortName, ItemString -- 10
+RtlUlongByteSwap(IPaddr.IP_Addr.IPv4), ItemIPAddr -- 11
+}
+#typev RevWDSClient_c747 60 "%0%10!s!<%!FUNC!> :  WDS_REVERSE_IP_TRANSPORT_CONNECTION_IND decoding failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_WDSReverseIPTransportConnectionInd
+{
+pWDSClient->client.PortName, ItemString -- 10
+}
+#typev RevWDSClient_c852 72 "%0<%!FUNC!> : STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevWDSClient_Allocate
+{
+}
+#typev RevWDSClient_c847 71 "%0<%!FUNC!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevWDSClient_Allocate
+{
+}
+#typev RevWDSClient_c1015 89 "%0%10!s!<%!FUNC!> :  error releasing 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevWDSClient_DeInit
+{
+pClient->PortName, ItemString -- 10
+qmiErr, ItemLong -- 11
+}
+#typev RevWDSClient_c1011 88 "%0%10!s!<%!FUNC!> :  Releasing WDS client = %11!p! with handle = %12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevWDSClient_DeInit
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+pClient->handle, ItemPtr -- 12
+}
+#typev RevWDSClient_c1007 87 "%0<%!FUNC!> : STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevWDSClient_DeInit
+{
+}
+#typev RevWDSClient_c1003 86 "%0<%!FUNC!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevWDSClient_DeInit
+{
+}
+#typev RevWDSClient_c992 85 "%0%10!s!<%!FUNC!> :  pClient = 0x%11!p! WDS port = %12!d! status = %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=hIFRHandle FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+portIndex, ItemLong -- 12
+status, ItemNTSTATUS -- 13
+}
+#typev RevWDSClient_c984 84 "%0Failed with status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevWDSClient_c981 44 "%0%10!s!<%!FUNC!> :  STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevWDSClient_c981 45 "%0%10!s!<%!FUNC!> :  END. pClient = 0x%11!p!. IPType = %12!d!. Status = %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+IPType, ItemLong -- 12
+status, ItemNTSTATUS -- 13
+}
+#typev RevWDSClient_c981 43 "%0%10!s!<%!FUNC!> :  Invalid IP type." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevWDSClient_c976 83 "%0Failed with status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevWDSClient_c965 50 "%0%10!s!<%!FUNC!> :  pClient = 0x%11!p!. status = %12!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevWDSClient_c965 49 "%0%10!s!<%!FUNC!> :  STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevWDSClient_c965 48 "%0%10!s!<%!FUNC!> :  MuxID = %11!d!, iptype = %12!d!, QmiType = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+pClient->PortName, ItemString -- 10
+MuxID, ItemLong -- 11
+ipType, ItemLong -- 12
+QmiType, ItemLong -- 13
+}
+#typev RevWDSClient_c950 82 "%0%10!s!<%!FUNC!> :  InterConnectType = %11!d!, MuxID = %12!d!, portIndex = %13!d!, IPType = %14!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=hIFRHandle FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+pClient->PortName, ItemString -- 10
+InterConnectType, ItemLong -- 11
+MuxID, ItemLong -- 12
+portIndex, ItemLong -- 13
+IPType, ItemLong -- 14
+}
+#typev RevWDSClient_c942 81 "%0%10!s!<%!FUNC!> :  FAILED iptype=%11!d!, QmiType=%12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=hIFRHandle FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+pClient->PortName, ItemString -- 10
+IPType, ItemLong -- 11
+QmiType, ItemLong -- 12
+}
+#typev RevWDSClient_c925 80 "%0%10!s!<%!FUNC!> :  ERROR, STATUS_INVALID_PARAMETER iptype=%11!d!, QmiType=%12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=hIFRHandle FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+pClient->PortName, ItemString -- 10
+IPType, ItemLong -- 11
+QmiType, ItemLong -- 12
+}
+#typev RevWDSClient_c924 79 "%0%10!s!<%!FUNC!> :  ERROR, STATUS_INVALID_PARAMETER iptype=%11!d!, QmiType=%12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+pClient->PortName, ItemString -- 10
+IPType, ItemLong -- 11
+QmiType, ItemLong -- 12
+}
+#typev RevWDSClient_c912 78 "%0<%!FUNC!> : STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=hIFRHandle FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+}
+#typev RevWDSClient_c911 77 "%0<%!FUNC!> : STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+}
+#typev RevWDSClient_c907 76 "%0<%!FUNC!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevWDSClient_Init
+{
+}

@@ -1,0 +1,108 @@
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+d261e0ce-db83-3c9e-1e0b-57598ad8c1ae vcxproj // SRC=shared_channel_manager.c MJ= MN=
+#typev shared_channel_manager_c318 20 "%0-WCD_93XX: <Close SLIMBUS shared channels. RC:%10!d!.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_close_shared_channel
+{
+return_code, ItemLong -- 10
+}
+#typev shared_channel_manager_c311 19 "%0=WCD_93XX: <Could not deallocated resource group.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_close_shared_channel
+{
+}
+#typev shared_channel_manager_c300 18 "%0=WCD_93XX: <Could not deallocated shared channel. Channel Index:%10!u!.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_close_shared_channel
+{
+i, ItemLong -- 10
+}
+#typev shared_channel_manager_c289 17 "%0=WCD_93XX: <Could not deactivate shared channels.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_close_shared_channel
+{
+}
+#typev shared_channel_manager_c276 16 "%0+WCD_93XX: <Close SLIMBUS shared channels.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_close_shared_channel
+{
+}
+#typev shared_channel_manager_c474 31 "%0-WCD_93XX: <wcd_close_spkr_prot_shared_channel_v2 RC:%10!d!.> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_close_spkr_prot_shared_channel_v2
+{
+return_code, ItemLong -- 10
+}
+#typev shared_channel_manager_c467 30 "%0=WCD_93XX: <Could not deallocate resource group> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_close_spkr_prot_shared_channel_v2
+{
+}
+#typev shared_channel_manager_c459 29 "%0=WCD_93XX: <Could not deallocate shared channel> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_close_spkr_prot_shared_channel_v2
+{
+}
+#typev shared_channel_manager_c449 28 "%0=WCD_93XX: <Could not deactivate shared channels> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_close_spkr_prot_shared_channel_v2
+{
+}
+#typev shared_channel_manager_c438 27 "%0+WCD_93XX: <wcd_close_spkr_prot_shared_channel_v2> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_close_spkr_prot_shared_channel_v2
+{
+}
+#typev shared_channel_manager_c252 15 "%0-WCD_93XX: <wcd_configure_shared_channel, Configured SLIMBUS shared channels, RC:%10!d!.> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_configure_shared_channel
+{
+return_code, ItemLong -- 10
+}
+#typev shared_channel_manager_c131 11 "%0=WCD_93XX: <Mismatch between usecase and slimbus cmd IOCTL. Usecase has %10!u! unique ports. IOCTL has %11!u! channels.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_configure_shared_channel
+{
+(uint32)table->size, ItemLong -- 10
+(uint16)slimbus_cmd->num_of_channels, ItemLong -- 11
+}
+#typev shared_channel_manager_c147 12 "%0=WCD_93XX: <Could not allocate resource group.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_configure_shared_channel
+{
+}
+#typev shared_channel_manager_c228 14 "%0=WCD_93XX: <Error connecting the port to the channel.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_configure_shared_channel
+{
+}
+#typev shared_channel_manager_c219 13 "%0=WCD_93XX: <wcd_configure_shared_channel, Allocating shared channel, ch_index=(%10!u!), shared_channel_num=(%11!u!)> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_configure_shared_channel
+{
+i, ItemLong -- 10
+slimbus_cmd->shared_channel_num[i], ItemLong -- 11
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev shared_channel_manager_c112 10 "%0+WCD_93XX: <wcd_configure_shared_channel, dir=(%10!d!), num_of_channels=(%11!u!)> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_configure_shared_channel
+{
+slimbus_cmd->direction, ItemLong -- 10
+slimbus_cmd->num_of_channels, ItemLong -- 11
+}
+#typev shared_channel_manager_c576 35 "%0-WCD_93XX: <wcd_configure_slimbus_port_registers, Configured MAD SLIMBUS, RC:%10!d!.> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_configure_slimbus_port_registers
+{
+return_code, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev shared_channel_manager_c548 34 "%0=WCD_93XX: <wcd_configure_slimbus_port_registers, slave_port_id=(%10!u!), tx_multichannel_payload=(0x%11!x!)> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_configure_slimbus_port_registers
+{
+slave_port_id, ItemLong -- 10
+tx_multichannel_payload, ItemLong -- 11
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev shared_channel_manager_c513 33 "%0=WCD_93XX: <wcd_configure_slimbus_port_registers, slave_port_id=(%10!u!), tx_multichannel_payload=(0x%11!x!)> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_configure_slimbus_port_registers
+{
+slave_port_id, ItemLong -- 10
+tx_multichannel_payload, ItemLong -- 11
+}
+#typev shared_channel_manager_c500 32 "%0-WCD_93XX: <wcd_configure_slimbus_port_registers : Null pointer passed> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_configure_slimbus_port_registers
+{
+}
+#typev shared_channel_manager_c426 26 "%0-WCD_93XX: <wcd_configure_spkr_prot_shared_channel_v2 RC:%10!d!.> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_configure_spkr_prot_shared_channel_v2
+{
+return_code, ItemLong -- 10
+}
+#typev shared_channel_manager_c401 25 "%0=WCD_93XX: <Could not connect shared channel> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_configure_spkr_prot_shared_channel_v2
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev shared_channel_manager_c393 24 "%0=WCD_93XX: <connecting shared channel=(%10!u!)> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_configure_spkr_prot_shared_channel_v2
+{
+shared_channel_num, ItemLong -- 10
+}
+#typev shared_channel_manager_c374 23 "%0=WCD_93XX: <slave_port_id=(%10!u!), tx_multichannel_payload=(0x%11!x!)> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_configure_spkr_prot_shared_channel_v2
+{
+slave_port_id, ItemLong -- 10
+tx_multichannel_payload, ItemLong -- 11
+}
+#typev shared_channel_manager_c349 22 "%0=WCD_93XX: <Could not allocate resource group> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_configure_spkr_prot_shared_channel_v2
+{
+}
+#typev shared_channel_manager_c340 21 "%0+WCD_93XX: <wcd_configure_spkr_prot_shared_channel_v2>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_configure_spkr_prot_shared_channel_v2
+{
+}

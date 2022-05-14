@@ -1,0 +1,56 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+8f99d570-364e-39db-6a6f-db4e1eaca731 WMRIL // SRC=WMRilEvent.cpp MJ= MN=
+#typev WMRilEvent_cpp78 11 "%0%!LEVEL! %!FUNC!:Failed to create event. Error = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::EventClass::Create
+{
+error, ItemLong -- 10
+}
+#typev WMRilEvent_cpp70 10 "%0%!LEVEL! %!FUNC!:Created the %10!s! event 0x%11!p!, GetLastError 0x%12!08X!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_MEMORY FUNC=WMRil::EventClass::Create
+{
+(manualReset)?'manual reset':'auto reset', ItemString -- 10
+m_hEvent, ItemPtr -- 11
+error, ItemLong -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilEvent_cpp176 15 "%0%!LEVEL! %!FUNC!:Failed to create event. Error = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::EventClass::CreateUniqueNamedEvent
+{
+GetLastError(), ItemLong -- 10
+}
+#typev WMRilEvent_cpp186 16 "%0%!LEVEL! %!FUNC!:Created the %10!s! reset event with name "%11!s!", hEvent = 0x%12!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_MEMORY FUNC=WMRil::EventClass::CreateUniqueNamedEvent
+{
+(manualReset)?'manual reset':'auto reset', ItemString -- 10
+static_cast<TCHAR *>(m_pEventName->GetPtr()), ItemWString -- 11
+hEvent, ItemPtr -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilEvent_cpp116 14 "%0%!LEVEL! %!FUNC!:Duplicated event 0x%10!p! with 0x%11!p!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_MEMORY FUNC=WMRil::EventClass::Duplicate
+{
+handleOrig, ItemPtr -- 10
+m_hEvent, ItemPtr -- 11
+}
+#typev WMRilEvent_cpp112 13 "%0%!LEVEL! %!FUNC!:duplicated event handle is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::EventClass::Duplicate
+{
+}
+#typev WMRilEvent_cpp104 12 "%0%!LEVEL! %!FUNC!:Failed to duplicate event handle 0x%10!p!, error = 0x%11!08X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::EventClass::Duplicate
+{
+handleOrig, ItemPtr -- 10
+GetLastError(), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilEvent_cpp237 19 "%0%!LEVEL! %!FUNC!:Failed. Error = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::EventClass::Reset
+{
+GetLastError(), ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilEvent_cpp220 18 "%0%!LEVEL! %!FUNC!:Failed. Error = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::EventClass::Set
+{
+GetLastError(), ItemLong -- 10
+}
+#typev WMRilEvent_cpp216 17 "%0%!LEVEL! %!FUNC!:m_hEvent = 0x%10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_MEMORY FUNC=WMRil::EventClass::Set
+{
+m_hEvent, ItemPtr -- 10
+}

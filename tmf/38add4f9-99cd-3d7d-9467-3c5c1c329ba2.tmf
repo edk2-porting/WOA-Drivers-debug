@@ -1,0 +1,191 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+38add4f9-99cd-3d7d-9467-3c5c1c329ba2 WMRIL // SRC=WMRilGetPositionInfo.cpp MJ= MN=
+#typev WMRilGetPositionInfo_cpp596 19 "%0%!LEVEL! %!FUNC!:Pilot type (0x%10!08X!) invalid from getCdmaPostionInfo" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::GetPositionInformation<RILPOSITIONINFO_V2>
+{
+getCdmaPos.info.bs[i].pilot_type, ItemLong -- 10
+}
+#typev WMRilGetPositionInfo_cpp548 17 "%0%!LEVEL! %!FUNC!:GetCdmaPositionInfo not supported on this device" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::GetPositionInformation<RILPOSITIONINFO_V2>
+{
+}
+#typev WMRilGetPositionInfo_cpp547 16 "%0%!LEVEL! %!FUNC!:QMI result error. error = 0x%10!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::GetPositionInformation<RILPOSITIONINFO_V2>
+{
+getCdmaPos.resp.error, ItemLong -- 10
+}
+#typev WMRilGetPositionInfo_cpp552 18 "%0%!LEVEL! %!FUNC!:QMI result error. error = 0x%10!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::GetPositionInformation<RILPOSITIONINFO_V2>
+{
+getCdmaPos.resp.error, ItemLong -- 10
+}
+#typev WMRilGetPositionInfo_cpp178 15 "%0%!LEVEL! %!FUNC!:QMI result error. error = 0x%10!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::GetPositionInformation<RILPOSITIONINFO_V2>
+{
+getCellLocResp.resp.error, ItemLong -- 10
+}
+#typev WMRilGetPositionInfo_cpp172 14 "%0%!LEVEL! %!FUNC!:No GSM/UMTS/LTE/CDMA service." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::GetPositionInformation<RILPOSITIONINFO_V2>
+{
+}
+#typev WMRilGetPositionInfo_cpp171 13 "%0%!LEVEL! %!FUNC!:QMI result error. error = 0x%10!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::GetPositionInformation<RILPOSITIONINFO_V2>
+{
+getCellLocResp.resp.error, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetPositionInfo_cpp775 30 "%0%!LEVEL! %!FUNC!: LTE Neighbor Info #%10!u!; dwParams: 0x%11!08X!; dwCellID: %12!u!; dwEARFCN: %13!u!; dwMobileCountryCode: %14!u!; dwMobileNetworkCode: %15!u!; dwPhysCellID: %16!u!; dwRSRP: %17!u!; dwRSRQ: %18!u!; dwTAC: %19!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::PrintPositionInfoStruct<RILPOSITIONINFO_V2>
+{
+i, ItemLong -- 10
+positionInfo.reMRL[i].dwParams, ItemLong -- 11
+positionInfo.reMRL[i].dwCellID, ItemLong -- 12
+positionInfo.reMRL[i].dwEARFCN, ItemLong -- 13
+positionInfo.reMRL[i].dwMobileCountryCode, ItemLong -- 14
+positionInfo.reMRL[i].dwMobileNetworkCode, ItemLong -- 15
+positionInfo.reMRL[i].dwPhysCellID, ItemLong -- 16
+positionInfo.reMRL[i].dwRSRP, ItemLong -- 17
+positionInfo.reMRL[i].dwRSRQ, ItemLong -- 18
+positionInfo.reMRL[i].dwTAC, ItemLong -- 19
+}
+#typev WMRilGetPositionInfo_cpp769 29 "%0%!LEVEL! %!FUNC!: LTE Serving Cell Info: dwParams: 0x%10!08X!; dwCellID: %11!u!; dwEARFCN: %12!u!; dwMobileCountryCode: %13!u!; dwMobileNetworkCode: %14!u!; dwPhysCellID: %15!u!; dwRSRP: %16!u!; dwRSRQ: %17!u!; dwTAC: %18!u!; dwTimingAdvance: %19!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::PrintPositionInfoStruct<RILPOSITIONINFO_V2>
+{
+positionInfo.stLTEServingCellInfo.dwParams, ItemLong -- 10
+positionInfo.stLTEServingCellInfo.dwCellID, ItemLong -- 11
+positionInfo.stLTEServingCellInfo.dwEARFCN, ItemLong -- 12
+positionInfo.stLTEServingCellInfo.dwMobileCountryCode, ItemLong -- 13
+positionInfo.stLTEServingCellInfo.dwMobileNetworkCode, ItemLong -- 14
+positionInfo.stLTEServingCellInfo.dwPhysCellID, ItemLong -- 15
+positionInfo.stLTEServingCellInfo.dwRSRP, ItemLong -- 16
+positionInfo.stLTEServingCellInfo.dwRSRQ, ItemLong -- 17
+positionInfo.stLTEServingCellInfo.dwTAC, ItemLong -- 18
+positionInfo.stLTEServingCellInfo.dwTimingAdvance, ItemLong -- 19
+}
+#typev WMRilGetPositionInfo_cpp762 28 "%0%!LEVEL! %!FUNC!: CDMA Neighbor Info #%10!u!; dwParams: 0x%11!08X!; dwBaseLat: %12!u!; dwBaseLong: %13!u!; dwBaseStationID: %14!u!; dwGPSSeconds: %15!u!; dwNID: %16!u!; dwPilotStrength: %17!u!; dwRefPN: l%18!u!; dwSID: %19!u!; fServing: %20!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::PrintPositionInfoStruct<RILPOSITIONINFO_V2>
+{
+i, ItemLong -- 10
+positionInfo.rc2kMRL[i].dwParams, ItemLong -- 11
+positionInfo.rc2kMRL[i].dwBaseLat, ItemLong -- 12
+positionInfo.rc2kMRL[i].dwBaseLong, ItemLong -- 13
+positionInfo.rc2kMRL[i].dwBaseStationID, ItemLong -- 14
+positionInfo.rc2kMRL[i].dwGPSSeconds, ItemLong -- 15
+positionInfo.rc2kMRL[i].dwNID, ItemLong -- 16
+positionInfo.rc2kMRL[i].dwPilotStrength, ItemLong -- 17
+positionInfo.rc2kMRL[i].dwRefPN, ItemLong -- 18
+positionInfo.rc2kMRL[i].dwSID, ItemLong -- 19
+positionInfo.rc2kMRL[i].fServing, ItemLong -- 20
+}
+#typev WMRilGetPositionInfo_cpp755 27 "%0%!LEVEL! %!FUNC!: UMTS Neighbor Info #%10!u!; dwParams: 0x%11!08X!; dwCellID: %12!u!; dwECNO: %13!u!; dwLocationAreaCode: %14!u!; dwMobileCountryCode: %15!u!; dwMobileNetworkCode: %16!u!; dwPathLoss: %17!u!; dwPrimaryScramblingCode: %18!u!; dwRSCP: %19!u!; dwUARFCN: %20!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::PrintPositionInfoStruct<RILPOSITIONINFO_V2>
+{
+i, ItemLong -- 10
+positionInfo.ruMRL[i].dwParams, ItemLong -- 11
+positionInfo.ruMRL[i].dwCellID, ItemLong -- 12
+positionInfo.ruMRL[i].dwECNO, ItemLong -- 13
+positionInfo.ruMRL[i].dwLocationAreaCode, ItemLong -- 14
+positionInfo.ruMRL[i].dwMobileCountryCode, ItemLong -- 15
+positionInfo.ruMRL[i].dwMobileNetworkCode, ItemLong -- 16
+positionInfo.ruMRL[i].dwPathLoss, ItemLong -- 17
+positionInfo.ruMRL[i].dwPrimaryScramblingCode, ItemLong -- 18
+positionInfo.ruMRL[i].dwRSCP, ItemLong -- 19
+positionInfo.ruMRL[i].dwUARFCN, ItemLong -- 20
+}
+#typev WMRilGetPositionInfo_cpp750 26 "%0%!LEVEL! %!FUNC!: GSM Neighbor Info #%10!u!; dwParams: 0x%11!08X!; dwARFCN: %12!u!; dwBaseStationID: %13!u!; dwCellID: %14!u!; dwLocationAreaCode: %15!u!; dwMobileCountryCode: %16!u!; dwMobileNetworkCode: %17!u!; dwRxLevel: %18!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::PrintPositionInfoStruct<RILPOSITIONINFO_V2>
+{
+i, ItemLong -- 10
+positionInfo.rgNMR[i].dwParams, ItemLong -- 11
+positionInfo.rgNMR[i].dwARFCN, ItemLong -- 12
+positionInfo.rgNMR[i].dwBaseStationID, ItemLong -- 13
+positionInfo.rgNMR[i].dwCellID, ItemLong -- 14
+positionInfo.rgNMR[i].dwLocationAreaCode, ItemLong -- 15
+positionInfo.rgNMR[i].dwMobileCountryCode, ItemLong -- 16
+positionInfo.rgNMR[i].dwMobileNetworkCode, ItemLong -- 17
+positionInfo.rgNMR[i].dwRxLevel, ItemLong -- 18
+}
+#typev WMRilGetPositionInfo_cpp745 25 "%0%!LEVEL! %!FUNC!: UMTS Serving Cell Info: dwParams: 0x%10!08X!; dwCellID: %11!u!; dwECNO: %12!u!; dwFrequencyInfoDL: %13!u!; dwFrequencyInfoNT: %14!u!; dwFrequencyInfoUL: %15!u!; dwLocationAreaCode: %16!u!; dwMobileCountryCode: %17!u!; dwMobileNetworkCode: %18!u!; dwPathLoss: %19!u!; dwPrimaryScramblingCode: %20!d!; dwRSCP: %21!d!; dwUARFCN: %22!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::PrintPositionInfoStruct<RILPOSITIONINFO_V2>
+{
+positionInfo.stUMTSServingCellInfo.dwParams, ItemLong -- 10
+positionInfo.stUMTSServingCellInfo.dwCellID, ItemLong -- 11
+positionInfo.stUMTSServingCellInfo.dwECNO, ItemLong -- 12
+positionInfo.stUMTSServingCellInfo.dwFrequencyInfoDL, ItemLong -- 13
+positionInfo.stUMTSServingCellInfo.dwFrequencyInfoNT, ItemLong -- 14
+positionInfo.stUMTSServingCellInfo.dwFrequencyInfoUL, ItemLong -- 15
+positionInfo.stUMTSServingCellInfo.dwLocationAreaCode, ItemLong -- 16
+positionInfo.stUMTSServingCellInfo.dwMobileCountryCode, ItemLong -- 17
+positionInfo.stUMTSServingCellInfo.dwMobileNetworkCode, ItemLong -- 18
+positionInfo.stUMTSServingCellInfo.dwPathLoss, ItemLong -- 19
+positionInfo.stUMTSServingCellInfo.dwPrimaryScramblingCode, ItemLong -- 20
+positionInfo.stUMTSServingCellInfo.dwRSCP, ItemLong -- 21
+positionInfo.stUMTSServingCellInfo.dwUARFCN, ItemLong -- 22
+}
+#typev WMRilGetPositionInfo_cpp740 24 "%0%!LEVEL! %!FUNC!: GSM Serving Cell Info: dwParams: 0x%10!08X!; dwARFCN: %11!u!; dwBaseStationID: %12!u!; dwCellID: %13!u!; dwLocationAreaCode: %14!u!; dwMobileCountryCode: %15!u!; dwMobileNetworkCode: %16!u!; dwRxLevel: %17!u!; dwTimingAdvance: %18!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::PrintPositionInfoStruct<RILPOSITIONINFO_V2>
+{
+positionInfo.stGSMServingCellInfo.dwParams, ItemLong -- 10
+positionInfo.stGSMServingCellInfo.dwARFCN, ItemLong -- 11
+positionInfo.stGSMServingCellInfo.dwBaseStationID, ItemLong -- 12
+positionInfo.stGSMServingCellInfo.dwCellID, ItemLong -- 13
+positionInfo.stGSMServingCellInfo.dwLocationAreaCode, ItemLong -- 14
+positionInfo.stGSMServingCellInfo.dwMobileCountryCode, ItemLong -- 15
+positionInfo.stGSMServingCellInfo.dwMobileNetworkCode, ItemLong -- 16
+positionInfo.stGSMServingCellInfo.dwRxLevel, ItemLong -- 17
+positionInfo.stGSMServingCellInfo.dwTimingAdvance, ItemLong -- 18
+}
+#typev WMRilGetPositionInfo_cpp736 23 "%0%!LEVEL! %!FUNC!:Position Info Struct: cbSize: %10!d!; dwSystemType: 0x%11!08X!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::PrintPositionInfoStruct<RILPOSITIONINFO_V2>
+{
+positionInfo.cbSize, ItemLong -- 10
+positionInfo.dwSystemType, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetPositionInfo_cpp826 33 "%0%!LEVEL! %!FUNC!:Rssi(%10!d!) to RxLevel(%11!u!) Convert" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::ConvertRssiToRxLevel
+{
+rssi, ItemLong -- 10
+result, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetPositionInfo_cpp96 12 "%0%!LEVEL! %!FUNC!:Driver is not available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::Execute
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetPositionInfo_cpp659 21 "%0%!LEVEL! %!FUNC!:No TDSCDMA info available." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::GetPositionInformationTdscdma
+{
+}
+#typev WMRilGetPositionInfo_cpp654 20 "%0%!LEVEL! %!FUNC!:No position info available on any network type." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::GetPositionInformationTdscdma
+{
+}
+#typev WMRilGetPositionInfo_cpp664 22 "%0%!LEVEL! %!FUNC!:QMI result error. error = 0x%10!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::GetPositionInformationTdscdma
+{
+getTdsCellPositionInfoResp.resp.error, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetPositionInfo_cpp78 11 "%0%!LEVEL! %!FUNC!:executor-id = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::InitParams
+{
+m_dwExecutor, ItemLong -- 10
+}
+#typev WMRilGetPositionInfo_cpp71 10 "%0%!LEVEL! %!FUNC!:Buffer size %10!u! != sizeof(DWORD)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::InitParams
+{
+dwBufferLength, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetPositionInfo_cpp801 32 "%0%!LEVEL! %!FUNC!: TDSCDMA Neighbor Info #%10!u!; dwParams: 0x%11!08X!; dwCellID: %12!u!; dwCellParameterID: %13!u!; dwLocationAreaCode: %14!u!; dwMobileCountryCode: %15!u!; dwMobileNetworkCode: %16!u!; dwPathLoss: %17!u!; dwRSCP: %18!u!; dwUARFCN: %19!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::PrintPositionInfoStructTdscdma
+{
+i, ItemLong -- 10
+positionInfo.rtMRL[i].dwParams, ItemLong -- 11
+positionInfo.rtMRL[i].dwCellID, ItemLong -- 12
+positionInfo.rtMRL[i].dwCellParameterID, ItemLong -- 13
+positionInfo.rtMRL[i].dwLocationAreaCode, ItemLong -- 14
+positionInfo.rtMRL[i].dwMobileCountryCode, ItemLong -- 15
+positionInfo.rtMRL[i].dwMobileNetworkCode, ItemLong -- 16
+positionInfo.rtMRL[i].dwPathLoss, ItemLong -- 17
+positionInfo.rtMRL[i].dwRSCP, ItemLong -- 18
+positionInfo.rtMRL[i].dwUARFCN, ItemLong -- 19
+}
+#typev WMRilGetPositionInfo_cpp795 31 "%0%!LEVEL! %!FUNC!: TDSCDMA Serving Cell Info: dwParams: 0x%10!08X!; dwCellID: %11!u!; dwCellParameterID: %12!u!; dwLocationAreaCode: %13!u!; dwMobileCountryCode: %14!u!; dwMobileNetworkCode: %15!u!; dwPathLoss: %16!u!; dwRSCP: %17!u!; dwTimingAdvance: %18!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::GetPositionInfoClass::PrintPositionInfoStructTdscdma
+{
+positionInfo.stTDSCDMAServingCellInfo.dwParams, ItemLong -- 10
+positionInfo.stTDSCDMAServingCellInfo.dwCellID, ItemLong -- 11
+positionInfo.stTDSCDMAServingCellInfo.dwCellParameterID, ItemLong -- 12
+positionInfo.stTDSCDMAServingCellInfo.dwLocationAreaCode, ItemLong -- 13
+positionInfo.stTDSCDMAServingCellInfo.dwMobileCountryCode, ItemLong -- 14
+positionInfo.stTDSCDMAServingCellInfo.dwMobileNetworkCode, ItemLong -- 15
+positionInfo.stTDSCDMAServingCellInfo.dwPathLoss, ItemLong -- 16
+positionInfo.stTDSCDMAServingCellInfo.dwRSCP, ItemLong -- 17
+positionInfo.stTDSCDMAServingCellInfo.dwTimingAdvance, ItemLong -- 18
+}

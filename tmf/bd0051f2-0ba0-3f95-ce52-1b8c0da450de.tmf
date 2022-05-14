@@ -1,0 +1,2731 @@
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+bd0051f2-0ba0-3f95-ce52-1b8c0da450de vcxproj // SRC=AdieCodecDriver.c MJ= MN=
+#typev AdieCodecDriver_c5054 424 "%0CodecDr:ACDAcquireDevice:WCNAcquireDevice failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5047 37 "%0CodecDr:WCNGetInterfaceId:DevInfo Null or NoOfDevices is 0" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+}
+#typev AdieCodecDriver_c5076 425 "%0CodecDr:ACDAcquireDevice:AFERMAcquireDevice failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5047 39 "%0CodecDr:isWCNDevice:matched DeviceId 0x%10!x! , InterfaceId 0x%11!x! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceId, ItemLong -- 10
+*InterfaceId, ItemLong -- 11
+}
+#typev AdieCodecDriver_c5047 40 "%0CodecDr:isWCNDevice:did not match DeviceId 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceId, ItemLong -- 10
+}
+#typev AdieCodecDriver_c5047 38 "%0CodecDr:WCNGetInterfaceId:noOfDevices 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+WCNDevices.NoOfDevices, ItemLong -- 10
+}
+#typev AdieCodecDriver_c5043 423 "%0CodecDr:ACDAcquireDevice:WCNAcquireDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+}
+#typev AdieCodecDriver_c4947 429 "%0CodecDr:ACDAcquireDeviceResiliance: Invalid device %10!Id!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceId, ItemPtr -- 10
+DevIndex, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4945 415 "%0CodecDr:ACDAcquireDevice:PairedDeviceId %10!Iu! state check failed" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+PairedDeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4993 429 "%0CodecDr:ACDAcquireDeviceResiliance: Invalid device %10!Id!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceId, ItemPtr -- 10
+DevIndex, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4989 419 "%0CodecDr:ACDAcquireDevice:Fail - EndpointId[%10!Id!] - 0x%11!Ix! Not found in Calib device " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+i, ItemPtr -- 10
+DriverState.DeviceState[PairedDevIndex].DeviceCodecInfo.EndPointId[i], ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5028 422 "%0CodecDr:ACDAcquireDevice:CHMAcquireDevice failed with 0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5023 421 "%0CodecDr:ACDAcquireDevice:CHMAcquireDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+}
+#typev AdieCodecDriver_c4997 420 "%0CodecDr:AFERMAcquireDevice:DevData.SpkrProtInfo.R0[%10!Id!] %11!Id! DevData.SpkrProtInfo.T0[%12!Id!] %13!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+i, ItemPtr -- 10
+DevData.SpkrProtInfo.R0[i], ItemPtr -- 11
+i, ItemPtr -- 12
+DevData.SpkrProtInfo.T0[i], ItemPtr -- 13
+}
+#typev AdieCodecDriver_c4982 418 "%0CodecDr:ACDAcquireDevice:Pairing calib channel %10!Id! to speaker channel %11!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+j, ItemPtr -- 10
+i, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4969 429 "%0CodecDr:ACDAcquireDeviceResiliance: Invalid device %10!Id!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceId, ItemPtr -- 10
+DevIndex, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4965 417 "%0CodecDr:ACDAcquireDevice:Fail - No of channels in Rx %10!Id! is more than Tx %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DriverState.DeviceState[PairedDevIndex].DeviceCodecInfo.NoOfEndPoints, ItemPtr -- 10
+DevData.SpkrProtInfo.NoOfChannels, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4959 416 "%0CodecDr:ACDAcquireDevice:Speaker Prot NoOfChannels on the RX Device: 0x%10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+DriverState.DeviceState[PairedDevIndex].DeviceCodecInfo.NoOfEndPoints, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4909 413 "%0CodecDr:ACDAcquireDevice:ACDValidateMADDeviceAndPowerType: Invalid combination of MAD power type %10!d! and Device Id %11!u!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DevData.MadInfo.PowerType, ItemLong -- 10
+DevData.DevId, ItemLong -- 11
+}
+#typev AdieCodecDriver_c4931 414 "%0CodecDr:ACDAcquireDevice:AdCoDrSpkrProtGetPairedDevice failed PairedDeviceId %10!Iu! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+PairedDeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4904 412 "%0CodecDr:ACDAcquireDevice:ACDValidateMADDeviceAndPowerType: Proper PowerType %10!d! for device %11!u! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+DevData.MadInfo.PowerType, ItemLong -- 10
+DevData.DevId, ItemLong -- 11
+}
+#typev AdieCodecDriver_c4892 411 "%0CodecDr:ACDAcquireDevice: AdCoDrSpkrProtWaitForCalibCancel failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4887 410 "%0CodecDr:ACDAcquireDevice:Calibration in progress. Wait for calib cancel" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+}
+#typev AdieCodecDriver_c4857 409 "%0CodecDr:ACDAcquireDevice:DB_CMD_GET_ADIE_CODEC_DEV_DATA failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4850 408 "%0CodecDr:ACDAcquireDevice: SpkrProtInfo.Mode %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+DevData.SpkrProtInfo.Mode, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4848 407 "%0CodecDr:ACDAcquireDevice: NumChannels %10!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+DevData.NumChannels, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4846 406 "%0CodecDr:ACDAcquireDevice: BitsPerSample %10!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+DevData.BitsPerSample, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4844 405 "%0CodecDr:ACDAcquireDevice: SampleRate %10!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+DevData.SampleRate, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4830 404 "%0CodecDr:ACDAcquireDevice: RxDevice not activated %10!Iu!, DeviceStage %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+RxDeviceId, ItemPtr -- 10
+DriverState.DeviceState[RxDeviceIndex].DeviceStage, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4822 403 "%0CodecDr:ACDAcquireDevice: DevIndex %10!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+RxDeviceIndex, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4812 402 "%0CodecDr:ACDAcquireDevice: Rx Device %10!Iu! has to be enabled, DevIndex %11!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+RxDeviceId, ItemPtr -- 10
+RxDeviceIndex, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4799 401 "%0CodecDr:ACDAcquireDevice:AdCoDrGetAANCRxDevice failed for Device 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceInfo->DeviceID, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4788 400 "%0CodecDr:ACDAcquireDevice:Device %10!Id! is speaker protection device" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+DevData.DevId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4756 399 "%0CodecDr:ACDAcquireDevice: DevIndex %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+DevIndex, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4746 398 "%0CodecDr:ACDAcquireDevice: Cannot support device %10!Iu!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceInfo->DeviceID, ItemPtr -- 10
+DevIndex, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4729 397 "%0CodecDr:ACDAcquireDevice: Device %10!Iu! is invalid state %11!d!, DevIndex %12!Id! RefCount %13!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceInfo->DeviceID, ItemPtr -- 10
+DriverState.DeviceState[DevIndex].DeviceStage, ItemLong -- 11
+DevIndex, ItemPtr -- 12
+DriverState.DeviceState[DevIndex].RefCount, ItemLong -- 13
+}
+#typev AdieCodecDriver_c4719 396 "%0CodecDr:ACDAcquireDevice: Device already acquired %10!Iu!, DevIndex %11!Id! RefCount %12!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceInfo->DeviceID, ItemPtr -- 10
+DevIndex, ItemPtr -- 11
+DriverState.DeviceState[DevIndex].RefCount, ItemLong -- 12
+}
+#typev AdieCodecDriver_c4675 392 "%0CodecDr:ACDAcquireDevice: SW_MAD Device (0x%10!Ix!) is having invalid device stage (0x%11!x!)." //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceInfo->DeviceID, ItemPtr -- 10
+DriverState.DeviceState[DevIndex].DeviceStage, ItemLong -- 11
+}
+#typev AdieCodecDriver_c4709 395 "%0CodecDr:ACDAcquireDevice: AdCoDrSpkrProtWaitForCalibCancel failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4704 394 "%0CodecDr:ACDAcquireDevice:Calibration in progress. Wait for calib cancel" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDAcquireDevice
+{
+}
+#typev AdieCodecDriver_c4684 393 "%0CodecDr:ACDAcquireDevice: MAD already configured on Device %10!u!, DevIndex %11!d!, UseCount %12!u!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceInfo->DeviceID, ItemLong -- 10
+DevIndex, ItemLong -- 11
+DriverState.DeviceState[DevIndex].MADInUse, ItemLong -- 12
+}
+#typev AdieCodecDriver_c4660 391 "%0CodecDr:ACDAcquireDevice: MAD already configured on Device %10!u!, DevIndex %11!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DriverState.DeviceState[DevIndex].DeviceId, ItemLong -- 10
+DevIndex, ItemLong -- 11
+}
+#typev AdieCodecDriver_c4647 390 "%0CodecDr:ACDAcquireDevice: Acquire device %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceInfo->DeviceID, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4626 389 "%0CodecDr:ACDAcquireDevice: Failed: pDeviceInfo = 0x%10!p!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDevice
+{
+DeviceInfo, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5181 429 "%0CodecDr:ACDAcquireDeviceResiliance: Invalid device %10!Id!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDeviceResiliance
+{
+DeviceId, ItemPtr -- 10
+DevIndex, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5170 428 "%0CodecDr:ACDAcquireDeviceResiliance:CHMDeInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDeviceResiliance
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5154 427 "%0CodecDr:ACDAcquireDeviceResiliance:WCNReleaseDevice fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDeviceResiliance
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5139 426 "%0CodecDr:ACDAcquireDeviceResiliance:CHMReleaseDevice fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDAcquireDeviceResiliance
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5364 443 "%0CodecDr:ACDActivateDevice:PMPowerUpDevice success for device %10!Id!, stage %11!Id! with result 0x%12!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDActivateDevice
+{
+PMDeviceInfo.DeviceId, ItemPtr -- 10
+POWER_STAGE_2, ItemPtr -- 11
+status, ItemPtr -- 12
+}
+#typev AdieCodecDriver_c5351 442 "%0CodecDr:ACDActivateDevice:PMPowerUpDevice fail for device %10!Id!, stage %11!Id! with result 0x%12!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDActivateDevice
+{
+PMDeviceInfo.DeviceId, ItemPtr -- 10
+POWER_STAGE_2, ItemPtr -- 11
+status, ItemPtr -- 12
+}
+#typev AdieCodecDriver_c5331 441 "%0CodecDr:ACDActivateDevice:AFERMEnableDevice failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDActivateDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5325 440 "%0CodecDr:ACDActivateDevice:AFERMEnableDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDActivateDevice
+{
+}
+#typev AdieCodecDriver_c5308 439 "%0CodecDr:ACDActivateDevice:WCNEnableDevice failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDActivateDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5301 438 "%0CodecDr:ACDActivateDevice:WCNEnableDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDActivateDevice
+{
+}
+#typev AdieCodecDriver_c5283 437 "%0CodecDr:ACDActivateDevice:CHMEnableDevice failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDActivateDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5278 436 "%0CodecDr:ACDActivateDevice:CHMEnableDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDActivateDevice
+{
+}
+#typev AdieCodecDriver_c5261 435 "%0CodecDr:PMPowerUpDevice success for device %10!Id! with result 0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDActivateDevice
+{
+DeviceId, ItemPtr -- 10
+status, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5248 434 "%0CodecDr:PMPowerUpDevice fail for device %10!Id! with result 0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDActivateDevice
+{
+PMDeviceInfo.DeviceId, ItemPtr -- 10
+status, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5237 433 "%0CodecDr:ACDActivateDevice: DevIndex %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDActivateDevice
+{
+DevIndex, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5227 432 "%0CodecDr:ACDActivateDevice: Device not acquired %10!Id!, DeviceStage %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDActivateDevice
+{
+DeviceId, ItemPtr -- 10
+DriverState.DeviceState[DevIndex].DeviceStage, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5215 431 "%0CodecDr:ACDActivateDevice: Device not acquired %10!Id!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDActivateDevice
+{
+DeviceId, ItemPtr -- 10
+DevIndex, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5205 430 "%0CodecDr:ACDActivateDevice:Activate device %10!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDActivateDevice
+{
+DeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5437 447 "%0CodecDr:ACDActivateDeviceResiliance:PMPowerDownDevice fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDActivateDeviceResiliance
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5425 446 "%0CodecDr:ACDActivateDeviceResiliance:WCNDisableDevice fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDActivateDeviceResiliance
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5410 445 "%0CodecDr:ACDActivateDeviceResiliance:CHMDisableDevice fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDActivateDeviceResiliance
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5393 444 "%0CodecDr:ACDActivateDeviceResiliance:AFERMDisableDevice fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDActivateDeviceResiliance
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7222 586 "%0CodecDr:ACDCollectWDSPRamDump: AUDD_IoGetDeviceDirectory failed " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDCollectWDSPRamDump
+{
+}
+#typev AdieCodecDriver_c7251 589 "%0CodecDr:ACDCollectWDSPRamDump: WdspRamDump failed to write data with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDCollectWDSPRamDump
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7241 588 "%0CodecDr:ACDCollectWDSPRamDump: WdspRamDump Buffer allocation for ram dump failed 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDCollectWDSPRamDump
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7232 587 "%0CodecDr:ACDCollectWDSPRamDump: WdspRamDump File Open error " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDCollectWDSPRamDump
+{
+}
+#typev AdieCodecDriver_c7087 573 "%0CodecDr:ACDConfigureMAD:ACDValidateMADDeviceAndPowerType: Invalid combination of MAD power type %10!d! and Device Id %11!u!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMAD
+{
+DevData.MadInfo.PowerType, ItemLong -- 10
+DevData.DevId, ItemLong -- 11
+}
+#typev AdieCodecDriver_c7168 584 "%0CodecDr:ACDConfigureMAD:AFERMEnableDevice failed with 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMAD
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7159 583 "%0CodecDr:ACDConfigureMAD:AFERMEnableDevice failed with 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMAD
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7153 582 "%0CodecDr:ACDConfigureMAD:AFERMEnableDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDConfigureMAD
+{
+}
+#typev AdieCodecDriver_c7135 580 "%0CodecDr:ACDConfigureMAD:CHMConfigureMAD failed with 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMAD
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7130 579 "%0CodecDr:ACDConfigureMAD:CHMConfigureMAD" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDConfigureMAD
+{
+}
+#typev AdieCodecDriver_c7143 581 "%0CodecDr:ACDConfigureMAD: Invalid power type passed for MAD." //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMAD
+{
+}
+#typev AdieCodecDriver_c7120 578 "%0CodecDr:ACDConfigureMAD:wcd_ioctl WCD_IOCTL_FORCE_RESOURCE fail with result 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDConfigureMAD
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7103 577 "%0CodecDr:ACDConfigureMAD:DB_CMD_GET_MAD_DEV_DATA failed with 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMAD
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7097 576 "%0CodecDr:ACDConfigureMAD: PowerType %10!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDConfigureMAD
+{
+DevData.MadInfo.PowerType, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7095 575 "%0CodecDr:ACDConfigureMAD: BitsPerSample %10!u!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDConfigureMAD
+{
+DevData.BitsPerSample, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7093 574 "%0CodecDr:ACDConfigureMAD: SampleRate %10!u!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDConfigureMAD
+{
+DevData.SampleRate, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7082 572 "%0CodecDr:ACDConfigureMAD:ACDValidateMADDeviceAndPowerType: Proper PowerType %10!d! for device %11!u! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDConfigureMAD
+{
+DevData.MadInfo.PowerType, ItemLong -- 10
+DevData.DevId, ItemLong -- 11
+}
+#typev AdieCodecDriver_c7055 571 "%0CodecDr:ACDConfigureMAD: Active session Count %10!u!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDConfigureMAD
+{
+DriverState.DeviceState[DevIndex].MADInUse, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7053 570 "%0CodecDr:ACDConfigureMAD: DevIndex %10!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDConfigureMAD
+{
+DevIndex, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7047 569 "%0CodecDr:ACDConfigureMAD: Cannot support device %10!u!, DevIndex %11!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMAD
+{
+DeviceInfo->DeviceID, ItemLong -- 10
+DevIndex, ItemLong -- 11
+}
+#typev AdieCodecDriver_c7038 568 "%0CodecDr:ACDConfigureMAD: Device already acquired in non MAD usecase %10!u!, DevIndex %11!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMAD
+{
+DeviceInfo->DeviceID, ItemLong -- 10
+DevIndex, ItemLong -- 11
+}
+#typev AdieCodecDriver_c7028 567 "%0CodecDr:ACDConfigureMAD: MAD already configured on Device %10!u!, DevIndex %11!d!, UseCount %12!u!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMAD
+{
+DeviceInfo->DeviceID, ItemLong -- 10
+DevIndex, ItemLong -- 11
+DriverState.DeviceState[DevIndex].MADInUse, ItemLong -- 12
+}
+#typev AdieCodecDriver_c7018 566 "%0CodecDr:ACDConfigureMAD: MAD already configured on Device %10!u!, DevIndex %11!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMAD
+{
+DriverState.DeviceState[DevIndex].DeviceId, ItemLong -- 10
+DevIndex, ItemLong -- 11
+}
+#typev AdieCodecDriver_c7011 565 "%0CodecDr:ACDConfigureMAD: Configure MAD on device %10!u!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMAD
+{
+DeviceInfo->DeviceID, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7006 564 "%0CodecDr:ACDConfigureMAD: Failed: DeviceInfo = 0x%10!p!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMAD
+{
+DeviceInfo, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6947 563 "%0CodecDr:ACDConfigureMAD:DataBaseAPI DB_CMD_RELEASE_DEV_RESOURCES failed with 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMADErrorResilience
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c6938 562 "%0CodecDr:ACDConfigureMADErrorResilience:wcd_ioctl WCD_IOCTL_FORCE_RESOURCE fail with result 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMADErrorResilience
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c6926 561 "%0CodecDr:ACDConfigureMADErrorResilience:CHMDisableMAD failed with 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMADErrorResilience
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c6919 560 "%0CodecDr:ACDConfigureMADErrorResilience:AFERMReleaseDevice failed with 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDConfigureMADErrorResilience
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c4467 376 "%0CodecDr:ACDReleaseDevice:PMPowerDownDevice fail for device %10!Id! with result 0x%11!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDeActivateDevice
+{
+PMDeviceInfo.DeviceId, ItemPtr -- 10
+status, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4453 375 "%0CodecDr:ACDDeActivateDevice:WCNDisableDevice failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDeActivateDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4446 374 "%0CodecDr:ACDDeActivateDevice:WCNDisableDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDeActivateDevice
+{
+}
+#typev AdieCodecDriver_c4433 373 "%0CodecDr:ACDDeActivateDevice:CHMDisableDevice failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDeActivateDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4425 372 "%0CodecDr:ACDDeActivateDevice:CHMDisableDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDeActivateDevice
+{
+}
+#typev AdieCodecDriver_c4406 371 "%0CodecDr:ACDDeActivateDevice:AFERMDisableDevice failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDeActivateDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4401 370 "%0CodecDr:ACDDeActivateDevice:AFERMDisableDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDeActivateDevice
+{
+}
+#typev AdieCodecDriver_c4387 369 "%0CodecDr:ACDDeActivateDevice: ACDDisableAfeLoopback fail for device %10!Id! with result 0x%11!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDeActivateDevice
+{
+DeviceId, ItemPtr -- 10
+status, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4373 368 "%0CodecDr:ACDDeActivateDevice: Invalid device %10!Iu!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDeActivateDevice
+{
+DriverState.DeviceState[DevIndex].DeviceLoopback.PairedDeviceId, ItemPtr -- 10
+PairedDevIndex, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4353 367 "%0CodecDr:ACDDeActivateDevice: PMPowerDownDevice fail for device %10!Id! with result 0x%11!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDeActivateDevice
+{
+PMDeviceInfo.DeviceId, ItemPtr -- 10
+status, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4336 366 "%0CodecDr:ACDDisableDevice: Device still enabled %10!Id! RefCount %11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDeActivateDevice
+{
+DeviceId, ItemPtr -- 10
+DriverState.DeviceState[DevIndex].RefCount, ItemLong -- 11
+}
+#typev AdieCodecDriver_c4327 365 "%0CodecDr:ACDDeActivateDevice: MAD enabled on multiple session; Active session Count %10!u!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDeActivateDevice
+{
+DriverState.DeviceState[DevIndex].MADInUse, ItemLong -- 10
+}
+#typev AdieCodecDriver_c4314 364 "%0CodecDr:ACDDeActivateDevice: Device not activated %10!Id!, DeviceStage %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDeActivateDevice
+{
+DeviceId, ItemPtr -- 10
+DriverState.DeviceState[DevIndex].DeviceStage, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4309 363 "%0CodecDr:ACDDeActivateDevice: DevIndex %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDeActivateDevice
+{
+DevIndex, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4299 362 "%0CodecDr:ACDDeActivateDevice: Invalid device %10!Id!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDeActivateDevice
+{
+DeviceId, ItemPtr -- 10
+DevIndex, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4293 361 "%0CodecDr:ACDDeActivateDevice: Deactivate device %10!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDeActivateDevice
+{
+DeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6848 555 "%0CodecDr:ACDDisableAfeLoopback: Invalid device %10!Iu!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableAfeLoopback
+{
+DevicePair->DeviceID[i], ItemPtr -- 10
+DevIndex[i], ItemPtr -- 11
+}
+#typev AdieCodecDriver_c6866 557 "%0CodecDr:ACDDisableAfeLoopback: Device not activated %10!Iu!, DeviceStage %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableAfeLoopback
+{
+DevicePair->DeviceID[i], ItemPtr -- 10
+DriverState.DeviceState[DevIndex[i]].DeviceStage, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c6877 558 "%0CodecDr:ACDDisableAfeLoopback: Loopback not enabled for Device %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableAfeLoopback
+{
+DevicePair->DeviceID[i], ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6891 559 "%0CodecDr:ACDDisableAfeLoopback:AFERMDisableLoopback failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableAfeLoopback
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6858 556 "%0CodecDr:ACDDisableAfeLoopback: DevIndex %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableAfeLoopback
+{
+DevIndex[i], ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6835 554 "%0CodecDr:ACDDisableAfeLoopback: Disable AFE Loopback devices %10!Iu!, %11!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableAfeLoopback
+{
+DevicePair->DeviceID[0], ItemPtr -- 10
+DevicePair->DeviceID[1], ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5972 489 "%0CodecDr:ACDDisableDevice: AdieCodecEnableTimer failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableDevice
+{
+tempStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5954 488 "%0CodecDr:ACDDisableDevice: ACDReleaseDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5942 487 "%0CodecDr:ACDDisableDevice: ACDDeActivateDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5935 486 "%0CodecDr:ACDDisableDevice: Device still used by other sessions" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableDevice
+{
+}
+#typev AdieCodecDriver_c5921 485 "%0CodecDr:ACDDisableDevice:ACDDisableDevice failed for TX device %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableDevice
+{
+TxDeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5909 484 "%0CodecDr:ACDDisableDevice:ACDDisableDevice TxDeviceId check failed %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableDevice
+{
+TxDeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5897 483 "%0CodecDr:ACDDisableDevice:AFERMGetSpkrProtLogDumpParams failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5892 482 "%0CodecDr:ACDDisableDevice:AFERMGetSpkrProtLogDumpParams" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableDevice
+{
+}
+#typev AdieCodecDriver_c5876 481 "%0CodecDr:ACDDisableDevice: Device not deactivated %10!Id!, DeviceStage %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableDevice
+{
+DeviceId, ItemPtr -- 10
+DriverState.DeviceState[DevIndex].DeviceStage, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5868 480 "%0CodecDr:ACDDisableDevice: DevIndex %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableDevice
+{
+DevIndex, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5858 479 "%0CodecDr:ACDDisableDevice: Invalid device %10!Id!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableDevice
+{
+DeviceId, ItemPtr -- 10
+DevIndex, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5851 478 "%0CodecDr:ACDDisableDevice: Disable device %10!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableDevice
+{
+DeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7294 591 "%0CodecDr:ACDDisableMAD: MAD not enabled on Device %10!u!, DevIndex %11!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableMAD
+{
+DeviceID, ItemLong -- 10
+DevIndex, ItemLong -- 11
+}
+#typev AdieCodecDriver_c7389 606 "%0CodecDr:ACDConfigureMAD:DataBaseAPI DB_CMD_RELEASE_DEV_RESOURCES failed with 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableMAD
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7384 605 "%0CodecDr:ACDDisableMAD:DataBaseAPI DB_CMD_RELEASE_DEV_RESOURCES" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableMAD
+{
+}
+#typev AdieCodecDriver_c7375 604 "%0CodecDr:ACDDisableMAD:wcd_ioctl WCD_IOCTL_FORCE_RESOURCE fail with result 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableMAD
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7343 599 "%0CodecDr:ACDDisableMAD:CHMDisableMAD failed with 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableMAD
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7338 598 "%0CodecDr:ACDDisableMAD:CHMDisableMAD" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableMAD
+{
+}
+#typev AdieCodecDriver_c7363 603 "%0CodecDr:ACDDisableMAD:CHMReleaseDevice failed with 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableMAD
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7358 602 "%0CodecDr:ACDDisableMAD:CHMReleaseDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableMAD
+{
+}
+#typev AdieCodecDriver_c7354 601 "%0CodecDr:ACDDisableMAD:CHMDisableDevice failed with 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableMAD
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7349 600 "%0CodecDr:ACDDisableMAD:CHMDisableDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableMAD
+{
+}
+#typev AdieCodecDriver_c7329 597 "%0CodecDr:ACDDisableMAD:AFERMReleaseDevice failed with 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableMAD
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7324 596 "%0CodecDr:ACDDisableMAD:AFERMReleaseDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableMAD
+{
+}
+#typev AdieCodecDriver_c7320 595 "%0CodecDr:ACDDisableMAD:AFERMDisableDevice failed with 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableMAD
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7315 594 "%0CodecDr:ACDDisableMAD:AFERMDisableDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableMAD
+{
+}
+#typev AdieCodecDriver_c7307 593 "%0CodecDr:ACDDisableMAD: MAD enabled on multiple session; Active session Count %10!u!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableMAD
+{
+DriverState.DeviceState[DevIndex].MADInUse, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7300 592 "%0CodecDr:ACDDisableMAD: Active session Count %10!u!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableMAD
+{
+DriverState.DeviceState[DevIndex].MADInUse, ItemLong -- 10
+}
+#typev AdieCodecDriver_c7288 590 "%0CodecDr:ACDDisableMAD: Disable MAD %10!u!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableMAD
+{
+DeviceID, ItemLong -- 10
+}
+#typev AdieCodecDriver_c6524 533 "%0CodecDr:ACDDisableSidetone: Fail Invalid device %10!Iu!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemPtr -- 10
+DevIndex, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c6543 535 "%0CodecDr:ACDDisableSidetone: Fail Device not activated %10!Iu!, DeviceStage %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemPtr -- 10
+DriverState.DeviceState[DevIndex].DeviceStage, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c6556 536 "%0CodecDr:ACDDisableSidetone: Fail Device %10!Iu! is not a codec device" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6569 537 "%0CodecDr:ACDDisableSidetone: Fail Sidetone is not  enabled for device %10!Iu! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6604 540 "%0CodecDr:ACDDisableSidetone: Fail Device %10!Iu! doesnt have correct direction stored" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6619 541 "%0CodecDr:ACDDisableSidetone: Failed, invalid index Rx %10!d! & Tx %11!d! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableSidetone
+{
+RxDevIndex, ItemLong -- 10
+TxDevIndex, ItemLong -- 11
+}
+#typev AdieCodecDriver_c6715 547 "%0CodecDr:ACDDisableSidetone:Fail Couldnt figure out AFE/CHM sidetone RxDeviceId %10!Iu!, TxDeviceId %11!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableSidetone
+{
+RxDeviceId, ItemPtr -- 10
+TxDeviceId, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c6706 546 "%0CodecDr:ACDDisableSidetone: Sidetone disabled for devices %10!u!(ref %11!d!) & %12!u!(ref %13!d!), " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableSidetone
+{
+SidetoneDevices->DeviceID[0], ItemLong -- 10
+DriverState.DeviceState[RxDevIndex].DeviceSideTone.RefCount, ItemLong -- 11
+SidetoneDevices->DeviceID[1], ItemLong -- 12
+DriverState.DeviceState[TxDevIndex].DeviceSideTone.RefCount, ItemLong -- 13
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c6693 545 "%0CodecDr:ACDDisableSidetone:CHMDisableSidetone failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableSidetone
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c6633 542 "%0CodecDr:ACDDisableSidetone: failed, invalid pairs for sidetone disable Rx (%10!u! != %11!u!) & Tx (%12!u! != %13!u!)  " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableSidetone
+{
+RxDeviceId, ItemLong -- 10
+DriverState.DeviceState[RxDevIndex].DeviceSideTone.RxDeviceId, ItemLong -- 11
+TxDeviceId, ItemLong -- 12
+DriverState.DeviceState[TxDevIndex].DeviceSideTone.TxDeviceId, ItemLong -- 13
+}
+#typev AdieCodecDriver_c6651 543 "%0CodecDr:ACDDisableSidetone: Sidetone already enabled for devices %10!u!(ref %11!d!) & %12!u!(ref %13!d!), " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableSidetone
+{
+SidetoneDevices->DeviceID[0], ItemLong -- 10
+DriverState.DeviceState[RxDevIndex].DeviceSideTone.RefCount, ItemLong -- 11
+SidetoneDevices->DeviceID[1], ItemLong -- 12
+DriverState.DeviceState[TxDevIndex].DeviceSideTone.RefCount, ItemLong -- 13
+}
+#typev AdieCodecDriver_c6592 539 "%0CodecDr:ACDDisableSidetone: Device %10!Iu! is a Tx device" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6581 538 "%0CodecDr:ACDDisableSidetone: Device %10!Iu! is a Rx device" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6534 534 "%0CodecDr:ACDDisableSidetone: DevIndex %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDDisableSidetone
+{
+DevIndex, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6510 532 "%0CodecDr:ACDDisableSidetone: Disable Sidetone devices %10!Iu!, %11!u!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDDisableSidetone
+{
+SidetoneDevices->DeviceID[0], ItemPtr -- 10
+SidetoneDevices->DeviceID[1], ItemLong -- 11
+}
+#typev AdieCodecDriver_c6763 549 "%0CodecDr:ACDEnableAfeLoopback: Invalid device %10!Iu!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableAfeLoopback
+{
+DevicePair->DeviceID[i], ItemPtr -- 10
+DevIndex[i], ItemPtr -- 11
+}
+#typev AdieCodecDriver_c6781 551 "%0CodecDr:ACDEnableAfeLoopback: Device not activated %10!Iu!, DeviceStage %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableAfeLoopback
+{
+DevicePair->DeviceID[i], ItemPtr -- 10
+DriverState.DeviceState[DevIndex[i]].DeviceStage, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c6792 552 "%0CodecDr:ACDEnableAfeLoopback: Loopback already enabled for Device %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableAfeLoopback
+{
+DevicePair->DeviceID[i], ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6806 553 "%0CodecDr:ACDEnableAfeLoopback:AFERMEnableLoopback failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableAfeLoopback
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6773 550 "%0CodecDr:ACDEnableAfeLoopback: DevIndex %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDEnableAfeLoopback
+{
+DevIndex[i], ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6750 548 "%0CodecDr:ACDEnableAfeLoopback: Enable AFE Loopback devices %10!Iu!, %11!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableAfeLoopback
+{
+DevicePair->DeviceID[0], ItemPtr -- 10
+DevicePair->DeviceID[1], ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5600 460 "%0CodecDr:ACDEnableDevice AdieCodecCreateThread failed for AdCoDrSpkrProtGetTestParam" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableDevice
+{
+}
+#typev AdieCodecDriver_c5588 459 "%0CodecDr:ACDEnableDevice: ACDDisableDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableDevice
+{
+errorResStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5579 458 "%0CodecDr:ACDEnableDevice:ACDEnableDevice failed for TX device %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableDevice
+{
+TxDeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5564 457 "%0CodecDr:ACDEnableDevice: ACDDisableDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableDevice
+{
+errorResStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5557 456 "%0CodecDr:ACDEnableDevice: Device %10!Iu! doesnt not need speaker protection" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDEnableDevice
+{
+DeviceInfo.DeviceID, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5553 455 "%0CodecDr:ACDEnableDevice:TxDeviceId %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDEnableDevice
+{
+TxDeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5526 453 "%0CodecDr:ACDEnableDevice: ACDReleaseDevice failed with status 0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=ACDEnableDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5518 452 "%0CodecDr:ACDEnableDevice: ACDActivateDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5506 451 "%0CodecDr:ACDEnableDevice: ACDAcquireDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5540 454 "%0CodecDr:ACDEnableDevice: failed ACDSearchFor DevIndex(0x%10!Ix!), MAX_DEVICES(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDEnableDevice
+{
+DevIndex, ItemPtr -- 10
+MAX_DEVICES, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5496 450 "%0CodecDr:ACDEnableDevice: ACDAcquireDevice device already active status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5482 449 "%0CodecDr:ACDEnableDevice: Enable device %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableDevice
+{
+DeviceInfo.DeviceID, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5461 448 "%0CodecDr:ACDEnableDevice: Failed: pDeviceInfo = 0x%10!p!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableDevice
+{
+pDeviceInfo, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6321 517 "%0CodecDr:ACDEnableSidetone: Fail - Invalid device %10!u!, DevIndex %11!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemLong -- 10
+DevIndex, ItemLong -- 11
+}
+#typev AdieCodecDriver_c6333 519 "%0CodecDr:ACDEnableSidetone: Fail Device not activated %10!u!, DeviceStage %11!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemLong -- 10
+DriverState.DeviceState[DevIndex].DeviceStage, ItemLong -- 11
+}
+#typev AdieCodecDriver_c6342 520 "%0CodecDr:ACDEnableSidetone: Fail Device %10!u! is not a codec device" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemLong -- 10
+}
+#typev AdieCodecDriver_c6365 523 "%0CodecDr:ACDEnableSidetone: Fail Device %10!u! doesnt have correct direction stored" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemLong -- 10
+}
+#typev AdieCodecDriver_c6375 524 "%0CodecDr:ACDEnableSidetone: Failed, invalid index Rx %10!d! & Tx %11!d! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableSidetone
+{
+RxDevIndex, ItemLong -- 10
+TxDevIndex, ItemLong -- 11
+}
+#typev AdieCodecDriver_c6474 531 "%0CodecDr:ACDEnableSidetone:Fail No sidetone options available not available " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableSidetone
+{
+}
+#typev AdieCodecDriver_c6466 530 "%0CodecDr:ACDEnableSidetone: Fail CHMEnableSidetone not enabled " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableSidetone
+{
+}
+#typev AdieCodecDriver_c6454 529 "%0CodecDr:ACDEnableSidetone:CHMEnableSidetone failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableSidetone
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6419 527 "%0CodecDr:ACDEnableSidetone:DB_CMD_GET_ADIE_CODEC_SIDETONE_DATA failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableSidetone
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6389 525 "%0CodecDr:ACDEnableSidetone: failed, invalid pairs for sidetone enable Rx (%10!u! != %11!u!) & Tx (%12!u! != %13!u!)  " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableSidetone
+{
+RxDeviceId, ItemLong -- 10
+DriverState.DeviceState[RxDevIndex].DeviceSideTone.RxDeviceId, ItemLong -- 11
+TxDeviceId, ItemLong -- 12
+DriverState.DeviceState[TxDevIndex].DeviceSideTone.TxDeviceId, ItemLong -- 13
+}
+#typev AdieCodecDriver_c6401 526 "%0CodecDr:ACDEnableSidetone: Sidetone already enabled for devices %10!u!(ref %11!d!) & %12!u!(ref %13!d!), " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDEnableSidetone
+{
+SidetoneDevices->DeviceID[0], ItemLong -- 10
+DriverState.DeviceState[RxDevIndex].DeviceSideTone.RefCount, ItemLong -- 11
+SidetoneDevices->DeviceID[1], ItemLong -- 12
+DriverState.DeviceState[TxDevIndex].DeviceSideTone.RefCount, ItemLong -- 13
+}
+#typev AdieCodecDriver_c6357 522 "%0CodecDr:ACDEnableSidetone: Device %10!u! is a Tx device" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDEnableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemLong -- 10
+}
+#typev AdieCodecDriver_c6350 521 "%0CodecDr:ACDEnableSidetone: Device %10!u! is a Rx device" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDEnableSidetone
+{
+SidetoneDevices->DeviceID[i], ItemLong -- 10
+}
+#typev AdieCodecDriver_c6327 518 "%0CodecDr:ACDEnableSidetone: DevIndex %10!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDEnableSidetone
+{
+DevIndex, ItemLong -- 10
+}
+#typev AdieCodecDriver_c6311 516 "%0CodecDr:ACDEnableSidetone: Enable Sidetone devices %10!u!, %11!u!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDEnableSidetone
+{
+SidetoneDevices->DeviceID[0], ItemLong -- 10
+SidetoneDevices->DeviceID[1], ItemLong -- 11
+}
+#typev AdieCodecDriver_c6242 510 "%0CodecDr:ACDGetAttachedChipsetCount->ACDGetAttachedChipsetCount->failed with Status %10!Id!:" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDGetAttachedChipsetCount
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c6251 512 "%0CodecDr:ACDGetAttachedChipsetCount Completed with Status [0x%10!Ix!]" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDGetAttachedChipsetCount
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6247 511 "%0CodecDr:ACDGetAttachedChipsetCount->ACDGetAttachedChipsetCount inputBufferSize is 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDGetAttachedChipsetCount
+{
+rspBuf->count, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c6227 509 "%0CodecDr:ACDGetAttachedChipsetInfo Completed with Status [0x%10!Ix!]" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDGetAttachedChipsetInfo
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6221 508 "%0CodecDr:ACDGetAttachedChipsetInfo->CHMGetAttachedChipsetInfo inputBufferSize is 0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDGetAttachedChipsetInfo
+{
+rspBuf->chipsetCount.count, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6216 507 "%0CodecDr:ACDGetAttachedChipsetInfo->CHMGetAttachedChipsetInfo->failed with Status %10!Id!:" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDGetAttachedChipsetInfo
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c9866 819 "%0CodecDr:ACDGetCPEInfo: failed with null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDGetCPEInfo
+{
+}
+#typev AdieCodecDriver_c9780 814 "%0CodecDr:ACDMADConfig: failed with null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDMADConfig
+{
+}
+#typev AdieCodecDriver_c9806 816 "%0CodecDr:ACDMADConfig: failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDMADConfig
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c9799 815 "%0CodecDr:ACDMADConfig: Incorrect power type (0x%10!Ix!) supplied." //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDMADConfig
+{
+pmad_info->PowerType, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c9826 817 "%0CodecDr:ACDMADDisable: failed with null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDMADDisable
+{
+}
+#typev AdieCodecDriver_c9845 818 "%0CodecDr:ACDMADDisable: failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDMADDisable
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6264 513 "%0CodecDr:ACDReadRegisters:CHMReadRegisters failed with Status 0x%10!Ix!:" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDReadRegisters
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4594 388 "%0CodecDr:ACDReleaseDevice:DB_CMD_RELEASE_DEV_RESOURCES failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDReleaseDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4584 387 "%0CodecDr:ACDReleaseDevice: Calling DataBaseAPI for DB_CMD_RELEASE_DEV_RESOURCES" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDReleaseDevice
+{
+}
+#typev AdieCodecDriver_c4573 386 "%0CodecDr:ACDReleaseDevice:AFERMReleaseDevice failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDReleaseDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4568 385 "%0CodecDr:ACDReleaseDevice: AFERMReleaseDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDReleaseDevice
+{
+}
+#typev AdieCodecDriver_c4557 384 "%0CodecDr:ACDReleaseDevice:WCNReleaseDevice failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDReleaseDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4550 383 "%0CodecDr:ACDReleaseDevice:WCNReleaseDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDReleaseDevice
+{
+}
+#typev AdieCodecDriver_c4538 382 "%0CodecDr:ACDReleaseDevice:CHMReleaseDevice failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDReleaseDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4532 381 "%0CodecDr:ACDReleaseDevice: CHMReleaseDevice" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDReleaseDevice
+{
+}
+#typev AdieCodecDriver_c4513 380 "%0CodecDr:ACDReleaseDevice: Device not deactivated %10!Id!, DeviceStage %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDReleaseDevice
+{
+DeviceId, ItemPtr -- 10
+DriverState.DeviceState[DevIndex].DeviceStage, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4505 379 "%0CodecDr:ACDReleaseDevice: DevIndex %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ACDReleaseDevice
+{
+DevIndex, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4495 378 "%0CodecDr:ACDReleaseDevice: Invalid device %10!Id!, DevIndex %11!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDReleaseDevice
+{
+DeviceId, ItemPtr -- 10
+DevIndex, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c4489 377 "%0CodecDr:ACDReleaseDevice: Release device %10!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDReleaseDevice
+{
+DeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c9891 820 "%0CodecDr:ACDSetNotifyGsmCallstate: failed with null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDSetNotifyGsmCallstate
+{
+}
+#typev AdieCodecDriver_c9905 821 "%0CodecDr:ACDSetNotifyGsmCallstate: AdCoDrConfigureCHMFeature failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDSetNotifyGsmCallstate
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c9902 585 "%0CodecDr:AdCoDrConfigureCHMFeature: CHMConfigureFeature failed 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDSetNotifyGsmCallstate
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4256 358 "%0CodecDr:ACDVerifyAPIInput:Output payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4264 359 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size for ADIE_CODEC_DRIVER_IOCTL_GET_SPKR_PROT_TEST_PARAM OutputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+OutputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4239 356 "%0CodecDr:ACDVerifyAPIInput:Input payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4247 357 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size for ADIE_CODEC_DRIVER_IOCTL_ENABLE_SPKR_PROT_TEST_MODE InputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+InputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4222 354 "%0CodecDr:ACDVerifyAPIInput:Output payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4230 355 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size for ADIE_CODEC_DRIVER_IOCTL_CALIBRATE_SPEAKERS_RT OutputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+OutputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4205 352 "%0CodecDr:ACDVerifyAPIInput:Output payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4213 353 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size for ADIE_CODEC_DRIVER_IOCTL_GET_RT_VALUES OutputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+OutputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4189 350 "%0CodecDr:ACDVerifyAPIInput:Input payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4196 351 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size for ADIE_CODEC_DRIVER_GSM_CALLSTATE InputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+InputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3976 329 "%0CodecDr:ACDVerifyAPIInput:Input payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4172 348 "%0CodecDr:ACDVerifyAPIInput:Output payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4180 349 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size for ADIE_CODEC_DRIVER_CPE_INFO OutputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+OutputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4138 344 "%0CodecDr:ACDVerifyAPIInput:Input payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4146 345 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size InputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+InputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4155 346 "%0CodecDr:ACDVerifyAPIInput:Input payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4163 347 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size InputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+InputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4118 342 "%0CodecDr:ACDVerifyAPIInput:Input payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4126 343 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size InputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+InputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3951 327 "%0CodecDr:ACDVerifyAPIInput:Input payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c3960 328 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size InputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+InputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4072 338 "%0CodecDr:ACDVerifyAPIInput:Input payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4080 339 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size InputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+InputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4049 336 "%0CodecDr:ACDVerifyAPIInput:Input payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4057 337 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size InputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+InputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4274 360 "%0CodecDr:ACDVerifyAPIInput:Wrong IOCTL 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+IOCTL, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c4028 334 "%0CodecDr:ACDVerifyAPIInput:Input payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4036 335 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size InputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+InputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3990 330 "%0CodecDr:ACDVerifyAPIInput:Input payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4007 332 "%0CodecDr:ACDVerifyAPIInput:Output payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c4015 333 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size OutputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+OutputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3999 331 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size InputPayload->size %10!Iu!, required %11!Iu! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+InputPayload->size, ItemPtr -- 10
+InputPayloadSize, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c3925 325 "%0CodecDr:ACDVerifyAPIInput:Input payload null" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+}
+#typev AdieCodecDriver_c3933 326 "%0CodecDr:ACDVerifyAPIInput:Wrong payload size InputPayload->size %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDVerifyAPIInput
+{
+InputPayload->size, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c6278 514 "%0CodecDr:ACDWriteRegisters:CHMWriteRegisters failed with Status 0x%10!Ix!:" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ACDWriteRegisters
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c531 27 "%0CodecDr:AdCoDrAANCGetDevicesFromACDB:Speaker with speaker protection enabled %10!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrAANCGetDevicesFromACDB
+{
+DBAANCDevices.Devices[i], ItemPtr -- 10
+}
+#typev AdieCodecDriver_c523 26 "%0CodecDr:AdCoDrAANCGetDevicesFromACDB: AdieCodecMallocWithTag failed." //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrAANCGetDevicesFromACDB
+{
+}
+#typev AdieCodecDriver_c511 25 "%0CodecDr:AdCoDrAANCGetDevicesFromACDB:No speaker protection devices available" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrAANCGetDevicesFromACDB
+{
+}
+#typev AdieCodecDriver_c502 24 "%0CodecDr:AdCoDrAANCGetDevicesFromACDB:No of devices with AANC support %10!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrAANCGetDevicesFromACDB
+{
+DBAANCDevices.NoOfDevices, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c493 23 "%0CodecDr:AdCoDrAANCGetDevicesFromACDB:DataBaseAPI DB_CMD_GET_AANC_DEVICES fail 0x%10!Ix! with status" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrAANCGetDevicesFromACDB
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c479 22 "%0CodecDr:AdCoDrAANCGetDevicesFromACDB: failed to allocate DBAANCDevices.Devices" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrAANCGetDevicesFromACDB
+{
+}
+#typev AdieCodecDriver_c2200 158 "%0CodecDr:AdCoDrAANCInit:AdCoDrAANCGetTxDeviceFromACDB fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrAANCInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2197 32 "%0CodecDr:AdCoDrAANCGetTxDeviceFromACDB:Device pair for %10!Iu!: %11!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrAANCInit
+{
+DeviceId, ItemPtr -- 10
+AANCDevices.AANCDeviceInfo[DevIndex].TxDeviceId, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c2197 31 "%0CodecDr:AdCoDrAANCGetTxDeviceFromACDB:Only one device should be paired for the Tx Devices" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrAANCInit
+{
+}
+#typev AdieCodecDriver_c2197 30 "%0CodecDr:AdCoDrAANCGetTxDeviceFromACDB:No of tx devices for the rx devices %10!Iu!: %11!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrAANCInit
+{
+DeviceId, ItemPtr -- 10
+DBAANCDevicePair.DevicePairList.NoOfDevices, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c2197 29 "%0CodecDr:AdCoDrAANCGetTxDeviceFromACDB:DataBaseAPI DB_CMD_GET_AANC_DEVICE_PAIR fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrAANCInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2197 28 "%0CodecDr:AdCoDrAANCGetTxDeviceFromACDB:AdieCodecMallocWithTag fail for DBAANCDevicePair.RxDeviceList.Devices" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrAANCInit
+{
+}
+#typev AdieCodecDriver_c2186 157 "%0CodecDr:AdCoDrAANCInit:AdCoDrANNCGetDevicesFromACDB fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrAANCInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3235 234 "%0CodecDr:AdCoDrDeInit:Releasing AdieCodecApiLock mutex failed with status %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdCoDrDeInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3224 233 "%0CodecDr:AdCoDrDeInit:DBDeInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3216 232 "%0CodecDr:AdCoDrDeInit:PMDeInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3208 231 "%0CodecDr:AdCoDrDeInit:CHMDeInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInit
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c3188 229 "%0CodecDr:AdCoDrDeInit:AFERMDeInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInit
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c3158 226 "%0CodecDr:AdCoDrDeInit:audd_rpe_deinit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3145 225 "%0CodecDr:AdCoDrDeInit:AdCoDrSpkrProtDeInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3142 52 "%0CodecDr:AdCoDrSpkrProtDeInit: AdieCodecDestroyTimer failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3133 224 "%0CodecDr:AdCoDrDeInit:AdCoDrDeInitDevices fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5751 470 "%0CodecDr:AdCoDrDeInitDevices:ACDReleaseDevice failed for device %10!Iu! with status: 0x%11!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInitDevices
+{
+DriverState.DeviceState[DevIndex].DeviceId, ItemPtr -- 10
+status, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5742 469 "%0CodecDr:AdCoDrDeInitDevices:Device %10!Iu! in stage %11!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrDeInitDevices
+{
+DriverState.DeviceState[DevIndex].DeviceId, ItemPtr -- 10
+DriverState.DeviceState[DevIndex].DeviceStage, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5781 473 "%0CodecDr:AdCoDrDeInitDevices:ACDReleaseDevice failed for device %10!Iu! with status: 0x%11!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInitDevices
+{
+DriverState.DeviceState[DevIndex].DeviceId, ItemPtr -- 10
+status, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5770 472 "%0CodecDr:AdCoDrDeInitDevices:ACDDeActivateDevice failed for device %10!Iu! with status: 0x%11!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInitDevices
+{
+DriverState.DeviceState[DevIndex].DeviceId, ItemPtr -- 10
+status, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5761 471 "%0CodecDr:AdCoDrDeInitDevices:Device %10!Iu! in stage %11!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrDeInitDevices
+{
+DriverState.DeviceState[DevIndex].DeviceId, ItemPtr -- 10
+DriverState.DeviceState[DevIndex].DeviceStage, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5796 475 "%0CodecDr:AdCoDrDeInitDevices:ACDDisableMAD failed for device %10!u! with status: 0x%11!x! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInitDevices
+{
+DriverState.DeviceState[DevIndex].DeviceId, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev AdieCodecDriver_c5791 474 "%0CodecDr:AdCoDrDeInitDevices:Device %10!u! in stage %11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrDeInitDevices
+{
+DriverState.DeviceState[DevIndex].DeviceId, ItemLong -- 10
+DriverState.DeviceState[DevIndex].DeviceStage, ItemLong -- 11
+}
+#typev AdieCodecDriver_c5732 468 "%0CodecDr:AdCoDrDeInitDevices: Device Index is greater than Max Devices - %10!d! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrDeInitDevices
+{
+DevIndex, ItemLong -- 10
+}
+#typev AdieCodecDriver_c453 21 "%0CodecDr:AdCoDrGetHighPowerMADDevicesFromACDB:high power listen enabled for device %10!u!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrGetHighPowerMADDevicesFromACDB
+{
+HighPowerMADDevices.MADDeviceInfo[i].DeviceId, ItemLong -- 10
+}
+#typev AdieCodecDriver_c444 20 "%0CodecDr:AdCoDrGetHighPowerMADDevicesFromACDB: AdieCodecMallocWithTag failed." //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrGetHighPowerMADDevicesFromACDB
+{
+}
+#typev AdieCodecDriver_c433 19 "%0CodecDr:AdCoDrGetHighPowerMADDevicesFromACDB: High power MAD devices are not available in ACDB" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrGetHighPowerMADDevicesFromACDB
+{
+}
+#typev AdieCodecDriver_c428 18 "%0CodecDr:AdCoDrGetHighPowerMADDevicesFromACDB:No of devices with High power MAD support %10!u!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrGetHighPowerMADDevicesFromACDB
+{
+DBHighPowerMADDevices.NoOfDevices, ItemLong -- 10
+}
+#typev AdieCodecDriver_c423 17 "%0CodecDr:AdCoDrGetHighPowerMADDevicesFromACDB:DataBaseAPI DB_CMD_GET_HIGH_POWER_MAD_DEVICES fail 0x%10!x! with status" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrGetHighPowerMADDevicesFromACDB
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c412 16 "%0CodecDr:AdCoDrGetHighPowerMADDevicesFromACDB: failed to allocate DBHighPowerMADDevices.Devices" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrGetHighPowerMADDevicesFromACDB
+{
+}
+#typev AdieCodecDriver_c386 15 "%0CodecDr:AdCoDrGetLowPowerMADDevicesFromACDB:low power listen enabled for device %10!u!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrGetLowPowerMADDevicesFromACDB
+{
+LowPowerMADDevices.MADDeviceInfo[i].DeviceId, ItemLong -- 10
+}
+#typev AdieCodecDriver_c377 14 "%0CodecDr:AdCoDrGetLowPowerMADDevicesFromACDB: AdieCodecMallocWithTag failed." //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrGetLowPowerMADDevicesFromACDB
+{
+}
+#typev AdieCodecDriver_c366 13 "%0CodecDr:AdCoDrGetLowPowerMADDevicesFromACDB: low power MAD devices are not available in ACDB" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrGetLowPowerMADDevicesFromACDB
+{
+}
+#typev AdieCodecDriver_c361 12 "%0CodecDr:AdCoDrGetLowPowerMADDevicesFromACDB:No of devices with low power MAD support %10!u!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrGetLowPowerMADDevicesFromACDB
+{
+DBLowPowerMADDevices.NoOfDevices, ItemLong -- 10
+}
+#typev AdieCodecDriver_c356 11 "%0CodecDr:AdCoDrGetLowPowerMADDevicesFromACDB:DataBaseAPI DB_CMD_GET_LOW_POWER_MAD_DEVICES fail 0x%10!x! with status" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrGetLowPowerMADDevicesFromACDB
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c345 10 "%0CodecDr:AdCoDrGetLowPowerMADDevicesFromACDB: failed to allocate DBLowPowerMADDevices.Devices" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrGetLowPowerMADDevicesFromACDB
+{
+}
+#typev AdieCodecDriver_c2872 208 "%0CodecDr:AdCoDrInit:audd_rpe_init fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2860 207 "%0CodecDr:AdCoDrInit:AdCoDrSpkrProtInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2852 206 "%0CodecDr:AdCoDrInit:GetWCNDevicesInfofromACDB fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c2836 204 "%0CodecDr:AdCoDrInit:AdCoDrMADInit fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c2833 160 "%0CodecDr:AdCoDrMADInit:AdCoDrGetHighPowerMADDevicesFromACDB fail with status 0x%10!x! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c2833 159 "%0CodecDr:AdCoDrMADInit:AdCoDrGetLowPowerMADDevicesFromACDB fail with status 0x%10!x! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c2827 203 "%0CodecDr:AdCoDrInit:AdCoDrAANCInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2796 200 "%0CodecDr:AdCoDrInit:CHMGetCodec fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2804 201 "%0CodecDr:AdCoDrInit:ACDBSetCodec fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c2787 199 "%0CodecDr:AdCoDrInit:AFERMInitCodecInformation failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2778 198 "%0CodecDr:AdCoDrInit:CHMInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2770 197 "%0CodecDr:AdCoDrInit:GetCodecGPIOMappingInfofromACDB fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c2761 196 "%0CodecDr:AdCoDrInit:GetVBatInfoFromACDB fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c2758 178 "%0CodecDr:GetVBatInfoFromACDB:DB_CMD_GET_VBAT_GAIN_PROC failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2758 177 "%0CodecDr:GetVBatInfoFromACDB: Exallocate failed for  pVbatACDBConfig " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+}
+#typev AdieCodecDriver_c2758 176 "%0CodecDr:GetVBatInfoFromACDB:DB_CMD_GET_VBAT_ADC_CAL failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2758 175 "%0CodecDr:GetVBatInfoFromACDB: Exallocate failed for  *ppVbatADCInfo " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+}
+#typev AdieCodecDriver_c2730 211 "%0CodecDr:AdCoDrDeInitResiliance:ConfigReaderDeInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2727 195 "%0CodecDr:AdCoDrInit:PMInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c2717 194 "%0CodecDr:AdCoDrInit:AFERMInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c2707 193 "%0CodecDr:AdCoDrInit:DBInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInit
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c2945 211 "%0CodecDr:AdCoDrDeInitResiliance:ConfigReaderDeInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInitResiliance
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2934 210 "%0CodecDr:AdCoDrDeInitResiliance:PMDeInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInitResiliance
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2921 209 "%0CodecDr:AdCoDrDeInitResiliance:CHMDeInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrInitResiliance
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3035 217 "%0CodecDr:AdCoDrInit:AdCoDrSpiDeInit AdCodrSPILock mutex failed with status %10!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpiDeInit
+{
+SPILockMutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3023 216 "%0CodecDr:AdCoDrDeInit:AdCoDrSpiDeInit already de-initialized " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdCoDrSpiDeInit
+{
+}
+#typev AdieCodecDriver_c3003 215 "%0CodecDr:AdCoDrDeInit:AdCoDrSpiDeInit AdieCodecWaitForMutex fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpiDeInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2301 165 "%0CodecDr:AdCoDrSpiInit: AdCodrSPILock mutex failed with status %10!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpiInit
+{
+SpiLockMutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2289 164 "%0CodecDr:AdCoDrSpiInit already initialized " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdCoDrSpiInit
+{
+}
+#typev AdieCodecDriver_c2268 163 "%0CodecDr:AdCoDrSpiInit AdieCodecWaitForMutex fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpiInit
+{
+SpiLockMutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1927 139 "%0CodecDr:AdCoDrSpkrProtCalib: AdieCodecDestroyTimer failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1917 138 "%0CodecDr:AdCoDrSpkrProtCalib:Trigerring TriggerCalibCancEvent" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+}
+#typev AdieCodecDriver_c1786 124 "%0CodecDr:AdCoDrSpkrProtCalib: AdieCodecEnableTimer failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1812 127 "%0CodecDr:AdCoDrSpkrProtCalib: AdieCodecWaitForMultipleEvents got speaker enable event. Cancelling calibration" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+}
+#typev AdieCodecDriver_c1823 128 "%0CodecDr:AdCoDrSpkrProtCalib: AdieCodecWaitForMultipleEvents got speaker enable event. Cancelling calibration" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+}
+#typev AdieCodecDriver_c1843 130 "%0CodecDr:AdCoDrSpkrProtCalib: AdieCodecWaitForMultipleEvents failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1836 129 "%0CodecDr:AdCoDrSpkrProtCalib:Acquiring AdieCodecWaitForMultipleObjects failed with status %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1881 134 "%0CodecDr:AdCoDrSpkrProtCalib: AdCoDrSpkrProtStoreCalibRTValues failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1887 135 "%0CodecDr:AdCoDrSpkrProtCalib:CalibStatus CALIB_DONE" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+}
+#typev AdieCodecDriver_c1872 133 "%0CodecDr:AdCoDrSpkrProtCalib: Calibration done R0[%10!Id!] 0x%11!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+i, ItemPtr -- 10
+R0[i], ItemPtr -- 11
+}
+#typev AdieCodecDriver_c1895 136 "%0CodecDr:AdCoDrSpkrProtCalib: ACDDisableDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1860 132 "%0CodecDr:AdCoDrSpkrProtCalib: AFERMGetSpkrProtCalibValue failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1852 131 "%0CodecDr:AdCoDrSpkrProtCalib: AFERMGetSpkrProtCalibValue returned 0x%10!Ix!. Going back and waiting" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1808 126 "%0CodecDr:AdCoDrSpkrProtCalib:AdieCodecWaitForMultipleEvents 0x%10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1798 125 "%0CodecDr:AdCoDrSpkrProtCalib:Releasing AdieCodecApiLock mutex failed with status %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1775 123 "%0CodecDr:AdCoDrSpkrProtCalib: ACDEnableDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1760 122 "%0CodecDr:AdCoDrSpkrProtCalib: AdieCodecCreateTimer failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1749 121 "%0CodecDr:AdCoDrSpkrProtCalib: AdieCodecMallocWithTag failed for CalibWaitTimer" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c1741 120 "%0CodecDr:AdCoDrSpkrProtCalib: AdieCodecMallocWithTag failed for CalibWaitTimerEvent" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+}
+#typev AdieCodecDriver_c1906 137 "%0CodecDr:AdCoDrSpkrProtCalib:Releasing AdieCodecApiLock mutex failed with status %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1721 118 "%0CodecDr:AdCoDrSpkrProtCalib:AdieCodecEnableTimer failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1715 117 "%0CodecDr:AdCoDrSpkrProtCalib:Speaker[%10!Iu!] Temp: [%11!Id!] is not in the range" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+i, ItemPtr -- 10
+SpeakerTemp[i], ItemPtr -- 11
+}
+#typev AdieCodecDriver_c1732 119 "%0CodecDr:AdCoDrSpkrProtCalib: Device %10!Iu! doesnt have a TX Device Pair - FAIL" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+calibDevInfo.DeviceID, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1710 116 "%0CodecDr:AdCoDrSpkrProtCalib:Speaker[%10!Iu!] Temp: [%11!Id!], TempInC: [%12!Id!]" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+i, ItemPtr -- 10
+SpeakerTemp[i], ItemPtr -- 11
+SpeakerTemp[i]>> 6, ItemPtr -- 12
+}
+#typev AdieCodecDriver_c1698 115 "%0CodecDr:AdCoDrSpkrProtCalib:AdCoDrSpkrProtGetSpeakerTemp fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1684 114 "%0CodecDr:AdCoDrSpkrProtCalib:Speaker Prot device 0x%10!Id! is already enabled" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+DriverState.DeviceState[DevIndex].DeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1678 113 "%0CodecDr:AdCoDrSpkrProtCalib:SleepTime %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+SleepTime, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1652 112 "%0CodecDr:AdCoDrSpkrProtCalib:DB_CMD_GET_DEVICES_CHANNEL_MAP_INFO fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1646 111 "%0CodecDr:AdCoDrSpkrProtCalib:CalibStatus CALIB_INPROGRESS" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+}
+#typev AdieCodecDriver_c1640 110 "%0CodecDr:AdCoDrSpkrProtCalib:Calib was already done manually" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+}
+#typev AdieCodecDriver_c1629 109 "%0CodecDr:AdCoDrSpkrProtCalib:Acquiring AdieCodecApiLock mutex failed with status %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdCoDrSpkrProtCalib
+{
+mutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1064 66 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg:SpkrProtQuickCalib %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+SpkrProtCalibDevice.QuickCalib, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1058 65 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg: AdieCodecReadRegistryValueULong failed with status 0x%10!Ix! for SprProtQuickCalib" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1052 64 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg:SpkrProtSpkrCoolTime %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+SpkrProtCalibDevice.SpeakerCooldown, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1046 63 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg: AdieCodecReadRegistryValueULong failed with status 0x%10!Ix! for SprProtSpkrCoolTime" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1040 62 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg:SpkrProtTXBS %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+SpkrProtCalibDevice.BitsPerSampleTx, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1034 61 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg: AdieCodecReadRegistryValueULong failed with status 0x%10!Ix! for SpkrProtTXBS" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1028 60 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg:SpkrProtCalibDeviceBS %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+SpkrProtCalibDevice.BitsPerSample, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1022 59 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg: AdieCodecReadRegistryValueULong failed with status 0x%10!Ix! for SpkrProtCalibDeviceBS" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1016 58 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg:SpkrProtTXSR %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+SpkrProtCalibDevice.SampleRateTx, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1010 57 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg: AdieCodecReadRegistryValueULong failed with status 0x%10!Ix! for SpkrProtTXSR" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1004 56 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg:SpkrProtCalibDeviceSR %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+SpkrProtCalibDevice.SampleRate, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c998 55 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg: AdieCodecReadRegistryValueULong failed with status 0x%10!Ix! for SpkrProtCalibDeviceSR" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c992 54 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg:SpkrProtCalibDeviceID %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+SpkrProtCalibDevice.DeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c985 53 "%0CodecDr:AdCoDrSpkrProtCalibDevInfoFromReg: AdieCodecReadRegistryValueULong failed with status 0x%10!Ix! for SpkrProtCalibDeviceID" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCalibDevInfoFromReg
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8833 736 "%0CodecDr:AdCoDrSpkrProtCheckAndStartCalib: Starting the calib work item" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCheckAndStartCalib
+{
+}
+#typev AdieCodecDriver_c8812 734 "%0CodecDr:AdCoDrSpkrProtCheckAndStartCalib:SpkrProtCalibDevice %10!Id! not yet enumerated" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCheckAndStartCalib
+{
+i, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8827 735 "%0CodecDr:AdCoDrSpkrProtCheckAndStartCalib: AdieCodecCreateTimer failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtCheckAndStartCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8804 733 "%0CodecDr:AdCoDrSpkrProtCheckAndStartCalib:SpkrProtCalibDevice %10!Id! matches SpeakerEnumInfo %11!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtCheckAndStartCalib
+{
+i, ItemPtr -- 10
+j, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c1128 70 "%0CodecDr:AdCoDrSpkrProtGetCalibDevInfoFromACDB:AdCoDrSpkrProtGetPairedDevice failed for Device %10!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibDevInfoFromACDB
+{
+SpkrProtCalibDevice.DeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1163 73 "%0CodecDr:AdCoDrSpkrProtGetCalibDevInfoFromACDB: SpkrProtCalibDevice channel %10!Id! is right " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibDevInfoFromACDB
+{
+i, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1154 72 "%0CodecDr:AdCoDrSpkrProtGetCalibDevInfoFromACDB: SpkrProtCalibDevice channel %10!Id! is left " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibDevInfoFromACDB
+{
+i, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1141 71 "%0CodecDr:AdCoDrSpkrProtGetCalibDevInfoFromACDB:DataBaseAPI DB_CMD_GET_AFE_FB_SPKR_PROT_RT_VALUES fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibDevInfoFromACDB
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1112 69 "%0CodecDr:AdCoDrSpkrProtGetCalibDevInfoFromACDB:Number of channels %10!Id! is more than afe supported number " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibDevInfoFromACDB
+{
+DBDeviceData.CodecInfo.number_of_paths, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1102 68 "%0CodecDr:AdCoDrSpkrProtGetCalibDevInfoFromACDB:Speaker Protection only available for SLIMBUS devices" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibDevInfoFromACDB
+{
+}
+#typev AdieCodecDriver_c1091 67 "%0CodecDr:AdCoDrSpkrProtGetCalibDevInfoFromACDB:DataBaseAPI DB_CMD_GET_ADIE_CODEC_DEV_DATA fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibDevInfoFromACDB
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1321 89 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues: AdieCodecReleaseMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+mutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1310 88 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues: AdCoDrSpkrProtCheckAndStartCalib failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1303 87 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues: CalibStatus %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+SpkrProtCalibDevice.CalibStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1290 85 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues:Calib Value not found for index %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+i, ItemLong -- 10
+}
+#typev AdieCodecDriver_c1297 86 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues:Calib Value found for index %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+i, ItemLong -- 10
+}
+#typev AdieCodecDriver_c1279 84 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues: AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+mutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1222 76 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues:AdieCodecReadPersistentRegistryValueULong failed for Key %10!s! with status 0x%11!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+Key, ItemWString -- 10
+status, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c1238 79 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues:AdieCodecReadPersistentRegistryValueULong failed for Key %10!s! with status 0x%11!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+Key, ItemWString -- 10
+status, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c1255 82 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues:AdieCodecReadPersistentRegistryValueULong failed for Key %10!s! with status 0x%11!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+Key, ItemWString -- 10
+status, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c1259 83 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues:R0[%10!d!] 0x%11!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+i, ItemLong -- 10
+R0[i], ItemPtr -- 11
+}
+#typev AdieCodecDriver_c1250 81 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues: %10!s! was not created in earlier boot" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+SPKRPROT_PERSISTENCE_REGISTRY_PATH, ItemWString -- 10
+}
+#typev AdieCodecDriver_c1243 80 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues:T0[%10!d!] 0x%11!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+i, ItemLong -- 10
+T0[i], ItemPtr -- 11
+}
+#typev AdieCodecDriver_c1233 78 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues: %10!s! was not created in earlier boot" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+SPKRPROT_PERSISTENCE_REGISTRY_PATH, ItemWString -- 10
+}
+#typev AdieCodecDriver_c1227 77 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues:SinkID[%10!d!] 0x%11!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+i, ItemLong -- 10
+SinkID[i], ItemPtr -- 11
+}
+#typev AdieCodecDriver_c1217 75 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues: %10!s! was not created in earlier boot" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+SPKRPROT_PERSISTENCE_REGISTRY_PATH, ItemWString -- 10
+}
+#typev AdieCodecDriver_c1198 74 "%0CodecDr:AdCoDrSpkrProtGetCalibRTValues: failed with status STATUS_NO_MEMORY(0x%10!Ix!) " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetCalibRTValues
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c788 46 "%0CodecDr:AdCoDrSpkrProtGetDevicesFromACDB:Speaker with speaker protection enabled %10!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtGetDevicesFromACDB
+{
+DBSpkrProtDevices.Devices[i], ItemPtr -- 10
+}
+#typev AdieCodecDriver_c778 45 "%0CodecDr:AdCoDrSpkrProtGetDevicesFromACDB: failed to allocate SpkrProtDevices.SpkrProtDeviceInfo" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetDevicesFromACDB
+{
+}
+#typev AdieCodecDriver_c766 44 "%0CodecDr:AdCoDrSpkrProtGetDevicesFromACDB:No speaker protection devices available" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetDevicesFromACDB
+{
+}
+#typev AdieCodecDriver_c757 43 "%0CodecDr:AdCoDrSpkrProtGetDevicesFromACDB:No of speakers with speaker protection enabled %10!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtGetDevicesFromACDB
+{
+DBSpkrProtDevices.NoOfDevices, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c748 42 "%0CodecDr:AdCoDrSpkrProtGetDevicesFromACDB:DataBaseAPI DB_CMD_GET_SPKR_PROT_DEVICES failed with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetDevicesFromACDB
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c733 41 "%0CodecDr:AdCoDrSpkrProtGetDevicesFromACDB:AdieCodecMallocWithTag fail for DBSpkrProtDevices.Devices" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetDevicesFromACDB
+{
+}
+#typev AdieCodecDriver_c1555 105 "%0CodecDr:AdCoDrSpkrProtGetSpeakerTemp:SpkrProtCalibDevice channel %10!Id! pair match failed " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetSpeakerTemp
+{
+i, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1565 106 "%0CodecDr:AdCoDrSpkrProtGetSpeakerTemp:CHMGetSpeakerTemp fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetSpeakerTemp
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c1547 104 "%0CodecDr:AdCoDrSpkrProtGetSpeakerTemp:SpkrProtCalibDevice channel %10!Id! paired with SpeakerEnumInfo Channel %11!Id! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtGetSpeakerTemp
+{
+i, ItemPtr -- 10
+j, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c5669 465 "%0CodecDr:AdCoDrSpkrProtManualCalib:Releasing AdieCodecApiLock mutex failed with status %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdCoDrSpkrProtGetTestParam
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5642 462 "%0CodecDr:AdCoDrSpkrProtGetTestParam: AdieCodecSleep failed with status 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetTestParam
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c5657 464 "%0CodecDr:AdCoDrSpkrProtGetTestParam: AFERMGetSpkrProtTestParam failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetTestParam
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5650 463 "%0CodecDr:AdCoDrSpkrProtGetTestParam: AFERMGetSpkrProtTestParam returned 0x%10!Ix!. Going back and waiting" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtGetTestParam
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c5626 461 "%0CodecDr:AdCoDrSpkrProtGetTestParam:Acquiring AdieCodecApiLock mutex failed with status %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdCoDrSpkrProtGetTestParam
+{
+mutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1508 103 "%0CodecDr:AdCoDrSpkrProtInit:AdCoDrSpkrProtGetCalibDevInfo fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1505 100 "%0CodecDr:AdCoDrSpkrProtGetCalibDevInfo:AdCoDrSpkrProtUpdateInitCalibStatus fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1505 99 "%0CodecDr:AdCoDrSpkrProtGetCalibDevInfo:AdCoDrSpkrProtGetCalibDevInfoFromACDB fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1505 98 "%0CodecDr:AdCoDrSpkrProtGetCalibDevInfo:AdCoDrSpkrProtCalibDevInfoFromReg fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1495 102 "%0CodecDr:AdCoDrSpkrProtInit:AdCoDrSpkrProtGetTxDeviceFromACDB fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1492 51 "%0CodecDr:AdCoDrSpkrProtGetTxDeviceFromACDB:RX device %10!Iu!: Tx Device %11!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtInit
+{
+DeviceId, ItemPtr -- 10
+SpkrProtDevices.SpkrProtDeviceInfo[DevIndex].TxDeviceId, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c1492 50 "%0CodecDr:AdCoDrSpkrProtGetTxDeviceFromACDB:Only one device should be paired for the Rx Devices" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtInit
+{
+}
+#typev AdieCodecDriver_c1492 49 "%0CodecDr:AdCoDrSpkrProtGetTxDeviceFromACDB:No of tx devices for the rx devices %10!Iu!: %11!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtInit
+{
+DeviceId, ItemPtr -- 10
+DBSpkrProtDevicePair.DevicePairList.NoOfDevices, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c1492 48 "%0CodecDr:AdCoDrSpkrProtGetTxDeviceFromACDB:DataBaseAPI DB_CMD_GET_SPKR_PROT_DEVICE_PAIR fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1492 47 "%0CodecDr:AdCoDrSpkrProtGetTxDeviceFromACDB:AdieCodecMallocWithTag fail for DBSpkrProtDevicePair.TxDeviceList.Devices" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtInit
+{
+}
+#typev AdieCodecDriver_c1481 101 "%0CodecDr:AdCoDrSpkrProtInit:AdCoDrSpkrProtGetDevicesFromACDB fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2116 155 "%0CodecDr:AdCoDrSpkrProtManualCalib: ACDDisableDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2068 149 "%0CodecDr:AdCoDrSpkrProtManualCalib: AdieCodecSleep failed with status 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c2103 153 "%0CodecDr:AdCoDrSpkrProtManualCalib: AdCoDrSpkrProtStoreCalibRTValues failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2108 154 "%0CodecDr:AdCoDrSpkrProtManualCalib:CalibStatus CALIB_DONE" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+}
+#typev AdieCodecDriver_c2094 152 "%0CodecDr:AdCoDrSpkrProtManualCalib: Calibration done R0[%10!Id!] 0x%11!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+i, ItemPtr -- 10
+R0[i], ItemPtr -- 11
+}
+#typev AdieCodecDriver_c2083 151 "%0CodecDr:AdCoDrSpkrProtManualCalib: AFERMGetSpkrProtCalibValue failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2076 150 "%0CodecDr:AdCoDrSpkrProtManualCalib: AFERMGetSpkrProtCalibValue returned 0x%10!Ix!. Going back and waiting" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2058 148 "%0CodecDr:AdCoDrSpkrProtManualCalib: ACDEnableDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2040 146 "%0CodecDr:AdCoDrSpkrProtManualCalib:Speaker[%10!Iu!] Temp: [%11!Id!] is not in the range" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+i, ItemPtr -- 10
+SpeakerTemp[i], ItemPtr -- 11
+}
+#typev AdieCodecDriver_c2127 156 "%0CodecDr:AdCoDrSpkrProtManualCalib:Releasing AdieCodecApiLock mutex failed with status %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2050 147 "%0CodecDr:AdCoDrSpkrProtManualCalib: Device %10!Iu! doesnt have a TX Device Pair - FAIL" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+calibDevInfo.DeviceID, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2036 145 "%0CodecDr:AdCoDrSpkrProtManualCalib:Speaker[%10!Iu!] Temp: [%11!Id!], TempInC: [%12!Id!]" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+i, ItemPtr -- 10
+SpeakerTemp[i], ItemPtr -- 11
+SpeakerTemp[i] >> 6, ItemPtr -- 12
+}
+#typev AdieCodecDriver_c2029 144 "%0CodecDr:AdCoDrSpkrProtCalib:AdCoDrSpkrProtGetSpeakerTemp fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2019 143 "%0CodecDr:AdCoDrSpkrProtManualCalib:Speaker Prot device 0x%10!Id! is already enabled" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+DriverState.DeviceState[DevIndex].DeviceId, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2013 142 "%0CodecDr:AdCoDrSpkrProtManualCalib:SleepTime %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+SleepTime, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1988 141 "%0CodecDr:AdCoDrSpkrProtManualCalib:DB_CMD_GET_DEVICES_CHANNEL_MAP_INFO fail with status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1973 140 "%0CodecDr:AdCoDrSpkrProtManualCalib:Acquiring AdieCodecApiLock mutex failed with status %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdCoDrSpkrProtManualCalib
+{
+mutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1378 93 "%0CodecDr:AdCoDrSpkrProtStoreCalibRTValues: Failed to find a spot" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtStoreCalibRTValues
+{
+}
+#typev AdieCodecDriver_c1409 97 "%0CodecDr:save_calibration_data: AdieCodecWritePersistentRegistryValueULong failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtStoreCalibRTValues
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1400 96 "%0CodecDr:save_calibration_data: AdieCodecWritePersistentRegistryValueULong failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtStoreCalibRTValues
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1365 92 "%0CodecDr:AdCoDrSpkrProtStoreCalibRTValues:AdieCodecReadPersistentRegistryValueULong Reading registry failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtStoreCalibRTValues
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1391 95 "%0CodecDr:save_calibration_data: AdieCodecWritePersistentRegistryValueULong failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtStoreCalibRTValues
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1384 94 "%0CodecDr:AdCoDrSpkrProtStoreCalibRTValues: Going to store the value in index %10!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrSpkrProtStoreCalibRTValues
+{
+StoreIn, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1360 91 "%0CodecDr:AdCoDrSpkrProtStoreCalibRTValues:AdieCodecReadPersistentRegistryValueULong %10!s! was not created in earlier boot" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtStoreCalibRTValues
+{
+SPKRPROT_PERSISTENCE_REGISTRY_PATH, ItemWString -- 10
+}
+#typev AdieCodecDriver_c1349 90 "%0CodecDr:AdCoDrSpkrProtStoreCalibRTValues: failed with status STATUS_NO_MEMORY(0x%10!Ix!) " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtStoreCalibRTValues
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1589 108 "%0CodecDr:AdCoDrSpkrProtWaitForCalibCancel:AdieCodecWaitForEvent failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtWaitForCalibCancel
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c1581 107 "%0CodecDr:AdCoDrSpkrProtWaitForCalibCancel:AdieCodecSetEvent failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrSpkrProtWaitForCalibCancel
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3098 222 "%0CodecDr:AdCoDrDeInit:AdCoDrWdspDeInit WDSP not available for current form factor 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrWdspDeInit
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c3108 223 "%0CodecDr:AdCoDrInit:AdCoDrWdspDeInit AdCodrWdspLock mutex failed with status %10!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspDeInit
+{
+WdspLockMutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3087 221 "%0CodecDr:AdCoDrDeInit:AdCoDrWdspDeInit wdspDeInit fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspDeInit
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c3075 220 "%0CodecDr:AdCoDrDeInit:AdCoDrWdspDeInit wdspDisable fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspDeInit
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c3068 219 "%0CodecDr:AdCoDrWdspDeInit WDSP is being used by %10!d! usecase(s), shutdown wdsp anyway" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrWdspDeInit
+{
+WdspSessionCount, ItemLong -- 10
+}
+#typev AdieCodecDriver_c3055 218 "%0CodecDr:AdCoDrWdspDeInit AdieCodecWaitForMutex fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspDeInit
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2381 173 "%0CodecDr:AdCoDrWdspInit:Wdsp not available for current form factor 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrWdspInit
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c2392 174 "%0CodecDr:AdCoDrWdspInit: AdCodrWdspLock mutex failed with status %10!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspInit
+{
+WdspLockMutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2375 172 "%0CodecDr:AdCoDrWdspInit already initialized " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdCoDrWdspInit
+{
+}
+#typev AdieCodecDriver_c2366 171 "%0CodecDr:AdCoDrWdspInit wdsp Suspend fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspInit
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c2358 170 "%0CodecDr:AdCoDrWdspInit wdsp download Code Segment fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspInit
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c2349 169 "%0CodecDr:AdCoDrWdspInit wdsp enable fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspInit
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c2341 168 "%0CodecDr:AdCoDrWdspInit:wdspInit fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspInit
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c2331 167 "%0CodecDr:AdCoDrWdspInit:AdCoDrWdspRegistryRead fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspInit
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c2328 162 "%0CodecDr:AdCoDrWdspRegistryRead: AdieCodecReadRegistryValueULong returned with status 0x%10!Ix! for reading regkey EnableWDSPRestart 0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrWdspInit
+{
+status, ItemPtr -- 10
+AdCoDrKMDFCommon.EnableWDSPRestart, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c2328 161 "%0CodecDr:AdCoDrWdspRegistryRead: AdieCodecReadRegistryValueULong returned with status 0x%10!Ix! for reading regkey MaxNumberOfWDSPRamDumps 0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrWdspInit
+{
+status, ItemPtr -- 10
+AdCoDrKMDFCommon.MaxNumberOfWDSPRamDumps, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c2319 166 "%0CodecDr:AdCoDrWdspInit AdieCodecWaitForMutex fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspInit
+{
+WdspLockMutexStatus, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c2977 214 "%0CodecDr:AdCoDrWdspSSRHandlerThread: WDSP dump collection is disabled, MaxNumberOfWDSPRamDumps is zero " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspSSRHandlerThread
+{
+}
+#typev AdieCodecDriver_c2971 213 "%0CodecDr:AdCoDrWdspSSRHandlerThread:ACDCollectWDSPRamDump fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrWdspSSRHandlerThread
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2962 212 "%0CodecDr:AdCoDrWdspSSRHandlerThread: Handling WDSP SSR" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrWdspSSRHandlerThread
+{
+}
+#typev AdieCodecDriver_c3903 324 "%0<Latency> [IOCTL] - %10!Ix!, [Time in ns_100] - %11!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Latency FUNC=AdieCodecDriverAPI
+{
+IOCTL, ItemPtr -- 10
+end_time - start_time, ItemLongLong -- 11
+}
+#typev AdieCodecDriver_c3899 323 "%0<Latency> [IOCTL] - %10!Ix!, [DeviceID] - %11!Id!, [Time in ns_100] - %12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Latency FUNC=AdieCodecDriverAPI
+{
+IOCTL, ItemPtr -- 10
+DeviceInfo->DeviceID, ItemPtr -- 11
+end_time - start_time, ItemLongLong -- 12
+}
+#typev AdieCodecDriver_c3886 322 "%0CodecDr:AdieCodecDriverAPI:Releasing AdieCodecApiLock mutex failed with status %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3863 320 "%0CodecDr:AdieCodecDriverAPI: AdCoDrSpkrProtGetTestModeParam failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3860 236 "%0CodecDr:AdCoDrSpkrProtGetTestModeParam: Failed test mode not enabled 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3839 318 "%0CodecDr:AdieCodecDriverAPI: ACDGetRTValues failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3832 317 "%0CodecDr:AdieCodecDriverAPI: AdCoDrSpkrProtManualCalib failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3820 316 "%0CodecDr:AdieCodecDriverAPI: ACDGetRTValues failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3851 319 "%0CodecDr:AdieCodecDriverAPI: AdCoDrSpkrProtEnableTestMode failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3848 235 "%0CodecDr:AdCoDrSpkrProtEnableTestMode: failed with status STATUS_NO_MEMORY(0x%10!Ix!) " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3617 299 "%0CodecDr:AdieCodecDriverAPI: ACDGetAttachedChipsetInfo failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3795 313 "%0CodecDr:AdieCodecDriverAPI: ACDSetNotifyGsmCallstate failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3608 298 "%0CodecDr:AdieCodecDriverAPI: ACDGetAttachedChipsetCount failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3808 315 "%0CodecDr:AdieCodecDriverAPI: ACDCollectWDSPRamDump failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3803 314 "%0CodecDr:AdieCodecDriverAPI: WdspRamDump Enter " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+}
+#typev AdieCodecDriver_c3784 312 "%0CodecDr:AdieCodecDriverAPI: ACDGetCPEInfo failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3773 311 "%0CodecDr:AdieCodecDriverAPI: AdCoDrConfigureCHMFeature failed for ADIE_CODEC_CHM_VERIFY_CODEC_INTERFACE with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3770 585 "%0CodecDr:AdCoDrConfigureCHMFeature: CHMConfigureFeature failed 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3760 310 "%0CodecDr:AdieCodecDriverAPI: ACDMADDisable failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3749 309 "%0CodecDr:AdieCodecDriverAPI: ACDMADConfig failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3697 305 "%0CodecDr:AdieCodecDriverAPI: ACDDisableAfeLoopback failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3681 304 "%0CodecDr:AdieCodecDriverAPI: ACDEnableAfeLoopback failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3665 303 "%0CodecDr:AdieCodecDriverAPI: ACDDisableSidetone failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3638 301 "%0CodecDr:AdieCodecDriverAPI: ACDWriteRegisters failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3649 302 "%0CodecDr:AdieCodecDriverAPI: ACDEnableSidetone failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3628 300 "%0CodecDr:AdieCodecDriverAPI: ACDReadRegisters failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3410 242 "%0CodecDr:AdieCodecDriverAPI: ACDEnableDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3517 275 "%0CodecDr:AdieCodecDriverAPI: ACDDisableDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3381 240 "%0CodecDr:AdieCodecDriverAPI: ACDVerifyAPIInput failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3368 239 "%0CodecDr:AdieCodecDriverAPI:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+}
+#typev AdieCodecDriver_c3359 238 "%0CodecDr:AdieCodecDriverAPI:API entry for IOCTL 0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+IOCTL, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c3350 237 "%0CodecDr:AdieCodecDriverAPI:Acquiring AdieCodecApiLock mutex failed with status %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AdieCodecDriverAPI
+{
+mutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8773 731 "%0CodecDr:AdieCodecDriverSpeakerEnum: Device is not a speaker device" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverSpeakerEnum
+{
+}
+#typev AdieCodecDriver_c8783 732 "%0CodecDr:AdieCodecDriverSpeakerEnum AdieCodecReleaseMutex fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverSpeakerEnum
+{
+mutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8765 730 "%0CodecDr:AdieCodecDriverSpeakerEnum: AdCoDrSpkrProtCheckAndStartCalib failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverSpeakerEnum
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8758 729 "%0CodecDr:AdieCodecDriverSpeakerEnum: CalibStatus %10!Id! newSpeakerEnum %11!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdieCodecDriverSpeakerEnum
+{
+SpkrProtCalibDevice.CalibStatus, ItemPtr -- 10
+newSpeakerEnum, ItemPtr -- 11
+}
+#typev AdieCodecDriver_c8748 728 "%0CodecDr:AdieCodecDriverSpeakerEnum: Fail - Did not find a free entry for endpoint 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverSpeakerEnum
+{
+dev_info_payload.device_endpoint, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8711 727 "%0CodecDr:AdieCodecDriverSpeakerEnum: Found speaker device Location %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdieCodecDriverSpeakerEnum
+{
+dev_info_payload.device_location, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8708 726 "%0CodecDr:AdieCodecDriverSpeakerEnum AdieCodecWaitForMutex fail 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverSpeakerEnum
+{
+mutexStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8677 725 "%0AdieCodecDriverWCDEventCallback: irq event id is %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+irq_payload->IRQ, ItemLong -- 10
+}
+#typev AdieCodecDriver_c8660 722 "%0CodecDr:AdieCodecDriverWCDEventCallback: VBAT is ACTIVE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+}
+#typev AdieCodecDriver_c8664 723 "%0CodecDr:AdieCodecDriverWCDEventCallback: VBAT is IN-ACTIVE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+}
+#typev AdieCodecDriver_c8669 724 "%0AdieCodecDriverWCDEventCallback:Unsupported VBAT event %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+vbat_payload->event_type, ItemLong -- 10
+}
+#typev AdieCodecDriver_c8639 720 "%0CodecDr:AdieCodecDriverWCDEventCallback: GPIO id %10!d! not supported" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+gpio_intf_payload->wcd_gpio_id, ItemLong -- 10
+}
+#typev AdieCodecDriver_c8649 721 "%0CodecDr:AdieCodecDriverWCDEventCallback: PMConfigGPIO failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8605 719 "%0CodecDr:AdieCodecDriverWCDEventCallback:DEV_INFO: No of devices %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+wcd_devices_payload->wcd_max_no_of_devices, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8600 718 "%0CodecDr:AdieCodecDriverWcdExtClockRequest: status 0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c8594 717 "%0CodecDr:AdieCodecDriverWcdPowerRequest: status 0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c8588 716 "%0AdieCodecDriverWCDEventCallback: mbhc payload event id,  is %10!Id!;" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+mbhc_payload_data->evt_id, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8578 715 "%0AdieCodecDriverWCDEventCallback: event payload is NULL;" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+}
+#typev AdieCodecDriver_c8572 714 "%0AdieCodecDriverWCDEventCallback: wcd_payload event type,  is %10!Id!;" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+wcd_evt_type, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8565 713 "%0AdieCodecDriverWCDEventCallback: CALLBACK payload is NULL;" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdieCodecDriverWCDEventCallback
+{
+}
+#typev AdieCodecDriver_c8317 704 "%0CodecDr:AuddCPEInfo:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddCPEInfo
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8306 703 "%0CodecDr:AuddCPEInfo:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddCPEInfo
+{
+}
+#typev AdieCodecDriver_c8391 708 "%0CodecDr:AuddConfigMAD:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddConfigMAD
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8380 707 "%0CodecDr:AuddConfigMAD:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddConfigMAD
+{
+}
+#typev AdieCodecDriver_c8279 702 "%0CodecDr:AuddConfigPP: failed with null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddConfigPP
+{
+}
+#typev AdieCodecDriver_c8287 515 "%0CodecDr:ACDConfigPP:CHMConfigPP failed with Status 0x%10!Ix!:" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddConfigPP
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c8267 701 "%0CodecDr:AuddConfigPP:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddConfigPP
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8256 700 "%0CodecDr:AuddConfigPP:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddConfigPP
+{
+}
+#typev AdieCodecDriver_c8220 698 "%0CodecDr:AuddDisableAfeLoopback: failed with null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableAfeLoopback
+{
+}
+#typev AdieCodecDriver_c8231 699 "%0CodecDr:AuddDisableAfeLoopback: ACDDisableAfeLoopback failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableAfeLoopback
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8208 697 "%0CodecDr:AuddDisableAfeLoopback:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableAfeLoopback
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8197 696 "%0CodecDr:AuddDisableAfeLoopback:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableAfeLoopback
+{
+}
+#typev AdieCodecDriver_c7677 646 "%0CodecDr:AuddDisableDevice: failed with null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableDevice
+{
+}
+#typev AdieCodecDriver_c7695 648 "%0CodecDr:AuddDisableDevice: ACDDisableDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7665 645 "%0CodecDr:AuddDisableDevice:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7656 644 "%0CodecDr:AuddDisableDevice:Driver not Ready" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AuddDisableDevice
+{
+}
+#typev AdieCodecDriver_c8428 710 "%0CodecDr:AuddDisableMAD:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableMAD
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8417 709 "%0CodecDr:AuddDisableMAD:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableMAD
+{
+}
+#typev AdieCodecDriver_c8100 690 "%0CodecDr:AuddDisableSidetone: failed with null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableSidetone
+{
+}
+#typev AdieCodecDriver_c8110 691 "%0CodecDr:AuddDisableSidetone: ACDEnableSidetone failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableSidetone
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8089 689 "%0CodecDr:AuddDisableSidetone:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableSidetone
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8078 688 "%0CodecDr:AuddDisableSidetone:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddDisableSidetone
+{
+}
+#typev AdieCodecDriver_c8159 694 "%0CodecDr:AuddEnableAfeLoopback: failed with null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddEnableAfeLoopback
+{
+}
+#typev AdieCodecDriver_c8170 695 "%0CodecDr:AuddEnableAfeLoopback: ACDEnableAfeLoopback failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddEnableAfeLoopback
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8147 693 "%0CodecDr:AuddEnableAfeLoopback:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddEnableAfeLoopback
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8136 692 "%0CodecDr:AuddEnableAfeLoopback:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddEnableAfeLoopback
+{
+}
+#typev AdieCodecDriver_c7515 610 "%0CodecDr:AuddEnableDevice: failed with null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddEnableDevice
+{
+}
+#typev AdieCodecDriver_c7547 613 "%0CodecDr:AuddEnableDevice: ExSetTimerResolution to clock %10!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AuddEnableDevice
+{
+freqency, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7538 612 "%0CodecDr:AuddEnableDevice: ACDEnableDevice failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddEnableDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7503 609 "%0CodecDr:AuddEnableDevice:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddEnableDevice
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7494 608 "%0CodecDr:AuddEnableDevice:Driver not Ready" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AuddEnableDevice
+{
+}
+#typev AdieCodecDriver_c7482 607 "%0CodecDr:AuddEnableDevice: ExSetTimerResolution to clock %10!Iu!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=AuddEnableDevice
+{
+freqency, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8042 686 "%0CodecDr:AuddEnableSidetone: failed with null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddEnableSidetone
+{
+}
+#typev AdieCodecDriver_c8052 687 "%0CodecDr:AuddEnableSidetone: ACDEnableSidetone failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddEnableSidetone
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8031 685 "%0CodecDr:AuddEnableSidetone:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddEnableSidetone
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8020 684 "%0CodecDr:AuddEnableSidetone:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddEnableSidetone
+{
+}
+#typev AdieCodecDriver_c7819 671 "%0CodecDr:AuddGetChipsetCount: ACDReadRegisters failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGetChipsetCount
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7809 670 "%0CodecDr:AuddGetChipsetCount:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGetChipsetCount
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7798 669 "%0CodecDr:AuddGetChipsetCount:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGetChipsetCount
+{
+}
+#typev AdieCodecDriver_c7862 674 "%0CodecDr:AuddGetChipsetInfo: ACDReadRegisters failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGetChipsetInfo
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7852 673 "%0CodecDr:AuddGetChipsetInfo:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGetChipsetInfo
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7841 672 "%0CodecDr:AuddGetChipsetInfo:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGetChipsetInfo
+{
+}
+#typev AdieCodecDriver_c9421 785 "%0CodecDr:AuddGraphiteCloseSession: Leaving method status 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteCloseSession
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9410 784 "%0CodecDr:AuddGraphiteCloseSession wdsp suspend failed 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteCloseSession
+{
+wdspStatus, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c9403 783 "%0CodecDr:AuddGraphiteCloseSession wdsp shutdown failed 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteCloseSession
+{
+wdspStatus, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c9367 782 "%0CodecDr:AuddGraphiteCloseSession remove graphite session from wdsp manager fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteCloseSession
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c9361 781 "%0CodecDr:AuddGraphiteCloseSession SVA use case close failed 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteCloseSession
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9354 780 "%0CodecDr:AuddGraphiteCloseSession unknown usecaseType %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteCloseSession
+{
+graphiteConfig->usecaseType, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9336 779 "%0CodecDr:AuddGraphiteCloseSession Entering Method " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteCloseSession
+{
+}
+#typev AdieCodecDriver_c9083 760 "%0CodecDr:AuddGraphiteLoadData: Leaving method status 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteLoadData
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c9078 759 "%0CodecDr:AuddGraphiteLoadData unknown usecaseType %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteLoadData
+{
+graphiteConfig->usecaseType, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9048 758 "%0CodecDr:AuddGraphiteLoadData Entering Method " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteLoadData
+{
+}
+#typev AdieCodecDriver_c9039 757 "%0CodecDr:AuddGraphiteOpenSession: Leaving method status 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c8992 755 "%0CodecDr:AuddGraphiteOpenSession wdsp unknown status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c8987 754 "%0CodecDr:AuddGraphiteOpenSession wdsp image was already downloaded and booted 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c9026 756 "%0CodecDr:AuddGraphiteOpenSession unknown usecaseType %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+usecaseType, ItemLong -- 10
+}
+#typev AdieCodecDriver_c8980 753 "%0CodecDr:AuddGraphiteOpenSession Success boot wdsp image, wdsp is on 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8974 752 "%0CodecDr:AuddGraphiteOpenSession Failed to boot wdsp image, wdsp is not on 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c8963 751 "%0CodecDr:AuddGraphiteOpenSession download wdsp image data segment success 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8957 750 "%0CodecDr:AuddGraphiteOpenSession Failed to download wdsp image data segment 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8951 749 "%0CodecDr:AuddGraphiteOpenSession wdsp resume success 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8945 748 "%0CodecDr:AuddGraphiteOpenSession wdsp resume fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c8938 747 "%0CodecDr:AuddGraphiteOpenSession AdCoDrWdspInit success 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8931 746 "%0CodecDr:AuddGraphiteOpenSession AdCoDrWdspInit fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c8924 745 "%0CodecDr:AuddGraphiteOpenSession AdCoDrWdspDeInit success 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8918 744 "%0CodecDr:AuddGraphiteOpenSession AdCoDrWdspDeInit fail 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c8900 786 "%0CodecDr:AuddGraphiteGetUIDFromUsecaseType invalid usecase type" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+}
+#typev AdieCodecDriver_c8894 742 "%0CodecDr:AuddGraphiteOpenSession allocating memory for graphiteConfig failed" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+}
+#typev AdieCodecDriver_c8887 741 "%0CodecDr:AuddGraphiteOpenSession Entering Method " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteOpenSession
+{
+}
+#typev AdieCodecDriver_c9201 769 "%0CodecDr:AuddGraphiteReadData: Leaving method status 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteReadData
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9197 768 "%0CodecDr:AuddGraphiteReadData unknown usecaseType %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteReadData
+{
+graphiteConfig->usecaseType, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9175 767 "%0CodecDr:AuddGraphiteReadData Entering Method " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteReadData
+{
+}
+#typev AdieCodecDriver_c9166 766 "%0CodecDr:AuddGraphiteStartRead: Leaving method status 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteStartRead
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c9162 765 "%0CodecDr:AuddGraphiteStartRead unknown usecaseType %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteStartRead
+{
+graphiteConfig->usecaseType, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9139 764 "%0CodecDr:AuddGraphiteStartRead Entering Method " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteStartRead
+{
+}
+#typev AdieCodecDriver_c9130 763 "%0CodecDr:AuddGraphiteStartSession: Leaving method status 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteStartSession
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c9124 762 "%0CodecDr:AuddGraphiteStartSession unknown usecaseType %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteStartSession
+{
+graphiteConfig->usecaseType, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9092 761 "%0CodecDr:AuddGraphiteStartSession Entering Method " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteStartSession
+{
+}
+#typev AdieCodecDriver_c9242 772 "%0CodecDr:AuddGraphiteStopRead: Leaving method status 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteStopRead
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c9232 771 "%0CodecDr:AuddGraphiteStopRead unknown usecaseType %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteStopRead
+{
+graphiteConfig->usecaseType, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9210 770 "%0CodecDr:AuddGraphiteStopRead Entering Method " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteStopRead
+{
+}
+#typev AdieCodecDriver_c9284 775 "%0CodecDr:AuddGraphiteStopSession: Leaving method status 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteStopSession
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c9273 774 "%0CodecDr:AuddGraphiteStopSession unknown usecaseType %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteStopSession
+{
+graphiteConfig->usecaseType, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9251 773 "%0CodecDr:AuddGraphiteStopSession Entering Method " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteStopSession
+{
+}
+#typev AdieCodecDriver_c9325 778 "%0CodecDr:AuddGraphiteUnloadData: Leaving method status 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteUnloadData
+{
+status, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9315 777 "%0CodecDr:AuddGraphiteUnloadData unknown usecaseType %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddGraphiteUnloadData
+{
+graphiteConfig->usecaseType, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9293 776 "%0CodecDr:AuddGraphiteUnloadData Entering Method " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddGraphiteUnloadData
+{
+}
+#typev AdieCodecDriver_c8354 706 "%0CodecDr:AuddNotifyGsmCallstate:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddNotifyGsmCallstate
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8343 705 "%0CodecDr:AuddNotifyGsmCallstate:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddNotifyGsmCallstate
+{
+}
+#typev AdieCodecDriver_c7911 677 "%0CodecDr:AuddReadRegister: failed with Input null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddReadRegisters
+{
+}
+#typev AdieCodecDriver_c7921 678 "%0CodecDr:AuddReadRegister: failed with Output null pointer or Invalid output buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddReadRegisters
+{
+}
+#typev AdieCodecDriver_c7932 679 "%0CodecDr:AuddReadRegister: ACDReadRegisters failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddReadRegisters
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7899 676 "%0CodecDr:AuddReadRegister:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddReadRegisters
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7888 675 "%0CodecDr:AuddReadRegisters:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddReadRegisters
+{
+}
+#typev AdieCodecDriver_c9633 799 "%0CodecDr:AuddSPIDeRegisterEvent: successed" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIDeRegisterEvent
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c9735 812 "%0CodecDr:AuddSPIIrqEventCb:wdsp SPI slave error received" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+#typev AdieCodecDriver_c9739 813 "%0CodecDr:AuddSPIIrqEventCb:wdsp DMA error received" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+#typev AdieCodecDriver_c9709 806 "%0CodecDr:AuddSPIIrqEventCb: AdieCodecWdspSSRThreadHandle is NULL" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c9687 805 "%0CodecDr:AuddSPIIrqEventCb:wdsp FLL lock lost error received" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+#typev AdieCodecDriver_c9682 804 "%0CodecDr:AuddSPIIrqEventCb:wdsp watch dog bite error received" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+#typev AdieCodecDriver_c9727 810 "%0CodecDr:AuddSPIIrqEventCb:wdsp ultra sound overflow error received" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+#typev AdieCodecDriver_c9731 811 "%0CodecDr:AuddSPIIrqEventCb:wdsp rco watch dog int irq received" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+#typev AdieCodecDriver_c9723 809 "%0CodecDr:AuddSPIIrqEventCb:wdsp echo cancellation overflow error received" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+#typev AdieCodecDriver_c9719 808 "%0CodecDr:AuddSPIIrqEventCb:wdsp lab overflow error received" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+#typev AdieCodecDriver_c9715 807 "%0CodecDr:AuddSPIIrqEventCb:wdsp buffer overflow error received" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+#typev AdieCodecDriver_c9675 803 "%0CodecDr:AuddSPIIrqEventCb:wdsp memory access error received" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+#typev AdieCodecDriver_c9664 802 "%0CodecDr:AuddSPIIrqEventCb:wdsp SPI ipc message irq received" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c9650 801 "%0CodecDr:AuddSPIIrqEventCb:wdsp is not running from software perspective, ignoring" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriver_c9642 800 "%0CodecDr:AuddSPIIrqEventCb:wdsp unknown IRQ, ignoring" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIIrqEventCb
+{
+}
+#typev AdieCodecDriver_c9517 790 "%0CodecDr:AuddSPIRead invalid parameter" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddSPIRead
+{
+}
+#typev AdieCodecDriver_c9540 793 "%0CodecDr:AuddSPIRead no access to SPI, WDSP is not running" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddSPIRead
+{
+}
+#typev AdieCodecDriver_c9531 792 "%0CodecDr:AuddSPIRead wait satisfied by spiShutdownEvent" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIRead
+{
+}
+#typev AdieCodecDriver_c9526 791 "%0CodecDr:AuddSPIRead wait satisfied by spiMutex" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIRead
+{
+}
+#typev AdieCodecDriver_c9617 798 "%0CodecDr:AuddSPIRegisterEvent: succeed, event type=%10!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIRegisterEvent
+{
+eventType, ItemLong -- 10
+}
+#typev AdieCodecDriver_c9562 794 "%0CodecDr:AuddSPIWrite invalid parameter" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddSPIWrite
+{
+}
+#typev AdieCodecDriver_c9586 797 "%0CodecDr:AuddSPIWrite no access to SPI, WDSP is not running" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddSPIWrite
+{
+}
+#typev AdieCodecDriver_c9576 796 "%0CodecDr:AuddSPIWrite wait satisfied by spiShutdownEvent" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIWrite
+{
+}
+#typev AdieCodecDriver_c9571 795 "%0CodecDr:AuddSPIWrite wait satisfied by spiMutex" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddSPIWrite
+{
+}
+#typev AdieCodecDriver_c8859 738 "%0CodecDr:AuddUSBAnalogArrivalNotification: 0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddUSBAnalogArrivalNotification
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8853 737 "%0CodecDr:AuddUSBAnalogArrivalNotification: Configuring GPIO USB_AUDIO_EN1 failed with status %10!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddUSBAnalogArrivalNotification
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8878 740 "%0CodecDr:AuddUSBAnalogRemovalNotification: 0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AuddUSBAnalogRemovalNotification
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c8874 739 "%0CodecDr:AuddUSBAnalogRemovalNotification: Configuring GPIO USB_AUDIO_EN1 failed with status %10!Id!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddUSBAnalogRemovalNotification
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7983 682 "%0CodecDr:AuddWriteRegister: failed with null pointer or Invalid input buffer size" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddWriteRegisters
+{
+}
+#typev AdieCodecDriver_c7994 683 "%0CodecDr:AuddWriteRegister: ACDWriteRegisters failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddWriteRegisters
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7970 681 "%0CodecDr:AuddWriteRegister:AdieCodecWaitForMutex failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddWriteRegisters
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c7959 680 "%0CodecDr:AuddWriteRegisters:AdieCodec driver is not initialized" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AuddWriteRegisters
+{
+}
+#typev AdieCodecDriver_c2519 184 "%0CodecDr:GetCodecGPIOMappingInfofromACDB:DB_CMD_GET_GPIO_MAPPING_METADATA_INFO gpio_function 0x%10!x! assigned_gpio 0x%11!x! properties 0x%12!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=GetCodecGPIOMappingInfofromACDB
+{
+pGpioMappingInfo->gpio_function, ItemLong -- 10
+pGpioMappingInfo->assigned_gpio, ItemLong -- 11
+pGpioMappingInfo->properties, ItemLong -- 12
+}
+#typev AdieCodecDriver_c2506 183 "%0CodecDr:GetCodecGPIOMappingInfofromACDB:DB_CMD_GET_GPIO_MAPPING_METADATA_INFO failed with 0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=GetCodecGPIOMappingInfofromACDB
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2495 182 "%0CodecDr:GetCodecGPIOMappingInfofromACDB: failed to allocate PGpioMappingInfo" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetCodecGPIOMappingInfofromACDB
+{
+}
+#typev AdieCodecDriver_c2471 180 "%0CodecDr:GetCodecGPIOMappingInfofromACDB:DB_CMD_GET_NUM_OF_GPIO_MAPPING_ENTRIES failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetCodecGPIOMappingInfofromACDB
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2479 181 "%0CodecDr:GetCodecGPIOMappingInfofromACDB:DB_CMD_GET_NUM_OF_GPIO_MAPPING_ENTRIES is %10!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=GetCodecGPIOMappingInfofromACDB
+{
+noOfGpioMappingEntries, ItemLong -- 10
+}
+#typev AdieCodecDriver_c2461 179 "%0CodecDr:GetCodecGPIOMappingInfofromACDB:DB_CMD_GET_NUM_OF_GPIO_MAPPING_ENTRIES are not there in ACDB returning success" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetCodecGPIOMappingInfofromACDB
+{
+}
+#typev AdieCodecDriver_c2682 192 "%0CodecDr:GetWCNDeviceInfofromACDB:DB_CMD_GET_WCN_DEVICES_METADATA_INFO DeviceID 0x%10!x! interfaceID 0x%11!x! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetWCNDevicesInfofromACDB
+{
+WCNDevices.DevInfo[i].DeviceId, ItemLong -- 10
+WCNDevices.DevInfo[i].InterfaceId, ItemLong -- 11
+}
+#typev AdieCodecDriver_c2672 191 "%0CodecDr:GetWCNDeviceInfofromACDB:DB_CMD_GET_WCN_DEVICES_METADATA_INFO failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetWCNDevicesInfofromACDB
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2662 190 "%0CodecDr:GetWCNDeviceInfofromACDB: failed to allocate WCNDevices.DevInfo" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetWCNDevicesInfofromACDB
+{
+}
+#typev AdieCodecDriver_c2652 189 "%0CodecDr:GetWCNDeviceInfofromACDB: Number of WCN devices are zero nothing to query ACDB" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetWCNDevicesInfofromACDB
+{
+}
+#typev AdieCodecDriver_c2643 188 "%0CodecDr:GetWCNDeviceInfofromACDB:DB_CMD_GET_NUM_OF_WCN_DEVICES is %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetWCNDevicesInfofromACDB
+{
+noOfWCNDevices, ItemLong -- 10
+}
+#typev AdieCodecDriver_c2635 187 "%0CodecDr:GetWCNDeviceInfofromACDB:DB_CMD_GET_NUM_OF_WCN_DEVICES failed with 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetWCNDevicesInfofromACDB
+{
+status, ItemPtr -- 10
+}
+#typev AdieCodecDriver_c2626 186 "%0GetWCNDeviceInfofromACDB:DB_CMD_GET_NUM_OF_WCN_DEVICES are not there in ACDB returning success" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetWCNDevicesInfofromACDB
+{
+}
+#typev AdieCodecDriver_c630 34 "%0CodecDr:isWCNDevice:DevInfo Null or NoOfDevices is 0" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=isWCNDevice
+{
+}
+#typev AdieCodecDriver_c640 35 "%0CodecDr:isWCNDevice:matched DeviceId 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=isWCNDevice
+{
+DeviceId, ItemLong -- 10
+}
+#typev AdieCodecDriver_c647 36 "%0CodecDr:isWCNDevice:did not match DeviceId 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=isWCNDevice
+{
+DeviceId, ItemLong -- 10
+}
+#typev AdieCodecDriver_c624 33 "%0CodecDr:isWCNDevice:noOfDevices 0x%10!x!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=isWCNDevice
+{
+WCNDevices.NoOfDevices, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AdieCodecDriverKMDF_c633 585 "%0CodecDr:AdCoDrConfigureCHMFeature: CHMConfigureFeature failed 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=IhIrqWorkItem
+{
+status, ItemPtr -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AuddRpeHandler_c292 789 "%0CodecDr:AuddGraphiteSPIWDSPShutdownHandler: Leaving method status 0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrEvtWorkItemStateNotification
+{
+status, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev AuddRpeHandler_c292 788 "%0CodecDr:AuddGraphiteSPIWDSPShutdownHandler unknown usecaseType %10!d!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AdCoDrEvtWorkItemStateNotification
+{
+graphiteConfig->usecaseType, ItemLong -- 10
+}
+#typev AuddRpeHandler_c292 787 "%0CodecDr:AuddGraphiteSPIWDSPShutdownHandler Entering Method " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=AdCoDrEvtWorkItemStateNotification
+{
+}

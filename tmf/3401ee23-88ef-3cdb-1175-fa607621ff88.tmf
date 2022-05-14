@@ -1,0 +1,67 @@
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+3401ee23-88ef-3cdb-1175-fa607621ff88 10.4 // SRC=RevIPinIP.c MJ= MN=
+#typev RevIPinIP_c97 13 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevIPinIP_AppendIPv4HeaderToIPv4Packet
+{
+}
+#typev RevIPinIP_c146 15 "%0<%!FUNC!> VersionIHL = 0x%10!x!, DscpEcn = %11!d!, TotalLength = %12!u!,  Identification = %13!u! FlagsFragmentOffset = %14!u!, TTL = %15!d!,  Protocol = %16!d!, HeaderChecksum = %17!d!, SourceIP = %18!s!, DestinationIP =  %19!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevIPinIP_AppendIPv4HeaderToIPv4Packet
+{
+IPinIPHeader.VersionIHL, ItemLong -- 10
+IPinIPHeader.DscpEcn, ItemLong -- 11
+RtlUshortByteSwap(IPinIPHeader.TotalLength), ItemLong -- 12
+RtlUshortByteSwap(IPinIPHeader.Identification), ItemLong -- 13
+RtlUshortByteSwap(IPinIPHeader.FlagsFragmentOffset), ItemLong -- 14
+IPinIPHeader.TTL, ItemLong -- 15
+IPinIPHeader.Protocol, ItemLong -- 16
+RtlUshortByteSwap(IPinIPHeader.HeaderChecksum), ItemLong -- 17
+(IPinIPHeader.SourceIP), ItemIPAddr -- 18
+(IPinIPHeader.DestinationIP), ItemIPAddr -- 19
+}
+#typev RevIPinIP_c115 14 "%0<%!FUNC!>: Memory allocation failure." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevIPinIP_AppendIPv4HeaderToIPv4Packet
+{
+}
+#typev RevIPinIP_c226 19 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevIPinIP_AppendIPv4HeaderToIPv6Packet
+{
+}
+#typev RevIPinIP_c266 21 "%0<%!FUNC!> VersionIHL = 0x%10!x!, DscpEcn = %11!d!, TotalLength = %12!u!,  Identification = %13!u! FlagsFragmentOffset = %14!u!, TTL = %15!d!,  Protocol = %16!d!, HeaderChecksum = %17!d!, SourceIP = %18!s!, DestinationIP =  %19!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevIPinIP_AppendIPv4HeaderToIPv6Packet
+{
+IPinIPHeader.VersionIHL, ItemLong -- 10
+IPinIPHeader.DscpEcn, ItemLong -- 11
+RtlUshortByteSwap(IPinIPHeader.TotalLength), ItemLong -- 12
+RtlUshortByteSwap(IPinIPHeader.Identification), ItemLong -- 13
+RtlUshortByteSwap(IPinIPHeader.FlagsFragmentOffset), ItemLong -- 14
+IPinIPHeader.TTL, ItemLong -- 15
+REVIPINIP_IPV6_ENCAPSULATION, ItemLong -- 16
+RtlUshortByteSwap(IPinIPHeader.HeaderChecksum), ItemLong -- 17
+(IPinIPHeader.SourceIP), ItemIPAddr -- 18
+(IPinIPHeader.DestinationIP), ItemIPAddr -- 19
+}
+#typev RevIPinIP_c234 20 "%0<%!FUNC!>: Memory allocation failure." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevIPinIP_AppendIPv4HeaderToIPv6Packet
+{
+}
+#typev RevIPinIP_c28 10 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevIPinIP_AppendIPv6HeaderToIPv4Packet
+{
+}
+#typev RevIPinIP_c72 12 "%0<%!FUNC!> VerClassFlowLabel = 0x%10!x!, PayloadLength = %11!u!, Protocol = %12!d!, HopLimit = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevIPinIP_AppendIPv6HeaderToIPv4Packet
+{
+IPinIPHeader.VerClassFlowLabel, ItemLong -- 10
+RtlUshortByteSwap(IPinIPHeader.PayloadLength), ItemLong -- 11
+IPinIPHeader.NextHeader, ItemLong -- 12
+IPinIPHeader.HopLimit, ItemLong -- 13
+}
+#typev RevIPinIP_c45 11 "%0<%!FUNC!>: Memory allocation failure." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevIPinIP_AppendIPv6HeaderToIPv4Packet
+{
+}
+#typev RevIPinIP_c169 16 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevIPinIP_AppendIPv6HeaderToIPv6Packet
+{
+}
+#typev RevIPinIP_c202 18 "%0<%!FUNC!> VerClassFlowLabel = 0x%10!x!, PayloadLength = %11!u!, Protocol = %12!d!, HopLimit = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevIPinIP_AppendIPv6HeaderToIPv6Packet
+{
+IPinIPHeader.VerClassFlowLabel, ItemLong -- 10
+RtlUshortByteSwap(IPinIPHeader.PayloadLength), ItemLong -- 11
+IPinIPHeader.NextHeader, ItemLong -- 12
+IPinIPHeader.HopLimit, ItemLong -- 13
+}
+#typev RevIPinIP_c177 17 "%0<%!FUNC!>: Memory allocation failure." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevIPinIP_AppendIPv6HeaderToIPv6Packet
+{
+}

@@ -1,0 +1,100 @@
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+81752da0-6622-3bc7-fa86-a4481292cf85 qcgpi // SRC=GpiOS.c MJ= MN=
+#typev gpi_c81 20 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=gpi_init_dev
+{
+}
+#typev gpi_c81 19 "%0 [%!FUNC!]Error, Max number of %10!d! devices exceeded, quitting" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=gpi_init_dev
+{
+MAX_NUM_QUP_BLOCKS, ItemLong -- 10
+}
+#typev gpi_c81 18 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=gpi_init_dev
+{
+}
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev gpi_threads_c504 30 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=spawn_threads
+{
+}
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev gpi_threads_c504 29 "%0 [%!FUNC!]Failed to set Thread priority" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=spawn_threads
+{
+}
+#typev gpi_threads_c504 28 "%0 [%!FUNC!]Failed to create System Thread" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=spawn_threads
+{
+}
+#typev gpi_threads_c504 27 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=spawn_threads
+{
+}
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev GpiOS_c212 25 "%0 [%!FUNC!]ERROR: Failed allocating Contiguous Memory!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiContigMemMalloc
+{
+}
+#typev GpiOS_c205 24 "%0 [%!FUNC!]ERROR - Failed to get physical addr of the allocated Contiguous Memory!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiContigMemMalloc
+{
+}
+#typev GpiOS_c217 26 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiContigMemMalloc
+{
+}
+#typev GpiOS_c199 23 "%0 [%!FUNC!]Contiguous Memory PhysAligned: 0x%10!I64x!, VirtAligned: 0x%11!I64x!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiContigMemMalloc
+{
+MemProps->PhysAligned, ItemLongLongX -- 10
+MemProps->VirtAligned, ItemLongLongX -- 11
+}
+#typev GpiOS_c189 22 "%0 [%!FUNC!]Succeeded allocating Contiguous Memory of size: 0x%10!I64u!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiContigMemMalloc
+{
+MemProps->Size, ItemULongLong -- 10
+}
+#typev GpiOS_c172 21 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiContigMemMalloc
+{
+}
+#typev GpiOS_c488 35 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiDriverUnload
+{
+}
+#typev GpiOS_c482 34 "%0 [%!FUNC!]Deleting GPI device Ctxt" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiDriverUnload
+{
+}
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev GpiOS_c472 32 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiDriverUnload
+{
+}
+#typev GpiOS_c81 17 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+}
+#typev GpiOS_c76 16 "%0 [%!FUNC!]gpii[%10!d!] irq: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+i, ItemLong -- 10
+gpi_os->gpii[i].irq, ItemLong -- 11
+}
+#typev GpiOS_c74 15 "%0 [%!FUNC!]gpii[%10!d!] SE: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+i, ItemLong -- 10
+gpi_os->gpii[i].se, ItemLong -- 11
+}
+#typev GpiOS_c72 14 "%0 [%!FUNC!]gpii[%10!d!] EE: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+i, ItemLong -- 10
+gpi_os->gpii[i].ee, ItemLong -- 11
+}
+#typev GpiOS_c70 13 "%0 [%!FUNC!]gpii[%10!d!] options: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+i, ItemLong -- 10
+gpi_os->gpii[i].options, ItemLong -- 11
+}
+#typev GpiOS_c68 12 "%0 [%!FUNC!]gpii[%10!d!] Protocol: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+i, ItemLong -- 10
+gpi_os->gpii[i].protocol, ItemLong -- 11
+}
+#typev GpiOS_c66 11 "%0 [%!FUNC!]QUP[%10!d!] gpii[%11!d!] id: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+qup_type, ItemLong -- 10
+i, ItemLong -- 11
+gpi_os->gpii[i].id, ItemLong -- 12
+}
+#typev GpiOS_c42 10 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+}

@@ -1,0 +1,221 @@
+// PDB:  qcdiagrouter850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+9838f4d1-1d7d-3867-cd0d-fcba894229ea QCDiagRouter // SRC=DiagRouterCmd.c MJ= MN=
+#typev DiagRouterCmd_c1438 39 "%0%!FUNC!: Invalid params for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterCleanClientRegTable
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCmd_c1446 40 "%0DiagRouterCleanClientRegTable: Failed to acquire PeriphCmdRegTableLock " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterCleanClientRegTable
+{
+}
+#typev DiagRouterCmd_c630 10 "%0%!FUNC!: Error forwarding command for port = %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterFwdCmdRequestToPeripheral
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCmd_c671 14 "%0%!FUNC!: DiagIPCRSock_Write failed for port %10!d! with error = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterFwdCmdRequestToPeripheral
+{
+port_idx, ItemLong -- 10
+result, ItemLong -- 11
+}
+#typev DiagRouterCmd_c662 13 "%0%!FUNC!: Cmd Fwd Thread is not running. Failed to send command for port %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterFwdCmdRequestToPeripheral
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCmd_c657 12 "%0%!FUNC!: Need to send the command in system dedicated thread for port %10!d!, RxWorkItem = %11!p!, command first_byte =%12!d! command 2nd byte =%13!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterFwdCmdRequestToPeripheral
+{
+port_idx, ItemLong -- 10
+WorkItem, ItemPtr -- 11
+*((BYTE *)(pBuf)), ItemLong -- 12
+*((BYTE *)(pBuf)+1), ItemLong -- 13
+}
+#typev DiagRouterCmd_c644 11 "%0%!FUNC!: Forwarded command to Qsocket for port = %10!d!, returned len %11!d!, actual length %12!u!, command is %13!d! %14!d! %15!d! %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CMD FUNC=DiagRouterFwdCmdRequestToPeripheral
+{
+port_idx, ItemLong -- 10
+result, ItemLong -- 11
+(UINT32)(send_memory_desc.BufferLength), ItemLong -- 12
+*((BYTE *)(pBuf)), ItemLong -- 13
+*((BYTE *)(pBuf)+1), ItemLong -- 14
+*((BYTE *)(pBuf)+2), ItemLong -- 15
+*((BYTE *)(pBuf)+3), ItemLong -- 16
+}
+#typev DiagRouterCmd_c2753 49 "%0DiagRouterGetLogMaskResponse: Failed to acquire lock Mstr_Log_Info_Update_Lock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterGetLogMaskResponse
+{
+}
+#typev DiagRouterCmd_c2098 43 "%0DiagRouterGetMsgBuildMask: Failed to acquire MsgInfoListLock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterGetMsgBuildMask
+{
+}
+#typev DiagRouterCmd_c2116 44 "%0DiagRouterGetMsgBuildMask: Found matching SSID entry but BTMaskArray is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterGetMsgBuildMask
+{
+}
+#typev DiagRouterCmd_c2258 45 "%0DiagRouterGetMsgRanges: Failed to acquire MsgInfoListLock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterGetMsgRTMask
+{
+}
+#typev DiagRouterCmd_c1978 42 "%0DiagRouterGetMsgRanges: Failed to acquire MsgInfoListLock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterGetMsgRanges
+{
+}
+#typev DiagRouterCmd_c3745 61 "%0%!FUNC!: Invalid params for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterPeripheralLookup
+{
+idx, ItemLong -- 10
+}
+#typev DiagRouterCmd_c3771 63 "%0DiagRouterPeripheralLookup: Weird, no user table for a registration? " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CMD FUNC=DiagRouterPeripheralLookup
+{
+}
+#typev DiagRouterCmd_c3759 62 "%0DiagRouterPeripheralLookup: Failed to acquire PeriphCmdRegTableLock lock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterPeripheralLookup
+{
+}
+#typev DiagRouterCmd_c2661 48 "%0DiagRouterRetrieveLogIdRanges: Failed to acquire lock Mstr_Log_Info_Update_Lock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRetrieveLogIdRanges
+{
+}
+#typev DiagRouterCmd_c1399 38 "%0DiagRouterRxWorkFunc: Send bad command response: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+first_byte, ItemLong -- 10
+}
+#typev DiagRouterCmd_c1389 37 "%0DiagRouterRxWorkFunc: Invalid call-flow, un-supported common command: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+first_byte, ItemLong -- 10
+}
+#typev DiagRouterCmd_c1375 36 "%0DiagRouterRxWorkFunc: No free buffer found for FileObject %10!p! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+FileObj, ItemPtr -- 10
+}
+#typev DiagRouterCmd_c1363 35 "%0DiagRouterRxWorkFunc: Copying to client buffer failed, status = %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterCmd_c1222 31 "%0%!FUNC!: Check Command table: Invalid TransType for port = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+idx, ItemLong -- 10
+}
+#typev DiagRouterCmd_c1251 34 "%0DiagRouterRxWorkFunc: Weird, no user table for a registration? " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+}
+#typev DiagRouterCmd_c1239 33 "%0DiagRouterRxWorkFunc: Failed to acquire PeriphCmdRegTableLock for command lookup" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+}
+#typev DiagRouterCmd_c1166 29 "%0%!FUNC!: Invalid TransType for modem port " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+}
+#typev DiagRouterCmd_c1180 30 "%0DiagRouterRxWorkFunc: Failed to acquire PeriphCmdRegTableLock for DIAG_LOG_ON_DEMAND_F command" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+}
+#typev DiagRouterCmd_c1127 27 "%0%!FUNC!: Invalid TransType for port = %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+idx, ItemLong -- 10
+}
+#typev DiagRouterCmd_c1135 28 "%0DiagRouterRxWorkFunc: Failed to acquire PeriphCmdRegTableLock for DIAG_EXT_BUILD_ID_F command" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+}
+#typev DiagRouterCmd_c1071 24 "%0%!FUNC!: DIAGDIAG_GET_DIAG_ID sub-command received" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+}
+#typev DiagRouterCmd_c1064 23 "%0%!FUNC!: DIAG_HDLC_REMOVAL_SUBCMD received" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+}
+#typev DiagRouterCmd_c1019 21 "%0%!FUNC!: DIAG_SUBSYS_CMD_F Invalid TransType for port = %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+idx, ItemLong -- 10
+}
+#typev DiagRouterCmd_c1027 22 "%0DiagRouterRxWorkFunc: Failed to acquire PeriphCmdRegTableLock for DIAG_SUBSYS_PARAMS command" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+}
+#typev DiagRouterCmd_c1087 25 "%0%!FUNC!: DIAG_VERNO_F Invalid TransType for port = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+idx, ItemLong -- 10
+}
+#typev DiagRouterCmd_c1095 26 "%0DiagRouterRxWorkFunc: Failed to acquire PeriphCmdRegTableLock for DIAG_VERNO_F command" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+}
+#typev DiagRouterCmd_c845 20 "%0%!FUNC!: Got command with ss_id=%10!d!, ss_cc=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+ss_id, ItemLong -- 10
+ss_cc, ItemLong -- 11
+}
+#typev DiagRouterCmd_c827 19 "%0%!FUNC!: Got command %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+first_byte, ItemLong -- 10
+}
+#typev DiagRouterCmd_c818 18 "%0diag_get_rx_pkt failed,RxItemSize=%10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+(UINT32)(pContext->RxItemSize), ItemLong -- 10
+}
+#typev DiagRouterCmd_c781 17 "%0DiagRouterRxWorkFunc: Discard the packet as its too large" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+}
+#typev DiagRouterCmd_c746 16 "%0DiagRouterRxWorkFunc: Transport is disconnected " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+}
+#typev DiagRouterCmd_c738 15 "%0DiagRouterRxWorkFunc: Couldn't acquire Diag_Transport_Connection_Lock " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterRxWorkFunc
+{
+}
+#typev DiagRouterCmd_c3477 52 "%0%!FUNC!: Response for DiagID is too large for buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterSendDiagIDResponse
+{
+}
+// PDB:  qcdiagrouter850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev DiagRouterCmd_c3701 60 "%0DiagRouterSendErrorResponse: Transport Write failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterSendErrorResponse
+{
+}
+#typev DiagRouterCmd_c3695 59 "%0DiagRouterSendErrorResponse: WdfIoTargetFormatRequestForWrite failed, status %10!08x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterSendErrorResponse
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterCmd_c3683 58 "%0DiagRouterSendErrorResponse: WskSend Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterSendErrorResponse
+{
+}
+// PDB:  qcdiagrouter850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev DiagRouterCmd_c3922 65 "%0%!FUNC!: Disable HDLC" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CMD FUNC=DiagRouterSendHDLCRemovalResponse
+{
+}
+#typev DiagRouterCmd_c3903 64 "%0%!FUNC!: Failed to acquire lock DiagRouter_HDLC_Protocol_Update_Lock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Protocol FUNC=DiagRouterSendHDLCRemovalResponse
+{
+}
+// PDB:  qcdiagrouter850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev DiagRouterCmd_c3121 51 "%0%!FUNC!: Failed to acquire lock Mstr_Log_Info_Update_Lock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterSendLogExtResponse
+{
+}
+// PDB:  qcdiagrouter850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev DiagRouterCmd_c1847 41 "%0Apps responding to Log On Demand" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CMD FUNC=DiagRouterSendLogOnDemandResponse
+{
+}
+// PDB:  qcdiagrouter850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev DiagRouterCmd_c2869 50 "%0DiagRouterGetLogMaskResponse: Failed to acquire lock Mstr_Log_Info_Update_Lock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterSendLogcfgResponse
+{
+}
+// PDB:  qcdiagrouter850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev DiagRouterCmd_c2540 47 "%0DiagRouterSendMsgcfgResponse: Failed to acquire MsgInfoListLock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterSendMsgSetAllRtmaskResponse
+{
+}
+#typev DiagRouterCmd_c2403 46 "%0DiagRouterSendMsgcfgResponse: Failed to acquire MsgInfoListLock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterSendMsgcfgResponse
+{
+}
+// PDB:  qcdiagrouter850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev DiagRouterCmd_c3549 53 "%0%!FUNC!: Response is too large for buffer, length=%10!u!,exiting without sending response " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterSendResponse
+{
+(uint32)length, ItemLong -- 10
+}
+#typev DiagRouterCmd_c3594 57 "%0DiagRouterSendResponse: Transport Write failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterSendResponse
+{
+}
+#typev DiagRouterCmd_c3588 56 "%0DiagRouterSendResponse:WdfIoTargetFormatRequestForWrite failed, status %10!08x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterSendResponse
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterCmd_c3576 55 "%0DiagRouterSendResponse: WskSend Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CMD FUNC=DiagRouterSendResponse
+{
+}
+#typev DiagRouterCmd_c3571 54 "%0DiagRouterSendResponse:  response length = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CMD FUNC=DiagRouterSendResponse
+{
+(UINT32)length, ItemLong -- 10
+}
+// PDB:  qcdiagrouter850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev DiagRouterCmd_c3996 66 "%0CreateIPCReadRequests: Updated MDL for HDLCStatus = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CMD FUNC=DiagRouterUpdateBufForHDLCSwitch
+{
+HDLCStatus, ItemLong -- 10
+}

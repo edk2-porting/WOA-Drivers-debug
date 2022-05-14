@@ -1,0 +1,51 @@
+// PDB:  qcpmictcc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+852ac3ab-1f3d-314f-e8b0-85237c31496f pmictcc // SRC=PmicTccPowerControl.c MJ= MN=
+#typev PmicTccPowerControl_c371 20 "%0%!FUNC!::P-State Change for Component[%10!d!] %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Power FUNC=PmicTccPowerControl_ComponentPerfStateCallback
+{
+componentId, ItemLong -- 10
+succeeded ? 'succeeded' : 'failed', ItemString -- 11
+}
+#typev PmicTccPowerControl_c239 16 "%0%!FUNC!::P-States for component %10!d! is not registerd yet, Skip P-States Request" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Power FUNC=PmicTccPowerControl_PStateChange_Request
+{
+componentID, ItemLong -- 10
+}
+#typev PmicTccPowerControl_c218 15 "%0%!FUNC!::ComponentID: %10!d!, Requested P-State: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Power FUNC=PmicTccPowerControl_PStateChange_Request
+{
+componentID, ItemLong -- 10
+RequestPStateIndex?'OFF':'ON', ItemString -- 11
+}
+#typev PmicTccPowerControl_c330 18 "%0%!FUNC!::ERROR::PoFxRegisterComponentPerfStates failed for component %10!d!, Error Code =%11!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Power FUNC=PmicTccPowerControl_PerfState_Init
+{
+component_index, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PmicTccPowerControl_c336 19 "%0%!FUNC!::P-State Init for component %10!d! Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Power FUNC=PmicTccPowerControl_PerfState_Init
+{
+component_index, ItemLong -- 10
+}
+#typev PmicTccPowerControl_c285 17 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Power FUNC=PmicTccPowerControl_PerfState_Init
+{
+}
+#typev PmicTccPowerControl_c416 22 "%0%!FUNC!::PoFx - Notified PoFxCompleteDevicePowerNotRequired" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Power FUNC=PmicTccPowerControl_PowerNotRequiredCallback
+{
+}
+#typev PmicTccPowerControl_c393 21 "%0%!FUNC!::PoFx - Notified PoFxReportDevicePoweredOn" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Power FUNC=PmicTccPowerControl_PowerRequiredCallback
+{
+}
+#typev PmicTccPowerControl_c175 14 "%0%!FUNC!::PoFx ExAllocatePoolWithTag, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Power FUNC=PmicTccPowerControl_Register_PowerManagement
+{
+status, ItemLong -- 10
+}
+#typev PmicTccPowerControl_c144 13 "%0%!FUNC!::PoFx registration and iitialization succeeded" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Power FUNC=PmicTccPowerControl_Register_PowerManagement
+{
+}
+#typev PmicTccPowerControl_c134 12 "%0%!FUNC!::ERROR::PoFxRegisterDevice failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Power FUNC=PmicTccPowerControl_Register_PowerManagement
+{
+}
+#typev PmicTccPowerControl_c92 11 "%0%!FUNC!::ERROR::ExAllocatePoolWithTag failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Power FUNC=PmicTccPowerControl_Register_PowerManagement
+{
+}
+#typev PmicTccPowerControl_c85 10 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Power FUNC=PmicTccPowerControl_Register_PowerManagement
+{
+}

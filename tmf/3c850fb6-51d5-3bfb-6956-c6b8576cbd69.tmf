@@ -1,0 +1,526 @@
+// PDB:  qcpil850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+3c850fb6-51d5-3bfb-6956-c6b8576cbd69 PIL-Rel // SRC=driver.c MJ= MN=
+#typev driver_c154 13 "%0Error: Unable to initialize the Image Info module." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=DriverEntry
+{
+}
+#typev driver_c145 12 "%0Error: Unable to initialize memory allocation debug resources." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=DriverEntry
+{
+}
+#typev driver_c136 11 "%0PIL Version: %10!d!.%11!d!.%12!d!, Release Build: %13!s! %14!s!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=DriverEntry
+{
+PIL_VER_MAJOR, ItemLong -- 10
+PIL_VER_MINOR, ItemLong -- 11
+PIL_VER_REV, ItemLong -- 12
+__DATE__, ItemString -- 13
+__TIME__, ItemString -- 14
+}
+// PDB:  qcpil850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev driver_c224 20 "%0Exit from LoadDriverParameters." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=LoadDriverParameters
+{
+}
+#typev driver_c219 19 "%0Closing hKeyParams" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=LoadDriverParameters
+{
+}
+#typev driver_c217 18 "%0DebugMBA reg key value set to %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=LoadDriverParameters
+{
+deviceContext->DebugMBA, ItemLong -- 10
+}
+#typev driver_c212 17 "%0Warning: WdfRegistryQueryULong returned with status 0x%10!X!, DebugMBA reg key not set" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadDriverParameters
+{
+status, ItemLong -- 10
+}
+#typev driver_c199 16 "%0Warning: WdfDriverOpenParametersRegistryKey returned with status 0x%10!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadDriverParameters
+{
+status, ItemLong -- 10
+}
+#typev driver_c187 15 "%0Error: Failed to get the device context " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadDriverParameters
+{
+}
+#typev driver_c178 14 "%0Entered LoadDriverParameters." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=LoadDriverParameters
+{
+}
+#typev driver_c595 39 "%0Driver initialization completed successfully." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+}
+#typev driver_c575 38 "%0Error: WdfWaitLockCreate failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev driver_c550 37 "%0Error: ParsePilAcpi failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev driver_c543 36 "%0Error: ReadPILRegistryConfiguration failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev driver_c537 35 "%0Error: InitRegistryMap failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev driver_c525 34 "%0ResetModemMemoryAssignmentInfo failed. NTSTATUS: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev driver_c506 33 "%0Error: WdfIoQueueCreate failed 0x%10!08X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c485 32 "%0Error: WdfIoQueueCreate failed 0x%10!08X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c449 31 "%0Error: WdfDeviceAddQueryInterface failed 0x%10!08X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c424 30 "%0PIL::ERROR::WdfDeviceAssignS0IdleSettings failed %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev driver_c398 29 "%0Created driver symbolic link of user mode access." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+}
+#typev driver_c393 28 "%0Error: WdfDeviceCreateSymbolicLink failed 0x%10!8X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c361 25 "%0Error: WdfDeviceCreate failed 0x%10!8X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c331 24 "%0Error: WdfDeviceInitAssignWdmIrpPreprocessCallback failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev driver_c299 23 "%0Error: WdfDeviceInitAssignName failed 0x%10!8X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c287 22 "%0Error: WdfDeviceInitAssignSDDLString failed 0x%10!X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c260 21 "%0PilEvtDeviceAdd: %10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd
+{
+DeviceInit, ItemPtr -- 10
+}
+#typev driver_c595 39 "%0Driver initialization completed successfully." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+}
+#typev driver_c575 38 "%0Error: WdfWaitLockCreate failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+}
+#typev driver_c550 37 "%0Error: ParsePilAcpi failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+}
+#typev driver_c543 36 "%0Error: ReadPILRegistryConfiguration failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+}
+#typev driver_c537 35 "%0Error: InitRegistryMap failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+}
+#typev driver_c525 34 "%0ResetModemMemoryAssignmentInfo failed. NTSTATUS: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+}
+#typev driver_c506 33 "%0Error: WdfIoQueueCreate failed 0x%10!08X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c485 32 "%0Error: WdfIoQueueCreate failed 0x%10!08X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c449 31 "%0Error: WdfDeviceAddQueryInterface failed 0x%10!08X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c424 30 "%0PIL::ERROR::WdfDeviceAssignS0IdleSettings failed %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+}
+#typev driver_c398 29 "%0Created driver symbolic link of user mode access." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+}
+#typev driver_c393 28 "%0Error: WdfDeviceCreateSymbolicLink failed 0x%10!8X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c361 25 "%0Error: WdfDeviceCreate failed 0x%10!8X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c331 24 "%0Error: WdfDeviceInitAssignWdmIrpPreprocessCallback failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+}
+#typev driver_c299 23 "%0Error: WdfDeviceInitAssignName failed 0x%10!8X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c287 22 "%0Error: WdfDeviceInitAssignSDDLString failed 0x%10!X! (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+status, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev driver_c260 21 "%0PilEvtDeviceAdd: %10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=PilEvtDeviceAdd$fin$0
+{
+DeviceInit, ItemPtr -- 10
+}
+#typev driver_c1699 112 "%0Exited PilEvtDeviceContextCleanup." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=PilEvtDeviceContextCleanup
+{
+}
+#typev driver_c1677 111 "%0Deregistering interface notifications and closing the IO target connection to the TrEE driver." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PilEvtDeviceContextCleanup
+{
+}
+#typev driver_c1673 110 "%0Shutting down and cleaning up the resources for %10!d! loaded ELF images." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PilEvtDeviceContextCleanup
+{
+GetNumLoadedImages(), ItemLong -- 10
+}
+#typev driver_c1671 109 "%0Entered PilEvtDeviceContextCleanup." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=PilEvtDeviceContextCleanup
+{
+}
+#typev driver_c650 43 "%0PilEvtDeviceD0Entry: resume from hibernate! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Entry
+{
+}
+#typev driver_c640 42 "%0PilEvtDeviceD0Entry: PreviousState = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Entry
+{
+PreviousState, ItemLong -- 10
+}
+#typev driver_c635 41 "%0Device context invalid!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Entry
+{
+}
+#typev driver_c628 40 "%0Device handle invalid!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Entry
+{
+}
+#typev driver_c650 43 "%0PilEvtDeviceD0Entry: resume from hibernate! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Entry$fin$0
+{
+}
+#typev driver_c640 42 "%0PilEvtDeviceD0Entry: PreviousState = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Entry$fin$0
+{
+PreviousState, ItemLong -- 10
+}
+#typev driver_c635 41 "%0Device context invalid!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Entry$fin$0
+{
+}
+#typev driver_c628 40 "%0Device handle invalid!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Entry$fin$0
+{
+}
+#typev driver_c706 48 "%0Modem memory Unlock request failed, Unable to get modem memory back to HLOS!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Exit
+{
+}
+#typev driver_c693 47 "%0PilEvtDeviceD0Exit: hibernate entry! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Exit
+{
+}
+#typev driver_c689 46 "%0PilEvtDeviceD0Exit: TargetState = %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Exit
+{
+TargetState, ItemLong -- 10
+}
+#typev driver_c684 45 "%0Device context invalid!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Exit
+{
+}
+#typev driver_c677 44 "%0Device handle invalid!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Exit
+{
+}
+#typev driver_c706 48 "%0Modem memory Unlock request failed, Unable to get modem memory back to HLOS!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Exit$fin$0
+{
+}
+#typev driver_c693 47 "%0PilEvtDeviceD0Exit: hibernate entry! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Exit$fin$0
+{
+}
+#typev driver_c689 46 "%0PilEvtDeviceD0Exit: TargetState = %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Exit$fin$0
+{
+TargetState, ItemLong -- 10
+}
+#typev driver_c684 45 "%0Device context invalid!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Exit$fin$0
+{
+}
+#typev driver_c677 44 "%0Device handle invalid!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceD0Exit$fin$0
+{
+}
+#typev driver_c760 49 "%0Error: WdfObjectAllocateContext failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtDeviceFileCreate
+{
+status, ItemLong -- 10
+}
+#typev driver_c1653 108 "%0Calling bug check since this is a critical driver which must not be removed..." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PilEvtDriverContextCleanup
+{
+}
+#typev driver_c1631 107 "%0Entered PilEvtDriverContextCleanup." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=PilEvtDriverContextCleanup
+{
+}
+#typev driver_c1774 116 "%0Exited PilEvtFileContextCleanup." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=PilEvtFileContextCleanup
+{
+}
+#typev driver_c1770 115 "%0Warning: Updating of saved image info failed." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=PilEvtFileContextCleanup
+{
+}
+#typev driver_c1728 114 "%0Closing the file context for: %10!s!, TZ ID: %11!d!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=PilEvtFileContextCleanup
+{
+imageInfo->AnsiElfImageFileName.Buffer, ItemString -- 10
+imageInfo->TzProcessorId, ItemLong -- 11
+}
+#typev driver_c1724 113 "%0Entered PilEvtFileContextCleanup." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=PilEvtFileContextCleanup
+{
+}
+#typev driver_c1534 99 "%0Error: Failed to unlock memory: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev driver_c1526 98 "%0Warning: Unlock region has non zero value !!!!!!!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1518 97 "%0Error: TrustZone processor ID not defined for XPU unlock region" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1502 96 "%0Error: Insufficient resources to retrieve the input buffer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1485 95 "%0Called IOCTL_PIL_TZ_UNLOCK_HLOS_MEMORY_REGION with file object: 0x%10!p!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+fileObject, ItemPtr -- 10
+}
+#typev driver_c1588 104 "%0Error: Failed to configure memory for modem access: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev driver_c1570 103 "%0Error: Insufficient resources to retrieve the input buffer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1550 102 "%0Warning: The request was already completed earlier." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1544 101 "%0Error: Hypervisor DDR Memory protection not enabled on this chipset." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1540 100 "%0Called IOCTL_PIL_TZ_MODEM_ACCESS_MEMORY_REGION with file object: 0x%10!p!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+fileObject, ItemPtr -- 10
+}
+#typev driver_c1603 105 "%0Error: Unrecognized IOCTL: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+IoControlCode, ItemLong -- 10
+}
+#typev driver_c1417 89 "%0FAILURE: Couldn't retrieve the output buffer for IOCTL_PIL_GET_INTERFACE_VERSION in pil, status: %10!s! " //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev driver_c1312 84 "%0Error: Loading ELF image failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1300 83 "%0Error: The loading of the image failed with status: 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev driver_c1262 80 "%0ImageInfo physical address invalid for image %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev driver_c1289 82 "%0Warning: Unable to return image entry physical address of: 0x%10!p! for image %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+imageEntryPhysicalAddressPtr, ItemPtr -- 10
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 11
+}
+#typev driver_c1274 81 "%0Returning image entry physical address of: 0x%10!p! for image %11!s!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+imageEntryPhysicalAddressPtr, ItemPtr -- 10
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 11
+}
+#typev driver_c1227 79 "%0Error: Initialization (TreeSendImageMetaData) failed with status: 0x%10!X! for %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+status, ItemLong -- 10
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 11
+}
+#typev driver_c1220 78 "%0Error: Unable to send the memory range for the relocatable image to TZ: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=PilEvtIoDeviceControl
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev driver_c1215 77 "%0TreeSetSubsysRelocRange succeeded for the relocatable image to TZ: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ELF FUNC=PilEvtIoDeviceControl
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev driver_c1201 76 "%0TreeSendImageMetaData succeeded for %10!s!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev driver_c1161 75 "%0New load image request enqueued (current request pending)." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1151 74 "%0Error: WdfRequestForwardToIoQueue failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev driver_c1126 72 "%0Called IOCTL_PIL_LOAD_IMAGE/IOCTL_PIL_TZ_LOAD_IMAGE with file object: 0x%10!p!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+fileObject, ItemPtr -- 10
+}
+#typev driver_c1130 73 "%0Called IOCTL_PIL_RELOAD_IMAGE/IOCTL_PIL_TZ_RELOAD_IMAGE with file object: 0x%10!p!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+fileObject, ItemPtr -- 10
+}
+#typev driver_c1096 71 "%0New load image request enqueued (current request pending)." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1086 70 "%0Error: WdfRequestForwardToIoQueue failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+status, ItemLong -- 10
+}
+#typev driver_c1074 69 "%0Called IOCTL_PIL_MSA_LOAD_IMAGE with file object: %10!p!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+fileObject, ItemPtr -- 10
+}
+#typev driver_c1479 94 "%0Error: The requested image may not be unloaded, since it is not loaded." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1471 92 "%0Skipping unlock as this image was either not locked by TZ, or was locked by TZ but already unlocked earlier" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1474 93 "%0Unloading of the image succeeded with file object: 0x%10!p!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+fileObject, ItemPtr -- 10
+}
+#typev driver_c1441 91 "%0Error: Insufficient resources to retrieve the input buffer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1430 90 "%0Called IOCTL_PIL_UNLOAD_IMAGE with file object: 0x%10!p!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+fileObject, ItemPtr -- 10
+}
+#typev driver_c1607 106 "%0Completing Request 0x%10!p! with status: 0x%11!X!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+Request, ItemPtr -- 10
+status, ItemLong -- 11
+}
+#typev driver_c1403 88 "%0Error: The requested image has not yet been loaded." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+}
+#typev driver_c1378 87 "%0Error: Authentication or reset failed, status: 0x%10!X!, file: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+status, ItemLong -- 10
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 11
+}
+#typev driver_c1351 86 "%0Called IOCTL_PIL_TZ_AUTH_IMAGE_AND_RESET with file object: 0x%10!p!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+fileObject, ItemPtr -- 10
+}
+#typev driver_c1347 85 "%0Called IOCTL_PIL_AUTH_IMAGE_AND_RESET with file object: 0x%10!p!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=PilEvtIoDeviceControl
+{
+fileObject, ItemPtr -- 10
+}
+#typev driver_c1810 118 "%0Exited PilEvtLoadImageQueueCleanup." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=PilEvtLoadImageQueueCleanup
+{
+}
+#typev driver_c1796 117 "%0Entered PilEvtLoadImageQueueCleanup." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=PilEvtLoadImageQueueCleanup
+{
+}
+#typev driver_c938 61 "%0Error: The image has not yet been loaded." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+}
+#typev driver_c987 65 "%0Beginning %10!s! of image file: %11!s!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+IoControlCode == IOCTL_PIL_RELOAD_IMAGE || IoControlCode == IOCTL_PIL_TZ_RELOAD_IMAGE ? 'reload' : 'load', ItemString -- 10
+&FileContext->ImageInfo.ElfImageFileName, ItemPWString -- 11
+}
+#typev driver_c955 62 "%0Restoring the loaded image file name for TZ reload: %10!s!, TZ processor ID: %11!d!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+&FileContext->ImageInfo.ElfImageFileName, ItemPWString -- 10
+FileContext->ImageInfo.TzProcessorId, ItemLong -- 11
+}
+#typev driver_c967 63 "%0Error: Invalid image file name parameter." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+}
+#typev driver_c982 64 "%0Error: Insufficient resources for allocation of the ELF file name string." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+}
+#typev driver_c893 58 "%0Error: The image has already been authenticated." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+}
+#typev driver_c922 60 "%0Copying the loaded image file name for TZ reload: %10!s!, TZ processor ID: %11!d!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+&reloadElfImageFileNameBuffer, ItemPWString -- 10
+reloadTzProcessorId, ItemLong -- 11
+}
+#typev driver_c906 59 "%0Error: The XPU protected memory for this image cannot be unlocked." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+}
+#typev driver_c858 55 "%0IOCTL request received to reload image file: %10!s!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+inElfImageFileName, ItemWString -- 10
+}
+#typev driver_c849 54 "%0Error: WdfRequestRetrieveInputBuffer for IOCTL_PIL_TZ_RELOAD_IMAGE failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+status, ItemLong -- 10
+}
+#typev driver_c842 53 "%0IOCTL request received to load image file: %10!s!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+inElfImageFileName, ItemWString -- 10
+}
+#typev driver_c831 52 "%0Error: WdfRequestRetrieveInputBuffer for IOCTL_PIL_TZ_LOAD_IMAGE failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+status, ItemLong -- 10
+}
+#typev driver_c824 51 "%0IOCTL request received to load image file: %10!s!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+inElfImageFileName, ItemWString -- 10
+}
+#typev driver_c813 50 "%0Error: WdfRequestRetrieveInputBuffer for IOCTL_PIL_LOAD_IMAGE failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+status, ItemLong -- 10
+}
+#typev driver_c874 57 "%0IOCTL request received to reload image file: %10!s!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+inElfImageFileName, ItemWString -- 10
+}
+#typev driver_c865 56 "%0Error: WdfRequestRetrieveInputBuffer for IOCTL_PIL_RELOAD_IMAGE failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadReloadParms
+{
+status, ItemLong -- 10
+}
+#typev driver_c1916 122 "%0Driver Dependency: PIL interface is disabled." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PublishPilDeviceInterfaceClass
+{
+}
+#typev driver_c1904 121 "%0Driver Dependency: PIL interface is enabled." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PublishPilDeviceInterfaceClass
+{
+}
+#typev driver_c1894 120 "%0Warning: Driver Dependency: WdfDeviceCreateDeviceInterface failed with status 0x%10!X!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=PublishPilDeviceInterfaceClass
+{
+status, ItemLong -- 10
+}
+#typev driver_c1872 119 "%0Warning: Driver Dependency: PIL Device Class Interface not activated since Test Mode is active." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=PublishPilDeviceInterfaceClass
+{
+}
+#typev driver_c1987 127 "%0Driver Dependency: PIL-TZ interface is disabled." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PublishPilTzDeviceInterfaceClass
+{
+}
+#typev driver_c1975 126 "%0Driver Dependency: PIL-TZ interface is enabled." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PublishPilTzDeviceInterfaceClass
+{
+}
+#typev driver_c1965 125 "%0Error: (Driver Dependency) WdfDeviceCreateDeviceInterface for PIL-TZ failed with status 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PublishPilTzDeviceInterfaceClass
+{
+status, ItemLong -- 10
+}
+#typev driver_c1950 124 "%0Driver Dependency: PIL-TZ Device Class Interface being published, GUID: %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=PublishPilTzDeviceInterfaceClass
+{
+&GUID_DEVINTERFACE_PIL_TZ, ItemGuid -- 10
+}
+#typev driver_c1941 123 "%0Warning: (Driver Dependency) PIL-TZ Device Class Interface not activated since Test Mode is active." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=PublishPilTzDeviceInterfaceClass
+{
+}

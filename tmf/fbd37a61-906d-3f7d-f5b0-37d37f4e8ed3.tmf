@@ -1,0 +1,275 @@
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+fbd37a61-906d-3f7d-f5b0-37d37f4e8ed3 10.4 // SRC=qmap_rx.c MJ= MN=
+#typev qmap_main_c408 56 "%0QMAP::%!FUNC!: ERROR, WdfWorkItemCreate() failed %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapInit
+{
+status, ItemNTSTATUS -- 10
+status, ItemLong -- 11
+}
+#typev qmap_main_c385 57 "%0QMAP::%!FUNC!: ERROR, WdfWorkItemCreate() failed %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapInit
+{
+status, ItemNTSTATUS -- 10
+status, ItemLong -- 11
+}
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qmap_rx_c1039 44 "%0QMAP::%!FUNC! pRxBufPa(0x%10!I64x!), muxId(%11!d!), descId(%12!d!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapRxBufReturn
+{
+pRxNBL->rxBufHead->Pa, ItemLongLongX -- 10
+mux_id, ItemLong -- 11
+descId, ItemLong -- 12
+}
+#typev qmap_rx_c1024 43 "%0QMAP::%!FUNC!: ERROR, pRxNBL = NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxBufReturn
+{
+}
+#typev qmap_rx_c966 41 "%0QMAP::%!FUNC!: ERROR, Failed, invalid pReqInfo %10!p!, payload %11!p!, length %12!u!, dropping packet." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxComplete
+{
+pReqInfo, ItemPtr -- 10
+pReqInfo->pPayload, ItemPtr -- 11
+pReqInfo->ulLength, ItemLong -- 12
+}
+#typev qmap_rx_c979 42 "%0QMAP::%!FUNC! pReqInfo(0x%10!p!), pRxBufPa(0x%11!I64x!), descId(%12!d!), len(%13!d!), H(%14!d!), F(%15!d!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapRxComplete
+{
+pReqInfo, ItemPtr -- 10
+((PQMAP_RX_BUF)(pReqInfo->pPayload))->Pa, ItemLongLongX -- 11
+pReqInfo->descId, ItemLong -- 12
+pReqInfo->ulLength, ItemLong -- 13
+pDeviceContext->Qmap.nRxPendingRequests, ItemLong -- 14
+QueryDepthSList(pDeviceContext->Qmap.FreeRxDescBufList), ItemLong -- 15
+}
+#typev qmap_rx_c1696 66 "%0QMAP::%!FUNC!: ERROR, QmapRxThread thread create failed - %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxCreateThread
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_rx_c1685 65 "%0QMAP::%!FUNC!: ERROR, QmapRxThreadSendIpaReadReq thread create failed - %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=Core FUNC=QmapRxCreateThread
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_rx_c1669 64 "%0QMAP::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxCreateThread
+{
+}
+#typev qmap_rx_c1360 59 "%0QMAP::%!FUNC! Send to client(%10!d!), nblBuf(%11!p!), count(%12!d!), descId(%13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxDpcNblToClient
+{
+pBuf->muxId, ItemLong -- 10
+pBuf, ItemPtr -- 11
+pBuf->numNbls, ItemLong -- 12
+pBuf->descId, ItemLong -- 13
+}
+#typev qmap_rx_c1335 58 "%0QMAP::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxDpcNblToClient
+{
+}
+#typev qmap_rx_c1502 40 "%0QMAP::%!FUNC!: ERROR, Failed processing Buf to QMAP" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxDpcProcessReqInfoQueue
+{
+}
+#typev qmap_rx_c1479 61 "%0QMAP::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxDpcProcessReqInfoQueue
+{
+}
+#typev qmap_rx_c1154 46 "%0QMAP::%!FUNC! pDeviceContext NULL %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapRxInitNBLs
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_rx_c1186 49 "%0QMAP::%!FUNC!: ERROR, Failed to create new NBL %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxInitNBLs
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_rx_c1184 52 "%0QMAP::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxInitNBLs
+{
+}
+#typev qmap_rx_c1184 51 "%0QMAP::%!FUNC! ++ deviceContext: %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxInitNBLs
+{
+pDeviceContext, ItemPtr -- 10
+}
+#typev qmap_rx_c1198 50 "%0QMAP::%!FUNC!: -- Num NBLs allocated = %10!d!, max = %11!d!, %12!s! %13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxInitNBLs
+{
+i, ItemLong -- 10
+QMAP_RX_MAX_FREE_NBLS, ItemLong -- 11
+ntStatus, ItemNTSTATUS -- 12
+ntStatus, ItemLong -- 13
+}
+#typev qmap_rx_c1170 48 "%0QMAP::%!FUNC!: ERROR, Failed to allocate slist header %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxInitNBLs
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_rx_c1161 47 "%0QMAP::%!FUNC!: ERROR, Failed to allocate NBL pool %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxInitNBLs
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_rx_c1136 45 "%0QMAP::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxInitNBLs
+{
+}
+#typev qmap_rx_c900 39 "%0QMAP::%!FUNC!: in(%10!u!), out(%11!d!), bytes(%12!d!), iptype(%13!d!), ipid(%14!d!), unprocessed(%15!d!), X(%16!d!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+uPktCounter, ItemLong -- 10
+numNbls, ItemLong -- 11
+pReqInfo->ulLength, ItemLong -- 12
+ipType, ItemLong -- 13
+ipId, ItemLong -- 14
+lUnprocessedBytes, ItemLong -- 15
+currPktInfo.checksumInfo.uValid, ItemLong -- 16
+}
+#typev qmap_rx_c898 32 "%0QMAP::%!FUNC!: ERROR, Failed to get client context: muxId(%10!d!)" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+muxId, ItemLong -- 10
+}
+#typev qmap_rx_c898 31 "%0QMAP::%!FUNC! Send to muxId(%10!d!), nNBls(%11!d!), descId(%12!d!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+muxId, ItemLong -- 10
+MuxIdPktCount[muxId], ItemLong -- 11
+descId, ItemLong -- 12
+}
+#typev qmap_rx_c891 38 "%0QMAP::%!FUNC!: ERROR, RSC Drop - Failed to chain coalesced NBL to the adapter" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+}
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qmap_rx_c889 28 "%0QMAP::%!FUNC!: ERROR, Failed to get free NBL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+}
+#typev qmap_rx_c825 36 "%0QMAP::%!FUNC!: ERROR, Failed to process desc buf: len=%10!d!, unproccessed=%11!d!, muxId=%12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+currPktInfo.ipLength, ItemLong -- 10
+lUnprocessedBytes, ItemLong -- 11
+currPktInfo.muxId, ItemLong -- 12
+}
+#typev qmap_rx_c879 37 "%0QMAP::%!FUNC!: ERROR, Drop - Failed to chain curr NBL to the adapter" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+}
+#typev qmap_rx_c877 62 "%0QMAP::%!FUNC!: ERROR, Fail: NBL setup failed err=0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+status, ItemLong -- 10
+}
+#typev qmap_rx_c877 34 "%0QMAP::%!FUNC! Failed to allocate MDL of length %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+pktLength, ItemLong -- 10
+}
+#typev qmap_rx_c877 63 "%0QMAP::%!FUNC!: ERROR, RSC Fail - NBL setup failed err=0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+status, ItemLong -- 10
+}
+#typev qmap_rx_c877 28 "%0QMAP::%!FUNC!: ERROR, Failed to get free NBL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+}
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qmap_rx_c863 28 "%0QMAP::%!FUNC!: ERROR, Failed to get free NBL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+}
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qmap_rx_c852 27 "%0QMAP::%!FUNC!: ERROR, IPV6 Checksum error: uPseudoHdrCsum 0x%10!x!, uIPACsum 0x%11!x!, uIPHdrCsum 0x%12!x!, uFinalCsum 0x%13!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+uPseudoHdrCsum, ItemLong -- 10
+(USHORT)pChecksumInfo->uValue, ItemLong -- 11
+uIpHdrCsum, ItemLong -- 12
+uFinalCsum, ItemLong -- 13
+}
+#typev qmap_rx_c852 26 "%0QMAP::%!FUNC!: ERROR, IPv6 packet bad, failed to get valid length %10!d! %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+uPayloadLen, ItemLong -- 10
+length, ItemLong -- 11
+}
+#typev qmap_rx_c852 25 "%0QMAP::%!FUNC!: ERROR, IPV4 Checksum error: uPseudoHdrCsum 0x%10!x!, uIPACsum 0x%11!x!, uIPHdrCsum 0x%12!x!, uFinalCsum 0x%13!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+uPseudoHdrCsum, ItemLong -- 10
+(USHORT)pChecksumInfo->uValue, ItemLong -- 11
+uIpHdrCsum, ItemLong -- 12
+uFinalCsum, ItemLong -- 13
+}
+#typev qmap_rx_c852 24 "%0QMAP::%!FUNC!: ERROR, IPv4 packet bad, failed to get valid length %10!d! %11!d! %12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+uPayloadLen, ItemLong -- 10
+length, ItemLong -- 11
+uIhl, ItemLong -- 12
+}
+#typev qmap_rx_c807 35 "%0QMAP::%!FUNC!: ERROR, Failed to get pRxBuf address: pReqInfo %10!p!, descId %11!d!, VA %12!p!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxProcessDescBuf
+{
+pReqInfo, ItemPtr -- 10
+pReqInfo->descId, ItemLong -- 11
+((PQMAP_RX_BUF)(pReqInfo->pPayload))->Va, ItemPtr -- 12
+}
+#typev qmap_rx_c1780 72 "%0QMAP::%!FUNC!: Ready->Wait" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapRxThread
+{
+}
+#typev qmap_rx_c1762 40 "%0QMAP::%!FUNC!: ERROR, Failed processing Buf to QMAP" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxThread
+{
+}
+#typev qmap_rx_c1769 71 "%0QMAP::%!FUNC!: Qmap Rx clean up" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxThread
+{
+}
+#typev qmap_rx_c1784 73 "%0QMAP::%!FUNC!: Thread exiting - %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxThread
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_rx_c1739 70 "%0QMAP::%!FUNC!: Wait->Ready" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapRxThread
+{
+}
+#typev qmap_rx_c1725 69 "%0QMAP::%!FUNC!: Thread starting!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxThread
+{
+}
+#typev qmap_rx_c1720 68 "%0QMAP::%!FUNC! ERROR, pDeviceContext NULL!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxThread
+{
+}
+#typev qmap_rx_c1716 67 "%0QMAP::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxThread
+{
+}
+#typev qmap_rx_c236 19 "%0QMAP::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxThreadSendIpaReadReq
+{
+}
+#typev qmap_rx_c234 18 "%0QMAP::%!FUNC!: Thread exiting - %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxThreadSendIpaReadReq
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_rx_c208 16 "%0QMAP::%!FUNC! Rx Close Event" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapRxThreadSendIpaReadReq
+{
+}
+#typev qmap_rx_c152 12 "%0QMAP::%!FUNC!: ERROR: Failed to get free RX request, H(%10!d!), F(%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxThreadSendIpaReadReq
+{
+pDeviceContext->Qmap.nRxPendingRequests, ItemLong -- 10
+QueryDepthSList(pDeviceContext->Qmap.FreeRxDescBufList), ItemLong -- 11
+}
+#typev qmap_rx_c164 13 "%0QMAP::%!FUNC!: ERROR: Failed to get free RX Desc Buf, H(%10!d!), F(%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxThreadSendIpaReadReq
+{
+pDeviceContext->Qmap.nRxPendingRequests, ItemLong -- 10
+QueryDepthSList(pDeviceContext->Qmap.FreeRxDescBufList), ItemLong -- 11
+}
+#typev qmap_rx_c191 14 "%0QMAP::%!FUNC!: ERROR: IPATransferData Failed (status = 0x%10!x!)" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxThreadSendIpaReadReq
+{
+ntStatus, ItemLong -- 10
+}
+#typev qmap_rx_c196 15 "%0QMAP::%!FUNC! pReqInfo(0x%10!p!), pRxBufPa(0x%11!I64x!), descId(%12!d!), len(%13!d!), H(%14!d!), F(%15!d!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapRxThreadSendIpaReadReq
+{
+pReqInfo, ItemPtr -- 10
+pRxDescBuf->Pa, ItemLongLongX -- 11
+pReqInfo->descId, ItemLong -- 12
+QMAP_RX_BUFFER_SIZE, ItemLong -- 13
+pDeviceContext->Qmap.nRxPendingRequests, ItemLong -- 14
+QueryDepthSList(pDeviceContext->Qmap.FreeRxDescBufList), ItemLong -- 15
+}
+#typev qmap_rx_c213 17 "%0QMAP::%!FUNC! Error: Unknown Event 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapRxThreadSendIpaReadReq
+{
+ntStatus, ItemLong -- 10
+}
+#typev qmap_rx_c123 11 "%0QMAP::%!FUNC! ERROR: pDeviceContext NULL. Exiting thread." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxThreadSendIpaReadReq
+{
+}
+#typev qmap_rx_c118 10 "%0QMAP::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxThreadSendIpaReadReq
+{
+}
+#typev qmap_rx_c1421 60 "%0QMAP::%!FUNC! Send to client(%10!d!), nblBuf(%11!p!), count(%12!d!), descId(%13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxWorkItemNblToClient
+{
+pBuf->muxId, ItemLong -- 10
+pBuf, ItemPtr -- 11
+pBuf->numNbls, ItemLong -- 12
+pBuf->descId, ItemLong -- 13
+}
+#typev qmap_rx_c1547 40 "%0QMAP::%!FUNC!: ERROR, Failed processing Buf to QMAP" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxWorkItemProcessReqInfoQueue
+{
+}

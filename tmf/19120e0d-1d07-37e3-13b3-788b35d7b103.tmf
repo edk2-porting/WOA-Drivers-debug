@@ -1,0 +1,494 @@
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+19120e0d-1d07-37e3-13b3-788b35d7b103 10.4 // SRC=QcUsbFnTransfer.c MJ= MN=
+#typev QcUsbFnDevice_c695 119 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnEvtDevicePrepareHardware
+{
+}
+#typev QcUsbFnDevice_c695 118 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnEvtDevicePrepareHardware
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnTransfer_c1522 121 "%0COMPLT REQ: Ep %10!d!, Dir %11!d!, Processing Request[0x%12!p!] Irp[0x%13!p!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=EvtIoStopEpQueue
+{
+pUfnEp->Ep, ItemLong -- 10
+pUfnEp->EpDir, ItemLong -- 11
+(void*)Request, ItemPtr -- 12
+WdfRequestWdmGetIrp(Request), ItemPtr -- 13
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnTransfer_c773 66 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnClearXferTxn
+{
+}
+#typev QcUsbFnTransfer_c744 63 "%0Invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnClearXferTxn
+{
+}
+#typev QcUsbFnTransfer_c768 65 "%0TRANS[0x%10!p!] STATE: EP[%11!u!] EPDir[%12!u!] EP_TRANS_STATE_UNINITIALIZED" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_XFER FUNC=QcUsbFnClearXferTxn
+{
+pTxn->DmaTransaction, ItemPtr -- 10
+Ep, ItemLong -- 11
+EpDir, ItemLong -- 12
+}
+#typev QcUsbFnTransfer_c754 64 "%0WdfDmaTransactionRelease failed: %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_XFER FUNC=QcUsbFnClearXferTxn
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnTransfer_c741 62 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnClearXferTxn
+{
+}
+#typev QcUsbFnTransfer_c1476 120 "%0Failed to cancel epIndex %10!d! URB: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferCancelAllTransfers
+{
+i, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev QcUsbFnTransfer_c1437 117 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferDeInit
+{
+}
+#typev QcUsbFnTransfer_c1414 116 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferDeInit
+{
+}
+#typev QcUsbFnTransfer_c268 25 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferDoZltTransaction
+{
+}
+#typev QcUsbFnTransfer_c253 24 "%0Invalid ZLT state" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferDoZltTransaction
+{
+}
+#typev QcUsbFnTransfer_c236 23 "%0ZLT transaction finished" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferDoZltTransaction
+{
+}
+#typev QcUsbFnTransfer_c229 22 "%0TRANS ST: EP (%10!u!) EPDIR (%11!u!) EP_TRANS_STATE_IN_PROGRESS" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_XFER FUNC=QcUsbFnTransferDoZltTransaction
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+}
+#typev QcUsbFnTransfer_c224 21 "%0WdfDmaTransactionExecute failed for ep %10!d!, dir %11!d! with status %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferDoZltTransaction
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev QcUsbFnTransfer_c211 20 "%0TRANS ST: EP (%10!u!) EPDIR (%11!u!) EP_TRANS_STATE_INITIALIZED" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_XFER FUNC=QcUsbFnTransferDoZltTransaction
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+}
+#typev QcUsbFnTransfer_c204 19 "%0WdfDmaTransactionInitialize failed for ep %10!d!, dir %11!d! with status %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferDoZltTransaction
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev QcUsbFnTransfer_c187 18 "%0QcUsbFnUrbPrepare failed for ep %10!d!, dir %11!d! with status %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferDoZltTransaction
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev QcUsbFnTransfer_c175 17 "%0Preparing URB for ep %10!d!, dir %11!d!: TotalTransactionLength = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferDoZltTransaction
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+TotalTransactionLength, ItemLong -- 12
+}
+#typev QcUsbFnTransfer_c168 16 "%0Failed to allocate Mdl for ZLT handling" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferDoZltTransaction
+{
+}
+#typev QcUsbFnTransfer_c153 15 "%0Starting ZLT transaction" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferDoZltTransaction
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnTransfer_c140 14 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferDoZltTransaction
+{
+}
+#typev QcUsbFnTransfer_c899 76 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferEvtProgramDma
+{
+}
+#typev QcUsbFnTransfer_c866 74 "%0QcUsbFnUrbSubmit failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferEvtProgramDma
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnTransfer_c859 73 "%0QcUsbFnUrbUpdate failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferEvtProgramDma
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnTransfer_c893 75 "%0Cable Attached. Move Ctrl State to Stall" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferEvtProgramDma
+{
+}
+#typev QcUsbFnTransfer_c836 71 "%0DMA DIR (%10!d!) does not match EP (%11!d!) DIR (%12!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferEvtProgramDma
+{
+Direction, ItemLong -- 10
+pEpContext->Ep, ItemLong -- 11
+pEpContext->EpDir, ItemLong -- 12
+}
+#typev QcUsbFnTransfer_c848 72 "%0Device State is UsbfnDeviceStateDetached; Stop the DMA transaction" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferEvtProgramDma
+{
+}
+#typev QcUsbFnTransfer_c825 70 "%0********** Looping SgList Ends **********" //   LEVEL=DBG_XFER_SGL FUNC=QcUsbFnTransferEvtProgramDma
+{
+}
+#typev QcUsbFnTransfer_c820 69 "%0Elements[%10!d!].Address = 0x%11!I64X!, Length = %12!d!" //   LEVEL=DBG_XFER_SGL FUNC=QcUsbFnTransferEvtProgramDma
+{
+i, ItemLong -- 10
+(SgList->Elements)[i].Address.QuadPart, ItemLongLongXX -- 11
+(SgList->Elements)[i].Length, ItemLong -- 12
+}
+#typev QcUsbFnTransfer_c818 68 "%0********** Looping SgList Starts **********" //   LEVEL=DBG_XFER_SGL FUNC=QcUsbFnTransferEvtProgramDma
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnTransfer_c798 67 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferEvtProgramDma
+{
+}
+#typev QcUsbFnTransfer_c110 13 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferHaltTraffic
+{
+}
+#typev QcUsbFnTransfer_c108 12 "%0QcUsbFnTransferCancelAllTransfers failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferHaltTraffic
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnTransfer_c87 11 "%0COMPLT REQ: Ep %10!d!, Dir %11!d!, Processing Request[0x%12!p!] Irp[0x%13!p!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferHaltTraffic
+{
+pUfnEp->Ep, ItemLong -- 10
+pUfnEp->EpDir, ItemLong -- 11
+(void*)request, ItemPtr -- 12
+WdfRequestWdmGetIrp(request), ItemPtr -- 13
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnTransfer_c56 10 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferHaltTraffic
+{
+}
+#typev QcUsbFnTransfer_c1394 115 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferMessageHandler
+{
+}
+#typev QcUsbFnTransfer_c1389 114 "%0WdfRequestForwardToIoQueue failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferMessageHandler
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnTransfer_c1377 113 "%0Forwarding Pipe[%10!d!] request[0x%11!p!], irp[0x%12!p!], Ifc[%13!s!] to physical EP[%14!d!] queue" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferMessageHandler
+{
+PipeID, ItemLong -- 10
+(VOID *)Request, ItemPtr -- 11
+(VOID *)WdfRequestWdmGetIrp(Request), ItemPtr -- 12
+(pEpContext->UfnInterface) ? (pEpContext->UfnInterface->Name) : (L'CONTROL'), ItemWString -- 13
+QCUSBFN_EP_INDEX(pEpContext->Ep.           pEpContext->EpDir), ItemLong -- 14
+}
+#typev QcUsbFnTransfer_c1372 112 "%0Failed to get endpoint context for PipeID %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferMessageHandler
+{
+PipeID, ItemLong -- 10
+}
+#typev QcUsbFnTransfer_c1338 111 "%0PipeID[%10!d!] retrieved from Request[0x%11!p!]'s input buffer out of range" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferMessageHandler
+{
+PipeID, ItemLong -- 10
+(void *)Request, ItemPtr -- 11
+}
+#typev QcUsbFnTransfer_c1332 110 "%0Input buffer length[%10!Iu!] smaller than a PIPEID" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferMessageHandler
+{
+Length, ItemPtr -- 10
+}
+#typev QcUsbFnTransfer_c1326 109 "%0Failed to get input buffer from Request[0x%10!p!] with status code %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferMessageHandler
+{
+(void *)Request, ItemPtr -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev QcUsbFnTransfer_c1316 108 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferMessageHandler
+{
+}
+#typev QcUsbFnTransfer_c318 32 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferProcessEpQueue
+{
+}
+#typev QcUsbFnTransfer_c314 31 "%0Ep %10!u! Dir %11!u! workitem enqueued" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferProcessEpQueue
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+}
+#typev QcUsbFnTransfer_c310 30 "%0EP %10!d! DIR %11!d! Queue empty" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferProcessEpQueue
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+}
+#typev QcUsbFnTransfer_c307 29 "%0WdfIoQueueRetrieveNextRequest failed: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferProcessEpQueue
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnTransfer_c300 28 "%0EP %10!d! DIR %11!d! Queue not dispatching (state 0x%12!02x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferProcessEpQueue
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+state, ItemLong -- 12
+}
+#typev QcUsbFnTransfer_c293 27 "%0Already processing a request, taking no action" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferProcessEpQueue
+{
+}
+#typev QcUsbFnTransfer_c289 26 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferProcessEpQueue
+{
+}
+#typev QcUsbFnTransfer_c1296 107 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferQueueReady
+{
+}
+#typev QcUsbFnTransfer_c1288 106 "%0queue doesn't match context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueReady
+{
+}
+#typev QcUsbFnTransfer_c1285 105 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferQueueReady
+{
+}
+#typev QcUsbFnTransfer_c1271 104 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferQueueWi
+{
+}
+#typev QcUsbFnTransfer_c1269 103 "%0released the spin lock on Ep %10!u!, Dir %11!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+}
+#typev QcUsbFnTransfer_c1246 102 "%0TRANS ST: EP (%10!u!) EPDIR (%11!u!) EP_TRANS_STATE_IN_PROGRESS" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+}
+#typev QcUsbFnTransfer_c1241 101 "%0WdfDmaTransactionExecute failed for ep %10!d!, dir %11!d! with status %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev QcUsbFnTransfer_c1228 100 "%0TRANS ST: EP (%10!u!) EPDIR (%11!u!) EP_TRANS_STATE_INITIALIZED" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+}
+#typev QcUsbFnTransfer_c1222 99 "%0WdfDmaTransactionInitialize failed for ep %10!d!, dir %11!d! with status %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev QcUsbFnTransfer_c1201 98 "%0QcUsbFnUrbPrepare failed for ep %10!d!, dir %11!d! with status %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev QcUsbFnTransfer_c1174 97 "%0Request[0x%10!p!], IRP[0x%11!p!] preparing URB ep %12!d!, dir %13!d!: TotalTransactionLength = %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+Request, ItemPtr -- 10
+WdfRequestWdmGetIrp(Request), ItemPtr -- 11
+pEpContext->Ep, ItemLong -- 12
+pEpContext->EpDir, ItemLong -- 13
+TotalTransactionLength, ItemLong -- 14
+}
+#typev QcUsbFnTransfer_c1169 96 "%0TotalTransactionLength cannot be zero" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+}
+#typev QcUsbFnTransfer_c1159 95 "%0Transfer of MaxPktSize[%10!d!], skipping ZLT append" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+MaxPktSize, ItemLong -- 10
+}
+#typev QcUsbFnTransfer_c1155 94 "%0Failed to allocate Mdl to pad user buffer with" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+}
+#typev QcUsbFnTransfer_c1145 93 "%0Request[0x%10!p!] padding user buffer length %11!d! (pDataMdl 0x%12!p!) with %13!d! additional bytes (pTransactionContext->Mdl 0x%14!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+Request, ItemPtr -- 10
+TotalTransactionLength, ItemLong -- 11
+pDataMdl, ItemPtr -- 12
+Remainder, ItemLong -- 13
+pTxn->Mdl, ItemPtr -- 14
+}
+#typev QcUsbFnTransfer_c1128 92 "%0Appending zero length packet to IN transfer of length %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+TotalTransactionLength, ItemLong -- 10
+}
+#typev QcUsbFnTransfer_c1118 91 "%0QcUsbFnControllerCopyData failed : %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnTransfer_c1095 89 "%0QcUsbFnTransferDoZltTransaction failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnTransfer_c1101 90 "%0Failed to get output buffer from request 0x%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+(void *)Request, ItemPtr -- 10
+}
+#typev QcUsbFnTransfer_c1060 87 "%0ERROR: IOCTL_INTERNAL_USBFN_TRANSFER_IN is received on the endpoint whose direction is not QCUSBFN_EP_DIR_IN" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+}
+#typev QcUsbFnTransfer_c1077 88 "%0Request[0x%10!p!] EP[%11!u!] EPDIR[%12!u!]: completes the user request due to cable detach" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+Request, ItemPtr -- 10
+pEpContext->Ep, ItemLong -- 11
+pEpContext->EpDir, ItemLong -- 12
+}
+#typev QcUsbFnTransfer_c1048 86 "%0ERROR: IOCTL_INTERNAL_USBFN_TRANSFER_OUT is received on the endpoint whose direction is not QCUSBFN_EP_DIR_OUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+}
+#typev QcUsbFnTransfer_c1029 85 "%0Processing Request[0x%10!p!] Ifc[%11!s!] IOCTL[%12!s!(0x%13!x!)]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PNP FUNC=QcUsbFnTransferQueueWi
+{
+(void*)Request, ItemPtr -- 10
+(pReqContext?pReqContext->pIfcContext->Name:L'UNKNOWN'), ItemWString -- 11
+QcUsbFnUtilPrintIoctlType(IoControlCode), ItemString -- 12
+IoControlCode, ItemLong -- 13
+}
+#typev QcUsbFnTransfer_c1022 84 "%0Received transfer request on BAM2BAM enabled endpoint!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnTransfer_c1006 83 "%0transfer WI queued without a request" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+}
+#typev QcUsbFnTransfer_c1003 82 "%0acquire the spin lock on Ep %10!u!, Dir %11!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_XFER FUNC=QcUsbFnTransferQueueWi
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+}
+#typev QcUsbFnTransfer_c998 81 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferQueueWi
+{
+}
+#typev QcUsbFnTransfer_c966 80 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferRequestComplete
+{
+}
+#typev QcUsbFnTransfer_c924 78 "%0invalid Parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferRequestComplete
+{
+}
+#typev QcUsbFnTransfer_c931 79 "%0Completing Request[0x%10!p!] Irp[0x%11!p!]: %12!s!, Info %13!Id!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferRequestComplete
+{
+(void*)Request, ItemPtr -- 10
+WdfRequestWdmGetIrp(Request), ItemPtr -- 11
+Status, ItemNTSTATUS -- 12
+Information, ItemPtr -- 13
+}
+#typev QcUsbFnTransfer_c921 77 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferRequestComplete
+{
+}
+#typev QcUsbFnTransfer_c393 40 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferRequestRequeue
+{
+}
+#typev QcUsbFnTransfer_c344 34 "%0invalid Parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferRequestRequeue
+{
+}
+#typev QcUsbFnTransfer_c385 39 "%0Requeued Request[0x%10!p!] Irp[0x%11!p!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferRequestRequeue
+{
+(void*)Request, ItemPtr -- 10
+WdfRequestWdmGetIrp(Request), ItemPtr -- 11
+}
+#typev QcUsbFnTransfer_c375 38 "%0Failed to requeue request, canceling instead" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferRequestRequeue
+{
+}
+#typev QcUsbFnTransfer_c364 37 "%0Error: current request != request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferRequestRequeue
+{
+}
+#typev QcUsbFnTransfer_c358 36 "%0Error: cannot retrieve ep context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferRequestRequeue
+{
+}
+#typev QcUsbFnTransfer_c350 35 "%0Error: the request has been completed already" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferRequestRequeue
+{
+}
+#typev QcUsbFnTransfer_c341 33 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferRequestRequeue
+{
+}
+#typev QcUsbFnTransfer_c667 56 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferUrbCancel
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnTransfer_c636 55 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferUrbCancel
+{
+}
+#typev QcUsbFnTransfer_c723 61 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferUrbComplete
+{
+}
+#typev QcUsbFnTransfer_c719 60 "%0Unhandled URB status %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbComplete
+{
+UrbStatus, ItemEnum(_QCUSBFN_URB_STATUS) -- 10
+}
+#typev QcUsbFnTransfer_c700 59 "%0URB completed: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbComplete
+{
+UrbStatus, ItemEnum(_QCUSBFN_URB_STATUS) -- 10
+}
+#typev QcUsbFnTransfer_c695 58 "%0Failed to get ep context for physical ep %10!d! dir %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbComplete
+{
+Ep, ItemLong -- 10
+EpDir, ItemLong -- 11
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnTransfer_c687 57 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferUrbComplete
+{
+}
+#typev QcUsbFnTransfer_c516 48 "%0XferComplete event processed, but framework will continue DMA!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbCompleteSuccess
+{
+}
+#typev QcUsbFnTransfer_c520 49 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferUrbCompleteSuccess
+{
+}
+#typev QcUsbFnTransfer_c486 46 "%0TRANS ST: EP (%10!u!) EPDIR (%11!u!) EP_TRANS_STATE_UNINITIALIZED" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbCompleteSuccess
+{
+pEpContext->Ep, ItemLong -- 10
+pEpContext->EpDir, ItemLong -- 11
+}
+#typev QcUsbFnTransfer_c501 47 "%0No ZLT transaction needed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbCompleteSuccess
+{
+}
+#typev QcUsbFnTransfer_c483 45 "%0FAILED TO RELEASE DMA TRANSACTION, completing request anyway: %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbCompleteSuccess
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnTransfer_c474 44 "%0IsTransactComplete[%10!d!], DMA Status[%11!s!], USB state[%12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbCompleteSuccess
+{
+IsTransactComplete, ItemLong -- 10
+DmaStatus, ItemNTSTATUS -- 11
+pDevContext->UsbState.DevState, ItemLong -- 12
+}
+#typev QcUsbFnTransfer_c462 43 "%0Error - Transaction State [%10!d!] invalid, physical ep[%11!d!], TotalBytesXfered [%12!d!], TotalTransactLen [%13!d!], TransferBytesXfered [%14!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbCompleteSuccess
+{
+pDevContext->UsbState.DevState, ItemLong -- 10
+QCUSBFN_EP_INDEX(pEpContext->Ep. pEpContext->EpDir), ItemLong -- 11
+TransactionLengthComplete, ItemLong -- 12
+TotalTransactionLength, ItemLong -- 13
+TransferLengthComplete, ItemLong -- 14
+}
+#typev QcUsbFnTransfer_c439 42 "%0XferComplete event on physical ep[%10!d!], total bytes transferred[%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbCompleteSuccess
+{
+QCUSBFN_EP_INDEX(pEpContext->Ep. pEpContext->EpDir), ItemLong -- 10
+TransactionLengthComplete, ItemLong -- 11
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnTransfer_c429 41 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferUrbCompleteSuccess
+{
+}
+#typev QcUsbFnTransfer_c606 54 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferUrbInProgress
+{
+}
+#typev QcUsbFnTransfer_c581 53 "%0WdfDmaTransactionDmaCompletedWithLength returned TRUE while processing an XferInProgress event, completing request early" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbInProgress
+{
+}
+#typev QcUsbFnTransfer_c571 52 "%0DMA Status = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbInProgress
+{
+DmaStatus, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnTransfer_c560 51 "%0URB InProgress event on ep %10!d!, %11!Iu! bytes transferred" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_XFER FUNC=QcUsbFnTransferUrbInProgress
+{
+QCUSBFN_EP_INDEX(pEpContext->Ep. pEpContext->EpDir), ItemLong -- 10
+TransferredLength, ItemPtr -- 11
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnTransfer_c553 50 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnTransferUrbInProgress
+{
+}
+#enumv _QCUSBFN_URB_STATUS
+{
+URB_STATUS_SUCCESS,0x0
+URB_STATUS_SUCCESS_DO_ZLT,0x1
+URB_STATUS_IN_PROGRESS,0x2
+URB_STATUS_SETUP_PENDING,0x3
+URB_STATUS_CANCELED,0x4
+URB_STATUS_ERROR,0x5
+}

@@ -1,0 +1,1165 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+ef39a9a0-110f-39e4-2426-5db158cf9f26 WMRIL // SRC=WMRilPhonebookService.cpp MJ= MN=
+#typev WMRilReadPhoneBookEntries_cpp707 122 "%0%!LEVEL! %!FUNC!:PBMNumType: %10!s!(0x%11!02X!), RilNumType: %12!s!(0x%13!08X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::CalculateRilAddressFromQmiData
+{
+Debug::QMIPBMNumTypeToStr(PbmNumType), ItemWString -- 10
+PbmNumType, ItemLong -- 11
+RilNumType, ItemEnum(RILADDRESSTYPE) -- 12
+static_cast<DWORD>(RilNumType), ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilWritePhoneBookEntry_cpp907 123 "%0%!LEVEL! %!FUNC!:RilNumPlan: %10!s!(0x%11!08X!), PbmNumPlan: %12!s!(0x%13!02X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::WritePhoneBookEntryClass::CalculateQMIDataFromRilAddress
+{
+RilNumPlan, ItemEnum(RILADDRESSNUMPLAN) -- 10
+static_cast<DWORD>(RilNumPlan), ItemLong -- 11
+Debug::QMIPBMNumPlanToStr(PbmNumPlan), ItemWString -- 12
+PbmNumPlan, ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilWritePhoneBookEntry_cpp901 121 "%0%!LEVEL! %!FUNC!:RilNumType: %10!s!(0x%11!08X!), PbmNumType: %12!s!(0x%13!02X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::WritePhoneBookEntryClass::CalculateQMIDataFromRilAddress
+{
+RilNumType, ItemEnum(RILADDRESSTYPE) -- 10
+static_cast<DWORD>(RilNumType), ItemLong -- 11
+Debug::QMIPBMNumTypeToStr(PbmNumType), ItemWString -- 12
+PbmNumType, ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp663 68 "%0%!LEVEL! %!FUNC!:There are no Network emergency numbers present." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp656 67 "%0%!LEVEL! %!FUNC!:category = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+network_session_emerg_num.emer_nums[j].cat, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp651 66 "%0%!LEVEL! %!FUNC!:DebugDump emer_num: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+WMRIL_LOG_XSTR                      (                          &network_session_emerg_num.emer_nums[j].emer_num.                          network_session_emerg_num.emer_nums[j].emer_num_len                      ), ItemHEXDump -- 10
+}
+#typev WMRilPhonebookService_cpp648 65 "%0%!LEVEL! %!FUNC!:Successfully added the following network emergency number to the Network emergency number list:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp644 64 "%0%!LEVEL! %!FUNC!:Failed to add the following network emergency number to the Network emergency number list:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp625 63 "%0%!LEVEL! %!FUNC!:network_session_emer_num.emer_nums_len = %10!u!, which is greater than the max buffer capacity of %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+network_session_emerg_num.emer_nums_len, ItemLong -- 10
+QMI_PBM_MAX_NUM_NETWORK_ECC_EMER_NUM_V01, ItemLong -- 11
+}
+#typev WMRilPhonebookService_cpp618 62 "%0%!LEVEL! %!FUNC!: %10!u! emergency numbers are present for session = %11!s!(0x%12!04X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+network_session_emerg_num.emer_nums_len, ItemLong -- 10
+Debug::QMIPBMSessionTypeToStr(network_session_emerg_num.session_type), ItemWString -- 11
+network_session_emerg_num.session_type, ItemLong -- 12
+}
+#typev WMRilPhonebookService_cpp600 59 "%0%!LEVEL! %!FUNC!:There are no Card emergency numbers present." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp593 58 "%0%!LEVEL! %!FUNC!:category = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+card_session_emerg_num.emer_nums[j].cat, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp592 57 "%0%!LEVEL! %!FUNC!:DebugDump emer_num: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+WMRIL_LOG_XSTR(&card_session_emerg_num.emer_nums[j].emer_num. card_session_emerg_num.emer_nums[j].emer_num_len), ItemHEXDump -- 10
+}
+#typev WMRilPhonebookService_cpp589 56 "%0%!LEVEL! %!FUNC!:Successfully added the following UICC Card emergency number to the UICC Card emergency number list:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp585 55 "%0%!LEVEL! %!FUNC!:Failed to add the following UICC Card emergency number to the UICC Card emergency number list:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp565 54 "%0%!LEVEL! %!FUNC!:card_session_emerg_num.emer_nums_len = %10!u!, which is greater than the max buffer capacity of %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+card_session_emerg_num.emer_nums_len, ItemLong -- 10
+QMI_PBM_MAX_NUM_CARD_ECC_EMER_NUM_V01, ItemLong -- 11
+}
+#typev WMRilPhonebookService_cpp558 53 "%0%!LEVEL! %!FUNC!: %10!u! emergency number types are present for session = %11!s!(0x%12!04X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+card_session_emerg_num.emer_nums_len, ItemLong -- 10
+Debug::QMIPBMSessionTypeToStr(card_session_emerg_num.session_type), ItemWString -- 11
+card_session_emerg_num.session_type, ItemLong -- 12
+}
+#typev WMRilPhonebookService_cpp539 50 "%0%!LEVEL! %!FUNC!:There are no NV emergency numbers present." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp610 61 "%0%!LEVEL! %!FUNC!:pbmEmergListInd->network_emer_nums_len = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+eCallLists.network_emer_nums_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp606 60 "%0%!LEVEL! %!FUNC!: %10!u! network session emerg number types are present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+eCallLists.network_emer_nums_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp549 52 "%0%!LEVEL! %!FUNC!:pbmEmergListInd->card_emer_nums_len = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+eCallLists.card_emer_nums_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp545 51 "%0%!LEVEL! %!FUNC!: %10!u! card session emerg numbers are present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+eCallLists.card_emer_nums_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp533 49 "%0%!LEVEL! %!FUNC!:DebugDump emer_num: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+WMRIL_LOG_XSTR(&pbm_nv_emer_num.emer_num. pbm_nv_emer_num.emer_num_len), ItemHEXDump -- 10
+}
+#typev WMRilPhonebookService_cpp530 48 "%0%!LEVEL! %!FUNC!:Successfully added the following NV emergency number to the hardcoded/NV emergency number list:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp526 47 "%0%!LEVEL! %!FUNC!:Failed to add the following NV emergency number to the hardcoded/NV emergency number list:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp497 44 "%0%!LEVEL! %!FUNC!:There are no Hardcoded emergency numbers present." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp508 46 "%0%!LEVEL! %!FUNC!:pbmEmergListInd->nv_emer_nums_extended_len = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+eCallLists.nv_emer_nums_extended_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp503 45 "%0%!LEVEL! %!FUNC!:%10!u! NV emergency numbers are present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+eCallLists.nv_emer_nums_extended_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp489 43 "%0%!LEVEL! %!FUNC!:DebugDump emer_num: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+WMRIL_LOG_XSTR(&pbm_hardcoded_emer_num.emer_num. pbm_hardcoded_emer_num.emer_num_len), ItemHEXDump -- 10
+}
+#typev WMRilPhonebookService_cpp485 42 "%0%!LEVEL! %!FUNC!:Successfully added the following hardcoded emergency number to the hardcoded/NV emergency number list:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp481 41 "%0%!LEVEL! %!FUNC!:Failed to add the following hardcoded emergency number to the hardcoded/NV emergency number list:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp462 40 "%0%!LEVEL! %!FUNC!:pbmEmergListInd->emer_nums_extended_len = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+eCallLists.emer_nums_extended_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp457 39 "%0%!LEVEL! %!FUNC!:%10!u! hardcoded emergency numbers are present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_emergency_list_ind_msg_v01>
+{
+eCallLists.emer_nums_extended_len, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp663 68 "%0%!LEVEL! %!FUNC!:There are no Network emergency numbers present." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp656 67 "%0%!LEVEL! %!FUNC!:category = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+network_session_emerg_num.emer_nums[j].cat, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp651 66 "%0%!LEVEL! %!FUNC!:DebugDump emer_num: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+WMRIL_LOG_XSTR                      (                          &network_session_emerg_num.emer_nums[j].emer_num.                          network_session_emerg_num.emer_nums[j].emer_num_len                      ), ItemHEXDump -- 10
+}
+#typev WMRilPhonebookService_cpp648 65 "%0%!LEVEL! %!FUNC!:Successfully added the following network emergency number to the Network emergency number list:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp644 64 "%0%!LEVEL! %!FUNC!:Failed to add the following network emergency number to the Network emergency number list:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp625 63 "%0%!LEVEL! %!FUNC!:network_session_emer_num.emer_nums_len = %10!u!, which is greater than the max buffer capacity of %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+network_session_emerg_num.emer_nums_len, ItemLong -- 10
+QMI_PBM_MAX_NUM_NETWORK_ECC_EMER_NUM_V01, ItemLong -- 11
+}
+#typev WMRilPhonebookService_cpp618 62 "%0%!LEVEL! %!FUNC!: %10!u! emergency numbers are present for session = %11!s!(0x%12!04X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+network_session_emerg_num.emer_nums_len, ItemLong -- 10
+Debug::QMIPBMSessionTypeToStr(network_session_emerg_num.session_type), ItemWString -- 11
+network_session_emerg_num.session_type, ItemLong -- 12
+}
+#typev WMRilPhonebookService_cpp600 59 "%0%!LEVEL! %!FUNC!:There are no Card emergency numbers present." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp593 58 "%0%!LEVEL! %!FUNC!:category = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+card_session_emerg_num.emer_nums[j].cat, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp592 57 "%0%!LEVEL! %!FUNC!:DebugDump emer_num: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+WMRIL_LOG_XSTR(&card_session_emerg_num.emer_nums[j].emer_num. card_session_emerg_num.emer_nums[j].emer_num_len), ItemHEXDump -- 10
+}
+#typev WMRilPhonebookService_cpp589 56 "%0%!LEVEL! %!FUNC!:Successfully added the following UICC Card emergency number to the UICC Card emergency number list:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp585 55 "%0%!LEVEL! %!FUNC!:Failed to add the following UICC Card emergency number to the UICC Card emergency number list:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp565 54 "%0%!LEVEL! %!FUNC!:card_session_emerg_num.emer_nums_len = %10!u!, which is greater than the max buffer capacity of %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+card_session_emerg_num.emer_nums_len, ItemLong -- 10
+QMI_PBM_MAX_NUM_CARD_ECC_EMER_NUM_V01, ItemLong -- 11
+}
+#typev WMRilPhonebookService_cpp558 53 "%0%!LEVEL! %!FUNC!: %10!u! emergency number types are present for session = %11!s!(0x%12!04X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+card_session_emerg_num.emer_nums_len, ItemLong -- 10
+Debug::QMIPBMSessionTypeToStr(card_session_emerg_num.session_type), ItemWString -- 11
+card_session_emerg_num.session_type, ItemLong -- 12
+}
+#typev WMRilPhonebookService_cpp539 50 "%0%!LEVEL! %!FUNC!:There are no NV emergency numbers present." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp610 61 "%0%!LEVEL! %!FUNC!:pbmEmergListInd->network_emer_nums_len = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+eCallLists.network_emer_nums_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp606 60 "%0%!LEVEL! %!FUNC!: %10!u! network session emerg number types are present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+eCallLists.network_emer_nums_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp549 52 "%0%!LEVEL! %!FUNC!:pbmEmergListInd->card_emer_nums_len = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+eCallLists.card_emer_nums_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp545 51 "%0%!LEVEL! %!FUNC!: %10!u! card session emerg numbers are present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+eCallLists.card_emer_nums_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp533 49 "%0%!LEVEL! %!FUNC!:DebugDump emer_num: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+WMRIL_LOG_XSTR(&pbm_nv_emer_num.emer_num. pbm_nv_emer_num.emer_num_len), ItemHEXDump -- 10
+}
+#typev WMRilPhonebookService_cpp530 48 "%0%!LEVEL! %!FUNC!:Successfully added the following NV emergency number to the hardcoded/NV emergency number list:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp526 47 "%0%!LEVEL! %!FUNC!:Failed to add the following NV emergency number to the hardcoded/NV emergency number list:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp497 44 "%0%!LEVEL! %!FUNC!:There are no Hardcoded emergency numbers present." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp508 46 "%0%!LEVEL! %!FUNC!:pbmEmergListInd->nv_emer_nums_extended_len = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+eCallLists.nv_emer_nums_extended_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp503 45 "%0%!LEVEL! %!FUNC!:%10!u! NV emergency numbers are present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+eCallLists.nv_emer_nums_extended_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp489 43 "%0%!LEVEL! %!FUNC!:DebugDump emer_num: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+WMRIL_LOG_XSTR(&pbm_hardcoded_emer_num.emer_num. pbm_hardcoded_emer_num.emer_num_len), ItemHEXDump -- 10
+}
+#typev WMRilPhonebookService_cpp485 42 "%0%!LEVEL! %!FUNC!:Successfully added the following hardcoded emergency number to the hardcoded/NV emergency number list:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp481 41 "%0%!LEVEL! %!FUNC!:Failed to add the following hardcoded emergency number to the hardcoded/NV emergency number list:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+}
+#typev WMRilPhonebookService_cpp462 40 "%0%!LEVEL! %!FUNC!:pbmEmergListInd->emer_nums_extended_len = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+eCallLists.emer_nums_extended_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp457 39 "%0%!LEVEL! %!FUNC!:%10!u! hardcoded emergency numbers are present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyNumsListAndAddToCache<pbm_get_emergency_list_resp_msg_v01>
+{
+eCallLists.emer_nums_extended_len, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2681 176 "%0%!LEVEL! %!FUNC!:Added a new entry to the emergency number list" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddEmergNumToList
+{
+}
+#typev WMRilPhonebookService_cpp2674 175 "%0%!LEVEL! %!FUNC!:Found duplicate Emerg num in the list, ignore the current one" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddEmergNumToList
+{
+}
+#typev WMRilPhonebookService_cpp2620 174 "%0%!LEVEL! %!FUNC!:PBM emergency cat = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddEmergNumToList
+{
+Emergcategory, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp2609 173 "%0%!LEVEL! %!FUNC!:PBM Session %10!s!(0x%11!08X!) is not yet associated with a UIM session." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddEmergNumToList
+{
+Debug::QMIPBMSessionTypeToStr(tempEmergNum.pbmSessionType), ItemWString -- 10
+tempEmergNum.pbmSessionType, ItemLong -- 11
+}
+#typev WMRilPhonebookService_cpp2593 172 "%0%!LEVEL! %!FUNC!:PBM Session %10!s!(0x%11!08X!) is not yet associated with a UIM session." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddEmergNumToList
+{
+Debug::QMIPBMSessionTypeToStr(tempEmergNum.pbmSessionType), ItemWString -- 10
+tempEmergNum.pbmSessionType, ItemLong -- 11
+}
+#typev WMRilPhonebookService_cpp2562 171 "%0%!LEVEL! %!FUNC!:Failed to convert the emergency number into a wide string" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddEmergNumToList
+{
+}
+#typev WMRilPhonebookService_cpp2546 170 "%0%!LEVEL! %!FUNC!:Emergency number is too long! EmergNumLen = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddEmergNumToList
+{
+EmergNumLen, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp2542 169 "%0%!LEVEL! %!FUNC!:DebugDump EmergNum: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddEmergNumToList
+{
+WMRIL_LOG_XSTR(EmergNum. QMI_PBM_EMER_NUM_MAX_LENGTH_V01), ItemHEXDump -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp1012 98 "%0%!LEVEL! %!FUNC!:send a RIL_NOTIFY_PHONEBOOKREADYSTATE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddPBMSessionInfo
+{
+}
+#typev WMRilPhonebookService_cpp1009 97 "%0%!LEVEL! %!FUNC!:Driver is not available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddPBMSessionInfo
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp991 96 "%0%!LEVEL! %!FUNC!:Adding a new entry to the list" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddPBMSessionInfo
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp986 95 "%0%!LEVEL! %!FUNC!:No New Entry added as no matching hUiccApp found" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddPBMSessionInfo
+{
+}
+#typev WMRilPhonebookService_cpp965 94 "%0%!LEVEL! %!FUNC!:Bit mask of the entry is updated" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddPBMSessionInfo
+{
+}
+#typev WMRilPhonebookService_cpp960 93 "%0%!LEVEL! %!FUNC!:No update required" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddPBMSessionInfo
+{
+}
+#typev WMRilPhonebookService_cpp954 92 "%0%!LEVEL! %!FUNC!:session found in the list: old_bit_mask = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddPBMSessionInfo
+{
+bitMaskAtListEntry, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp939 91 "%0%!LEVEL! %!FUNC!:Calculated value of storeloc bit mask: 0x%10!04X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::AddPBMSessionInfo
+{
+tempStoreLocBitMask, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2336 154 "%0%!LEVEL! %!FUNC!:Found an entry in the session Info List" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetAASList
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2341 155 "%0%!LEVEL! %!FUNC!:No matching session in the list" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetAASList
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2444 164 "%0%!LEVEL! %!FUNC!:ADN capability already present in the phonebook service cache" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetADNCapsInfo
+{
+}
+#typev WMRilPhonebookService_cpp2438 163 "%0%!LEVEL! %!FUNC!:Capability Basic Info TLV not present" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetADNCapsInfo
+{
+}
+#typev WMRilPhonebookService_cpp2426 162 "%0%!LEVEL! %!FUNC!:Updating the ADN capability cache" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetADNCapsInfo
+{
+}
+#typev WMRilPhonebookService_cpp2423 161 "%0%!LEVEL! %!FUNC!:INCORRECT session returned in QMI_PBM_GET_PB_CAPABILITIES_RESP" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetADNCapsInfo
+{
+}
+#typev WMRilPhonebookService_cpp2417 160 "%0%!LEVEL! %!FUNC!:INCORRECT PB type returned in QMI_PBM_GET_PB_CAPABILITIES_RESP" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetADNCapsInfo
+{
+}
+#typev WMRilPhonebookService_cpp2403 159 "%0%!LEVEL! %!FUNC!:QMI_PBM_GET_PB_CAPABILITIES_RESP failure Result = %10!s!,  Error = %11!s!(0x%12!04X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetADNCapsInfo
+{
+GetPBCapsResp.resp.result, ItemEnum(qmi_result_type_v01) -- 10
+GetPBCapsResp.resp.error, ItemEnum(qmi_error_type_v01) -- 11
+GetPBCapsResp.resp.error, ItemLong -- 12
+}
+#typev WMRilPhonebookService_cpp2377 158 "%0%!LEVEL! %!FUNC!:QMI_PBM_GET_PB_CAPABILITIES_REQ params: session_type =%10!s!(0x%11!08X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetADNCapsInfo
+{
+Debug::QMIPBMSessionTypeToStr(GetPBCapsReq.phonebook_info.session_type), ItemWString -- 10
+GetPBCapsReq.phonebook_info.session_type, ItemLong -- 11
+}
+#typev WMRilPhonebookService_cpp2369 157 "%0%!LEVEL! %!FUNC!:ADN capability not present in the phonebook service cache, send a QMI_PBM_GET_PB_CAPS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetADNCapsInfo
+{
+}
+#typev WMRilPhonebookService_cpp2365 156 "%0%!LEVEL! %!FUNC!:Found a matching entry in the session Info List" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetADNCapsInfo
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2451 165 "%0%!LEVEL! %!FUNC!:No matching session in the list" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetADNCapsInfo
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp1980 136 "%0%!LEVEL! %!FUNC!:Unable to get UIM Service object." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetCardOrNetworkEmergencyNumberExecutorInfo
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp1748 131 "%0%!LEVEL! %!FUNC!:Unable to get UIM Service object." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetExecutorFromSession
+{
+}
+#typev WMRilPhonebookService_cpp1736 130 "%0%!LEVEL! %!FUNC!:Failed to retrieve executor associated with PBM Session type = %10!s!(0x%11!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetExecutorFromSession
+{
+Debug::QMIPBMSessionTypeToStr(pbmSession), ItemWString -- 10
+pbmSession, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp1792 132 "%0%!LEVEL! %!FUNC!:pwszNumber is either NULL or the length of pwszNumber is longer than the maximum permissible length of an emergency number string of %10!u! characters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetExecutorInfoFromEmergencyCallNumber
+{
+MAXLENGTH_EMERGENCYNUMBER, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp1814 135 "%0%!LEVEL! %!FUNC!:Number of supported subscriptions reported by Phonebook Service = %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetExecutorInfoFromEmergencyCallNumber
+{
+numExecutors, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp1811 134 "%0%!LEVEL! %!FUNC!:0 supported subscriptions." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetExecutorInfoFromEmergencyCallNumber
+{
+}
+#typev WMRilPhonebookService_cpp1803 133 "%0%!LEVEL! %!FUNC!:Unable to get DMS Service object." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetExecutorInfoFromEmergencyCallNumber
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp1611 125 "%0%!LEVEL! %!FUNC!:INVALID PBM session type" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetHUiccAppFromSession
+{
+}
+#typev WMRilPhonebookService_cpp1625 126 "%0%!LEVEL! %!FUNC!:Result = %10!s!, PBMsession = %11!s!(0x%12!02X!), hUiccApp = 0x%13!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetHUiccAppFromSession
+{
+res, ItemEnum(RILERRORCODES) -- 10
+Debug::QMIPBMSessionTypeToStr(PBMsession), ItemWString -- 11
+PBMsession, ItemLong -- 12
+hUiccApp, ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2270 151 "%0%!LEVEL! %!FUNC!:RIL Rec ID = %10!u!, PBM Rec ID = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetPBMRecIdFromRilRecId
+{
+RilRecId, ItemLong -- 10
+PBMRecId, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2253 150 "%0%!LEVEL! %!FUNC!:PBM Rec ID = %10!u!, RIL Rec ID = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetRilRecIdFromPBMRecId
+{
+PBMRecId, ItemLong -- 10
+RilRecId, ItemLong -- 11
+}
+#typev WMRilPhonebookService_cpp2249 149 "%0%!LEVEL! %!FUNC!:Invalid PBM record Id = %10!u!, no conversion made" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetRilRecIdFromPBMRecId
+{
+PBMRecId, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp1655 129 "%0%!LEVEL! %!FUNC!:Result = %10!s!, hUiccApp = 0x%11!08X!, PBM Session = %12!s!(0x%13!02X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetSessionFromHUiccApp
+{
+res, ItemEnum(RILERRORCODES) -- 10
+hUiccApp, ItemLong -- 11
+Debug::QMIPBMSessionTypeToStr(session), ItemWString -- 12
+session, ItemLong -- 13
+}
+#typev WMRilPhonebookService_cpp1655 128 "%0%!LEVEL! %!FUNC!:INVALID UIM session type = %10!s!(0x%11!02X!) returned by UIM service class" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetSessionFromHUiccApp
+{
+Debug::QMIUIMSessionTypeToStr(UIMsession), ItemWString -- 10
+UIMsession, ItemLong -- 11
+}
+#typev WMRilPhonebookService_cpp1655 127 "%0%!LEVEL! %!FUNC!:INVALID HUICCAPP" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::GetSessionFromHUiccApp
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp194 23 "%0%!LEVEL! %!FUNC!:Registered successfully for PHONEBOOK EVENTS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+}
+#typev WMRilPhonebookService_cpp191 22 "%0%!LEVEL! %!FUNC!:QMI_PBM_INDICATION_REGISTER_RESP failure, PBM_REG_AAS_UPDATE_EVENTS_BIT not set" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+}
+#typev WMRilPhonebookService_cpp185 21 "%0%!LEVEL! %!FUNC!:QMI_PBM_INDICATION_REGISTER_RESP failure, PBM_REG_EMERGENCY_NUMBER_LIST_EVENTS_BIT not set" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+}
+#typev WMRilPhonebookService_cpp179 20 "%0%!LEVEL! %!FUNC!:QMI_PBM_INDICATION_REGISTER_RESP failure, PBM_REG_PHONEBOOK_READY_EVENTS_BIT not set" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+}
+#typev WMRilPhonebookService_cpp173 19 "%0%!LEVEL! %!FUNC!:QMI_PBM_INDICATION_REGISTER_RESP failure, PBM_REG_RECORD_UPDATE_EVENTS_BIT not set" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+}
+#typev WMRilPhonebookService_cpp168 18 "%0%!LEVEL! %!FUNC!:reg_mask in QMI_PBM_INDICATION_REGISTER_RESP =0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+IndRegisterResp.reg_mask, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp165 17 "%0%!LEVEL! %!FUNC!:QMI_PBM_INDICATION_REGISTER_RESP failure, reg_mask is not valid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+}
+#typev WMRilPhonebookService_cpp156 16 "%0%!LEVEL! %!FUNC!:QMI_PBM_INDICATION_REGISTER_RESP failure, error = %10!s!(%11!u!), result = %12!s!(%13!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+IndRegisterResp.resp.error, ItemEnum(qmi_error_type_v01) -- 10
+IndRegisterResp.resp.error, ItemLong -- 11
+IndRegisterResp.resp.result, ItemEnum(qmi_result_type_v01) -- 12
+IndRegisterResp.resp.result, ItemLong -- 13
+}
+#typev WMRilPhonebookService_cpp151 15 "%0%!LEVEL! %!FUNC!:Failed to send QMI_PBM_INDICATION_REGISTER_REQ" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+}
+#typev WMRilPhonebookService_cpp135 14 "%0%!LEVEL! %!FUNC!:QMI_PBM_INDICATION_REGISTER_REQ reg_mask =0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+IndRegisterReq.reg_mask, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp110 13 "%0%!LEVEL! %!FUNC!:QMI_PBM_GET_EMERGENCY_LIST_RESP failure Result = %10!s!, Error = %11!s!(0x%12!04X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+pgetEmergListResp->resp.result, ItemEnum(qmi_result_type_v01) -- 10
+pgetEmergListResp->resp.error, ItemEnum(qmi_error_type_v01) -- 11
+pgetEmergListResp->resp.error, ItemLong -- 12
+}
+#typev WMRilPhonebookService_cpp105 12 "%0%!LEVEL! %!FUNC!:Failed to send QMI_PBM_GET_EMERGENCY_LIST_REQ_V01 message." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+}
+#typev WMRilPhonebookService_cpp72 11 "%0%!LEVEL! %!FUNC!:QMI PBM client init failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+}
+#typev WMRilPhonebookService_cpp65 10 "%0%!LEVEL! %!FUNC!:Driver is not available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::Initialize
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp1556 124 "%0%!LEVEL! %!FUNC!:PBMNumPlan: %10!s!(0x%11!02X!), RilNumPlan: %12!s!(0x%13!08X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::MapPBMNumPlanToRilNumPlan
+{
+Debug::QMIPBMNumPlanToStr(PbmNumPlan), ItemWString -- 10
+PbmNumPlan, ItemLong -- 11
+Debug::RILNumPlanToStr(RilNumPlan), ItemWString -- 12
+static_cast<DWORD>(RilNumPlan), ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp1328 120 "%0%!LEVEL! %!FUNC!:PBMPbType = %10!s!(0x%11!04X!), RIL Phonebook Store Loc =%12!s!(0x%13!08X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::MapPBMPBTypeToStoreLoc
+{
+Debug::QMIPBMPbTypeToStr(PBMPbType), ItemWString -- 10
+PBMPbType, ItemLong -- 11
+Debug::RILStoreLocToStr(StoreLoc), ItemWString -- 12
+static_cast<DWORD>(StoreLoc), ItemLong -- 13
+}
+#typev WMRilPhonebookService_cpp1323 119 "%0%!LEVEL! %!FUNC!:UNSUPPORTED PBM Phonebook type" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::MapPBMPBTypeToStoreLoc
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp1272 118 "%0%!LEVEL! %!FUNC!:RIL Phonebook Store Loc =%10!s!(0x%11!08X!), PBMPbType = %12!s!(0x%13!04X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::MapStoreLocToPBMPBType
+{
+Debug::RILStoreLocToStr(StoreLoc), ItemWString -- 10
+static_cast<DWORD>(StoreLoc), ItemLong -- 11
+Debug::QMIPBMPbTypeToStr(PBMPbType), ItemWString -- 12
+PBMPbType, ItemLong -- 13
+}
+#typev WMRilPhonebookService_cpp1266 117 "%0%!LEVEL! %!FUNC!:Unsupported Store Location" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::MapStoreLocToPBMPBType
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp683 71 "%0%!LEVEL! %!FUNC!:hUiccApp = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintEmergencyNum
+{
+EmergNum.hUiccApp, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp679 70 "%0%!LEVEL! %!FUNC!:Executor = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintEmergencyNum
+{
+EmergNum.dwExecutor, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp675 69 "%0%!LEVEL! %!FUNC!:cbSize = %10!u!, Emerg Num = "%11!s!"" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintEmergencyNum
+{
+EmergNum.cbSize, ItemLong -- 10
+EmergNum.wszEmergencyNumber, ItemWString -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2225 148 "%0%!LEVEL! %!FUNC!:Email Entry # %10!u! : Size = %11!u!, dwParams = 0x%12!08X!, Email Address = %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintPbEntryData
+{
+m+1, ItemLong -- 10
+tempEmailAddrPtr->cbSize, ItemLong -- 11
+tempEmailAddrPtr->dwParams, ItemLong -- 12
+tempEmailAddrPtr->wszAddress, ItemWString -- 13
+}
+#typev WMRilPhonebookService_cpp2217 147 "%0%!LEVEL! %!FUNC!:Email Count = %10!u!, Email Size = %11!u!, Email offset = %12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintPbEntryData
+{
+NextPbEntry->dwEmailCount, ItemLong -- 10
+NextPbEntry->dwEmailSize, ItemLong -- 11
+NextPbEntry->dwEmailOffset, ItemLong -- 12
+}
+#typev WMRilPhonebookService_cpp2203 146 "%0%!LEVEL! %!FUNC!:Additional Num RILADDRESS: dwParams = 0x%10!08X!, AddrType = %11!s!(0x%12!08X!), NumPlan = %13!s!(0x%14!08X!), Address = %15!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintPbEntryData
+{
+tempAddNumPtr->raAddress.dwParams, ItemLong -- 10
+tempAddNumPtr->raAddress.dwType, ItemEnum(RILADDRESSTYPE) -- 11
+static_cast<DWORD>(tempAddNumPtr->raAddress.dwType), ItemLong -- 12
+tempAddNumPtr->raAddress.dwNumPlan, ItemEnum(RILADDRESSNUMPLAN) -- 13
+static_cast<DWORD>(tempAddNumPtr->raAddress.dwNumPlan), ItemLong -- 14
+tempAddNumPtr->raAddress.wszAddress, ItemWString -- 15
+}
+#typev WMRilPhonebookService_cpp2198 145 "%0%!LEVEL! %!FUNC!:Additional num Entry # %10!u! : Size = %11!u!, dwParams = 0x%12!08X!, NumId = %13!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintPbEntryData
+{
+k+1, ItemLong -- 10
+tempAddNumPtr->cbSize, ItemLong -- 11
+tempAddNumPtr->dwParams, ItemLong -- 12
+tempAddNumPtr->dwNumId, ItemLong -- 13
+}
+#typev WMRilPhonebookService_cpp2189 144 "%0%!LEVEL! %!FUNC!:Additional Num Count = %10!u!, Additional Num Size = %11!u!, Additional Num offset = %12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintPbEntryData
+{
+NextPbEntry->dwAdditionalNumCount, ItemLong -- 10
+NextPbEntry->dwAdditionalNumSize, ItemLong -- 11
+NextPbEntry->dwAdditionalNumOffset, ItemLong -- 12
+}
+#typev WMRilPhonebookService_cpp2181 143 "%0%!LEVEL! %!FUNC!:Group ID %10!u! : %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintPbEntryData
+{
+j+1, ItemLong -- 10
+NextPbEntry->rgdwGroupId[j], ItemLong -- 11
+}
+#typev WMRilPhonebookService_cpp2178 142 "%0%!LEVEL! %!FUNC!:Group ID Count = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintPbEntryData
+{
+NextPbEntry->dwGroupIdCount, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp2172 141 "%0%!LEVEL! %!FUNC!:Second Name = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintPbEntryData
+{
+NextPbEntry->wszSecondName, ItemWString -- 10
+}
+#typev WMRilPhonebookService_cpp2162 140 "%0%!LEVEL! %!FUNC!:RILADDRESS: dwParams = 0x%10!08X!, AddrType = %11!s!(0x%12!08X!), NumPlan = %13!s!(0x%14!08X!), Address = %15!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintPbEntryData
+{
+NextPbEntry->raAddress.dwParams, ItemLong -- 10
+NextPbEntry->raAddress.dwType, ItemEnum(RILADDRESSTYPE) -- 11
+static_cast<DWORD>(NextPbEntry->raAddress.dwType), ItemLong -- 12
+NextPbEntry->raAddress.dwNumPlan, ItemEnum(RILADDRESSNUMPLAN) -- 13
+static_cast<DWORD>(NextPbEntry->raAddress.dwNumPlan), ItemLong -- 14
+NextPbEntry->raAddress.wszAddress, ItemWString -- 15
+}
+#typev WMRilPhonebookService_cpp2156 139 "%0%!LEVEL! %!FUNC!:Size = %10!u!, record Id = %11!u!, Name = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::PrintPbEntryData
+{
+NextPbEntry->cbSize, ItemLong -- 10
+NextPbEntry->dwIndex, ItemLong -- 11
+NextPbEntry->wszText, ItemWString -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp815 81 "%0%!LEVEL! %!FUNC!:Invalid Operation. QMI_PBM_AAS_UPDATE_IND ignored" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAASUpdateInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp892 90 "%0%!LEVEL! %!FUNC!:Driver is not available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAASUpdateInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp884 89 "%0%!LEVEL! %!FUNC!:AAS Update Ind ignored" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAASUpdateInd
+{
+}
+#typev WMRilPhonebookService_cpp881 88 "%0%!LEVEL! %!FUNC!:Some problem, session = %10!s!(0x%11!08X!) not found in the SessionInfoList" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAASUpdateInd
+{
+Debug::QMIPBMSessionTypeToStr(pbmAASUpdateInd->aas_update_info.session_type), ItemWString -- 10
+static_cast<DWORD>(pbmAASUpdateInd->aas_update_info.session_type), ItemLong -- 11
+}
+#typev WMRilPhonebookService_cpp874 87 "%0%!LEVEL! %!FUNC!:Found an entry in the session Info List" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAASUpdateInd
+{
+}
+#typev WMRilPhonebookService_cpp863 86 "%0%!LEVEL! %!FUNC!:DebugDump wszText: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAASUpdateInd
+{
+WMRIL_LOG_XSTR(&rilANSUpdate.wszText. pbmAASUpdateInd->aas_update_info.alpha_len), ItemHEXDump -- 10
+}
+#typev WMRilPhonebookService_cpp861 85 "%0%!LEVEL! %!FUNC!:Alpha tag = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAASUpdateInd
+{
+rilANSUpdate.wszText, ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp840 84 "%0%!LEVEL! %!FUNC!:QMI_PBM_AAS_UPDATE_IND ignored" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAASUpdateInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp832 83 "%0%!LEVEL! %!FUNC!:QMI_PBM_AAS_UPDATE_IND ignored" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAASUpdateInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp823 82 "%0%!LEVEL! %!FUNC!:Invalid Alpha length = %10!u!. QMI_PBM_AAS_UPDATE_IND ignored" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAASUpdateInd
+{
+pbmAASUpdateInd->aas_update_info.alpha_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp797 80 "%0%!LEVEL! %!FUNC!:Session_type =%10!s!(0x%11!08X!), Operation =%12!s!(0x%13!08X!), aas_id =%14!u!, alpha_len =%15!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAASUpdateInd
+{
+Debug::QMIPBMSessionTypeToStr(pbmAASUpdateInd->aas_update_info.session_type), ItemWString -- 10
+static_cast<DWORD>(pbmAASUpdateInd->aas_update_info.session_type), ItemLong -- 11
+Debug::QMIPBMOperationToStr(pbmAASUpdateInd->aas_update_info.operation), ItemWString -- 12
+static_cast<DWORD>(pbmAASUpdateInd->aas_update_info.operation), ItemLong -- 13
+pbmAASUpdateInd->aas_update_info.aas_id, ItemLong -- 14
+pbmAASUpdateInd->aas_update_info.alpha_len, ItemLong -- 15
+}
+#typev WMRilPhonebookService_cpp793 79 "%0%!LEVEL! %!FUNC!:Received QMI_PBM_AAS_UPDATE_IND_V01" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAASUpdateInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp309 29 "%0%!LEVEL! %!FUNC!:Session type = %10!s!(%11!u!), pb_bit_mask = 0x%12!04X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAllPBInitDoneInd
+{
+Debug::QMIPBMSessionTypeToStr(PBReadyInfo.session_type), ItemWString -- 10
+PBReadyInfo.session_type, ItemLong -- 11
+PBReadyInfo.pb_bit_mask, ItemLong -- 12
+}
+#typev WMRilPhonebookService_cpp299 28 "%0%!LEVEL! %!FUNC!:Num of instances of PBReadyInfo =%10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAllPBInitDoneInd
+{
+pbmAllPbInitInd->phonebook_ready_info_len, ItemLong -- 10
+}
+#typev WMRilPhonebookService_cpp294 27 "%0%!LEVEL! %!FUNC!:Received QMI_PBM_ALL_PB_INIT_DONE_IND" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessAllPBInitDoneInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp438 38 "%0%!LEVEL! %!FUNC!:send a RIL_NOTIFY_EMERGENCYNUMBERLISTCHANGED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyListInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp414 37 "%0%!LEVEL! %!FUNC!:Driver is not available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyListInd
+{
+}
+#typev WMRilPhonebookService_cpp410 36 "%0%!LEVEL! %!FUNC!:Cleared the NV/hardcoded, Network and UICC emergency number caches.  Repopulating the caches with the numbers received in the QMI_PBM_EMERGENCY_LIST_IND message." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyListInd
+{
+}
+#typev WMRilPhonebookService_cpp400 35 "%0%!LEVEL! %!FUNC!:Received QMI_PBM_REG_EMERGENCY_NUMBER_LIST_EVENT" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessEmergencyListInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp277 25 "%0%!LEVEL! %!FUNC!:Unexpected indication %10!s!(%11!u!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessExternalIndication
+{
+Debug::QMIIndToStr(static_cast<QmiServiceType>(serviceID). dwMessageID), ItemWString -- 10
+dwMessageID, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp240 34 "%0%!LEVEL! %!FUNC!:Session_type =%10!s!(%11!u!), pb_type =0x%12!04X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessExternalIndication
+{
+Debug::QMIPBMSessionTypeToStr(pbmReadyInd->phonebook_ready_info.session_type), ItemWString -- 10
+pbmReadyInd->phonebook_ready_info.session_type, ItemLong -- 11
+pbmReadyInd->phonebook_ready_info.pb_type, ItemLong -- 12
+}
+#typev WMRilPhonebookService_cpp240 33 "%0%!LEVEL! %!FUNC!:Received QMI_PBM_PB_READY_IND" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessExternalIndication
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp277 26 "%0%!LEVEL! %!FUNC!:Unexpected QMI service %10!s!(%11!u!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessExternalIndication
+{
+static_cast<QmiServiceType>(serviceID), ItemEnum(QmiServiceType) -- 10
+serviceID, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp223 24 "%0%!LEVEL! %!FUNC!:Unexpected type = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessExternalIndication
+{
+typeid(*pIndId).name(), ItemString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2493 168 "%0%!LEVEL! %!FUNC!:Driver is not available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessMssr
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp362 32 "%0%!LEVEL! %!FUNC!:PBM_REFRESH_IND ignore, invalid refresh status" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessPBRefreshInd
+{
+}
+#typev WMRilPhonebookService_cpp335 31 "%0%!LEVEL! %!FUNC!:Session_type =%10!s!(%11!u!), pb_type=0x%12!04X!, status=%13!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessPBRefreshInd
+{
+Debug::QMIPBMSessionTypeToStr(pbmRefreshInd->refresh_info.session_type), ItemWString -- 10
+pbmRefreshInd->refresh_info.session_type, ItemLong -- 11
+pbmRefreshInd->refresh_info.pb_type, ItemLong -- 12
+pbmRefreshInd->refresh_info.status, ItemLong -- 13
+}
+#typev WMRilPhonebookService_cpp331 30 "%0%!LEVEL! %!FUNC!:Received QMI_PBM_REFRESH_IND" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessPBRefreshInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp722 74 "%0%!LEVEL! %!FUNC!:Invalid Operation. QMI_PBM_RECORD_UPDATE_IND ignored" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessRecordUpdateInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp753 78 "%0%!LEVEL! %!FUNC!:Driver is not available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessRecordUpdateInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp747 77 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_UPDATE_IND ignored" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessRecordUpdateInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp739 76 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_UPDATE_IND ignored" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessRecordUpdateInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp732 75 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_UPDATE_IND ignored" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessRecordUpdateInd
+{
+}
+#typev WMRilPhonebookService_cpp704 73 "%0%!LEVEL! %!FUNC!:Session_type =%10!s!(%11!u!), pb_type =0x%12!04X!, Operation =%13!s!(0x%14!08X!), record_id =%15!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessRecordUpdateInd
+{
+Debug::QMIPBMSessionTypeToStr(pbmRecUpdateInd->record_update_info.session_type), ItemWString -- 10
+pbmRecUpdateInd->record_update_info.session_type, ItemLong -- 11
+pbmRecUpdateInd->record_update_info.pb_type, ItemLong -- 12
+Debug::QMIPBMOperationToStr(pbmRecUpdateInd->record_update_info.operation), ItemWString -- 13
+static_cast<DWORD>(pbmRecUpdateInd->record_update_info.operation), ItemLong -- 14
+pbmRecUpdateInd->record_update_info.record_id, ItemLong -- 15
+}
+#typev WMRilPhonebookService_cpp700 72 "%0%!LEVEL! %!FUNC!:Received QMI_PBM_RECORD_UPDATE_IND_V01" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::ProcessRecordUpdateInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2307 153 "%0%!LEVEL! %!FUNC!:no matching entry found in the list for the session = %10!s!(0x%11!08X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::SetAASList
+{
+Debug::QMIPBMSessionTypeToStr(aasData[i].session_type), ItemWString -- 10
+aasData[i].session_type, ItemLong -- 11
+}
+#typev WMRilPhonebookService_cpp2296 152 "%0%!LEVEL! %!FUNC!:Found a matching entry in the session Info List" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::SetAASList
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2474 166 "%0%!LEVEL! %!FUNC!:Found a matching entry in the session Info List" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::SetADNCapsInfo
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2478 167 "%0%!LEVEL! %!FUNC!:No matching session in the list" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::SetADNCapsInfo
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp2140 138 "%0%!LEVEL! %!FUNC!:Card emergency number cache updated" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::UpdateNetworkAndCardEmergencyNumberCache
+{
+}
+#typev WMRilPhonebookService_cpp2107 137 "%0%!LEVEL! %!FUNC!:Network emergency number cache updated" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::UpdateNetworkAndCardEmergencyNumberCache
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp1099 106 "%0%!LEVEL! %!FUNC!:Driver is not available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::UpdatePBMSessionInfo
+{
+}
+#typev WMRilPhonebookService_cpp1095 105 "%0%!LEVEL! %!FUNC!:Send RIL_NOTIFY_PHONEBOOKREADYSTATE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::UpdatePBMSessionInfo
+{
+}
+#typev WMRilPhonebookService_cpp1093 104 "%0%!LEVEL! %!FUNC!:Session info list entry updated" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::UpdatePBMSessionInfo
+{
+}
+#typev WMRilPhonebookService_cpp1088 103 "%0%!LEVEL! %!FUNC!:No Update in the session info list entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::UpdatePBMSessionInfo
+{
+}
+#typev WMRilPhonebookService_cpp1074 102 "%0%!LEVEL! %!FUNC!:PB type =0x%10!04X!,StoreLocmask =0x%11!04X!,StoreLocBitMask =0x%12!08X!,tempStoreLocBitMask =0x%13!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::UpdatePBMSessionInfo
+{
+PbType, ItemLong -- 10
+storeLocMask, ItemLong -- 11
+pPBSessionInfo->GetStoreLocationBitMask(), ItemLong -- 12
+tempStoreLocBitMask, ItemLong -- 13
+}
+#typev WMRilPhonebookService_cpp1065 101 "%0%!LEVEL! %!FUNC!:Clearing the AAS list for the session = %10!s!(0x%11!08X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::UpdatePBMSessionInfo
+{
+Debug::QMIPBMSessionTypeToStr(session), ItemWString -- 10
+static_cast<DWORD>(session), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPhonebookService_cpp1119 107 "%0%!LEVEL! %!FUNC!:Update session info request ignored. No matching entry found in the list" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::UpdatePBMSessionInfo
+{
+}
+#typev WMRilPhonebookService_cpp1051 100 "%0%!LEVEL! %!FUNC!:Unsupported Pb Type. Update Session Info Request Ignored" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::UpdatePBMSessionInfo
+{
+}
+#typev WMRilPhonebookService_cpp1042 99 "%0%!LEVEL! %!FUNC!:Session found in the list" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PhonebookServiceClass::UpdatePBMSessionInfo
+{
+}
+#enumv RILADDRESSTYPE
+{
+RIL_ADDRTYPE_UNKNOWN,0x0
+RIL_ADDRTYPE_INTERNATIONAL,0x1
+RIL_ADDRTYPE_NATIONAL,0x2
+RIL_ADDRTYPE_NETWKSPECIFIC,0x3
+RIL_ADDRTYPE_SUBSCRIBER,0x4
+RIL_ADDRTYPE_ALPHANUM,0x5
+RIL_ADDRTYPE_ABBREV,0x6
+RIL_ADDRTYPE_IP,0x7
+RIL_ADDRTYPE_EMAIL,0x8
+RIL_ADDRTYPE_URI,0x9
+RIL_ADDRTYPE_MAX,0x9
+}
+#enumv RILADDRESSNUMPLAN
+{
+RIL_NUMPLAN_UNKNOWN,0x0
+RIL_NUMPLAN_TELEPHONE,0x1
+RIL_NUMPLAN_DATA,0x2
+RIL_NUMPLAN_TELEX,0x3
+RIL_NUMPLAN_NATIONAL,0x4
+RIL_NUMPLAN_PRIVATE,0x5
+RIL_NUMPLAN_ERMES,0x6
+RIL_NUMPLAN_MAX,0x6
+}
+#enumv qmi_result_type_v01
+{
+QMI_RESULT_TYPE_MIN_ENUM_VAL_V01,0x80000001
+QMI_RESULT_SUCCESS_V01,0x0
+QMI_RESULT_FAILURE_V01,0x1
+QMI_RESULT_TYPE_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}
+#enumv qmi_error_type_v01
+{
+QMI_ERROR_TYPE_MIN_ENUM_VAL_V01,0x80000001
+QMI_ERR_NONE_V01,0x0
+QMI_ERR_MALFORMED_MSG_V01,0x1
+QMI_ERR_NO_MEMORY_V01,0x2
+QMI_ERR_INTERNAL_V01,0x3
+QMI_ERR_ABORTED_V01,0x4
+QMI_ERR_CLIENT_IDS_EXHAUSTED_V01,0x5
+QMI_ERR_UNABORTABLE_TRANSACTION_V01,0x6
+QMI_ERR_INVALID_CLIENT_ID_V01,0x7
+QMI_ERR_NO_THRESHOLDS_V01,0x8
+QMI_ERR_INVALID_HANDLE_V01,0x9
+QMI_ERR_INVALID_PROFILE_V01,0xA
+QMI_ERR_INVALID_PINID_V01,0xB
+QMI_ERR_INCORRECT_PIN_V01,0xC
+QMI_ERR_NO_NETWORK_FOUND_V01,0xD
+QMI_ERR_CALL_FAILED_V01,0xE
+QMI_ERR_OUT_OF_CALL_V01,0xF
+QMI_ERR_NOT_PROVISIONED_V01,0x10
+QMI_ERR_MISSING_ARG_V01,0x11
+QMI_ERR_ARG_TOO_LONG_V01,0x13
+QMI_ERR_INVALID_TX_ID_V01,0x16
+QMI_ERR_DEVICE_IN_USE_V01,0x17
+QMI_ERR_OP_NETWORK_UNSUPPORTED_V01,0x18
+QMI_ERR_OP_DEVICE_UNSUPPORTED_V01,0x19
+QMI_ERR_NO_EFFECT_V01,0x1A
+QMI_ERR_NO_FREE_PROFILE_V01,0x1B
+QMI_ERR_INVALID_PDP_TYPE_V01,0x1C
+QMI_ERR_INVALID_TECH_PREF_V01,0x1D
+QMI_ERR_INVALID_PROFILE_TYPE_V01,0x1E
+QMI_ERR_INVALID_SERVICE_TYPE_V01,0x1F
+QMI_ERR_INVALID_REGISTER_ACTION_V01,0x20
+QMI_ERR_INVALID_PS_ATTACH_ACTION_V01,0x21
+QMI_ERR_AUTHENTICATION_FAILED_V01,0x22
+QMI_ERR_PIN_BLOCKED_V01,0x23
+QMI_ERR_PIN_PERM_BLOCKED_V01,0x24
+QMI_ERR_SIM_NOT_INITIALIZED_V01,0x25
+QMI_ERR_MAX_QOS_REQUESTS_IN_USE_V01,0x26
+QMI_ERR_INCORRECT_FLOW_FILTER_V01,0x27
+QMI_ERR_NETWORK_QOS_UNAWARE_V01,0x28
+QMI_ERR_INVALID_ID_V01,0x29
+QMI_ERR_INVALID_QOS_ID_V01,0x29
+QMI_ERR_REQUESTED_NUM_UNSUPPORTED_V01,0x2A
+QMI_ERR_INTERFACE_NOT_FOUND_V01,0x2B
+QMI_ERR_FLOW_SUSPENDED_V01,0x2C
+QMI_ERR_INVALID_DATA_FORMAT_V01,0x2D
+QMI_ERR_GENERAL_V01,0x2E
+QMI_ERR_UNKNOWN_V01,0x2F
+QMI_ERR_INVALID_ARG_V01,0x30
+QMI_ERR_INVALID_INDEX_V01,0x31
+QMI_ERR_NO_ENTRY_V01,0x32
+QMI_ERR_DEVICE_STORAGE_FULL_V01,0x33
+QMI_ERR_DEVICE_NOT_READY_V01,0x34
+QMI_ERR_NETWORK_NOT_READY_V01,0x35
+QMI_ERR_CAUSE_CODE_V01,0x36
+QMI_ERR_MESSAGE_NOT_SENT_V01,0x37
+QMI_ERR_MESSAGE_DELIVERY_FAILURE_V01,0x38
+QMI_ERR_INVALID_MESSAGE_ID_V01,0x39
+QMI_ERR_ENCODING_V01,0x3A
+QMI_ERR_AUTHENTICATION_LOCK_V01,0x3B
+QMI_ERR_INVALID_TRANSITION_V01,0x3C
+QMI_ERR_NOT_A_MCAST_IFACE_V01,0x3D
+QMI_ERR_MAX_MCAST_REQUESTS_IN_USE_V01,0x3E
+QMI_ERR_INVALID_MCAST_HANDLE_V01,0x3F
+QMI_ERR_INVALID_IP_FAMILY_PREF_V01,0x40
+QMI_ERR_SESSION_INACTIVE_V01,0x41
+QMI_ERR_SESSION_INVALID_V01,0x42
+QMI_ERR_SESSION_OWNERSHIP_V01,0x43
+QMI_ERR_INSUFFICIENT_RESOURCES_V01,0x44
+QMI_ERR_DISABLED_V01,0x45
+QMI_ERR_INVALID_OPERATION_V01,0x46
+QMI_ERR_INVALID_QMI_CMD_V01,0x47
+QMI_ERR_TPDU_TYPE_V01,0x48
+QMI_ERR_SMSC_ADDR_V01,0x49
+QMI_ERR_INFO_UNAVAILABLE_V01,0x4A
+QMI_ERR_SEGMENT_TOO_LONG_V01,0x4B
+QMI_ERR_SEGMENT_ORDER_V01,0x4C
+QMI_ERR_BUNDLING_NOT_SUPPORTED_V01,0x4D
+QMI_ERR_OP_PARTIAL_FAILURE_V01,0x4E
+QMI_ERR_POLICY_MISMATCH_V01,0x4F
+QMI_ERR_SIM_FILE_NOT_FOUND_V01,0x50
+QMI_ERR_EXTENDED_INTERNAL_V01,0x51
+QMI_ERR_ACCESS_DENIED_V01,0x52
+QMI_ERR_HARDWARE_RESTRICTED_V01,0x53
+QMI_ERR_ACK_NOT_SENT_V01,0x54
+QMI_ERR_INJECT_TIMEOUT_V01,0x55
+QMI_ERR_INCOMPATIBLE_STATE_V01,0x5A
+QMI_ERR_FDN_RESTRICT_V01,0x5B
+QMI_ERR_SUPS_FAILURE_CAUSE_V01,0x5C
+QMI_ERR_NO_RADIO_V01,0x5D
+QMI_ERR_NOT_SUPPORTED_V01,0x5E
+QMI_ERR_NO_SUBSCRIPTION_V01,0x5F
+QMI_ERR_CARD_CALL_CONTROL_FAILED_V01,0x60
+QMI_ERR_NETWORK_ABORTED_V01,0x61
+QMI_ERR_MSG_BLOCKED_V01,0x62
+QMI_ERR_INVALID_SESSION_TYPE_V01,0x64
+QMI_ERR_INVALID_PB_TYPE_V01,0x65
+QMI_ERR_NO_SIM_V01,0x66
+QMI_ERR_PB_NOT_READY_V01,0x67
+QMI_ERR_PIN_RESTRICTION_V01,0x68
+QMI_ERR_PIN2_RESTRICTION_V01,0x69
+QMI_ERR_PUK_RESTRICTION_V01,0x6A
+QMI_ERR_PUK2_RESTRICTION_V01,0x6B
+QMI_ERR_PB_ACCESS_RESTRICTED_V01,0x6C
+QMI_ERR_PB_DELETE_IN_PROG_V01,0x6D
+QMI_ERR_PB_TEXT_TOO_LONG_V01,0x6E
+QMI_ERR_PB_NUMBER_TOO_LONG_V01,0x6F
+QMI_ERR_PB_HIDDEN_KEY_RESTRICTION_V01,0x70
+QMI_ERR_PB_NOT_AVAILABLE_V01,0x71
+QMI_ERR_DEVICE_MEMORY_ERROR_V01,0x72
+QMI_ERROR_TYPE_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}
+#enumv RILERRORCODES
+{
+RIL_E_PHONEFAILURE,0x81000001
+RIL_E_NOCONNECTION,0x81000002
+RIL_E_LINKRESERVED,0x81000003
+RIL_E_OPNOTALLOWED,0x81000004
+RIL_E_OPNOTSUPPORTED,0x81000005
+RIL_E_UICCNOTINSERTED,0x81000006
+RIL_E_UICCFAILURE,0x81000007
+RIL_E_UICCBUSY,0x81000008
+RIL_E_UICCWRONG,0x81000009
+RIL_E_INCORRECTPASSWORD,0x8100000A
+RIL_E_MEMORYFULL,0x8100000B
+RIL_E_INVALIDINDEX,0x8100000C
+RIL_E_NOTFOUND,0x8100000D
+RIL_E_MEMORYFAILURE,0x8100000E
+RIL_E_TEXTSTRINGTOOLONG,0x8100000F
+RIL_E_INVALIDTEXTSTRING,0x81000010
+RIL_E_DIALSTRINGTOOLONG,0x81000011
+RIL_E_INVALIDDIALSTRING,0x81000012
+RIL_E_NONETWORKSVC,0x81000013
+RIL_E_NETWORKTIMEOUT,0x81000014
+RIL_E_EMERGENCYONLY,0x81000015
+RIL_E_TELEMATICIWUNSUPPORTED,0x81000016
+RIL_E_SMTYPE0UNSUPPORTED,0x81000017
+RIL_E_CANTREPLACEMSG,0x81000018
+RIL_E_PROTOCOLIDERROR,0x81000019
+RIL_E_DCSUNSUPPORTED,0x8100001A
+RIL_E_MSGCLASSUNSUPPORTED,0x8100001B
+RIL_E_DCSERROR,0x8100001C
+RIL_E_CMDCANTBEACTIONED,0x8100001D
+RIL_E_CMDUNSUPPORTED,0x8100001E
+RIL_E_CMDERROR,0x8100001F
+RIL_E_MSGBODYHEADERERROR,0x81000020
+RIL_E_SCBUSY,0x81000021
+RIL_E_NOSCSUBSCRIPTION,0x81000022
+RIL_E_SCSYSTEMFAILURE,0x81000023
+RIL_E_INVALIDADDRESS,0x81000024
+RIL_E_DESTINATIONBARRED,0x81000025
+RIL_E_REJECTEDDUPLICATE,0x81000026
+RIL_E_VPFUNSUPPORTED,0x81000027
+RIL_E_VPUNSUPPORTED,0x81000028
+RIL_E_UICCMSGSTORAGEFULL,0x81000029
+RIL_E_NOUICCMSGSTORAGE,0x8100002A
+RIL_E_UICCTOOLKITBUSY,0x8100002B
+RIL_E_UICCDOWNLOADERROR,0x8100002C
+RIL_E_MSGSVCRESERVED,0x8100002D
+RIL_E_INVALIDMSGPARAM,0x8100002E
+RIL_E_INVALIDSCADDRESS,0x8100002F
+RIL_E_UNASSIGNEDNUMBER,0x81000030
+RIL_E_MSGBARREDBYOPERATOR,0x81000031
+RIL_E_MSGCALLBARRED,0x81000032
+RIL_E_MSGXFERREJECTED,0x81000033
+RIL_E_DESTINATIONOUTOFSVC,0x81000034
+RIL_E_UNIDENTIFIEDSUBCRIBER,0x81000035
+RIL_E_SVCUNSUPPORTED,0x81000036
+RIL_E_UNKNOWNSUBSCRIBER,0x81000037
+RIL_E_NETWKOUTOFORDER,0x81000038
+RIL_E_NETWKTEMPFAILURE,0x81000039
+RIL_E_CONGESTION,0x8100003A
+RIL_E_RESOURCESUNAVAILABLE,0x8100003B
+RIL_E_SVCNOTSUBSCRIBED,0x8100003C
+RIL_E_SVCNOTIMPLEMENTED,0x8100003D
+RIL_E_INVALIDMSGREFERENCE,0x8100003E
+RIL_E_INVALIDMSG,0x8100003F
+RIL_E_INVALIDMANDATORYINFO,0x81000040
+RIL_E_MSGTYPEUNSUPPORTED,0x81000041
+RIL_E_ICOMPATIBLEMSG,0x81000042
+RIL_E_INFOELEMENTUNSUPPORTED,0x81000043
+RIL_E_PROTOCOLERROR,0x81000044
+RIL_E_NETWORKERROR,0x81000045
+RIL_E_MESSAGINGERROR,0x81000046
+RIL_E_NOTREADY,0x81000047
+RIL_E_TIMEDOUT,0x81000048
+RIL_E_CANCELLED,0x81000049
+RIL_E_NONOTIFYCALLBACK,0x8100004A
+RIL_E_OPFMTUNAVAILABLE,0x8100004B
+RIL_E_NORESPONSETODIAL,0x8100004C
+RIL_E_SECURITYFAILURE,0x8100004D
+RIL_E_RADIOFAILEDINIT,0x8100004E
+RIL_E_DRIVERINITFAILED,0x8100004F
+RIL_E_RADIONOTPRESENT,0x81000050
+RIL_E_RADIOOFF,0x81000051
+RIL_E_ILLEGALMS,0x81000052
+RIL_E_ILLEGALME,0x81000053
+RIL_E_GPRSSERVICENOTALLOWED,0x81000054
+RIL_E_PLMNNOTALLOWED,0x81000055
+RIL_E_LOCATIONAREANOTALLOWED,0x81000056
+RIL_E_ROAMINGNOTALLOWEDINTHISLOCATIONAREA,0x81000057
+RIL_E_SERVICEOPTIONNOTSUPPORTED,0x81000058
+RIL_E_REQUESTEDSERVICEOPTIONNOTSUBSCRIBED,0x81000059
+RIL_E_SERVICEOPTIONTEMPORARILYOUTOFORDER,0x8100005A
+RIL_E_PDPAUTHENTICATIONFAILURE,0x8100005B
+RIL_E_INVALIDMOBILECLASS,0x8100005C
+RIL_E_UNSPECIFIEDGPRSERROR,0x8100005D
+RIL_E_RADIOREBOOTED,0x8100005E
+RIL_E_INVALIDCONTEXTSTATE,0x8100005F
+RIL_E_MAXCONTEXTS,0x81000060
+RIL_E_SYNCHRONOUS_DATA_UNAVAILABLE,0x81000061
+RIL_E_FDNRESTRICT,0x81000062
+RIL_E_INVALIDASYNCCOMMANDRESPONSE,0x81000063
+RIL_E_INCOMPATIBLEPROXYDRIVER,0x81000064
+RIL_E_INVALIDDRIVERVERSION,0x81000065
+RIL_E_USIMCALLMODIFIED,0x81000066
+RIL_E_PASSWORDMISMATCH,0x81000067
+RIL_E_INVALIDCONTEXTACTIVATIONSTRING,0x81000068
+RIL_E_UICCAPPINACCESSIBLE,0x81000069
+RIL_E_UICCPINREQUIRED,0x8100006A
+RIL_E_UICCPUKREQUIRED,0x8100006B
+RIL_E_UICCPUKBLOCKED,0x8100006C
+RIL_E_EXECUTORNOTREADY,0x8100006D
+RIL_E_INVALIDUICCKEYREF,0x8100006E
+RIL_E_UICCINACTIVE,0x8100006F
+RIL_E_PERSOPUKREQUIRED,0x81000070
+RIL_E_PERSOPUKBLOCKED,0x81000071
+RIL_E_PERSOCHECKFAILED,0x81000072
+RIL_E_INVALIDUICCPATH,0x81000073
+RIL_E_IMSTEMPFAILURE,0x81000074
+RIL_E_UICCNOTREADY,0x81000075
+RIL_E_UICCPOWEROFF,0x81000076
+RIL_E_CALLISACTIVE,0x81000077
+RIL_E_USIMCALLBLOCKED,0x81000078
+RIL_E_UICCADMRESTRICTED,0x81000079
+RIL_E_DMSERVICENOTREADY,0x8100007A
+RIL_E_DMGETCONFIGFAILED,0x8100007B
+RIL_E_DMCOMMITFAILED,0x8100007C
+RIL_E_OTHEREXECUTORBUSY,0x8100007D
+RIL_E_IMSNOHANDOVERTARGETFOUND,0x8100007E
+RIL_E_VCCHANDOVERINPROGRESS,0x8100007F
+RIL_E_INVALIDREMOTEURI,0x81000080
+RIL_E_ECTNOTALLOWED,0x81000081
+RIL_E_ECTCALLINCONF,0x81000082
+RIL_E_ECTCALLNOTONHOLD,0x81000083
+RIL_E_ECTNOTSUBSCRIBED,0x81000084
+RIL_E_ECTUNAVAILABLE,0x81000085
+RIL_E_ECTINCOMPATIBLE,0x81000086
+RIL_E_ECTNOTSUPPORTED,0x81000087
+RIL_E_ECTSYSTEMERROR,0x81000088
+RIL_E_ECTNORESOURCE,0x81000089
+RIL_E_ECTCALLBARRED,0x8100008A
+RIL_E_ECTUNKNOWN,0x8100008B
+RIL_E_IMSCALLISACTIVE,0x8100008C
+}
+#enumv QmiServiceType
+{
+QMIDMSService,0x0
+QMINASService,0x1
+QMIWMSService,0x2
+QMIVoiceService,0x3
+QMICATService,0x4
+QMIUIMService,0x5
+QMIPBMService,0x6
+QMISARService,0x7
+QMIIMSSettingsService,0x8
+QMIIMSApplicationService,0x9
+QMIDSDService,0xA
+QMIDISService,0xB
+QMIPDCService,0xC
+}

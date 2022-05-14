@@ -1,0 +1,583 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+8d8c8216-9f36-3adb-e178-ad35f35d9f68 WMRIL // SRC=WMRilGetSubscriberNumbersBase.cpp MJ= MN=
+#typev WMRilGetSubscriberNumbersBase_cpp1175 62 "%0%!LEVEL! %!FUNC!:QMI_UIM_READ_RECORD_REQ for file_id 0x%10!04X! includes %11!u! additional records" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ConstructRecordList
+{
+m_FileId.file_id, ItemLong -- 10
+additionalRecordCount, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1589 76 "%0%!LEVEL! %!FUNC!:m_State is wrong." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ContinueReadOrSendResponseAfterProcessError
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp197 11 "%0%!LEVEL! %!FUNC!:Incorrect application type. hUiccApp must be invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::Execute
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp245 13 "%0%!LEVEL! %!FUNC!:Incorrect session type %10!s!(%11!u!). hUiccApp must be invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::Execute
+{
+Debug::QMIUIMSessionTypeToStr(m_Session.session_type), ItemWString -- 10
+m_Session.session_type, ItemLong -- 11
+}
+#typev WMRilGetSubscriberNumbersBase_cpp229 12 "%0%!LEVEL! %!FUNC!:Incorrect application type. hUiccApp must be invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::Execute
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp913 53 "%0%!LEVEL! %!FUNC!:SUBSCRIBERINFO RILADDRESS: dwParams = 0x%10!08X!, AddrType = %11!s!(0x%12!08X!), NumPlan = %13!s!(0x%14!08X!), Address = %15!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::FillSubscriberNumberInfo
+{
+SubscriberNumber.raAddress.dwParams, ItemLong -- 10
+SubscriberNumber.raAddress.dwType, ItemEnum(RILADDRESSTYPE) -- 11
+static_cast<DWORD>(SubscriberNumber.raAddress.dwType), ItemLong -- 12
+SubscriberNumber.raAddress.dwNumPlan, ItemEnum(RILADDRESSNUMPLAN) -- 13
+static_cast<DWORD>(SubscriberNumber.raAddress.dwNumPlan), ItemLong -- 14
+SubscriberNumber.raAddress.wszAddress, ItemWString -- 15
+}
+#typev WMRilGetSubscriberNumbersBase_cpp907 52 "%0%!LEVEL! %!FUNC!:Failed to convert the phone number %10!s! of len %11!u! into a wide string" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::FillSubscriberNumberInfo
+{
+address, ItemString -- 10
+NumLen, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp581 32 "%0%!LEVEL! %!FUNC!:The indication token in QMI_UIM_GET_FILE_ATTRIBUTES_RESP_V01 is %10!u!, not equal to the expected token ID %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetFileAttributeAsync
+{
+FileAttributesResp.indication_token, ItemLong -- 10
+m_dwIndicationTokenID, ItemLong -- 11
+}
+#typev WMRilGetSubscriberNumbersBase_cpp575 31 "%0%!LEVEL! %!FUNC!:The QMI_UIM_GET_FILE_ATTRIBUTES_RESP_V01 does not include indication_token TLV" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetFileAttributeAsync
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp567 30 "%0%!LEVEL! %!FUNC!:QMI_UIM_GET_FILE_ATTRIBUTES_RESP_V01 failure, error = %10!s!, result = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetFileAttributeAsync
+{
+FileAttributesResp.resp.error, ItemEnum(qmi_error_type_v01) -- 10
+FileAttributesResp.resp.result, ItemEnum(qmi_result_type_v01) -- 11
+}
+#typev WMRilGetSubscriberNumbersBase_cpp561 29 "%0%!LEVEL! %!FUNC!:Fail to get file attribute file_id 0x%10!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetFileAttributeAsync
+{
+file_id.file_id, ItemLong -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp544 28 "%0%!LEVEL! %!FUNC!:Can not register for QMI_UIM_GET_FILE_ATTRIBUTES_IND_V01" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetFileAttributeAsync
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp495 27 "%0%!LEVEL! %!FUNC!:Failed to process EF-MDN rec %10!u!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetSubscriberNumbersFrom1XApp
+{
+rec_ix, ItemLong -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp488 26 "%0%!LEVEL! %!FUNC!:Processings EF-MDN rec %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetSubscriberNumbersFrom1XApp
+{
+rec_ix, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp456 25 "%0%!LEVEL! %!FUNC!:Failed to process EF_EXT5 record %10!u!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetSubscriberNumbersFromGWApp
+{
+EFEXTrecNum, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp447 54 "%0%!LEVEL! %!FUNC!: Information transfer capability = %10!u!, service type = %11!s!(%12!u!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetSubscriberNumbersFromGWApp
+{
+*pRecField, ItemLong -- 10
+serviceType, ItemEnum(RILSUBSCRIBERINFOSERVICE) -- 11
+serviceType, ItemLong -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp440 24 "%0%!LEVEL! %!FUNC!:Invalid EF_EXT5 record number 0x%10!02X!. The Number of EF_EXT5 records should be greater than 0 and less than or equal to %11!u!.  Changing value of EF_EXT5 to 0xFF" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetSubscriberNumbersFromGWApp
+{
+EFEXTrecNum, ItemLong -- 10
+static_cast<UINT>(m_EXTRecordList.size()), ItemLong -- 11
+}
+#typev WMRilGetSubscriberNumbersBase_cpp434 23 "%0%!LEVEL! %!FUNC!:Invalid EF_CCP2 record number 0x%10!02X!. The Number of EF_CCP2 records should be greater than 0 and less than or equal to %11!u!.  Changing value of EF_CCP2 to 0xFF" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetSubscriberNumbersFromGWApp
+{
+EFCCPrecNum, ItemLong -- 10
+static_cast<UINT>(m_CCPRecordList.size()), ItemLong -- 11
+}
+#typev WMRilGetSubscriberNumbersBase_cpp426 22 "%0%!LEVEL! %!FUNC!:Failed to process EF_MSISDN rec %10!u!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetSubscriberNumbersFromGWApp
+{
+rec_ix, ItemLong -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp419 21 "%0%!LEVEL! %!FUNC!:Processing EF_MSISDN rec %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetSubscriberNumbersFromGWApp
+{
+rec_ix, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp384 20 "%0%!LEVEL! %!FUNC!:DebugDump dir_num: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetSubscriberNumbersFromNV
+{
+WMRIL_LOG_XSTR(nvResp.dir_num. nvResp.dir_num_len), ItemHEXDump -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp383 19 "%0%!LEVEL! %!FUNC!:QMI_NAS_GET_3GPP2_SUBSCRIBER_INFO_RESP  dir_num" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::GetSubscriberNumbersFromNV
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp379 18 "%0%!LEVEL! %!FUNC!:QMI_NAS_GET_3GPP2_SUBSCRIBER_INFO_RESP does not have an optional dir_num info TLV" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::GetSubscriberNumbersBaseClass::GetSubscriberNumbersFromNV
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp369 17 "%0%!LEVEL! %!FUNC!:QMI_NAS_GET_3GPP2_SUBSCRIBER_INFO_RESP failure, error = %10!s!, result = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::GetSubscriberNumbersBaseClass::GetSubscriberNumbersFromNV
+{
+nvResp.resp.error, ItemEnum(qmi_error_type_v01) -- 10
+nvResp.resp.result, ItemEnum(qmi_result_type_v01) -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp91 10 "%0%!LEVEL! %!FUNC!:Buffer size %10!u! != sizeof(HUICCAPP)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::InitParams
+{
+dwBufferLength, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1663 91 "%0%!LEVEL! %!FUNC!:SUBSCRIBERINFO-%10!u!  dwService = %11!s!(%12!u!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::PrintSubscriberInfo
+{
+recId, ItemLong -- 10
+subscriberInfo.dwService, ItemEnum(RILSUBSCRIBERINFOSERVICE) -- 11
+subscriberInfo.dwService, ItemLong -- 12
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1662 90 "%0%!LEVEL! %!FUNC!:SUBSCRIBERINFO-%10!u!  wszDescription = "%11!s!"" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::PrintSubscriberInfo
+{
+recId, ItemLong -- 10
+subscriberInfo.wszDescription, ItemWString -- 11
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1660 89 "%0%!LEVEL! %!FUNC!:                          Address = "%10!s!"" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::PrintSubscriberInfo
+{
+subscriberInfo.raAddress.wszAddress, ItemWString -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1652 88 "%0%!LEVEL! %!FUNC!:SUBSCRIBERINFO-%10!u! RILADDRESS: dwParams = 0x%11!08X!, AddrType = %12!s!(0x%13!08X!), NumPlan = %14!s!(0x%15!08X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::PrintSubscriberInfo
+{
+recId, ItemLong -- 10
+subscriberInfo.raAddress.dwParams, ItemLong -- 11
+subscriberInfo.raAddress.dwType, ItemEnum(RILADDRESSTYPE) -- 12
+subscriberInfo.raAddress.dwType, ItemLong -- 13
+subscriberInfo.raAddress.dwNumPlan, ItemEnum(RILADDRESSNUMPLAN) -- 14
+subscriberInfo.raAddress.dwNumPlan, ItemLong -- 15
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1649 87 "%0%!LEVEL! %!FUNC!:SUBSCRIBERINFO-%10!u! dwParams: 0x%11!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::PrintSubscriberInfo
+{
+recId, ItemLong -- 10
+subscriberInfo.dwParams, ItemLong -- 11
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1648 86 "%0%!LEVEL! %!FUNC!:SUBSCRIBERINFO-%10!u! cbSize: 0x%11!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::PrintSubscriberInfo
+{
+recId, ItemLong -- 10
+subscriberInfo.cbSize, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp797 43 "%0%!LEVEL! %!FUNC!:Incorrect extension record length %10!u!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFEXT
+{
+rec_len, ItemLong -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp808 44 "%0%!LEVEL! %!FUNC!:Finished processing EF-EXT5.  Rec %10!u! does not contain additional data" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFEXT
+{
+recId, ItemLong -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp830 46 "%0%!LEVEL! %!FUNC!:Failed to convert BCD into char" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFEXT
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp838 47 "%0%!LEVEL! %!FUNC!:Cannot calculate the length of the current number string" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFEXT
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp844 48 "%0%!LEVEL! %!FUNC!:Not enough space to store the number" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFEXT
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp856 49 "%0%!LEVEL! %!FUNC!:Failed to convert the phone number into a wide string" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFEXT
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp866 51 "%0%!LEVEL! %!FUNC!:Invalid EF-EXT5 record number 0x%10!02X! > Number of EF-EXT5 records %11!u!.  Changing record number to 0xFF" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFEXT
+{
+*pRecField, ItemLong -- 10
+static_cast<UINT>(m_EXTRecordList.size()), ItemLong -- 11
+}
+#typev WMRilGetSubscriberNumbersBase_cpp860 50 "%0%!LEVEL! %!FUNC!:Added extension to address.  SUBSCRIBERINFO RILADDRESS: Address = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFEXT
+{
+subscriberInfo.raAddress.wszAddress, ItemWString -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp813 45 "%0%!LEVEL! %!FUNC!:Processing additional data in EF-EXT5 rec %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFEXT
+{
+recId, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp633 34 "%0%!LEVEL! %!FUNC!:Failed to convert BCD into char" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFMDN
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp610 33 "%0%!LEVEL! %!FUNC!:Incorrect EF-MDN record length %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFMDN
+{
+rec_len, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp770 42 "%0%!LEVEL! %!FUNC!:EXT record id = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFMSISDN
+{
+EFEXTrecId, ItemLong -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp762 41 "%0%!LEVEL! %!FUNC!:CCP record id = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFMSISDN
+{
+EFCCPrecId, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp748 40 "%0%!LEVEL! %!FUNC!:Failed to convert BCD into char" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFMSISDN
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp713 38 "%0%!LEVEL! %!FUNC!:No SUBSCRIBERINFO wszDescription info is available" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFMSISDN
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp708 37 "%0%!LEVEL! %!FUNC!:Fail to get SUBSCRIBERINFO wszDescription info" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFMSISDN
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp721 39 "%0%!LEVEL! %!FUNC!:No SUBSCRIBERINFO raAddress info is available.  The subscriberInfo for this record is empty" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFMSISDN
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp704 36 "%0%!LEVEL! %!FUNC!:SUBSCRIBERINFO wszDescription = "%10!s!"" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFMSISDN
+{
+subscriberInfo.wszDescription, ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp675 35 "%0%!LEVEL! %!FUNC!:Incorrect EF-MSISDN record length %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessEFMSISDN
+{
+rec_len, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1523 75 "%0%!LEVEL! %!FUNC!:m_State is wrong." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1281 68 "%0%!LEVEL! %!FUNC!:missing file attribute TLV in QMI indication for file_id 0x%10!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+m_FileId.file_id, ItemLong -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1274 67 "%0%!LEVEL! %!FUNC!:Fail to get file attribute file_id 0x%10!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+m_FileId.file_id, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1263 66 "%0%!LEVEL! %!FUNC!:The indication token in QMI_UIM_GET_FILE_ATTRIBUTES_IND_V01 is %10!u!, not equal to the expected token ID %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+pGetFileAttrInd->indication_token, ItemLong -- 10
+m_dwIndicationTokenID, ItemLong -- 11
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1327 73 "%0%!LEVEL! %!FUNC!:Successfully read records %10!u! to %11!u! from file 0x%12!04X!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+m_StartingRecord, ItemLong -- 10
+m_LastRecord, ItemLong -- 11
+m_FileId.file_id, ItemLong -- 12
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1322 72 "%0%!LEVEL! %!FUNC!:QMI_UIM_READ_RECORD_REQ for file_id 0x%10!04X! does not include optional read result TLV" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+m_FileId.file_id, ItemLong -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1313 71 "%0%!LEVEL! %!FUNC!:QMI_UIM_READ_RECORD_REQ_V01 failure for file_id 0x%10!04X!, error = %11!s!, result = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+m_FileId.file_id, ItemLong -- 10
+pReadRecordInd->resp.error, ItemEnum(qmi_error_type_v01) -- 11
+pReadRecordInd->resp.result, ItemEnum(qmi_result_type_v01) -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1306 70 "%0%!LEVEL! %!FUNC!:Fail to read file record file_id 0x%10!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+m_FileId.file_id, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1296 69 "%0%!LEVEL! %!FUNC!:The indication token in QMI_UIM_READ_RECORD_IND_V01 is %10!u!, not equal to the expected token ID %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+pReadRecordInd->indication_token, ItemLong -- 10
+m_dwIndicationTokenID, ItemLong -- 11
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1337 74 "%0%!LEVEL! %!FUNC!:m_State is wrong." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1235 65 "%0%!LEVEL! %!FUNC!:Wrong QMI message ID %10!s!(0x%11!08X!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+Debug::QMIIndToStr(QMIUIMService. dwMsgID), ItemWString -- 10
+dwMsgID, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1226 64 "%0%!LEVEL! %!FUNC!:Wrong QMI service %10!s!(%11!u!). Expecting QMIUIMService" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+static_cast<QmiServiceType>(serviceID), ItemEnum(QmiServiceType) -- 10
+serviceID, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1219 63 "%0%!LEVEL! %!FUNC!:Unexpected type = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessExternalIndication
+{
+typeid(*pIndId).name(), ItemString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1633 85 "%0%!LEVEL! %!FUNC!:m_State is wrong." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessTimeout
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1630 84 "%0%!LEVEL! %!FUNC!:Waiting for read MDN record timeout." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessTimeout
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1627 83 "%0%!LEVEL! %!FUNC!:Waiting for get MDN attribute timeout." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessTimeout
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1624 82 "%0%!LEVEL! %!FUNC!:Waiting for read EXT record timeout." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessTimeout
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1621 81 "%0%!LEVEL! %!FUNC!:Waiting for get EXT attribute timeout." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessTimeout
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1618 80 "%0%!LEVEL! %!FUNC!:Waiting for read CCP record timeout." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessTimeout
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1615 79 "%0%!LEVEL! %!FUNC!:Waiting for get CCP attribute timeout." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessTimeout
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1612 78 "%0%!LEVEL! %!FUNC!:Waiting for read MSISDN record timeout." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessTimeout
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1609 77 "%0%!LEVEL! %!FUNC!:Waiting for get MSISDN attribute timeout." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ProcessTimeout
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1135 61 "%0%!LEVEL! %!FUNC!:The indication token in QMI_UIM_READ_RECORD_RESP_V01 is %10!u!, not equal to the expected token ID %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ReadFileRecordAsync
+{
+read_record_resp.indication_token, ItemLong -- 10
+m_dwIndicationTokenID, ItemLong -- 11
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1129 60 "%0%!LEVEL! %!FUNC!:The QMI_UIM_READ_RECORD_RESP_V01 does not include indication_token TLV" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ReadFileRecordAsync
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1121 59 "%0%!LEVEL! %!FUNC!:QMI_UIM_READ_RECORD_RESP_V01 failure, error = %10!s!, result = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ReadFileRecordAsync
+{
+read_record_resp.resp.error, ItemEnum(qmi_error_type_v01) -- 10
+read_record_resp.resp.result, ItemEnum(qmi_result_type_v01) -- 11
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1115 58 "%0%!LEVEL! %!FUNC!:Fail to read record file_id 0x%10!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ReadFileRecordAsync
+{
+file_id.file_id, ItemLong -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1098 57 "%0%!LEVEL! %!FUNC!:Can not register for QMI_UIM_READ_RECORD_IND_V01" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ReadFileRecordAsync
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1079 56 "%0%!LEVEL! %!FUNC!:Calling QMI_UIM_READ_RECORD_REQ for file_id 0x%10!04X!.  Attempting to read %11!u! records.  Reading records %12!u! to %13!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ReadFileRecordAsync
+{
+file_id.file_id, ItemLong -- 10
+numRecordsToRead, ItemLong -- 11
+m_StartingRecord, ItemLong -- 12
+m_LastRecord, ItemLong -- 13
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1002 55 "%0%!LEVEL! %!FUNC!:file_attributes.rec_size of m_GetFileAttrInd is ZERO." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ReadFileRecordAsync
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp1680 92 "%0%!LEVEL! %!FUNC!:Can't register for QMI_UIM_GET_FILE_ATTRIBUTES_IND_V01" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ReregisterForExternalIndicationAndStartTimer
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1693 93 "%0%!LEVEL! %!FUNC!:Can't register for QMI_UIM_READ_RECORD_IND_V01" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ReregisterForExternalIndicationAndStartTimer
+{
+}
+#typev WMRilGetSubscriberNumbersBase_cpp1700 94 "%0%!LEVEL! %!FUNC!:m_State is wrong." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::ReregisterForExternalIndicationAndStartTimer
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetSubscriberNumbersBase_cpp315 16 "%0%!LEVEL! %!FUNC!:resp payload size = %10!u! bytes" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::SendSubscriberNumberResponse
+{
+pSubscriberNumbers->cbSize, ItemLong -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp312 15 "%0%!LEVEL! %!FUNC!:dwNumSubscribers =  %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::SendSubscriberNumberResponse
+{
+pSubscriberNumbers->dwNumSubscribers, ItemLong -- 10
+}
+#typev WMRilGetSubscriberNumbersBase_cpp306 14 "%0%!LEVEL! %!FUNC!:Truncating response payload to %10!u! bytes.  The response payload contains %11!u! RILSUBSCRIBERINFO structs." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_UIM FUNC=WMRil::GetSubscriberNumbersBaseClass::SendSubscriberNumberResponse
+{
+respPayloadSize, ItemLong -- 10
+rec_ix, ItemLong -- 11
+}
+#enumv RILADDRESSTYPE
+{
+RIL_ADDRTYPE_UNKNOWN,0x0
+RIL_ADDRTYPE_INTERNATIONAL,0x1
+RIL_ADDRTYPE_NATIONAL,0x2
+RIL_ADDRTYPE_NETWKSPECIFIC,0x3
+RIL_ADDRTYPE_SUBSCRIBER,0x4
+RIL_ADDRTYPE_ALPHANUM,0x5
+RIL_ADDRTYPE_ABBREV,0x6
+RIL_ADDRTYPE_IP,0x7
+RIL_ADDRTYPE_EMAIL,0x8
+RIL_ADDRTYPE_URI,0x9
+RIL_ADDRTYPE_MAX,0x9
+}
+#enumv RILADDRESSNUMPLAN
+{
+RIL_NUMPLAN_UNKNOWN,0x0
+RIL_NUMPLAN_TELEPHONE,0x1
+RIL_NUMPLAN_DATA,0x2
+RIL_NUMPLAN_TELEX,0x3
+RIL_NUMPLAN_NATIONAL,0x4
+RIL_NUMPLAN_PRIVATE,0x5
+RIL_NUMPLAN_ERMES,0x6
+RIL_NUMPLAN_MAX,0x6
+}
+#enumv qmi_error_type_v01
+{
+QMI_ERROR_TYPE_MIN_ENUM_VAL_V01,0x80000001
+QMI_ERR_NONE_V01,0x0
+QMI_ERR_MALFORMED_MSG_V01,0x1
+QMI_ERR_NO_MEMORY_V01,0x2
+QMI_ERR_INTERNAL_V01,0x3
+QMI_ERR_ABORTED_V01,0x4
+QMI_ERR_CLIENT_IDS_EXHAUSTED_V01,0x5
+QMI_ERR_UNABORTABLE_TRANSACTION_V01,0x6
+QMI_ERR_INVALID_CLIENT_ID_V01,0x7
+QMI_ERR_NO_THRESHOLDS_V01,0x8
+QMI_ERR_INVALID_HANDLE_V01,0x9
+QMI_ERR_INVALID_PROFILE_V01,0xA
+QMI_ERR_INVALID_PINID_V01,0xB
+QMI_ERR_INCORRECT_PIN_V01,0xC
+QMI_ERR_NO_NETWORK_FOUND_V01,0xD
+QMI_ERR_CALL_FAILED_V01,0xE
+QMI_ERR_OUT_OF_CALL_V01,0xF
+QMI_ERR_NOT_PROVISIONED_V01,0x10
+QMI_ERR_MISSING_ARG_V01,0x11
+QMI_ERR_ARG_TOO_LONG_V01,0x13
+QMI_ERR_INVALID_TX_ID_V01,0x16
+QMI_ERR_DEVICE_IN_USE_V01,0x17
+QMI_ERR_OP_NETWORK_UNSUPPORTED_V01,0x18
+QMI_ERR_OP_DEVICE_UNSUPPORTED_V01,0x19
+QMI_ERR_NO_EFFECT_V01,0x1A
+QMI_ERR_NO_FREE_PROFILE_V01,0x1B
+QMI_ERR_INVALID_PDP_TYPE_V01,0x1C
+QMI_ERR_INVALID_TECH_PREF_V01,0x1D
+QMI_ERR_INVALID_PROFILE_TYPE_V01,0x1E
+QMI_ERR_INVALID_SERVICE_TYPE_V01,0x1F
+QMI_ERR_INVALID_REGISTER_ACTION_V01,0x20
+QMI_ERR_INVALID_PS_ATTACH_ACTION_V01,0x21
+QMI_ERR_AUTHENTICATION_FAILED_V01,0x22
+QMI_ERR_PIN_BLOCKED_V01,0x23
+QMI_ERR_PIN_PERM_BLOCKED_V01,0x24
+QMI_ERR_SIM_NOT_INITIALIZED_V01,0x25
+QMI_ERR_MAX_QOS_REQUESTS_IN_USE_V01,0x26
+QMI_ERR_INCORRECT_FLOW_FILTER_V01,0x27
+QMI_ERR_NETWORK_QOS_UNAWARE_V01,0x28
+QMI_ERR_INVALID_ID_V01,0x29
+QMI_ERR_INVALID_QOS_ID_V01,0x29
+QMI_ERR_REQUESTED_NUM_UNSUPPORTED_V01,0x2A
+QMI_ERR_INTERFACE_NOT_FOUND_V01,0x2B
+QMI_ERR_FLOW_SUSPENDED_V01,0x2C
+QMI_ERR_INVALID_DATA_FORMAT_V01,0x2D
+QMI_ERR_GENERAL_V01,0x2E
+QMI_ERR_UNKNOWN_V01,0x2F
+QMI_ERR_INVALID_ARG_V01,0x30
+QMI_ERR_INVALID_INDEX_V01,0x31
+QMI_ERR_NO_ENTRY_V01,0x32
+QMI_ERR_DEVICE_STORAGE_FULL_V01,0x33
+QMI_ERR_DEVICE_NOT_READY_V01,0x34
+QMI_ERR_NETWORK_NOT_READY_V01,0x35
+QMI_ERR_CAUSE_CODE_V01,0x36
+QMI_ERR_MESSAGE_NOT_SENT_V01,0x37
+QMI_ERR_MESSAGE_DELIVERY_FAILURE_V01,0x38
+QMI_ERR_INVALID_MESSAGE_ID_V01,0x39
+QMI_ERR_ENCODING_V01,0x3A
+QMI_ERR_AUTHENTICATION_LOCK_V01,0x3B
+QMI_ERR_INVALID_TRANSITION_V01,0x3C
+QMI_ERR_NOT_A_MCAST_IFACE_V01,0x3D
+QMI_ERR_MAX_MCAST_REQUESTS_IN_USE_V01,0x3E
+QMI_ERR_INVALID_MCAST_HANDLE_V01,0x3F
+QMI_ERR_INVALID_IP_FAMILY_PREF_V01,0x40
+QMI_ERR_SESSION_INACTIVE_V01,0x41
+QMI_ERR_SESSION_INVALID_V01,0x42
+QMI_ERR_SESSION_OWNERSHIP_V01,0x43
+QMI_ERR_INSUFFICIENT_RESOURCES_V01,0x44
+QMI_ERR_DISABLED_V01,0x45
+QMI_ERR_INVALID_OPERATION_V01,0x46
+QMI_ERR_INVALID_QMI_CMD_V01,0x47
+QMI_ERR_TPDU_TYPE_V01,0x48
+QMI_ERR_SMSC_ADDR_V01,0x49
+QMI_ERR_INFO_UNAVAILABLE_V01,0x4A
+QMI_ERR_SEGMENT_TOO_LONG_V01,0x4B
+QMI_ERR_SEGMENT_ORDER_V01,0x4C
+QMI_ERR_BUNDLING_NOT_SUPPORTED_V01,0x4D
+QMI_ERR_OP_PARTIAL_FAILURE_V01,0x4E
+QMI_ERR_POLICY_MISMATCH_V01,0x4F
+QMI_ERR_SIM_FILE_NOT_FOUND_V01,0x50
+QMI_ERR_EXTENDED_INTERNAL_V01,0x51
+QMI_ERR_ACCESS_DENIED_V01,0x52
+QMI_ERR_HARDWARE_RESTRICTED_V01,0x53
+QMI_ERR_ACK_NOT_SENT_V01,0x54
+QMI_ERR_INJECT_TIMEOUT_V01,0x55
+QMI_ERR_INCOMPATIBLE_STATE_V01,0x5A
+QMI_ERR_FDN_RESTRICT_V01,0x5B
+QMI_ERR_SUPS_FAILURE_CAUSE_V01,0x5C
+QMI_ERR_NO_RADIO_V01,0x5D
+QMI_ERR_NOT_SUPPORTED_V01,0x5E
+QMI_ERR_NO_SUBSCRIPTION_V01,0x5F
+QMI_ERR_CARD_CALL_CONTROL_FAILED_V01,0x60
+QMI_ERR_NETWORK_ABORTED_V01,0x61
+QMI_ERR_MSG_BLOCKED_V01,0x62
+QMI_ERR_INVALID_SESSION_TYPE_V01,0x64
+QMI_ERR_INVALID_PB_TYPE_V01,0x65
+QMI_ERR_NO_SIM_V01,0x66
+QMI_ERR_PB_NOT_READY_V01,0x67
+QMI_ERR_PIN_RESTRICTION_V01,0x68
+QMI_ERR_PIN2_RESTRICTION_V01,0x69
+QMI_ERR_PUK_RESTRICTION_V01,0x6A
+QMI_ERR_PUK2_RESTRICTION_V01,0x6B
+QMI_ERR_PB_ACCESS_RESTRICTED_V01,0x6C
+QMI_ERR_PB_DELETE_IN_PROG_V01,0x6D
+QMI_ERR_PB_TEXT_TOO_LONG_V01,0x6E
+QMI_ERR_PB_NUMBER_TOO_LONG_V01,0x6F
+QMI_ERR_PB_HIDDEN_KEY_RESTRICTION_V01,0x70
+QMI_ERR_PB_NOT_AVAILABLE_V01,0x71
+QMI_ERR_DEVICE_MEMORY_ERROR_V01,0x72
+QMI_ERROR_TYPE_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}
+#enumv qmi_result_type_v01
+{
+QMI_RESULT_TYPE_MIN_ENUM_VAL_V01,0x80000001
+QMI_RESULT_SUCCESS_V01,0x0
+QMI_RESULT_FAILURE_V01,0x1
+QMI_RESULT_TYPE_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}
+#enumv RILSUBSCRIBERINFOSERVICE
+{
+RIL_SERVICE_UNKNOWN,0x1
+RIL_SERVICE_VOICE,0x2
+RIL_SERVICE_FAX,0x3
+RIL_SERVICE_OTHER,0x4
+RIL_SERVICE_MAX,0x4
+}
+#enumv QmiServiceType
+{
+QMIDMSService,0x0
+QMINASService,0x1
+QMIWMSService,0x2
+QMIVoiceService,0x3
+QMICATService,0x4
+QMIUIMService,0x5
+QMIPBMService,0x6
+QMISARService,0x7
+QMIIMSSettingsService,0x8
+QMIIMSApplicationService,0x9
+QMIDSDService,0xA
+QMIDISService,0xB
+QMIPDCService,0xC
+}

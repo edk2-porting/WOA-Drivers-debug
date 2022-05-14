@@ -1,0 +1,203 @@
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+39b19ea0-ee9e-3fb7-bb2e-6ba562e6103b src // SRC=q6ad_vcm_smmu.c MJ= MN=
+#typev q6ad_vcm_smmu_c271 28 "%0ADCM.MEM.q6ad_vcm_smmu_isr_cb :ttbr0(0x%10!I64x!),ttbr1(0x%11!I64x!),PAR(0x%12!I64x!)
+," //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_MEM_INFO FUNC=Q6adVcmSmmuIsrCbHandlerWorkItem
+{
+pDeviceContext->smmu_fault_info.ttbr0, ItemLongLongX -- 10
+pDeviceContext->smmu_fault_info.ttbr1, ItemLongLongX -- 11
+pDeviceContext->smmu_fault_info.PAR, ItemLongLongX -- 12
+}
+#typev q6ad_vcm_smmu_c269 27 "%0ADCM.MEM.q6ad_vcm_smmu_isr_cb :ACTLR(0x%10!Ix!),SCTLR(0x%11!Ix!)
+," //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_MEM_INFO FUNC=Q6adVcmSmmuIsrCbHandlerWorkItem
+{
+pDeviceContext->smmu_fault_info.ACTLR, ItemPtr -- 10
+pDeviceContext->smmu_fault_info.SCTLR, ItemPtr -- 11
+}
+#typev q6ad_vcm_smmu_c267 26 "%0ADCM.MEM.q6ad_vcm_smmu_isr_cb :Cbfrsynra(0x%10!Ix!),fsynr0(0x%11!Ix!),fsynr1(0x%12!Ix!)
+," //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_MEM_INFO FUNC=Q6adVcmSmmuIsrCbHandlerWorkItem
+{
+pDeviceContext->smmu_fault_info.Cbfrsynra, ItemPtr -- 10
+pDeviceContext->smmu_fault_info.fsynr0, ItemPtr -- 11
+pDeviceContext->smmu_fault_info.fsynr1, ItemPtr -- 12
+}
+#typev q6ad_vcm_smmu_c263 25 "%0ADCM.MEM.q6ad_vcm_smmu_isr_cb :FaultAddrReg(0x%10!I64x!),FsrRaw(0x%11!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_MEM_INFO FUNC=Q6adVcmSmmuIsrCbHandlerWorkItem
+{
+pDeviceContext->smmu_fault_info.FaultAddrReg, ItemLongLongX -- 10
+pDeviceContext->smmu_fault_info.FsrRaw, ItemPtr -- 11
+}
+#typev q6ad_vcm_smmu_c259 24 "%0ADCM.MEM.Err.q6ad_vcm_smmu_isr_cb: VcmGetFaultInfo failed. status = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=Q6adVcmSmmuIsrCbHandlerWorkItem
+{
+ntStatus, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c248 23 "%0ADCM.MEM.Err.Q6adVcmSmmuIsrCbHandlerWorkItem: smmuInterface is NULL. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=Q6adVcmSmmuIsrCbHandlerWorkItem
+{
+}
+#typev q6ad_vcm_smmu_c82 15 "%0ADCM.MEM.q6ad_vcm_iommu_fault_cb :PDO(0x%10!Ix!)
+," //   IFRLOG=NULL LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_iommu_fault_cb
+{
+(int32_t)pFaultInfo->PhysicalDeviceObject, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c81 14 "%0ADCM.MEM.q6ad_vcm_iommu_fault_cb :Type(0x%10!Ix!)
+," //   IFRLOG=NULL LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_iommu_fault_cb
+{
+(int32_t)pFaultInfo->Type, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c80 13 "%0ADCM.MEM.q6ad_vcm_iommu_fault_cb :InputMappingID(0x%10!Ix!)
+," //   IFRLOG=NULL LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_iommu_fault_cb
+{
+(int32_t)pFaultInfo->InputMappingId, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c79 12 "%0ADCM.MEM.q6ad_vcm_iommu_fault_cb :DomainHandle(0x%10!Ix!)
+," //   IFRLOG=NULL LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_iommu_fault_cb
+{
+(int32_t)pFaultInfo->DomainHandle, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c78 11 "%0ADCM.MEM.q6ad_vcm_iommu_fault_cb :FaultAddrReg(0x%10!I64x!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_iommu_fault_cb
+{
+(int32_t)pFaultInfo->FaultAddress, ItemLongLongX -- 10
+}
+#typev q6ad_vcm_smmu_c77 10 "%0ADCM.MEM.q6ad_vcm_iommu_fault_cb: IOMMU FAULT ....... " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_iommu_fault_cb
+{
+}
+#typev q6ad_vcm_smmu_c462 40 "%0ADCM.MEM.Err.q6ad_vcm_smmu_deinit: VCM or AVCM handle is NULL." //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_deinit
+{
+}
+#typev q6ad_vcm_smmu_c471 41 "%0ADCM.MEM.Err.q6ad_vcm_smmu_deinit: smmuInterface is NULL. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_deinit
+{
+}
+#typev q6ad_vcm_smmu_c521 45 "%0ADCM.MEM.Err.q6ad_vcm_smmu_deinit: VcmFree Failed. rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_deinit
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c512 44 "%0ADCM.MEM.Err.q6ad_vcm_smmu_deinit: VcmDeassoc Failed. rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_deinit
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c498 43 "%0ADCM.MEM.Err.q6ad_vcm_smmu_deinit: VcmDeactivate Failed. rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_deinit
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c484 42 "%0ADCM.MEM.Err.q6ad_vcm_smmu_init: SmmuUnregisterIsr failed. status = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_deinit
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c119 16 "%0ADCM.MEM.Err.q6ad_vcm_smmu_get_interface: IoGetDeviceInterfaces failed. status = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_get_interface
+{
+result, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c149 19 "%0ADCM.MEM.Err.q6ad_vcm_smmu_get_interface: WdfIoTargetQueryForInterface failed. status = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_get_interface
+{
+result, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c137 18 "%0ADCM.MEM.Err.q6ad_vcm_smmu_get_interface: WdfIoTargetOpen failed.status = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_get_interface
+{
+result, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c128 17 "%0ADCM.MEM.Err.q6ad_vcm_smmu_get_interface: WdfIoTargetCreate failed,status = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_get_interface
+{
+result, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c319 29 "%0ADCM.MEM.Err.q6ad_vcm_smmu_init: smmuInterface is NULL. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_init
+{
+}
+#typev q6ad_vcm_smmu_c438 39 "%0ADCM.MEM.Err.q6ad_vcm_smmu_init: SmmuRegisterIsr failed. status = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_init
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c430 38 "%0ADCM.MEM.Err.q6ad_vcm_smmu_init: IommuRegisterFaultCallBack failed. status = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_init
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c417 37 "%0ADCM.MEM.Err.q6ad_vcm_smmu_init: VcmActivate failed. status = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_init
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c398 36 "%0ADCM.MEM.Err.q6ad_vcm_smmu_init: VcmAssoc failed. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_init
+{
+}
+#typev q6ad_vcm_smmu_c392 35 "%0ADCM.MEM.q6ad_vcm_smmu_init: SmmuContextBankHandle=0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_MEM_INFO FUNC=q6ad_vcm_smmu_init
+{
+bIsHyperVEnabled?SmmuARIDHandle:cbHandle, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c381 34 "%0ADCM.MEM.Err.q6ad_vcm_smmu_init: handle not found for Audio " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_init
+{
+}
+#typev q6ad_vcm_smmu_c352 33 "%0ADCM.MEM.Err.q6ad_vcm_smmu_init: IommuGetARIDConfig failed. status = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_init
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c342 32 "%0ADCM.MEM.Err.q6ad_vcm_smmu_init: SmmuGetContextBankConfig failed. status = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_init
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c333 31 "%0ADCM.MEM.q6ad_vcm_smmu_init: VCM Handle = 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_MEM_INFO FUNC=q6ad_vcm_smmu_init
+{
+gSmmuMembers.vcmHandle, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c329 30 "%0ADCM.MEM.Err.q6ad_vcm_smmu_init: VcmCreate failed. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_init
+{
+}
+#typev q6ad_vcm_smmu_c217 22 "%0ADCM.MEM.Err.q6ad_vcm_smmu_isr_cb: WdfWorkItemCreate failed. status (0x%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_isr_cb
+{
+ntStatus, ItemLong -- 10
+}
+#typev q6ad_vcm_smmu_c548 46 "%0ADCM.MEM.Err.q6ad_vcm_smmu_mem_map: Invalid input payload" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_mem_map
+{
+}
+#typev q6ad_vcm_smmu_c556 47 "%0ADCM.MEM.Err.q6ad_vcm_smmu_mem_map: smmuInterface is NULL. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_mem_map
+{
+}
+#typev q6ad_vcm_smmu_c617 52 "%0ADCM.MEM.q6ad_vcm_smmu_mem_map:resid(0x%10!Ix!), size(0x%11!Ix!), virtual address(0x%12!Ix!), ipa(0x%13!I64x!), ipa_msw(0x%14!Ix!), physical_adr(0x%15!I64x!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_MEM_INFO FUNC=q6ad_vcm_smmu_mem_map
+{
+resid, ItemPtr -- 10
+p_vcm_buf->buff_size, ItemPtr -- 11
+(INT64)p_vcm_buf->virtual_address, ItemPtr -- 12
+ipa_adr, ItemLongLongX -- 13
+ipa_msw, ItemPtr -- 14
+p_vcm_buf->physical_address, ItemLongLongX -- 15
+}
+#typev q6ad_vcm_smmu_c612 51 "%0[ADCM]:q6ad_vcm_smmu_mem_map : ipa_msw=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_mem_map
+{
+ipa_msw, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c599 50 "%0ADCM.MEM.Err.q6ad_vcm_smmu_mem_map: VcmGetDevAddr Failed. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_mem_map
+{
+}
+#typev q6ad_vcm_smmu_c583 49 "%0ADCM.MEM.Err.q6ad_vcm_smmu_mem_map: VcmBack Failed. rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_mem_map
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c567 48 "%0ADCM.MEM.Err.q6ad_vcm_smmu_mem_map: VcmReserveAligned failed. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_mem_map
+{
+}
+#typev q6ad_vcm_smmu_c634 53 "%0ADCM.MEM.Err.q6ad_vcm_smmu_mem_unmap: smmuInterface is NULL. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_mem_unmap
+{
+}
+#typev q6ad_vcm_smmu_c677 58 "%0ADCM.MEM.q6ad_vcm_smmu_mem_unmap:RESID(0x%10!Ix!),rc(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_MEM_INFO FUNC=q6ad_vcm_smmu_mem_unmap
+{
+p_vcm_buf->vcm_res_id, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_vcm_smmu_c674 57 "%0ADCM.MEM.Err.q6ad_vcm_smmu_mem_unmap: VcmUnreserve Failed. rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_mem_unmap
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c660 56 "%0ADCM.MEM.Err.q6ad_vcm_smmu_mem_unmap: VcmBack Failed. rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_mem_unmap
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c647 55 "%0[ADCM]:q6ad_vcm_smmu_mem_unmap: RESID=0x%10!Ix!, " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_MEM_INFO FUNC=q6ad_vcm_smmu_mem_unmap
+{
+p_vcm_buf->vcm_res_id, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c642 54 "%0ADCM.MEM.Err.q6ad_vcm_smmu_mem_unmap: RESID is NULL. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_mem_unmap
+{
+}
+#typev q6ad_vcm_smmu_c182 21 "%0ADCM.MEM.Err.q6ad_vcm_smmu_set_state: SmmuSetState failed.status = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_set_state
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_vcm_smmu_c173 20 "%0ADCM.MEM.Err.q6ad_vcm_smmu_set_state: smmuInterface is NULL. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_MEM_ERROR FUNC=q6ad_vcm_smmu_set_state
+{
+}

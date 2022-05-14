@@ -1,0 +1,76 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+9f064b2e-a65f-3ac8-f9ab-23f0f56c5429 MBB_QBI // SRC=MPApSwVersion.c MJ= MN=
+#typev MPApSwVersion_c230 19 "%0MBB:  error reading  %10!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPExtractAPSSSWVersion
+{
+wcInfFileName, ItemWString -- 10
+}
+#typev MPApSwVersion_c266 22 "%0MBB:  Driver version: %10!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPExtractAPSSSWVersion
+{
+*pAPSSSwVersion, ItemString -- 10
+}
+#typev MPApSwVersion_c258 21 "%0MBB: MPExtractDriverVersion error in extracing the MBB version" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPExtractAPSSSWVersion
+{
+}
+#typev MPApSwVersion_c240 20 "%0MBB: FileName %10!s!, data copied to buffer, file size = %11!u!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPExtractAPSSSWVersion
+{
+wcInfFileName, ItemWString -- 10
+fileSize, ItemLong -- 11
+}
+#typev MPApSwVersion_c215 18 "%0RtlAppendUnicodeToString error appending binary file 0x%10!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPExtractAPSSSWVersion
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPApSwVersion_c202 17 "%0MBB: MPExtractAPSSSWVersion() FileName = %10!s! and  length in bytes = %11!u!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPExtractAPSSSWVersion
+{
+wcInfFileName, ItemWString -- 10
+(unsigned int)wcInfFileNameLength, ItemLong -- 11
+}
+#typev MPApSwVersion_c193 16 "%0RtlStringCbLengthW failed with status=0x%10!x!, %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPExtractAPSSSWVersion
+{
+ntStatus, ItemLong -- 10
+ntStatus, ItemNTSTATUS -- 11
+}
+#typev MPApSwVersion_c181 15 "%0MP_UtilReadRegistryString failed with status=0x%10!x!, %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPExtractAPSSSWVersion
+{
+ntStatus, ItemLong -- 10
+ntStatus, ItemNTSTATUS -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPApSwVersion_c381 27 "%0Final pAPSSSwVersion which will be sent to Modem  %10!s! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPExtractDriverVersion
+{
+*pAPSSSwVersion, ItemString -- 10
+}
+#typev MPApSwVersion_c338 26 "%0pAPSSSwVersion after driver version string found  %10!s! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPExtractDriverVersion
+{
+*pAPSSSwVersion, ItemString -- 10
+}
+#typev MPApSwVersion_c315 25 "%0pAsciiInfContent is NULL" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPExtractDriverVersion
+{
+}
+#typev MPApSwVersion_c301 24 "%0*pAPSSSwVersion is NULL" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPExtractDriverVersion
+{
+}
+#typev MPApSwVersion_c289 23 "%0pInf is NULL" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPExtractDriverVersion
+{
+}
+#typev MPApSwVersion_c49 10 "%0Memory allocation failed " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_GetOSandAPSSSWVersion
+{
+}
+#typev MPApSwVersion_c86 13 "%0MSFT OS Version %10!s! and APSS version %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_GetOSandAPSSSWVersion
+{
+*pMSFTOSVersion, ItemString -- 10
+*pAPSSSwVersion, ItemString -- 11
+}
+#typev MPApSwVersion_c74 14 "%0TempAPSSVersion or APSSSwVersion is NULL" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_GetOSandAPSSSWVersion
+{
+}
+#typev MPApSwVersion_c73 12 "%0OsVer.dwBuildNumber %10!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_GetOSandAPSSSWVersion
+{
+OsVer.dwBuildNumber, ItemLong -- 10
+}
+#typev MPApSwVersion_c64 11 "%0RtlGetVersion Failed nstatus is %10!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_GetOSandAPSSSWVersion
+{
+nstatus, ItemLong -- 10
+}

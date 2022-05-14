@@ -1,0 +1,38 @@
+// PDB:  qcadc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+fa3221cb-de03-3717-da68-bfb4411ff1cd kmdf // SRC=VAdcLog.c MJ= MN=
+#typev VAdcDevice_c583 17 "%0VAdcLog.c::%!FUNC! ERROR: Adc - could not create log's spin lock %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=VAdc_DeviceInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev VAdcDevice_c558 11 "%0VAdcLog.c::%!FUNC! VADC EOC Interrupt" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=VAdc_EvtInterruptDpc
+{
+}
+#typev VAdcDevice_c918 10 "%0VAdcLog.c::%!FUNC! VADC conv req: index %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=VAdc_ReadChannel
+{
+uChannelIdx, ItemLong -- 10
+}
+#typev VAdcDevice_c502 13 "%0VAdcLog.c::%!FUNC! VADC conv result: eStatus %10!d!, nPhysical %11!d!, uPercent %12!u!, uMicrovolts %13!u!, uCode %14!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=VAdc_ReadChannelInternal
+{
+pResult->eStatus, ItemLong -- 10
+pResult->nPhysical, ItemLong -- 11
+pResult->uPercent, ItemLong -- 12
+pResult->uMicrovolts, ItemLong -- 13
+pResult->uCode, ItemLong -- 14
+}
+#typev VAdcLog_c237 16 "%0VAdcLog.c::%!FUNC! Offset = %10!u!, Contents = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=VAdc_LogDumpRegisters
+{
+pVAdcRegDump->aVAdcReg[uReg].ucOffset, ItemLong -- 10
+pVAdcRegDump->aVAdcReg[uReg].ucVal, ItemLong -- 11
+}
+#typev VAdcLog_c233 15 "%0VAdcLog.c::%!FUNC! VADC register dump" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=VAdc_LogDumpRegisters
+{
+}
+#typev VAdcLog_c150 12 "%0VAdcLog.c::%!FUNC! VADC EOC" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=VAdc_LogEOC
+{
+}
+#typev VAdcLog_c217 14 "%0VAdcLog.c::%!FUNC! ERROR: VADC error %10!u!, error code: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=VAdc_LogError
+{
+eError, ItemLong -- 10
+nErrorCode, ItemLong -- 11
+}

@@ -1,0 +1,83 @@
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+22bfcbd1-65d8-31f2-3897-1e410d6f1c13 src // SRC=dp_host.c MJ= MN=
+#typev dp_host_c1146 21 "%0DP%10!d!: plugged_in : %11!d!, plug_polarity: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_Host_Open
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+pDeviceCtx->bPluggedIn, ItemLong -- 11
+pDeviceCtx->bInvertedPlug, ItemLong -- 12
+}
+#typev dp_host_c898 20 "%0DP%10!d!: No changes in sink, or sink is plugged out" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_Host_QueryPanelInfo
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+}
+#typev dp_host_c891 19 "%0DP%10!d!: Failed to get any display modes from EDID of Sink Device" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_Host_QueryPanelInfo
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+}
+#typev dp_host_c685 17 "%0DP%10!d!: failed to start video" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_Host_SetMode
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+}
+#typev dp_host_c691 18 "%0DP%10!d!: Main link setup [link_rate: %11!d! Mbps, lanes: %12!d!, mode: %13!d!x%14!d! @ %15!d!Hz]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_Host_SetMode
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+sPhyConfig.uLinkRateMbps, ItemLong -- 11
+sPhyConfig.uNumLanes, ItemLong -- 12
+psPanelInfo->uVisibleWidthInPixels, ItemLong -- 13
+psPanelInfo->uVisibleHeightInPixels, ItemLong -- 14
+psPanelInfo->uPclkFreq, ItemLong -- 15
+}
+#typev dp_host_c630 16 "%0DP%10!d!: Link Training Done (link rate: %11!d! Mbps, lanes: %12!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_Host_SetMode
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+sPhyConfig.uLinkRateMbps, ItemLong -- 11
+sPhyConfig.uNumLanes, ItemLong -- 12
+}
+#typev dp_host_c644 10 "%0DP%10!d!: Link rate cannot be reduced to %11!d! for this mode (Pclk: %12!d! Hz)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_Host_SetMode
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+uLinkRateInKhz, ItemLong -- 11
+psPanelInfo->uPclkFreq, ItemLong -- 12
+}
+#typev dp_host_c623 15 "%0DP%10!d!: Link Training failed (link rate: %11!d! Mbps, lanes: %12!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_Host_SetMode
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+sPhyConfig.uLinkRateMbps, ItemLong -- 11
+sPhyConfig.uNumLanes, ItemLong -- 12
+}
+#typev dp_host_c414 14 "%0DP%10!d!: DP_Host_SetMode, invalid mode set" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_Host_SetMode
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+}
+#typev dp_host_c1552 24 "%0DP%10!d!: Sink is plugged out" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_Host_SetProperty
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+}
+#typev dp_host_c1513 23 "%0DP%10!d!: Audio stream enabled: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_Host_SetProperty
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+pPropertyData->bEnabled, ItemLong -- 11
+}
+#typev dp_host_c1500 22 "%0DP%10!d!: Audio config - fmt: %11!d!, num_channels: %12!d!, sample_rate: %13!d!, bit_depth: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_Host_SetProperty
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+sAudioConfig.eAudioFormat, ItemLong -- 11
+sAudioConfig.eAudioNumOfChannel, ItemLong -- 12
+sAudioConfig.eAudioSampleRate, ItemLong -- 13
+sAudioConfig.eAudioSampleBitDepth, ItemLong -- 14
+}
+#typev dp_host_c381 13 "%0DP%10!d!: DP_SetPHYTestPattern: DP PHY Test case 0x%11!x! is not supported" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_SetPHYTestPattern
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+pDeviceCtx->ePhyTestPattern, ItemLong -- 11
+}
+#typev dp_host_c259 12 "%0DP%10!d!: DP_SetPHYTestPattern setting PHY Test Pattern 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_SetPHYTestPattern
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+pDeviceCtx->ePhyTestPattern, ItemLong -- 11
+}
+#typev dp_host_c253 11 "%0DP%10!d!: DP_SetPHYTestPattern: unexpected null handle" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_SetPHYTestPattern
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+}

@@ -1,0 +1,59 @@
+// PDB:  qSarMgr.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+a78205f0-1d55-3dc9-c169-55aefe879075 qSarMgr // SRC=Queue.cpp MJ= MN=
+#typev Queue_cpp143 21 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=qSarMgrEvtIoDeviceControl
+{
+}
+#typev Queue_cpp80 15 "%0FAILURE: Couldn't retrieve the output buffer for IOCTL_SAR_GET_INTERFACE_VERSION in SAR, status: %10!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=qSarMgrEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_cpp117 18 "%0FAILURE: Couldn't process request handleSarDataRequest returned failure " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=qSarMgrEvtIoDeviceControl
+{
+}
+#typev Queue_cpp114 17 "%0params: %10!d!, %11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=qSarMgrEvtIoDeviceControl
+{
+pData->sensorID, ItemLong -- 10
+pData->data, ItemLong -- 11
+}
+#typev Queue_cpp125 19 "%0FAILURE: Invalid input data: %10!d!, expected 0 or 1! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=qSarMgrEvtIoDeviceControl
+{
+pData->data, ItemLong -- 10
+}
+#typev Queue_cpp105 16 "%0FAILURE: Couldn't retrieve the input buffer for IOCTL_SAR_HANDLE_DATA in SAR, status: %10!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=qSarMgrEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_cpp135 20 "%0%!FUNC! Unknown code received" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=qSarMgrEvtIoDeviceControl
+{
+}
+#typev Queue_cpp63 14 "%0%!FUNC! Queue 0x%10!p!, Request 0x%11!p! OutputBufferLength %12!d! InputBufferLength %13!d! IoControlCode %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=qSarMgrEvtIoDeviceControl
+{
+Queue, ItemPtr -- 10
+Request, ItemPtr -- 11
+(int) OutputBufferLength, ItemLong -- 12
+(int) InputBufferLength, ItemLong -- 13
+IoControlCode, ItemLong -- 14
+}
+#typev Queue_cpp61 13 "%0%!FUNC! Enter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=qSarMgrEvtIoDeviceControl
+{
+}
+#typev Queue_cpp153 23 "%0%!FUNC! Queue 0x%10!p!, Request 0x%11!p! ActionFlags %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=qSarMgrEvtIoStop
+{
+Queue, ItemPtr -- 10
+Request, ItemPtr -- 11
+ActionFlags, ItemLong -- 12
+}
+#typev Queue_cpp152 22 "%0%!FUNC! Enter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=qSarMgrEvtIoStop
+{
+}
+#typev Queue_cpp48 12 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=qSarMgrQueueInitialize
+{
+}
+#typev Queue_cpp45 11 "%0WdfIoQueueCreate failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=qSarMgrQueueInitialize
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_cpp25 10 "%0%!FUNC! Enter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=qSarMgrQueueInitialize
+{
+}

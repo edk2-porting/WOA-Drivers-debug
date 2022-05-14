@@ -1,0 +1,234 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+514a707d-1681-3cc5-5e9e-d70f468631fa MBB // SRC=MPQBI.c MJ= MN=
+#typev MPQBI_c1491 76 "%0<%10!s!> MPQBI_Close : Already closed " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Close
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c1487 75 "%0<%10!s!> MPQBI_Close" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Close
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c286 17 "%0MPQBI_ComposeSilentPinVerify: qmi_req is NULL " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ComposeSilentPinVerify
+{
+}
+#typev MPQBI_c305 19 "%0MPQBI_ComposeSilentPinVerify: sent request successfully " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ComposeSilentPinVerify
+{
+}
+#typev MPQBI_c301 18 "%0MPQBI_ComposeSilentPinVerify: qmi_req is NULL " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ComposeSilentPinVerify
+{
+}
+#typev MPQBI_c267 16 "%0MPQBI_ComposeSilentPinVerify: qbi_txn->info is NULL " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ComposeSilentPinVerify
+{
+}
+#typev MPQBI_c258 15 "%0MPQBI_ComposeSilentPinVerify: qbi_txn is NULL " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ComposeSilentPinVerify
+{
+}
+#typev MPQBI_c590 34 "%0MPQBI_HandleQBIEvent: Received invalid msg from QBI " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+}
+#typev MPQBI_c747 47 "%0MPQBI_HandleQBIEvent: Unknown Response MsgType: %10!d!, TransId: %11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+pRspHdr->msg_type, ItemLong -- 10
+pRspHdr->txn_id, ItemLong -- 11
+}
+#typev MPQBI_c742 46 "%0MPQBI_HandleQBIEvent: Received QBI_MSG_MBIM_CLOSE_DONE from QBI for msg_type : %10!x!, status:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+CloseResp->hdr.msg_type, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev MPQBI_c733 45 "%0MPQBI_HandleQBIEvent: Received QBI_MSG_MBIM_FUNCTION_ERROR_MSG from QBI for error_type:%10!d!, TransId:%11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+error, ItemLong -- 10
+pErrorMsg->hdr.txn_id, ItemLong -- 11
+}
+#typev MPQBI_c718 43 "%0MPQBI_HandleQBIEvent..QBI_MSG_MBIM_COMMAND_DONE received for Svc:%10!d!, CID: %11!d!, pRespBuf: 0x%12!08x!, nRespBufLen:%13!d!, status: %14!s!..FAILED " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+uSvcMsgId, ItemLong -- 10
+nCID, ItemLong -- 11
+(ULONG)pRespBuf, ItemLong -- 12
+nRespBufLen, ItemLong -- 13
+StatusToStr(status), ItemString -- 14
+}
+#typev MPQBI_c713 42 "%0MPQBI_HandleQBIEvent..QBI_MSG_MBIM_COMMAND_DONE received for Svc:%10!d!, CID: %11!d!, pRespBuf: 0x%12!08x!, nRespBufLen:%13!d!, status: %14!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+uSvcMsgId, ItemLong -- 10
+nCID, ItemLong -- 11
+(ULONG)pRespBuf, ItemLong -- 12
+nRespBufLen, ItemLong -- 13
+StatusToStr(status), ItemString -- 14
+}
+#typev MPQBI_c706 41 "%0MPQBI_HandleQBIEvent..QBI_MSG_MBIM_COMMAND_DONE received for Svc:%10!d!, CID: %11!d!, Txn_id:%12!d!, buffer length: %13!d!, status:%14!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+uSvcMsgId, ItemLong -- 10
+nCID, ItemLong -- 11
+pRspHdr->txn_id, ItemLong -- 12
+nRespBufLen, ItemLong -- 13
+StatusToStr(status), ItemString -- 14
+}
+#typev MPQBI_c699 40 "%0MPQBI_HandleQBIEvent: UNSUPPORTED total frag is %10!d! for QBI response. CID:%11!d!, infobuf_len:%12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+pCmdResp->total_frag, ItemLong -- 10
+nCID, ItemLong -- 11
+nRespBufLen, ItemLong -- 12
+}
+#typev MPQBI_c680 31 "%0MPQBI_RegisterQMINetworkTimeInd: nas_ind_reg is NULL " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+}
+#typev MPQBI_c680 33 "%0MPQBI_RegisterQMINetworkTimeInd: sent request to QMI " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+}
+#typev MPQBI_c680 32 "%0MPQBI_RegisterQMINetworkTimeInd: failed to send request to QMI " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+}
+#typev MPQBI_c680 30 "%0MPQBI_RegisterQMINetworkTimeInd: qbi_txn is NULL " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+}
+#typev MPQBI_c679 39 "%0<%10!s!> Registering for QMI network time Ind " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c670 38 "%0MPQBI_HandleQBIEvent: Received QBI_MSG_MBIM_OPEN_DONE from QBI for msg_type : %10!x!, status:%11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+pOpenResp->hdr.msg_type, ItemLong -- 10
+StatusToStr(status), ItemString -- 11
+}
+#typev MPQBI_c652 37 "%0MPQBI_HandleQBIEvent: Received Indication from QBI for CID:%10!d!, infobuf_len:%11!d!, pIndBuf:0x%12!08x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+pIndResp->cid, ItemLong -- 10
+pIndResp->infobuf_len, ItemLong -- 11
+(ULONG)pIndBuf, ItemLong -- 12
+}
+#typev MPQBI_c644 36 "%0MPQBI_HandleQBIEvent: UNSUPPORTED total frag is %10!d! for QBI Indication. CID:%11!d!, infobuf_len:%12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+pIndResp->total_frag, ItemLong -- 10
+pIndResp->cid, ItemLong -- 11
+pIndResp->infobuf_len, ItemLong -- 12
+}
+#typev MPQBI_c631 35 "%0MPQBI: UnAccounted Response MsgType: %10!x!, TransId: %11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleQBIEvent
+{
+pRspHdr->msg_type, ItemLong -- 10
+pRspHdr->txn_id, ItemLong -- 11
+}
+#typev MPQBI_c1083 61 "%0<%10!s!> QBI Thread up/resumed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Init
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c1131 62 "%0<%10!s!> QBI Create thread failure 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Init
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPQBI_c1169 65 "%0<%10!s!> QBI handle=0x%11!p! thOb=0x%12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Init
+{
+pAdapter->PortName, ItemString -- 10
+pQBIInfo->hThreadHandle, ItemPtr -- 11
+pQBIInfo->pThread, ItemPtr -- 12
+}
+#typev MPQBI_c1161 64 "%0<%10!s!> QBI Thread ZwClose failed - 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Init
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPQBI_c1154 63 "%0<%10!s!> QBI: ObReferenceObjectByHandle failed 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Init
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPQBI_c1077 60 "%0<%10!s!> StartQBIThread - wrong IRQL::%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Init
+{
+pAdapter->PortName, ItemString -- 10
+KeGetCurrentIrql(), ItemLong -- 11
+}
+#typev MPQBI_c1443 74 "%0MPQBI_Open: Halt in progress. " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Open
+{
+}
+#typev MPQBI_c1438 73 "%0<%10!s!> QBIMsgOpenDoneEvent did not satisfy the wait" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Open
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c1391 72 "%0MPQBI_Open: Error allocating memory for QMUX_INTERFACE " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Open
+{
+}
+#typev MPQBI_c1384 71 "%0<%10!s!> MPQBI_OpenQBI" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Open
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c163 12 "%0MPQBI_PINCompletionCb: Send Ready info Query Oid which was allocated before Pin verification QMI txn " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_PINCompletionCb
+{
+}
+#typev MPQBI_c144 11 "%0MPQBI_PINCompletionCb called" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_PINCompletionCb
+{
+}
+#typev MPQBI_c491 29 "%0MPQBI_QMINetworkTimeIndReg_Cb: Registered dynamic indication handler for network time ind" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMINetworkTimeIndReg_Cb
+{
+}
+#typev MPQBI_c487 28 "%0MPQBI_QMINetworkTimeIndReg_Cb: Failed to register dynamic indication handler for network time ind" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMINetworkTimeIndReg_Cb
+{
+}
+#typev MPQBI_c477 27 "%0MPQBI_QMINetworkTimeIndReg_Cb: Error registering for NAS indications! Error code %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMINetworkTimeIndReg_Cb
+{
+qmi_rsp->resp.error, ItemLong -- 10
+}
+#typev MPQBI_c444 26 "%0MPQBI_QMINetworkTimeInd_Cb: post work to process nitz irp " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+}
+#typev MPQBI_c439 25 "%0MPQBI_QMINetworkTimeInd_Cb: device in D2 power state - do not process NITZ IRP" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+}
+#typev MPQBI_c418 24 "%0MPQBI_QMINetworkTimeInd_Cb:  Copy values to pAdapter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+}
+#typev MPQBI_c411 23 "%0MPQBI_QMINetworkTimeInd_Cb:  time zone valid: %10!d!, value: %11!d!, daylt saving valid: %12!d!, value: %13!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+nwtime_rsp->time_zone_valid, ItemLong -- 10
+nwtime_rsp->time_zone, ItemLong -- 11
+nwtime_rsp->daylt_sav_adj_valid, ItemLong -- 12
+nwtime_rsp->daylt_sav_adj, ItemLong -- 13
+}
+#typev MPQBI_c406 22 "%0MPQBI_QMINetworkTimeInd_Cb:  year: %10!d!, month: %11!d!, day: %12!d!, hour: %13!d!, minute: %14!d!, second: %15!d!, day of  week: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+nwtime_rsp->universal_time.year, ItemLong -- 10
+nwtime_rsp->universal_time.month, ItemLong -- 11
+nwtime_rsp->universal_time.day, ItemLong -- 12
+nwtime_rsp->universal_time.hour, ItemLong -- 13
+nwtime_rsp->universal_time.minute, ItemLong -- 14
+nwtime_rsp->universal_time.second, ItemLong -- 15
+nwtime_rsp->universal_time.day_of_week, ItemLong -- 16
+}
+#typev MPQBI_c388 21 "%0MPQBI_QMINetworkTimeInd_Cb: callback called for QMI msg id %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+ind->qmi_msg_id, ItemLong -- 10
+}
+#typev MPQBI_c380 20 "%0MPQBI_QMINetworkTimeInd_Cb" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+}
+#typev MPQBI_c201 14 "%0MPQBI_ResponseSilentPinVerify: Pin Verification successful " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ResponseSilentPinVerify
+{
+}
+#typev MPQBI_c195 13 "%0MPQBI_ResponseSilentPinVerify: Pin Verification failed -- error %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ResponseSilentPinVerify
+{
+qmi_rsp->resp.error, ItemLong -- 10
+}
+#typev MPQBI_c814 49 "%0<%10!s!> MPQBI: OUT (0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_RunThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPQBI_c791 48 "%0<%10!s!> QBI: wrong IRQL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_RunThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c1289 67 "%0MPQBI_SendCommand: Sending Cmd to QBI with transactionId %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_SendCommand
+{
+pQBIInfo->TransactionIdCounter, ItemLong -- 10
+}
+#typev MPQBI_c1285 66 "%0MPQBI_SendCommand: No more free slots in PendingQBITransactionsList" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_SendCommand
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qbi_svc_bc_sim_c4528 10 "%0qbi_nv_store_encrypted_pin1_save: EncryptPinLength:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=qbi_svc_bc_sim_pin_s_uim26_rsp_cb
+{
+enc_pin1_len, ItemLong -- 10
+}

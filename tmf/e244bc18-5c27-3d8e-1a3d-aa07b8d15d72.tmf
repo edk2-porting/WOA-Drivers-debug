@@ -1,0 +1,285 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+e244bc18-5c27-3d8e-1a3d-aa07b8d15d72 MBB // SRC=MPPhone.c MJ= MN=
+#typev MPPhone_c1322 67 "%0%!FUNC!, clear lower power mode event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhoneInfo_ClearLowPowerModeEvent
+{
+}
+#typev MPPhone_c1089 51 "%0%!FUNC!: ERROR, returning NULL, pPhoneInfo=NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhoneInfo_GetSubPhoneInfo
+{
+}
+#typev MPPhone_c1195 58 "%0<sub#%10!d!> %!FUNC!:: NO! ERROR, Device Type - UNKNOWN." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhoneInfo_IsDataCallAllowed
+{
+nSubscriptionId, ItemLong -- 10
+}
+#typev MPPhone_c1189 57 "%0<sub#%10!d!> %!FUNC!:: YES! Device Type - SSSA." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhoneInfo_IsDataCallAllowed
+{
+nSubscriptionId, ItemLong -- 10
+}
+#typev MPPhone_c1183 56 "%0<sub#%10!d!> %!FUNC!:: YES! Device Type - DSDA_2DATA." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhoneInfo_IsDataCallAllowed
+{
+nSubscriptionId, ItemLong -- 10
+}
+#typev MPPhone_c1175 55 "%0<sub#%10!d!> %!FUNC!::bReturn=%11!d!! Device Type - DSDA_1DATA, otherSubscription=%12!d!, bDataCallUp=%13!d!, bVoiceCallUp=%14!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhoneInfo_IsDataCallAllowed
+{
+nSubscriptionId, ItemLong -- 10
+bReturn, ItemLong -- 11
+otherSubscription, ItemLong -- 12
+bDataCallUp, ItemLong -- 13
+bVoiceCallUp, ItemLong -- 14
+}
+#typev MPPhone_c1166 54 "%0<sub#%10!d!> %!FUNC!::bReturn=%11!d!! Device Type - DSDS, otherSubscription=%12!d!, bDataCallUp=%13!d!, bVoiceCallUp=%14!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhoneInfo_IsDataCallAllowed
+{
+nSubscriptionId, ItemLong -- 10
+bReturn, ItemLong -- 11
+otherSubscription, ItemLong -- 12
+bDataCallUp, ItemLong -- 13
+bVoiceCallUp, ItemLong -- 14
+}
+#typev MPPhone_c1127 53 "%0<sub#%10!d!> %!FUNC!:: ERROR, returning FALSE, subscriptionId >= available subscriptions." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhoneInfo_IsDataCallAllowed
+{
+nSubscriptionId, ItemLong -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPPhone_c1261 64 "%0%!FUNC!: currentDDS=%10!d!, newDDS=%11!d!, NumOfSubs=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhoneInfo_SetDefaultDataSubs
+{
+pPhoneInfo->default_data_subs, ItemLong -- 10
+default_data_subs, ItemLong -- 11
+pPhoneInfo->pPhoneCaps.nNumOfSubscriptions, ItemLong -- 12
+}
+#typev MPPhone_c1339 68 "%0%!FUNC!, set lower power mode event" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhoneInfo_SetLowPowerModeEvent
+{
+}
+#typev MPPhone_c1246 63 "%0%!FUNC!: Setting PhoneType=SSSA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhoneInfo_SetPhoneTypeOnSubPhone
+{
+}
+#typev MPPhone_c1236 62 "%0%!FUNC!: Setting PhoneType=DSDA_2DATA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhoneInfo_SetPhoneTypeOnSubPhone
+{
+}
+#typev MPPhone_c1226 61 "%0%!FUNC!: Setting PhoneType=DSDA_1DATA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhoneInfo_SetPhoneTypeOnSubPhone
+{
+}
+#typev MPPhone_c1216 60 "%0%!FUNC!: Setting PhoneType=DSDS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhoneInfo_SetPhoneTypeOnSubPhone
+{
+}
+#typev MPPhone_c1209 59 "%0%!FUNC!: ERROR! Unsupporte nSubscriptionId = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhoneInfo_SetPhoneTypeOnSubPhone
+{
+nSubscriptionId, ItemLong -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPPhone_c837 50 "%0 %!FUNC!: RefCount equals to 0." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_Deinit
+{
+}
+#typev MPPhone_c815 49 "%0%!FUNC!: Thread Blocking timed for Adapter <%10!s!>. Status = %11!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_Init
+{
+pAdapter->PortName, ItemString -- 10
+nts, ItemNTSTATUS -- 11
+}
+#typev MPPhone_c810 48 "%0%!FUNC!: Thread Blocked for Adapter <%10!s!>." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_Init
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPPhone_c796 47 "%0%!FUNC!: ERROR! MPSubPhoneInfo_Init failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_Init
+{
+nts, ItemNTSTATUS -- 10
+}
+#typev MPPhone_c792 46 "%0%!FUNC!: Phone init completed by Adapter <%10!s!>. Setting wait event to unblock pending thread." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_Init
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPPhone_c787 45 "%0%!FUNC!: Max Adapters: %10!d! Max AdaptersSub0: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_Init
+{
+pPhone->nMaxAdaptersSupported, ItemLong -- 10
+pPhone->nMaxAdaptersSupportedForSub0, ItemLong -- 11
+}
+#typev MPPhone_c757 44 "%0%!FUNC!: ERROR! memory allocatin failed for pSubPhoneCb." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_Init
+{
+}
+#typev MPPhone_c751 43 "%0%!FUNC!: InstanceIdx=%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_Init
+{
+pAdapter->InstanceIdx, ItemLong -- 10
+}
+#typev MPPhone_c247 11 "%0 %!FUNC!: Complete." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubPhone
+{
+}
+#typev MPPhone_c232 10 "%0 %!FUNC!: ERROR: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubPhone
+{
+}
+#typev MPPhone_c427 25 "%0%!FUNC!: Releasing MapPhoneGaurd semaphore." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+}
+#typev MPPhone_c417 24 "%0%!FUNC!: ERROR! pSubPhoneCb %10!p! has null adapter." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+pSubPhoneCb, ItemPtr -- 10
+}
+#typev MPPhone_c413 23 "%0%!FUNC!: mapping Adapter = <%10!s!>: Subscription = %11!d!, nAdaptersAllocated = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+pAdapter->PortName, ItemString -- 10
+index, ItemLong -- 11
+pPhone->nAdaptersAllocated, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPPhone_c407 22 "%0%!FUNC!: pSubPhoneCb = %10!p! has adapter <%11!s!>." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+pSubPhoneCb, ItemPtr -- 10
+pAdapter->PortName, ItemString -- 11
+}
+#typev MPPhone_c342 20 "%0%!FUNC!: MPQBI_Init_Ex for InstanceIdx = %10!d!. %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+InstanceIdx, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev MPPhone_c367 21 "%0%!FUNC!: pAdapter->InstanceIdx = %10!d!, index = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+pAdapter->InstanceIdx, ItemLong -- 10
+index, ItemLong -- 11
+}
+#typev MPPhone_c326 19 "%0%!FUNC!: NdisMRemoveMiniport for InstanceIdx = %10!d!. %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+InstanceIdx, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev MPPhone_c321 18 "%0%!FUNC!: NdisMRemoveMiniport failed for InstanceIdx = %10!d!. %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+InstanceIdx, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev MPPhone_c311 17 "%0%!FUNC!: Removing adapter <%10!s!>, InstanceIdx=%11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->InstanceIdx, ItemLong -- 11
+}
+#typev MPPhone_c283 16 "%0%!FUNC!: ERROR: nNumOfSubscriptions more than supported value = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+MAX_SUBSCRIPTIONS_SUPPORTED, ItemLong -- 10
+}
+#typev MPPhone_c279 15 "%0%!FUNC!: nNumOfSubscriptions = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+nNumOfSubscriptions, ItemLong -- 10
+}
+#typev MPPhone_c275 14 "%0%!FUNC!: MapPhoneGuard semaphore signalled. Status = %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+status, ItemNTSTATUS -- 10
+}
+#typev MPPhone_c273 13 "%0%!FUNC!: Waiting on MapPhoneGuard semaphore." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+}
+#typev MPPhone_c269 12 "%0%!FUNC!: ERROR: nNumOfSubscriptions = 0." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_MapSubphones
+{
+}
+#typev MPPhone_c620 37 "%0<phone>%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_SubPhoneNotifications
+{
+}
+#typev MPPhone_c597 36 "%0<phone> %!FUNC!: STEP 3: DeviceType=DSDA_1DATA, VoiceDataCapOnSub0=0x%10!x!, CurrentDataClassOnSub0=0x%11!x!, bVoiceCallUpOnSub0=%12!d!, bVoiceCallUpOnSub1=%13!d!, NewDataSuspOnSub0=%14!d!, NewDataSuspOnSub1=%15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_SubPhoneNotifications
+{
+VoiceDataCapOnSub0, ItemLong -- 10
+CurrentDataClassOnSub0, ItemLong -- 11
+bVoiceCallUpOnSub0, ItemLong -- 12
+bVoiceCallUpOnSub1, ItemLong -- 13
+NewDataSuspOnSub0, ItemLong -- 14
+NewDataSuspOnSub1, ItemLong -- 15
+}
+#typev MPPhone_c562 35 "%0<phone> %!FUNC!: STEP 3: DeviceType=DSDS, bVoiceCallUpOnSub0=%10!d!, bVoiceCallUpOnSub1=%11!d!, NewDataSuspOnSub0=%12!d!, NewDataSuspOnSub1=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_SubPhoneNotifications
+{
+bVoiceCallUpOnSub0, ItemLong -- 10
+bVoiceCallUpOnSub1, ItemLong -- 11
+NewDataSuspOnSub0, ItemLong -- 12
+NewDataSuspOnSub1, ItemLong -- 13
+}
+#typev MPPhone_c539 34 "%0<phone> %!FUNC!: STEP 2: DSDX, voice call(s) up, data suspended on non-DDS sub [bVoiceCallUpOnSub0=%10!d!, bVoiceCallUpOnSub1=%11!d!, nNonDDS=%12!d!, NewDataSuspOnSub0=%13!d!, NewDataSuspOnSub1=%14!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_SubPhoneNotifications
+{
+bVoiceCallUpOnSub0, ItemLong -- 10
+bVoiceCallUpOnSub1, ItemLong -- 11
+nNonDDS, ItemLong -- 12
+NewDataSuspOnSub0, ItemLong -- 13
+NewDataSuspOnSub1, ItemLong -- 14
+}
+#typev MPPhone_c525 33 "%0<phone> %!FUNC!: NonDDSId >= nNumOfSubscriptions [NonDDSId=%10!d!, nNumOfSubscriptions=%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_SubPhoneNotifications
+{
+nNonDDS, ItemLong -- 10
+pPhone->pPhoneCaps.nNumOfSubscriptions, ItemLong -- 11
+}
+#typev MPPhone_c511 32 "%0<phone> %!FUNC!: STEP 1: DataSuspension based on SVDCapablity of RAT [NewDataSuspOnSub0=%10!d!, NewDataSuspOnSub1=%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_SubPhoneNotifications
+{
+NewDataSuspOnSub0, ItemLong -- 10
+NewDataSuspOnSub1, ItemLong -- 11
+}
+#typev MPPhone_c491 31 "%0<phone>%!FUNC!: SSR in progress, skipped processing CONTEXT_STATE notification" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_SubPhoneNotifications
+{
+}
+#typev MPPhone_c482 30 "%0<phone> %!FUNC!: MPPhone_MBB_REINIT." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_SubPhoneNotifications
+{
+}
+#typev MPPhone_c473 29 "%0<phone> %!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_SubPhoneNotifications
+{
+}
+#typev MPPhone_c627 38 "%0<phone> %!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_SubPhoneOneNotifications
+{
+}
+#typev MPPhone_c637 39 "%0<phone> %!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_SubPhoneZeroNotifications
+{
+}
+#typev MPPhone_c1592 86 "%0%!FUNC!: Releasing MapPhoneGaurd semaphore." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCaps
+{
+}
+#typev MPPhone_c1588 85 "%0 %!FUNC!: ERROR! DMS client init failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCaps
+{
+}
+#typev MPPhone_c1579 84 "%0 %!FUNC!: ERROR! Unable to Query modem XLAT offload Caps." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCaps
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPPhone_c1555 83 "%0 %!FUNC!: ERROR, pQMIElement NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCaps
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPPhone_c1542 82 "%0%!FUNC!: MapPhoneGuard semaphore signalled. Status = %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCaps
+{
+waitStatus, ItemNTSTATUS -- 10
+}
+#typev MPPhone_c1540 81 "%0%!FUNC!: Waiting on MapPhoneGuard semaphore." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCaps
+{
+}
+#typev MPPhone_c1534 80 "%0 %!FUNC!: ERROR, pPhone NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCaps
+{
+}
+#typev MPPhone_c1519 79 "%0 %!FUNC!: ERROR! multisim_capability NOT VALID." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCapsCb
+{
+}
+#typev MPPhone_c1514 78 "%0 %!FUNC!: ERROR! pPhoneCaps NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCapsCb
+{
+}
+#typev MPPhone_c1503 77 "%0 %!FUNC!: ERROR! max_active_data_subscriptions NOT VALID." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCapsCb
+{
+}
+#typev MPPhone_c1497 76 "%0 %!FUNC!: max_active_data_subscriptions = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCapsCb
+{
+pResp->max_active_data_subscriptions, ItemLong -- 10
+}
+#typev MPPhone_c1490 75 "%0 %!FUNC!: max_active = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCapsCb
+{
+pResp->multisim_capability.subscription_config_list[0].max_active, ItemLong -- 10
+}
+#typev MPPhone_c1477 74 "%0 %!FUNC!: max_subscriptions = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCapsCb
+{
+pResp->multisim_capability.max_subscriptions, ItemLong -- 10
+}
+#typev MPPhone_c1470 73 "%0 %!FUNC!: result = 0x%10!x! error = 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPhone_UpdatePhoneCapsCb
+{
+pResp->resp.result, ItemLong -- 10
+pResp->resp.error, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPIoctl_c1124 65 "%0%!FUNC!: Set Shutdown Indication IRP Success!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIoctl_IRPDispatch
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPQCCI_c776 51 "%0%!FUNC!: ERROR, returning NULL, pPhoneInfo=NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQCCI_QMIIndicationToAllAdapters
+{
+}

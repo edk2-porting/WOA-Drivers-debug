@@ -1,0 +1,33 @@
+// PDB:  qcaudminiport850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+2c0700aa-2f22-346e-9d8a-03c3554c14e1 vhfkm // SRC=Unknown_cxx00 MJ= MN=
+#typev pump_c225 12 "%0VHF: %10!s! failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=General FUNC=Pump_ClientRequestComplete FUNC=Pump_ClientRequestComplete
+{
+Arg, ItemEnum(_VHF_IOCTL) -- 10
+Arg, ItemNTSTATUS -- 11
+}
+#typev pump_c115 10 "%0VHF: %10!s! failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=General FUNC=Pump_PendNotifyToVhf FUNC=Pump_PendNotifyToVhf
+{
+Arg, ItemEnum(_VHF_IOCTL) -- 10
+Arg, ItemNTSTATUS -- 11
+}
+#typev pump_c156 11 "%0VHF: %10!s! failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=General FUNC=Pump_VhfNotifyComplete FUNC=Pump_VhfNotifyComplete
+{
+Arg, ItemEnum(_VHF_IOCTL) -- 10
+Arg, ItemNTSTATUS -- 11
+}
+#typev pump_c267 13 "%0VHF: %10!s! failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=General FUNC=Pump_VhfRequestComplete FUNC=Pump_VhfRequestComplete
+{
+Arg, ItemEnum(_VHF_IOCTL) -- 10
+Arg, ItemNTSTATUS -- 11
+}
+#enumv _VHF_IOCTL
+{
+_IOCTL_HID_VHF_CREATE_DEVICE,0xB0324
+_IOCTL_HID_VHF_DELETE_DEVICE,0xB0329
+_IOCTL_HID_VHF_READ_REPORT_NOTIFY,0xB032D
+_IOCTL_HID_VHF_READ_REPORT_COMPLETE,0xB0331
+_IOCTL_HID_VHF_PULL_REQUEST_NOTIFY,0xB0336
+_IOCTL_HID_VHF_PULL_REQUEST_COMPLETE,0xB0339
+_IOCTL_HID_VHF_DEVICERESET_COMPLETE,0xB033C
+}

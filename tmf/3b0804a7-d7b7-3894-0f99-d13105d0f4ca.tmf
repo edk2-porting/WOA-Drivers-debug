@@ -1,0 +1,69 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+3b0804a7-d7b7-3894-0f99-d13105d0f4ca WMRIL // SRC=WMRilPBSessionInfo.cpp MJ= MN=
+#typev WMRilPBSessionInfo_cpp92 14 "%0%!LEVEL! %!FUNC!:Invalid length = %10!u! of AAS list returned by QMI PBM" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::SetAASList
+{
+aasArrayLen, ItemLong -- 10
+}
+#typev WMRilPBSessionInfo_cpp109 15 "%0%!LEVEL! %!FUNC!:Invalid alpha len in the QMI PBM response" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::SetAASList
+{
+}
+#typev WMRilPBSessionInfo_cpp120 18 "%0%!LEVEL! %!FUNC!:DebugDump wszText: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::SetAASList
+{
+WMRIL_LOG_XSTR(&tempAAS.wszText. aasArray[i].alpha_len), ItemHEXDump -- 10
+}
+#typev WMRilPBSessionInfo_cpp116 17 "%0%!LEVEL! %!FUNC!:Copied the PBM alpha tag = "%10!s!" to RIL AAS tag = "%11!s!"" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::SetAASList
+{
+aasArray[i].alpha, ItemString -- 10
+tempAAS.wszText, ItemWString -- 11
+}
+#typev WMRilPBSessionInfo_cpp114 16 "%0%!LEVEL! %!FUNC!:DebugDump alpha: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::SetAASList
+{
+WMRIL_LOG_XSTR(&aasArray[i].alpha. aasArray[i].alpha_len), ItemHEXDump -- 10
+}
+#typev WMRilPBSessionInfo_cpp87 13 "%0%!LEVEL! %!FUNC!:Invalid AAS list returned by QMI PBM" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::SetAASList
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPBSessionInfo_cpp225 26 "%0%!LEVEL! %!FUNC!:Deleting an entry with NumId = %10!u! from the AAS list" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::UpdateAASList
+{
+it->dwNumId, ItemLong -- 10
+}
+#typev WMRilPBSessionInfo_cpp221 25 "%0%!LEVEL! %!FUNC!:DebugDump wszText: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::UpdateAASList
+{
+WMRIL_LOG_XSTR(&it->wszText. static_cast<DWORD>(tempAASLen)* sizeof(TCHAR)), ItemHEXDump -- 10
+}
+#typev WMRilPBSessionInfo_cpp218 24 "%0%!LEVEL! %!FUNC!:Modified an entry in the AAS List with data: NumId = %10!u!, new alpha = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::UpdateAASList
+{
+it->dwNumId, ItemLong -- 10
+it->wszText, ItemWString -- 11
+}
+#typev WMRilPBSessionInfo_cpp213 23 "%0%!LEVEL! %!FUNC!:Found a matching entry in the AAS list for Modify/Delete" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::UpdateAASList
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPBSessionInfo_cpp234 27 "%0%!LEVEL! %!FUNC!:Could not find a matching entry for dwNumId = %10!u! in the list for modify/delete" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::UpdateAASList
+{
+dwNumId, ItemLong -- 10
+}
+#typev WMRilPBSessionInfo_cpp240 28 "%0%!LEVEL! %!FUNC!:Invalid OpType = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::UpdateAASList
+{
+dwOpType, ItemLong -- 10
+}
+#typev WMRilPBSessionInfo_cpp203 22 "%0%!LEVEL! %!FUNC!:DebugDump wszText: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::UpdateAASList
+{
+WMRIL_LOG_XSTR(&tempAAS.wszText. static_cast<DWORD>(tempAASLen)* sizeof(TCHAR)), ItemHEXDump -- 10
+}
+#typev WMRilPBSessionInfo_cpp200 21 "%0%!LEVEL! %!FUNC!:Adding a new entry to the AAS List with NumId = %10!u!, alpha = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::UpdateAASList
+{
+tempAAS.dwNumId, ItemLong -- 10
+tempAAS.wszText, ItemWString -- 11
+}
+#typev WMRilPBSessionInfo_cpp189 20 "%0%!LEVEL! %!FUNC!:AAS tag is NULL or too long" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::UpdateAASList
+{
+}
+#typev WMRilPBSessionInfo_cpp178 19 "%0%!LEVEL! %!FUNC!:NO Update to the list as the list is empty" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::PBSessionInfoClass::UpdateAASList
+{
+}

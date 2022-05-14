@@ -1,0 +1,65 @@
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+64b02cc0-2810-33ef-b3bb-f3c985f2b915 wifinotifiersrvc // SRC=WifiMeasurementUtils.c MJ= MN=
+#typev WifiMeasurementEngine_c1538 25 "%0%!FUNC!:: WLAN_CONNECTED !!!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WifiMeasurementEngineHandleRssiBreachEventAsync
+{
+}
+#typev WifiMeasurementEngine_c1538 27 "%0%!FUNC!:: WNS_GENERAL_FAILURE." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineHandleRssiBreachEventAsync
+{
+}
+#typev WifiMeasurementEngine_c1538 24 "%0%!FUNC!:: WLAN_DISCONNECTED !!!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineHandleRssiBreachEventAsync
+{
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WifiMeasurementUtils_c192 10 "%0%!FUNC!:: pIE->id = %10!d!, pIE->length = %11!d!. ie_name[%12!d!] = %13!s!, AvailableAdmissionCapacity = %14!d!, ChannelUtilization = %15!d!, StationCount = %16!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementUtilsExtractWifiInfoFromWlanBssEntry
+{
+pIE->ID, ItemLong -- 10
+pIE->Length, ItemLong -- 11
+pIE->ID, ItemLong -- 12
+WLAN_IE_NAME[pIE->ID], ItemWString -- 13
+pWifiBSSEntry->BssLoad.AvailableAdmissionCapacity, ItemLong -- 14
+pWifiBSSEntry->BssLoad.ChannelUtilization, ItemLong -- 15
+pWifiBSSEntry->BssLoad.StationCount, ItemLong -- 16
+}
+#typev WifiMeasurementUtils_c531 25 "%0%!FUNC!:: WLAN_CONNECTED !!!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WifiMeasurementUtilsGetConnectedAPInformation
+{
+}
+#typev WifiMeasurementUtils_c536 27 "%0%!FUNC!:: WNS_GENERAL_FAILURE." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementUtilsGetConnectedAPInformation
+{
+}
+#typev WifiMeasurementUtils_c531 24 "%0%!FUNC!:: WLAN_DISCONNECTED !!!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementUtilsGetConnectedAPInformation
+{
+}
+#typev WifiMeasurementUtils_c527 26 "%0%!FUNC!:: pBSSEntry == NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementUtilsGetConnectedAPInformation
+{
+}
+#typev WifiMeasurementUtils_c269 16 "%0%!FUNC!:: ERROR: Memory allocation failed for WIFI_BSS_ENTRY." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementUtilsQueryWlanGetNetworkBssList
+{
+}
+#typev WifiMeasurementUtils_c259 15 "%0%!FUNC!:: WlanGetNetworkBssList count = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementUtilsQueryWlanGetNetworkBssList
+{
+(int)pWlanBSSList->dwNumberOfItems, ItemLong -- 10
+}
+#typev WifiMeasurementUtils_c251 14 "%0%!FUNC!:: ERROR: WlanGetNetworkBssList failed with error code = %10!s!, %11!s!, (0x%12!x!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementUtilsQueryWlanGetNetworkBssList
+{
+dwResult, ItemWINERROR -- 10
+dwResult, ItemHRESULT -- 11
+dwResult, ItemLong -- 12
+}
+#typev WifiMeasurementUtils_c245 13 "%0%!FUNC!:: Entry[%10!d!]: Connected = %11!s!, State = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WifiMeasurementUtilsQueryWlanGetNetworkBssList
+{
+i, ItemLong -- 10
+(wlan_interface_state_connected == pIfInfo->isState ? 'TRUE' : 'FALSE'), ItemString -- 11
+pIfInfo->isState, ItemLong -- 12
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WifiMeasurementUtils_c229 12 "%0%!FUNC!:: WlanEnumInterfaces failed with error: %10!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementUtilsQueryWlanGetNetworkBssList
+{
+dwResult, ItemLong -- 10
+}
+#typev WifiMeasurementUtils_c222 11 "%0%!FUNC!:: WlanOpenHandle failed with error: %10!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementUtilsQueryWlanGetNetworkBssList
+{
+dwResult, ItemLong -- 10
+}

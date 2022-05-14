@@ -1,0 +1,126 @@
+// PDB:  qcabd850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+d198f01c-e56e-39ed-67dd-eca5bab21fa3 ABD // SRC=Handler.c MJ= MN=
+#typev Handler_c94 14 "%0%!FUNC! Interface removed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Trace FUNC=AbdInterfaceNotficationCallback
+{
+}
+#typev Handler_c86 13 "%0%!FUNC! Could not get target device object" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AbdInterfaceNotficationCallback
+{
+}
+#typev Handler_c82 12 "%0%!FUNC! Target device object found, Interface activated" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Trace FUNC=AbdInterfaceNotficationCallback
+{
+}
+// PDB:  qcabd850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev Handler_c100 15 "%0%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=AbdInterfaceNotficationCallback
+{
+}
+#typev Handler_c51 11 "%0%!FUNC! Context is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=AbdInterfaceNotficationCallback
+{
+}
+#typev Handler_c47 10 "%0%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=AbdInterfaceNotficationCallback
+{
+}
+#typev Handler_c521 44 "%0Handler.c::%!FUNC! Hole in g_AllConnections at index %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ClientExists
+{
+k - 1, ItemLong -- 10
+}
+#typev Handler_c205 23 "%0%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=HandleAttachRequest
+{
+}
+#typev Handler_c151 18 "%0%!FUNC! Input Buffer is NULL or unexpected size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=HandleAttachRequest
+{
+}
+#typev Handler_c189 21 "%0%!FUNC! Registration success for %10!s!, Port %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Trace FUNC=HandleAttachRequest
+{
+&connectionInfo.TargetGuid, ItemGuid -- 10
+g_AllConnections[i].ConnectionInfo.PortIdentifier, ItemLong -- 11
+}
+#typev Handler_c198 22 "%0%!FUNC! A driver failed to attach from ABD with Guid %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=HandleAttachRequest
+{
+&connectionInfo.TargetGuid, ItemGuid -- 10
+}
+#typev Handler_c172 20 "%0%!FUNC! Calling IoRegisterPlugPlayNotification for %10!s! (i:%11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=HandleAttachRequest
+{
+&connectionInfo.TargetGuid, ItemGuid -- 10
+i, ItemLong -- 11
+}
+#typev Handler_c162 19 "%0Handler.c::%!FUNC! The client %10!s! is already registered with ABD" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=HandleAttachRequest
+{
+&connectionInfo.TargetGuid, ItemGuid -- 10
+}
+#typev Handler_c145 17 "%0Handler.c::%!FUNC! Unable to retrieve input buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=HandleAttachRequest
+{
+}
+#typev Handler_c134 16 "%0%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=HandleAttachRequest
+{
+}
+#typev Handler_c289 29 "%0%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=HandleDetachRequest
+{
+}
+#typev Handler_c254 26 "%0%!FUNC! Input Buffer is NULL or unexpected size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=HandleDetachRequest
+{
+}
+#typev Handler_c275 27 "%0%!FUNC! Detach success for %10!s!, Port %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Trace FUNC=HandleDetachRequest
+{
+&connectionGuid, ItemGuid -- 10
+g_AllConnections[i].ConnectionInfo.PortIdentifier, ItemLong -- 11
+}
+#typev Handler_c283 28 "%0%!FUNC! A driver failed to detach from ABD with Guid %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=HandleDetachRequest
+{
+&connectionGuid, ItemGuid -- 10
+}
+#typev Handler_c248 25 "%0%!FUNC! Unable to retrieve input buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=HandleDetachRequest
+{
+}
+#typev Handler_c237 24 "%0%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=HandleDetachRequest
+{
+}
+#typev Handler_c385 35 "%0Handler.c::%!FUNC! Incoming request has TransferCount less than 1." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=HandleSpbRequest
+{
+}
+#typev Handler_c391 36 "%0Handler.c::%!FUNC! Incoming request has TransferCount larger than expected." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=HandleSpbRequest
+{
+}
+#typev Handler_c432 41 "%0Handler.c::%!FUNC! Incoming request has invalid ListEntry direction." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=HandleSpbRequest
+{
+}
+#typev Handler_c443 43 "%0Handler.c::%!FUNC! Found no device to communicate with" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=HandleSpbRequest
+{
+}
+#typev Handler_c439 42 "%0Handler.c %!FUNC! successfully completed." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=HandleSpbRequest
+{
+}
+#typev Handler_c428 40 "%0Handler.c::%!FUNC! ReadFromAbd IOCTL is sent." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=HandleSpbRequest
+{
+}
+#typev Handler_c414 39 "%0Handler.c::%!FUNC! WriteFromAbd IOCTL is sent." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=HandleSpbRequest
+{
+}
+#typev Handler_c400 38 "%0Handler.c::%!FUNC! incoming request is for port %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=HandleSpbRequest
+{
+g_AllConnections[j].ConnectionInfo.PortIdentifier, ItemLong -- 10
+}
+#typev Handler_c399 37 "%0Handler.c::%!FUNC! incoming request is for connection %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=HandleSpbRequest
+{
+j, ItemLong -- 10
+}
+#typev Handler_c375 34 "%0Handler.c::%!FUNC! SPB buffer transfer count:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=HandleSpbRequest
+{
+spbTransferList->TransferCount, ItemLong -- 10
+}
+#typev Handler_c364 33 "%0Handler.c::%!FUNC! size of SPB_TRANSFER_LIST_ENTRY:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=HandleSpbRequest
+{
+sizeof(SPB_TRANSFER_LIST_ENTRY), ItemLong -- 10
+}
+#typev Handler_c363 32 "%0Handler.c::%!FUNC! size of SPB_TRANSFER_LIST:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=HandleSpbRequest
+{
+sizeof(SPB_TRANSFER_LIST), ItemLong -- 10
+}
+#typev Handler_c362 31 "%0Handler.c::%!FUNC! SPB framework request input buffer length:%10!Iu!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=HandleSpbRequest
+{
+inputBufLen, ItemPtr -- 10
+}
+#typev Handler_c352 30 "%0Handler.c::%!FUNC! Unable to retrieve input buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=HandleSpbRequest
+{
+}

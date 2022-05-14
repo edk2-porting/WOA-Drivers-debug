@@ -1,0 +1,987 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+4b3e88be-bc74-3316-9d40-49f812928c2c WMRIL // SRC=WMRilDriver.cpp MJ= MN=
+#typev WMRilDriver_cpp2349 138 "%0%!LEVEL! %!FUNC!:The outstanding command database has a NULL pCmd" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::AbortCmd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2357 139 "%0%!LEVEL! %!FUNC!:Aborting command %10!s!, ID = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::AbortCmd
+{
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 10
+pCmd->GetRilClientCmdID(), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp264 11 "%0%!LEVEL! %!FUNC!:Created new client = 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::AddClient
+{
+pClient.Get(), ItemPtr -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2416 140 "%0%!LEVEL! %!FUNC!:All commands in OCDB are abortable." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::AreAllCmdsInOCDBAbortable
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp410 17 "%0%!LEVEL! %!FUNC!:Failed to send cancellation event to client 0x%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::BroadcastCancelEvent
+{
+it->second.Get(), ItemPtr -- 10
+}
+#typev WMRilDriver_cpp396 16 "%0%!LEVEL! %!FUNC!:Driver's client list is empty" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::BroadcastCancelEvent
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp368 15 "%0%!LEVEL! %!FUNC!:Driver's client list is empty" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::BroadcastNotification
+{
+}
+#typev WMRilDriver_cpp363 14 "%0%!LEVEL! %!FUNC!:code = %10!s!(0x%11!08X!), Payload size = %12!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::BroadcastNotification
+{
+NotificationCode, ItemEnum(RILNOTIFICATIONS) -- 10
+NotificationCode, ItemLong -- 11
+dwPayloadSize, ItemLong -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1607 104 "%0%!LEVEL! %!FUNC!:Phone initialization completed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::CreateAndInitializePhone
+{
+}
+#typev WMRilDriver_cpp1600 103 "%0%!LEVEL! %!FUNC!:Initializing the phone..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::CreateAndInitializePhone
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1779 105 "%0%!LEVEL! %!FUNC!:Created %10!s!(0x%11!08X!) with ID = %12!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::CreateRILCommand
+{
+Cmd, ItemEnum(RILCOMMANDS) -- 10
+Cmd, ItemLong -- 11
+dwRilClientCmdID, ItemLong -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2285 136 "%0%!LEVEL! %!FUNC!:No command listener was found with the provided key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::DeregisterFromCommandListenerDatabase
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2327 137 "%0%!LEVEL! %!FUNC!:No service listener was found with the provided key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::DeregisterFromServiceListenerDatabase
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp320 13 "%0%!LEVEL! %!FUNC!:hOpenContext(0x%10!08X!) is not a valid client handle" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::GetClient
+{
+hOpenContext, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp450 19 "%0%!LEVEL! %!FUNC!:Invalid output parameters. pBufOut = 0x%10!p!, dwLenOut = %11!u!, pdwActualOut = 0x%12!p!, Cmd = %13!s!(0x%14!08X!)" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+pBufOut, ItemPtr -- 10
+dwLenOut, ItemLong -- 11
+pdwActualOut, ItemPtr -- 12
+Cmd, ItemEnum(RILCOMMANDS) -- 13
+Cmd, ItemLong -- 14
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp475 22 "%0%!LEVEL! %!FUNC!:Input buffer size of %10!u! bytes is too small.  Expecting %11!u! bytes" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+dwLenIn, ItemLong -- 10
+sizeof(HANDLE), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp469 21 "%0%!LEVEL! %!FUNC!:No input buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp520 26 "%0%!LEVEL! %!FUNC!:Invalid RIL Client command id  = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+dwRilClientCommandID, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp551 28 "%0%!LEVEL! %!FUNC!:No input buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+}
+#typev WMRilDriver_cpp615 32 "%0%!LEVEL! %!FUNC!:%10!s!(0x%11!08X!) not implemented" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+Cmd, ItemEnum(RILCOMMANDS) -- 10
+Cmd, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp601 31 "%0%!LEVEL! %!FUNC!:Parameter validation failed. hr = %10!s!(0x%11!08X!)" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+hr, ItemEnum(RILERRORCODES) -- 10
+hr, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp567 30 "%0%!LEVEL! %!FUNC!:DevSpecific dwSize cannot be greater than input buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp558 29 "%0%!LEVEL! %!FUNC!:DevSpecific input buffer not valid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp533 27 "%0%!LEVEL! %!FUNC!:Already used RIL Client command id  = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+dwRilClientCommandID, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp531 121 "%0%!LEVEL! %!FUNC!:Found duplicate Ril Client command ID = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+dwCommandID, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp503 24 "%0%!LEVEL! %!FUNC!:Output buffer size too small" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp498 23 "%0%!LEVEL! %!FUNC!:No input buffer yet input size is non-zero" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp459 20 "%0%!LEVEL! %!FUNC!:Returning false for IOCTL Cmd = %10!s!(0x%11!08X!) due to unrecoverable MSSR" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+Cmd, ItemEnum(RILCOMMANDS) -- 10
+Cmd, ItemLong -- 11
+}
+#typev WMRilDriver_cpp443 18 "%0%!LEVEL! %!FUNC!:client handle = 0x%10!p!, Cmd = %11!s! (0x%12!08X!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::IOControl
+{
+pClient.Get(), ItemPtr -- 10
+Cmd, ItemEnum(RILCOMMANDS) -- 11
+Cmd, ItemLong -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2184 133 "%0%!LEVEL! %!FUNC!:No cmd listeners for this indication were found" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::NotifyIndicationListeners
+{
+}
+#typev WMRilDriver_cpp2171 132 "%0%!LEVEL! %!FUNC!:Unable to find transaction in table" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::NotifyIndicationListeners
+{
+}
+#typev WMRilDriver_cpp2165 131 "%0%!LEVEL! %!FUNC!:Deleted txn id 0x%10!08X! from the outstanding command database" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::NotifyIndicationListeners
+{
+dwTxnID, ItemLong -- 10
+}
+#typev WMRilDriver_cpp2145 130 "%0%!LEVEL! %!FUNC!:Notifying %10!s! with internal indication." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::NotifyIndicationListeners
+{
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 10
+}
+#typev WMRilDriver_cpp2120 129 "%0%!LEVEL! %!FUNC!:Validate QMI indication failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::NotifyIndicationListeners
+{
+}
+#typev WMRilDriver_cpp2115 128 "%0%!LEVEL! %!FUNC!:Notifying %10!s! with external indication." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::NotifyIndicationListeners
+{
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 10
+}
+#typev WMRilDriver_cpp2072 127 "%0%!LEVEL! %!FUNC!:No svc listeners for this indication were found" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::NotifyIndicationListeners
+{
+}
+#typev WMRilDriver_cpp2063 126 "%0%!LEVEL! %!FUNC!:Deleted txn id 0x%10!08X! from the outstanding service database" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::NotifyIndicationListeners
+{
+dwTxnID, ItemLong -- 10
+}
+#typev WMRilDriver_cpp2035 125 "%0%!LEVEL! %!FUNC!:Notifying %10!s! with internal indication." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::NotifyIndicationListeners
+{
+typeid(*pSvc).name(), ItemString -- 10
+}
+#typev WMRilDriver_cpp2017 124 "%0%!LEVEL! %!FUNC!:Notifying %10!s! with external indication." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::NotifyIndicationListeners
+{
+typeid(*pSvc).name(), ItemString -- 10
+}
+#typev WMRilDriver_cpp2013 123 "%0%!LEVEL! %!FUNC!:Validate QMI Indication failed, rejecting it" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::NotifyIndicationListeners
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp910 48 "%0%!LEVEL! %!FUNC!:Executing %10!s!, ID = %11!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessCommand
+{
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 10
+pCmd->GetRilClientCmdID(), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp887 47 "%0%!LEVEL! %!FUNC!:%10!s! can be processed now" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessCommand
+{
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp883 46 "%0%!LEVEL! %!FUNC!:Abort command failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessCommand
+{
+}
+#typev WMRilDriver_cpp871 45 "%0%!LEVEL! %!FUNC!:%10!s!, ID = %11!u! could be aborted by %12!s!, ID = %13!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessCommand
+{
+Debug::WMRilCommandNameIdToStr(pExclusiveCmdInOCDB->GetCommandNameId()), ItemWString -- 10
+pExclusiveCmdInOCDB->GetRilClientCmdID(), ItemLong -- 11
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 12
+pCmd->GetRilClientCmdID(), ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp862 44 "%0%!LEVEL! %!FUNC!:%10!s!, ID = %11!u! cannot be processed now. An exclusive %12!s!, ID = %13!u! is in OCDB" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessCommand
+{
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 10
+pCmd->GetRilClientCmdID(), ItemLong -- 11
+Debug::WMRilCommandNameIdToStr(pExclusiveCmdInOCDB->GetCommandNameId()), ItemWString -- 12
+pExclusiveCmdInOCDB->GetRilClientCmdID(), ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp845 43 "%0%!LEVEL! %!FUNC!:%10!s! cannot be processed now. A GEC is ahead in the processing queue." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessCommand
+{
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp823 42 "%0%!LEVEL! %!FUNC!:%10!s! cmd, ID = %11!u! cannot be processed now because the OCDB has %12!u! item(s)." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessCommand
+{
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 10
+pCmd->GetRilClientCmdID(), ItemLong -- 11
+static_cast<UINT>(m_OutstandingCommandDatabase.size()), ItemLong -- 12
+}
+#typev WMRilDriver_cpp812 41 "%0%!LEVEL! %!FUNC!:%10!s! is a GEC, ID = %11!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessCommand
+{
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 10
+pCmd->GetRilClientCmdID(), ItemLong -- 11
+}
+#typev WMRilDriver_cpp807 40 "%0%!LEVEL! %!FUNC!:The command has exclusivity %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessCommand
+{
+wszCommandExclusivity, ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2549 148 "%0%!LEVEL! %!FUNC!:Fatal error occurred" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessFatalError
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp947 49 "%0%!LEVEL! %!FUNC!:Received an APPerso indication message during MSSR recovery. Keeping this message on the processing queue until MSSR recovery is complete." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessIndication
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2524 147 "%0%!LEVEL! %!FUNC!:Adding Apperso related transaction with txnID = %10!u! to the m_MssrTempPendingServiceDatabase." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessMssr
+{
+itService->first, ItemLong -- 10
+}
+#typev WMRilDriver_cpp2515 146 "%0%!LEVEL! %!FUNC!:Cannot get the transaction with TxnID = %10!u!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessMssr
+{
+itService->first, ItemLong -- 10
+}
+#typev WMRilDriver_cpp2509 145 "%0%!LEVEL! %!FUNC!:pService = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessMssr
+{
+}
+#typev WMRilDriver_cpp2472 144 "%0%!LEVEL! %!FUNC!:Removed Command: %10!p!, Command: %11!s! from OCDB" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessMssr
+{
+pCmd.Get(), ItemPtr -- 10
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 11
+}
+#typev WMRilDriver_cpp2465 143 "%0%!LEVEL! %!FUNC!:Removed Command: 0x%10!p!, Command: %11!s! from OCDB" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessMssr
+{
+pCmd.Get(), ItemPtr -- 10
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 11
+}
+#typev WMRilDriver_cpp2460 142 "%0%!LEVEL! %!FUNC!:Adding transaction with txnID = %10!u! that is associated with Command: %11!s! to the MssrTempPendingCmdDatabase." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessMssr
+{
+it->first, ItemLong -- 10
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2449 141 "%0%!LEVEL! %!FUNC!:pCmd is NULL. Ignore this command." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessMssr
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2595 149 "%0%!LEVEL! %!FUNC!:Adding %10!s!, ID = %11!u! to the Processing List head" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessMssrRetryList
+{
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 10
+pCmd->GetRilClientCmdID(), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp740 39 "%0%!LEVEL! %!FUNC!:Number of items in the driver's processing list is %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessQueues
+{
+static_cast<UINT>(m_DriverProcessingList.size()), ItemLong -- 10
+}
+#typev WMRilDriver_cpp737 38 "%0%!LEVEL! %!FUNC!:Re-scanning the driver's processing list" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessQueues
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1560 102 "%0%!LEVEL! %!FUNC!:This response will be deleted from the drivers processing list" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+}
+#typev WMRilDriver_cpp1559 101 "%0%!LEVEL! %!FUNC!:The corresponding txn id 0x%10!08X! was not found in the OCDB, OSDB or MssrTempPendingCmdDatabase" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+dwTxnId, ItemLong -- 10
+}
+#typev WMRilDriver_cpp1554 100 "%0%!LEVEL! %!FUNC!:Received a GetAPPersoCheckStateFunc response message during MSSR recovery.  Keeping this message on the processing queue until MSSR recovery is complete." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1543 99 "%0%!LEVEL! %!FUNC!:Received a non-QMI response message during MSSR recovery.  Keeping this message on the processing queue until MSSR recovery is complete." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1417 90 "%0%!LEVEL! %!FUNC!:Response type = %10!s! has incorrect txn id = 0x%11!08X!. Matches transaction type = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+typeid(*pRsp).name(), ItemString -- 10
+dwTxnId, ItemLong -- 11
+typeid(*pTxn).name(), ItemString -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1523 98 "%0%!LEVEL! %!FUNC!:%10!s! processed the response." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+typeid(*pService).name(), ItemString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1507 97 "%0%!LEVEL! %!FUNC!:APPersoService: %10!s!(%11!u!) resulted in asynchronous error: %12!s!(0x%13!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+Debug::WMRilAPPersoReqToStr(pAPPsesoRspTxn->GetMessageID()), ItemWString -- 10
+pAPPsesoRspTxn->GetMessageID(), ItemLong -- 11
+Debug::HRESULTToStr(asyncError), ItemWString -- 12
+asyncError, ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1496 96 "%0%!LEVEL! %!FUNC!:APPersoService: Message ID stored in the transaction (%10!u!) does not match the message ID (%11!u!) passed in callback." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+pAPPsesoRspTxn->GetMessageID(), ItemLong -- 10
+pAPPersoRsp->GetMessageID(), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1478 95 "%0%!LEVEL! %!FUNC!:QMI Response validation failed, rejecting it" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1461 94 "%0%!LEVEL! %!FUNC!:%10!s!(%11!u!): Response buff address: 0x%12!p!, size: %13!u! stored in the transaction does not match the response buffer address: 0x%14!p!, size: %15!u! passed in the callback" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+Debug::QMIReqToStr(pQmiRspTxn->GetServiceType(). pQmiRspTxn->GetMessageID()), ItemWString -- 10
+pQmiRspTxn->GetMessageID(), ItemLong -- 11
+pQmiRspTxn->GetResponseBlob()->GetPtr(), ItemPtr -- 12
+pQmiRspTxn->GetResponseBlob()->GetSize(), ItemLong -- 13
+pQmiRsp->GetQMIResponse(), ItemPtr -- 14
+pQmiRsp->GetQMIResponseBufLen(), ItemLong -- 15
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1447 93 "%0%!LEVEL! %!FUNC!:%10!s!(%11!u!) resulted in transport Error = %12!s!(0x%13!04X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+Debug::QMIReqToStr(pQmiRspTxn->GetServiceType(). pQmiRspTxn->GetMessageID()), ItemWString -- 10
+pQmiRspTxn->GetMessageID(), ItemLong -- 11
+Debug::QMIClientErrToStr(transpError), ItemWString -- 12
+transpError, ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1434 92 "%0%!LEVEL! %!FUNC!:QMIService: Message ID stored in the transaction %10!u! does not match the message ID %11!u! passed in callback." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+pQmiRspTxn->GetMessageID(), ItemLong -- 10
+pQmiRsp->GetMessageID(), ItemLong -- 11
+}
+#typev WMRilDriver_cpp1424 91 "%0%!LEVEL! %!FUNC!:Deleted txn id 0x%10!08X! from OSDB" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+dwTxnId, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1403 89 "%0%!LEVEL! %!FUNC!:Response type = %10!s! has incorrect txn id = 0x%11!08X!. Matches transaction type = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+typeid(*pRsp).name(), ItemString -- 10
+dwTxnId, ItemLong -- 11
+typeid(*pTxn).name(), ItemString -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1394 88 "%0%!LEVEL! %!FUNC!:Deleted txn id 0x%10!08X! from OSDB" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+dwTxnId, ItemLong -- 10
+}
+#typev WMRilDriver_cpp1392 87 "%0%!LEVEL! %!FUNC!:pTxn = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1386 86 "%0%!LEVEL! %!FUNC!:Deleted txn id 0x%10!08X! from OSDB" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+dwTxnId, ItemLong -- 10
+}
+#typev WMRilDriver_cpp1384 85 "%0%!LEVEL! %!FUNC!:Cannot get the transaction with txn id = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+dwTxnId, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1373 84 "%0%!LEVEL! %!FUNC!:Deleted txn id 0x%10!08X! from OSDB" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+dwTxnId, ItemLong -- 10
+}
+#typev WMRilDriver_cpp1371 83 "%0%!LEVEL! %!FUNC!:pService is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+}
+#typev WMRilDriver_cpp1365 82 "%0%!LEVEL! %!FUNC!:Found corresponding txn id 0x%10!08X! in OSDB" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+dwTxnId, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1234 74 "%0%!LEVEL! %!FUNC!:Response type = %10!s! has incorrect txn id = 0x%11!08X!. Matches transaction type = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+typeid(*pRsp).name(), ItemString -- 10
+dwTxnId, ItemLong -- 11
+typeid(*pTxn).name(), ItemString -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1311 80 "%0%!LEVEL! %!FUNC!:APPerso: Message ID stored in the transaction (%10!u!) does not match the message ID (%11!u!) passed in callback." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+pAPPsesoRspTxn->GetMessageID(), ItemLong -- 10
+pAPPersoRsp->GetMessageID(), ItemLong -- 11
+}
+#typev WMRilDriver_cpp1336 81 "%0%!LEVEL! %!FUNC!:%10!s! processed the response on executor-id = %11!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 10
+dwSubscriptionIdx, ItemLong -- 11
+}
+#typev WMRilDriver_cpp1286 79 "%0%!LEVEL! %!FUNC!:%10!s!(%11!u!) response validation failed with error = %12!s!(0x%13!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+Debug::QMIReqToStr(pQmiRspTxn->GetServiceType(). pQmiRspTxn->GetMessageID()), ItemWString -- 10
+pQmiRspTxn->GetMessageID(), ItemLong -- 11
+Debug::HRESULTToStr(hr), ItemWString -- 12
+hr, ItemLong -- 13
+}
+#typev WMRilDriver_cpp1272 78 "%0%!LEVEL! %!FUNC!:%10!s!(%11!u!): Response buff address: 0x%12!p!, size: %13!u! stored in the transaction does not match the response buffer address: 0x%14!p!, size: %15!u! passed in the callback" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+Debug::QMIReqToStr(pQmiRspTxn->GetServiceType(). pQmiRspTxn->GetMessageID()), ItemWString -- 10
+pQmiRspTxn->GetMessageID(), ItemLong -- 11
+pQmiRspTxn->GetResponseBlob()->GetPtr(), ItemPtr -- 12
+pQmiRspTxn->GetResponseBlob()->GetSize(), ItemLong -- 13
+pQmiRsp->GetQMIResponse(), ItemPtr -- 14
+pQmiRsp->GetQMIResponseBufLen(), ItemLong -- 15
+}
+#typev WMRilDriver_cpp1262 77 "%0%!LEVEL! %!FUNC!:%10!s!(%11!u!) resulted in transport Error = %12!s!(0x%13!04X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+Debug::QMIReqToStr(pQmiRspTxn->GetServiceType(). pQmiRspTxn->GetMessageID()), ItemWString -- 10
+pQmiRspTxn->GetMessageID(), ItemLong -- 11
+Debug::QMIClientErrToStr(transpError), ItemWString -- 12
+transpError, ItemLong -- 13
+}
+#typev WMRilDriver_cpp1253 76 "%0%!LEVEL! %!FUNC!:Message ID stored in the transaction (%10!u!) does not match the message ID (%11!u!) passed in callback." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+pQmiRspTxn->GetMessageID(), ItemLong -- 10
+pQmiRsp->GetMessageID(), ItemLong -- 11
+}
+#typev WMRilDriver_cpp1242 75 "%0%!LEVEL! %!FUNC!:Deleted txn id 0x%10!08X! from OCDB" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+dwTxnId, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1220 73 "%0%!LEVEL! %!FUNC!:Response type = %10!s! has incorrect txn id = 0x%11!08X!. Matched transaction type = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+typeid(*pRsp).name(), ItemString -- 10
+dwTxnId, ItemLong -- 11
+typeid(*pTxn).name(), ItemString -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1210 72 "%0%!LEVEL! %!FUNC!:Deleted txn id 0x%10!08X! from OCDB" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+dwTxnId, ItemLong -- 10
+}
+#typev WMRilDriver_cpp1208 71 "%0%!LEVEL! %!FUNC!:Cannot find the transaction with txn id = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+dwTxnId, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1197 70 "%0%!LEVEL! %!FUNC!:Deleted txn id 0x%10!08X! from OCDB" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+dwTxnId, ItemLong -- 10
+}
+#typev WMRilDriver_cpp1195 69 "%0%!LEVEL! %!FUNC!:pCmd is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+}
+#typev WMRilDriver_cpp1189 68 "%0%!LEVEL! %!FUNC!:Found corresponding txn id 0x%10!08X! in OCDB" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+dwTxnId, ItemLong -- 10
+}
+#typev WMRilDriver_cpp1186 67 "%0%!LEVEL! %!FUNC!:Invalid MSSR state for ProcessTimeout" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessResponse
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1156 66 "%0%!LEVEL! %!FUNC!:This timeout is ignored and will be deleted from the drivers processing list" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+}
+#typev WMRilDriver_cpp1155 65 "%0%!LEVEL! %!FUNC!:The corresponding txn id 0x%10!08X! was not found in either OCDB or OSDB" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+pTimeout->GetTxnID(), ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1149 64 "%0%!LEVEL! %!FUNC!:Unable to find transaction in STT!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+}
+#typev WMRilDriver_cpp1143 63 "%0%!LEVEL! %!FUNC!:pTxn is not a QMIIndicationTransactionClass type pointer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+}
+#typev WMRilDriver_cpp1126 62 "%0%!LEVEL! %!FUNC!:pTxn is not a QMIIndicationTransactionClass type pointer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1098 61 "%0%!LEVEL! %!FUNC!:pService is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+}
+#typev WMRilDriver_cpp1093 60 "%0%!LEVEL! %!FUNC!:Deleted txn id 0x%10!08X! from OSDB" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+dwTxnId, ItemLong -- 10
+}
+#typev WMRilDriver_cpp1090 59 "%0%!LEVEL! %!FUNC!:Found corresponding txn id 0x%10!08X! in OSDB" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+dwTxnId, ItemLong -- 10
+}
+#typev WMRilDriver_cpp1078 58 "%0%!LEVEL! %!FUNC!:Unable to find transaction in CTT!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+}
+#typev WMRilDriver_cpp1072 57 "%0%!LEVEL! %!FUNC!:pTxn is not a QMIResponseTransactionClass type pointer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+}
+#typev WMRilDriver_cpp1054 56 "%0%!LEVEL! %!FUNC!:pTxn is not a QMIIndicationTransactionClass type pointer." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+}
+#typev WMRilDriver_cpp1039 55 "%0%!LEVEL! %!FUNC!:pTxn is not a QMIIndicationTransactionClass type pointer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1004 54 "%0%!LEVEL! %!FUNC!:%10!s! processed the timeout." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+Debug::WMRilCommandNameIdToStr(pCmd->GetCommandNameId()), ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp999 53 "%0%!LEVEL! %!FUNC!:pCmd is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+}
+#typev WMRilDriver_cpp994 52 "%0%!LEVEL! %!FUNC!:Deleted txn id 0x%10!08X! from OCDB" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+dwTxnId, ItemLong -- 10
+}
+#typev WMRilDriver_cpp991 51 "%0%!LEVEL! %!FUNC!:Found corresponding txn id 0x%10!08X! in OCDB" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+dwTxnId, ItemLong -- 10
+}
+#typev WMRilDriver_cpp988 50 "%0%!LEVEL! %!FUNC!:Invalid MSSR state for ProcessTimeout" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessTimeout
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp675 34 "%0%!LEVEL! %!FUNC!:Exist thread exit signaled. Exiting the thread." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessingThread
+{
+}
+#typev WMRilDriver_cpp692 36 "%0%!LEVEL! %!FUNC!:We should not reach here. Error was 0x%10!08X!.  Exiting the thread." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessingThread
+{
+dwWait, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp703 37 "%0%!LEVEL! %!FUNC!:WaitForMultipleObjects failed. The thread is ending. Error = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessingThread
+{
+GetLastError(), ItemLong -- 10
+}
+#typev WMRilDriver_cpp680 35 "%0%!LEVEL! %!FUNC!:MSSR Event" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ProcessingThread
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2242 135 "%0%!LEVEL! %!FUNC!:Command is already in the SLDB. Ignore the request." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::RegisterCommandListener
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2213 134 "%0%!LEVEL! %!FUNC!:Service is already in the SLDB. Ignore the request." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::RegisterServiceListener
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2621 150 "%0%!LEVEL! %!FUNC!:All APPerso related commands that were pending pre-MSSR have been successfully re-added to the OCDB." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ReinsertPendingCmdsIntoOCDB
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp2644 151 "%0%!LEVEL! %!FUNC!:All Application Processor related transactions that were pending pre-MSSR have been successfully re-added to the OSDB." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::ReinsertPendingTransactionsIntoOSDB
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp295 12 "%0%!LEVEL! %!FUNC!:hOpenContext(0x%10!08X!) is not a valid client handle" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::RemoveClient
+{
+hOpenContext, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilDriver_cpp1958 122 "%0%!LEVEL! %!FUNC!:Could not remove Ril Client command ID = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::DriverClass::RemoveRilClientCommandID
+{
+dwCommandID, ItemLong -- 10
+}
+#enumv RILNOTIFICATIONS
+{
+RIL_NOTIFY_OEM_MAX,0x100000FF
+RIL_NOTIFY_RADIOEQUIPMENTSTATECHANGED,0x10000100
+RIL_NOTIFY_RADIOPRESENCECHANGED,0x10000101
+RIL_NOTIFY_UICCFILE_DATACHANGE,0x10000102
+RIL_NOTIFY_UICCAPP_DATACHANGE,0x10000103
+RIL_NOTIFY_SLOTINFOCHANGED,0x10000104
+RIL_NOTIFY_CARDAPPREMOVED,0x10000105
+RIL_NOTIFY_CARDAPPADDED,0x10000106
+RIL_NOTIFY_UICCLOCKSTATUS,0x10000107
+RIL_NOTIFY_UICCAPPPERSOCHECKSTATUS,0x10000108
+RIL_NOTIFY_PHONEBOOKENTRYDELETED,0x10000109
+RIL_NOTIFY_PHONEBOOKENTRYSTORED,0x1000010A
+RIL_NOTIFY_PHONEBOOKREADYSTATE,0x1000010B
+RIL_NOTIFY_EMERGENCYNUMBERLISTCHANGED,0x1000010C
+RIL_NOTIFY_REGSTATUSCHANGED,0x1000010D
+RIL_NOTIFY_LOCATIONUPDATE,0x1000010E
+RIL_NOTIFY_NETWORKCODECHANGED,0x1000010F
+RIL_NOTIFY_PROVISION_STATUS,0x10000110
+RIL_NOTIFY_SYSTEMPREFSCHANGED,0x10000111
+RIL_NOTIFY_EXECUTORSTATE,0x10000112
+RIL_NOTIFY_MANAGED_ROAMING,0x10000113
+RIL_NOTIFY_SIGNALQUALITY,0x10000114
+RIL_NOTIFY_NITZ,0x10000115
+RIL_NOTIFY_UICCTOOLKITCMD,0x10000116
+RIL_NOTIFY_CALLMODIFICATIONINFO,0x10000117
+RIL_NOTIFY_CALLPROGRESSINFO,0x10000118
+RIL_NOTIFY_EMERGENCYMODEENTERED,0x10000119
+RIL_NOTIFY_EMERGENCYMODEEXITED,0x1000011A
+RIL_NOTIFY_CALLWAITING,0x1000011B
+RIL_NOTIFY_DIALEDID,0x1000011C
+RIL_NOTIFY_DISPLAY,0x1000011D
+RIL_NOTIFY_SUPSVCINFO,0x1000011E
+RIL_NOTIFY_SUPSERVICEDATA,0x1000011F
+RIL_NOTIFY_UNSOLICITEDSS,0x10000120
+RIL_NOTIFY_LINECONTROL,0x10000121
+RIL_NOTIFY_MESSAGE,0x10000122
+RIL_NOTIFY_MESSAGE_IN_UICC,0x10000123
+RIL_NOTIFY_IMSSTATUS,0x10000124
+RIL_NOTIFY_ADDITIONALNUMBERSTRINGUPDATED,0x10000125
+RIL_NOTIFY_SUPSERVICEDATATERMINATED,0x10000126
+RIL_NOTIFY_CLEARIDLEMODETEXT,0x10000127
+RIL_NOTIFY_MESSAGE_STORAGE_FULL,0x10000128
+RIL_NOTIFY_TONESIGNAL,0x10000129
+RIL_NOTIFY_FORWARDSTARTDTMF,0x1000012A
+RIL_NOTIFY_FORWARDSTOPDTMF,0x1000012B
+RIL_NOTIFY_FORWARDBURSTDTMF,0x1000012C
+RIL_NOTIFY_EXECUTORFOCUSSTATECHANGED,0x1000012D
+RIL_NOTIFY_EXECUTORRFSTATE,0x1000012E
+RIL_NOTIFY_MODEMRESET,0x1000012F
+RIL_NOTIFY_RADIOCONFIGURATION,0x10000130
+RIL_NOTIFY_IMSHANDOVERATTEMPT,0x10000131
+RIL_NOTIFY_ADDITIONALCALLERINFO,0x10000132
+RIL_NOTIFY_MWISUMMARY,0x10000133
+RIL_NOTIFY_MWIDETAILS,0x10000134
+RIL_NOTIFY_IMSFAILURE,0x10000135
+RIL_NOTIFY_CONFPARTICIPANTSTATUS,0x10000136
+RIL_NOTIFY_SMSREADYSTATUS,0x10000137
+RIL_NOTIFY_REQUESTGEOLOCATIONDATA,0x10000138
+RIL_NOTIFY_RTT,0x10000139
+RIL_NOTIFY_COUNT,0x1000013A
+}
+#enumv RILCOMMANDS
+{
+RIL_COMMAND_INITNOTIFICATIONS,0x1
+RIL_COMMAND_GETNEXTNOTIFICATION,0x2
+RIL_COMMAND_ENABLENOTIFICATIONS,0x3
+RIL_COMMAND_DISABLENOTIFICATIONS,0x4
+RIL_COMMAND_GETDRIVERVERSION,0x5
+RIL_COMMAND_GETDEVCAPS,0x6
+RIL_COMMAND_GETDEVICEINFO,0x7
+RIL_COMMAND_GETEQUIPMENTSTATE,0x8
+RIL_COMMAND_SETEQUIPMENTSTATE,0x9
+RIL_COMMAND_SETNOTIFICATIONFILTERSTATE,0xA
+RIL_COMMAND_GETNOTIFICATIONFILTERSTATE,0xB
+RIL_COMMAND_ENUMERATESLOTS,0xC
+RIL_COMMAND_GETCARDINFO,0xD
+RIL_COMMAND_SETSLOTPOWER,0xE
+RIL_COMMAND_GETUICCRECORDSTATUS,0xF
+RIL_COMMAND_SENDRESTRICTEDUICCCMD,0x10
+RIL_COMMAND_WATCHUICCFILECHANGE,0x11
+RIL_COMMAND_GETUICCPRLID,0x12
+RIL_COMMAND_GETIMSI,0x13
+RIL_COMMAND_GETSUBSCRIBERNUMBERS,0x14
+RIL_COMMAND_GETUICCLOCKSTATE,0x15
+RIL_COMMAND_GETUICCSERVICELOCK,0x16
+RIL_COMMAND_VERIFYUICCLOCK,0x17
+RIL_COMMAND_SETUICCLOCKENABLED,0x18
+RIL_COMMAND_UNBLOCKUICCLOCK,0x19
+RIL_COMMAND_CHANGEUICCLOCKPASSWORD,0x1A
+RIL_COMMAND_GETUICCAPPPERSOCHECKSTATE,0x1B
+RIL_COMMAND_GETPERSODEACTIVATIONSTATE,0x1C
+RIL_COMMAND_DEACTIVATEPERSO,0x1D
+RIL_COMMAND_READPHONEBOOKENTRIES,0x1E
+RIL_COMMAND_WRITEPHONEBOOKENTRY,0x1F
+RIL_COMMAND_DELETEPHONEBOOKENTRY,0x20
+RIL_COMMAND_GETPHONEBOOKOPTIONS,0x21
+RIL_COMMAND_GETALLADDITIONALNUMBERSTRINGS,0x22
+RIL_COMMAND_GETALLEMERGENCYNUMBERS,0x23
+RIL_COMMAND_SETRADIOCONFIGURATION,0x24
+RIL_COMMAND_GETRADIOCONFIGURATION,0x25
+RIL_COMMAND_SETEXECUTORCONFIG,0x26
+RIL_COMMAND_GETEXECUTORCONFIG,0x27
+RIL_COMMAND_SETSYSTEMSELECTIONPREFS,0x28
+RIL_COMMAND_GETSYSTEMSELECTIONPREFS,0x29
+RIL_COMMAND_GETOPERATORLIST,0x2A
+RIL_COMMAND_GETPREFERREDOPERATORLIST,0x2B
+RIL_COMMAND_GETCURRENTREGSTATUS,0x2C
+RIL_COMMAND_GETSIGNALQUALITY,0x2D
+RIL_COMMAND_SENDUICCTOOLKITCMDRESPONSE,0x2F
+RIL_COMMAND_SENDUICCTOOLKITENVELOPE,0x30
+RIL_COMMAND_DIAL,0x31
+RIL_COMMAND_MANAGECALLS,0x32
+RIL_COMMAND_EMERGENCYMODECONTROL,0x33
+RIL_COMMAND_GETCALLFORWARDINGSETTINGS,0x34
+RIL_COMMAND_SETCALLFORWARDINGSTATUS,0x35
+RIL_COMMAND_ADDCALLFORWARDING,0x36
+RIL_COMMAND_REMOVECALLFORWARDING,0x37
+RIL_COMMAND_GETCALLBARRINGSTATUS,0x38
+RIL_COMMAND_SETCALLBARRINGSTATUS,0x39
+RIL_COMMAND_CHANGECALLBARRINGPASSWORD,0x3A
+RIL_COMMAND_GETCALLWAITINGSETTINGS,0x3B
+RIL_COMMAND_SETCALLWAITINGSTATUS,0x3C
+RIL_COMMAND_GETCALLERIDSETTINGS,0x3D
+RIL_COMMAND_GETDIALEDIDSETTINGS,0x3E
+RIL_COMMAND_GETHIDECONNECTEDIDSETTINGS,0x3F
+RIL_COMMAND_GETHIDEIDSETTINGS,0x40
+RIL_COMMAND_SENDFLASH,0x41
+RIL_COMMAND_SENDSUPSERVICEDATA,0x42
+RIL_COMMAND_SENDDTMF,0x43
+RIL_COMMAND_STARTDTMF,0x44
+RIL_COMMAND_STOPDTMF,0x45
+RIL_COMMAND_GETMSGSERVICEOPTIONS,0x46
+RIL_COMMAND_READMSG,0x47
+RIL_COMMAND_WRITEMSG,0x48
+RIL_COMMAND_DELETEMSG,0x49
+RIL_COMMAND_GETCELLBROADCASTMSGCONFIG,0x4A
+RIL_COMMAND_SETCELLBROADCASTMSGCONFIG,0x4B
+RIL_COMMAND_GETMSGINUICCSTATUS,0x4C
+RIL_COMMAND_SETMSGINUICCSTATUS,0x4D
+RIL_COMMAND_SETMSGMEMORYSTATUS,0x4E
+RIL_COMMAND_SENDMSG,0x4F
+RIL_COMMAND_GETSMSC,0x50
+RIL_COMMAND_SETSMSC,0x51
+RIL_COMMAND_GETIMSSTATUS,0x52
+RIL_COMMAND_GETPOSITIONINFO,0x53
+RIL_COMMAND_GETRADIOSTATEGROUPS,0x54
+RIL_COMMAND_GETRADIOSTATEDETAILS,0x55
+RIL_COMMAND_SETRADIOSTATEDETAILS,0x56
+RIL_COMMAND_RADIOSTATEPASSWORDCOMPARE,0x57
+RIL_COMMAND_RADIOSTATEGETPASSWORDRETRYCOUNT,0x58
+RIL_COMMAND_DEVSPECIFIC,0x59
+RIL_COMMAND_SETRFSTATE,0x5A
+RIL_COMMAND_GETRFSTATE,0x5B
+RIL_COMMAND_GETDMPROFILECONFIGINFO,0x5C
+RIL_COMMAND_SETDMPROFILECONFIGINFO,0x5D
+RIL_COMMAND_WRITEADDITIONALNUMBERSTRING,0x5E
+RIL_COMMAND_DELETEADDITIONALNUMBERSTRING,0x5F
+RIL_COMMAND_GETUICCATR,0x60
+RIL_COMMAND_OPENUICCLOGICALCHANNEL,0x61
+RIL_COMMAND_CLOSEUICCLOGICALCHANNEL,0x62
+RIL_COMMAND_EXCHANGEUICCAPDU,0x63
+RIL_COMMAND_SENDSUPSERVICEDATARESPONSE,0x64
+RIL_COMMAND_CANCELSUPSERVICEDATASESSION,0x65
+RIL_COMMAND_SETUICCTOOLKITPROFILE,0x66
+RIL_COMMAND_GETUICCTOOLKITPROFILE,0x67
+RIL_COMMAND_REGISTERUICCTOOLKITSERVICE,0x68
+RIL_COMMAND_SENDMSGACK,0x69
+RIL_COMMAND_CLOSEUICCLOGICALCHANNELGROUP,0x6A
+RIL_COMMAND_SETPREFERREDOPERATORLIST,0x6B
+RIL_COMMAND_GETUICCSERVICESTATE,0x6C
+RIL_COMMAND_SETUICCSERVICESTATE,0x6D
+RIL_COMMAND_GETCALLLIST,0x6E
+RIL_COMMAND_GETEXECUTORFOCUS,0x6F
+RIL_COMMAND_SETEXECUTORFOCUS,0x70
+RIL_COMMAND_GETEMERGENCYMODE,0x71
+RIL_COMMAND_GETEXECUTORRFSTATE,0x72
+RIL_COMMAND_SETEXECUTORRFSTATE,0x73
+RIL_COMMAND_RESETMODEM,0x74
+RIL_COMMAND_CANCELGETOPERATORLIST,0x75
+RIL_COMMAND_AVOIDCDMASYSTEM,0x76
+RIL_COMMAND_SETPSMEDIACONFIGURATION,0x77
+RIL_COMMAND_GETPSMEDIACONFIGURATION,0x78
+RIL_COMMAND_SETGEOLOCATIONDATA,0x79
+RIL_COMMAND_SETTERMINALCAPABILITY,0x7A
+RIL_COMMAND_GETTERMINALCAPABILITY,0x7B
+RIL_COMMAND_SENDRTT,0x7C
+RIL_COMMAND_ENABLEMODEMFILTERS,0x400
+RIL_COMMAND_DISABLEMODEMFILTERS,0x401
+RIL_COMMAND_STARTMODEMLOGS,0x402
+RIL_COMMAND_STOPMODEMLOGS,0x403
+RIL_COMMAND_DRAINMODEMLOGS,0x404
+RIL_COMMAND_COUNT,0x404
+}
+#enumv RILERRORCODES
+{
+RIL_E_PHONEFAILURE,0x81000001
+RIL_E_NOCONNECTION,0x81000002
+RIL_E_LINKRESERVED,0x81000003
+RIL_E_OPNOTALLOWED,0x81000004
+RIL_E_OPNOTSUPPORTED,0x81000005
+RIL_E_UICCNOTINSERTED,0x81000006
+RIL_E_UICCFAILURE,0x81000007
+RIL_E_UICCBUSY,0x81000008
+RIL_E_UICCWRONG,0x81000009
+RIL_E_INCORRECTPASSWORD,0x8100000A
+RIL_E_MEMORYFULL,0x8100000B
+RIL_E_INVALIDINDEX,0x8100000C
+RIL_E_NOTFOUND,0x8100000D
+RIL_E_MEMORYFAILURE,0x8100000E
+RIL_E_TEXTSTRINGTOOLONG,0x8100000F
+RIL_E_INVALIDTEXTSTRING,0x81000010
+RIL_E_DIALSTRINGTOOLONG,0x81000011
+RIL_E_INVALIDDIALSTRING,0x81000012
+RIL_E_NONETWORKSVC,0x81000013
+RIL_E_NETWORKTIMEOUT,0x81000014
+RIL_E_EMERGENCYONLY,0x81000015
+RIL_E_TELEMATICIWUNSUPPORTED,0x81000016
+RIL_E_SMTYPE0UNSUPPORTED,0x81000017
+RIL_E_CANTREPLACEMSG,0x81000018
+RIL_E_PROTOCOLIDERROR,0x81000019
+RIL_E_DCSUNSUPPORTED,0x8100001A
+RIL_E_MSGCLASSUNSUPPORTED,0x8100001B
+RIL_E_DCSERROR,0x8100001C
+RIL_E_CMDCANTBEACTIONED,0x8100001D
+RIL_E_CMDUNSUPPORTED,0x8100001E
+RIL_E_CMDERROR,0x8100001F
+RIL_E_MSGBODYHEADERERROR,0x81000020
+RIL_E_SCBUSY,0x81000021
+RIL_E_NOSCSUBSCRIPTION,0x81000022
+RIL_E_SCSYSTEMFAILURE,0x81000023
+RIL_E_INVALIDADDRESS,0x81000024
+RIL_E_DESTINATIONBARRED,0x81000025
+RIL_E_REJECTEDDUPLICATE,0x81000026
+RIL_E_VPFUNSUPPORTED,0x81000027
+RIL_E_VPUNSUPPORTED,0x81000028
+RIL_E_UICCMSGSTORAGEFULL,0x81000029
+RIL_E_NOUICCMSGSTORAGE,0x8100002A
+RIL_E_UICCTOOLKITBUSY,0x8100002B
+RIL_E_UICCDOWNLOADERROR,0x8100002C
+RIL_E_MSGSVCRESERVED,0x8100002D
+RIL_E_INVALIDMSGPARAM,0x8100002E
+RIL_E_INVALIDSCADDRESS,0x8100002F
+RIL_E_UNASSIGNEDNUMBER,0x81000030
+RIL_E_MSGBARREDBYOPERATOR,0x81000031
+RIL_E_MSGCALLBARRED,0x81000032
+RIL_E_MSGXFERREJECTED,0x81000033
+RIL_E_DESTINATIONOUTOFSVC,0x81000034
+RIL_E_UNIDENTIFIEDSUBCRIBER,0x81000035
+RIL_E_SVCUNSUPPORTED,0x81000036
+RIL_E_UNKNOWNSUBSCRIBER,0x81000037
+RIL_E_NETWKOUTOFORDER,0x81000038
+RIL_E_NETWKTEMPFAILURE,0x81000039
+RIL_E_CONGESTION,0x8100003A
+RIL_E_RESOURCESUNAVAILABLE,0x8100003B
+RIL_E_SVCNOTSUBSCRIBED,0x8100003C
+RIL_E_SVCNOTIMPLEMENTED,0x8100003D
+RIL_E_INVALIDMSGREFERENCE,0x8100003E
+RIL_E_INVALIDMSG,0x8100003F
+RIL_E_INVALIDMANDATORYINFO,0x81000040
+RIL_E_MSGTYPEUNSUPPORTED,0x81000041
+RIL_E_ICOMPATIBLEMSG,0x81000042
+RIL_E_INFOELEMENTUNSUPPORTED,0x81000043
+RIL_E_PROTOCOLERROR,0x81000044
+RIL_E_NETWORKERROR,0x81000045
+RIL_E_MESSAGINGERROR,0x81000046
+RIL_E_NOTREADY,0x81000047
+RIL_E_TIMEDOUT,0x81000048
+RIL_E_CANCELLED,0x81000049
+RIL_E_NONOTIFYCALLBACK,0x8100004A
+RIL_E_OPFMTUNAVAILABLE,0x8100004B
+RIL_E_NORESPONSETODIAL,0x8100004C
+RIL_E_SECURITYFAILURE,0x8100004D
+RIL_E_RADIOFAILEDINIT,0x8100004E
+RIL_E_DRIVERINITFAILED,0x8100004F
+RIL_E_RADIONOTPRESENT,0x81000050
+RIL_E_RADIOOFF,0x81000051
+RIL_E_ILLEGALMS,0x81000052
+RIL_E_ILLEGALME,0x81000053
+RIL_E_GPRSSERVICENOTALLOWED,0x81000054
+RIL_E_PLMNNOTALLOWED,0x81000055
+RIL_E_LOCATIONAREANOTALLOWED,0x81000056
+RIL_E_ROAMINGNOTALLOWEDINTHISLOCATIONAREA,0x81000057
+RIL_E_SERVICEOPTIONNOTSUPPORTED,0x81000058
+RIL_E_REQUESTEDSERVICEOPTIONNOTSUBSCRIBED,0x81000059
+RIL_E_SERVICEOPTIONTEMPORARILYOUTOFORDER,0x8100005A
+RIL_E_PDPAUTHENTICATIONFAILURE,0x8100005B
+RIL_E_INVALIDMOBILECLASS,0x8100005C
+RIL_E_UNSPECIFIEDGPRSERROR,0x8100005D
+RIL_E_RADIOREBOOTED,0x8100005E
+RIL_E_INVALIDCONTEXTSTATE,0x8100005F
+RIL_E_MAXCONTEXTS,0x81000060
+RIL_E_SYNCHRONOUS_DATA_UNAVAILABLE,0x81000061
+RIL_E_FDNRESTRICT,0x81000062
+RIL_E_INVALIDASYNCCOMMANDRESPONSE,0x81000063
+RIL_E_INCOMPATIBLEPROXYDRIVER,0x81000064
+RIL_E_INVALIDDRIVERVERSION,0x81000065
+RIL_E_USIMCALLMODIFIED,0x81000066
+RIL_E_PASSWORDMISMATCH,0x81000067
+RIL_E_INVALIDCONTEXTACTIVATIONSTRING,0x81000068
+RIL_E_UICCAPPINACCESSIBLE,0x81000069
+RIL_E_UICCPINREQUIRED,0x8100006A
+RIL_E_UICCPUKREQUIRED,0x8100006B
+RIL_E_UICCPUKBLOCKED,0x8100006C
+RIL_E_EXECUTORNOTREADY,0x8100006D
+RIL_E_INVALIDUICCKEYREF,0x8100006E
+RIL_E_UICCINACTIVE,0x8100006F
+RIL_E_PERSOPUKREQUIRED,0x81000070
+RIL_E_PERSOPUKBLOCKED,0x81000071
+RIL_E_PERSOCHECKFAILED,0x81000072
+RIL_E_INVALIDUICCPATH,0x81000073
+RIL_E_IMSTEMPFAILURE,0x81000074
+RIL_E_UICCNOTREADY,0x81000075
+RIL_E_UICCPOWEROFF,0x81000076
+RIL_E_CALLISACTIVE,0x81000077
+RIL_E_USIMCALLBLOCKED,0x81000078
+RIL_E_UICCADMRESTRICTED,0x81000079
+RIL_E_DMSERVICENOTREADY,0x8100007A
+RIL_E_DMGETCONFIGFAILED,0x8100007B
+RIL_E_DMCOMMITFAILED,0x8100007C
+RIL_E_OTHEREXECUTORBUSY,0x8100007D
+RIL_E_IMSNOHANDOVERTARGETFOUND,0x8100007E
+RIL_E_VCCHANDOVERINPROGRESS,0x8100007F
+RIL_E_INVALIDREMOTEURI,0x81000080
+RIL_E_ECTNOTALLOWED,0x81000081
+RIL_E_ECTCALLINCONF,0x81000082
+RIL_E_ECTCALLNOTONHOLD,0x81000083
+RIL_E_ECTNOTSUBSCRIBED,0x81000084
+RIL_E_ECTUNAVAILABLE,0x81000085
+RIL_E_ECTINCOMPATIBLE,0x81000086
+RIL_E_ECTNOTSUPPORTED,0x81000087
+RIL_E_ECTSYSTEMERROR,0x81000088
+RIL_E_ECTNORESOURCE,0x81000089
+RIL_E_ECTCALLBARRED,0x8100008A
+RIL_E_ECTUNKNOWN,0x8100008B
+RIL_E_IMSCALLISACTIVE,0x8100008C
+}

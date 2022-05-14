@@ -1,0 +1,117 @@
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+b3d64d00-40c7-3a24-6540-ebd74f02a297 10.4 // SRC=bam.c MJ= MN=
+#typev bam_c152 11 "%0BamPipeInitFunc() failed" //   FLAGS=ERROR FUNC=allocate_pipe
+{
+}
+#typev bam_c126 10 "%0failed to allocate uncached memory for descriptors" //   FLAGS=ERROR FUNC=allocate_pipe
+{
+}
+#typev bam_c231 20 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=bam_completion
+{
+}
+#typev bam_c218 19 "%0xfer_cb_data     = 0x%10!p!" //   FLAGS=INFO FUNC=bam_completion
+{
+bam_result.data.Xfer.xfer_cb_data, ItemPtr -- 10
+}
+#typev bam_c217 18 "%0accum_size_bytes = 0x%10!08X!" //   FLAGS=INFO FUNC=bam_completion
+{
+bam_result.data.Xfer.accum_size_bytes, ItemLong -- 10
+}
+#typev bam_c216 17 "%0iovec.Flags      = 0x%10!04X! (%11!s!)" //   FLAGS=INFO FUNC=bam_completion
+{
+bam_result.data.Xfer.iovec.Flags, ItemLong -- 10
+fstr, ItemString -- 11
+}
+#typev bam_c215 16 "%0iovec.Size       = 0x%10!04X!" //   FLAGS=INFO FUNC=bam_completion
+{
+bam_result.data.Xfer.iovec.Size, ItemLong -- 10
+}
+#typev bam_c214 15 "%0iovec.BufPa      = 0x%10!08X!" //   FLAGS=INFO FUNC=bam_completion
+{
+bam_result.data.Xfer.iovec.BufPa, ItemLong -- 10
+}
+#typev bam_c213 14 "%0event            = 0x%10!08X! (%11!s!)" //   FLAGS=INFO FUNC=bam_completion
+{
+bam_result.event, ItemLong -- 10
+event_str, ItemString -- 11
+}
+#typev bam_c212 13 "%0cb_data          = 0x%10!p!" //   FLAGS=INFO FUNC=bam_completion
+{
+bam_result.cb_data, ItemPtr -- 10
+}
+#typev bam_c181 12 "%0+%!FUNC!(0x%10!p!)" //   FLAGS=FUNCTION FUNC=bam_completion
+{
+&bam_result, ItemPtr -- 10
+}
+#typev bam_c342 28 "%0IoCallDriver(IRP_MN_QUERY_INTERFACE) failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=get_bam_interface
+{
+status, ItemLong -- 10
+}
+#typev bam_c335 27 "%0IoCallDriver(IRP_MN_QUERY_INTERFACE) returned STATUS_PENDING... waiting" //   FLAGS=INFO FUNC=get_bam_interface
+{
+}
+#typev bam_c316 26 "%0IoBuildSynchronousFsdRequest() failed" //   FLAGS=ERROR FUNC=get_bam_interface
+{
+}
+#typev bam_c304 25 "%0IoGetDeviceObjectPointer() failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=get_bam_interface
+{
+status, ItemLong -- 10
+}
+#typev bam_c296 24 "%0BAM interface name = "%10!s!"" //   FLAGS=INFO FUNC=get_bam_interface
+{
+name, ItemWString -- 10
+}
+#typev bam_c292 23 "%0failed to find BAM instance with matching physical address" //   FLAGS=ERROR FUNC=get_bam_interface
+{
+}
+#typev bam_c287 35 "%0BAM physical address = 0x%10!08X!" //   FLAGS=INFO FUNC=get_bam_interface
+{
+physical_address, ItemLong -- 10
+}
+#typev bam_c287 34 "%0ZwDeviceIoControlFile() failed (0x%10!08X!): Status = 0x%11!08X!, Info = 0x%12!IX!)" //   FLAGS=ERROR FUNC=get_bam_interface
+{
+status, ItemLong -- 10
+io_status.Status, ItemLong -- 11
+io_status.Information, ItemPtr -- 12
+}
+#typev bam_c287 33 "%0ZwOpenFile() failed (0x%10!08X!): Status = 0x%11!08X!, Info = 0x%12!IX!)" //   FLAGS=ERROR FUNC=get_bam_interface
+{
+status, ItemLong -- 10
+io_status.Status, ItemLong -- 11
+io_status.Information, ItemPtr -- 12
+}
+#typev bam_c279 22 "%0BAM device interface not found" //   FLAGS=ERROR FUNC=get_bam_interface
+{
+}
+#typev bam_c275 21 "%0IoGetDeviceInterfaces() failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=get_bam_interface
+{
+status, ItemLong -- 10
+}
+#typev bam_c371 31 "%0get_bam_properties: bam_pipe_rx = 0x%10!08X!" //   FLAGS=INFO FUNC=get_bam_properties
+{
+bam_ctxt->bam_pipe_rx, ItemLong -- 10
+}
+#typev bam_c370 30 "%0get_bam_properties: bam_pipe_tx = 0x%10!08X!" //   FLAGS=INFO FUNC=get_bam_properties
+{
+bam_ctxt->bam_pipe_tx, ItemLong -- 10
+}
+#typev bam_c369 29 "%0get_bam_properties: bam_base    = 0x%10!08X!" //   FLAGS=INFO FUNC=get_bam_properties
+{
+bam_ctxt->bam_base, ItemLong -- 10
+}
+#typev bam_c375 32 "%0get_bam_properties: failed" //   FLAGS=ERROR FUNC=get_bam_properties
+{
+}
+#typev bam_c537 40 "%0BamPipeTransferFunc() failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=transfer_start
+{
+status, ItemLong -- 10
+}
+#typev bam_c521 39 "%0queueing multiple descriptors per pipe is not presently supported" //   FLAGS=ERROR FUNC=transfer_start
+{
+}
+#typev bam_c514 38 "%0transfer size (%10!d!) is greater than max allowed (%11!d!)" //   FLAGS=ERROR FUNC=transfer_start
+{
+descriptor->bytes_to_transfer, ItemLong -- 10
+max_length, ItemLong -- 11
+}

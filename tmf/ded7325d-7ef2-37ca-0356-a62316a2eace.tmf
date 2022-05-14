@@ -1,0 +1,115 @@
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+ded7325d-7ef2-37ca-0356-a62316a2eace qcgpi // SRC=gpi_i.c MJ= MN=
+#typev gpi_i_c527 43 "%0 [%!FUNC!]gpi already initialized!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=gpi_common_init
+{
+}
+#typev gpi_i_c463 42 "%0 [%!FUNC!]Allocated GPI evt rings memory: Virt Aligned: 0x%10!I64x!, Phys Aligned 0x%11!I64x!, Size: %12!d! bytes" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=gpi_common_init
+{
+gpi->EvtRingMemProps.VirtAligned, ItemLongLongX -- 10
+gpi->EvtRingMemProps.PhysAligned, ItemLongLongX -- 11
+sizeof(GPI_EVT_RINGS_SEG_TYPE), ItemLong -- 12
+}
+#typev gpi_i_c455 41 "%0 [%!FUNC!]ERROR - failed to allocate contiguous memory, exiting" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=gpi_common_init
+{
+}
+#typev gpi_i_c444 40 "%0 [%!FUNC!]ERROR - spawn_threads() failed , exiting" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=gpi_common_init
+{
+}
+#typev gpi_i_c404 37 "%0 [%!FUNC!]ERROR - gpii ID: %10!d! HW not ready" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=gpii_init
+{
+gpii->id, ItemLong -- 10
+}
+#typev gpi_i_c409 38 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=gpii_init
+{
+}
+#typev gpi_i_c351 35 "%0 [%!FUNC!]gpii ID: %10!d! already initialized, returning" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=gpii_init
+{
+gpii->id, ItemLong -- 10
+}
+#typev gpi_i_c347 34 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=gpii_init
+{
+}
+#typev gpi_i_c171 23 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+}
+#typev gpi_i_c165 22 "%0 [%!FUNC!]Evt ring cmd issued" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+}
+#typev gpi_i_c160 21 "%0 [%!FUNC!]chan cmd issued" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+}
+#typev gpi_i_c130 19 "%0 [%!FUNC!]ERROR - CMD_DB_STOP, current state: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+curr_state, ItemLong -- 10
+}
+#typev gpi_i_c146 20 "%0 [%!FUNC!]ERROR - default cmd_type: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+cmd_type, ItemLong -- 10
+}
+#typev gpi_i_c120 18 "%0 [%!FUNC!]ERROR - CMD_DE_ALLOC, current state: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+curr_state, ItemLong -- 10
+}
+#typev gpi_i_c81 14 "%0 [%!FUNC!]ERROR - CMD_ALLOCATE, current state: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+curr_state, ItemLong -- 10
+}
+#typev gpi_i_c91 15 "%0 [%!FUNC!]ERROR - CMD_START, current state: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+curr_state, ItemLong -- 10
+}
+#typev gpi_i_c100 16 "%0 [%!FUNC!]ERROR - CMD_STOP, current state: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+curr_state, ItemLong -- 10
+}
+#typev gpi_i_c112 17 "%0 [%!FUNC!]ERROR - CMD_RESET, current state: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+curr_state, ItemLong -- 10
+}
+#typev gpi_i_c69 13 "%0 [%!FUNC!]ERROR - pending command: %10!d! for GPII ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+gpii->pending_cmd, ItemLong -- 10
+gpii->id, ItemLong -- 11
+}
+#typev gpi_i_c59 12 "%0 [%!FUNC!]ERROR - command: %10!d! not allowed for event rings" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+cmd_type, ItemLong -- 10
+}
+#typev gpi_i_c52 11 "%0 [%!FUNC!]gpii ID: %10!d!, chan: %11!d!, cmd_type: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+gpii->id, ItemLong -- 10
+chan, ItemLong -- 11
+cmd_type, ItemLong -- 12
+}
+#typev gpi_i_c51 10 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=issue_cmd
+{
+}
+#typev gpi_i_c254 26 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=set_gpii_chan
+{
+}
+#typev gpi_i_c246 25 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=set_gpii_chan
+{
+}
+#typev gpi_i_c332 33 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=set_gpii_params
+{
+}
+#typev gpi_i_c325 28 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=set_gpii_params
+{
+}
+#typev gpi_i_c325 27 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=set_gpii_params
+{
+}
+#typev gpi_i_c319 31 "%0 [%!FUNC!]ERROR - Failed to set gpii ID: %10!d! chan %11!d!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=set_gpii_params
+{
+gpii->id, ItemLong -- 10
+GPI_OUTBOUND_CHAN, ItemLong -- 11
+}
+#typev gpi_i_c313 30 "%0 [%!FUNC!]ERROR - Failed to set gpii ID: %10!d! chan %11!d!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=set_gpii_params
+{
+gpii->id, ItemLong -- 10
+GPI_INBOUND_CHAN, ItemLong -- 11
+}
+#typev gpi_i_c298 29 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=set_gpii_params
+{
+}

@@ -1,0 +1,74 @@
+// PDB:  QcTftpKmdf850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+4691ea12-a7a0-3602-0043-34be322ca9ae kmdf // SRC=tftp_connection.c MJ= MN=
+#typev tftp_connection_c492 21 "%4!s! | tftp_connection.c(492) | %!FUNC! :: ERROR!Connect failed. Socket Descriptor = %10!d! | Errno = %11!s! | msg = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QCTFTP_KMDF FUNC=tftp_connection_connect
+{
+tftp_socket_get_socket_desc (&handle->socket_handle), ItemLong -- 10
+err_num, ItemListLong(EOK,EPERM,ENOENT,ESRCH,EINTR,EIO,ENXIO,E2BIG,ENOEXEC,EBADF,ECHILD,EAGAIN,ENOMEM,EACCES,EFAULT,ENOTBLK,EBUSY,EEXIST,EXDEV,ENODEV,ENOTDIR,EISDIR,EINVAL,ENFILE,EMFILE,ENOTTY,ETXTBSY,EFBIG,ENOSPC,ESPIPE,EROFS,EMLINK,EPIPE,EDOM,ERANGE,EDEADLK,ENAMETOOLONG,ENOLCK,ENOSYS,ENOTEMPTY,ELOOP,ENOMSG,EIDRM,ECHRNG,EL2NSYN,EL3HLT,EL3RST,ELNRNG,EUNATCH,ENOCSI,EL2HLT) -- 11
+tftp_strerror (err_num), ItemString -- 12
+}
+#typev tftp_connection_c472 20 "%4!s! | tftp_connection.c(472) ::Connect socket descriptor = %10!d! [%11!d!, %12!d!] -> [%13!d!, %14!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=tftp_connection_connect
+{
+tftp_socket_get_socket_desc (&handle->socket_handle), ItemLong -- 10
+handle->con_local_addr.u.port_addr.proc_id, ItemLong -- 11
+handle->con_local_addr.u.port_addr.port_id, ItemLong -- 12
+handle->con_remote_addr.u.port_addr.proc_id, ItemLong -- 13
+handle->con_remote_addr.u.port_addr.port_id, ItemLong -- 14
+}
+#typev tftp_connection_c337 17 "%4!s! | tftp_connection.c(337) | %!FUNC! :: ERROR!Receive failed. Socket Descriptor = %10!d! | Errno = %11!s! | Error Msg = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QCTFTP_KMDF FUNC=tftp_connection_get_data
+{
+tftp_socket_get_socket_desc (&handle->socket_handle), ItemLong -- 10
+err_num, ItemListLong(EOK,EPERM,ENOENT,ESRCH,EINTR,EIO,ENXIO,E2BIG,ENOEXEC,EBADF,ECHILD,EAGAIN,ENOMEM,EACCES,EFAULT,ENOTBLK,EBUSY,EEXIST,EXDEV,ENODEV,ENOTDIR,EISDIR,EINVAL,ENFILE,EMFILE,ENOTTY,ETXTBSY,EFBIG,ENOSPC,ESPIPE,EROFS,EMLINK,EPIPE,EDOM,ERANGE,EDEADLK,ENAMETOOLONG,ENOLCK,ENOSYS,ENOTEMPTY,ELOOP,ENOMSG,EIDRM,ECHRNG,EL2NSYN,EL3HLT,EL3RST,ELNRNG,EUNATCH,ENOCSI,EL2HLT) -- 11
+tftp_strerror(err_num), ItemString -- 12
+}
+#typev tftp_connection_c347 18 "%4!s! | tftp_connection.c(347) | %!FUNC! :: ERROR!Receive failed due to remote hangup. Socket Descriptor = %10!d! | Errno = %11!s! | Error Msg = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QCTFTP_KMDF FUNC=tftp_connection_get_data
+{
+tftp_socket_get_socket_desc (&handle->socket_handle), ItemLong -- 10
+err_num, ItemListLong(EOK,EPERM,ENOENT,ESRCH,EINTR,EIO,ENXIO,E2BIG,ENOEXEC,EBADF,ECHILD,EAGAIN,ENOMEM,EACCES,EFAULT,ENOTBLK,EBUSY,EEXIST,EXDEV,ENODEV,ENOTDIR,EISDIR,EINVAL,ENFILE,EMFILE,ENOTTY,ETXTBSY,EFBIG,ENOSPC,ESPIPE,EROFS,EMLINK,EPIPE,EDOM,ERANGE,EDEADLK,ENAMETOOLONG,ENOLCK,ENOSYS,ENOTEMPTY,ELOOP,ENOMSG,EIDRM,ECHRNG,EL2NSYN,EL3HLT,EL3RST,ELNRNG,EUNATCH,ENOCSI,EL2HLT) -- 11
+tftp_strerror(err_num), ItemString -- 12
+}
+#typev tftp_connection_c307 16 "%4!s! | tftp_connection.c(307) ::RECV: Socket Descriptor = %10!d! | Received Size = %11!d! | Received from Remote Port [Proc, Port] = [%12!d!, %13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=tftp_connection_get_data
+{
+tftp_socket_get_socket_desc (&handle->socket_handle), ItemLong -- 10
+received_size, ItemLong -- 11
+handle->con_remote_addr.u.port_addr.proc_id, ItemLong -- 12
+handle->con_remote_addr.u.port_addr.port_id, ItemLong -- 13
+}
+// PDB:  QcTftpKmdf850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev tftp_connection_c61 10 "%4!s! | tftp_connection.c(61) | %!FUNC! :: ERROR!Socket open failed Errno = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QCTFTP_KMDF FUNC=tftp_connection_open
+{
+tftp_socket_get_last_errno (&handle->socket_handle), ItemListLong(EOK,EPERM,ENOENT,ESRCH,EINTR,EIO,ENXIO,E2BIG,ENOEXEC,EBADF,ECHILD,EAGAIN,ENOMEM,EACCES,EFAULT,ENOTBLK,EBUSY,EEXIST,EXDEV,ENODEV,ENOTDIR,EISDIR,EINVAL,ENFILE,EMFILE,ENOTTY,ETXTBSY,EFBIG,ENOSPC,ESPIPE,EROFS,EMLINK,EPIPE,EDOM,ERANGE,EDEADLK,ENAMETOOLONG,ENOLCK,ENOSYS,ENOTEMPTY,ELOOP,ENOMSG,EIDRM,ECHRNG,EL2NSYN,EL3HLT,EL3RST,ELNRNG,EUNATCH,ENOCSI,EL2HLT) -- 10
+}
+#typev tftp_connection_c79 11 "%4!s! | tftp_connection.c(79) ::Connection opened socket descriptor = %10!d!, name = [sid = %11!d!, iid = %12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=tftp_connection_open
+{
+tftp_socket_get_socket_desc (&handle->socket_handle), ItemLong -- 10
+handle->con_remote_addr.u.name_addr.service_id, ItemLong -- 11
+handle->con_remote_addr.u.name_addr.instance_id, ItemLong -- 12
+}
+#typev tftp_connection_c95 12 "%4!s! | tftp_connection.c(95) ::Connection opened socket descriptor = %10!d!, port = [proc = %11!d!, port = %12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=tftp_connection_open
+{
+tftp_socket_get_socket_desc (&handle->socket_handle), ItemLong -- 10
+handle->con_remote_addr.u.port_addr.proc_id, ItemLong -- 11
+handle->con_remote_addr.u.port_addr.port_id, ItemLong -- 12
+}
+#typev tftp_connection_c232 15 "%4!s! | tftp_connection.c(232) | %!FUNC! :: ERROR!SEND failed : Socket Descriptor = %10!d! | Buffer Size = %11!d! | Errno = %12!s! | Error Msg = %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QCTFTP_KMDF FUNC=tftp_connection_send_data
+{
+tftp_socket_get_socket_desc (&handle->socket_handle), ItemLong -- 10
+buffer_size, ItemLong -- 11
+err_num, ItemListLong(EOK,EPERM,ENOENT,ESRCH,EINTR,EIO,ENXIO,E2BIG,ENOEXEC,EBADF,ECHILD,EAGAIN,ENOMEM,EACCES,EFAULT,ENOTBLK,EBUSY,EEXIST,EXDEV,ENODEV,ENOTDIR,EISDIR,EINVAL,ENFILE,EMFILE,ENOTTY,ETXTBSY,EFBIG,ENOSPC,ESPIPE,EROFS,EMLINK,EPIPE,EDOM,ERANGE,EDEADLK,ENAMETOOLONG,ENOLCK,ENOSYS,ENOTEMPTY,ELOOP,ENOMSG,EIDRM,ECHRNG,EL2NSYN,EL3HLT,EL3RST,ELNRNG,EUNATCH,ENOCSI,EL2HLT) -- 12
+tftp_strerror (err_num), ItemString -- 13
+}
+#typev tftp_connection_c197 14 "%4!s! | tftp_connection.c(197) ::SEND: Socket Descriptor = %10!d! | Buffer Size = %11!d! | Sent to Remote [Proc, Port] = [%12!d!, %13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=tftp_connection_send_data
+{
+tftp_socket_get_socket_desc(&handle->socket_handle), ItemLong -- 10
+buffer_size, ItemLong -- 11
+handle->con_remote_addr.u.port_addr.proc_id, ItemLong -- 12
+handle->con_remote_addr.u.port_addr.port_id, ItemLong -- 13
+}
+// PDB:  QcTftpKmdf850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev tftp_protocol_c209 19 "%4!s! | tftp_connection.c(393) ::close socket descriptor = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=tftp_protocol_close_connection
+{
+tftp_socket_get_socket_desc (&handle->socket_handle), ItemLong -- 10
+}

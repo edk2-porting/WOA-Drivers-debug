@@ -1,0 +1,457 @@
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+2123034b-5512-38f5-f8d2-1e8cb07fb263 PEP // SRC=PEP_Thermal.c MJ= MN=
+#typev PEP_Thermal_c2328 69 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2328 :WdfRequestRetrieveInputBuffer failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=GetTSENSTempForGivenIdx
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c2316 68 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2316 :WdfRequestRetrieveOutputBuffer failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=GetTSENSTempForGivenIdx
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c2452 70 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2452 :WdfRequestRetrieveOutputBuffer failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=GetTSENSTemperatures
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c3857 124 "%0 [Warn] PEP_Thermal.c::%!FUNC! :Need to enable LTVR in registry" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=UpdateThermalConstraints
+{
+}
+#typev PEP_Thermal_c2906 87 "%0 [Info] PEP_Thermal.c::%!FUNC! :TSENS %10!d! Request%11!d! queued" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=AddLimitToTsens
+{
+limCtxt->tsens, ItemLong -- 10
+limCtxt->reqId, ItemLong -- 11
+}
+#typev PEP_Thermal_c1080 38 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1080 :limitsCollection is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=AddThermalRestrictions
+{
+}
+#typev PEP_Thermal_c1072 37 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1072 :WdfCollectionAdd for limitsCollection failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=AddThermalRestrictions
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c1049 36 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1049 :WdfObjectCreate failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=AddThermalRestrictions
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c1140 40 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1140 :limObj is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_HIBERNATE FUNC=AddThermalRestrictionsAtThermalReInit
+{
+}
+#typev PEP_Thermal_c1135 39 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1135 :objCtxt is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_HIBERNATE FUNC=AddThermalRestrictionsAtThermalReInit
+{
+}
+#typev PEP_Thermal_c1623 53 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1623 :lower threshold failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=BracketTSENS
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c1611 52 "%0 [Warn] PEP_Thermal.c::%!FUNC! :Sensor%10!d!, lowTempThresh %11!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=BracketTSENS
+{
+aSensor, ItemLong -- 10
+lowTempThresh, ItemLong -- 11
+}
+#typev PEP_Thermal_c1585 51 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1585 :upper threshold failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=BracketTSENS
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c1573 50 "%0 [Warn] PEP_Thermal.c::%!FUNC! :Sensor%10!d!, highTempThresh %11!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=BracketTSENS
+{
+aSensor, ItemLong -- 10
+highTempThresh, ItemLong -- 11
+}
+#typev PEP_Thermal_c3518 110 "%0 [Info] PEP_Thermal.c::%!FUNC! :NPUR set to %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingEnforce
+{
+inputBuffer.IntegerArgument, ItemLong -- 10
+}
+#typev PEP_Thermal_c3512 109 "%0 [Err ] PEP_Thermal.c::%!FUNC!::3512 :WdfIoTargetSendIoctlSynchronously failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingEnforce
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c3466 108 "%0 [Info] PEP_Thermal.c::%!FUNC! :NumParkCpus thermal:%10!d!, bcl:%11!d!, forced:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingEnforce
+{
+gNumParkCpus.thermal, ItemLong -- 10
+gNumParkCpus.bcl, ItemLong -- 11
+gNumParkCpus.forced, ItemLong -- 12
+}
+#typev PEP_Thermal_c3435 107 "%0 [Info] PEP_Thermal.c::%!FUNC! :BCL parking event off" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingForBCL
+{
+}
+#typev PEP_Thermal_c3430 106 "%0 [Info] PEP_Thermal.c::%!FUNC! :Unpark Timer stopped" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingForBCL
+{
+}
+#typev PEP_Thermal_c3424 105 "%0 [Info] PEP_Thermal.c::%!FUNC! :BCL parking event on" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingForBCL
+{
+}
+#typev PEP_Thermal_c3334 102 "%0 [Info] PEP_Thermal.c::%!FUNC! :CPUParkingPassiveCooling: %10!d! percent" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingPassiveCooling
+{
+Percentage, ItemLong -- 10
+}
+#typev PEP_Thermal_c3330 101 "%0 [Err ] PEP_Thermal.c::%!FUNC!::3330 :Context is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingPassiveCooling
+{
+}
+#typev PEP_Thermal_c3641 115 "%0 [Err ] PEP_Thermal.c::%!FUNC!::3641 :WdfTimerCreate failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingTimerInit
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c3628 114 "%0 [Info] PEP_Thermal.c::%!FUNC! :CPUParkingTimerInit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingTimerInit
+{
+}
+#typev PEP_Thermal_c3686 120 "%0 [Info] PEP_Thermal.c::%!FUNC! :Timer stopped" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingTimerThread
+{
+}
+#typev PEP_Thermal_c3680 119 "%0 [Info] PEP_Thermal.c::%!FUNC! :Timer stopped" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingTimerThread
+{
+}
+#typev PEP_Thermal_c3674 118 "%0 [Info] PEP_Thermal.c::%!FUNC! :Timer start" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingTimerThread
+{
+}
+#typev PEP_Thermal_c3667 117 "%0 [Info] PEP_Thermal.c::%!FUNC! :Timer start" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingTimerThread
+{
+}
+#typev PEP_Thermal_c3662 116 "%0 [Info] PEP_Thermal.c::%!FUNC! :Enter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CPUParkingTimerThread
+{
+}
+#typev PEP_Thermal_c393 10 "%0 [Info] PEP_Thermal.c::%!FUNC! :AcquireLock Done" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_LMH FUNC=CheckForInterfaceArrivalCB
+{
+}
+#typev PEP_Thermal_c2052 59 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2052 :GetvTSENSTemp for Sensor: %10!d! failed with status: %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CheckTempsAndSetLimits
+{
+hidSensor, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_c2046 58 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hid%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=CheckTempsAndSetLimits
+{
+hidCtxt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_c5011 131 "%0 [Err ] PEP_Thermal.c::%!FUNC!::5011 :Hibernate :QMI Instance 0x%10!x! was already closed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_HIBERNATE FUNC=CloseQmiInterfaces
+{
+gThermalSensorConfigurations.QmiTmdDev[i].instance, ItemLong -- 10
+}
+#typev PEP_Thermal_c4998 130 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate :attempting to close Qmi Interfaces %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=CloseQmiInterfaces
+{
+gThermalSensorConfigurations.QmiTmdDev[i].instance, ItemLong -- 10
+}
+#typev PEP_Thermal_c3146 100 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate :Wait for pending workItems for %10!d! sensor " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=DeInitThermalDevice
+{
+hidCtxt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_c3141 99 "%0 [Err ] PEP_Thermal.c::%!FUNC!::3141 :Hibernate : upper threshold failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_HIBERNATE FUNC=DeInitThermalDevice
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c3128 98 "%0 [Err ] PEP_Thermal.c::%!FUNC!::3128 :Hibernate : Lower threshold failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_HIBERNATE FUNC=DeInitThermalDevice
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c3112 97 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate :DeInitThermalDevice " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=DeInitThermalDevice
+{
+}
+#typev PEP_Thermal_c3789 123 "%0 [Warn] PEP_Thermal.c::%!FUNC! :calling IsVFCModeOn from dummy function" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=DummyIsVFCModeOn
+{
+}
+#typev PEP_Thermal_c1927 57 "%0 [Warn] PEP_Thermal.c::%!FUNC! :LTVR Disabled" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=EnbVFC
+{
+}
+#typev PEP_Thermal_c1916 56 "%0 [Warn] PEP_Thermal.c::%!FUNC! :LTVR Enabled" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=EnbVFC
+{
+}
+#typev PEP_Thermal_c1188 41 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1188 :Tsens_GetTemp failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=GetTSENSTemp
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c2844 86 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2844 :WdfTimerCreate failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=HandleReadTemperatureRequest
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c2821 85 "%0 [Info] PEP_Thermal.c::%!FUNC! :HID%10!d! Request%11!d! queued" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=HandleReadTemperatureRequest
+{
+devExt->sensor, ItemLong -- 10
+devExt->reqId, ItemLong -- 11
+}
+#typev PEP_Thermal_c2807 84 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2807 :devExt->outstandingRequest is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=HandleReadTemperatureRequest
+{
+}
+#typev PEP_Thermal_c2789 83 "%0 [Info] PEP_Thermal.c::%!FUNC! :HID%10!d! Request%11!d! satisfied immediately: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=HandleReadTemperatureRequest
+{
+devExt->sensor, ItemLong -- 10
+requestId, ItemLong -- 11
+temperatureACPI, ItemLong -- 12
+}
+#typev PEP_Thermal_c2782 82 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2782 :GetvTSENSTemp for sensor:%10!d! failed with status: %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=HandleReadTemperatureRequest
+{
+devExt->sensor, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_c2752 81 "%0 [Info] PEP_Thermal.c::%!FUNC! :HID%10!d! Request%11!d! - Low:%12!d! High: %13!d! Timeout: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=HandleReadTemperatureRequest
+{
+devExt->sensor, ItemLong -- 10
+requestId, ItemLong -- 11
+thermalInput->LowTemperature, ItemLong -- 12
+thermalInput->HighTemperature, ItemLong -- 13
+thermalInput->Timeout, ItemLong -- 14
+}
+#typev PEP_Thermal_c2742 80 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2742 :Read buffersize error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=HandleReadTemperatureRequest
+{
+}
+#typev PEP_Thermal_c2735 79 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2735 :Data read error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=HandleReadTemperatureRequest
+{
+}
+#typev PEP_Thermal_c2731 78 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2731 :IO read error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=HandleReadTemperatureRequest
+{
+}
+#typev PEP_Thermal_c4918 128 "%0 [Info] PEP_Thermal.c::%!FUNC! :Trigger master workItem for QMI Instance 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=InitQmiWorkItems
+{
+gThermalSensorConfigurations.QmiTmdDev[i].instance, ItemLong -- 10
+}
+#typev PEP_Thermal_c1860 55 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1860 :aRestr->handleRestriction failed with status: %10!x! for high temperature count: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=IsBoostRestrOn
+{
+status, ItemLong -- 10
+highTempCnt, ItemLong -- 11
+}
+#typev PEP_Thermal_c3885 125 "%0 [Info] PEP_Thermal.c::%!FUNC! :TSENS%10!d!: %11!d! C" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=LogTemperature
+{
+aSensor, ItemLong -- 10
+tempC, ItemLong -- 11
+}
+#typev PEP_Thermal_c3000 90 "%0 [Err ] PEP_Thermal.c::%!FUNC!::3000 :InputBufferLength is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=OnThermalReadTemperature
+{
+}
+#typev PEP_Thermal_c2983 89 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2983 :Input read buffer failed status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=OnThermalReadTemperature
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c694 25 "%0 [Info] PEP_Thermal.c::%!FUNC! :Thermal zone arrived %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=PEPThermalEvtDeviceD0Entry
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_c691 24 "%0 [Info] PEP_Thermal.c::%!FUNC! :Regular boot " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=PEPThermalEvtDeviceD0Entry
+{
+}
+#typev PEP_Thermal_c686 23 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate : Thermal zone arrived %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=PEPThermalEvtDeviceD0Entry
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_c676 22 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate : ReInit QMI interface attempted by %10!d! sensor" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=PEPThermalEvtDeviceD0Entry
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_c672 21 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate : Entering PEPThermalEvtDeviceD0Entry " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=PEPThermalEvtDeviceD0Entry
+{
+}
+#typev PEP_Thermal_c632 20 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate : Thermal zone removed %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=PEPThermalEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_c626 19 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hiberbate: Closing QMI handle by sensor device %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=PEPThermalEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_c618 18 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hiberbate: PEPThermalEvtDeviceD0Exit: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=PEPThermalEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_c2267 67 "%0 [Info] PEP_Thermal.c::%!FUNC! :TSENS%10!d!: %11!d! C" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_LMH FUNC=PollCPUTemperatures
+{
+i, ItemLong -- 10
+tempC, ItemLong -- 11
+}
+#typev PEP_Thermal_c2260 66 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2260 :GetvTSENSTemp for sensor:%10!d! failed with status: %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=PollCPUTemperatures
+{
+i, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_c2233 65 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2233 :GetVadcTemp for sensor:%10!d! failed with status: %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=PollTemperatures
+{
+i, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_c2222 64 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2222 :GetvTSENSTemp for sensor:%10!d! failed with status: %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=PollTemperatures
+{
+i, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_c2211 63 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2211 :GetTSENSTemp for sensor:%10!d! failed with status: %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=PollTemperatures
+{
+i, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_c4955 129 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate :Trigger master workItem for QMI Instance 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=ReInitQmiWorkItems
+{
+gThermalSensorConfigurations.QmiTmdDev[i].instance, ItemLong -- 10
+}
+#typev PEP_Thermal_c5128 132 "%0 [Err ] PEP_Thermal.c::%!FUNC!::5128 :Memory Allocation for inputBuffer failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ReadSetThreshold
+{
+}
+#typev PEP_Thermal_c3590 113 "%0 [Info] PEP_Thermal.c::%!FUNC! :Interface registered" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=RegisterCPUParkingCoolingInterface
+{
+}
+#typev PEP_Thermal_c3584 112 "%0 [Err ] PEP_Thermal.c::%!FUNC!::3584 :WdfWaitLockCreate failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=RegisterCPUParkingCoolingInterface
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c3576 111 "%0 [Err ] PEP_Thermal.c::%!FUNC!::3576 :WdfDeviceAddQueryInterface failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=RegisterCPUParkingCoolingInterface
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c2947 88 "%0 [Info] PEP_Thermal.c::%!FUNC! :TSENS %10!d! Request%11!d! removed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=RemoveLimitFromTsens
+{
+limCtxt->tsens, ItemLong -- 10
+limCtxt->reqId, ItemLong -- 11
+}
+#typev PEP_Thermal_c1295 43 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1295 :Buffer length size is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ReturnTemp
+{
+}
+#typev PEP_Thermal_c1281 42 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1281 :WdfRequestRetrieveOutputBuffer failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ReturnTemp
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c1492 49 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1492 :WdfRequestUnmarkCancelable failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ScanCollection
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c1487 48 "%0 [Info] PEP_Thermal.c::%!FUNC! :Request Cancelled before being completed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ScanCollection
+{
+}
+#typev PEP_Thermal_c1459 46 "%0 [Info] PEP_Thermal.c::%!FUNC! :%10!s!%11!d! queued Request%12!d! satisfied: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ScanCollection
+{
+(parentDevCtxt->sensorType == TYPE_TSENS_VIRTUAL) ?                                           'TSENS_VIRTUAL:' : 'TSENS:', ItemString -- 10
+parentDevCtxt->sensor, ItemLong -- 11
+parentDevCtxt->reqId, ItemLong -- 12
+aHidTempAcpi, ItemLong -- 13
+}
+#typev PEP_Thermal_c1440 45 "%0 [Info] PEP_Thermal.c::%!FUNC! :Tsens%10!d! Constraints Satisfied" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ScanCollection
+{
+aTsens, ItemLong -- 10
+}
+#typev PEP_Thermal_c1390 44 "%0 [Info] PEP_Thermal.c::%!FUNC! :Tsens%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ScanCollection
+{
+aTsens, ItemLong -- 10
+}
+#typev PEP_Thermal_c842 28 "%0 [Err ] PEP_Thermal.c::%!FUNC!::842 :WdfIoQueueCreate failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=SensorHidWdfDevCreate
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c796 27 "%0 [Err ] PEP_Thermal.c::%!FUNC!::796 :WdfDeviceCreate failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=SensorHidWdfDevCreate
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c2660 76 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2660 :Over temperature occured. Current temperature: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSCallback
+{
+n10DegC, ItemLong -- 10
+}
+#typev PEP_Thermal_c2646 75 "%0 [Warn] PEP_Thermal.c::%!FUNC! :TSENS%10!d! Temp%11!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSCallback
+{
+nSensor, ItemLong -- 10
+n10DegC, ItemLong -- 11
+}
+#typev PEP_Thermal_c2127 61 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2127 :hidCtxt->outstandingRequest does not match the saved request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSCancel
+{
+}
+#typev PEP_Thermal_c2118 60 "%0 [Info] PEP_Thermal.c::%!FUNC! :HID%10!d! Request%11!d! cancelled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSCancel
+{
+hidCtxt->sensor, ItemLong -- 10
+hidCtxt->reqId, ItemLong -- 11
+}
+#typev PEP_Thermal_c1000 35 "%0 [Err ] PEP_Thermal.c::%!FUNC!::1000 :WdfCollectionAdd failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c972 34 "%0 [Err ] PEP_Thermal.c::%!FUNC!::972 :WdfCollectionAdd failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c961 33 "%0 [Err ] PEP_Thermal.c::%!FUNC!::961 :tsensList is NULL since GetHidTsensList failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSEvtDeviceAdd
+{
+}
+#typev PEP_Thermal_c953 32 "%0 [Err ] PEP_Thermal.c::%!FUNC!::953 :WdfCollectionCreate failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c926 31 "%0 [Err ] PEP_Thermal.c::%!FUNC!::926 :HID value is greater that total number of sensors. Total number of sensors: %10!d!, HID looking for: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSEvtDeviceAdd
+{
+gThermalSensorConfigurations.TotalNumberOfSensors, ItemLong -- 10
+aHid, ItemLong -- 11
+}
+#typev PEP_Thermal_c2687 77 "%0 [Info] PEP_Thermal.c::%!FUNC! :TSENS request timer expired" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSExpiredTimerFunc
+{
+}
+#typev PEP_Thermal_c2560 74 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2560 :GetvTSENSTemp for sensor:%10!d! failed with status: %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSInterruptWorker
+{
+hidSensor, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_c2550 73 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2550 :TSENSInterruptWorker:Hibernate process active, Exiting" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSInterruptWorker
+{
+}
+#typev PEP_Thermal_c2530 72 "%0 [Err ] PEP_Thermal.c::%!FUNC!::2530 :Received an INTR while clearing threshold for sensor:%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSInterruptWorker
+{
+tsensWorkerCtxt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_c2519 71 "%0 [Info] PEP_Thermal.c::%!FUNC! :TSENS%10!d! IRP Worker" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSInterruptWorker
+{
+tsensWorkerCtxt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_c730 26 "%0 [Err ] PEP_Thermal.c::%!FUNC!::730 :WdfObjectCreate failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSLimitWdfObjCreate
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c883 30 "%0 [Err ] PEP_Thermal.c::%!FUNC!::883 :PepWorkitemCreate failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSOneTimeSetup
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c869 29 "%0 [Err ] PEP_Thermal.c::%!FUNC!::869 :WdfCollectionCreate failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=TSENSOneTimeSetup
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c3713 122 "%0 [Err ] PEP_Thermal.c::%!FUNC!::3713 :Cannot release SOC_CRITICAL thermal device" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ThermalEvtDeviceSurpriseRemoval
+{
+}
+#typev PEP_Thermal_c3709 121 "%0 [Err ] PEP_Thermal.c::%!FUNC!::3709 :ThermalEvtDeviceSurpriseRemoval called" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ThermalEvtDeviceSurpriseRemoval
+{
+}
+#typev PEP_Thermal_c540 16 "%0 [Err ] PEP_Thermal.c::%!FUNC!::540 :PEPDriverCreate: WdfDeviceCreateSymbolicLink failed: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ThermalInit
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c531 15 "%0 [Err ] PEP_Thermal.c::%!FUNC!::531 :WdfDeviceCreateDeviceInterface for statble TSENS failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ThermalInit
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c518 14 "%0 [Err ] PEP_Thermal.c::%!FUNC!::518 :WdfDeviceCreateDeviceInterface for TSENS query failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ThermalInit
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c474 13 "%0 [Err ] PEP_Thermal.c::%!FUNC!::474 :WdfWaitLockCreate failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ThermalInit
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_c466 12 "%0 [Err ] PEP_Thermal.c::%!FUNC!::466 :Tsens_CheckCalibration failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ThermalInit
+{
+}
+#typev PEP_Thermal_c560 17 "%0 [Err ] PEP_Thermal.c::%!FUNC!::560 :Tsens_CheckCalibration failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_HIBERNATE FUNC=ThermalReInit
+{
+}
+#typev PEP_Thermal_c3089 96 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate : ActionFlags WdfRequestStopActionPurge " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=TsensEvtIoStop
+{
+}
+#typev PEP_Thermal_c3083 95 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate : ActionFlags WdfRequestStopActionSuspend " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=TsensEvtIoStop
+{
+}
+#typev PEP_Thermal_c3077 94 "%0 [Err ] PEP_Thermal.c::%!FUNC!::3077 :Hibernate : hidCtxt->outstandingRequest does not match the saved request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_HIBERNATE FUNC=TsensEvtIoStop
+{
+}
+#typev PEP_Thermal_c3067 93 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate : HID%10!d! Request%11!d! cancelled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=TsensEvtIoStop
+{
+hidCtxt->sensor, ItemLong -- 10
+hidCtxt->reqId, ItemLong -- 11
+}
+#typev PEP_Thermal_c3059 92 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate : ActionFlags  WdfRequestStopRequestCancelable" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=TsensEvtIoStop
+{
+}
+#typev PEP_Thermal_c3054 91 "%0 [Err ] PEP_Thermal.c::%!FUNC!::3054 :Hibernate : Failed to stop Timer for HID%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_HIBERNATE FUNC=TsensEvtIoStop
+{
+hidCtxt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_c431 11 "%0 [Info] PEP_Thermal.c::%!FUNC! :Hibernate : UpdateReferenceCount:gInterfaceCount = %10!d!, gInterfaceRefCount = %11!d!, gNumberOfInterfaceNotArrived = %12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=UpdateReferenceCount
+{
+gInterfaceCount, ItemLong -- 10
+gInterfaceRefCount, ItemLong -- 11
+gNumberOfInterfaceNotArrived, ItemLong -- 12
+}

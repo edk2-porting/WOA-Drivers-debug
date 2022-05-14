@@ -1,0 +1,302 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+410e8398-6f5f-30ee-7a5e-12800483f7d8 MBB_QBI // SRC=MPQBI.c MJ= MN=
+#typev MPQBI_c1993 80 "%0MBQBI_CommandHandlerCb: sent request successfully " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MBQBI_CommandHandlerCb
+{
+}
+#typev MPQBI_c1985 79 "%0MBQBI_CommandHandlerCb: qbi request is NULL " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MBQBI_CommandHandlerCb
+{
+}
+#typev MPQBI_c1888 78 "%0<%10!s!> QBI cxl in pro" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_CancelThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c1875 77 "%0<%10!s!> QBI Cxl: wrong IRQL" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_CancelThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c1791 76 "%0<%10!s!> MPQBI_Close : <%11!d!> QBI Initialization was done or in progress. need to cleanup all QMI clients and pool allocations " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_Close
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->QBIInfo.QbiState, ItemLong -- 11
+}
+#typev MPQBI_c1780 75 "%0<%10!s!> MPQBI_Close : QBI was never initialized. Skip QBI close " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_Close
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c1771 74 "%0<%10!s!> MPQBI_Close" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_Close
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c327 17 "%0MPQBI_ComposeSilentPinVerify: qmi_req is NULL " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ComposeSilentPinVerify
+{
+}
+#typev MPQBI_c354 19 "%0MPQBI_ComposeSilentPinVerify: sent request successfully " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ComposeSilentPinVerify
+{
+}
+#typev MPQBI_c346 18 "%0MPQBI_ComposeSilentPinVerify: qmi_req is NULL " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ComposeSilentPinVerify
+{
+}
+#typev MPQBI_c304 16 "%0MPQBI_ComposeSilentPinVerify: qbi_txn->info is NULL " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ComposeSilentPinVerify
+{
+}
+#typev MPQBI_c291 15 "%0MPQBI_ComposeSilentPinVerify: qbi_txn is NULL " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ComposeSilentPinVerify
+{
+}
+#typev MPQBI_c700 34 "%0MPQBI_HandleQBIEvent: Received invalid msg from QBI " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_HandleQBIEvent
+{
+}
+#typev MPQBI_c917 47 "%0MPQBI_HandleQBIEvent: Unknown Response MsgType: %10!d!, TransId: %11!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_HandleQBIEvent
+{
+pRspHdr->msg_type, ItemLong -- 10
+pRspHdr->txn_id, ItemLong -- 11
+}
+#typev MPQBI_c908 46 "%0MPQBI_HandleQBIEvent: Received QBI_MSG_MBIM_CLOSE_DONE from QBI for msg_type : %10!x!, status:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_HandleQBIEvent
+{
+CloseResp->hdr.msg_type, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev MPQBI_c894 45 "%0MPQBI_HandleQBIEvent: Received QBI_MSG_MBIM_FUNCTION_ERROR_MSG from QBI for error_type:%10!d!, TransId:%11!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_HandleQBIEvent
+{
+error, ItemLong -- 10
+pErrorMsg->hdr.txn_id, ItemLong -- 11
+}
+#typev MPQBI_c869 43 "%0MPQBI_HandleQBIEvent..QBI_MSG_MBIM_COMMAND_DONE received for Svc:%10!d!, CID: %11!d!, pRespBuf: 0x%12!08x!, nRespBufLen:%13!d!, status: %14!s!..FAILED " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_HandleQBIEvent
+{
+uSvcMsgId, ItemLong -- 10
+nCID, ItemLong -- 11
+(ULONG)pRespBuf, ItemLong -- 12
+nRespBufLen, ItemLong -- 13
+StatusToStr(status), ItemString -- 14
+}
+#typev MPQBI_c859 42 "%0MPQBI_HandleQBIEvent..QBI_MSG_MBIM_COMMAND_DONE received for Svc:%10!d!, CID: %11!d!, pRespBuf: 0x%12!08x!, nRespBufLen:%13!d!, status: %14!s! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_HandleQBIEvent
+{
+uSvcMsgId, ItemLong -- 10
+nCID, ItemLong -- 11
+(ULONG)pRespBuf, ItemLong -- 12
+nRespBufLen, ItemLong -- 13
+StatusToStr(status), ItemString -- 14
+}
+#typev MPQBI_c851 41 "%0MPQBI_HandleQBIEvent..QBI_MSG_MBIM_COMMAND_DONE received for Svc:%10!d!, CID: %11!d!, Txn_id:%12!d!, buffer length: %13!d!, status:%14!s! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_HandleQBIEvent
+{
+uSvcMsgId, ItemLong -- 10
+nCID, ItemLong -- 11
+pRspHdr->txn_id, ItemLong -- 12
+nRespBufLen, ItemLong -- 13
+StatusToStr(status), ItemString -- 14
+}
+#typev MPQBI_c839 40 "%0MPQBI_HandleQBIEvent: UNSUPPORTED total frag is %10!d! for QBI response. CID:%11!d!, infobuf_len:%12!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_HandleQBIEvent
+{
+pCmdResp->total_frag, ItemLong -- 10
+nCID, ItemLong -- 11
+nRespBufLen, ItemLong -- 12
+}
+#typev MPQBI_c812 39 "%0<%10!s!> Registering for QMI network time Ind " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_HandleQBIEvent
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c801 38 "%0MPQBI_HandleQBIEvent: Received QBI_MSG_MBIM_OPEN_DONE from QBI for msg_type : %10!x!, status:%11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_HandleQBIEvent
+{
+pOpenResp->hdr.msg_type, ItemLong -- 10
+StatusToStr(status), ItemString -- 11
+}
+#typev MPQBI_c778 37 "%0MPQBI_HandleQBIEvent: Received Indication from QBI for CID:%10!d!, infobuf_len:%11!d!, pIndBuf:0x%12!08x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_HandleQBIEvent
+{
+pIndResp->cid, ItemLong -- 10
+pIndResp->infobuf_len, ItemLong -- 11
+(ULONG)pIndBuf, ItemLong -- 12
+}
+#typev MPQBI_c765 36 "%0MPQBI_HandleQBIEvent: UNSUPPORTED total frag is %10!d! for QBI Indication. CID:%11!d!, infobuf_len:%12!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_HandleQBIEvent
+{
+pIndResp->total_frag, ItemLong -- 10
+pIndResp->cid, ItemLong -- 11
+pIndResp->infobuf_len, ItemLong -- 12
+}
+#typev MPQBI_c746 35 "%0MPQBI: UnAccounted Response MsgType: %10!x!, TransId: %11!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_HandleQBIEvent
+{
+pRspHdr->msg_type, ItemLong -- 10
+pRspHdr->txn_id, ItemLong -- 11
+}
+#typev MPQBI_c1315 61 "%0<%10!s!> QBI Thread up/resumed" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Init
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c1368 62 "%0<%10!s!> QBI Create thread failure 0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_Init
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPQBI_c1422 65 "%0<%10!s!> QBI handle=0x%11!p! thOb=0x%12!p!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Init
+{
+pAdapter->PortName, ItemString -- 10
+pQBIInfo->hThreadHandle, ItemPtr -- 11
+pQBIInfo->pThread, ItemPtr -- 12
+}
+#typev MPQBI_c1408 64 "%0<%10!s!> QBI Thread ZwClose failed - 0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Init
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPQBI_c1396 63 "%0<%10!s!> QBI: ObReferenceObjectByHandle failed 0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_Init
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPQBI_c1304 60 "%0<%10!s!> StartQBIThread - wrong IRQL::%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Init
+{
+pAdapter->PortName, ItemString -- 10
+KeGetCurrentIrql(), ItemLong -- 11
+}
+#typev MPQBI_c1717 73 "%0MPQBI_Open: Halt in progress. " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_Open
+{
+}
+#typev MPQBI_c1676 72 "%0MPQBI_Open: Error allocating memory for QMUX_INTERFACE " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Open
+{
+}
+#typev MPQBI_c1665 71 "%0<%10!s!> MPQBI_OpenQBI" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_Open
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c184 12 "%0MPQBI_PINCompletionCb: Send Ready info Query Oid which was allocated before Pin verification QMI txn " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_PINCompletionCb
+{
+}
+#typev MPQBI_c161 11 "%0MPQBI_PINCompletionCb called" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_PINCompletionCb
+{
+}
+#typev MPQBI_c2103 83 "%0MPQBI_PostQbiEvent Signal state: failed with error 0x%10!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ProcessHibernateResume
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPQBI_c2092 82 "%0MPQBI_PostQbiEvent Register state: failed with error 0x%10!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ProcessHibernateResume
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPQBI_c2081 81 "%0MPQBI_PostQbiEvent Ready state: failed with error 0x%10!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ProcessHibernateResume
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPQBI_c2160 86 "%0MPQBI_PostQbiEvent Signal state: failed with error 0x%10!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ProcessResumeFromD2
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPQBI_c2149 85 "%0MPQBI_PostQbiEvent Ready state: failed with error 0x%10!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ProcessResumeFromD2
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPQBI_c2139 84 "%0<%10!s!> Sending necessary  indications after resuming from D2 , " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_ProcessResumeFromD2
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQBI_c580 29 "%0MPQBI_QMINetworkTimeIndReg_Cb: Registered dynamic indication handler for network time ind" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_QMINetworkTimeIndReg_Cb
+{
+}
+#typev MPQBI_c572 28 "%0MPQBI_QMINetworkTimeIndReg_Cb: Failed to register dynamic indication handler for network time ind" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_QMINetworkTimeIndReg_Cb
+{
+}
+#typev MPQBI_c559 27 "%0MPQBI_QMINetworkTimeIndReg_Cb: Error registering for NAS indications! Error code %10!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_QMINetworkTimeIndReg_Cb
+{
+qmi_rsp->resp.error, ItemLong -- 10
+}
+#typev MPQBI_c521 26 "%0MPQBI_QMINetworkTimeInd_Cb: post work to process nitz irp " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+}
+#typev MPQBI_c512 25 "%0MPQBI_QMINetworkTimeInd_Cb: device in D2 power state - do not process NITZ IRP" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+}
+#typev MPQBI_c487 24 "%0MPQBI_QMINetworkTimeInd_Cb:  Copy values to pAdapter" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+}
+#typev MPQBI_c477 23 "%0MPQBI_QMINetworkTimeInd_Cb:  time zone valid: %10!d!, value: %11!d!, daylt saving valid: %12!d!, value: %13!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+nwtime_rsp->time_zone_valid, ItemLong -- 10
+nwtime_rsp->time_zone, ItemLong -- 11
+nwtime_rsp->daylt_sav_adj_valid, ItemLong -- 12
+nwtime_rsp->daylt_sav_adj, ItemLong -- 13
+}
+#typev MPQBI_c470 22 "%0MPQBI_QMINetworkTimeInd_Cb:  year: %10!d!, month: %11!d!, day: %12!d!, hour: %13!d!, minute: %14!d!, second: %15!d!, day of  week: %16!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+nwtime_rsp->universal_time.year, ItemLong -- 10
+nwtime_rsp->universal_time.month, ItemLong -- 11
+nwtime_rsp->universal_time.day, ItemLong -- 12
+nwtime_rsp->universal_time.hour, ItemLong -- 13
+nwtime_rsp->universal_time.minute, ItemLong -- 14
+nwtime_rsp->universal_time.second, ItemLong -- 15
+nwtime_rsp->universal_time.day_of_week, ItemLong -- 16
+}
+#typev MPQBI_c445 21 "%0MPQBI_QMINetworkTimeInd_Cb: callback called for QMI msg id %10!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+ind->qmi_msg_id, ItemLong -- 10
+}
+#typev MPQBI_c433 20 "%0MPQBI_QMINetworkTimeInd_Cb" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_QMINetworkTimeInd_Cb
+{
+}
+#typev MPQBI_c2207 88 "%0MPQBI_QMISetAPandSWVersion_Cb: done setting AP version" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_QMISetAPandSWVersion_Cb
+{
+}
+#typev MPQBI_c2199 87 "%0MPQBI_QMISetAPandSWVersion_Cb: Error Registering for AP SW version QMI %10!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_QMISetAPandSWVersion_Cb
+{
+qmi_rsp->resp.error, ItemLong -- 10
+}
+#typev MPQBI_c641 31 "%0MPQBI_RegisterQMINetworkTimeInd: nas_ind_reg is NULL " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_RegisterQMINetworkTimeInd
+{
+}
+#typev MPQBI_c663 33 "%0MPQBI_RegisterQMINetworkTimeInd: sent request to QMI " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_RegisterQMINetworkTimeInd
+{
+}
+#typev MPQBI_c654 32 "%0MPQBI_RegisterQMINetworkTimeInd: failed to send request to QMI " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_RegisterQMINetworkTimeInd
+{
+}
+#typev MPQBI_c626 30 "%0MPQBI_RegisterQMINetworkTimeInd: qbi_txn is NULL " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_RegisterQMINetworkTimeInd
+{
+}
+#typev MPQBI_c230 14 "%0MPQBI_ResponseSilentPinVerify: Pin Verification successful " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_ResponseSilentPinVerify
+{
+}
+#typev MPQBI_c221 13 "%0MPQBI_ResponseSilentPinVerify: Pin Verification failed -- error %10!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_ResponseSilentPinVerify
+{
+qmi_rsp->resp.error, ItemLong -- 10
+}
+#typev MPQBI_c994 49 "%0<%10!s!> MPQBI: OUT (0x%11!x!)" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_FORCE FUNC=MPQBI_RunThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPQBI_c1552 67 "%0MPQBI_SendCommand: Sending Cmd to QBI with transactionId %10!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_SendCommand
+{
+pQBIInfo->TransactionIdCounter, ItemLong -- 10
+}
+#typev MPQBI_c1543 66 "%0MPQBI_SendCommand: No more free slots in PendingQBITransactionsList" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_SendCommand
+{
+}
+#typev MPQBI_c2286 92 "%0MPQBI_SetAPandSWVersion: dms_set_req is NULL " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_SetAPandSWVersion
+{
+}
+#typev MPQBI_c2342 96 "%0MPQBI_SetAPandSWVersion: sent request to QMI " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_SetAPandSWVersion
+{
+}
+#typev MPQBI_c2333 95 "%0MPQBI_SetAPandSWVersion: failed to send request to QMI " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_SetAPandSWVersion
+{
+}
+#typev MPQBI_c2312 94 "%0MPQBI_SetAPandSWVersion: dms_set_req updated sw version is %10!s! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_SetAPandSWVersion
+{
+dms_set_req->ap_sw_version, ItemString -- 10
+}
+#typev MPQBI_c2300 93 "%0MPQBI_SetAPandSWVersion: dms_set_req updated OS version is %10!s! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_SetAPandSWVersion
+{
+dms_set_req->ap_os_version, ItemString -- 10
+}
+#typev MPQBI_c2271 91 "%0MPQBI_SetAPandSWVersion: qbi_txn is NULL " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_SetAPandSWVersion
+{
+}
+#typev MPQBI_c2261 90 "%0MPQBI_SetAPandSWVersion: APSSSwVersion : %10!s! and MSFTOSVersion : %11!s! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_SetAPandSWVersion
+{
+APSSSwVersion, ItemString -- 10
+MSFTOSVersion, ItemString -- 11
+}
+#typev MPQBI_c2253 89 "%0MPQBI_SetAPandSWVersion: returned FALSE " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_SetAPandSWVersion
+{
+}
+#typev MPQBI_c101 10 "%0qbi_nv_store_encrypted_pin1_save: EncryptPinLength:%10!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=qbi_nv_store_encrypted_pin1_save
+{
+enc_pin1_len, ItemLong -- 10
+}

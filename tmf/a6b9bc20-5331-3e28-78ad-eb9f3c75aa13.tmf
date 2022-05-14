@@ -1,0 +1,370 @@
+// PDB:  qcusbcucsi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+a6b9bc20-5331-3e28-78ad-eb9f3c75aa13 PortLib // SRC=QcUsbCPortUCSI.c MJ= MN=
+#typev qcusbcDevice_c325 75 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCEvtDeviceObjDestroy
+{
+}
+#typev qcusbcDevice_c325 74 "%0Invalid UCSI Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCEvtDeviceObjDestroy
+{
+}
+#typev qcusbcDevice_c325 73 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCEvtDeviceObjDestroy
+{
+}
+// PDB:  qcusbcucsi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qcusbcDevice_c402 89 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCEvtDeviceReleaseHardware
+{
+}
+#typev qcusbcDevice_c402 88 "%0UsbCPortReleaseHardware: UsbCPortDPRefCount not 0 %10!d! =" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_PORT FUNC=UsbCEvtDeviceReleaseHardware
+{
+pUCSIContext->UsbCPortDPRefCount, ItemLong -- 10
+}
+#typev qcusbcDevice_c402 87 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCEvtDeviceReleaseHardware
+{
+}
+#typev qcusbcDevice_c402 86 "%0Invalid UCSI Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCEvtDeviceReleaseHardware
+{
+}
+#typev qcusbcDevice_c402 85 "%0Invalid Device Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCEvtDeviceReleaseHardware
+{
+}
+// PDB:  qcusbcucsi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbCPortUCSI_c207 12 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=SetECAckGPIO
+{
+}
+#typev QcUsbCPortUCSI_c197 11 "%0SetECAckGPIO::WdfIoTargetSendIoctlSynchronously failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=SetECAckGPIO
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c157 10 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=SetECAckGPIO
+{
+}
+#typev QcUsbCPortUCSI_c534 39 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCNotifyCallback
+{
+}
+#typev QcUsbCPortUCSI_c527 38 "%0UsbCNotifyCallback: Invalid NotifyCode = 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+NotifyCode, ItemLong -- 10
+}
+#typev QcUsbCPortUCSI_c511 52 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCNotifyCallback
+{
+}
+#typev QcUsbCPortUCSI_c511 51 "%0UsbCDPIoNotifyWI: Setting HPD/Pin Assignment failed with : %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c511 50 "%0UsbCDPIoNotifyWI: Cuurent USB DP Notification Status = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+pUCSIContext->USBDPInfo, ItemEnum(_USBDP_NOTIFICATION_TYPE) -- 10
+}
+#typev QcUsbCPortUCSI_c511 49 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCNotifyCallback
+{
+}
+#typev QcUsbCPortUCSI_c479 37 "%0UsbCNotifyCallback: Invalid values from EC, Mux connected, CC or Pin Assignment updated while HPD is high" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+}
+#typev QcUsbCPortUCSI_c467 36 "%0UsbCNotifyCallback: Invalid values from EC" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+}
+#typev QcUsbCPortUCSI_c460 35 "%0UsbCNotifyCallback : Returned HS Mode as %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+HSMode, ItemEnum(_HS_MODE_TYPE) -- 10
+}
+#typev QcUsbCPortUCSI_c456 34 "%0UsbCNotifyCallback:  USBCReadHSFlag failed with status: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c449 33 "%0UsbCNotifyCallback : Returned CC Out as %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+CCOutStatus, ItemEnum(_TYPEC_CC_OUT_STATUS_TYPE) -- 10
+}
+#typev QcUsbCPortUCSI_c445 32 "%0UsbCNotifyCallback:  USBCReadCCOut failed with status: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c440 31 "%0UsbCNotifyCallback : Returned Mux Value as %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+MuxValue, ItemEnum(_MUX_CTRL_TYPE) -- 10
+}
+#typev QcUsbCPortUCSI_c436 30 "%0UsbCNotifyCallback:  USBCReadMux failed with status: %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c431 29 "%0UsbCNotifyCallback : Returned Pin Assignment as %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+CurrUSBDPInfo, ItemEnum(_USBDP_INFO_TYPE) -- 10
+}
+#typev QcUsbCPortUCSI_c427 28 "%0UsbCNotifyCallback:  USBCReadPinAssign failed with status:%10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c422 27 "%0UsbCNotifyCallback : Returned USBCReadHPDStatus as %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+CurrHPDStatus, ItemEnum(_TYPEC_DISPLAYPORT_HPD_STATUS_TYPE) -- 10
+}
+#typev QcUsbCPortUCSI_c419 26 "%0UsbCNotifyCallback:  USBCReadHPDStatus failed with status:%10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c410 25 "%0UsbCDPIoNotifyWI: WdfWaitLockAcquire failed with status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c401 24 "%0Invalid Parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+}
+#typev QcUsbCPortUCSI_c398 23 "%0UsbCUcsiNotifyCallback: NotifyCode = 0x%10!x!, pUCSIContext = 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+NotifyCode, ItemLong -- 10
+pUCSIContext, ItemPtr -- 11
+}
+#typev QcUsbCPortUCSI_c390 22 "%0Invalid Parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCNotifyCallback
+{
+}
+#typev QcUsbCPortUCSI_c386 21 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCNotifyCallback
+{
+}
+#typev QcUsbCPortUCSI_c951 72 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortCreate
+{
+}
+#typev QcUsbCPortUCSI_c934 71 "%0WdfDeviceAddQueryInterface for USB DP DDI failed, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortCreate
+{
+status, ItemLong -- 10
+}
+#typev QcUsbCPortUCSI_c901 70 "%0WdfDeviceCreateDeviceInterface for USB DP DDI failed, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortCreate
+{
+status, ItemLong -- 10
+}
+#typev QcUsbCPortUCSI_c889 69 "%0WdfWaitLockCreate for ACPI update failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c879 68 "%0WdfWaitLockCreate for USB-DP DDI failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c840 66 "%0Failed to allocate UCSI device context: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c829 65 "%0Failed to allocate PORT device context: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c820 64 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortCreate
+{
+}
+#typev QcUsbCPortUCSI_c817 63 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortCreate
+{
+}
+#typev QcUsbCPortUCSI_c1234 95 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortD0Entry
+{
+}
+#typev QcUsbCPortUCSI_c1196 93 "%0RegisterforUSBCNotify failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_PORT FUNC=UsbCPortD0Entry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c1194 43 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortD0Entry
+{
+}
+#typev QcUsbCPortUCSI_c1194 42 "%0WdfIoTargetQueryForInterface() failed with status: %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortD0Entry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c1194 41 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortD0Entry
+{
+}
+#typev QcUsbCPortUCSI_c1194 40 "%0Invalid PArameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortD0Entry
+{
+}
+#typev QcUsbCPortUCSI_c1191 92 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortD0Entry
+{
+}
+#typev QcUsbCPortUCSI_c1185 91 "%0Invalid UCSI Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortD0Entry
+{
+}
+#typev QcUsbCPortUCSI_c1178 90 "%0Invalid Device Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortD0Entry
+{
+}
+#typev QcUsbCPortUCSI_c1287 99 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortD0Exit
+{
+}
+#typev QcUsbCPortUCSI_c1267 98 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortD0Exit
+{
+}
+#typev QcUsbCPortUCSI_c1261 97 "%0Invalid UCSI Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortD0Exit
+{
+}
+#typev QcUsbCPortUCSI_c1254 96 "%0Invalid Device Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortD0Exit
+{
+}
+#typev QcUsbCPortUCSI_c793 62 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortDPInterfaceDeRef
+{
+}
+#typev QcUsbCPortUCSI_c781 61 "%0UsbCPortDPRefCount = %10!d!, Cannot decrement" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_PORT FUNC=UsbCPortDPInterfaceDeRef
+{
+pUCSIContext->UsbCPortDPRefCount, ItemLong -- 10
+}
+#typev QcUsbCPortUCSI_c775 60 "%0UsbCPortDPInterfaceDeRef: WdfWaitLockAcquire failed with status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortDPInterfaceDeRef
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c769 59 "%0Invalid UCSI Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortDPInterfaceDeRef
+{
+}
+#typev QcUsbCPortUCSI_c765 58 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortDPInterfaceDeRef
+{
+}
+#typev QcUsbCPortUCSI_c746 57 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortDPInterfaceRef
+{
+}
+#typev QcUsbCPortUCSI_c738 56 "%0UsbCPortDPRefCount = %10!d!, Cannot increment" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_PORT FUNC=UsbCPortDPInterfaceRef
+{
+pUCSIContext->UsbCPortDPRefCount, ItemLong -- 10
+}
+#typev QcUsbCPortUCSI_c732 55 "%0UsbCPortDPInterfaceRef: WdfWaitLockAcquire failed with status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortDPInterfaceRef
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c726 54 "%0Invalid UCSI Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortDPInterfaceRef
+{
+}
+#typev QcUsbCPortUCSI_c722 53 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortDPInterfaceRef
+{
+}
+#typev QcUsbCPortUCSI_c662 48 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortDPProcessQueryInterface
+{
+}
+#typev QcUsbCPortUCSI_c630 45 "%0Invalid WDF Device Parameter/ Invalid Interface" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortDPProcessQueryInterface
+{
+}
+#typev QcUsbCPortUCSI_c657 47 "%0UsbCPortDPProcessQueryInterface: NULL pointers for Exposed Display Interface" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortDPProcessQueryInterface
+{
+}
+#typev QcUsbCPortUCSI_c653 46 "%0UsbCPortDPProcessQueryInterface:Exposed Display Interface ready" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PORT FUNC=UsbCPortDPProcessQueryInterface
+{
+}
+#typev QcUsbCPortUCSI_c626 44 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortDPProcessQueryInterface
+{
+}
+#typev QcUsbCPortUCSI_c1111 84 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortPrepareHardware
+{
+}
+#typev QcUsbCPortUCSI_c1106 83 "%0UsbCPortPrepareHardware: USBDP Common block mapping failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortPrepareHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c1051 79 "%0GPIO Resource Index not found in ACPI" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_PORT FUNC=UsbCPortPrepareHardware
+{
+}
+#typev QcUsbCPortUCSI_c1086 82 "%0GPIO Tatget Open failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortPrepareHardware
+{
+}
+#typev QcUsbCPortUCSI_c1076 81 "%0GPIO Tatget Create failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortPrepareHardware
+{
+}
+#typev QcUsbCPortUCSI_c1066 80 "%0RESOURCE_HUB_CREATE_PATH_FROM_ID failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortPrepareHardware
+{
+}
+#typev QcUsbCPortUCSI_c1040 78 "%0GPIOIoResourceIndex = %10!d!, GPIO ConnectionID (0x%11!x!, 0x%12!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PORT FUNC=UsbCPortPrepareHardware
+{
+GPIOIoResourceIndex, ItemLong -- 10
+pUCSIContext->GPIOIoResource.HighPart, ItemLong -- 11
+pUCSIContext->GPIOIoResource.LowPart, ItemLong -- 12
+}
+#typev QcUsbCPortUCSI_c1021 77 "%0Invalid UCSI Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCPortPrepareHardware
+{
+}
+#typev QcUsbCPortUCSI_c1017 76 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCPortPrepareHardware
+{
+}
+#typev QcUsbCPortUCSI_c355 20 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCUcsiACPIIoNotify
+{
+}
+#typev QcUsbCPortUCSI_c340 18 "%0USBCUtilSetACPI failed to set CC Out in ACPI: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCUcsiACPIIoNotify
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c329 17 "%0UsbCUcsiACPIIoNotify: CC Out: %10!s!, HS Flag = %11!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_PORT FUNC=UsbCUcsiACPIIoNotify
+{
+CCOutSt, ItemEnum(_TYPEC_CC_OUT_STATUS_TYPE) -- 10
+HSModeOver, ItemEnum(_HS_MODE_TYPE) -- 11
+}
+#typev QcUsbCPortUCSI_c349 19 "%0UsbCUcsiACPIIoNotify: No change in CC = %10!s! and HS Flag = %11!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_PORT FUNC=UsbCUcsiACPIIoNotify
+{
+CCOutSt, ItemEnum(_TYPEC_CC_OUT_STATUS_TYPE) -- 10
+HSModeOver, ItemEnum(_HS_MODE_TYPE) -- 11
+}
+#typev QcUsbCPortUCSI_c319 16 "%0UsbCUcsiACPIIoNotify: USBCPowerIssuePerfStateChg (OFF) failed with status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCUcsiACPIIoNotify
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c263 15 "%0UsbCACPIIoNotify: waited for XHCI to release HW > 5 sec. Proceeding w/ init sequence" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCUcsiACPIIoNotify
+{
+}
+// PDB:  qcusbcucsi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbCPortUCSI_c250 14 "%0UsbCUcsiACPIIoNotify: USBCPowerIssuePerfStateChg (ON) failed with status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PORT FUNC=UsbCUcsiACPIIoNotify
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbCPortUCSI_c240 13 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbCUcsiACPIIoNotify
+{
+}
+#enumv _USBDP_NOTIFICATION_TYPE
+{
+USBDP_NOTIFICATION_HPD_OUT,0x0
+USBDP_NOTIFICATION_HPD_IN_CC1_PIN_A,0x1
+USBDP_NOTIFICATION_HPD_IN_CC1_PIN_B,0x2
+USBDP_NOTIFICATION_HPD_IN_CC1_PIN_C,0x3
+USBDP_NOTIFICATION_HPD_IN_CC1_PIN_D,0x4
+USBDP_NOTIFICATION_HPD_IN_CC1_PIN_E,0x5
+USBDP_NOTIFICATION_HPD_IN_CC1_PIN_F,0x6
+USBDP_NOTIFICATION_HPD_IN_CC2_PIN_A,0x7
+USBDP_NOTIFICATION_HPD_IN_CC2_PIN_B,0x8
+USBDP_NOTIFICATION_HPD_IN_CC2_PIN_C,0x9
+USBDP_NOTIFICATION_HPD_IN_CC2_PIN_D,0xA
+USBDP_NOTIFICATION_HPD_IN_CC2_PIN_E,0xB
+USBDP_NOTIFICATION_HPD_IN_CC2_PIN_F,0xC
+}
+#enumv _HS_MODE_TYPE
+{
+HS_MODE_DIS,0x0
+HS_MODE_EN,0x1
+HS_MODE_INVALID,0x2
+}
+#enumv _TYPEC_CC_OUT_STATUS_TYPE
+{
+TYPEC_CC_OUT_CC1,0x0
+TYPEC_CC_OUT_CC2,0x1
+TYPEC_CC_OUT_CC_OPEN,0x2
+}
+#enumv _MUX_CTRL_TYPE
+{
+MUX_CTRL_NO_CONN,0x0
+MUX_CTRL_USB3_CONN,0x1
+MUX_CTRL_DP4LN_CONN,0x2
+MUX_CTRL_USB3DP_CONN,0x3
+}
+#enumv _USBDP_INFO_TYPE
+{
+USBDP_INFO_INVALID,0x0
+USBDP_INFO_CC1_PIN_A,0x1
+USBDP_INFO_CC1_PIN_B,0x2
+USBDP_INFO_CC1_PIN_C,0x3
+USBDP_INFO_CC1_PIN_D,0x4
+USBDP_INFO_CC1_PIN_E,0x5
+USBDP_INFO_CC1_PIN_F,0x6
+USBDP_INFO_CC2_PIN_A,0x7
+USBDP_INFO_CC2_PIN_B,0x8
+USBDP_INFO_CC2_PIN_C,0x9
+USBDP_INFO_CC2_PIN_D,0xA
+USBDP_INFO_CC2_PIN_E,0xB
+USBDP_INFO_CC2_PIN_F,0xC
+}
+#enumv _TYPEC_DISPLAYPORT_HPD_STATUS_TYPE
+{
+TYPEC_DISPLAYPORT_HPD_STATUSLOW,0x0
+TYPEC_DISPLAYPORT_HPD_STATUSHIGH,0x1
+}

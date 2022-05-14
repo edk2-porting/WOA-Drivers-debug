@@ -1,0 +1,2520 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+bd7823b7-154c-3761-5d07-0ca8b81d6859 MBB_QBI // SRC=MPCID.c MJ= MN=
+#typev MPSet_c170 544 "%0 -->MPQBI_Handle_OID_Remove_WOL_PATTERN. Deleting Pattern %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPSetInformation
+{
+patternId, ItemLong -- 10
+}
+#typev MPSet_c170 543 "%0 -->MPQBI_Handle_OID_Remove_WOL_PATTERN. " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPSetInformation
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWork_c1329 20 "%0QBI Request for Modem Power Up could not be composed" //   FUNC=MPWork_WorkThread
+{
+}
+#typev MPWork_c1329 19 "%0Modem Power Up Request request sent successfully" //   FUNC=MPWork_WorkThread
+{
+}
+#typev MPWork_c1329 17 "%0-->MPQBI_Compose_RadioStateForModemPowerUp: RadioState value from registry: %10!s!, status: 0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPWork_WorkThread
+{
+pReq->radio_state ? L'ON' : L'OFF', ItemWString -- 10
+nStatus, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWork_c436 438 "%0<%10!s!> <--ProcessMultipleCID" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=ProcessWorkInputList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c436 436 "%0<%10!s!>-->ProcessMultipleCID..This element (0x%11!08x!) is already processed..Ignore it!!!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessWorkInputList
+{
+pAdapter->PortName, ItemString -- 10
+(INT)currQMIElement, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWork_c436 437 "%0<%10!s!> <--ProcessOidRequest: MPQCCI_SendQMIRequest failed, OID back to free" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=ProcessWorkInputList
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c13995 550 "%0 -->Add_SingleSubscribeDeviceService_To_Chain. Subscribed for CID %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=Add_SingleSubscribeDeviceService_To_Chain
+{
+pCidData[i], ItemLong -- 10
+}
+#typev MPCID_c13967 549 "%0 -->Add_SingleSubscribeDeviceService_To_Chain. Subscribed for all CIDs %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=Add_SingleSubscribeDeviceService_To_Chain
+{
+pEventList->subscribed_svc_id, ItemLong -- 10
+}
+#typev MPCID_c13926 548 "%0 -->Add_SingleSubscribeDeviceService_To_Chain for service %10!d! .  " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=Add_SingleSubscribeDeviceService_To_Chain
+{
+pEventList->subscribed_svc_id, ItemLong -- 10
+}
+#typev MPCID_c5893 205 "%0 -->AddWOLPattern. Memory Allocation failed for size %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=GetQBIPacketFilterData_AddWOLPattern
+{
+buf_size, ItemLong -- 10
+}
+#typev MPCID_c5869 204 "%0 -->AddWOLPattern. No Patterns to Add " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=GetQBIPacketFilterData_AddWOLPattern
+{
+}
+#typev MPCID_c2148 63 "%0<%10!s!> -->MPQBI_AllocateQMIRequest: Response structure > 0 but Request function (0x%11!x!) is) NULL!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_AllocateQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pQMIElement->pRespFunc, ItemLong -- 11
+}
+#typev MPCID_c2133 62 "%0<%10!s!> -->MPQBI_AllocateQMIRequest: Request structure > 0 but Request function (0x%11!x!) or buffer (0x%12!x!) NULL!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_AllocateQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pQMIElement->pReqFunc, ItemLong -- 11
+(UINT)pQMIElement->pReqBuf, ItemLong -- 12
+}
+#typev MPCID_c2077 61 "%0<%10!s!> -->MPQBI_AllocateQMIRequest: getting size for msgId returned error 0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_AllocateQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c2529 81 "%0<--MPQBI_AsyncCb: pAdapter (0x%10!x!) or QMI (0x%11!x!) is NULL (msgId 0x%12!x!)" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_AsyncCb
+{
+(UINT)pAdapter, ItemLong -- 10
+(UINT)pQMI, ItemLong -- 11
+uMsgId, ItemLong -- 12
+}
+#typev MPCID_c2682 86 "%0<--MPQBI_AsyncCb..OID Processed ..status:%10!s! with transpErr:%11!d!, nStatus:%12!s!, length:%13!d! for cid: %14!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_AsyncCb
+{
+L'SUCCESS', ItemWString -- 10
+transpErr, ItemLong -- 11
+NTstatusToStr(nStatus), ItemString -- 12
+uRespBufLen, ItemLong -- 13
+processedCID, ItemLong -- 14
+}
+#typev MPCID_c2644 84 "%0<--MPQBI_AsyncCb: Adding workitem to WorkList for svc_id:%10!d!, cid:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_AsyncCb
+{
+pQMI->uQBISvcType, ItemLong -- 10
+pQMI->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c2664 85 "%0<--MPQBI_AsyncCb - OID FAILED ..status:%10!s! with transpErr:%11!d!, nStatus:%12!s! for cid: %13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_AsyncCb
+{
+L'FAILED', ItemWString -- 10
+transpErr, ItemLong -- 11
+NTstatusToStr(nStatus), ItemString -- 12
+processedCID, ItemLong -- 13
+}
+#typev MPCID_c2601 83 "%0<%10!s!> <--MPQBI_AsyncCb: Memory allocation FAILED during response to srvId:%11!d!, cid:%12!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_AsyncCb
+{
+pAdapter->PortName, ItemString -- 10
+pQMI->uQBISvcType, ItemLong -- 11
+pQMI->uQBICID, ItemLong -- 12
+}
+#typev MPCID_c2543 82 "%0<%10!s!> <--MPQBI_AsyncCb: Response Buffer (%11!d!) size exceeding expected response size (%12!d!)..Not processing" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_AsyncCb
+{
+pAdapter->PortName, ItemString -- 10
+uRespBufLen, ItemLong -- 11
+SIZEOF_OID_RESPONSE, ItemLong -- 12
+}
+#typev MPCID_c2516 80 "%0<--MPQBI_AsyncCb: callback is NULL (msgId 0x%10!x!)" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_AsyncCb
+{
+uMsgId, ItemLong -- 10
+}
+#typev MPCID_c14062 551 "%0 -->Add_SingleSubscribeDeviceService_To_Chain returned 0 size.  " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Build_SubscribeDeviceServiceEventRequest
+{
+}
+#typev MPCID_c2275 69 "%0<%10!s!> -->MPQBI_ComposeQMIRequest: Request structure > 0 but Request function (0x%11!x!) or buffer (0x%12!x!) NULL qmitype 0x%13!x! msgid 0x%14!x!!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ComposeQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pQMIElement->pReqFunc, ItemLong -- 11
+(UINT)pQMIElement->pReqBuf, ItemLong -- 12
+pQMIElement->uQMIType, ItemLong -- 13
+pQMIElement->uMsgId, ItemLong -- 14
+}
+#typev MPCID_c2253 68 "%0<%10!s!> -->MPQBI_ComposeQMIRequest: Allocate QMIElement failed!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ComposeQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c2238 67 "%0<%10!s!> -->MPQBI_ComposeQMIRequest: QMI is not initialized!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ComposeQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c2209 65 "%0<%10!s!> -->MPQBI_ComposeQBIRequest: QbiSvcType:%11!d!, CID:%12!d!, CmdType:%13!s!, bSync:%14!d!, bSendImm:%15!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_ComposeQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+QbiSvcType, ItemLong -- 11
+QbiCID, ItemLong -- 12
+(0 == QbiCmdType)? L'QUERY': L'SET', ItemWString -- 13
+bSync, ItemLong -- 14
+bSendImmediately, ItemLong -- 15
+}
+#typev MPCID_c4130 127 "%0-->MPQBI_Compose_AkaAuthRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_AkaAuthRequest
+{
+}
+#typev MPCID_c4228 129 "%0-->MPQBI_Compose_AkaPAuthRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_AkaPAuthRequest
+{
+}
+#typev MPCID_c4732 146 "%0-->MPQBI_Compose_DeviceServiceCommandRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_DeviceServiceCommandRequest
+{
+}
+#typev MPCID_c4858 150 "%0<%10!s!> -->MPQBI_Compose_DeviceServiceCommandRequest, OID back to free" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_DeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c4789 149 "%0-->MPQBI_Compose_DeviceServiceCommandRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_DeviceServiceCommandRequest
+{
+}
+#typev MPCID_c4765 148 "%0<%10!s!> -->MPQBI_Compose_DeviceServiceCommandRequest, OID back to free" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_DeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c4754 147 "%0-->MPQBI_Compose_DeviceServiceCommandRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_DeviceServiceCommandRequest
+{
+}
+#typev MPCID_c4715 145 "%0-->MPQBI_Compose_DeviceServiceCommandRequest - could not create memory..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_DeviceServiceCommandRequest
+{
+}
+#typev MPCID_c4041 123 "%0-->MPQBI_Compose_IPConfiguration..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_IPConfiguration
+{
+}
+#typev MPCID_c4073 125 "%0-->MPQBI_Compose_IPConfiguration: session id:%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_IPConfiguration
+{
+pReq->session_id, ItemLong -- 10
+}
+#typev MPCID_c4053 124 "%0-->MPQBI_Compose_IPConfiguration..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_IPConfiguration
+{
+}
+#typev MPCID_c5257 173 "%0-->MPQBI_Compose_LTEAttachConfigRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+}
+#typev MPCID_c5308 175 "%0-->MPQBI_Compose_LTEAttachConfigRequest..Invalid IP Type" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+}
+#typev MPCID_c5383 180 "%0<%10!s!> <--MPQBI_Compose_LTEAttachConfigRequest.. CID Request: %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5375 179 "%0-->MPQBI_Compose_LTEAttachConfigRequest. CID Payload: access_string: %10!s! username: %11!s! password: %12!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+(LPCWSTR)((PBYTE)pLteAttachContext + pLteAttachContext->access_string.offset), ItemWString -- 10
+(LPCWSTR)((PBYTE)pLteAttachContext + pLteAttachContext->username.offset), ItemWString -- 11
+(LPCWSTR)((PBYTE)pLteAttachContext + pLteAttachContext->password.offset), ItemWString -- 12
+}
+#typev MPCID_c5369 178 "%0-->MPQBI_Compose_LTEAttachConfigRequest. CID Payload: index: %10!d! ip_type: %11!d! roaming: %12!d! source: %13!d! compression: %14!d! auth_protocol: %15!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+i, ItemLong -- 10
+pLteAttachContext->ip_type, ItemLong -- 11
+pLteAttachContext->roaming, ItemLong -- 12
+pLteAttachContext->source, ItemLong -- 13
+pLteAttachContext->compression, ItemLong -- 14
+pLteAttachContext->auth_protocol, ItemLong -- 15
+}
+#typev MPCID_c5364 177 "%0-->MPQBI_Compose_LTEAttachConfigRequest. OID Payload: AccessString: %10!s! Username: %11!s! Password: %12!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+pOidReq->SetLteAttachContext.SetContextArray[i].basicInfo.AccessString, ItemWString -- 10
+pOidReq->SetLteAttachContext.SetContextArray[i].basicInfo.UserName, ItemWString -- 11
+pOidReq->SetLteAttachContext.SetContextArray[i].basicInfo.Password, ItemWString -- 12
+}
+#typev MPCID_c5358 176 "%0-->MPQBI_Compose_LTEAttachConfigRequest. OID Payload: index: %10!d! IPType: %11!d! Roaming: %12!d! Source: %13!d! Compression: %14!d! AuthType: %15!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+i, ItemLong -- 10
+pOidReq->SetLteAttachContext.SetContextArray[i].IPType, ItemLong -- 11
+pOidReq->SetLteAttachContext.SetContextArray[i].Roaming, ItemLong -- 12
+pOidReq->SetLteAttachContext.SetContextArray[i].Source, ItemLong -- 13
+pOidReq->SetLteAttachContext.SetContextArray[i].basicInfo.Compression, ItemLong -- 14
+pOidReq->SetLteAttachContext.SetContextArray[i].basicInfo.AuthType, ItemLong -- 15
+}
+#typev MPCID_c5287 174 "%0-->MPQBI_Compose_LTEAttachConfigRequest..Invalid Operation" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+}
+#typev MPCID_c3384 94 "%0 -->MPQBI_Compose_OidConnectRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_OidConnectRequest
+{
+}
+#typev MPCID_c3481 98 "%0-->MPQBI_Compose_OidConnectRequest: sesssion id:%10!d!, act cmd:%11!d!, auth proto:%12!d!, ip type:%13!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_OidConnectRequest
+{
+pReq->session_id, ItemLong -- 10
+pReq->activation_cmd, ItemLong -- 11
+pReq->auth_protocol, ItemLong -- 12
+pReq->ip_type, ItemLong -- 13
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c3443 97 "%0-->MPQBI_Compose_OidConnectRequest: sesssion id:%10!d!, Access string is NULL " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_OidConnectRequest
+{
+pReq->session_id, ItemLong -- 10
+}
+#typev MPCID_c3434 96 "%0-->MPQBI_Compose_OidConnectRequest: sesssion id:%10!d!, Access string:%11!s! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_OidConnectRequest
+{
+pReq->session_id, ItemLong -- 10
+pSetContext->SetContextState.AccessString, ItemWString -- 11
+}
+#typev MPCID_c3396 95 "%0 -->MPQBI_Compose_OidConnectRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_OidConnectRequest
+{
+}
+#typev MPCID_c5511 188 "%0-->MPQBI_Compose_PCORequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_PCORequest
+{
+}
+#typev MPCID_c5525 189 "%0<%10!s!> <--MPQBI_Compose_PCORequest.. CID Request: %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_PCORequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c3603 104 "%0-->MPQBI_Compose_PINServiceRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_PINServiceRequest
+{
+}
+#typev MPCID_c3655 106 "%0<--MPQBI_Compose_PINServiceRequest..pin type %10!d!, pin op:%11!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_PINServiceRequest
+{
+pReq->pin_type, ItemLong -- 10
+pReq->pin_op, ItemLong -- 11
+}
+#typev MPCID_c3615 105 "%0-->MPQBI_Compose_PINServiceRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_PINServiceRequest
+{
+}
+#typev MPCID_c3546 101 "%0-->MPQBI_Compose_PacketServiceRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_PacketServiceRequest
+{
+}
+#typev MPCID_c3574 103 "%0-->MPQBI_Compose_PacketServiceRequest..Set to : %10!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_PacketServiceRequest
+{
+(pReq->action == WwanPacketServiceActionAttach) ? L'Attach' : L'Detach', ItemWString -- 10
+}
+#typev MPCID_c3559 102 "%0-->MPQBI_Compose_PacketServiceRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_PacketServiceRequest
+{
+}
+#typev MPCID_c4299 130 "%0-->MPQBI_Compose_PreferredProviderRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_PreferredProviderRequest
+{
+}
+#typev MPCID_c4385 133 "%0-->MPQBI_Compose_PreferredProviderRequest. status:%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_PreferredProviderRequest
+{
+pPrefProviderContext->uStatus, ItemLong -- 10
+}
+#typev MPCID_c4311 131 "%0-->MPQBI_Compose_PreferredProviderRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_PreferredProviderRequest
+{
+}
+#typev MPCID_c4416 134 "%0-->MPQBI_Compose_ProvisionedContextRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_ProvisionedContextRequest
+{
+}
+#typev MPCID_c4444 136 "%0-->MPQBI_Compose_ProvisionedContextRequest..Invalid contextType %10!d! received" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_ProvisionedContextRequest
+{
+pSetProvContext->ProvisionedContext.ContextType, ItemLong -- 10
+}
+#typev MPCID_c4428 135 "%0-->MPQBI_Compose_ProvisionedContextRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_ProvisionedContextRequest
+{
+}
+#typev MPCID_c5142 166 "%0-->MPQBI_Compose_ProvisionedContextV2Request..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+}
+#typev MPCID_c5161 168 "%0-->MPQBI_Compose_ProvisionedContextV2Request.. Invalid contextType %10!d! received" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+pOidReq->ProvisionedContext.basicInfo.ContextType, ItemLong -- 10
+}
+#typev MPCID_c5237 172 "%0<%10!s!> <--MPQBI_Compose_ProvisionedContextV2Request.. CID Request: %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5233 171 "%0<--MPQBI_Compose_ProvisionedContextV2Request..AccessString:%10!s!, UserName:%11!s!, Password:%12!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+pOidReq->ProvisionedContext.basicInfo.AccessString, ItemWString -- 10
+pOidReq->ProvisionedContext.basicInfo.UserName, ItemWString -- 11
+pOidReq->ProvisionedContext.basicInfo.Password, ItemWString -- 12
+}
+#typev MPCID_c5227 170 "%0<--MPQBI_Compose_ProvisionedContextV2Request.. Source:%10!d!, ContextType: %11!d!, Compression:%12!d!, AuthType:%13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+pOidReq->ProvisionedContext.Source, ItemLong -- 10
+pOidReq->ProvisionedContext.basicInfo.ContextType, ItemLong -- 11
+pOidReq->ProvisionedContext.basicInfo.Compression, ItemLong -- 12
+pOidReq->ProvisionedContext.basicInfo.AuthType, ItemLong -- 13
+}
+#typev MPCID_c5222 169 "%0<--MPQBI_Compose_ProvisionedContextV2Request.. Operation: %10!d!, IPType: %11!d!, Enable: %12!d!, Roaming: %13!d!, MediaType:%14!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+pOidReq->ProvisionedContext.Operation, ItemLong -- 10
+pOidReq->ProvisionedContext.IPType, ItemLong -- 11
+pOidReq->ProvisionedContext.Enable, ItemLong -- 12
+pOidReq->ProvisionedContext.Roaming, ItemLong -- 13
+pOidReq->ProvisionedContext.MediaType, ItemLong -- 14
+}
+#typev MPCID_c5151 167 "%0-->MPQBI_Compose_ProvisionedContextV2Request..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+}
+#typev MPCID_c4102 126 "%0-->MPQBI_Compose_RadioState..Set Radio: State %10!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_RadioState
+{
+pReq->radio_state ? L'ON' : L'OFF', ItemWString -- 10
+}
+#typev MPCID_c3684 107 "%0-->MPQBI_Compose_RegisterStateRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_RegisterStateRequest
+{
+}
+#typev MPCID_c3732 110 "%0-->MPQBI_Compose_RegisterStateRequest..register_action %10!d!, pReq->data_class:%11!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_RegisterStateRequest
+{
+pReq->register_action, ItemLong -- 10
+pReq->data_class, ItemLong -- 11
+}
+#typev MPCID_c3722 109 "%0-->MPQBI_Compose_RegisterStateRequest..Pin:%10!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_RegisterStateRequest
+{
+pRegStatus->SetRegisterState.ProviderId, ItemWString -- 10
+}
+#typev MPCID_c3696 108 "%0-->MPQBI_Compose_RegisterStateRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_RegisterStateRequest
+{
+}
+#typev MPCID_c3762 111 "%0-->MPQBI_Compose_SMSConfigRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SMSConfigRequest
+{
+}
+#typev MPCID_c3774 112 "%0-->MPQBI_Compose_SMSConfigRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SMSConfigRequest
+{
+}
+#typev MPCID_c3819 113 "%0-->MPQBI_Compose_SMSDeleteRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SMSDeleteRequest
+{
+}
+#typev MPCID_c3845 115 "%0-->MPQBI_Compose_SMSDeleteRequest..message index:%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_SMSDeleteRequest
+{
+pReq->message_index, ItemLong -- 10
+}
+#typev MPCID_c3831 114 "%0-->MPQBI_Compose_SMSDeleteRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SMSDeleteRequest
+{
+}
+#typev MPCID_c3980 120 "%0-->MPQBI_Compose_SMSReadRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SMSReadRequest
+{
+}
+#typev MPCID_c4015 122 "%0-->MPQBI_Compose_SMSReadRequest..Flag:%10!d!, message index:%11!d! and Format:%12!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_SMSReadRequest
+{
+pReq->flag, ItemLong -- 10
+pReq->message_index, ItemLong -- 11
+pReq->format, ItemLong -- 12
+}
+#typev MPCID_c3992 121 "%0-->MPQBI_Compose_SMSReadRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SMSReadRequest
+{
+}
+#typev MPCID_c3876 116 "%0-->MPQBI_Compose_SMSSendRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SMSSendRequest
+{
+}
+#typev MPCID_c3948 119 "%0-->MPQBI_Compose_SMSSendRequest.. PDUString size : %10!d! 
+ PDUString : %11!s! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SMSSendRequest
+{
+(int) strlen(pSmsSend->SmsSend.u.Pdu.PduData), ItemLong -- 10
+pSmsSend->SmsSend.u.Pdu.PduData, ItemString -- 11
+}
+#typev MPCID_c3930 118 "%0-->MPQBI_Compose_SMSSendRequest.. PDUString size : %10!d! 
+ PDUString : %11!s! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SMSSendRequest
+{
+(int) strlen(PDUString), ItemLong -- 10
+PDUString, ItemString -- 11
+}
+#typev MPCID_c3888 117 "%0-->MPQBI_Compose_SMSSendRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SMSSendRequest
+{
+}
+#typev MPCID_c5545 190 "%0-->MPQBI_Compose_SarConfigRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SarConfigRequest
+{
+}
+#typev MPCID_c5604 194 "%0<%10!s!> <--MPQBI_Compose_SarConfigRequest.. CID Request: %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_SarConfigRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5591 193 "%0-->MPQBI_Compose_SarConfigRequest. CID Payload: Index:%10!d! antenna_index:%11!d! backoff_index:%12!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_SarConfigRequest
+{
+i, ItemLong -- 10
+pSarCfgState->antenna_index, ItemLong -- 11
+pSarCfgState->backoff_index, ItemLong -- 12
+}
+#typev MPCID_c5587 192 "%0-->MPQBI_Compose_SarConfigRequest. OID Payload: Index:%10!d! SarAntennaIndex:%11!d! SarBackoffIndex:%12!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_SarConfigRequest
+{
+i, ItemLong -- 10
+pSarCfgIndices->SarAntennaIndex, ItemLong -- 11
+pSarCfgIndices->SarBackoffIndex, ItemLong -- 12
+}
+#typev MPCID_c5565 191 "%0-->MPQBI_Compose_SarConfigRequest. SarMode:%10!d! SarBackoffStatus:%11!d! ElementCount:%12!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_SarConfigRequest
+{
+pOidReq->SetSarConfig.SarMode, ItemLong -- 10
+pOidReq->SetSarConfig.SarBackoffStatus, ItemLong -- 11
+pOidReq->SetSarConfig.SarConfigIndexListHeader.ElementCount, ItemLong -- 12
+}
+#typev MPCID_c5624 195 "%0-->MPQBI_Compose_SarTransmissionStatusRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SarTransmissionStatusRequest
+{
+}
+#typev MPCID_c5645 197 "%0<%10!s!> <--MPQBI_Compose_SarTransmissionStatusRequest.. CID Request: %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_SarTransmissionStatusRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5638 196 "%0-->MPQBI_Compose_SarTransmissionStatusRequest. ChannelNotification:%10!d! HysteresisTimer: %11!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_SarTransmissionStatusRequest
+{
+pOidReq->SetTransmissionStatus.ChannelNotification, ItemLong -- 10
+pOidReq->SetTransmissionStatus.HysteresisTimer, ItemLong -- 11
+}
+#typev MPCID_c13573 535 "%0-->MPQBI_Compose_PNPSetPowerState..Unhandled Power State %10!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SetNetworkIdleHint
+{
+pReq->network_idle_hint_state, ItemLong -- 10
+}
+#typev MPCID_c13582 536 "%0-->MPQBI_Compose_PNPSetPowerState..NWIdleHint %10!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_SetNetworkIdleHint
+{
+pReq->network_idle_hint_state ? L'Enabled' : L'Disabled', ItemWString -- 10
+}
+#typev MPCID_c4593 140 "%0-->MPQBI_Compose_SignalStateRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SignalStateRequest
+{
+}
+#typev MPCID_c4631 142 "%0-->MPQBI_Compose_SignalStateRequest..rssi interval:%10!d!, thresold:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_SignalStateRequest
+{
+pReq->rssi_interval, ItemLong -- 10
+pReq->rssi_threshold, ItemLong -- 11
+}
+#typev MPCID_c4605 141 "%0-->MPQBI_Compose_SignalStateRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SignalStateRequest
+{
+}
+#typev MPCID_c4175 128 "%0-->MPQBI_Compose_AkaAuthRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SimAuthRequest
+{
+}
+#typev MPCID_c5473 185 "%0-->MPQBI_Compose_SlotInfoStatusRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SlotInfoStatusRequest
+{
+}
+#typev MPCID_c5492 187 "%0<%10!s!> <--MPQBI_Compose_SysSlotMappingsRequest.. CID Request: %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_SlotInfoStatusRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5485 186 "%0-->MPQBI_Compose_SlotInfoStatusRequest. SlotIndex:%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_SlotInfoStatusRequest
+{
+pCidReq->slot_index, ItemLong -- 10
+}
+#typev MPCID_c14184 554 "%0-->MPQBI_Compose_SubscribeDeviceServiceEventsRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SubscribeDeviceServiceEventsRequest
+{
+}
+#typev MPCID_c14308 558 "%0-->MPQBI_Compose_SubscribeDeviceServiceEventsRequest. Total Element count:%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_SubscribeDeviceServiceEventsRequest
+{
+defaultSubscribedEventCount + appSubscribedEventCount, ItemLong -- 10
+}
+#typev MPCID_c14259 553 "%0-->MPQBI_GetQBISrvIdFromGUID..Srv Id: %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_SubscribeDeviceServiceEventsRequest
+{
+svc_id, ItemLong -- 10
+}
+#typev MPCID_c14259 552 "%0-->MPQBI_GetQBISrvIdFromGUID..GUID[%10!d!] is 0x %11!x! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_SubscribeDeviceServiceEventsRequest
+{
+i, ItemLong -- 10
+guid_byte_arr[i], ItemLong -- 11
+}
+#typev MPCID_c14243 557 "%0-->MPQBI_Compose_SubscribeDeviceServiceEvents..No memory size %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SubscribeDeviceServiceEventsRequest
+{
+listSize, ItemLong -- 10
+}
+#typev MPCID_c14226 556 "%0-->MPQBI_Compose_SubscribeDeviceServiceEventsRequest..PowerState: %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_SubscribeDeviceServiceEventsRequest
+{
+powerState, ItemLong -- 10
+}
+#typev MPCID_c14199 555 "%0-->MPQBI_Compose_SubscribeDeviceServiceEventsRequest..Num GUIDs: %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_SubscribeDeviceServiceEventsRequest
+{
+appSubscribedEventCount, ItemLong -- 10
+}
+#typev MPCID_c5405 181 "%0-->MPQBI_Compose_SysSlotMappingsRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_SysSlotMappingsRequest
+{
+}
+#typev MPCID_c5453 184 "%0<%10!s!> <--MPQBI_Compose_SysSlotMappingsRequest.. CID Request: %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_SysSlotMappingsRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5441 183 "%0-->MPQBI_Compose_SysSlotMappingsRequest. index: %10!d!, OID Slot Map: %11!d!, CID Slot Map: %12!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_SysSlotMappingsRequest
+{
+i, ItemLong -- 10
+*pOidSlotMapList, ItemLong -- 11
+*pCidSlotMapList, ItemLong -- 12
+}
+#typev MPCID_c5421 182 "%0-->MPQBI_Compose_SysSlotMappingsRequest. ElementCount: %10!d!, map_count: %11!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_SysSlotMappingsRequest
+{
+pOidReq->SetDeviceSlotMappingInfo.SlotMapListHeader.ElementCount, ItemLong -- 10
+pCidReq->map_count, ItemLong -- 11
+}
+#typev MPCID_c4531 137 "%0-->MPQBI_Compose_USSDRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_USSDRequest
+{
+}
+#typev MPCID_c4567 139 "%0-->MPQBI_Compose_USSDRequest.." //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_USSDRequest
+{
+}
+#typev MPCID_c4543 138 "%0-->MPQBI_Compose_USSDRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_USSDRequest
+{
+}
+#typev MPCID_c4972 156 "%0-->MPQBI_Compose_UiccApduRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_UiccApduRequest
+{
+}
+#typev MPCID_c4996 158 "%0<%10!s!> <--MPQBI_Compose_UiccApduRequest.. Command: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_UiccApduRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOidReq->SetUiccApdu.Command. pOidReq->SetUiccApdu.CommandLength), ItemHEXDump -- 11
+}
+#typev MPCID_c4993 157 "%0-->MPQBI_Compose_UiccApduRequest. Channel: %10!d!, SecureMessaging: %11!d!, Type: %12!d!, CommandLength: %13!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_UiccApduRequest
+{
+pOidReq->SetUiccApdu.Channel, ItemLong -- 10
+pOidReq->SetUiccApdu.SecureMessaging, ItemLong -- 11
+pOidReq->SetUiccApdu.Type, ItemLong -- 12
+pOidReq->SetUiccApdu.CommandLength, ItemLong -- 13
+}
+#typev MPCID_c4934 154 "%0-->MPQBI_Compose_UiccCloseChannelRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_UiccCloseChannelRequest
+{
+}
+#typev MPCID_c4950 155 "%0-->MPQBI_Compose_UiccCloseChannelRequest. Channel: %10!d!, ChannelGroup: %11!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_UiccCloseChannelRequest
+{
+pOidReq->SetUiccCloseChannel.Channel, ItemLong -- 10
+pOidReq->SetUiccCloseChannel.ChannelGroup, ItemLong -- 11
+}
+#typev MPCID_c4886 151 "%0-->MPQBI_Compose_UiccOpenChannelRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_UiccOpenChannelRequest
+{
+}
+#typev MPCID_c4908 153 "%0<%10!s!> <--MPQBI_Compose_UiccOpenChannelRequest.. AppId: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_UiccOpenChannelRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOidReq->SetUiccOpenChannel.AppId. pOidReq->SetUiccOpenChannel.AppIdLength), ItemHEXDump -- 11
+}
+#typev MPCID_c4905 152 "%0-->MPQBI_Compose_UiccOpenChannelRequest. AppIdLength: %10!d!, SelectP2Arg: %11!d!, ChannelGroup: %12!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_UiccOpenChannelRequest
+{
+pOidReq->SetUiccOpenChannel.AppIdLength, ItemLong -- 10
+pOidReq->SetUiccOpenChannel.SelectP2Arg, ItemLong -- 11
+pOidReq->SetUiccOpenChannel.ChannelGroup, ItemLong -- 12
+}
+#typev MPCID_c5103 164 "%0-->MPQBI_Compose_GetUiccResetRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_UiccResetRequest
+{
+}
+#typev MPCID_c5116 165 "%0-->MPQBI_Compose_GetUiccResetRequest. PassThroughAction:%10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_UiccResetRequest
+{
+pOidReq->SetUiccReset.PassThroughAction, ItemLong -- 10
+}
+#typev MPCID_c5030 159 "%0-->MPQBI_Compose_UiccTerminalCapRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_UiccTerminalCapRequest
+{
+}
+#typev MPCID_c5080 163 "%0<%10!s!> <--MPQBI_Compose_UiccTerminalCapRequest.. CID TLV: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_UiccTerminalCapRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pCidTlv. CidTlvOffset - sizeof(qbi_svc_msuicc_terminal_capability_s_req_s) +                  pCidReq->element_count * sizeof(qbi_mbim_offset_size_pair_s)), ItemHEXDump -- 11
+}
+#typev MPCID_c5075 162 "%0-->MPQBI_Compose_UiccTerminalCapRequest. CID element_count: %10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_UiccTerminalCapRequest
+{
+pOidReq->CapabilityListHeader.ElementCount, ItemLong -- 10
+}
+#typev MPCID_c5072 161 "%0<%10!s!> <--MPQBI_Compose_UiccTerminalCapRequest.. OID TLV: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Compose_UiccTerminalCapRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOidTlv. OidTlvOffset - sizeof(NDIS_WWAN_SET_UICC_TERMINAL_CAPABILITY)), ItemHEXDump -- 11
+}
+#typev MPCID_c5069 160 "%0-->MPQBI_Compose_UiccTerminalCapRequest. OID ElementCount: %10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_UiccTerminalCapRequest
+{
+pOidReq->CapabilityListHeader.ElementCount, ItemLong -- 10
+}
+#typev MPCID_c4657 143 "%0-->MPQBI_Compose_VisibleProviderRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_VisibleProviderRequest
+{
+}
+#typev MPCID_c4680 144 "%0-->MPQBI_Compose_VisibleProviderRequest. action:%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Compose_VisibleProviderRequest
+{
+pVisibleProvider->VisibleProviders.Action, ItemLong -- 10
+}
+#typev MPCID_c13624 538 "%0-->MPQBI_Compose_WOLPacketFilterList..Unhandled Power State %10!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_WOLPacketFilterList
+{
+powerState, ItemLong -- 10
+}
+#typev MPCID_c13633 539 "%0-->MPQBI_Compose_WOLPacketFilterList..Completed with  %10!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_WOLPacketFilterList
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPCID_c13615 206 "%0 -->MPQBI_AddWOLPatterns..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_WOLPacketFilterList
+{
+}
+#typev MPCID_c13610 207 "%0-->MPQBI_RemoveWOLPatterns..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_WOLPacketFilterList
+{
+}
+#typev MPCID_c13610 208 "%0-->MPQBI_RemoveWOLPatterns..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_WOLPacketFilterList
+{
+}
+#typev MPCID_c13605 537 "%0-->MPQBI_Compose_WOLPacketFilterList..Power State %10!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Compose_WOLPacketFilterList
+{
+powerState, ItemLong -- 10
+}
+#typev MPCID_c1535 46 "%0<%10!s!> -->MPQBI_GetBCExtRequestInfo: Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetBCExtRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c1632 47 "%0<%10!s!> -->MPQBI_GetBCExtRequestInfo: 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetBCExtRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c1524 45 "%0<%10!s!> -->MPQBI_GetBCExtRequestInfo: QbiCID 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetBCExtRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c1515 44 "%0-->MPQBI_GetBCExtRequestInfo: Invalid parm: pAdapter NULL" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetBCExtRequestInfo
+{
+}
+#typev MPCID_c986 33 "%0-->MPQBI_GetBCRequestInfo: Invalid parm: pAdapter NULL" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetBCRequestInfo
+{
+}
+#typev MPCID_c1402 42 "%0<%10!s!> -->MPQBI_GetMSUICCRequestInfo: Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetMSUICCRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c1466 43 "%0<%10!s!> -->MPQBI_GetMSUICCRequestInfo: 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetMSUICCRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c1395 41 "%0<%10!s!> -->MPQBI_GetMSUICCRequestInfo: QbiCID 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetMSUICCRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c1390 40 "%0-->MPQBI_GetMSUICCRequestInfo: Invalid parm: pAdapter NULL" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetMSUICCRequestInfo
+{
+}
+#typev MPCID_c1881 50 "%0<%10!s!> -->MPQBI_GetSARRequestInfo: Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c1881 51 "%0<%10!s!> -->MPQBI_GetSARRequestInfo: 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c1881 49 "%0<%10!s!> -->MPQBI_GetSARRequestInfo: QbiCID 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c1881 48 "%0-->MPQBI_GetSARRequestInfo: Invalid parm: pAdapter NULL" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetRequestInfo
+{
+}
+#typev MPCID_c1833 31 "%0<%10!s!> <--MPQBI_GetDevSpecificRequestInfo: Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c1833 32 "%0<%10!s!> <--MPQBI_GetDevSpecificRequestInfo: 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c1833 30 "%0<%10!s!> -->MPQBI_GetDevSpecificRequestInfo: QbiCID 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c1833 29 "%0-->MPQBI_GetDevSpecificRequestInfo: Invalid parm: pAdapter NULL" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetRequestInfo
+{
+}
+#typev MPCID_c1899 53 "%0<%10!s!> -->MPQBI_GetRequestInfo: unsupported QbiSvcType %11!u! " //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiSvcType, ItemLong -- 11
+}
+#typev MPCID_c1845 38 "%0<%10!s!> -->MPQBI_GetUSSDRequestInfo: Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c1845 39 "%0<%10!s!> -->MPQBI_GetUSSDRequestInfo: 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c1845 37 "%0<%10!s!> -->MPQBI_GetUSSDRequestInfo: QbiCID 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c1845 36 "%0-->MPQBI_GetUSSDRequestInfo: Invalid parm: pAdapter NULL" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetRequestInfo
+{
+}
+#typev MPCID_c1820 27 "%0<%10!s!> <--MPQBI_GetAuthRequestInfo: Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c1820 28 "%0<%10!s!> <--MPQBI_GetSMSRequestInfo: 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c1820 26 "%0<%10!s!> -->MPQBI_GetAuthRequestInfo: QbiCID 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c1820 25 "%0-->MPQBI_GetAuthRequestInfo: Invalid parm: pAdapter NULL" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetRequestInfo
+{
+}
+#typev MPCID_c636 23 "%0<%10!s!> <--MPQBI_GetSMSRequestInfo: Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetSMSRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c719 24 "%0<%10!s!> <--MPQBI_GetSMSRequestInfo: 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetSMSRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c625 22 "%0<%10!s!> -->MPQBI_GetSMSRequestInfo: QbiCID 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_GetSMSRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c616 21 "%0-->MPQBI_GetSMSRequestInfo: Invalid parm: pAdapter NULL" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_GetSMSRequestInfo
+{
+}
+#typev MPCID_c525 18 "%0Modem power up successful" //   FUNC=MPQBI_HandleModemPowerUpResponse
+{
+}
+#typev MPCID_c13677 541 "%0 -->MPQBI_Handle_OID_ADD_WOL_PATTERN. Unsupported Packet Type %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Handle_OID_Add_WOL_PATTERN
+{
+pFilterInfo->WoLPacketType, ItemLong -- 10
+}
+#typev MPCID_c13694 542 "%0 -->MPQBI_Handle_OID_ADD_WOL_PATTERN. Updating Pattern %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Handle_OID_Add_WOL_PATTERN
+{
+pFilterInfo->PatternId, ItemLong -- 10
+}
+#typev MPCID_c13661 540 "%0 -->MPQBI_Handle_OID_ADD_WOL_PATTERN. " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Handle_OID_Add_WOL_PATTERN
+{
+}
+#typev MPCID_c11397 470 "%0MPQBI_IndicationConnect sending NDIS_WWAN_CONTEXT_STATE " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationConnect
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c11382 469 "%0MPQBI_IndicationConnect...uNwError: %10!u!, ConnectionId: %11!u!, ActivationState: %12!d!, VoiceCallState: %13!d!, IPType: %14!d! for cid: QBI_SVC_BC_MBIM_CID_CONNECT" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationConnect
+{
+wwanContextState.ContextState.uNwError, ItemLong -- 10
+wwanContextState.ContextState.ConnectionId, ItemLong -- 11
+wwanContextState.ContextState.ActivationState, ItemLong -- 12
+wwanContextState.ContextState.VoiceCallState, ItemLong -- 13
+wwanContextState.ContextState.IPType, ItemLong -- 14
+}
+#typev MPCID_c11363 468 "%0MPQBI_IndicationConnect..DEACTIVATED" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationConnect
+{
+}
+#typev MPCID_c11354 467 "%0MPQBI_IndicationConnect..activation status:ACTIVATED" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationConnect
+{
+}
+#typev MPCID_c11342 466 "%0MPQBI_IndicationConnect...Assigned IP %10!d!, activation status: %11!d! for cid: QBI_SVC_BC_MBIM_CID_CONNECT" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationConnect
+{
+cid_Resp->ip_type, ItemLong -- 10
+cid_Resp->activation_state, ItemLong -- 11
+}
+#typev MPCID_c11318 465 "%0<%10!s!> <--MPQBI_IndicationConnect. invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_CONNECT..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationConnect
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12843 516 "%0MPQBI_IndicationLteAttachConfig sending NDIS_STATUS_WWAN_LTE_ATTACH_CONFIG " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationLteAttachConfig
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c12827 515 "%0<%10!s!> <--MPQBI_IndicationLteAttachConfig.. AccessString: %11!s! UserName: %12!s! Password: %13!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationLteAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+OidInd.LteAttachContext.LteContextArray[i].basicInfo.AccessString, ItemWString -- 11
+OidInd.LteAttachContext.LteContextArray[i].basicInfo.UserName, ItemWString -- 12
+OidInd.LteAttachContext.LteContextArray[i].basicInfo.Password, ItemWString -- 13
+}
+#typev MPCID_c12821 514 "%0<%10!s!> <--MPQBI_IndicationLteAttachConfig..IPType: %11!d! Roaming: %12!d! Source: %13!d! Compression: %14!d! AuthType: %15!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationLteAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+OidInd.LteAttachContext.LteContextArray[i].IPType, ItemLong -- 11
+OidInd.LteAttachContext.LteContextArray[i].Roaming, ItemLong -- 12
+OidInd.LteAttachContext.LteContextArray[i].Source, ItemLong -- 13
+OidInd.LteAttachContext.LteContextArray[i].basicInfo.Compression, ItemLong -- 14
+OidInd.LteAttachContext.LteContextArray[i].basicInfo.AuthType, ItemLong -- 15
+}
+#typev MPCID_c12780 513 "%0<%10!s!> <--MPQBI_IndicationLteAttachConfig.. CID Indication: %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationLteAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pCIDInd. uBufLen), ItemHEXDump -- 11
+}
+#typev MPCID_c12774 512 "%0<%10!s!> <--MPQBI_IndicationLteAttachConfig. invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_EXT_MBIM_CID_MS_LTE_ATTACH_CONFIG..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationLteAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12912 521 "%0<%10!s!> <--MPQBI_IndicationLteAttachStatus... Processed NDIS_STATUS_WWAN_LTE_ATTACH_STATUS " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationLteAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c12900 520 "%0<%10!s!> <--MPQBI_IndicationLteAttachStatus.. AccessString: %11!s! UserName: %12!s! Password: %13!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationLteAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+OidInd.LteAttachStatus.basicInfo.AccessString, ItemWString -- 11
+OidInd.LteAttachStatus.basicInfo.UserName, ItemWString -- 12
+OidInd.LteAttachStatus.basicInfo.Password, ItemWString -- 13
+}
+#typev MPCID_c12895 519 "%0<%10!s!> <--MPQBI_IndicationLteAttachStatus..LteAttachState: %11!d! IPType: %12!d! Compression: %13!d! AuthType: %14!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationLteAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+OidInd.LteAttachStatus.LteAttachState, ItemLong -- 11
+OidInd.LteAttachStatus.IPType, ItemLong -- 12
+OidInd.LteAttachStatus.basicInfo.Compression, ItemLong -- 13
+OidInd.LteAttachStatus.basicInfo.AuthType, ItemLong -- 14
+}
+#typev MPCID_c12868 518 "%0<%10!s!> -->MPQBI_IndicationLteAttachStatus.. CID Indication: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationLteAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pBuf. uBufLen), ItemHEXDump -- 11
+}
+#typev MPCID_c12861 517 "%0<%10!s!> <--MPQBI_IndicationLteAttachStatus. invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_EXT_MBIM_CID_MS_LTE_ATTACH_STATUS..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationLteAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c13042 529 "%0MPQBI_IndicationPCO sending NDIS_STATUS_WWAN_PCO_STATUS on portnumber : %10!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationPCO
+{
+PortNumber, ItemLong -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c13027 528 "%0<%10!s!> <--MPQBI_IndicationPCO.. ,and  pPcoData: %11!s!  and PcoInfo.PcoValue.PcoData: %12!s! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationPCO
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pPcoData. pCIDInd->pco_data_size), ItemHEXDump -- 11
+log_xstr(PcoInfo.PcoValue.PcoData. PcoInfo.PcoValue.Size), ItemHEXDump -- 12
+}
+#typev MPCID_c13022 527 "%0<%10!s!> <--MPQBI_IndicationPCO.. PCO value type: %11!d!, status : %12!d! ,pCIDInd->pco_data_type: %13!d!, pCIDInd->pco_data_size : %14!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationPCO
+{
+pAdapter->PortName, ItemString -- 10
+PcoInfo.PcoValue.Type, ItemLong -- 11
+PcoInfo.uStatus, ItemLong -- 12
+pCIDInd->pco_data_type, ItemLong -- 13
+pCIDInd->pco_data_size, ItemLong -- 14
+}
+#typev MPCID_c13000 526 "%0<%10!s!> <--MPQBI_IndicationPCO.. raw buffer size : %11!d!, and Raw buffer data: %12!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationPCO
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+log_xstr(pBuf. uBufLen), ItemHEXDump -- 12
+}
+#typev MPCID_c12994 525 "%0<%10!s!> <--MPQBI_IndicationPCO. invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_EXT_MBIM_CID_MS_PCO_STATUS..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationPCO
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12239 493 "%0<--MPQBI_IndicationPacketServiceState..Forcing Registration State to Home " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_IndicationPacketServiceState
+{
+}
+#typev MPCID_c12224 492 "%0MPQBI_ProcessInboundBCIndication sending NDIS_STATUS_WWAN_PACKET_SERVICE.." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationPacketServiceState
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c12210 491 "%0<%10!s!> <--MPQBI_IndicationPacketServiceState. PacketServiceState:%11!d!, AvailDataClass:0x%12!x!, CurrentDataClass:0x%13!x! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationPacketServiceState
+{
+pAdapter->PortName, ItemString -- 10
+wwanPacketServiceState.PacketService.PacketServiceState, ItemLong -- 11
+wwanPacketServiceState.PacketService.AvailableDataClass, ItemLong -- 12
+wwanPacketServiceState.PacketService.CurrentDataClass, ItemLong -- 13
+}
+#typev MPCID_c12165 490 "%0<%10!s!> <--MPQBI_IndicationPacketServiceState..invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_PACKET_SERVICE" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationPacketServiceState
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12751 511 "%0MPQBI_IndicationProvisionedContextV2 sending NDIS_STATUS_WWAN_PROVISIONED_CONTEXTS " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationProvisionedContextV2
+{
+}
+#typev MPCID_c12736 510 "%0<--MPQBI_IndicationProvisionedContextV2..IPType: %10!d!, Enable: %11!d!, Roaming:%12!d!, MediaType:%13!d!, Source:%14!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationProvisionedContextV2
+{
+pWwanContext->IPType, ItemLong -- 10
+pWwanContext->Enable, ItemLong -- 11
+pWwanContext->Roaming, ItemLong -- 12
+pWwanContext->MediaType, ItemLong -- 13
+pWwanContext->Source, ItemLong -- 14
+}
+#typev MPCID_c12732 509 "%0<--MPQBI_IndicationProvisionedContextV2..AccessString:%10!s!, UserName:%11!s!, Password:%12!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationProvisionedContextV2
+{
+pWwanContext->basicInfo.AccessString, ItemWString -- 10
+pWwanContext->basicInfo.UserName, ItemWString -- 11
+pWwanContext->basicInfo.Password, ItemWString -- 12
+}
+#typev MPCID_c12728 508 "%0<--MPQBI_IndicationProvisionedContextV2..ContextType: %10!d!, ContextId: %11!d!, Compression:%12!d!, AuthType:%13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationProvisionedContextV2
+{
+pWwanContext->basicInfo.ContextType, ItemLong -- 10
+pWwanContext->basicInfo.ContextId, ItemLong -- 11
+pWwanContext->basicInfo.Compression, ItemLong -- 12
+pWwanContext->basicInfo.AuthType, ItemLong -- 13
+}
+#typev MPCID_c12670 507 "%0<%10!s!> <--MPQBI_IndicationProvisionedContextV2..invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_PROVISIONED_CONTEXTS" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationProvisionedContextV2
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c11818 478 "%0MPQBI_IndicationProvisionedContexts sending NDIS_STATUS_WWAN_PROVISIONED_CONTEXTS " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationProvisionedContexts
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c11756 477 "%0<%10!s!> <--MPQBI_IndicationProvisionedContexts..invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_PROVISIONED_CONTEXTS" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationProvisionedContexts
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c11983 482 "%0MPQBI_IndicationRadioState sending NDIS_STATUS_WWAN_SIGNAL_STATE, HW Radio State:%10!d!, SW Radio State:%11!d! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationRadioState
+{
+wwan_radio_state.RadioState.HwRadioState, ItemLong -- 10
+wwan_radio_state.RadioState.SwRadioState, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c11941 481 "%0<%10!s!> <--MPQBI_IndicationRadioState..invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_RADIO_STATE" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationRadioState
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c11727 476 "%0<%10!s!> <--MPQBI_IndicationReadyInfo..SUCCESS. ReadyState:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationReadyInfo
+{
+pAdapter->PortName, ItemString -- 10
+pWwanReadyInfo->ReadyInfo.ReadyState, ItemLong -- 11
+}
+#typev MPCID_c11673 475 "%0<%10!s!> <--MPQBI_IndicationReadyInfo..No Memory of size :%11!d!... " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_IndicationReadyInfo
+{
+pAdapter->PortName, ItemString -- 10
+readyInfoSize, ItemLong -- 11
+}
+#typev MPCID_c11647 474 "%0<%10!s!> <--MPQBI_IndicationReadyInfo..invlaid input buffer length..: %11!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationReadyInfo
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12140 489 "%0MPQBI_IndicationRegisterState sending NDIS_STATUS_WWAN_PACKET_SERVICE.." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationRegisterState
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c12124 488 "%0MPQBI_IndicationRegisterState sending NDIS_STATUS_WWAN_REGISTER_STATE " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationRegisterState
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c12110 487 "%0<--MPQBI_IndicationRegisterState..uNwError:%10!d!, RegisterState:%11!d!, RegisterMode:%12!d!, RoamingText:%13!s!, ProviderId:%14!s!, ProviderName:%15!s! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationRegisterState
+{
+wwanRegState.RegistrationState.uNwError, ItemLong -- 10
+wwanRegState.RegistrationState.RegisterState, ItemLong -- 11
+wwanRegState.RegistrationState.RegisterMode, ItemLong -- 12
+wwanRegState.RegistrationState.RoamingText, ItemWString -- 13
+wwanRegState.RegistrationState.ProviderId, ItemWString -- 14
+wwanRegState.RegistrationState.ProviderName, ItemWString -- 15
+}
+#typev MPCID_c12095 486 "%0<%10!s!> <--MPQBI_IndicationPacketServiceState. PacketServiceState:%11!d!, AvailDataClass:0x%12!x!, CurrentDataClass:0x%13!x! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationRegisterState
+{
+pAdapter->PortName, ItemString -- 10
+wwanPacketServiceState.PacketService.PacketServiceState, ItemLong -- 11
+wwanPacketServiceState.PacketService.AvailableDataClass, ItemLong -- 12
+wwanPacketServiceState.PacketService.CurrentDataClass, ItemLong -- 13
+}
+#typev MPCID_c12045 485 "%0MBB: MPQBI_IndicationRegisterState() roam indicator icon supression is disabled" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationRegisterState
+{
+}
+#typev MPCID_c12033 484 "%0MBB: MPQBI_IndicationRegisterState() roam indicator icon supression enabled. Changing register state to home" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationRegisterState
+{
+}
+#typev MPCID_c12006 483 "%0<%10!s!> <--MPQBI_IndicationRegisterState..invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_REGISTER_STATE" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationRegisterState
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12389 498 "%0<%10!s!> <--MPQBI_IndicationSMSConfig..SMS format:%11!s!, Msg Index:%12!d!, SC Address: %13!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationSMSConfig
+{
+pAdapter->PortName, ItemString -- 10
+(wWanSmsConfig.SmsConfiguration.SmsFormat == WwanSmsFormatPdu) ? L'PDU' : L'CDMA', ItemWString -- 11
+wWanSmsConfig.SmsConfiguration.ulMaxMessageIndex, ItemLong -- 12
+wWanSmsConfig.SmsConfiguration.ScAddress, ItemString -- 13
+}
+#typev MPCID_c12382 497 "%0MPQBI_IndicationSMSConfig sending NDIS_WWAN_SMS_CONFIGURATION " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationSMSConfig
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c12340 496 "%0<%10!s!> <--MPQBI_IndicationSMSConfig..invlaid input buffer length..:%11!d! for cid: QBI_SVC_SMS_MBIM_CID_SMS_CONFIGURATION" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationSMSConfig
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12520 500 "%0MPQBI_IndicationSMSRead sending NDIS_WWAN_SMS_RECEIVE " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationSMSRead
+{
+}
+#typev MPCID_c12416 499 "%0<%10!s!> <--MPQBI_IndicationSMSRead..invlaid input buffer length..:%11!d! for cid: QBI_SVC_SMS_MBIM_CID_SMS_READ" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationSMSRead
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12588 503 "%0MPQBI_IndicationSMSStatus sending NDIS_WWAN_SMS_SEND_STATUS " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationSMSStatus
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c12574 502 "%0<%10!s!> <--MPQBI_IndicationSMSStatus.. uFlag:%11!d!, Msg Index:%12!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationSMSStatus
+{
+pAdapter->PortName, ItemString -- 10
+wWanSmsStatus.SmsStatus.uFlag, ItemLong -- 11
+wWanSmsStatus.SmsStatus.MessageIndex, ItemLong -- 12
+}
+#typev MPCID_c12542 501 "%0<%10!s!> <--MPQBI_IndicationSMSStatus..invlaid input buffer length..:%11!d! for cid: QBI_SVC_SMS_MBIM_CID_SMS_STATUS" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationSMSStatus
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12646 506 "%0MPQBI_IndicationSarTransmissionStatus sending NDIS_WWAN_SAR_TRANSMISSION_STATUS_INFO " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationSarTransmissionStatus
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c12632 505 "%0<%10!s!> <--MPQBI_IndicationSarTransmissionStatus.. ChannelNotification:%11!d!, TransmissionStatus:%12!d!, , HysteresisTimer:%13!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationSarTransmissionStatus
+{
+pAdapter->PortName, ItemString -- 10
+WwanSarTransmissionStatus.TransmissionStatus.ChannelNotification, ItemLong -- 11
+WwanSarTransmissionStatus.TransmissionStatus.TransmissionStatus, ItemLong -- 12
+WwanSarTransmissionStatus.TransmissionStatus.HysteresisTimer, ItemLong -- 13
+}
+#typev MPCID_c12609 504 "%0<%10!s!> <--MPQBI_IndicationSarTransmissionStatus..invalid input buffer length..:%11!d! for cid: QBI_SVC_MSSAR_MBIM_CID_MS_TRANSMISSION_STATUS" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationSarTransmissionStatus
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12315 495 "%0MPQBI_IndicationSignalState sending NDIS_STATUS_WWAN_SIGNAL_STATE " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationSignalState
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c12275 494 "%0<%10!s!> <--MPQBI_IndicationSignalState..invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_SIGNAL_STATE" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationSignalState
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12971 524 "%0MPQBI_IndicationSlotInfo sending NDIS_STATUS_WWAN_SLOT_INFO " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationSlotInfo
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c12956 523 "%0MPQBI_IndicationSlotInfo... uStatus %10!d!, SlotIndex: %11!d!, State: %12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_IndicationSlotInfo
+{
+SlotInfo.uStatus, ItemLong -- 10
+SlotInfo.SlotInfo.SlotIndex, ItemLong -- 11
+SlotInfo.SlotInfo.State, ItemLong -- 12
+}
+#typev MPCID_c12935 522 "%0<%10!s!> <--MPQBI_IndicationSlotInfo. invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_EXT_MBIM_CID_MS_SLOT_INFO_STATUS..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_IndicationSlotInfo
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c11461 472 "%0MPQBI_Response_IPConfiguration - Memory allocation failed" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ProcessIPConfigurationInfo
+{
+}
+#typev MPCID_c11440 471 "%0MPQBI_Response_IPConfiguration - Invalid response buffer" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ProcessIPConfigurationInfo
+{
+}
+#typev MPCID_c10764 440 "%0<--MPQBI_ProcessInboundBCIndication. invalid input buffer for cid:%10!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_ProcessInboundBCIndication
+{
+BCCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c10785 442 "%0<%10!s!> <--MPQBI_ProcessInboundBCIndication. invlaid CID:%11!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_ProcessInboundBCIndication
+{
+pAdapter->PortName, ItemString -- 10
+BCCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c10821 473 "%0<%10!s!> <--MPQBI_IndicationIPConfigurationInfo. invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_IP_CONFIGURATION_INFO..FAILED" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ProcessInboundBCIndication
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c10774 441 "%0<%10!s!> <--MPQBI_ProcessInboundBCIndication, QBI cid: %11!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_ProcessInboundBCIndication
+{
+pAdapter->PortName, ItemString -- 10
+BCCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c11139 457 "%0<--MPQBI_ProcessInboundEXTQMUXIndication. invlaid input buffer for cid:%10!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_ProcessInboundEXTQMUXIndication
+{
+QMUXExtCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c11233 461 "%0MPQBI_ProcessInboundEXTQMUXIndication sending NDIS_STATUS_WWAN_DEVICE_SERVICE_EVENT " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_ProcessInboundEXTQMUXIndication
+{
+}
+#typev MPCID_c11209 460 "%0-->MPQBI_ProcessInboundEXTQMUXIndication..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_ProcessInboundEXTQMUXIndication
+{
+}
+#typev MPCID_c11176 459 "%0<%10!s!> <--MPQBI_ProcessInboundEXTQMUXIndication..QBI returned invalid GUID " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_ProcessInboundEXTQMUXIndication
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c11158 458 "%0<%10!s!> <--MPQBI_ProcessInboundEXTQMUXIndication..No Memory of size :%11!d!... " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPQBI_ProcessInboundEXTQMUXIndication
+{
+pAdapter->PortName, ItemString -- 10
+IndicationSize, ItemLong -- 11
+}
+#typev MPCID_c11046 452 "%0<--MPQBI_ProcessInboundUSSDIndication. invlaid input buffer for cid:%10!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_ProcessInboundUSSDIndication
+{
+USSDCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c11067 454 "%0<%10!s!> <--MPQBI_ProcessInboundUSSDIndication. invlaid CID:%11!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_ProcessInboundUSSDIndication
+{
+pAdapter->PortName, ItemString -- 10
+USSDCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c11114 456 "%0MPQBI_ProcessInboundUSSDIndication sending NDIS_WWAN_SMS_SEND_STATUS " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_ProcessInboundUSSDIndication
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c11080 455 "%0<%10!s!> <--MPQBI_ProcessInboundSMSIndication..invlaid input buffer length..:%11!d! for cid:%12!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_ProcessInboundUSSDIndication
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+USSDCidToStr(cid), ItemString -- 12
+}
+#typev MPCID_c11056 453 "%0<%10!s!> <--MPQBI_ProcessInboundUSSDIndication, QBI cid: %11!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_ProcessInboundUSSDIndication
+{
+pAdapter->PortName, ItemString -- 10
+USSDCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c2486 79 "%0<%10!s!> <--MPQBI_QMIIndication: Svc ID %11!d! (%12!s!), CID:%13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_QMIIndication
+{
+pAdapter->PortName, ItemString -- 10
+uSvcMsgId, ItemLong -- 11
+SvcToStr(uSvcMsgId), ItemString -- 12
+cid, ItemLong -- 13
+}
+#typev MPCID_c2469 78 "%0AOAC.wakeReason = NdisWakeReasonWwanUSSDReceive" //   FUNC=MPQBI_QMIIndication
+{
+}
+#typev MPCID_c2469 74 "%0AOAC.wakeReason = NdisWakeReasonWwanRegisterState" //   FUNC=MPQBI_QMIIndication
+{
+}
+#typev MPCID_c2469 75 "%0AOAC.wakeReason = NdisWakeReasonMediaConnect" //   FUNC=MPQBI_QMIIndication
+{
+}
+#typev MPCID_c2469 76 "%0AOAC.wakeReason = NdisWakeReasonMediaDisconnect" //   FUNC=MPQBI_QMIIndication
+{
+}
+#typev MPCID_c2469 77 "%0AOAC.wakeReason = NdisWakeReasonWwanSMSReceive" //   FUNC=MPQBI_QMIIndication
+{
+}
+#typev MPCID_c2410 73 "%0<%10!s!> <--MPQBI_QMIIndication: Svc ID %11!d! (%12!s!)..Memory allocation FAILED..." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_QMIIndication
+{
+pAdapter->PortName, ItemString -- 10
+uSvcMsgId, ItemLong -- 11
+SvcToStr(uSvcMsgId), ItemString -- 12
+}
+#typev MPCID_c2386 72 "%0<%10!s!> <--MPQBI_QMIIndication: Svc ID %11!d! (%12!s!)..Memory allocation FAILED..." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_QMIIndication
+{
+pAdapter->PortName, ItemString -- 10
+uSvcMsgId, ItemLong -- 11
+SvcToStr(uSvcMsgId), ItemString -- 12
+}
+#typev MPCID_c2367 71 "%0<%10!s!> <--MPQBI_QMIIndication: Svc ID %11!d! (%12!s!)Memory allocation FAILED..." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_QMIIndication
+{
+pAdapter->PortName, ItemString -- 10
+uSvcMsgId, ItemLong -- 11
+SvcToStr(uSvcMsgId), ItemString -- 12
+}
+#typev MPCID_c7669 273 "%0-->MPQBI_Response_AKA_Auth..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_AkaAuthRequest
+{
+}
+#typev MPCID_c7720 275 "%0<%10!s!> <--MPQBI_Response_AKA_Auth.. OID Response Status: 0x%11!08x!, Response Length: %12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_AkaAuthRequest
+{
+pAdapter->PortName, ItemString -- 10
+pOID->OIDStatus, ItemLong -- 11
+pOID->nOidRespLen, ItemLong -- 12
+}
+#typev MPCID_c7681 274 "%0<%10!s!> <--MPQBI_Response_AKA_Auth..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_AkaAuthRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7733 276 "%0<%10!s!> <--MPQBI_Response_AKA_Auth..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_AkaAuthRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7144 254 "%0-->MPQBI_Response_DevCapRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_DevCapRequest
+{
+}
+#typev MPCID_c7294 258 "%0<%10!s!> <--MPQBI_Response_DevCapRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DevCapRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7278 257 "%0<%10!s!> <--MPQBI_Response_DevCapRequest..DevID:%11!s!, FWInfo:%12!s!, DevModel:%13!s!, Mfg:%14!s! Maxsessions %15!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DevCapRequest
+{
+pAdapter->PortName, ItemString -- 10
+pNdisDeviceCaps->DeviceCaps.DeviceId, ItemWString -- 11
+pNdisDeviceCaps->DeviceCaps.FirmwareInfo, ItemWString -- 12
+pNdisDeviceCaps->DeviceCaps.Model, ItemWString -- 13
+pNdisDeviceCaps->DeviceCaps.Manufacturer, ItemWString -- 14
+pNdisDeviceCaps->DeviceCaps.MaxActivatedContexts, ItemLong -- 15
+}
+#typev MPCID_c7207 256 "%0<%10!s!> <--MPQBI_Response_DevCapRequest. CellularClass is %11!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DevCapRequest
+{
+pAdapter->PortName, ItemString -- 10
+cid_Resp->cellular_class, ItemLong -- 11
+}
+#typev MPCID_c7156 255 "%0<%10!s!> <--MPQBI_Response_DevCapRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DevCapRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10010 390 "%0-->MPQBI_Response_DeviceCapsEx..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_DeviceCapsEx
+{
+}
+#typev MPCID_c10145 400 "%0<%10!s!> <--MPQBI_Response_DeviceCapsEx..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10136 399 "%0<%10!s!> -->MPQBI_Response_DeviceCapsEx.. OID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOIDResp. pOID->nOidRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10132 398 "%0<%10!s!> <--MPQBI_Response_DeviceCapsEx.. DeviceId: %11!s!, Manufacturer: %12!s!, Model: %13!s!, FirmwareInfo: %14!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->DeviceCaps.DeviceId, ItemWString -- 11
+pOIDResp->DeviceCaps.Manufacturer, ItemWString -- 12
+pOIDResp->DeviceCaps.Model, ItemWString -- 13
+pOIDResp->DeviceCaps.FirmwareInfo, ItemWString -- 14
+}
+#typev MPCID_c10127 397 "%0<%10!s!> <--MPQBI_Response_DeviceCapsEx.. ExecutorIndex: %11!d!, WwanOptionalServiceCaps: %12!d!, CustomDataClass: %13!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->DeviceCaps.ExecutorIndex, ItemLong -- 11
+pOIDResp->DeviceCaps.WwanOptionalServiceCaps, ItemLong -- 12
+pOIDResp->DeviceCaps.CustomDataClass, ItemWString -- 13
+}
+#typev MPCID_c10123 396 "%0<%10!s!> <--MPQBI_Response_DeviceCapsEx.. WwanDataClass: 0x%11!08x!, WwanSmsCaps: %12!d!, WwanControlCaps: %13!d!, MaxActivatedContexts: %14!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->DeviceCaps.WwanDataClass, ItemLong -- 11
+pOIDResp->DeviceCaps.WwanSmsCaps, ItemLong -- 12
+pOIDResp->DeviceCaps.WwanControlCaps, ItemLong -- 13
+pOIDResp->DeviceCaps.MaxActivatedContexts, ItemLong -- 14
+}
+#typev MPCID_c10118 395 "%0<%10!s!> <--MPQBI_Response_DeviceCapsEx.. WwanDeviceType: %11!d!, WwanCellularClass: %12!d!, WwanVoiceClass: %13!d!, WwanSimClass: %14!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->DeviceCaps.WwanDeviceType, ItemLong -- 11
+pOIDResp->DeviceCaps.WwanCellularClass, ItemLong -- 12
+pOIDResp->DeviceCaps.WwanVoiceClass, ItemLong -- 13
+pOIDResp->DeviceCaps.WwanSimClass, ItemLong -- 14
+}
+#typev MPCID_c10094 394 "%0<%10!s!> <--MPQBI_Response_DeviceCapsEx.,  pCIDResp->hw_info.size %11!u!, pCIDResp->hw_info.offset %12!u! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->hw_info.size, ItemLong -- 11
+pCIDResp->hw_info.offset, ItemLong -- 12
+}
+#typev MPCID_c10083 393 "%0<%10!s!> <--MPQBI_Response_DeviceCapsEx.,  pCIDResp->device_id.size %11!u!, pCIDResp->device_id.offset %12!u! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->device_id.size, ItemLong -- 11
+pCIDResp->device_id.offset, ItemLong -- 12
+}
+#typev MPCID_c10025 392 "%0<%10!s!> -->MPQBI_Response_DeviceCapsEx.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10020 391 "%0<%10!s!> <--MPQBI_Response_DeviceCapsEx..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9141 329 "%0<--MPQBI_Response_DeviceServiceCommandRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_DeviceServiceCommandRequest
+{
+}
+#typev MPCID_c9213 332 "%0<%10!s!> <--MPQBI_Response_DeviceServiceCommandRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9198 331 "%0<%10!s!> <--MPQBI_Response_DeviceServiceCommandRequest: Device Service response exceeds max OID resp length %11!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_DeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+SIZEOF_OID_RESPONSE, ItemLong -- 11
+}
+#typev MPCID_c9153 330 "%0<%10!s!> <--MPQBI_Response_DeviceServiceCommandRequest..SUCCESS with Svc:%11!d!, CID:%12!d!, RespLen:%13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_DeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBISvcType, ItemLong -- 11
+pQmiElement->uQBICID, ItemLong -- 12
+pQmiElement->nRespLen, ItemLong -- 13
+}
+#typev MPCID_c7323 259 "%0-->MPQBI_Response_EmergencyModeRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_EmergencyModeRequest
+{
+}
+#typev MPCID_c7354 261 "%0<%10!s!> <--MPQBI_Response_EmergencyModeRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_EmergencyModeRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7342 260 "%0<%10!s!> <--MPQBI_Response_EmergencyModeRequest..EmergencyMode:%11!d! with CID:%12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_EmergencyModeRequest
+{
+pAdapter->PortName, ItemString -- 10
+wwanReadyInfo->ReadyInfo.EmergencyMode, ItemLong -- 11
+pQmiElement->uQBICID, ItemLong -- 12
+}
+#typev MPCID_c8917 322 "%0<%10!s!> <--MPQBI_Response_EnumDeviceServicesRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_EnumDeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8842 321 "%0<%10!s!> <--MPQBI_Response_EnumDeviceServiceCommandRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_EnumDeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8949 323 "%0<--MPQBI_Response_EnumDeviceServicesRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_EnumDeviceServicesRequest
+{
+}
+#typev MPCID_c9023 325 "%0<%10!s!> <--MPQBI_Response_EnumDeviceServicesRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_EnumDeviceServicesRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8968 324 "%0<%10!s!> <--MPQBI_Response_EnumDeviceServicesRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_EnumDeviceServicesRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6286 219 "%0<--MPQBI_Response_HomeProviderRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_HomeProviderRequest
+{
+}
+#typev MPCID_c6340 222 "%0<%10!s!> <--MPQBI_Response_HomeProviderRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_HomeProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6328 221 "%0<%10!s!> <--MPQBI_Response_HomeProviderRequest SUCCESS. ProviderId:%11!s!,               ProviderName:%12!s! , DataClass:%13!d! for CID:%14!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_HomeProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pNdisHomeProvider->Provider.ProviderId, ItemWString -- 11
+pNdisHomeProvider->Provider.ProviderName, ItemWString -- 12
+pNdisHomeProvider->Provider.WwanDataClass, ItemLong -- 13
+pQmiElement->uQBICID, ItemLong -- 14
+}
+#typev MPCID_c6298 220 "%0<%10!s!> <--MPQBI_Response_HomeProviderRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_HomeProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7564 269 "%0-->MPQBI_Response_IPConfiguration..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_IPConfiguration
+{
+}
+#typev MPCID_c9768 372 "%0-->MPQBI_Response_LTEAttachConfig..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_LTEAttachConfig
+{
+}
+#typev MPCID_c9848 378 "%0<%10!s!> <--MPQBI_Response_LTEAttachConfig..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_LTEAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9836 377 "%0<%10!s!> <--MPQBI_Response_LTEAttachConfig.. AccessString: %11!s! UserName: %12!s! Password: %13!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_LTEAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->LteAttachContext.LteContextArray[i].basicInfo.AccessString, ItemWString -- 11
+pOIDResp->LteAttachContext.LteContextArray[i].basicInfo.UserName, ItemWString -- 12
+pOIDResp->LteAttachContext.LteContextArray[i].basicInfo.Password, ItemWString -- 13
+}
+#typev MPCID_c9830 376 "%0<%10!s!> <--MPQBI_Response_LTEAttachConfig..IPType: %11!d! Roaming: %12!d! Source: %13!d! Compression: %14!d! AuthType: %15!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_LTEAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->LteAttachContext.LteContextArray[i].IPType, ItemLong -- 11
+pOIDResp->LteAttachContext.LteContextArray[i].Roaming, ItemLong -- 12
+pOIDResp->LteAttachContext.LteContextArray[i].Source, ItemLong -- 13
+pOIDResp->LteAttachContext.LteContextArray[i].basicInfo.Compression, ItemLong -- 14
+pOIDResp->LteAttachContext.LteContextArray[i].basicInfo.AuthType, ItemLong -- 15
+}
+#typev MPCID_c9793 375 "%0-->MPQBI_Response_LTEAttachConfig.. Insufficient Buffer Element Count: %10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_LTEAttachConfig
+{
+pCIDResp->element_count, ItemLong -- 10
+}
+#typev MPCID_c9785 374 "%0<%10!s!> -->MPQBI_Response_LTEAttachConfig.. CID Response: %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_LTEAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9780 373 "%0<%10!s!> <--MPQBI_Response_LTEAttachConfig..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_LTEAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9869 379 "%0-->MPQBI_Response_LTEAttachStatus..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_LTEAttachStatus
+{
+}
+#typev MPCID_c9925 384 "%0<%10!s!> <--MPQBI_Response_LTEAttachStatus..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_LTEAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9916 383 "%0<%10!s!> <--MPQBI_Response_LTEAttachStatus.. AccessString: %11!s! UserName: %12!s! Password: %13!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_LTEAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->LteAttachStatus.basicInfo.AccessString, ItemWString -- 11
+pOIDResp->LteAttachStatus.basicInfo.UserName, ItemWString -- 12
+pOIDResp->LteAttachStatus.basicInfo.Password, ItemWString -- 13
+}
+#typev MPCID_c9911 382 "%0<%10!s!> <--MPQBI_Response_LTEAttachStatus..LteAttachState: %11!d! IPType: %12!d! Compression: %13!d! AuthType: %14!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_LTEAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->LteAttachStatus.LteAttachState, ItemLong -- 11
+pOIDResp->LteAttachStatus.IPType, ItemLong -- 12
+pOIDResp->LteAttachStatus.basicInfo.Compression, ItemLong -- 13
+pOIDResp->LteAttachStatus.basicInfo.AuthType, ItemLong -- 14
+}
+#typev MPCID_c9883 381 "%0<%10!s!> -->MPQBI_Response_LTEAttachStatus.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_LTEAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9878 380 "%0<%10!s!> <--MPQBI_Response_LTEAttachStatus..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_LTEAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6081 209 "%0-->MPQBI_Response_OidConnectRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_OidConnectRequest
+{
+}
+#typev MPCID_c6245 218 "%0<%10!s!> <--MPQBI_Response_OidDisconnectResponse.SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6232 217 "%0<%10!s!> Data call is up on port %11!d!. Sending success response to OID_WWAN_CONNECT(activate)." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pOID->OidReqCopy.PortNumber, ItemLong -- 11
+}
+#typev MPCID_c6223 216 "%0<%10!s!> MPQBI_Response_OidConnectRequest sending MPQBI_ComposeQBIRequest for CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pNewQMIElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6190 215 "%0<--MPQBI_Response_OidConnectRequest..IP Addr Assignement Failed" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_OidConnectRequest
+{
+}
+#typev MPCID_c6181 214 "%0MPQBI_Response_OidConnectRequest..Req IP %10!d! Assigned IP %11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_Response_OidConnectRequest
+{
+pSetContext->SetContextState.IPType, ItemLong -- 10
+cid_Resp->ip_type, ItemLong -- 11
+}
+#typev MPCID_c6169 213 "%0<%10!s!> <--MPQBI_Response_OidConnectRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6159 212 "%0<%10!s!> <--MPQBI_Response_OidConnectRequest..FAILURE with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6128 211 "%0<--MPQBI_Response_OidConnectRequest..uNwError:%10!d!, ConnectionId:%11!d!, ActivationState:%12!d!, VoiceCallState:%13!d! IPType:%14!d! for CID:%15!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_OidConnectRequest
+{
+wwanContextState->ContextState.uNwError, ItemLong -- 10
+wwanContextState->ContextState.ConnectionId, ItemLong -- 11
+wwanContextState->ContextState.ActivationState, ItemLong -- 12
+wwanContextState->ContextState.VoiceCallState, ItemLong -- 13
+wwanContextState->ContextState.IPType, ItemLong -- 14
+pQmiElement->uQBICID, ItemLong -- 15
+}
+#typev MPCID_c6107 210 "%0<%10!s!> <--MPQBI_Response_OidConnectRequest..received NULL response from QMI for CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c10305 412 "%0-->MPQBI_Response_PCO..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_PCO
+{
+}
+#typev MPCID_c10351 417 "%0<%10!s!> <--MPQBI_Response_PCO..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PCO
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10342 416 "%0<%10!s!> <--MPQBI_Response_PCO..  and pOIDResp->PcoValue.PcoData: %11!s! , and pco data: %12!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PCO
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOIDResp->PcoValue.PcoData. pOIDResp->PcoValue.Size), ItemHEXDump -- 11
+log_xstr(pPcoData. pOIDResp->PcoValue.Size), ItemHEXDump -- 12
+}
+#typev MPCID_c10338 415 "%0<%10!s!> <--MPQBI_Response_PCO.. PCO value type: %11!d!, and status : %12!d!, PCO value size: %13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PCO
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->PcoValue.Type, ItemLong -- 11
+pOIDResp->uStatus, ItemLong -- 12
+pOIDResp->PcoValue.Size, ItemLong -- 13
+}
+#typev MPCID_c10320 414 "%0<%10!s!> -->MPQBI_Response_PCO.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PCO
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10315 413 "%0<%10!s!> <--MPQBI_Response_PCO..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PCO
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6822 241 "%0<--MPQBI_Response_PINServiceListRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_PINServiceListRequest
+{
+}
+#typev MPCID_c6911 243 "%0<%10!s!> <--MPQBI_Response_PINServiceListRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PINServiceListRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6841 242 "%0<%10!s!> <--MPQBI_Response_PINServiceListRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PINServiceListRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6736 236 "%0<--MPQBI_Response_PINServiceRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_PINServiceRequest
+{
+}
+#typev MPCID_c6795 240 "%0<%10!s!> <--MPQBI_Response_PINServiceRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PINServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6781 239 "%0<%10!s!> <--MPQBI_Response_PINServiceRequest..PIN state is PinEnter for type:%11!d!, Attempt Left:%12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PINServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+wwanPinInfo->PinInfo.PinType, ItemLong -- 11
+wwanPinInfo->PinInfo.AttemptsRemaining, ItemLong -- 12
+}
+#typev MPCID_c6766 238 "%0<%10!s!> <--MPQBI_Response_PINServiceRequest..PIN state is %11!d! for type:%12!d!, Attempt Left:%13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PINServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+cid_Resp->pin_state, ItemLong -- 11
+cid_Resp->pin_type, ItemLong -- 12
+cid_Resp->retries_left, ItemLong -- 13
+}
+#typev MPCID_c6754 237 "%0<%10!s!> <--MPQBI_Response_PINServiceRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PINServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6606 231 "%0<--MPQBI_Response_PacketServiceRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_PacketServiceRequest
+{
+}
+#typev MPCID_c6710 235 "%0<%10!s!> <--MPQBI_Response_PacketServiceRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PacketServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6693 234 "%0<%10!s!> <--MPQBI_Response_OidConnectRequest sending MPQBI_ComposeQBIRequest for CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PacketServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+pNewQMIElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6666 233 "%0<%10!s!> <--MPQBI_Response_PacketServiceRequest SUCCESS. PacketServiceState:%11!d!, AvailDataClass:%12!d!, CurrentDataClass:%13!d! for CID:%14!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PacketServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+wwanPacketServiceState->PacketService.PacketServiceState, ItemLong -- 11
+wwanPacketServiceState->PacketService.AvailableDataClass, ItemLong -- 12
+wwanPacketServiceState->PacketService.CurrentDataClass, ItemLong -- 13
+pQmiElement->uQBICID, ItemLong -- 14
+}
+#typev MPCID_c6618 232 "%0<%10!s!> <--MPQBI_Response_PacketServiceRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PacketServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6374 223 "%0<--MPQBI_Response_PreferredProviderRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_PreferredProviderRequest
+{
+}
+#typev MPCID_c6462 226 "%0<%10!s!> <--MPQBI_Response_PreferredProviderRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PreferredProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6443 225 "%0<%10!s!> <--MPQBI_Response_PreferredProviderRequest. ProviderId:%11!s!,                           ProviderName:%12!s!, DataClass:0x%13!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PreferredProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pWwanProvider2->Provider.ProviderId, ItemWString -- 11
+pWwanProvider2->Provider.ProviderName, ItemWString -- 12
+pWwanProvider2->Provider.WwanDataClass, ItemLong -- 13
+}
+#typev MPCID_c6394 224 "%0<%10!s!> <--MPQBI_Response_PreferredProviderRequest..SUCCESS with CID:%11!d!. element count:%12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_PreferredProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+element_count, ItemLong -- 12
+}
+#typev MPCID_c7960 285 "%0-->MPQBI_Response_Provisioned_contexts..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+}
+#typev MPCID_c8103 291 "%0<%10!s!> <--MPQBI_Response_Provisioned_contexts..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8077 290 "%0<--MPQBI_Response_Provisioned_contexts..AccessString:%10!s!, UserName:%11!s!, Password:%12!s! for CID:%13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+pWwanContext->AccessString, ItemWString -- 10
+pWwanContext->UserName, ItemWString -- 11
+pWwanContext->Password, ItemWString -- 12
+pQmiElement->uQBICID, ItemLong -- 13
+}
+#typev MPCID_c8057 289 "%0contextType is %10!d! :" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+pWwanContext->ContextType, ItemLong -- 10
+}
+#typev MPCID_c8053 288 "%0Invalid UUID " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+}
+#typev MPCID_c7994 287 "%0<%10!s!> <--MPQBI_Response_Provisioned_contexts..UNSUCCESSFUL with CID %11!d! as memeory of size %12!d! bytes could not be allocated for the response:" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+tempBufferSize, ItemLong -- 12
+}
+#typev MPCID_c7972 286 "%0<%10!s!> <--MPQBI_Response_Provisioned_contexts..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9598 362 "%0-->MPQBI_Response_ProvisionedContextV2..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_ProvisionedContextV2
+{
+}
+#typev MPCID_c9747 371 "%0<%10!s!> <--MPQBI_Response_ProvisionedContextV2..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9722 370 "%0<--MPQBI_Response_ProvisionedContextV2..IPType: %10!d!, Enable: %11!d!, Roaming:%12!d!, MediaType:%13!d!, Source:%14!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pWwanContext->IPType, ItemLong -- 10
+pWwanContext->Enable, ItemLong -- 11
+pWwanContext->Roaming, ItemLong -- 12
+pWwanContext->MediaType, ItemLong -- 13
+pWwanContext->Source, ItemLong -- 14
+}
+#typev MPCID_c9718 369 "%0<--MPQBI_Response_ProvisionedContextV2..AccessString:%10!s!, UserName:%11!s!, Password:%12!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pWwanContext->basicInfo.AccessString, ItemWString -- 10
+pWwanContext->basicInfo.UserName, ItemWString -- 11
+pWwanContext->basicInfo.Password, ItemWString -- 12
+}
+#typev MPCID_c9714 368 "%0<--MPQBI_Response_ProvisionedContextV2..contextType: %10!d!, ContextId: %11!d!, Compression:%12!d!, AuthType:%13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pWwanContext->basicInfo.ContextType, ItemLong -- 10
+pWwanContext->basicInfo.ContextId, ItemLong -- 11
+pWwanContext->basicInfo.Compression, ItemLong -- 12
+pWwanContext->basicInfo.AuthType, ItemLong -- 13
+}
+#typev MPCID_c9689 367 "%0Invalid UUID " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextV2
+{
+}
+#typev MPCID_c9666 366 "%0<--MPQBI_Response_ProvisionedContextV2..uStatus: %10!d!, ElementType: %11!d!, ElementCount:%12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pOidResp->uStatus, ItemLong -- 10
+pOidResp->ContextListHeader.ElementType, ItemLong -- 11
+pOidResp->ContextListHeader.ElementCount, ItemLong -- 12
+}
+#typev MPCID_c9625 365 "%0<%10!s!> <--MPQBI_Response_ProvisionedContextV2..UNSUCCESSFUL with CID %11!d! as memeory of size %12!d! bytes could not be allocated for the response:" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+tempBufferSize, ItemLong -- 12
+}
+#typev MPCID_c9612 364 "%0<%10!s!> -->MPQBI_Response_ProvisionedContextV2.. CID Response: %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9607 363 "%0<%10!s!> <--MPQBI_Response_ProvisionedContextV2..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7640 272 "%0<%10!s!> <--MPQBI_Response_RadioState..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_RadioState
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7627 271 "%0<%10!s!> <--MPQBI_Response_RadioState..SUCCESS with CID:%11!d!, HW Radio State:%12!d!, SW Radio State:%13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_RadioState
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+pNdisRadioState->RadioState.HwRadioState, ItemLong -- 12
+pNdisRadioState->RadioState.SwRadioState, ItemLong -- 13
+}
+#typev MPCID_c7616 270 "%0MBB: MPQBI_Response_RadioState() Writing RadioState value to Regsitry FAILED with error 0x%10!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_Response_RadioState
+{
+ntStatus, ItemLong -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c7385 262 "%0-->MPQBI_Response_RegisterStateRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_RegisterStateRequest
+{
+}
+#typev MPCID_c7539 268 "%0<%10!s!> <--MPQBI_Response_RegisterStateRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_RegisterStateRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7523 267 "%0<%10!s!> <--MPQBI_Responding to PktSrvRequest SUCCESS. PacketServiceState:%11!d!, AvailDataClass:0x%12!x!, CurrentDataClass:0x%13!x! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_RegisterStateRequest
+{
+pAdapter->PortName, ItemString -- 10
+wwanPacketServiceState->PacketService.PacketServiceState, ItemLong -- 11
+wwanPacketServiceState->PacketService.AvailableDataClass, ItemLong -- 12
+wwanPacketServiceState->PacketService.CurrentDataClass, ItemLong -- 13
+}
+#typev MPCID_c7486 266 "%0<--MPQBI_Response_RegisterStateRequest..uNwError:%10!d!, RegisterState:%11!d!, RegisterMode:%12!d!, ProviderId:%13!s!, RoamingText:%14!s!, Name:%15!s! for CID:%16!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_RegisterStateRequest
+{
+wwanRegState->RegistrationState.uNwError, ItemLong -- 10
+wwanRegState->RegistrationState.RegisterState, ItemLong -- 11
+wwanRegState->RegistrationState.RegisterMode, ItemLong -- 12
+wwanRegState->RegistrationState.ProviderId, ItemWString -- 13
+wwanRegState->RegistrationState.RoamingText, ItemWString -- 14
+wwanRegState->RegistrationState.ProviderName, ItemWString -- 15
+pQmiElement->uQBICID, ItemLong -- 16
+}
+#typev MPCID_c7437 265 "%0MBB: MPQBI_Response_RegisterState() roam indicator icon supression is disabled" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_Response_RegisterStateRequest
+{
+}
+#typev MPCID_c7425 264 "%0MBB: MPQBI_Response_RegisterState() roam indicator icon supression enabled. Changing register state to home" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQBI_Response_RegisterStateRequest
+{
+}
+#typev MPCID_c7397 263 "%0<%10!s!> <--MPQBI_Response_RegisterStateRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_RegisterStateRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8225 296 "%0-->MPQBI_Response_SMSConfigRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SMSConfigRequest
+{
+}
+#typev MPCID_c8307 300 "%0<%10!s!> <--MPQBI_Response_SMSConfigRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSConfigRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8292 299 "%0<%10!s!> <--MPQBI_Response_SMSConfigRequest..SMS format:%11!s!, Msg Index:%12!d!, SC Address: %13!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSConfigRequest
+{
+pAdapter->PortName, ItemString -- 10
+(sms_config->SmsConfiguration.SmsFormat == WwanSmsFormatPdu) ? L'PDU' : L'CDMA', ItemWString -- 11
+sms_config->SmsConfiguration.ulMaxMessageIndex, ItemLong -- 12
+sms_config->SmsConfiguration.ScAddress, ItemString -- 13
+}
+#typev MPCID_c8255 298 "%0<%10!s!> <--MPQBI_Response_SMSConfigRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSConfigRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8243 297 "%0-->MPQBI_Response_SMSConfigRequest..QMI response buffer is NULL " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SMSConfigRequest
+{
+}
+#typev MPCID_c8407 304 "%0<--MPQBI_Response_SMSReadRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SMSReadRequest
+{
+}
+#typev MPCID_c8554 308 "%0<%10!s!> <--MPQBI_Response_sms_read..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSReadRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8536 307 "%0<--MPQBI_Response_SMSReadRequest..Msg size:%10!d!, status%11!d! and Msg Index:%12!d! for CID:%13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSReadRequest
+{
+pSmsPduRecord->Size, ItemLong -- 10
+pSmsPduRecord->MsgStatus, ItemLong -- 11
+pSmsPduRecord->MessageIndex, ItemLong -- 12
+pQmiElement->uQBICID, ItemLong -- 13
+}
+#typev MPCID_c8527 306 "%0<--MPQBI_Response_SMSReadRequest..PDUString size :%10!d!, 
+ PDUString : %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSReadRequest
+{
+(int) strlen(pSmsPduRecord->PduData), ItemLong -- 10
+pSmsPduRecord->PduData, ItemString -- 11
+}
+#typev MPCID_c8419 305 "%0<%10!s!> <--MPQBI_Response_SMSReadRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSReadRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8582 309 "%0<--MPQBI_Response_SMSSendRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SMSSendRequest
+{
+}
+#typev MPCID_c8645 313 "%0<%10!s!> <--MPQBI_Response_SMSSendRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSSendRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8617 312 "%0<%10!s!> <--MPQBI_Response_SMSSendRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSSendRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8606 311 "%0-->MPQBI_Response_SMSSendRequest..QMI response buffer is NULL " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SMSSendRequest
+{
+}
+#typev MPCID_c8594 310 "%0<%10!s!> <--MPQBI_Response_SMSSendRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSSendRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8674 314 "%0<--MPQBI_Response_SMSStatusRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SMSStatusRequest
+{
+}
+#typev MPCID_c8729 317 "%0<%10!s!> <--MPQBI_Response_SMSStatusRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSStatusRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8716 316 "%0<%10!s!> <--MPQBI_Response_SMSStatusRequest.. uFlag:%11!d!, Msg Index:%12!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSStatusRequest
+{
+pAdapter->PortName, ItemString -- 10
+sms_status->SmsStatus.uFlag, ItemLong -- 11
+sms_status->SmsStatus.MessageIndex, ItemLong -- 12
+}
+#typev MPCID_c8686 315 "%0<%10!s!> <--MPQBI_Response_SMSStatusRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SMSStatusRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10378 418 "%0-->MPQBI_Response_SarConfig..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SarConfig
+{
+}
+#typev MPCID_c10438 423 "%0<%10!s!> <--MPQBI_Response_SarConfig..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SarConfig
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10426 422 "%0<%10!s!> <--MPQBI_Response_SarConfig.. SarAntennaIndex: %11!d! SarBackoffIndex: %12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SarConfig
+{
+pAdapter->PortName, ItemString -- 10
+pSarCfgIndices->SarAntennaIndex, ItemLong -- 11
+pSarCfgIndices->SarBackoffIndex, ItemLong -- 12
+}
+#typev MPCID_c10410 421 "%0<%10!s!> <--MPQBI_Response_SarConfig.. uStatus: %11!d! SarMode: %12!d! SarBackoffStatus: %13!d! SarWifiIntegration: %14!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SarConfig
+{
+pAdapter->PortName, ItemString -- 10
+pOidResp->uStatus, ItemLong -- 11
+pOidResp->SarConfig.SarMode, ItemLong -- 12
+pOidResp->SarConfig.SarBackoffStatus, ItemLong -- 13
+pOidResp->SarConfig.SarWifiIntegration, ItemLong -- 14
+}
+#typev MPCID_c10393 420 "%0<%10!s!> -->MPQBI_Response_SarConfig.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SarConfig
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10388 419 "%0<%10!s!> <--MPQBI_Response_SarConfig..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SarConfig
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10461 424 "%0-->MPQBI_Response_SarTransmissionStatus..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SarTransmissionStatus
+{
+}
+#typev MPCID_c10501 428 "%0<%10!s!> <--MPQBI_Response_SarTransmissionStatus..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SarTransmissionStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10492 427 "%0<%10!s!> <--MPQBI_Response_SarTransmissionStatus.. uStatus: %11!d! ChannelNotification: %12!d! TransmissionStatus: %13!d! HysteresisTimer: %14!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SarTransmissionStatus
+{
+pAdapter->PortName, ItemString -- 10
+pOidResp->uStatus, ItemLong -- 11
+pOidResp->TransmissionStatus.ChannelNotification, ItemLong -- 12
+pOidResp->TransmissionStatus.TransmissionStatus, ItemLong -- 13
+pOidResp->TransmissionStatus.HysteresisTimer, ItemLong -- 14
+}
+#typev MPCID_c10476 426 "%0<%10!s!> -->MPQBI_Response_SarTransmissionStatus.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SarTransmissionStatus
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10471 425 "%0<%10!s!> <--MPQBI_Response_SarTransmissionStatus..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SarTransmissionStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c13852 545 "%0-->MPQBI_Response_SetNetworkIdleHint..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SetNetworkIdleHint
+{
+}
+#typev MPCID_c13876 547 "%0<%10!s!> <--MPQBI_Response_SetNetworkIdleHint..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SetNetworkIdleHint
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c13863 546 "%0<%10!s!> <--MPQBI_Response_SetNetworkIdleHint..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SetNetworkIdleHint
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8132 292 "%0-->MPQBI_Response_SignalStateRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SignalStateRequest
+{
+}
+#typev MPCID_c8195 295 "%0<%10!s!> <--MPQBI_Response_SignalStateRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SignalStateRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8182 294 "%0<--MPQBI_Response_SignalStateRequest..rssi interval:%10!d!, thresold:%11!d!, rssi:%12!d!, Error Rate:%13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SignalStateRequest
+{
+signal_state->SignalState.RssiInterval, ItemLong -- 10
+signal_state->SignalState.RssiThreshold, ItemLong -- 11
+signal_state->SignalState.Rssi, ItemLong -- 12
+signal_state->SignalState.ErrorRate, ItemLong -- 13
+}
+#typev MPCID_c8144 293 "%0<%10!s!> <--MPQBI_Response_SignalStateRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SignalStateRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7762 277 "%0<--MPQBI_Response_SIM_Auth..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SimAuthRequest
+{
+}
+#typev MPCID_c7821 279 "%0<%10!s!> <--MPQBI_Response_SimAuthRequest.. OID Response Status: 0x%11!08x!, Response Length: %12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SimAuthRequest
+{
+pAdapter->PortName, ItemString -- 10
+pOID->OIDStatus, ItemLong -- 11
+pOID->nOidRespLen, ItemLong -- 12
+}
+#typev MPCID_c7774 278 "%0<%10!s!> <--MPQBI_Response_SIM_Auth..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SimAuthRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7834 280 "%0<%10!s!> <--MPQBI_Response_SIM_Auth..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SimAuthRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10245 407 "%0-->MPQBI_Response_SlotInfoStatus..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SlotInfoStatus
+{
+}
+#typev MPCID_c10283 411 "%0<%10!s!> <--MPQBI_Response_SlotInfoStatus..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SlotInfoStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10273 410 "%0<%10!s!> <--MPQBI_Response_SlotInfoStatus.. SlotIndex: %11!d!, State: %12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SlotInfoStatus
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->SlotInfo.SlotIndex, ItemLong -- 11
+pOIDResp->SlotInfo.State, ItemLong -- 12
+}
+#typev MPCID_c10260 409 "%0<%10!s!> -->MPQBI_Response_SlotInfoStatus.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SlotInfoStatus
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10255 408 "%0<%10!s!> <--MPQBI_Response_SlotInfoStatus..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SlotInfoStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6958 244 "%0-->MPQBI_Response_SubReadyRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SubReadyRequest
+{
+}
+#typev MPCID_c7113 253 "%0<%10!s!> <--MPQBI_Response_SubReadyRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7101 252 "%0<%10!s!> <--MPQBI_Response_SubReadyRequest..ReadyState:%11!d!, SubID:%12!s!, SimICCId:%13!s!, Phone Cnt:%14!d! with CID:%15!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+wwanReadyInfo->ReadyInfo.ReadyState, ItemLong -- 11
+wwanReadyInfo->ReadyInfo.SubscriberId, ItemWString -- 12
+wwanReadyInfo->ReadyInfo.SimIccId, ItemWString -- 13
+wwanReadyInfo->ReadyInfo.TNListHeader.ElementCount, ItemLong -- 14
+pQmiElement->uQBICID, ItemLong -- 15
+}
+#typev MPCID_c7086 251 "%0<%10!s!> MPQBI_Response_SubReadyRequest.. Copy %11!s! into pAdapter" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+wwanReadyInfo->ReadyInfo.SimIccId, ItemWString -- 11
+}
+#typev MPCID_c7070 250 "%0<%10!s!> MPQBI_Response_SubReadyRequest MPQBI_ComposeSilentPinVerify returned error :0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c7044 249 "%0<%10!s!> MPQBI_Response_SubReadyRequest.. Compose Request for Ready Info" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c7037 248 "%0<%10!s!> MPQBI_Response_SubReadyRequest.. Silent verify -- PinLength: %11!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->SIM_PIN_INFO.EncryptPinLength, ItemLong -- 11
+}
+#typev MPCID_c7028 247 "%0<%10!s!> MPQBI_Response_SubReadyRequest.. SimIccID equal" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c7019 246 "%0<%10!s!> MPQBI_Response_SubReadyRequest.. pAdapter->SimIccId: %11!s! .. CidResponse->SimIccId: %12!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->SIM_PIN_INFO.SimIccID, ItemWString -- 11
+wwanReadyInfo->ReadyInfo.SimIccId, ItemWString -- 12
+}
+#typev MPCID_c7009 245 "%0-->MPQBI_Response_SubReadyRequest.. ReadyState -- DeviceLocked " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SubReadyRequest
+{
+}
+#typev MPCID_c9050 326 "%0<--MPQBI_Response_SubscribeDeviceServiceEventsRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SubscribeDeviceServiceEventsRequest
+{
+}
+#typev MPCID_c9090 328 "%0<%10!s!> <--MPQBI_Response_SubscribeDeviceServiceEventsRequest sending MPQBI_ComposeQBIRequest for CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SubscribeDeviceServiceEventsRequest
+{
+pAdapter->PortName, ItemString -- 10
+pNewQMIElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9059 327 "%0<--MPQBI_Response_SubscribeDeviceServiceEventsRequest for OID %10!s! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SubscribeDeviceServiceEventsRequest
+{
+MPOidToNameStr(pOID->Oid), ItemString -- 10
+}
+#typev MPCID_c9947 385 "%0-->MPQBI_Response_SysCaps..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SysCaps
+{
+}
+#typev MPCID_c9988 389 "%0<%10!s!> <--MPQBI_Response_SysCaps..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SysCaps
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9978 388 "%0<%10!s!> <--MPQBI_Response_SysCaps.. NumberOfExecutors: %11!d!, NumberOfSlots: %12!d!, Concurrency: %13!d!, ModemID: %14!I64u!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SysCaps
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->SysCapsInfo.NumberOfExecutors, ItemLong -- 11
+pOIDResp->SysCapsInfo.NumberOfSlots, ItemLong -- 12
+pOIDResp->SysCapsInfo.Concurrency, ItemLong -- 13
+pOIDResp->SysCapsInfo.ModemID, ItemULongLong -- 14
+}
+#typev MPCID_c9962 387 "%0<%10!s!> -->MPQBI_Response_SysCaps.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SysCaps
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9957 386 "%0<%10!s!> <--MPQBI_Response_SysCaps..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SysCaps
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10168 401 "%0-->MPQBI_Response_SysSlotMappings..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_SysSlotMappings
+{
+}
+#typev MPCID_c10223 406 "%0<%10!s!> <--MPQBI_Response_SysSlotMappings..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SysSlotMappings
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10211 405 "%0<%10!s!> <--MPQBI_Response_SysSlotMappings.. Index: %11!d!, OID Slot Map: %12!d!, CID Slot Map: %13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SysSlotMappings
+{
+pAdapter->PortName, ItemString -- 10
+i, ItemLong -- 11
+*pOidSlotMapList, ItemLong -- 12
+*pCidSlotMapList, ItemLong -- 13
+}
+#typev MPCID_c10197 404 "%0<%10!s!> <--MPQBI_Response_SysSlotMappings.. ElementCount: %11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SysSlotMappings
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->DeviceSlotMappingInfo.SlotMapListHeader.ElementCount, ItemLong -- 11
+}
+#typev MPCID_c10186 403 "%0<%10!s!> -->MPQBI_Response_SysSlotMappings.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SysSlotMappings
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10181 402 "%0<%10!s!> <--MPQBI_Response_SysSlotMappings..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_SysSlotMappings
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8759 318 "%0-->MPQBI_Response_USSDRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_USSDRequest
+{
+}
+#typev MPCID_c8807 320 "%0<%10!s!> <--MPQBI_Response_USSDRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_USSDRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8771 319 "%0<%10!s!> <--MPQBI_Response_USSDRequest..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_USSDRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9435 351 "%0-->MPQBI_Response_UiccApdu..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_UiccApdu
+{
+}
+#typev MPCID_c9489 356 "%0<%10!s!> <--MPQBI_Response_UiccApdu..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccApdu
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9480 355 "%0<%10!s!> <--MPQBI_Response_UiccApdu.. ResponseLength: %11!d!, Response: %12!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccApdu
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->UiccApduInfo.ResponseLength, ItemLong -- 11
+log_xstr(pOIDResp->UiccApduInfo.Response. pOIDResp->UiccApduInfo.ResponseLength), ItemHEXDump -- 12
+}
+#typev MPCID_c9475 354 "%0<%10!s!> <--MPQBI_Response_UiccApdu..Status SW1: %11!d!, SW2: %12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccApdu
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->UiccApduInfo.Status[0], ItemLong -- 11
+pOIDResp->UiccApduInfo.Status[1], ItemLong -- 12
+}
+#typev MPCID_c9449 353 "%0<%10!s!> -->MPQBI_Response_UiccApdu.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccApdu
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9444 352 "%0<%10!s!> <--MPQBI_Response_UiccApdu..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccApdu
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9233 333 "%0-->MPQBI_Response_UiccAtr..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_UiccAtr
+{
+}
+#typev MPCID_c9281 338 "%0<%10!s!> <--MPQBI_Response_UiccAtr..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccAtr
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9272 337 "%0<%10!s!> <--MPQBI_Response_UiccAtr.. Atr: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccAtr
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOIDResp->AtrInfo.Atr. pOIDResp->AtrInfo.AtrLength), ItemHEXDump -- 11
+}
+#typev MPCID_c9268 336 "%0<%10!s!> <--MPQBI_Response_UiccAtr.. AtrLength: %11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccAtr
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->AtrInfo.AtrLength, ItemLong -- 11
+}
+#typev MPCID_c9247 335 "%0<%10!s!> -->MPQBI_Response_UiccAtr.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccAtr
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9242 334 "%0<%10!s!> -->MPQBI_Response_UiccAtr..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccAtr
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9377 346 "%0-->MPQBI_Response_UiccCloseChannel..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_UiccCloseChannel
+{
+}
+#typev MPCID_c9414 350 "%0<%10!s!> <--MPQBI_Response_UiccCloseChannel..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccCloseChannel
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9405 349 "%0<%10!s!> <--MPQBI_Response_UiccCloseChannel..Status SW1: %11!d!, SW2: %12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccCloseChannel
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->UiccCloseChannelInfo.Status[0], ItemLong -- 11
+pOIDResp->UiccCloseChannelInfo.Status[1], ItemLong -- 12
+}
+#typev MPCID_c9391 348 "%0<%10!s!> -->MPQBI_Response_UiccCloseChannel.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccCloseChannel
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9386 347 "%0<%10!s!> <--MPQBI_Response_UiccCloseChannel..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccCloseChannel
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9302 339 "%0-->MPQBI_Response_UiccOpenChannel..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_UiccOpenChannel
+{
+}
+#typev MPCID_c9356 345 "%0<%10!s!> <--MPQBI_Response_UiccOpenChannel..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccOpenChannel
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9347 344 "%0<%10!s!> <--MPQBI_Response_UiccOpenChannel.. Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccOpenChannel
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOIDResp->UiccOpenChannelInfo.Response.                      pOIDResp->UiccOpenChannelInfo.ResponseLength), ItemHEXDump -- 11
+}
+#typev MPCID_c9342 343 "%0<%10!s!> <--MPQBI_Response_UiccOpenChannel.. Channel: %11!d!, ResponseLength: %12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccOpenChannel
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->UiccOpenChannelInfo.Channel, ItemLong -- 11
+pOIDResp->UiccOpenChannelInfo.ResponseLength, ItemLong -- 12
+}
+#typev MPCID_c9337 342 "%0<%10!s!> <--MPQBI_Response_UiccOpenChannel..Status SW1: %11!d!, SW2: %12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccOpenChannel
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->UiccOpenChannelInfo.Status[0], ItemLong -- 11
+pOIDResp->UiccOpenChannelInfo.Status[1], ItemLong -- 12
+}
+#typev MPCID_c9316 341 "%0<%10!s!> -->MPQBI_Response_UiccOpenChannel.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccOpenChannel
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9311 340 "%0<%10!s!> -->MPQBI_Response_UiccOpenChannel..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccOpenChannel
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10524 429 "%0-->MPQBI_Response_GetUiccResetStatus..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_UiccReset
+{
+}
+#typev MPCID_c10561 433 "%0<%10!s!> <--MPQBI_Response_GetUiccResetStatus..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccReset
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10552 432 "%0<%10!s!> <--MPQBI_Response_GetUiccResetStatus.. uStatus: %11!d! PassThroughStatus: %12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccReset
+{
+pAdapter->PortName, ItemString -- 10
+pOidResp->uStatus, ItemLong -- 11
+pOidResp->UiccResetInfo.PassThroughStatus, ItemLong -- 12
+}
+#typev MPCID_c10539 431 "%0<%10!s!> -->MPQBI_Response_GetUiccResetStatus.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccReset
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10534 430 "%0<%10!s!> <--MPQBI_Response_GetUiccResetStatus..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccReset
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9516 357 "%0-->MPQBI_Response_UiccTerminalCap..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_UiccTerminalCap
+{
+}
+#typev MPCID_c9571 361 "%0<%10!s!> <--MPQBI_Response_UiccTerminalCap..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccTerminalCap
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9562 360 "%0-->MPQBI_Response_UiccTerminalCap. ElementCount: %10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQBI_Response_UiccTerminalCap
+{
+pOIDResp->CapabilityListHeader.ElementCount, ItemLong -- 10
+}
+#typev MPCID_c9530 359 "%0<%10!s!> -->MPQBI_Response_UiccTerminalCap.. CID Response: %11!s!" //   MASK=MP_DBG_LEVEL_DETAIL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccTerminalCap
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9525 358 "%0<%10!s!> <--MPQBI_Response_UiccTerminalCap..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_UiccTerminalCap
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6493 227 "%0<--MPQBI_Response_VisibleProviderRequest..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_VisibleProviderRequest
+{
+}
+#typev MPCID_c6580 230 "%0<%10!s!> <--MPQBI_Response_VisibleProviderRequest..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_VisibleProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6561 229 "%0<%10!s!> <--MPQBI_Response_VisibleProviderRequest. ProviderId:%11!s!,                           ProviderName:%12!s!, DataClass:%13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_VisibleProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pWwanProvider2->Provider.ProviderId, ItemWString -- 11
+pWwanProvider2->Provider.ProviderName, ItemWString -- 12
+pWwanProvider2->Provider.WwanDataClass, ItemLong -- 13
+}
+#typev MPCID_c6514 228 "%0<%10!s!> <--MPQBI_Response_VisibleProviderRequest..SUCCESS with CID:%11!d!, Element count:%12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_VisibleProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+element_count, ItemLong -- 12
+}
+#typev MPCID_c13475 530 "%0-->MPQBI_Response_WOLPacketFilterList..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_WOLPacketFilterList
+{
+}
+#typev MPCID_c13535 534 "%0<%10!s!> <--MPQBI_Response_WOLPacketFilterList sending MPQBI_ComposeQBIRequest for CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_WOLPacketFilterList
+{
+pAdapter->PortName, ItemString -- 10
+pNewQMIElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c13508 533 "%0<%10!s!> Data call is not up and SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_Response_WOLPacketFilterList
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c13500 532 "%0<%10!s!> <--MPQBI_Response_WOLPacketFilterList..FAILED with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_WOLPacketFilterList
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c13486 531 "%0<%10!s!> <--MPQBI_Response_WOLPacketFilterList..SUCCESS with CID:%11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_Response_WOLPacketFilterList
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c2011 59 "%0<%10!s!> -->MPQBI_SendQBIRequest success 0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_SendQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c2000 58 "%0<%10!s!> -->MPQBI_SendQBIRequest: Failed with status:0x%11!x! for SvcID:%12!d! CID:%13!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_SendQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+pQMI->uQBISvcType, ItemLong -- 12
+pQMI->uQBICID, ItemLong -- 13
+}
+#typev MPCID_c1969 57 "%0<%10!s!> -->MPQBI_SendQBIRequest: QMIType %11!d!, SvcType %12!d!, CID %13!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_SendQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQMI->uQBICmdType, ItemLong -- 11
+pQMI->uQBISvcType, ItemLong -- 12
+pQMI->uQBICID, ItemLong -- 13
+}
+#typev MPCID_c1958 56 "%0<%10!s!> -->MPQBI_SendQBIRequest: pQMI is NULL!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_SendQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c1949 55 "%0<%10!s!>-->MPQBI_SendQBIRequest 0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQBI_SendQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pQMI, ItemLong -- 11
+}
+#typev MPCID_c424 16 "%0-->MPQBI_UuidToWwanContextType..Invalid UUID or Context Type " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQBI_UuidToWwanContextType
+{
+}
+#typev MPCID_c10730 449 "%0<--MPQBI_ProcessInboundMssarIndication. invlaid input buffer for cid:%10!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessInboundQBIIndication
+{
+MSSARCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c10730 451 "%0<%10!s!> <--MPQBI_ProcessInboundMssarIndication. invlaid CID:%11!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessInboundQBIIndication
+{
+pAdapter->PortName, ItemString -- 10
+MSSARCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c10730 450 "%0<%10!s!> <--MPQBI_ProcessInboundMssarIndication, QBI cid: %11!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessInboundQBIIndication
+{
+pAdapter->PortName, ItemString -- 10
+MSSARCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c10724 462 "%0<--MPQBI_ProcessInboundBCExtIndication. invalid input buffer for cid:%10!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessInboundQBIIndication
+{
+BCExtCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c10724 464 "%0<%10!s!> <--MPQBI_ProcessInboundBCExtIndication. invlaid CID:%11!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessInboundQBIIndication
+{
+pAdapter->PortName, ItemString -- 10
+BCExtCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c10724 463 "%0<%10!s!> <--MPQBI_ProcessInboundBCExtIndication, QBI cid: %11!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessInboundQBIIndication
+{
+pAdapter->PortName, ItemString -- 10
+BCExtCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c10706 446 "%0<--MPQBI_ProcessInboundPBIndication. invlaid input buffer for cid:%10!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessInboundQBIIndication
+{
+PBCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c10706 448 "%0<%10!s!> <--MPQBI_ProcessInboundPBIndication. invlaid CID:%11!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessInboundQBIIndication
+{
+pAdapter->PortName, ItemString -- 10
+PBCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c10706 447 "%0<%10!s!> <--MPQBI_ProcessInboundPBIndication, QBI cid: %11!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessInboundQBIIndication
+{
+pAdapter->PortName, ItemString -- 10
+PBCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c10700 443 "%0<--MPQBI_ProcessInboundSMSIndication. invlaid input buffer for cid:%10!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessInboundQBIIndication
+{
+BCCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c10700 445 "%0<%10!s!> <--MPQBI_ProcessInboundSMSIndication. invlaid CID:%11!s!..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessInboundQBIIndication
+{
+pAdapter->PortName, ItemString -- 10
+BCCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c10700 444 "%0<%10!s!> <--MPQBI_ProcessInboundSMSIndication, QBI cid: %11!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessInboundQBIIndication
+{
+pAdapter->PortName, ItemString -- 10
+SMSCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c3357 93 "%0<%10!s!> -->OIDToCID: status 0x%11!x! and QbiCID: %12!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=OIDToCID
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+QbiCID, ItemLong -- 12
+}
+#typev MPCID_c3342 92 "%0<%10!s!> -->OIDToCID: Memory Allocation Failed for pQMIElement 0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=OIDToCID
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pQMIElement, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPCID_c3104 88 "%0<%10!s!> -->MPQBI_HandleDevSpecificCommand: pOid is NULL and bSendImm is False - nothing to do with request!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=OIDToCID
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c3104 89 "%0<%10!s!> -->MPQBI_HandleDevSpecificCommand: Allocate QMIElement failed!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=OIDToCID
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c3104 87 "%0<%10!s!> -->MPQBI_HandleDevSpecificCommand: " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=OIDToCID
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c2811 91 "%0<%10!s!> -->OIDToCID..MSSR triggered...returing with ERROR!!!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=OIDToCID
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c2799 90 "%0<%10!s!> -->OIDToCID: Oid %11!s!(0x%12!x!), pOid 0x%13!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=OIDToCID
+{
+pAdapter->PortName, ItemString -- 10
+MPOidToNameStr(pOid->Oid), ItemString -- 11
+pOid->Oid, ItemLong -- 12
+(UINT)pOid, ItemLong -- 13
+}
+#typev MPCID_c5699 203 "%0 -->Print_WOL_Pattern. Patternata[%10!d!] is %11!x! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=Print_WOL_Pattern
+{
+index, ItemLong -- 10
+pattern->WoLBitMapPattern.PatternData[index], ItemLong -- 11
+}
+#typev MPCID_c5689 202 "%0 -->Print_WOL_Pattern. PatternSize %10!x! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=Print_WOL_Pattern
+{
+pattern->WoLBitMapPattern.PatternSize, ItemLong -- 10
+}
+#typev MPCID_c5681 201 "%0 -->Print_WOL_Pattern. MaskData[%10!d!] is %11!x! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=Print_WOL_Pattern
+{
+index, ItemLong -- 10
+pattern->WoLBitMapPattern.MaskData[index], ItemLong -- 11
+}
+#typev MPCID_c5671 200 "%0 -->Print_WOL_Pattern. MaskSize %10!x! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=Print_WOL_Pattern
+{
+pattern->WoLBitMapPattern.MaskSize, ItemLong -- 10
+}
+#typev MPCID_c5665 199 "%0 -->Print_WOL_Pattern. PatternId %10!x! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=Print_WOL_Pattern
+{
+pattern->PatternId, ItemLong -- 10
+}
+#typev MPCID_c5658 198 "%0 -->Print_WOL_Pattern. Friendly Name %10!s! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=Print_WOL_Pattern
+{
+pattern->FriendlyName.String, ItemWString -- 10
+}
+#typev MPCID_c308 14 "%0-->Unsupported/unknown device service ID %10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=QBIBuildCmdRequest
+{
+pQMI->uQBISvcType, ItemLong -- 10
+}
+#typev MPCID_c172 11 "%0-->QBISendCommand..Invalid Buffer " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=QBISendCommand
+{
+}
+#typev MPCID_c208 13 "%0-->QBISendCommand - msg msg_type:%10!d!, msg_len:%11!d!, Svc_type:%12!d!, cid:%13!d!, cmd_type: %14!s!, infobuf_len:%15!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=QBISendCommand
+{
+req->hdr.msg_type, ItemLong -- 10
+req->hdr.msg_len, ItemLong -- 11
+pQBIElement->uQBISvcType, ItemLong -- 12
+req->cid, ItemLong -- 13
+(0 == req->cmd_type)? L'QUERY': L'SET', ItemWString -- 14
+req->infobuf_len, ItemLong -- 15
+}
+#typev MPCID_c186 12 "%0-->QBISendCommand - could not create memory..FAILED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=QBISendCommand
+{
+}

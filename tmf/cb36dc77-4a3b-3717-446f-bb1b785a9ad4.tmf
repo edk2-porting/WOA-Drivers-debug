@@ -1,0 +1,344 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+cb36dc77-4a3b-3717-446f-bb1b785a9ad4 WMRIL // SRC=WMRilSetCellBroadcastMsgConfig.cpp MJ= MN=
+#typev WMRilSetCellBroadcastMsgConfig_cpp524 41 "%0%!LEVEL! %!FUNC!:Created a new range at index = [%10!u!]. Values from_service_id [0x%11!x!], to_service_id[0x%12!x!], selected=[%13!u!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::CreateNewRange
+{
+*pNewBCConfigArrLen, ItemLong -- 10
+dwFromServiceId, ItemLong -- 11
+dwToServiceId, ItemLong -- 12
+selected, ItemLong -- 13
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp516 40 "%0%!LEVEL! %!FUNC!:*pdwNewBCConfigArrLen >= WMS_3GPP_BROADCAST_CONFIG_MAX_V01 NewBCCConfigArrLen = [%10!u!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::CreateNewRange
+{
+*pNewBCConfigArrLen, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilSetCellBroadcastMsgConfig_cpp179 19 "%0%!LEVEL! %!FUNC!:dwParams: 0x%10!08x!, Mode: %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+m_Params.rmCBConfig.dwParams, ItemLong -- 10
+SetBCConfigReq.message_mode, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilSetCellBroadcastMsgConfig_cpp248 23 "%0%!LEVEL! %!FUNC!:QMI_WMS_SET_BROADCAST_CONFIG_REQ_V01 failure, error = %10!s!, result = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+SetBCConfigResp.resp.error, ItemEnum(qmi_error_type_v01) -- 10
+SetBCConfigResp.resp.result, ItemEnum(qmi_result_type_v01) -- 11
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp241 22 "%0%!LEVEL! %!FUNC!:Failed to send QMI_WMS_SET_BROADCAST_CONFIG_REQ_V01" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp208 21 "%0%!LEVEL! %!FUNC!:QMI_WMS_GET_BROADCAST_CONFIG_RESP_V01 failure, error = %10!s!, result = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+GetBCConfigResp.resp.error, ItemEnum(qmi_error_type_v01) -- 10
+GetBCConfigResp.resp.result, ItemEnum(qmi_result_type_v01) -- 11
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp201 20 "%0%!LEVEL! %!FUNC!:Failed to send QMI_WMS_GET_BROADCAST_CONFIG_REQ_V01" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp167 18 "%0%!LEVEL! %!FUNC!:    BC message language: %10!u!, service category: %11!u!, selected: %12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+m_Params.rmCBConfig.CDMAConfigInfo[i].dwBroadcastMsgLang, ItemLong -- 10
+m_Params.rmCBConfig.CDMAConfigInfo[i].dwBroadcastServiceCategory, ItemLong -- 11
+m_Params.rmCBConfig.CDMAConfigInfo[i].fAccept, ItemLong -- 12
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp166 17 "%0%!LEVEL! %!FUNC!:rilCBMsgConfig.CDMAConfigInfo[%10!u!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+i, ItemLong -- 10
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp147 16 "%0%!LEVEL! %!FUNC!:Number of elements (%10!u!) greater than supported (%11!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+m_Params.rmCBConfig.dwCDMAConfigInfoSize, ItemLong -- 10
+RIL_CB_CONFIG_MAX, ItemLong -- 11
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp143 15 "%0%!LEVEL! %!FUNC!:Total CDMA BC configuration items: %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+m_Params.rmCBConfig.dwCDMAConfigInfoSize, ItemLong -- 10
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp130 14 "%0%!LEVEL! %!FUNC!:    BC message dwMinValue: %10!u!, dwMaxValue: %11!u!, selected: %12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+m_Params.rmCBConfig.GWLConfigInfo[i].rgrrBroadcastMsgID.dwMinValue, ItemLong -- 10
+m_Params.rmCBConfig.GWLConfigInfo[i].rgrrBroadcastMsgID.dwMaxValue, ItemLong -- 11
+m_Params.rmCBConfig.GWLConfigInfo[i].fAccept, ItemLong -- 12
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp129 13 "%0%!LEVEL! %!FUNC!:rilCBMsgConfig.GWLConfigInfo[%10!u!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+i, ItemLong -- 10
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp110 12 "%0%!LEVEL! %!FUNC!:Number of elements (%10!u!) greater than supported (%11!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+m_Params.rmCBConfig.dwGWLConfigInfoSize, ItemLong -- 10
+RIL_CB_CONFIG_MAX, ItemLong -- 11
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp106 11 "%0%!LEVEL! %!FUNC!:Total GWL BC configuration items: %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+m_Params.rmCBConfig.dwGWLConfigInfoSize, ItemLong -- 10
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp88 10 "%0%!LEVEL! %!FUNC!:executor-id = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::Execute
+{
+dwExecutor, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilSetCellBroadcastMsgConfig_cpp274 24 "%0%!LEVEL! %!FUNC!:Buffer size %10!u! != sizeof(RILSETCELLBROADCASTMSGCONFIGPARAMS)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::InitParams
+{
+dwBufferLength, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilSetCellBroadcastMsgConfig_cpp465 38 "%0%!LEVEL! %!FUNC!:dwCurFromServiceId > pCurBCConfigElement->to_service_id. Done merging pCurBCConfigElement. Range #(i) = [%10!u!], dwCurFromServiceId = [0x%11!x!] , pCurBCConfigElement->to_service_id = [0x%12!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::MergeCurrent3GppBCConfigElement
+{
+i, ItemLong -- 10
+dwCurFromServiceId, ItemLong -- 11
+pCurBCConfigElement->to_service_id, ItemLong -- 12
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp471 39 "%0%!LEVEL! %!FUNC!:dwCurFromServiceId >= pSortedNewBCConfigArr[i].from_service_id. Range #(i) = [%10!u!], dwCurFromServiceId = [0x%11!x!] , pSortedNewBCConfigArr[i].from_service_id = [0x%12!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::MergeCurrent3GppBCConfigElement
+{
+i, ItemLong -- 10
+dwCurFromServiceId, ItemLong -- 11
+pSortedNewBCConfigArr[i].from_service_id, ItemLong -- 12
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp454 37 "%0%!LEVEL! %!FUNC!:Merging Item pCurBCConfigElement: pCurBCConfigElement->from_service_id : [%10!u!], pCurBCConfigElement->to_service_id : [%11!u!],  pCurBCConfigElement->selected : [%12!u!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::MergeCurrent3GppBCConfigElement
+{
+pCurBCConfigElement->from_service_id, ItemLong -- 10
+pCurBCConfigElement->to_service_id, ItemLong -- 11
+pCurBCConfigElement->selected, ItemLong -- 12
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp450 36 "%0%!LEVEL! %!FUNC!:*pdwNewBCConfigArrLen >= WMS_3GPP_BROADCAST_CONFIG_MAX_V01 NewBCCConfigArrLen = [%10!u!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::MergeCurrent3GppBCConfigElement
+{
+*pNewBCConfigArrLen, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilSetCellBroadcastMsgConfig_cpp600 50 "%0%!LEVEL! %!FUNC!:Invalid Message Mode" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::PrintSetCellBroadcastReq
+{
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp591 49 "%0%!LEVEL! %!FUNC!:3GPP BCConfig Element at Index: [%10!d!] , from_service_id: [%11!d!], to_service_id: [%12!d!], selected: [%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::PrintSetCellBroadcastReq
+{
+i, ItemLong -- 10
+pSetBCConfigReq->wms_3gpp_broadcast_config_info[i].from_service_id, ItemLong -- 11
+pSetBCConfigReq->wms_3gpp_broadcast_config_info[i].to_service_id, ItemLong -- 12
+pSetBCConfigReq->wms_3gpp_broadcast_config_info[i].selected, ItemLong -- 13
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp588 48 "%0%!LEVEL! %!FUNC!:Total Number of 3GPP BCConfig elements: %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::PrintSetCellBroadcastReq
+{
+pSetBCConfigReq->wms_3gpp_broadcast_config_info_len, ItemLong -- 10
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp587 47 "%0%!LEVEL! %!FUNC!:3GPP BCConfig Elements" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::PrintSetCellBroadcastReq
+{
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp578 46 "%0%!LEVEL! %!FUNC!:3GPP2 BCConfig Element at Index: [%10!u!] , service_category: [0x%11!x!], language: [%12!d!], selected: [%13!u!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::PrintSetCellBroadcastReq
+{
+i, ItemLong -- 10
+pSetBCConfigReq->wms_3gpp2_broadcast_config_info[i].service_category, ItemLong -- 11
+pSetBCConfigReq->wms_3gpp2_broadcast_config_info[i].language, ItemLong -- 12
+pSetBCConfigReq->wms_3gpp2_broadcast_config_info[i].selected, ItemLong -- 13
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp575 45 "%0%!LEVEL! %!FUNC!:Total Number of 3GPP2 BCConfig elements: %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::PrintSetCellBroadcastReq
+{
+pSetBCConfigReq->wms_3gpp2_broadcast_config_info_len, ItemLong -- 10
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp574 44 "%0%!LEVEL! %!FUNC!:3GPP2 BCConfig Elements" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::PrintSetCellBroadcastReq
+{
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp571 43 "%0%!LEVEL! %!FUNC!:Message Mode: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::PrintSetCellBroadcastReq
+{
+pSetBCConfigReq->message_mode, ItemLong -- 10
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp568 42 "%0%!LEVEL! %!FUNC!:Input pSetBCConfigReg is null. Returning" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::PrintSetCellBroadcastReq
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilSetCellBroadcastMsgConfig_cpp305 25 "%0%!LEVEL! %!FUNC!:One or both of input parameters (pNewBCConfig , pCurBCConfig) is NULL. Returning ..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ReconcileCurrent3Gpp2BCConfigSettings
+{
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp324 28 "%0%!LEVEL! %!FUNC!:pNewBCConfig->wms_3gpp2_broadcast_config_info_len is >= WMS_3GPP2_BROADCAST_CONFIG_MAX_V01" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ReconcileCurrent3Gpp2BCConfigSettings
+{
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp338 29 "%0%!LEVEL! %!FUNC!:Added new 3Gpp2 BCConfig Item at Index [%10!u!], service_category = [0x%11!x!], language = [%12!d!], selected = [%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ReconcileCurrent3Gpp2BCConfigSettings
+{
+pNewBCConfig->wms_3gpp2_broadcast_config_info_len, ItemLong -- 10
+pNewBCConfig->wms_3gpp2_broadcast_config_info[pNewBCConfig->wms_3gpp2_broadcast_config_info_len].service_category, ItemLong -- 11
+pNewBCConfig->wms_3gpp2_broadcast_config_info[pNewBCConfig->wms_3gpp2_broadcast_config_info_len].language, ItemLong -- 12
+pNewBCConfig->wms_3gpp2_broadcast_config_info[pNewBCConfig->wms_3gpp2_broadcast_config_info_len].selected, ItemLong -- 13
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp319 27 "%0%!LEVEL! %!FUNC!:dwCurBCSettingsLen = [%10!u!], dwNewBCSettingsLen = [%11!u!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ReconcileCurrent3Gpp2BCConfigSettings
+{
+dwCurBCSettingsLen, ItemLong -- 10
+dwNewBCSettingsLen, ItemLong -- 11
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp311 26 "%0%!LEVEL! %!FUNC!:pCurBCConfig->wms_3gpp2_broadcast_info_valid = [%10!u!]. Returning ..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ReconcileCurrent3Gpp2BCConfigSettings
+{
+pCurBCConfig->wms_3gpp2_broadcast_info_valid, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilSetCellBroadcastMsgConfig_cpp370 30 "%0%!LEVEL! %!FUNC!:One or both of input parameters (pNewBCConfig , pCurBCConfig) is NULL. Returning ..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ReconcileCurrent3GppBCConfigSettings
+{
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp410 35 "%0%!LEVEL! %!FUNC!:MergeCurrent3GppBCConfigElement returned false while merging BCConfig element at index [%10!u!] from the Current modem 3GPP BCConfig array. Output 3GPP BCConfig array Length = [%11!u!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ReconcileCurrent3GppBCConfigSettings
+{
+i, ItemLong -- 10
+pNewBCConfig->wms_3gpp_broadcast_config_info_len, ItemLong -- 11
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp399 34 "%0%!LEVEL! %!FUNC!:Number of 3GPP BCConfig elements in the wms_get_broadcast_config_resp_msg_v01 = [%10!u!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ReconcileCurrent3GppBCConfigSettings
+{
+pCurBCConfig->wms_3gpp_broadcast_info.wms_3gpp_broadcast_config_info_len, ItemLong -- 10
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp396 33 "%0%!LEVEL! %!FUNC!:SortSetBCConfigArray returned false. Returning" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ReconcileCurrent3GppBCConfigSettings
+{
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp383 32 "%0%!LEVEL! %!FUNC!:pCurBCConfig->wms_3gpp_broadcast_info.wms_3gpp_broadcast_config_info_len = 0.  Returning ..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ReconcileCurrent3GppBCConfigSettings
+{
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp376 31 "%0%!LEVEL! %!FUNC!:pCurBCConfig->wms_3gpp_broadcast_info_valid = [%10!d!]. Returning ..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ReconcileCurrent3GppBCConfigSettings
+{
+pCurBCConfig->wms_3gpp_broadcast_info_valid, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilSetCellBroadcastMsgConfig_cpp625 51 "%0%!LEVEL! %!FUNC!:pSetNewBCConfig or pSortedSetNewBCConfigArr is NULL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::SortSetBCConfigArray
+{
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp631 52 "%0%!LEVEL! %!FUNC!:Invalid parameters passed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::SortSetBCConfigArray
+{
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp641 53 "%0%!LEVEL! %!FUNC!:Swapping elements [%10!u!] and [%11!u!] at index i = [%12!u!]  and j = [%13!u!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::SortSetBCConfigArray
+{
+pSortedSetNewBCConfigArr[i].from_service_id, ItemLong -- 10
+pSortedSetNewBCConfigArr[j].from_service_id, ItemLong -- 11
+i, ItemLong -- 12
+j, ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilSetCellBroadcastMsgConfig_cpp686 55 "%0%!LEVEL! %!FUNC!:QMI_WMS_GET_BROADCAST_CONFIG_RESP has invalid 3GPP2 BC config info length = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ValidateQMIResponse
+{
+pGetBCConfigResp->wms_3gpp2_broadcast_info.wms_3gpp2_broadcast_config_info_len, ItemLong -- 10
+}
+#typev WMRilSetCellBroadcastMsgConfig_cpp677 54 "%0%!LEVEL! %!FUNC!:QMI_WMS_GET_BROADCAST_CONFIG_RESP has invalid 3GPP BC config info length = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_SMS FUNC=WMRil::SetCellBroadcastMsgConfigClass::ValidateQMIResponse
+{
+pGetBCConfigResp->wms_3gpp_broadcast_info.wms_3gpp_broadcast_config_info_len, ItemLong -- 10
+}
+#enumv qmi_error_type_v01
+{
+QMI_ERROR_TYPE_MIN_ENUM_VAL_V01,0x80000001
+QMI_ERR_NONE_V01,0x0
+QMI_ERR_MALFORMED_MSG_V01,0x1
+QMI_ERR_NO_MEMORY_V01,0x2
+QMI_ERR_INTERNAL_V01,0x3
+QMI_ERR_ABORTED_V01,0x4
+QMI_ERR_CLIENT_IDS_EXHAUSTED_V01,0x5
+QMI_ERR_UNABORTABLE_TRANSACTION_V01,0x6
+QMI_ERR_INVALID_CLIENT_ID_V01,0x7
+QMI_ERR_NO_THRESHOLDS_V01,0x8
+QMI_ERR_INVALID_HANDLE_V01,0x9
+QMI_ERR_INVALID_PROFILE_V01,0xA
+QMI_ERR_INVALID_PINID_V01,0xB
+QMI_ERR_INCORRECT_PIN_V01,0xC
+QMI_ERR_NO_NETWORK_FOUND_V01,0xD
+QMI_ERR_CALL_FAILED_V01,0xE
+QMI_ERR_OUT_OF_CALL_V01,0xF
+QMI_ERR_NOT_PROVISIONED_V01,0x10
+QMI_ERR_MISSING_ARG_V01,0x11
+QMI_ERR_ARG_TOO_LONG_V01,0x13
+QMI_ERR_INVALID_TX_ID_V01,0x16
+QMI_ERR_DEVICE_IN_USE_V01,0x17
+QMI_ERR_OP_NETWORK_UNSUPPORTED_V01,0x18
+QMI_ERR_OP_DEVICE_UNSUPPORTED_V01,0x19
+QMI_ERR_NO_EFFECT_V01,0x1A
+QMI_ERR_NO_FREE_PROFILE_V01,0x1B
+QMI_ERR_INVALID_PDP_TYPE_V01,0x1C
+QMI_ERR_INVALID_TECH_PREF_V01,0x1D
+QMI_ERR_INVALID_PROFILE_TYPE_V01,0x1E
+QMI_ERR_INVALID_SERVICE_TYPE_V01,0x1F
+QMI_ERR_INVALID_REGISTER_ACTION_V01,0x20
+QMI_ERR_INVALID_PS_ATTACH_ACTION_V01,0x21
+QMI_ERR_AUTHENTICATION_FAILED_V01,0x22
+QMI_ERR_PIN_BLOCKED_V01,0x23
+QMI_ERR_PIN_PERM_BLOCKED_V01,0x24
+QMI_ERR_SIM_NOT_INITIALIZED_V01,0x25
+QMI_ERR_MAX_QOS_REQUESTS_IN_USE_V01,0x26
+QMI_ERR_INCORRECT_FLOW_FILTER_V01,0x27
+QMI_ERR_NETWORK_QOS_UNAWARE_V01,0x28
+QMI_ERR_INVALID_ID_V01,0x29
+QMI_ERR_INVALID_QOS_ID_V01,0x29
+QMI_ERR_REQUESTED_NUM_UNSUPPORTED_V01,0x2A
+QMI_ERR_INTERFACE_NOT_FOUND_V01,0x2B
+QMI_ERR_FLOW_SUSPENDED_V01,0x2C
+QMI_ERR_INVALID_DATA_FORMAT_V01,0x2D
+QMI_ERR_GENERAL_V01,0x2E
+QMI_ERR_UNKNOWN_V01,0x2F
+QMI_ERR_INVALID_ARG_V01,0x30
+QMI_ERR_INVALID_INDEX_V01,0x31
+QMI_ERR_NO_ENTRY_V01,0x32
+QMI_ERR_DEVICE_STORAGE_FULL_V01,0x33
+QMI_ERR_DEVICE_NOT_READY_V01,0x34
+QMI_ERR_NETWORK_NOT_READY_V01,0x35
+QMI_ERR_CAUSE_CODE_V01,0x36
+QMI_ERR_MESSAGE_NOT_SENT_V01,0x37
+QMI_ERR_MESSAGE_DELIVERY_FAILURE_V01,0x38
+QMI_ERR_INVALID_MESSAGE_ID_V01,0x39
+QMI_ERR_ENCODING_V01,0x3A
+QMI_ERR_AUTHENTICATION_LOCK_V01,0x3B
+QMI_ERR_INVALID_TRANSITION_V01,0x3C
+QMI_ERR_NOT_A_MCAST_IFACE_V01,0x3D
+QMI_ERR_MAX_MCAST_REQUESTS_IN_USE_V01,0x3E
+QMI_ERR_INVALID_MCAST_HANDLE_V01,0x3F
+QMI_ERR_INVALID_IP_FAMILY_PREF_V01,0x40
+QMI_ERR_SESSION_INACTIVE_V01,0x41
+QMI_ERR_SESSION_INVALID_V01,0x42
+QMI_ERR_SESSION_OWNERSHIP_V01,0x43
+QMI_ERR_INSUFFICIENT_RESOURCES_V01,0x44
+QMI_ERR_DISABLED_V01,0x45
+QMI_ERR_INVALID_OPERATION_V01,0x46
+QMI_ERR_INVALID_QMI_CMD_V01,0x47
+QMI_ERR_TPDU_TYPE_V01,0x48
+QMI_ERR_SMSC_ADDR_V01,0x49
+QMI_ERR_INFO_UNAVAILABLE_V01,0x4A
+QMI_ERR_SEGMENT_TOO_LONG_V01,0x4B
+QMI_ERR_SEGMENT_ORDER_V01,0x4C
+QMI_ERR_BUNDLING_NOT_SUPPORTED_V01,0x4D
+QMI_ERR_OP_PARTIAL_FAILURE_V01,0x4E
+QMI_ERR_POLICY_MISMATCH_V01,0x4F
+QMI_ERR_SIM_FILE_NOT_FOUND_V01,0x50
+QMI_ERR_EXTENDED_INTERNAL_V01,0x51
+QMI_ERR_ACCESS_DENIED_V01,0x52
+QMI_ERR_HARDWARE_RESTRICTED_V01,0x53
+QMI_ERR_ACK_NOT_SENT_V01,0x54
+QMI_ERR_INJECT_TIMEOUT_V01,0x55
+QMI_ERR_INCOMPATIBLE_STATE_V01,0x5A
+QMI_ERR_FDN_RESTRICT_V01,0x5B
+QMI_ERR_SUPS_FAILURE_CAUSE_V01,0x5C
+QMI_ERR_NO_RADIO_V01,0x5D
+QMI_ERR_NOT_SUPPORTED_V01,0x5E
+QMI_ERR_NO_SUBSCRIPTION_V01,0x5F
+QMI_ERR_CARD_CALL_CONTROL_FAILED_V01,0x60
+QMI_ERR_NETWORK_ABORTED_V01,0x61
+QMI_ERR_MSG_BLOCKED_V01,0x62
+QMI_ERR_INVALID_SESSION_TYPE_V01,0x64
+QMI_ERR_INVALID_PB_TYPE_V01,0x65
+QMI_ERR_NO_SIM_V01,0x66
+QMI_ERR_PB_NOT_READY_V01,0x67
+QMI_ERR_PIN_RESTRICTION_V01,0x68
+QMI_ERR_PIN2_RESTRICTION_V01,0x69
+QMI_ERR_PUK_RESTRICTION_V01,0x6A
+QMI_ERR_PUK2_RESTRICTION_V01,0x6B
+QMI_ERR_PB_ACCESS_RESTRICTED_V01,0x6C
+QMI_ERR_PB_DELETE_IN_PROG_V01,0x6D
+QMI_ERR_PB_TEXT_TOO_LONG_V01,0x6E
+QMI_ERR_PB_NUMBER_TOO_LONG_V01,0x6F
+QMI_ERR_PB_HIDDEN_KEY_RESTRICTION_V01,0x70
+QMI_ERR_PB_NOT_AVAILABLE_V01,0x71
+QMI_ERR_DEVICE_MEMORY_ERROR_V01,0x72
+QMI_ERROR_TYPE_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}
+#enumv qmi_result_type_v01
+{
+QMI_RESULT_TYPE_MIN_ENUM_VAL_V01,0x80000001
+QMI_RESULT_SUCCESS_V01,0x0
+QMI_RESULT_FAILURE_V01,0x1
+QMI_RESULT_TYPE_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}

@@ -1,0 +1,170 @@
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+dd692d67-700b-3f36-a66a-092c99ed2d5c qcgpi // SRC=GpiDevice.c MJ= MN=
+#typev GpiDevice_c190 13 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GPIDeviceCreate
+{
+}
+#typev GpiDevice_c153 12 "%0 [%!FUNC!]ERROR - WdfDeviceCreate failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GPIDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev GpiDevice_c143 11 "%0 [%!FUNC!]ERROR - WdfDeviceCreateDeviceInterface failed with status 0x%10!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GPIDeviceCreate
+{
+status, ItemLong -- 10
+}
+#typev GpiDevice_c80 10 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GPIDeviceCreate
+{
+}
+#typev GpiDevice_c261 21 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiDevInit
+{
+}
+#typev GpiDevice_c260 20 "%0 [%!FUNC!]- Status = 0x%10!X! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiDevInit
+{
+status, ItemLong -- 10
+}
+#typev GpiDevice_c256 19 "%0 [%!FUNC!]Failed to add the new GPI device" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiDevInit
+{
+}
+#typev GpiDevice_c251 18 "%0 [%!FUNC!]Calling gpi_init_dev() for QupBase: 0x%10!I64x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiDevInit
+{
+(UINT64)deviceContext->QupBase, ItemLongLongX -- 10
+}
+#typev GpiDevice_c247 17 "%0 [%!FUNC!]No test to start" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiDevInit
+{
+}
+#typev GpiDevice_c238 16 "%0 [%!FUNC!]Reading test start time key failed - 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiDevInit
+{
+status, ItemLong -- 10
+}
+#typev GpiDevice_c232 15 "%0 [%!FUNC!]test start time Registry key = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiDevInit
+{
+deviceContext->GpiTestTimeStart, ItemLong -- 10
+}
+#typev GpiDevice_c207 14 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiDevInit
+{
+}
+#typev GpiDevice_c1070 56 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDeviceContextCleanup
+{
+}
+#typev GpiDevice_c1069 55 "%0 [%!FUNC!]PnP - GpiEvtDeviceContextCleanup()" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDeviceContextCleanup
+{
+}
+#typev GpiDevice_c1068 54 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDeviceContextCleanup
+{
+}
+#typev GpiDevice_c994 50 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDeviceD0Entry
+{
+}
+#typev GpiDevice_c992 49 "%0 [%!FUNC!]RecentPowerState: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDeviceD0Entry
+{
+GpiDevicePowerString(RecentPowerState), ItemString -- 10
+}
+#typev GpiDevice_c991 48 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDeviceD0Entry
+{
+}
+#typev GpiDevice_c1034 53 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDeviceD0Exit
+{
+}
+#typev GpiDevice_c1032 52 "%0 [%!FUNC!]PowerState: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDeviceD0Exit
+{
+GpiDevicePowerString(PowerState), ItemString -- 10
+}
+#typev GpiDevice_c1031 51 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDeviceD0Exit
+{
+}
+#typev GpiDevice_c821 41 "%0 [%!FUNC!]Error: Failed InterruptCreate for interrupt #%10!d!, quitting!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+interruptIndex, ItemLong -- 10
+}
+#typev GpiDevice_c763 36 "%0 [%!FUNC!]ERROR - MmMapIoSpace failed!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+}
+#typev GpiDevice_c856 45 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+}
+#typev GpiDevice_c739 34 "%0 [%!FUNC!]I/O Port Resource: Base = 0x%10!08x!:%11!08x! Length = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+descriptor->u.Port.Start.HighPart, ItemLong -- 10
+descriptor->u.Port.Start.LowPart, ItemLong -- 11
+descriptor->u.Port.Length, ItemLong -- 12
+}
+#typev GpiDevice_c801 40 "%0 [%!FUNC!]The IRQ line is edge-triggered" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+}
+#typev GpiDevice_c786 38 "%0 [%!FUNC!]The interrupt is a message-signaled interrupt." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+}
+#typev GpiDevice_c770 37 "%0 [%!FUNC!]Interrupt level: 0x%10!0x!, Vector: 0x%11!0x!, Affinity: 0x%12!0Ix!, Mode: %13!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+descriptor->u.Interrupt.Level, ItemLong -- 10
+descriptor->u.Interrupt.Vector, ItemLong -- 11
+descriptor->u.Interrupt.Affinity, ItemPtr -- 12
+descriptor->Flags, ItemLong -- 13
+}
+#typev GpiDevice_c747 35 "%0 [%!FUNC!]Memory Resource Start = 0x%10!08x!:%11!08x! Length = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+descriptor->u.Memory.Start.HighPart, ItemLong -- 10
+descriptor->u.Memory.Start.LowPart, ItemLong -- 11
+descriptor->u.Memory.Length, ItemLong -- 12
+}
+#typev GpiDevice_c831 42 "%0 [%!FUNC!]WARNING - CmResourceTypeDma" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+}
+#typev GpiDevice_c835 43 "%0 [%!FUNC!]Private Data Resource:  Base = 0x%10!08x!:%11!08x! Size = 0x%12!08x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+descriptor->u.Port.Start.HighPart, ItemLong -- 10
+descriptor->u.Port.Start.LowPart, ItemLong -- 11
+descriptor->u.Port.Length, ItemLong -- 12
+}
+#typev GpiDevice_c844 44 "%0 [%!FUNC!]WARNNING: Unknown resource type - %10!d!!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+descriptor->Type, ItemLong -- 10
+}
+#typev GpiDevice_c733 33 "%0 [%!FUNC!]Resource %10!d!:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+i, ItemLong -- 10
+}
+#typev GpiDevice_c721 32 "%0 [%!FUNC!]Getting ACPI settings Failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+}
+#typev GpiDevice_c715 31 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDevicePrepareHardware
+{
+}
+#typev GpiDevice_c903 47 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDeviceReleaseHardware
+{
+}
+#typev GpiDevice_c898 46 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtDeviceReleaseHardware
+{
+}
+#typev GpiDevice_c300 24 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtInterruptDpc
+{
+}
+#typev GpiDevice_c297 23 "%0 [%!FUNC!]Interrupt DPC for GPII-ID: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtInterruptDpc
+{
+interruptContext->Gpii, ItemLong -- 10
+}
+#typev GpiDevice_c295 22 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtInterruptDpc
+{
+}
+#typev GpiDevice_c435 27 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtInterruptIsr
+{
+}
+#typev GpiDevice_c433 26 "%0 [%!FUNC!]InterruptRecognized: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtInterruptIsr
+{
+InterruptRecognized, ItemLong -- 10
+}
+#typev GpiDevice_c314 25 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiEvtInterruptIsr
+{
+}
+#typev GpiDevice_c637 30 "%0 [%!FUNC!]ACPI GPII prop mismatch!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiGetAcpiData
+{
+}
+#typev GpiDevice_c462 29 "%0 [%!FUNC!]ERROR - QupBase should not be NULL, device memory not assigned/initialized yet
+!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiInterruptCreate
+{
+}
+#typev GpiDevice_c454 28 "%0 [%!FUNC!]***** ERROR - WdfInterruptCreate FAILED, status: %10!d!
+!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiInterruptCreate
+{
+status, ItemLong -- 10
+}

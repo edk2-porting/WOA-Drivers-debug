@@ -1,0 +1,72 @@
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+9612dfe3-2111-3702-1f23-bb8f6c3a887c QcUsbFnSnps // SRC=QcUsbFnCtrlStateStartSetupXfer.c MJ= MN=
+#typev QcUsbFnCtrlStateStartSetupXfer_c150 16 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=HandleXferComplete
+{
+}
+#typev QcUsbFnCtrlStateStartSetupXfer_c143 15 "%0Control Setup Pkt should always be accepted." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=HandleXferComplete
+{
+}
+#typev QcUsbFnCtrlStateStartSetupXfer_c136 12 "%0Error: DWC_TRB_CTL_CONTROL_SETUP != %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=HandleXferComplete
+{
+TrbCtrlCode, ItemEnum(_TRB_CTL_TYPE) -- 10
+}
+#typev QcUsbFnCtrlStateStartSetupXfer_c130 14 "%0no active urb found on epIndex[%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=HandleXferComplete
+{
+epIndex, ItemLong -- 10
+}
+#typev QcUsbFnCtrlStateStartSetupXfer_c123 10 "%0ERROR: XferCmplt of SetupPkt is not on ep 0 (%10!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=HandleXferComplete
+{
+EpIndex, ItemLong -- 10
+}
+#typev QcUsbFnCtrlStateStartSetupXfer_c123 11 "%0Ep Verification of %10!s! on Endpoint %11!d! is not handled." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=HandleXferComplete
+{
+Event->Endpoint.EventType, ItemEnum(_DWC_EVT_EP_EVT_TYPE) -- 10
+EpIndex, ItemLong -- 11
+}
+#typev QcUsbFnCtrlStateStartSetupXfer_c118 13 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=HandleXferComplete
+{
+}
+#typev QcUsbFnCtrlStateStartSetupXfer_c193 20 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=HandleXferNotReady
+{
+}
+#typev QcUsbFnCtrlStateStartSetupXfer_c187 19 "%0Failed to find active URB on epIndex[%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=HandleXferNotReady
+{
+QCUSBFN_DEFAULT_CTL_EP_OUT, ItemLong -- 10
+}
+#typev QcUsbFnCtrlStateStartSetupXfer_c182 18 "%0XferNotReady in state %10!s!: completing setup URB" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=HandleXferNotReady
+{
+State->Name, ItemString -- 10
+}
+#typev QcUsbFnCtrlStateStartSetupXfer_c178 17 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=HandleXferNotReady
+{
+}
+#typev QcUsbFnCtrlStateStartSetupXfer_c250 22 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=transitionToStartSetupXfer
+{
+}
+#typev QcUsbFnCtrlStateStartSetupXfer_c244 21 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=transitionToStartSetupXfer
+{
+}
+#enumv _TRB_CTL_TYPE
+{
+DWC_TRB_CTL_INVALID,0x0
+DWC_TRB_CTL_NORMAL,0x1
+DWC_TRB_CTL_CONTROL_SETUP,0x2
+DWC_TRB_CTL_CONTROL_STATUS_2,0x3
+DWC_TRB_CTL_CONTROL_STATUS_3,0x4
+DWC_TRB_CTL_CONTROL_DATA,0x5
+DWC_TRB_CTL_ISOCHRONOUS_FIRST,0x6
+DWC_TRB_CTL_ISOCHRONOUS,0x7
+DWC_TRB_CTL_LINK_TRB,0x8
+}
+#enumv _DWC_EVT_EP_EVT_TYPE
+{
+DWC_EVT_EP_RSV0,0x0
+DWC_EVT_EP_XFER_COMPLETE,0x1
+DWC_EVT_EP_XFER_IN_PROGRESS,0x2
+DWC_EVT_EP_XFER_NOT_READY,0x3
+DWC_EVT_EP_RSV1,0x4
+DWC_EVT_EP_RSV2,0x5
+DWC_EVT_EP_STREAM,0x6
+DWC_EVT_EP_EP_CMD_COMPLETE,0x7
+}

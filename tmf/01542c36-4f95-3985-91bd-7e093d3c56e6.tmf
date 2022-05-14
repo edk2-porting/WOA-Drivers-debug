@@ -1,0 +1,245 @@
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+01542c36-4f95-3985-91bd-7e093d3c56e6 vcxproj // SRC=bus_manager.c MJ= MN=
+#typev bus_manager_c769 42 "%0=WCD_BUS_MGR: <Activating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_activate_bus
+{
+}
+#typev bus_manager_c193 16 "%0-WCD_BUS_MGR: <Bus deinit. RC:%10!d!.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_bus_deinit
+{
+rc, ItemLong -- 10
+}
+#typev bus_manager_c175 15 "%0=WCD_BUS_MGR: <Init count is: %10!u!.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_bus_deinit
+{
+(uint32)context->init_counter, ItemLong -- 10
+}
+#typev bus_manager_c168 14 "%0+WCD_BUS_MGR: <Bus deinit.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_bus_deinit
+{
+}
+#typev bus_manager_c520 33 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_bus_flush
+{
+}
+#typev bus_manager_c159 13 "%0-WCD_BUS_MGR: <Bus init. RC:%10!d!.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_bus_init
+{
+rc, ItemLong -- 10
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev bus_manager_c148 12 "%0=WCD_BUS_MGR:<trying to initialize physical memory for shadow register size %10!d!.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_bus_init
+{
+rc, ItemLong -- 10
+}
+#typev bus_manager_c141 11 "%0=WCD_BUS_MGR:<Error initializing bus.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_bus_init
+{
+}
+#typev bus_manager_c109 10 "%0+WCD_BUS_MGR: <Bus init.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_bus_init
+{
+}
+#typev bus_manager_c810 44 "%0=WCD_BUS_MGR: <Deactivating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_deactivate_bus
+{
+}
+#typev bus_manager_c807 43 "%0=WCD_BUS_MGR: <Dummy register read before deactivating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_deactivate_bus
+{
+}
+#typev bus_manager_c617 36 "%0=WCD_BUS_MGR: <wcd_register_read_actual, Register = 0x%10!x! , Mask = 0x%11!x! , Read_value = 0x%12!x! >" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=wcd_register_read
+{
+reg, ItemLong -- 10
+mask, ItemLong -- 11
+*value, ItemLong -- 12
+}
+#typev bus_manager_c583 35 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_register_read
+{
+}
+#typev bus_manager_c564 34 "%0=WCD_BUS_MGR: <value parameter is invalid.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_register_read
+{
+}
+#typev bus_manager_c690 39 "%0=WCD_BUS_MGR: <wcd_register_read_actual, Register = 0x%10!x! , Mask = 0x%11!x! , Read_value = 0x%12!x! >" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=wcd_register_read_hw
+{
+reg, ItemLong -- 10
+mask, ItemLong -- 11
+*value, ItemLong -- 12
+}
+#typev bus_manager_c672 38 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_register_read_hw
+{
+}
+#typev bus_manager_c653 37 "%0=WCD_BUS_MGR: <value parameter is invalid.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_register_read_hw
+{
+}
+#typev bus_manager_c352 18 "%0=WCD_BUS_MGR: <wcd_register_write_actual, Register = 0x%10!x!, Mask = 0x%11!x!, Value = 0x%12!x!> " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=wcd_register_write_common
+{
+reg, ItemLong -- 10
+mask, ItemLong -- 11
+actual_write, ItemLong -- 12
+}
+#typev bus_manager_c323 19 "%0=WCD_BUS_MGR: <register read failed, retrying>" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=wcd_register_write_common
+{
+}
+#typev bus_manager_c352 17 "%0=WCD_BUS_MGR: <register write failed, retrying>" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=wcd_register_write_common
+{
+}
+#typev bus_manager_c295 22 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_register_write_common
+{
+}
+#typev bus_manager_c283 21 "%0=WCD_BUS_MGR: <Bus has not been initialized.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_register_write_common
+{
+}
+#typev bus_manager_c276 20 "%0=WCD_BUS_MGR: <register write received a mask 0 this won't perform any write!!!!.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_register_write_common
+{
+}
+#typev bus_manager_c445 28 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_register_write_multiple
+{
+}
+#typev bus_manager_c466 32 "%0=WCD_BUS_MGR: <wcd_register_write_multiple, register = 0x%10!x! , value(%11!u!) = %12!u! >" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=wcd_register_write_multiple
+{
+reg, ItemLong -- 10
+i, ItemLong -- 11
+value[i], ItemLong -- 12
+}
+#typev bus_manager_c463 31 "%0=WCD_BUS_MGR: <wcd_register_write_multiple, initial register = 0x%10!x! , size = %11!u! >" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=wcd_register_write_multiple
+{
+reg, ItemLong -- 10
+(uint32)size, ItemLong -- 11
+}
+#typev bus_manager_c459 30 "%0=WCD_BUS_MGR: <wcd_register_write_multiple error on mutex aquire>" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=wcd_register_write_multiple
+{
+}
+#typev bus_manager_c451 29 "%0=WCD_BUS_MGR: <value parameter is invalid.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_register_write_multiple
+{
+}
+#typev bus_manager_c400 24 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_register_write_repeat
+{
+}
+#typev bus_manager_c419 27 "%0=WCD_BUS_MGR: <wcd_register_write_repeat, start register = 0x%10!x! , size = %11!u! >" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=wcd_register_write_repeat
+{
+reg, ItemLong -- 10
+(uint32)size, ItemLong -- 11
+}
+#typev bus_manager_c414 26 "%0=WCD_BUS_MGR: <wcd_register_write_repeat error on mutex aquire>" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=wcd_register_write_repeat
+{
+}
+#typev bus_manager_c406 25 "%0=WCD_BUS_MGR: <values parameter is invalid.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_register_write_repeat
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev ioctl_manager_c355 41 "%0=WCD_BUS_MGR: <values parameter is invalid.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ioctl_register_read_multiple
+{
+}
+#typev ioctl_manager_c355 40 "%0=WCD_BUS_MGR: <wcd_register_read_multiple, Register = 0x%10!x! , size = %11!u! >" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=ioctl_register_read_multiple
+{
+reg, ItemLong -- 10
+(uint32)size, ItemLong -- 11
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev ioctl_manager_c1138 42 "%0=WCD_BUS_MGR: <Activating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ioctl_set_dsd_gain
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev ioctl_manager_c1033 42 "%0=WCD_BUS_MGR: <Activating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ioctl_set_tx_gain
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev ioctl_manager_c2152 42 "%0=WCD_BUS_MGR: <Activating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_ioctl
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev ioctl_manager_c2149 42 "%0=WCD_BUS_MGR: <Activating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_ioctl
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev wcd_interrupt_handler_c938 42 "%0=WCD_BUS_MGR: <Activating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=wcd_ih_irq_handler
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev shared_channel_manager_c218 33 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_configure_shared_channel
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev shared_channel_manager_c571 33 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_configure_slimbus_port_registers
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev shared_channel_manager_c536 33 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_configure_slimbus_port_registers
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev shared_channel_manager_c411 33 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_configure_spkr_prot_shared_channel_v2
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev tgt_wcd934x_c3734 33 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd934x_COMPANDER_ENABLE
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev tgt_wcd934x_c8089 36 "%0=WCD_BUS_MGR: <wcd_register_read_actual, Register = 0x%10!x! , Mask = 0x%11!x! , Read_value = 0x%12!x! >" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=wcd934x_enable_wdsp_memories
+{
+reg, ItemLong -- 10
+mask, ItemLong -- 11
+*value, ItemLong -- 12
+}
+#typev tgt_wcd934x_c8089 35 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd934x_enable_wdsp_memories
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev tgt_wcd934x_c9154 39 "%0=WCD_BUS_MGR: <wcd_register_read_actual, Register = 0x%10!x! , Mask = 0x%11!x! , Read_value = 0x%12!x! >" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=wcd934x_read_hw_values
+{
+reg, ItemLong -- 10
+mask, ItemLong -- 11
+*value, ItemLong -- 12
+}
+#typev tgt_wcd934x_c9154 38 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd934x_read_hw_values
+{
+}
+#typev tgt_wcd934x_c9154 37 "%0=WCD_BUS_MGR: <value parameter is invalid.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd934x_read_hw_values
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev tgt_wcd934x_c7158 33 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_configure_mad_audio_beacon
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev tgt_wcd934x_mbhc_zdet_c365 36 "%0=WCD_BUS_MGR: <wcd_register_read_actual, Register = 0x%10!x! , Mask = 0x%11!x! , Read_value = 0x%12!x! >" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=impedance_det_ramp_down
+{
+reg, ItemLong -- 10
+mask, ItemLong -- 11
+*value, ItemLong -- 12
+}
+#typev tgt_wcd934x_mbhc_zdet_c365 35 "%0=WCD_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=impedance_det_ramp_down
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev swr_master_hal_c239 42 "%0=WCD_BUS_MGR: <Activating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_read_imp
+{
+}
+#typev swr_master_hal_c223 42 "%0=WCD_BUS_MGR: <Activating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_read_imp
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev swr_master_hal_c208 42 "%0=WCD_BUS_MGR: <Activating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_read_imp
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev swr_master_hal_c160 42 "%0=WCD_BUS_MGR: <Activating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_write_imp
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev swr_master_hal_c152 42 "%0=WCD_BUS_MGR: <Activating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_write_imp
+{
+}

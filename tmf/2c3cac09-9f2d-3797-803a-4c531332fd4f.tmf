@@ -1,0 +1,141 @@
+// PDB:  qcsubsys850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+2c3cac09-9f2d-3797-803a-4c531332fd4f subsys // SRC=buffers.c MJ= MN=
+#typev amss_state_machine_c1631 10 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Audio Buffers Unallocated." //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=AMSS_DoCleanupResources
+{
+}
+// PDB:  qcsubsys850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev buffers_c156 13 "%0 [%!LEVEL!] buffers.c::%!FUNC!::WdfRequestRetrieveOutputBuffer() failed!  status = %10!s!" //   LEVEL=LOG_WARN FLAGS=SUBSYS FUNC=GetBuffer
+{
+status, ItemNTSTATUS -- 10
+}
+#typev buffers_c125 12 "%0 [%!LEVEL!] buffers.c::%!FUNC!::WdfRequestRetrieveInputBuffer() failed!  status = %10!s!" //   LEVEL=LOG_WARN FLAGS=SUBSYS FUNC=GetBuffer
+{
+status, ItemNTSTATUS -- 10
+}
+#typev buffers_c113 11 "%0 [%!LEVEL!] buffers.c::%!FUNC!::" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=GetBuffer
+{
+}
+#typev buffers_c308 24 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Enumerated %10!d! registry keys and found %11!d! buffer descriptors." //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=LoadBufferConfig
+{
+keyIndex, ItemLong -- 10
+descIndex, ItemLong -- 11
+}
+#typev buffers_c299 23 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Invalid registry key found! : Name = %10!s!" //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=LoadBufferConfig
+{
+&tmpName, ItemPWString -- 10
+}
+#typev buffers_c292 22 "%0 [%!LEVEL!] buffers.c::%!FUNC!::AudioBufferDescriptors[%10!d!] : Size = %11!d!, Name = %12!s!" //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=LoadBufferConfig
+{
+descIndex, ItemLong -- 10
+context->AudioBufferDescriptors[descIndex].size, ItemLong -- 11
+&tmpName, ItemPWString -- 12
+}
+#typev buffers_c282 21 "%0 [%!LEVEL!] buffers.c::%!FUNC!::MmAllocateContiguousMemorySpecifyCache() failed!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=LoadBufferConfig
+{
+}
+#typev buffers_c262 20 "%0 [%!LEVEL!] buffers.c::%!FUNC!::ZwEnumerateValueKey() failed!  status = %10!s!" //   LEVEL=LOG_WARN FLAGS=SUBSYS FUNC=LoadBufferConfig
+{
+status, ItemNTSTATUS -- 10
+}
+#typev buffers_c252 19 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Unable to allocate memory for the KEY_VALUE_FULL_INFORMATION structure!" //   LEVEL=LOG_WARN FLAGS=SUBSYS FUNC=LoadBufferConfig
+{
+}
+#typev buffers_c239 18 "%0 [%!LEVEL!] buffers.c::%!FUNC!::ZwEnumerateValueKey() failed!  status = %10!s!" //   LEVEL=LOG_WARN FLAGS=SUBSYS FUNC=LoadBufferConfig
+{
+status, ItemNTSTATUS -- 10
+}
+#typev buffers_c229 17 "%0 [%!LEVEL!] buffers.c::%!FUNC!::WdfRegistryOpenKey() failed!  status = %10!s!" //   LEVEL=LOG_WARN FLAGS=SUBSYS FUNC=LoadBufferConfig
+{
+status, ItemNTSTATUS -- 10
+}
+#typev buffers_c221 16 "%0 [%!LEVEL!] buffers.c::%!FUNC!::WdfDriverOpenParametersRegistryKey() failed!  status = %10!s!" //   LEVEL=LOG_WARN FLAGS=SUBSYS FUNC=LoadBufferConfig
+{
+status, ItemNTSTATUS -- 10
+}
+#typev buffers_c206 15 "%0 [%!LEVEL!] buffers.c::%!FUNC!::FAILURE: ReadEBIAddressFromACPI() failed!  status = %10!s! " //   LEVEL=LOG_WARN FLAGS=SUBSYS FUNC=LoadBufferConfig
+{
+status, ItemNTSTATUS -- 10
+}
+#typev buffers_c196 14 "%0 [%!LEVEL!] buffers.c::%!FUNC!::" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=LoadBufferConfig
+{
+}
+#typev buffers_c430 32 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI
+{
+status, ItemNTSTATUS -- 10
+}
+#typev buffers_c439 33 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Exit with status %10!s! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=ReadEBIAddressFromACPI
+{
+status, ItemNTSTATUS -- 10
+}
+#typev buffers_c417 31 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Child arg #3: type = %10!d!, length = %11!d!" //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI
+{
+ebi_data_ptr->Type, ItemLong -- 10
+ebi_data_ptr->DataLength, ItemLong -- 11
+}
+#typev buffers_c406 30 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Child arg #2: type = %10!d!, length = %11!d!" //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI
+{
+ebi_data_ptr->Type, ItemLong -- 10
+ebi_data_ptr->DataLength, ItemLong -- 11
+}
+#typev buffers_c395 29 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Child arg #1: type = %10!d!, length = %11!d!" //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI
+{
+ebi_data_ptr->Type, ItemLong -- 10
+ebi_data_ptr->DataLength, ItemLong -- 11
+}
+#typev buffers_c382 28 "%0 [%!LEVEL!] buffers.c::%!FUNC!::IOCTL_ACPI_EVAL_METHOD : length = %10!d!, status = %11!s! " //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI
+{
+output_buffer.Length, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev buffers_c368 27 "%0 [%!LEVEL!] buffers.c::%!FUNC!::FAILURE: Could not allocated memory to hold the output of the BUFF method in ACPI " //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI
+{
+}
+#typev buffers_c362 26 "%0 [%!LEVEL!] buffers.c::%!FUNC!::IOCTL_ACPI_EVAL_METHOD : length = %10!d!, status = %11!s! " //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI
+{
+output_buffer.Length, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev buffers_c331 25 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=ReadEBIAddressFromACPI
+{
+}
+#typev buffers_c430 32 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Exception!  Last status = %10!s!" //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev buffers_c439 33 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Exit with status %10!s! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=ReadEBIAddressFromACPI$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev buffers_c417 31 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Child arg #3: type = %10!d!, length = %11!d!" //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI$fin$0
+{
+ebi_data_ptr->Type, ItemLong -- 10
+ebi_data_ptr->DataLength, ItemLong -- 11
+}
+#typev buffers_c406 30 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Child arg #2: type = %10!d!, length = %11!d!" //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI$fin$0
+{
+ebi_data_ptr->Type, ItemLong -- 10
+ebi_data_ptr->DataLength, ItemLong -- 11
+}
+#typev buffers_c395 29 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Child arg #1: type = %10!d!, length = %11!d!" //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI$fin$0
+{
+ebi_data_ptr->Type, ItemLong -- 10
+ebi_data_ptr->DataLength, ItemLong -- 11
+}
+#typev buffers_c382 28 "%0 [%!LEVEL!] buffers.c::%!FUNC!::IOCTL_ACPI_EVAL_METHOD : length = %10!d!, status = %11!s! " //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI$fin$0
+{
+output_buffer.Length, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev buffers_c368 27 "%0 [%!LEVEL!] buffers.c::%!FUNC!::FAILURE: Could not allocated memory to hold the output of the BUFF method in ACPI " //   LEVEL=LOG_ERR_ FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI$fin$0
+{
+}
+#typev buffers_c362 26 "%0 [%!LEVEL!] buffers.c::%!FUNC!::IOCTL_ACPI_EVAL_METHOD : length = %10!d!, status = %11!s! " //   LEVEL=LOG_INFO FLAGS=SUBSYS FUNC=ReadEBIAddressFromACPI$fin$0
+{
+output_buffer.Length, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev buffers_c331 25 "%0 [%!LEVEL!] buffers.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=ReadEBIAddressFromACPI$fin$0
+{
+}

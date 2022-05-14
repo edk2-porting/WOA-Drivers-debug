@@ -1,0 +1,524 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+0170e243-80f4-3be4-544e-c2d6549ba0c6 MBB // SRC=MPIPAddrMgmt.c MJ= MN=
+#typev MPIPAddrMgmt_c810 53 "%0%!FUNC!: Failed to Enumerate Linklocal adapter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_AddLinklocalAdapter
+{
+}
+#typev MPIPAddrMgmt_c804 52 "%0%!FUNC!: Enumerated Linklocal adapter %10!u!l, stored info at IP Address Management Table index %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_AddLinklocalAdapter
+{
+AddDeviceResponse.InstanceId, ItemLong -- 10
+LinklocalContext.IPMgmtContextIndex, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c797 51 "%0%!FUNC!: Enumerating Linklocal adapter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_AddLinklocalAdapter
+{
+}
+#typev MPIPAddrMgmt_c451 27 "%0%!FUNC!: InterfaceLuid = 0x%10!I64X!. IP/Subnet: %11!s!/%12!s!. Status = %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_AssignIPv4ToLUID
+{
+InterfaceLuid.Value, ItemLongLongXX -- 10
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 11
+SubnetMask, ItemIPAddr -- 12
+status, ItemNTSTATUS -- 13
+}
+#typev MPIPAddrMgmt_c425 26 "%0%!FUNC!: InterfaceLuid = 0x%10!I64X!. Requested IP/subnet: %11!s!/%12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_AssignIPv4ToLUID
+{
+InterfaceLuid.Value, ItemLongLongXX -- 10
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 11
+SubnetMask, ItemIPAddr -- 12
+}
+#typev MPIPAddrMgmt_c477 29 "%0%!FUNC!: CreateUnicastIpAddressEntry status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_AssignIPv6ToLUID
+{
+status, ItemNTSTATUS -- 10
+}
+#typev MPIPAddrMgmt_c459 28 "%0%!FUNC!:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_AssignIPv6ToLUID
+{
+}
+#typev MPIPAddrMgmt_c525 34 "%0<%10!s!>%!FUNC!: CreateUnicastIpAddressEntry status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_AssignRevIPv6
+{
+pAdapter->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev MPIPAddrMgmt_c509 33 "%0<%10!s!>%!FUNC!: Printing adapter IPv6 address. InstanceIdx = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_AssignRevIPv6
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->InstanceIdx, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c506 32 "%0%!FUNC!: Printing cached Reverse IPv6 address. AdapterIndex = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_AssignRevIPv6
+{
+IPv6RevIndCache[index].AdapterIndex, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c500 31 "%0%!FUNC!: Invalid IPv6 Prefix Matching index." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_AssignRevIPv6
+{
+}
+#typev MPIPAddrMgmt_c493 30 "%0%!FUNC!: Adapter == NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_AssignRevIPv6
+{
+}
+#typev MPIPAddrMgmt_c261 16 "%0%!FUNC!: Failed with status = %10!s!. pTable = %11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_GetLUIDFromMacAddress
+{
+status, ItemNTSTATUS -- 10
+pTable, ItemPtr -- 11
+}
+#typev MPIPAddrMgmt_c226 15 "%0%!FUNC! InterfaceLuid/IfType/NetLuidIndex = 0x%10!I64X!/0x%11!I64u!/0x%12!I64u!/0x%13!I64u!. InterfaceIndex =%14!u!. Type = %15!u!. Media Type = %16!u!. Access Type = %17!u!. FilterInterface = %18!s!. OperStatus = %19!d!. MAC-ID = %20!02X!-%21!02X!-%22!02X!-%23!02X!-%24!02X!-%25!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_GetLUIDFromMacAddress
+{
+pRow->InterfaceLuid.Value, ItemLongLongXX -- 10
+pRow->InterfaceLuid.Info.IfType, ItemULongLong -- 11
+pRow->InterfaceLuid.Info.NetLuidIndex, ItemULongLong -- 12
+pRow->InterfaceLuid.Info.Reserved, ItemULongLong -- 13
+pRow->InterfaceIndex, ItemLong -- 14
+pRow->Type, ItemLong -- 15
+pRow->MediaType, ItemLong -- 16
+pRow->AccessType, ItemLong -- 17
+pRow->InterfaceAndOperStatusFlags.FilterInterface, ItemListLong(false,true) -- 18
+pRow->OperStatus, ItemLong -- 19
+pRow->PhysicalAddress[0], ItemLong -- 20
+pRow->PhysicalAddress[1], ItemLong -- 21
+pRow->PhysicalAddress[2], ItemLong -- 22
+pRow->PhysicalAddress[3], ItemLong -- 23
+pRow->PhysicalAddress[4], ItemLong -- 24
+pRow->PhysicalAddress[5], ItemLong -- 25
+}
+#typev MPIPAddrMgmt_c942 68 "%0<%10!s!> %!FUNC!: Assign the IP address to MBB adapter." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Connected
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPIPAddrMgmt_c936 67 "%0<%10!s!> %!FUNC!: IP %11!s! is not assigned to any LinkLocal adapter. Index = %12!d!, pAdapter->InstanceIdx = %13!d!, refCount = %14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Connected
+{
+pAdapter->PortName, ItemString -- 10
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 11
+index, ItemLong -- 12
+pAdapter->InstanceIdx, ItemLong -- 13
+pIpAddrMgmtContext->nRefCount, ItemLong -- 14
+}
+#typev MPIPAddrMgmt_c933 66 "%0<%10!s!> %!FUNC!: MBBInterfaceLuid = 0x%11!I64X!, MBBIndex(InstanceIdx) = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Connected
+{
+pAdapter->PortName, ItemString -- 10
+pIpAddrMgmtContext->MBBInterfaceLuid.Value, ItemLongLongXX -- 11
+pIpAddrMgmtContext->MBBIndex, ItemLong -- 12
+}
+#typev MPIPAddrMgmt_c921 65 "%0<%10!s!> %!FUNC!: Available IPAddrMgmt index = %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Connected
+{
+pAdapter->PortName, ItemString -- 10
+index, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c915 64 "%0<%10!s!> %!FUNC!: Invalid index. This should never happen." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Connected
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPIPAddrMgmt_c971 71 "%0<%10!s!> %!FUNC!: Assign the IP address MBB adapter and remove from linkLocal." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Connected
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPIPAddrMgmt_c964 70 "%0<%10!s!> %!FUNC!: IP %11!s! is assigned to LinkLocal adapter. Index = %12!d!, pAdapter->InstanceIdx = %13!d!, refCount = %14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Connected
+{
+pAdapter->PortName, ItemString -- 10
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 11
+index, ItemLong -- 12
+pAdapter->InstanceIdx, ItemLong -- 13
+pIpAddrMgmtContext->nRefCount, ItemLong -- 14
+}
+#typev MPIPAddrMgmt_c960 69 "%0<%10!s!> %!FUNC!: MBBInterfaceLuid = 0x%11!I64X!, MBBIndex = %12!u!, LinkLocalInterfaceLuid = 0x%13!I64X! & LinkLocalInterfaceIndex = %14!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Connected
+{
+pAdapter->PortName, ItemString -- 10
+pIpAddrMgmtContext->MBBInterfaceLuid.Value, ItemLongLongXX -- 11
+pIpAddrMgmtContext->MBBIndex, ItemLong -- 12
+pIpAddrMgmtContext->LinkLocalInterfaceLuid.Value, ItemLongLongXX -- 13
+pIpAddrMgmtContext->LinkLocalInterfaceIndex, ItemLong -- 14
+}
+#typev MPIPAddrMgmt_c910 63 "%0<%10!s!> %!FUNC!: IP %11!s! is not assigned to any LinkLocal adapter." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Connected
+{
+pAdapter->PortName, ItemString -- 10
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 11
+}
+#typev MPIPAddrMgmt_c900 62 "%0<%10!s!> %!FUNC!: IPv4 handling. IP Address = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Connected
+{
+pAdapter->PortName, ItemString -- 10
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 11
+}
+#typev MPIPAddrMgmt_c895 61 "%0<%10!s!> %!FUNC!: IPv6 handling pending." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Connected
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPIPAddrMgmt_c891 60 "%0%!FUNC!:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Connected
+{
+}
+#typev MPIPAddrMgmt_c1047 79 "%0<%10!s!> %!FUNC!: nRefCount = %11!d!. Removing IP from MBB adapter and resetting context." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Disconnected
+{
+pAdapter->PortName, ItemString -- 10
+pIpAddrMgmtContext->nRefCount, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c1073 81 "%0<%10!s!> %!FUNC!: nRefCount = %11!d!. Failed to enumerate linkLocal adapter. This should never happen." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Disconnected
+{
+pAdapter->PortName, ItemString -- 10
+pIpAddrMgmtContext->nRefCount, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c1063 80 "%0<%10!s!> %!FUNC!: nRefCount = %11!d!. Removing IP from MBB adapter and moving to linkLocal." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Disconnected
+{
+pAdapter->PortName, ItemString -- 10
+pIpAddrMgmtContext->nRefCount, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c1091 82 "%0<%10!s!> %!FUNC!: Invalid nRefCount = %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Disconnected
+{
+pAdapter->PortName, ItemString -- 10
+pIpAddrMgmtContext->nRefCount, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c1033 78 "%0%!FUNC!: nRefCount (%10!d!) is already <= 0. Something went horribly wrong." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Disconnected
+{
+pIpAddrMgmtContext->nRefCount, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1027 77 "%0<%10!s!> %!FUNC!: Assigned index = %11!d! in context list." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Disconnected
+{
+pAdapter->PortName, ItemString -- 10
+index, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c1023 76 "%0<%10!s!> %!FUNC!: Invalid index. This should never happen." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Disconnected
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPIPAddrMgmt_c1017 75 "%0<%10!s!> %!FUNC!: Error IPv4 address is all zero" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Disconnected
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPIPAddrMgmt_c1013 74 "%0<%10!s!> %!FUNC!: IPv4 handling. IP Address = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Disconnected
+{
+pAdapter->PortName, ItemString -- 10
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 11
+}
+#typev MPIPAddrMgmt_c1008 73 "%0<%10!s!> %!FUNC!: IPv6 handling in other logic." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Disconnected
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPIPAddrMgmt_c995 72 "%0%!FUNC!:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleIPIndication_Disconnected
+{
+}
+#typev MPIPAddrMgmt_c1245 100 "%0<%10!s!> %!FUNC!: MBBInterfaceLuid = 0x%11!I64X!, MBBIndex = %12!u!, LinkLocalInterfaceLuid = 0x%13!I64X! & LinkLocalInterfaceIndex = %14!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+pAdapter->PortName, ItemString -- 10
+pIpAddrMgmtContext->MBBInterfaceLuid.Value, ItemLongLongXX -- 11
+pIpAddrMgmtContext->MBBIndex, ItemLong -- 12
+pIpAddrMgmtContext->LinkLocalInterfaceLuid.Value, ItemLongLongXX -- 13
+pIpAddrMgmtContext->LinkLocalInterfaceIndex, ItemLong -- 14
+}
+#typev MPIPAddrMgmt_c1242 99 "%0%!FUNC!: IP %10!s! is assigned to any MBB adapter. Index = %11!d!, pAdapter->InstanceIdx = %12!d!, refCount = %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 10
+index, ItemLong -- 11
+pAdapter->InstanceIdx, ItemLong -- 12
+pIpAddrMgmtContext->nRefCount, ItemLong -- 13
+}
+#typev MPIPAddrMgmt_c1225 98 "%0%!FUNC!: Linklocal adapter enumeration failed. This should never happen. Status = %10!s! (0x%11!x!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+status, ItemNTSTATUS -- 10
+status, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c1215 97 "%0%!FUNC!: Assign the IP address to LinkLocal adapter. LinkLocalInterfaceLuid = 0x%10!I64X! & LinkLocalInterfaceIndex = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+pIpAddrMgmtContext->LinkLocalInterfaceLuid.Value, ItemLongLongXX -- 10
+pIpAddrMgmtContext->LinkLocalInterfaceIndex, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c1211 96 "%0%!FUNC!: MBBInterfaceLuid = 0x%10!I64X!, MBBIndex = %11!u!, LinkLocalInterfaceLuid = 0x%12!I64X! & LinkLocalInterfaceIndex = %13!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+pIpAddrMgmtContext->MBBInterfaceLuid.Value, ItemLongLongXX -- 10
+pIpAddrMgmtContext->MBBIndex, ItemLong -- 11
+pIpAddrMgmtContext->LinkLocalInterfaceLuid.Value, ItemLongLongXX -- 12
+pIpAddrMgmtContext->LinkLocalInterfaceIndex, ItemLong -- 13
+}
+#typev MPIPAddrMgmt_c1208 95 "%0%!FUNC!: IP %10!s! is not assigned to any MBB adapter. Index = %11!d!, refCount = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 10
+index, ItemLong -- 11
+pIpAddrMgmtContext->nRefCount, ItemLong -- 12
+}
+#typev MPIPAddrMgmt_c1204 94 "%0%!FUNC!: Error: MPIPAddrMgmt_GetLUIDFromMacAddress with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+status, ItemNTSTATUS -- 10
+}
+#typev MPIPAddrMgmt_c1187 93 "%0%!FUNC!: Available IPAddrMgmt index = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+index, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1183 92 "%0%!FUNC!: Invalid index. This should never happen." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+}
+#typev MPIPAddrMgmt_c1178 91 "%0%!FUNC!: IP %10!s! is not assigned to any MBB adapter." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 10
+}
+#typev MPIPAddrMgmt_c1168 90 "%0%!FUNC!: IPv4 handling. IP Address = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 10
+}
+#typev MPIPAddrMgmt_c1159 89 "%0%!FUNC!: Error: Linklocal adapter enumeration failed. This should never happen. Status = %10!s! (0x%11!x!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+status, ItemNTSTATUS -- 10
+status, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c1255 101 "%0status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+status, ItemNTSTATUS -- 10
+}
+#typev MPIPAddrMgmt_c1146 88 "%0%!FUNC!: Assign the IP address to LinkLocal adapter. LinkLocalInterfaceLuid = 0x%10!I64X! & LinkLocalInterfaceIndex = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+pIpAddrMgmtContext->LinkLocalInterfaceLuid.Value, ItemLongLongXX -- 10
+pIpAddrMgmtContext->LinkLocalInterfaceIndex, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c1141 87 "%0%!FUNC!: Error: MPIPAddrMgmt_GetLUIDFromMacAddress with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+status, ItemNTSTATUS -- 10
+}
+#typev MPIPAddrMgmt_c1124 86 "%0%!FUNC!: Available IPAddrMgmt index = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+index, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1120 85 "%0%!FUNC!: Invalid index. This should never happen." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+}
+#typev MPIPAddrMgmt_c1115 84 "%0%!FUNC!: IPv6 handling ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+}
+#typev MPIPAddrMgmt_c1108 83 "%0<%!FUNC!:%10!s!>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Connected
+{
+KeGetCurrentIrql (), ItemListByte(Low,APC,DPC) -- 10
+}
+#typev MPIPAddrMgmt_c1365 115 "%0%!FUNC!: nRefCount = %10!d!. Removing IP from LinkLocal adapter and resetting context." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+pIpAddrMgmtContext->nRefCount, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1381 116 "%0%!FUNC!: nRefCount = %10!d!. Removing IP from linkLocal adapter and MBB adapter should have this IP address." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+pIpAddrMgmtContext->nRefCount, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1397 117 "%0%!FUNC!: Invalid nRefCount = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+pIpAddrMgmtContext->nRefCount, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1358 114 "%0%!FUNC!: MBBInterfaceLuid = 0x%10!I64X!, MBBIndex = %11!u!, LinkLocalInterfaceLuid = 0x%12!I64X! & LinkLocalInterfaceIndex = %13!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+pIpAddrMgmtContext->MBBInterfaceLuid.Value, ItemLongLongXX -- 10
+pIpAddrMgmtContext->MBBIndex, ItemLong -- 11
+pIpAddrMgmtContext->LinkLocalInterfaceLuid.Value, ItemLongLongXX -- 12
+pIpAddrMgmtContext->LinkLocalInterfaceIndex, ItemLong -- 13
+}
+#typev MPIPAddrMgmt_c1348 113 "%0%!FUNC!: Error: nRefCount (%10!d!) is already <= 0. Something went horribly wrong." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+pIpAddrMgmtContext->nRefCount, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1342 112 "%0%!FUNC!: Assigned index = %10!d! in context list." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+index, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1338 111 "%0%!FUNC!: Invalid index. This should never happen." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+}
+#typev MPIPAddrMgmt_c1333 110 "%0%!FUNC!: IPv4 handling. IP Address = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 10
+}
+#typev MPIPAddrMgmt_c1322 109 "%0%!FUNC!: Invalid nRefCount = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+pIpAddrMgmtContext->nRefCount, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1306 108 "%0%!FUNC!: nRefCount = %10!d!. Removing IP from LinkLocal adapter and resetting context." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+pIpAddrMgmtContext->nRefCount, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1298 107 "%0%!FUNC!: MBBInterfaceLuid = 0x%10!I64X!, MBBIndex = %11!u!, LinkLocalInterfaceLuid = 0x%12!I64X! & LinkLocalInterfaceIndex = %13!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+pIpAddrMgmtContext->MBBInterfaceLuid.Value, ItemLongLongXX -- 10
+pIpAddrMgmtContext->MBBIndex, ItemLong -- 11
+pIpAddrMgmtContext->LinkLocalInterfaceLuid.Value, ItemLongLongXX -- 12
+pIpAddrMgmtContext->LinkLocalInterfaceIndex, ItemLong -- 13
+}
+#typev MPIPAddrMgmt_c1288 106 "%0%!FUNC!: Error: nRefCount (%10!d!) is already <= 0. Something went horribly wrong." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+pIpAddrMgmtContext->nRefCount, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1282 105 "%0%!FUNC!: Assigned index = %10!d! in context list." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+index, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1278 104 "%0%!FUNC!: Invalid index. This should never happen." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+}
+#typev MPIPAddrMgmt_c1271 103 "%0%!FUNC!: IPv6 handling ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+}
+#typev MPIPAddrMgmt_c1266 102 "%0<%!FUNC!:%10!s!>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Disconnected
+{
+KeGetCurrentIrql (), ItemListByte(Low,APC,DPC) -- 10
+}
+#typev MPIPAddrMgmt_c1418 120 "%0%!FUNC!: Pending handling." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Update
+{
+}
+#typev MPIPAddrMgmt_c1416 119 "%0%!FUNC!: Is IPv6 flag is %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Update
+{
+IPAddress.isIPv6, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c1412 118 "%0<%!FUNC!:%10!s!>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_HandleReverseIPIndication_Update
+{
+KeGetCurrentIrql (), ItemListByte(Low,APC,DPC) -- 10
+}
+#typev MPIPAddrMgmt_c154 12 "%0%!FUNC!: InterfaceLuid = 0x%10!I64X!. bEnable = %11!s!. Status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_IPv6DadTransmits
+{
+InterfaceLuid.Value, ItemLongLongXX -- 10
+bEnable, ItemListLong(false,true) -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev MPIPAddrMgmt_c148 11 "%0%!FUNC!: Forwarding = %10!s! DadTransmits = %11!s! WeakHostReceive = %12!s! WeakHostSend = %13!s! Connected = %14!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_IPv6DadTransmits
+{
+Row.ForwardingEnabled, ItemListLong(false,true) -- 10
+Row.DadTransmits, ItemListLong(false,true) -- 11
+Row.WeakHostReceive, ItemListLong(false,true) -- 12
+Row.WeakHostSend, ItemListLong(false,true) -- 13
+Row.Connected, ItemListLong(false,true) -- 14
+}
+#typev MPIPAddrMgmt_c179 14 "%0%!FUNC!: InterfaceLuid = 0x%10!I64X!. bEnable = %11!s!. Status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_IPv6EnableForwarding
+{
+InterfaceLuid.Value, ItemLongLongXX -- 10
+bEnable, ItemListLong(false,true) -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev MPIPAddrMgmt_c173 13 "%0%!FUNC!: Forwarding = %10!s! DadTransmits = %11!s! WeakHostReceive = %12!s! WeakHostSend = %13!s! Connected = %14!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_IPv6EnableForwarding
+{
+Row.ForwardingEnabled, ItemListLong(false,true) -- 10
+Row.DadTransmits, ItemListLong(false,true) -- 11
+Row.WeakHostReceive, ItemListLong(false,true) -- 12
+Row.WeakHostSend, ItemListLong(false,true) -- 13
+Row.Connected, ItemListLong(false,true) -- 14
+}
+#typev MPIPAddrMgmt_c606 40 "%0%!FUNC!: Ignoring Notification %10!d! (0-MibParameterNotification, 3-MibInitialNotification)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_InterfaceChangeNotificationCB
+{
+NotificationType, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c659 44 "%0%!FUNC!: Match Found!! Adding Interface with MAC Address to Index %10!d!: %11!02x!-%12!02x!-%13!02x!-%14!02x!-%15!02x!-%16!02x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_InterfaceChangeNotificationCB
+{
+pifaceContext->IPMgmtContextIndex, ItemLong -- 10
+IPAddrMgmt[pifaceContext->IPMgmtContextIndex].LinkLocalMacAddr[0], ItemLong -- 11
+IPAddrMgmt[pifaceContext->IPMgmtContextIndex].LinkLocalMacAddr[1], ItemLong -- 12
+IPAddrMgmt[pifaceContext->IPMgmtContextIndex].LinkLocalMacAddr[2], ItemLong -- 13
+IPAddrMgmt[pifaceContext->IPMgmtContextIndex].LinkLocalMacAddr[3], ItemLong -- 14
+IPAddrMgmt[pifaceContext->IPMgmtContextIndex].LinkLocalMacAddr[4], ItemLong -- 15
+IPAddrMgmt[pifaceContext->IPMgmtContextIndex].LinkLocalMacAddr[5], ItemLong -- 16
+}
+#typev MPIPAddrMgmt_c679 45 "%0%!FUNC!: Match Found!! Deleted Interface with MAC Address in Index %10!d!: %11!02x!-%12!02x!-%13!02x!-%14!02x!-%15!02x!-%16!02x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_InterfaceChangeNotificationCB
+{
+pifaceContext->IPMgmtContextIndex, ItemLong -- 10
+IPAddrMgmt[pifaceContext->IPMgmtContextIndex].LinkLocalMacAddr[0], ItemLong -- 11
+IPAddrMgmt[pifaceContext->IPMgmtContextIndex].LinkLocalMacAddr[1], ItemLong -- 12
+IPAddrMgmt[pifaceContext->IPMgmtContextIndex].LinkLocalMacAddr[2], ItemLong -- 13
+IPAddrMgmt[pifaceContext->IPMgmtContextIndex].LinkLocalMacAddr[3], ItemLong -- 14
+IPAddrMgmt[pifaceContext->IPMgmtContextIndex].LinkLocalMacAddr[4], ItemLong -- 15
+IPAddrMgmt[pifaceContext->IPMgmtContextIndex].LinkLocalMacAddr[5], ItemLong -- 16
+}
+#typev MPIPAddrMgmt_c693 46 "%0%!FUNC!: Invalid Notification Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_InterfaceChangeNotificationCB
+{
+NotificationType, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c636 43 "%0%!FUNC!: Notification %10!d! received for Interface with LUID: %11!I64X! and MAC Address: %12!02x!-%13!02x!-%14!02x!-%15!02x!-%16!02x!-%17!02x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_InterfaceChangeNotificationCB
+{
+NotificationType, ItemLong -- 10
+pmibRow->InterfaceLuid.Value, ItemLongLongXX -- 11
+pmibRow->PhysicalAddress[0], ItemLong -- 12
+pmibRow->PhysicalAddress[1], ItemLong -- 13
+pmibRow->PhysicalAddress[2], ItemLong -- 14
+pmibRow->PhysicalAddress[3], ItemLong -- 15
+pmibRow->PhysicalAddress[4], ItemLong -- 16
+pmibRow->PhysicalAddress[5], ItemLong -- 17
+}
+#typev MPIPAddrMgmt_c632 42 "%0%!FUNC!: GetIfEntry2 returned error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_InterfaceChangeNotificationCB
+{
+}
+#typev MPIPAddrMgmt_c614 41 "%0%!FUNC!: Invalid Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_InterfaceChangeNotificationCB
+{
+}
+#typev MPIPAddrMgmt_c285 18 "%0<%10!s!> %!FUNC!: pAdapter = %11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_IsIPv4AddrAssignedToMBBAdapter
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter, ItemPtr -- 11
+}
+#typev MPIPAddrMgmt_c272 17 "%0%!FUNC!:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_IsIPv4AddrAssignedToMBBAdapter
+{
+}
+#typev MPIPAddrMgmt_c132 10 "%0%10!s!:: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_PrintIPv6Address
+{
+PrefixFunctionName, ItemString -- 10
+IPv6, ItemString -- 11
+}
+#typev MPIPAddrMgmt_c584 39 "%0%!FUNC!: Successfully Removed Linklocal Adapter at index %10!d! of IP Address Management Table" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_ProcessResponseCB
+{
+pLinklocalContext->IPMgmtContextIndex, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c573 38 "%0%!FUNC!: Successfully Added Linklocal Adapter %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_ProcessResponseCB
+{
+IPAddrMgmt[pLinklocalContext->IPMgmtContextIndex].LinkLocalDeviceInstanceID, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c374 21 "%0%!FUNC!: Failed with status = %10!s!. pTable = %11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_RemoveIPv4FromLUID
+{
+status, ItemNTSTATUS -- 10
+pTable, ItemPtr -- 11
+}
+#typev MPIPAddrMgmt_c365 20 "%0%!FUNC!: DeleteUnicastIpAddressEntry status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_RemoveIPv4FromLUID
+{
+status, ItemNTSTATUS -- 10
+}
+#typev MPIPAddrMgmt_c362 19 "%0%!FUNC!: Deleting IP entry (%10!s!) with InterfaceIndex = %11!u! and InterfaceLuid = 0x%12!I64X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_RemoveIPv4FromLUID
+{
+pRow->Address.Ipv4.sin_addr.S_un.S_addr, ItemIPAddr -- 10
+pRow->InterfaceIndex, ItemLong -- 11
+pRow->InterfaceLuid.Value, ItemLongLongXX -- 12
+}
+#typev MPIPAddrMgmt_c411 25 "%0%!FUNC!: Failed with status = %10!s!. pTable = %11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_RemoveIPv6FromLUID
+{
+status, ItemNTSTATUS -- 10
+pTable, ItemPtr -- 11
+}
+#typev MPIPAddrMgmt_c402 24 "%0%!FUNC!: DeleteUnicastIpAddressEntry status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_RemoveIPv6FromLUID
+{
+status, ItemNTSTATUS -- 10
+}
+#typev MPIPAddrMgmt_c399 23 "%0%!FUNC!: Deleting IP entry (%10!s!) with InterfaceIndex = %11!u! and InterfaceLuid = 0x%12!I64X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_RemoveIPv6FromLUID
+{
+pRow->Address.Ipv4.sin_addr.S_un.S_addr, ItemIPAddr -- 10
+pRow->InterfaceIndex, ItemLong -- 11
+pRow->InterfaceLuid.Value, ItemLongLongXX -- 12
+}
+#typev MPIPAddrMgmt_c387 22 "%0%!FUNC!:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_RemoveIPv6FromLUID
+{
+}
+#typev MPIPAddrMgmt_c856 56 "%0%!FUNC!: Failed to Remove Linklocal adapter %10!u!l" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_RemoveLinklocalAdapter
+{
+RemoveDeviceRequest.InstanceId, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c850 55 "%0%!FUNC!: Removed Linklocal adapter %10!u!l, updated info at IP Address Management Table index %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_RemoveLinklocalAdapter
+{
+RemoveDeviceRequest.InstanceId, ItemLong -- 10
+LinklocalContext.IPMgmtContextIndex, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c840 54 "%0%!FUNC!: Removing Linklocal adapter %10!u!l, stored at IP Address Management Table index %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_RemoveLinklocalAdapter
+{
+RemoveDeviceRequest.InstanceId, ItemLong -- 10
+LinklocalContext.IPMgmtContextIndex, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c766 50 "%0%!FUNC!: Add/Remove Linklocal Completed with Status = %10!s! (0x%11!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_SendIrpAndWaitforInterfacechnage
+{
+status, ItemNTSTATUS -- 10
+status, ItemLong -- 11
+}
+#typev MPIPAddrMgmt_c758 49 "%0%!FUNC!: Wait for interface change notification timed out." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_SendIrpAndWaitforInterfacechnage
+{
+}
+#typev MPIPAddrMgmt_c749 48 "%0%!FUNC!: Add/Remove Linklocal Adapter Succeeded. Waiting for Interface change event." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_SendIrpAndWaitforInterfacechnage
+{
+}
+#typev MPIPAddrMgmt_c742 47 "%0%!FUNC!: Sending IRP to Databus for Add/Remove Linklocal Adapter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrMgmt_SendIrpAndWaitforInterfacechnage
+{
+}
+#typev MPIPAddrMgmt_c876 59 "%0%!FUNC!: Clean up of Adapters at index %10!d! of IP Address Management Table Completed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrtMgmt_HandleSSR
+{
+index, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c872 58 "%0%!FUNC!: Failed to clean up Adapters at index %10!d! of IP Address Management Table" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIPAddrtMgmt_HandleSSR
+{
+index, ItemLong -- 10
+}
+#typev MPIPAddrMgmt_c866 57 "%0%!FUNC!: Handling MSSR. Cleaning up IP Address Management Table" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIPAddrtMgmt_HandleSSR
+{
+}

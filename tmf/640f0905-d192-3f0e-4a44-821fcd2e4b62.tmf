@@ -1,0 +1,39 @@
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+640f0905-d192-3f0e-4a44-821fcd2e4b62 PEP // SRC=PEP_Thermal_Acm.c MJ= MN=
+#typev PEP_Thermal_Acm_c228 14 "%0 [Info] PEP_Thermal_Acm.c::%!FUNC! :GetTSENSStableTemperature: PMIC[%10!d!'C] / TSENS[Max:%11!d!'C Min:%12!d!'C] criteria failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=GetTSENSStableTemperature
+{
+tempAdc, ItemLong -- 10
+max, ItemLong -- 11
+min, ItemLong -- 12
+}
+#typev PEP_Thermal_Acm_c210 13 "%0 [Info] PEP_Thermal_Acm.c::%!FUNC! :PMIC +/-2C criteria among measurements failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=GetTSENSStableTemperature
+{
+}
+#typev PEP_Thermal_Acm_c190 12 "%0 [Info] PEP_Thermal_Acm.c::%!FUNC! :PMIC Adc read failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=GetTSENSStableTemperature
+{
+}
+#typev PEP_Thermal_Acm_c167 11 "%0 [Info] PEP_Thermal_Acm.c::%!FUNC! :+/- 2C criteria among tsens measurements failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=GetTSENSStableTemperature
+{
+}
+#typev PEP_Thermal_Acm_c139 10 "%0 [Err ] PEP_Thermal_Acm.c::%!FUNC!::139 :TSENS Calibration failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=GetTSENSStableTemperature
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Acm_c463 19 "%0 [Info] PEP_Thermal_Acm.c::%!FUNC! :Invalid Output buffer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ProcessStableTsensReq
+{
+}
+#typev PEP_Thermal_Acm_c454 18 "%0 [Err ] PEP_Thermal_Acm.c::%!FUNC!::454 :WdfRequestRetrieveOutputBuffer failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ProcessStableTsensReq
+{
+}
+#typev PEP_Thermal_Acm_c428 17 "%0 [Err ] PEP_Thermal_Acm.c::%!FUNC!::428 :Lock Creation failed in Stable TSENS. 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ProcessStableTsensReq
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Acm_c413 16 "%0 [Err ] PEP_Thermal_Acm.c::%!FUNC!::413 :TimerCreate failed for Stable TSENS. 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ProcessStableTsensReq
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Acm_c393 15 "%0 [Err ] PEP_Thermal_Acm.c::%!FUNC!::393 :Unable to service IOCTL_READ_TSENS, not enough parameters from ACPI" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=ProcessStableTsensReq
+{
+}

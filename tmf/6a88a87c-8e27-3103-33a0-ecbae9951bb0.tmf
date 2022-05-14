@@ -1,0 +1,75 @@
+// PDB:  qcdiagrouter850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+6a88a87c-8e27-3103-33a0-ecbae9951bb0 QCDiagRouter // SRC=DiagRouterSerial.c MJ= MN=
+#typev DiagRouterSerial_c263 20 "%0DiagRouterTransportFreeWrkItem: WdfRequestSend failed, status = %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterTransportFreeWrkItem
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSerial_c257 19 "%0DiagRouterTransportFreeWrkItem: WdfIoTargetFormatRequestForRead failed, status = %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterTransportFreeWrkItem
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSerial_c426 27 "%0DiagRouterTransportWriteCompletion: Write Request Reuse Failed, %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterTransportWriteCompletion
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSerial_c422 26 "%0DiagRouterTransportWriteCompletion: Write status Failed, %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterTransportWriteCompletion
+{
+Params->IoStatus.Status, ItemLong -- 10
+}
+#typev DiagRouterSerial_c351 23 "%0%!FUNC!: invalid port %10!d! or func %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterTransportWriteCompletionRoutineIPC
+{
+pReadReqContext->port_idx, ItemLong -- 10
+pReadReqContext->func_idx, ItemLong -- 11
+}
+#typev DiagRouterSerial_c384 25 "%0%!FUNC!: Free Read Request port = %10!d!, func idx = %11!d!, request = %12!p! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterTransportWriteCompletionRoutineIPC
+{
+pReadReqContext->port_idx, ItemLong -- 10
+pReadReqContext->func_idx, ItemLong -- 11
+Req, ItemPtr -- 12
+}
+#typev DiagRouterSerial_c361 24 "%0%!FUNC!: Write Req Status: failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterTransportWriteCompletionRoutineIPC
+{
+}
+#typev DiagRouterSerial_c123 11 "%0DiagTransportCreateRx: Failed to create Work Item" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagTransportCreateRx
+{
+}
+#typev DiagRouterSerial_c133 12 "%0DiagTransportCreateRx: WdfRequestCreate failed for Transport Rx, status = %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagTransportCreateRx
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSerial_c140 13 "%0DiagTransportCreateRx: WdfMemoryCreatePreallocated failed for Transport Rx, status = %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagTransportCreateRx
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSerial_c149 14 "%0DiagTransportCreateRx: WdfRequestCreate failed for Transport Write, status = %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagTransportCreateRx
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSerial_c163 15 "%0DiagTransportCreateRx: WdfRequestCreate failed for forwarding to peripheral, status = %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagTransportCreateRx
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSerial_c172 16 "%0DiagTransportCreateRx: WdfMemoryCreate failed, status = %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagTransportCreateRx
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSerial_c180 17 "%0DiagTransportCreateRx: WdfMemoryCreate failed, status = %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagTransportCreateRx
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSerial_c192 18 "%0DiagTransportCreateRx: WdfMemoryCreate failed, status = %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagTransportCreateRx
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSerial_c86 10 "%0DiagTransportQueueRx: Read Request Sent successfully to Serial transport " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Transport FUNC=DiagTransportQueueRx
+{
+}
+#typev DiagRouterSerial_c307 22 "%0DiagRouter: TransportReadCompletionRoutine: Received bad packet? size = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=TransportReadCompletionRoutine
+{
+(UINT32)(pWrkContext->RxItemSize), ItemLong -- 10
+}
+#typev DiagRouterSerial_c293 21 "%0TransportReadCompletionRoutine: Status Not Success %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=TransportReadCompletionRoutine
+{
+status, ItemLong -- 10
+}

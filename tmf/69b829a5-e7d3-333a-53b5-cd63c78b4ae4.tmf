@@ -1,0 +1,47 @@
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+69b829a5-e7d3-333a-53b5-cd63c78b4ae4 10.4 // SRC=QcUsbFnPower.c MJ= MN=
+#typev QcUsbFnPower_c209 21 "%0InIdleProcess = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PNP FUNC=QcUsbFnPowerAllowIdle
+{
+pDeviceContext->InIdleProcess, ItemLong -- 10
+}
+#typev QcUsbFnPower_c204 20 "%0WdfDeviceStopIdle failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CommonDebug FUNC=QcUsbFnPowerAllowIdle
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnPower_c192 19 "%0InIdleProcess = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PNP FUNC=QcUsbFnPowerAllowIdle
+{
+pDeviceContext->InIdleProcess, ItemLong -- 10
+}
+#typev QcUsbFnPower_c74 12 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnPowerSetPowerPolicy
+{
+}
+#typev QcUsbFnPower_c46 11 "%0WdfDeviceAssignSxWakeSettings failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_POWER FUNC=QcUsbFnPowerSetPowerPolicy
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnPower_c34 10 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnPowerSetPowerPolicy
+{
+}
+#typev QcUsbFnPower_c99 15 "%0<--UsbFnPowerDeviceD0Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PNP FUNC=UsbFnPowerDeviceD0Entry
+{
+}
+#typev QcUsbFnPower_c96 14 "%0QcUsbFnCommonEventHandler failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_EVENT FUNC=UsbFnPowerDeviceD0Entry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnPower_c90 13 "%0-->UsbFnPowerDeviceD0Entry - coming from %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PNP FUNC=UsbFnPowerDeviceD0Entry
+{
+UsbFnPowerPrintPowerString(PreviousState), ItemString -- 10
+}
+#typev QcUsbFnPower_c126 18 "%0<--UsbFnPowerDeviceD0Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PNP FUNC=UsbFnPowerDeviceD0Exit
+{
+}
+#typev QcUsbFnPower_c123 17 "%0QcUsbFnCommonEventHandler failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_EVENT FUNC=UsbFnPowerDeviceD0Exit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnPower_c117 16 "%0-->UsbFnPowerDeviceD0Exit - moving to %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PNP FUNC=UsbFnPowerDeviceD0Exit
+{
+UsbFnPowerPrintPowerString(TargetState), ItemString -- 10
+}

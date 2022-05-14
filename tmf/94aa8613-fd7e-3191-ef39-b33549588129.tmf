@@ -1,0 +1,607 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+94aa8613-fd7e-3191-ef39-b33549588129 MBB // SRC=MPDSDQmi.c MJ= MN=
+#typev MPSubPhoneState_c2954 62 "%0%!FUNC!: ERROR, received pDsdClient = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_IMSSWFCPreferenceChange
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDSDQmi_c2083 125 "%0<%10!s!|sub#%11!d!> %!FUNC!: result=0x%12!x!, error=0x%13!x!. roaming_status_valid = %14!d!, roaming_status = %15!d!, technology_valid = %16!d!, technology = %17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetCurrentRoamingInfoResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+pResp->roaming_status_valid, ItemLong -- 14
+pResp->roaming_status, ItemLong -- 15
+pResp->technology_valid, ItemLong -- 16
+pResp->technology, ItemLong -- 17
+}
+#typev MPDSDQmi_c2068 124 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR:: result=0x%12!x!, error=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetCurrentRoamingInfoResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPDSDQmi_c1024 62 "%0%!FUNC!: ERROR, received pDsdClient = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_GetDataMediumPreference
+{
+}
+#typev MPDSDQmi_c1067 66 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, response failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_GetDataSettingsReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1063 65 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, SendQMIRequest failed 0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_GetDataSettingsReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+#typev MPDSDQmi_c1051 64 "%0<%10!s!|sub#%11!d!> <--%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetDataSettingsReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1044 63 "%0<%10!s!|sub#%11!d!> <--%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetDataSettingsReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1212 72 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, response failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetHPLMNListReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1206 71 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, SendQMIRequest failed 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetHPLMNListReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+#typev MPDSDQmi_c1192 70 "%0<%10!s!|sub#%11!d!> %!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetHPLMNListReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1184 69 "%0<%10!s!|sub#%11!d!> %!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetHPLMNListReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1294 78 "%0%!FUNC!: Row %10!u! : MCC = %11!s!, MNC = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetHPLMNListResp
+{
+i, ItemLong -- 10
+pResp->excp_hplmn_list[i].mcc, ItemString -- 11
+pResp->excp_hplmn_list[i].mnc, ItemString -- 12
+}
+#typev MPDSDQmi_c1289 77 "%0<%10!s!|sub#%11!d!> %!FUNC!: pResp->excp_hplmn_list_len = 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetHPLMNListResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->excp_hplmn_list_len, ItemLong -- 12
+}
+#typev MPDSDQmi_c1279 76 "%0%!FUNC!: Row %10!u!: MCC = %11!s!, MNC = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetHPLMNListResp
+{
+i, ItemLong -- 10
+pResp->hplmn_list[i].mcc, ItemString -- 11
+pResp->hplmn_list[i].mnc, ItemString -- 12
+}
+#typev MPDSDQmi_c1274 75 "%0<%10!s!|sub#%11!d!> %!FUNC!: pResp->hplmn_list_len = 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetHPLMNListResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->hplmn_list_len, ItemLong -- 12
+}
+#typev MPDSDQmi_c1265 74 "%0<%10!s!|sub#%11!d!> %!FUNC!: pResp->hplmn_list_valid = %12!s!, pResp->excp_hplmn_list_valid = %13!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetHPLMNListResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->hplmn_list_valid, ItemListLong(false,true) -- 12
+pResp->excp_hplmn_list_valid, ItemListLong(false,true) -- 13
+}
+#typev MPDSDQmi_c1251 73 "%0<%10!s!|sub#%11!d!> %!FUNC!:  result=0x%12!x!, error=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetHPLMNListResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPDSDQmi_c690 39 "%0<%10!s!|sub#%11!d!>%!FUNC!: STATUS = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetSystemStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemNTSTATUS -- 12
+}
+#typev MPDSDQmi_c682 38 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_GetSystemStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c675 37 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_GetSystemStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c670 36 "%0<%10!s!|sub#%11!d!>%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_GetSystemStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c666 35 "%0%!FUNC!: ERROR, pAdapter = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_GetSystemStatusReq
+{
+}
+#typev MPDSDQmi_c1567 93 "%0(pAdapter|| pSubPhoneInfo || pDsdClient) = NULL." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+}
+#typev MPDSDQmi_c1873 109 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, DataClassChange callback not called. Either DSD client or callback function might be NULL!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1855 108 "%0<%10!s!|sub#%11!d!> %!FUNC!: suppress NDIS_STATUS_WWAN_PACKET_SERVICE notification, pAdapter->DeviceContextState=%12!d!, PacketServiceState=%13!d! CurrentDataClass=%14!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->DeviceContextState, ItemLong -- 12
+PacketServiceState, ItemLong -- 13
+CurrentDataClass, ItemLong -- 14
+}
+#typev MPDSDQmi_c1850 107 "%0<%10!s!|sub#%11!d!> %!FUNC!: PacketServiceState=%12!d!, CurrentCellularClass = %13!d!, CurrentDataClass = 0x%14!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+PacketServiceState, ItemLong -- 12
+CurrentCellularClass, ItemLong -- 13
+CurrentDataClass, ItemLong -- 14
+}
+#typev MPDSDQmi_c1831 106 "%0<%10!s!|sub#%11!d!> %!FUNC!: Moving out of EHRPD and sending SNI for IPv6. ReportedIPType = %12!d! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+WwanIPTypeIpv4v6 == pAdapter->ReportedIPType, ItemLong -- 12
+}
+#typev MPDSDQmi_c1819 105 "%0<%10!s!|sub#%11!d!> %!FUNC!: Moving into EHRPD and setting  sendLinkStateNotificationEHRPD for media bounce." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1789 104 "%0<%10!s!|sub#%11!d!> %!FUNC!: no longer have service, clearing LTE Attach APN and IP type." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1655 97 "%0<%10!s!|sub#%11!d!> %!FUNC! ERROR! unsupported rat_value 3GPP to determine currentDataClass." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1726 99 "%0<%10!s!|sub#%11!d!> %!FUNC! Error: Warining invalid or unclassified So mask so_mask = 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+(UINT)SOMask, ItemLong -- 12
+}
+#typev MPDSDQmi_c1712 98 "%0<%10!s!|sub#%11!d!> %!FUNC! Error: Warining invalid or unclassified So mask so_mask = 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+(UINT)SOMask, ItemLong -- 12
+}
+#typev MPDSDQmi_c1734 100 "%0<%10!s!|sub#%11!d!> %!FUNC! ERROR! unsupported rat_value 3GPP2 to determine currentDataClass." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1782 103 "%0<%10!s!|sub#%11!d!> %!FUNC!: requesting attach APN name." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1780 102 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, pDsdQmiClient=NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1744 101 "%0<%10!s!|sub#%11!d!> %!FUNC! ERROR! unsupported Technology to determine currentDataClass." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1586 96 "%0<%10!s!|sub#%11!d!> %!FUNC! rat_mask %12!d! is DONT_CARE or NULL_BEARER, skipping this network." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+i, ItemLong -- 12
+}
+#typev MPDSDQmi_c1580 95 "%0<%10!s!|sub#%11!d!> %!FUNC! network = %12!d!, rat_mask = 0x%13!x!, so_mask = 0x%14!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+NetworkTechnology, ItemLong -- 12
+RATValue, ItemLong -- 13
+(UINT)SOMask, ItemLong -- 14
+}
+#typev MPDSDQmi_c1573 94 "%0<%10!s!|sub#%11!d!> %!FUNC! network_info_len = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_HandleCurrentDataSystemStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+uNetworkInfoLength, ItemLong -- 12
+}
+#typev MPDSDQmi_c269 13 "%0<%10!s!|sub#%11!d!> %!FUNC!: %12!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_IndicationRegisterReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemNTSTATUS -- 12
+}
+#typev MPDSDQmi_c251 12 "%0%!FUNC!: ERROR: STATUS_INVALID_PARAMETER." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_IndicationRegisterReq
+{
+}
+#typev MPDSDQmi_c217 10 "%0%!FUNC!: ERROR: STATUS_INVALID_PARAMETER." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_IndicationRegisterResp
+{
+}
+#typev MPDSDQmi_c235 11 "%0<%10!s!|sub#%11!d!> %!FUNC!: %12!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_IndicationRegisterResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+*pStatus, ItemNTSTATUS -- 12
+}
+#typev MPDSDQmi_c1395 84 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, response failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_NotifyDataSettingReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1364 81 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, unknown value of DataMediumPreference=0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_NotifyDataSettingReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pDataConnectionSettings->MediumPreference, ItemLong -- 12
+}
+#typev MPDSDQmi_c1391 83 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, SendQMIRequest failed 0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_NotifyDataSettingReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDSDQmi_c1380 82 "%0<%10!s!|sub#%11!d!> %!FUNC!: DataMediumPreference=0x%12!x!, rat_preference=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_NotifyDataSettingReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pDataConnectionSettings->MediumPreference, ItemLong -- 12
+pReq->rat_preference, ItemLong -- 13
+}
+#typev MPDSDQmi_c1333 80 "%0<%10!s!|sub#%11!d!> %!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_NotifyDataSettingReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1326 79 "%0<%10!s!|sub#%11!d!> %!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_NotifyDataSettingReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1975 115 "%0%!FUNC!: ERROR:: pAdapter == NULL || pBuf == NULL || pAdapter->pSubPhoneInfo == NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_RoamingStatusChangeInd
+{
+}
+#typev MPDSDQmi_c2006 120 "%0<%10!s!|sub#%11!d!> %!FUNC!: roaming_status_valid = %12!d!, roaming_status = %13!d!, technology = %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_RoamingStatusChangeInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pRoamingStatusChangeInd->roaming_status_valid, ItemLong -- 12
+pRoamingStatusChangeInd->roaming_status, ItemLong -- 13
+pRoamingStatusChangeInd->technology, ItemLong -- 14
+}
+#typev MPDSDQmi_c2002 119 "%0<%10!s!|sub#%11!d!> %!FUNC!: - Decoding failed. status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_RoamingStatusChangeInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemNTSTATUS -- 12
+}
+#typev MPDSDQmi_c1991 118 "%0<%10!s!|sub#%11!d!> %!FUNC!: ExAllocatePoolWithTag FAILED" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_RoamingStatusChangeInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1984 117 "%0%!FUNC!: ERROR:: NULL == pDsdClient." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_RoamingStatusChangeInd
+{
+}
+#typev MPDSDQmi_c1979 116 "%0<%10!s!|sub#%11!d!> %!FUNC!: - BEGIN." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_RoamingStatusChangeInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c777 46 "%0<%10!s!|sub#%11!d!>%!FUNC!: STATUS = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_SetBindSubscriptionReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemNTSTATUS -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDSDQmi_c768 45 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, pAdapter = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_SetBindSubscriptionReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c739 44 "%0<%10!s!|sub#%11!d!>%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_SetBindSubscriptionReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c735 43 "%0%!FUNC!: ERROR, pAdapter = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_SetBindSubscriptionReq
+{
+}
+#typev MPDSDQmi_c1452 86 "%0%!FUNC!: Error: pAdapter/pRoamingFilterSettings = NULL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_SetHPLMNListReq
+{
+}
+#typev MPDSDQmi_c1499 91 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, response failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_SetHPLMNListReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1494 90 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, SendQMIRequest failed 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_SetHPLMNListReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDSDQmi_c1474 89 "%0<%10!s!|sub#%11!d!> %!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_SetHPLMNListReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1466 88 "%0<%10!s!|sub#%11!d!> %!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_SetHPLMNListReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1458 87 "%0<%10!s!|sub#%11!d!> %!FUNC!: no valid HPLMN List, abort DSD msg" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_SetHPLMNListReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c989 59 "%0<%10!s!|sub#%11!d!>%!FUNC!: STATUS = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_SystemStatusChangeReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemNTSTATUS -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDSDQmi_c978 58 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_SystemStatusChangeReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c971 57 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_SystemStatusChangeReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c966 56 "%0<%10!s!|sub#%11!d!>%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDSD_SystemStatusChangeReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c962 55 "%0%!FUNC!: ERROR, pAdapter = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_SystemStatusChangeReq
+{
+}
+#typev MPDSDQmi_c1954 114 "%0<%10!s!|sub#%11!d!> %!FUNC!: - END." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_SystemStatusInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1945 113 "%0<%10!s!|sub#%11!d!> %!FUNC!: avail_sys_valid = %12!d!, len = %13!d!. apn_avail_sys_info_valid = %14!d!, apn_avail_sys_info_len = %15!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_SystemStatusInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pSysStatusInd->avail_sys_valid, ItemLong -- 12
+pSysStatusInd->avail_sys_len, ItemLong -- 13
+pSysStatusInd->apn_avail_sys_info_valid, ItemLong -- 14
+pSysStatusInd->apn_avail_sys_info_len, ItemLong -- 15
+}
+#typev MPDSDQmi_c1941 112 "%0<%10!s!|sub#%11!d!> %!FUNC!: - Decoding failed. status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_SystemStatusInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemNTSTATUS -- 12
+}
+#typev MPDSDQmi_c1930 111 "%0<%10!s!|sub#%11!d!> %!FUNC!: ExAllocatePoolWithTag FAILED" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_SystemStatusInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c1918 110 "%0<%10!s!|sub#%11!d!> %!FUNC!: - BEGIN." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDSD_SystemStatusInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c385 20 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_CleanDSDClientContext
+{
+subId, ItemLong -- 10
+}
+#typev MPDSDQmi_c1156 68 "%0<%10!s!|sub#%11!d!> %!FUNC!: rat_preference=0x%12!x!, DataMediumPreference=0x%13!x!, data_service_switch = %14!s!, data_service_roaming_switch = %15!s!, wifi_switch = %16!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_DSDGetDataSettingsResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->rat_preference, ItemLong -- 12
+pClient->DataMediumPreference, ItemLong -- 13
+pResp->data_service_switch, ItemListLong(false,true) -- 14
+pResp->data_service_roaming_switch, ItemListLong(false,true) -- 15
+pResp->wifi_switch, ItemListLong(false,true) -- 16
+}
+#typev MPDSDQmi_c1106 67 "%0<%10!s!|sub#%11!d!> %!FUNC!: result=0x%12!x!, error=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_DSDGetDataSettingsResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPDSDQmi_c354 19 "%0<%10!s!|sub#%11!d!>%!FUNC!: status= %12!s! (0x%13!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitDSDClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+ntStatus, ItemNTSTATUS -- 12
+ntStatus, ItemLong -- 13
+}
+#typev MPDSDQmi_c345 18 "%0<%10!s!|sub#%11!d!>%!FUNC!: MPDSD_SetBindSubscriptionReq FAILED." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitDSDClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c334 17 "%0<%10!s!|sub#%11!d!> %!FUNC!: MPQCCI_InitClientFromServiceObj FAILED." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitDSDClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c323 16 "%0<%10!s!|sub#%11!d!> %!FUNC!: WdfWaitLockCreate FAILED, status=0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitDSDClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPDSDQmi_c303 15 "%0<%10!s!|sub#%11!d!> %!FUNC!: ExAllocatePoolWithTag FAILED." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitDSDClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c294 14 "%0<sub#%10!d!> %!FUNC!:: HALTEX in progress." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitDSDClient
+{
+subscriptionId, ItemLong -- 10
+}
+#typev MPDSDQmi_c2127 126 "%0%!FUNC!: (%10!d!) processed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDIndication
+{
+uMsgId, ItemLong -- 10
+}
+#typev MPDSDQmi_c2380 132 "%0%!FUNC!: pQMI->uMsgId %10!u! processed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+pQMI->uMsgId, ItemLong -- 10
+}
+#typev MPDSDQmi_c2360 92 "%0<%10!s!|sub#%11!d!> %!FUNC!: result=0x%12!x!, error=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPDSDQmi_c2354 85 "%0<%10!s!|sub#%11!d!> %!FUNC!: result=0x%12!x!, error=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPDSDQmi_c2336 54 "%0%!FUNC!: END." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2336 53 "%0%!FUNC!: ERROR: Response failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2330 51 "%0%!FUNC!: END." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2330 50 "%0%!FUNC!: ERROR: Response failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2324 48 "%0%!FUNC!: Succeed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2324 47 "%0%!FUNC!: ERROR: Response failed. resp.result = 0x%10!x!, resp.error = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+pResp->resp.result, ItemLong -- 10
+pResp->resp.error, ItemLong -- 11
+}
+#typev MPDSDQmi_c2318 61 "%0%!FUNC!: END." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2318 60 "%0%!FUNC!: ERROR: Response failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2312 42 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR: system_status_valid != TRUE" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPDSDQmi_c2312 41 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, result=0x%12!x!, error=0x%13!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPDSDQmi_c2306 34 "%0%!FUNC!: END." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2306 33 "%0%!FUNC!: ERROR: Response failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2300 31 "%0%!FUNC!: END." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2300 30 "%0%!FUNC!: ERROR: Response failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2294 28 "%0%!FUNC!: END." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2294 27 "%0%!FUNC!: ERROR: Response failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2288 25 "%0%!FUNC!: END." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2288 24 "%0%!FUNC!: ERROR: Response failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2280 131 "%0%!FUNC!: ERROR:: pAdapter == NULL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c2273 130 "%0%!FUNC!: ERROR:: pQMI == NULL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDSDResponse
+{
+}
+#typev MPDSDQmi_c417 22 "%0%!FUNC!: Release success!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ReleaseDSDClient
+{
+}
+#typev MPDSDQmi_c414 20 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ReleaseDSDClient
+{
+subId, ItemLong -- 10
+}
+#typev MPDSDQmi_c409 21 "%0%!FUNC!: error releasing client id : 0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ReleaseDSDClient
+{
+qmiErr, ItemLong -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c1789 123 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR:: %12!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_SendUpdatedRegisterState
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemNTSTATUS -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c1789 122 "%0<%10!s!|sub#%11!d!> %!FUNC!: %12!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_SendUpdatedRegisterState
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemNTSTATUS -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPQCCI_c369 128 "%0%!FUNC!: ERROR, Invalid parm: pnReqLen 0x%10!x!, pnRespLen 0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQCCI_GetRequestInfo
+{
+(UINT)pnReqLen, ItemLong -- 10
+(UINT)pnRespLen, ItemLong -- 11
+}
+#typev MPQCCI_c369 129 "%0%!FUNC!: 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQCCI_GetRequestInfo
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPQCCI_c369 127 "%0%!FUNC!: MsgId 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQCCI_GetRequestInfo
+{
+uMsgId, ItemLong -- 10
+}

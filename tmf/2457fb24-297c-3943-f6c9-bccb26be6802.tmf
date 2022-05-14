@@ -1,0 +1,248 @@
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+2457fb24-297c-3943-f6c9-bccb26be6802 10.4 // SRC=MPWork.c MJ= MN=
+#typev MPWork_c714 32 "%0<%10!s!> <--%!FUNC!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=FreeWorkInputList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c684 31 "%0<%10!s!> -->%!FUNC!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=FreeWorkInputList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c507 26 "%0<%10!s!> <--MPQCCI_DequeueQMI.  %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQCCI_DequeueQMI
+{
+pAdapter->PortName, ItemString -- 10
+KeGetCurrentIrql(), ItemListByte(Low,APC,DPC) -- 11
+}
+#typev MPWork_c478 25 "%0<%10!s!> <--MPQCCI_DequeueQMI: sync request, no need to dequeue qmi." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQCCI_DequeueQMI
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c473 24 "%0<%10!s!> -->MPQCCI_DequeueQMI pOID=0x%11!p! QMIType=0x%12!x! MsgId =0x%13!x! sync=%14!d!. %15!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQCCI_DequeueQMI
+{
+pAdapter->PortName, ItemString -- 10
+pOID, ItemPtr -- 11
+pQMI->uQMIType, ItemLong -- 12
+pQMI->uMsgId, ItemLong -- 13
+pQMI->bSyncMsg, ItemLong -- 14
+KeGetCurrentIrql(), ItemListByte(Low,APC,DPC) -- 15
+}
+#typev MPWork_c1024 52 "%0<%10!s!> hWorkThreadHandle close failed - 0x%11!x!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPWork_CancelWorkThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPWork_c973 51 "%0<%10!s!> Work cxl in pro." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPWork_CancelWorkThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c960 50 "%0<%10!s!> Work Cxl: wrong IRQL." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPWork_CancelWorkThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c780 39 "%0<%10!s!> <-- %!FUNC! QMIInitialized=%11!d!, status=0x%12!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPWork_InitQMIClients
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->QMIInitialized, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev MPWork_c762 38 "%0<%10!s!> %!FUNC! MPQMI_InitDmsClient failed" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPWork_InitQMIClients
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWork_c753 37 "%0<%10!s!> %!FUNC! MPQMI_InitWdsClients failed" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPWork_InitQMIClients
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c744 36 "%0<%10!s!> --> %!FUNC! irql=0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPWork_InitQMIClients
+{
+pAdapter->PortName, ItemString -- 10
+irql, ItemLong -- 11
+}
+#typev MPWork_c863 45 "%0<%10!s!> WorkThread up/resumed." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPWork_StartWorkThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c888 46 "%0<%10!s!> WorkTh failure." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPWork_StartWorkThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c943 49 "%0<%10!s!> Work handle=0x%11!p! thOb=0x%12!p!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPWork_StartWorkThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->hWorkThreadHandle, ItemPtr -- 11
+pAdapter->pWorkThread, ItemPtr -- 12
+}
+#typev MPWork_c928 48 "%0<%10!s!> Work ZwClose failed - 0x%11!x!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPWork_StartWorkThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPWork_c916 47 "%0<%10!s!> Work: ObReferenceObjectByHandle failed 0x%11!x!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPWork_StartWorkThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPWork_c852 44 "%0<%10!s!> %!FUNC! - wrong IRQL:%11!d!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPWork_StartWorkThread
+{
+pAdapter->PortName, ItemString -- 10
+KeGetCurrentIrql(), ItemLong -- 11
+}
+#typev MPWork_c1215 61 "%0<%10!s!> WORK_CANCEL." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPWork_WorkThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c1229 62 "%0<%10!s!> Work th: unexpected evt-0x%11!x!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPWork_WorkThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPWork_c1191 60 "%0<%10!s!> MPWork_WorkThread: Sending Wake up IOCTL to AMSS ." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPWork_WorkThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c1184 59 "%0<%10!s!> MPWork_WorkThread: linklocal is in D2 State and bSendWakeReasonIndication = FASLE ." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPWork_WorkThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c1153 58 "%0<%10!s!> MPWork_WorkThread:  pAdapter->QMIInitialized=%11!d!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPWork_WorkThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->QMIInitialized, ItemLong -- 11
+}
+#typev MPWork_c1138 57 "%0<%10!s!> MPMAIN_InitializeQMI returned FALSE." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPWork_WorkThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c1122 56 "%0<%10!s!> WORK_MSSR." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPWork_WorkThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c1097 55 "%0<%10!s!> MPWork_WorkThread: Thread started." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPWork_WorkThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c1075 54 "%0<%10!s!> Work th: NO_MEM." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPWork_WorkThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c1054 53 "%0<%10!s!> Work th: wrong IRQL." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_CRITICAL FUNC=MPWork_WorkThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c636 30 "%0<%10!s!> %!FUNC! - Memory allocation failed!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=PostWorkInput
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c235 15 "%0<%10!s!> -->ProcessDeviceWakeup. Sending WakeReason Ind for %11!d! ." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=ProcessDeviceWakeup
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->AOAC.wakeReason, ItemLong -- 11
+}
+#typev MPWork_c194 14 "%0<%10!s!> -->ProcessDeviceWakeupOnWOLPacket. Sending WakeReason Indication" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=ProcessDeviceWakeupOnWOLPacket
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c177 13 "%0<%10!s!> -->ProcessDeviceWakeupOnWOLPacket. Pattern Matches for id %11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=ProcessDeviceWakeupOnWOLPacket
+{
+pAdapter->PortName, ItemString -- 10
+pWakePacket->PatternId, ItemLong -- 11
+}
+#typev MPWork_c152 12 "%0<%10!s!> -->ProcessDeviceWakeupOnWOLPacket. Pattern Offset Out Of Range %11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=ProcessDeviceWakeupOnWOLPacket
+{
+pAdapter->PortName, ItemString -- 10
+PatternOffset, ItemLong -- 11
+}
+#typev MPWork_c74 11 "%0ProcessDeviceWakeupOnWOLPacket - Memory allocation failed for %10!d! ." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=ProcessDeviceWakeupOnWOLPacket
+{
+size, ItemLong -- 10
+}
+#typev MPWork_c63 10 "%0ProcessDeviceWakeupOnWOLPacket function called ." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=ProcessDeviceWakeupOnWOLPacket
+{
+}
+#typev MPWork_c835 43 "%0<%10!s!> <--%!FUNC!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessMssrEvent
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWork_c808 42 "%0%!FUNC!: DataIoSsrEvent Set" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessMssrEvent
+{
+}
+#typev MPWork_c800 35 "%0%!FUNC!: error releasing qmi dms clients." //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessMssrEvent
+{
+}
+#typev MPWork_c800 34 "%0%!FUNC!: error releasing qmi Embms wds clients." //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessMssrEvent
+{
+}
+#typev MPWork_c800 33 "%0%!FUNC!: error releasing qmi wds clients." //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessMssrEvent
+{
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWork_c792 41 "%0%!FUNC!: SSR handling - releasing qmi clients." //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessMssrEvent
+{
+}
+#typev MPWork_c789 40 "%0<%10!s!> -->%!FUNC!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessMssrEvent
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c440 23 "%0<%10!s!> <--ProcessOidRequest" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=ProcessOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c422 22 "%0<%10!s!> <--ProcessOidRequest: OIDToQMI returned error %11!x!. OID back to free." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWork_c404 21 "%0<%10!s!> -->ProcessOidRequest." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c568 29 "%0<%10!s!> <--ProcessQmiMessage.  %11!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessQmiMessage
+{
+pAdapter->PortName, ItemString -- 10
+KeGetCurrentIrql(), ItemListByte(Low,APC,DPC) -- 11
+}
+#typev MPWork_c560 28 "%0<%10!s!> MPQMI_ProcessInboundQMIResponse: QMIQueue, OID pending (0x%11!p!, 0x%12!x!) nBusyOID=%13!d!.  %14!s!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessQmiMessage
+{
+pAdapter->PortName, ItemString -- 10
+pOID->OidReference, ItemPtr -- 11
+pOID->Oid, ItemLong -- 12
+pAdapter->nBusyOID, ItemLong -- 13
+KeGetCurrentIrql(), ItemListByte(Low,APC,DPC) -- 14
+}
+#typev MPWork_c517 27 "%0<%10!s!> -->ProcessQmiMessage: pQMICtrlMsg->bIndication=%11!d!.  %12!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessQmiMessage
+{
+pAdapter->PortName, ItemString -- 10
+pQMICtrlMsg->bIndication, ItemLong -- 11
+KeGetCurrentIrql(), ItemListByte(Low,APC,DPC) -- 12
+}
+#typev MPWork_c364 20 "%0<%10!s!> MP_ProcessWorkInputList: linklocal is in D0 State. Calling Process Device Wakeup " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=ProcessWorkInputList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c353 19 "%0<%10!s!> <-- MP_ProcessWorkInputList: processed %11!d! items." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=ProcessWorkInputList
+{
+pAdapter->PortName, ItemString -- 10
+loop, ItemLong -- 11
+}
+#typev MPWork_c336 18 "%0<%10!s!> %!FUNC! Invalid input type." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=ProcessWorkInputList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWork_c325 17 "%0<%10!s!> %!FUNC!: Device Wakeup Event received ." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=ProcessWorkInputList
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWork_c298 16 "%0<%10!s!> -->MP_ProcessWorkInputList." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=ProcessWorkInputList
+{
+pAdapter->PortName, ItemString -- 10
+}

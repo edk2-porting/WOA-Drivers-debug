@@ -1,0 +1,186 @@
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+0f93d166-1889-320f-f80b-cfccbc93d7e5 qcgpi // SRC=gpi_threads.c MJ= MN=
+#typev gpi_threads_c491 48 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=gpi_worker_thread
+{
+}
+#typev gpi_threads_c479 47 "%0 [%!FUNC!]Terminating GPI thread!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=gpi_worker_thread
+{
+}
+#typev gpi_threads_c475 46 "%0 [%!FUNC!]GPI THREAD State: %10!d!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=gpi_worker_thread
+{
+gpi_thread->state, ItemLong -- 10
+}
+#typev gpi_threads_c471 45 "%0 [%!FUNC!]GPI THREAD RUNNING" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=gpi_worker_thread
+{
+}
+#typev gpi_threads_c463 44 "%0 [%!FUNC!]GPI Thread getting terminated" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=gpi_worker_thread
+{
+}
+#typev gpi_threads_c452 43 "%0 [%!FUNC!]GPI Thread got event (state: %10!d!), clearing Event" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=gpi_worker_thread
+{
+gpi_thread->state, ItemLong -- 10
+}
+#typev gpi_threads_c441 42 "%0 [%!FUNC!]Unexpected signal!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=gpi_worker_thread
+{
+}
+#typev gpi_threads_c437 41 "%0 [%!FUNC!]GPI Thread Waiting!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=gpi_worker_thread
+{
+}
+#typev gpi_threads_c423 40 "%0 [%!FUNC!]ERROR - bad parameters, quitting" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=gpi_worker_thread
+{
+}
+#typev gpi_threads_c419 39 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=gpi_worker_thread
+{
+}
+#typev gpi_threads_c376 35 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=handle_gpi_evts
+{
+}
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev gpi_threads_c370 34 "%0 [%!FUNC!]evt.dword_0: 0x%10!x!, evt.dword_1: 0x%11!x!, evt.dword_2: 0x%12!x!, evt.ctrl: 0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_gpi_evts
+{
+evt.dword_0, ItemLong -- 10
+evt.dword_1, ItemLong -- 11
+evt.dword_2, ItemLong -- 12
+evt.ctrl, ItemLong -- 13
+}
+#typev gpi_threads_c360 33 "%0 [%!FUNC!]WARNING -  ISR with no events!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_gpi_evts
+{
+}
+#typev gpi_threads_c345 32 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=handle_gpi_evts
+{
+}
+#typev gpi_threads_c201 20 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=handle_helper_evt
+{
+}
+#typev gpi_threads_c199 19 "%0 [%!FUNC!]gpii ID: %10!d! GLOB_EE/GENERAL, Invoked client callback" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_helper_evt
+{
+gpii->id, ItemLong -- 10
+}
+#typev gpi_threads_c69 11 "%0 [%!FUNC!]gpii ID: %10!d!, chan: %11!d!, new channel action: GPI_IRQ_CH_CTRL, state: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_helper_evt
+{
+gpii->id, ItemLong -- 10
+chan, ItemLong -- 11
+state, ItemLong -- 12
+}
+#typev gpi_threads_c84 12 "%0 [%!FUNC!]gpii ID: %10!d! evt ring, new action: GPI_IRQ_EV_CTRL, state: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_helper_evt
+{
+gpii->id, ItemLong -- 10
+state, ItemLong -- 11
+}
+#typev gpi_threads_c180 18 "%0 [%!FUNC!]gpii ID: %10!d!, GPI_IRQ_GENERAL, GSI_MCS_STACK_OVRFLOW - Stack Overflow Error" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_helper_evt
+{
+gpii->id, ItemLong -- 10
+}
+#typev gpi_threads_c172 17 "%0 [%!FUNC!]gpii ID: %10!d!, GPI_IRQ_GENERAL, GSI_CMD_FIFO_OVRFLOW - Command Queue Overflow Error" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_helper_evt
+{
+gpii->id, ItemLong -- 10
+}
+#typev gpi_threads_c164 16 "%0 [%!FUNC!]gpii ID: %10!d!, GPI_IRQ_GENERAL, GSI_BUS_ERROR - Bus Error interrupt" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_helper_evt
+{
+gpii->id, ItemLong -- 10
+}
+#typev gpi_threads_c156 15 "%0 [%!FUNC!]gpii ID: %10!d!, GPI_IRQ_GENERAL, GSI_BREAK_POINT - MCS code break-point" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_helper_evt
+{
+gpii->id, ItemLong -- 10
+}
+#typev gpi_threads_c149 14 "%0 [%!FUNC!]gpii ID: %10!d!, new action: GPI_IRQ_GENERAL, LOCAL_EVT_INT_TYPE: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_helper_evt
+{
+gpii->id, ItemLong -- 10
+val, ItemLong -- 11
+}
+#typev gpi_threads_c140 13 "%0 [%!FUNC!]gpii ID: %10!d!, new action: GPI_IRQ_GLOB_EE, error: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_helper_evt
+{
+gpii->id, ItemLong -- 10
+err, ItemLong -- 11
+}
+#typev gpi_threads_c45 10 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=handle_helper_evt
+{
+}
+#typev gpi_threads_c331 31 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=handle_ring_evts
+{
+}
+#typev gpi_threads_c324 30 "%0 [%!FUNC!]gpii ID: %10!d!, chan: %11!d!, Invoked client callback" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_ring_evts
+{
+gpii->id, ItemLong -- 10
+chan, ItemLong -- 11
+}
+#typev gpi_threads_c275 28 "%0 [%!FUNC!]Transf_length: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_ring_evts
+{
+result.length, ItemLong -- 10
+}
+#typev gpi_threads_c299 29 "%0 [%!FUNC!]ERROR - default completion type: %10!d!, code: %11!d!, for chan: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_ring_evts
+{
+(UINT32)result.type, ItemLong -- 10
+(UINT32)result.code, ItemLong -- 11
+chan, ItemLong -- 12
+}
+#typev gpi_threads_c258 27 "%0 [%!FUNC!]Result chan: %10!d!, Type: %11!d!, Result Code: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_ring_evts
+{
+chan, ItemLong -- 10
+result.type, ItemLong -- 11
+result.code, ItemLong -- 12
+}
+#typev gpi_threads_c249 26 "%0 [%!FUNC!]gpii ID: %10!d!, local evt ring rp: 0x%11!I64x!, evt ring rp: 0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_ring_evts
+{
+gpii->id, ItemLong -- 10
+gpii->evt_ring_info.local_rp, ItemLongLongX -- 11
+rp, ItemLongLongX -- 12
+}
+#typev gpi_threads_c247 25 "%0 [%!FUNC!]Transfer evt for chan %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_ring_evts
+{
+chan, ItemLong -- 10
+}
+#typev gpi_threads_c243 24 "%0 [%!FUNC!]evt->ptr: 0x%10!I64x!, evt->dword_2: 0x%11!x!, evt->ctrl: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_ring_evts
+{
+(((UINT64)evt->dword_1 << 32) | evt->dword_0), ItemLongLongX -- 10
+evt->dword_2, ItemLong -- 11
+evt->ctrl, ItemLong -- 12
+}
+#typev gpi_threads_c229 23 "%0 [%!FUNC!]Event Ring %10!d! is empty" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_ring_evts
+{
+gpii->id, ItemLong -- 10
+}
+#typev gpi_threads_c223 22 "%0 [%!FUNC!]gpii ID: %10!d!, local evt ring rp: 0x%11!I64x!, evt ring rp: 0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=handle_ring_evts
+{
+gpii->id, ItemLong -- 10
+gpii->evt_ring_info.local_rp, ItemLongLongX -- 11
+rp, ItemLongLongX -- 12
+}
+#typev gpi_threads_c219 21 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=handle_ring_evts
+{
+}
+#typev gpi_threads_c522 51 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=spawn_threads
+{
+}
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev gpi_threads_c506 50 "%0 [%!FUNC!]ERROR - Could not spawn GPI thread, quitting!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=spawn_threads
+{
+}
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev gpi_threads_c501 49 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=spawn_threads
+{
+}
+#typev gpi_threads_c388 37 "%0 [%!FUNC!]GPI Thread Terminating" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=terminate_thread
+{
+}
+#typev gpi_threads_c387 36 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=terminate_thread
+{
+}
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev GpiOS_c475 55 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiDriverUnload
+{
+}
+#typev GpiOS_c475 54 "%0 [%!FUNC!]WARNING - Failed to terminate thread" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiDriverUnload
+{
+}
+#typev GpiOS_c475 53 "%0 [%!FUNC!]Thread terminated" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiDriverUnload
+{
+}
+#typev GpiOS_c475 52 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiDriverUnload
+{
+}

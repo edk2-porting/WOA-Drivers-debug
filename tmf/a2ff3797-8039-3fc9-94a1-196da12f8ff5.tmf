@@ -1,0 +1,42 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+a2ff3797-8039-3fc9-94a1-196da12f8ff5 WMRIL // SRC=WMRilResetModem.cpp MJ= MN=
+#typev WMRilResetModem_cpp203 17 "%0%!LEVEL! %!FUNC!:AMSS driver does not support IOCTL_REQ_MODEM_RESET. WMRIL does not support the interface versions supported by AMSS driver." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DMS FUNC=WMRil::ResetModemClass::Execute
+{
+}
+#typev WMRilResetModem_cpp249 19 "%0%!LEVEL! %!FUNC!:Successfully sent IOCTL_REQ_MODEM_RESET to AMSS driver" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DMS FUNC=WMRil::ResetModemClass::Execute
+{
+}
+#typev WMRilResetModem_cpp230 18 "%0%!LEVEL! %!FUNC!:IOCTL_REQ_MODEM_RESET failed, error = 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DMS FUNC=WMRil::ResetModemClass::Execute
+{
+dwError, ItemLong -- 10
+}
+#typev WMRilResetModem_cpp182 16 "%0%!LEVEL! %!FUNC!:IOCTL_AMSS_GET_INTERFACE_VERSION returned invalid High and Low interface versions" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DMS FUNC=WMRil::ResetModemClass::Execute
+{
+}
+#typev WMRilResetModem_cpp176 15 "%0%!LEVEL! %!FUNC!:IOCTL_AMSS_GET_INTERFACE_VERSION returned HighestInterfaceVersion = %10!u! and lowestInterfaceVersion = %11!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DMS FUNC=WMRil::ResetModemClass::Execute
+{
+pAMSSGetInterfaceVersionRsp->HighestInterfaceVersion, ItemLong -- 10
+pAMSSGetInterfaceVersionRsp->LowestInterfaceVersion, ItemLong -- 11
+}
+#typev WMRilResetModem_cpp163 14 "%0%!LEVEL! %!FUNC!:IOCTL_AMSS_GET_INTERFACE_VERSION failed, error = 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DMS FUNC=WMRil::ResetModemClass::Execute
+{
+dwError, ItemLong -- 10
+}
+#typev WMRilResetModem_cpp143 13 "%0%!LEVEL! %!FUNC!:Unable to get a handle to AMSS driver!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DMS FUNC=WMRil::ResetModemClass::Execute
+{
+}
+#typev WMRilResetModem_cpp125 12 "%0%!LEVEL! %!FUNC!:Calling MBB API MBBAPI_SetEquipmentState to clean up PDP context" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DMS FUNC=WMRil::ResetModemClass::Execute
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilResetModem_cpp75 10 "%0%!LEVEL! %!FUNC!:Buffer size %10!u! != sizeof(DWORD)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DMS FUNC=WMRil::ResetModemClass::InitParams
+{
+dwBufferLength, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilResetModem_cpp94 11 "%0%!LEVEL! %!FUNC!:WMRIL only supports normal modem reset at this time" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DMS FUNC=WMRil::ResetModemClass::ValidateParams
+{
+}

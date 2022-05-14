@@ -1,0 +1,172 @@
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+1e18dd02-529a-3701-db4a-6c9f6e4374ec src // SRC=dp_dpcd.c MJ= MN=
+#typev dp_dpcd_c592 11 "%0DP%10!d!: DPCD link training AUX intervals Clock recovery : %11!d! ms, Channel Equalization : %12!d! ms" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadSinkDPCDCap
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+psDPCDSinkCap->uCRTrainingIntervalInUs, ItemLong -- 11
+psDPCDSinkCap->uCETrainingIntervalInUs, ItemLong -- 12
+}
+#typev dp_dpcd_c586 10 "%0DP%10!d!: DPCD Caps - ver 1.%11!d!, max_lanes %12!d!, max_linkrate %13!d!Mhz" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadSinkDPCDCap
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+psDPCDSinkCap->eDPCDMajorRev-1, ItemLong -- 11
+psDPCDSinkCap->uMaxLaneCount, ItemLong -- 12
+psDPCDSinkCap->uMaxLinkRateInKhz/1000, ItemLong -- 13
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c1447 31 "%0DP%10!d!: DP_ReadSinkStatus: Read address(0x%11!x!) Failed, eStatus=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadSinkStatus
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c1530 35 "%0DP%10!d!: is_branch_device: %11!d!, downstream_port_type : %12!d!, num_sinks_connected %13!d!, uFlags = %14!d!, linkLost = %15!d!, DEVICE_SERIVCE_IRQ_VERCTOR = 0x%16!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadSinkStatus
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+(pDeviceCtx->sSinkDPCDCap.eDPCDCap & DP_DPCD_CAP_DWN_STRM_PORT_PRESENT) ? 1 : 0, ItemLong -- 11
+pDeviceCtx->sSinkDPCDCap.eDwnStreamPortType, ItemLong -- 12
+pDeviceCtx->uSinkCount, ItemLong -- 13
+pDeviceCtx->uFlags, ItemLong -- 14
+pDeviceCtx->bLinkLost, ItemLong -- 15
+pDeviceCtx->uDeviceServiceIRQVector, ItemLong -- 16
+}
+#typev dp_dpcd_c1516 34 "%0DP%10!d!: No Downstream Port changed and link has been setup" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadSinkStatus
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+}
+#typev dp_dpcd_c1504 33 "%0DP%10!d!: IRQ HPD IN detected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadSinkStatus
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+}
+#typev dp_dpcd_c1498 32 "%0DP%10!d!: Branch device HPD but no sink attached downstream" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadSinkStatus
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c1147 16 "%0DP%10!d!: Test Link Settings Rate=%11!d! PreEmphasis=0x%12!x!  Swing=0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestLinkSetting
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+pDeviceCtx->uLinkRateInKhz, ItemLong -- 11
+pDeviceCtx->uPreEmphasisLevel, ItemLong -- 12
+pDeviceCtx->uVoltageSwingLevel, ItemLong -- 13
+}
+#typev dp_dpcd_c1138 15 "%0DP%10!d!: DP_ReadTestRequest: Read address(0x%11!x!) Failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestLinkSetting
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c1120 14 "%0DP%10!d!: DP_ReadTestLinkSetting: Read address(0x%11!x!) Failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestLinkSetting
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c1078 13 "%0DP%10!d!: DP_ReadTestRequest: Read address(0x%11!x!) Failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestLinkSetting
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c1317 29 "%0DP%10!d!: Test Request = 0x%11!x! not handled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+pDeviceCtx->ePendingTestRequest, ItemLong -- 11
+}
+#typev dp_dpcd_c1311 28 "%0DP%10!d!: Test Request (Phy Pattern) = 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+pDeviceCtx->ePhyTestPattern, ItemLong -- 11
+}
+#typev dp_dpcd_c1304 27 "%0DP%10!d!: Test Request (Phy Pattern) = 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+pDeviceCtx->ePhyTestPattern, ItemLong -- 11
+}
+#typev dp_dpcd_c1299 26 "%0DP%10!d!: DP_ReadTestRequest: DP_ReadTestLinkSetting Failed, eStatus=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c1294 25 "%0DP%10!d!: DP_ReadTestRequest: Read address(0x%11!x!) Failed, eStatus=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c1263 24 "%0DP%10!d!: DP_ReadTestRequest: Unsupported color bit depth, uRegValue =0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+(uRegValue & DPCD_TEST_MISC_BIT_DEPTH_BMSK) >> DPCD_TEST_MISC_BIT_DEPTH_SHFT, ItemLong -- 11
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c1237 23 "%0DP%10!d!: DP_ReadTestRequest: Read address(0x%11!x!) Failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c1221 22 "%0DP%10!d!: DP_ReadTestRequest: Failed to get any display modes from EDID of Sink Device" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+}
+#typev dp_dpcd_c1208 21 "%0DP%10!d!: Test Request = 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+pDeviceCtx->ePendingTestRequest, ItemLong -- 11
+}
+#typev dp_dpcd_c1203 20 "%0DP%10!d!: DP_ReadTestRequest: Read address(0x%11!x!) Failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c1194 19 "%0DP%10!d!: Test IRQ detected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+}
+#typev dp_dpcd_c1187 18 "%0DP%10!d!: DP_ReadTestRequest: Read address(0x%11!x!) Failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c1173 17 "%0DP%10!d!: DP_ReadTestRequest: DP_ReadSinkStatus failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_ReadTestRequest
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c789 12 "%0DP%10!d!: DP_WriteSinkDPCDLink Setting Link Rate=%11!d!, Lane Number=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_WriteSinkDPCDLink
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+pDeviceCtx->uLinkRateInKhz, ItemLong -- 11
+pDeviceCtx->uNumLanes, ItemLong -- 12
+}
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dp_dpcd_c1407 30 "%0DP%10!d!: DP_WriteTestResponse: DP_Host_ClientWrite failed, eStatus=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DP_WriteTestResponse
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}

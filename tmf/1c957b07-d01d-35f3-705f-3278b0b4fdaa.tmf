@@ -1,0 +1,247 @@
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+1c957b07-d01d-35f3-705f-3278b0b4fdaa src // SRC=q6ad_q6atl_main.c MJ= MN=
+#typev q6ad_c505 38 "%0ADCM.ATL.Err.not initialized yet. q6ad_atl_dinit() is nop" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_deinit
+{
+}
+#typev q6ad_c505 37 "%0ADCM.ATL.q6ad_atl_dinit() called" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ATL_INFO FUNC=q6ad_deinit
+{
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_q6atl_main_c473 24 "%0ADCM.ATL.DO.q6ad_atl_apr_cb TOKEN:[0x%10!Ix!] OPCODE:[0x%11!Ix!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_LATENCY FLAGS=ADCM_ATL_LATENCY FUNC=q6ad_atl_apr_cb
+{
+packet->token, ItemPtr -- 10
+packet->opcode, ItemPtr -- 11
+}
+#typev q6ad_q6atl_main_c318 12 "%0ADCM.ATL.send(%10!08X!,%11!p!)|%12!08X!|<%13!04X!-%14!04X!><%15!04X!-%16!04X!>{%17!08X!}[%18!08X!],%19!d!,%20!08X!,accepted " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=q6ad_atl_apr_cb
+{
+0, ItemLong -- 10
+packet, ItemPtr -- 11
+0, ItemLong -- 12
+packet->src_addr, ItemLong -- 13
+packet->src_port, ItemLong -- 14
+packet->dst_addr, ItemLong -- 15
+packet->dst_port, ItemLong -- 16
+packet->token, ItemLong -- 17
+packet->opcode, ItemLong -- 18
+Q6AD_APRV2_PKT_GET_PACKET_BYTE_SIZE( packet->header ), ItemLong -- 19
+Q6AD_APRV2_PKT_GET_PAYLOAD(q6ad_aprv2_ibasic_evt_accepted_t. packet)->opcode, ItemLong -- 20
+}
+#typev q6ad_q6atl_main_c464 23 "%0ADCM.ATL.Err.apr_cb - error. no apr service found for dst_addr=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_apr_cb
+{
+packet->dst_addr, ItemPtr -- 10
+}
+#typev q6ad_q6atl_main_c450 21 "%0ADCM.ATL.Err.q6ad_atl_apr_cb - invalid rsp_len 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_apr_cb
+{
+rsp_len, ItemPtr -- 10
+}
+#typev q6ad_q6atl_main_c457 22 "%0ADCM.ATL.apr_cb - async Q6 msg for msg_type=%10!d!,dst_addr=0x%11!Ix!,dst_port=0x%12!Ix!,apr_token=0x%13!Ix!,opcode=0x%14!Ix!,rsp.rc=0x%15!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=q6ad_atl_apr_cb
+{
+msg_type, ItemLong -- 10
+packet->dst_addr, ItemPtr -- 11
+packet->dst_port, ItemPtr -- 12
+packet->token, ItemPtr -- 13
+packet->opcode, ItemPtr -- 14
+msg->u.rsp.status, ItemPtr -- 15
+}
+#typev q6ad_q6atl_main_c402 20 "%0ADCM.ATL.Err.q6ad_atl_apr_cb - invalid address 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_apr_cb
+{
+packet->dst_addr, ItemPtr -- 10
+}
+#typev q6ad_q6atl_main_c371 15 "%0ADCM.ATL.Err.q6ad_atl_apr_cb - invalid rsp_len 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_apr_cb
+{
+rsp_len, ItemPtr -- 10
+}
+#typev q6ad_q6atl_main_c390 19 "%0ADCM.ATL.q6ad_atl_apr_cb - find sync send trans_match (local_addr=0x%10!Ix!,local_port=0x%11!Ix!,cmd_token=0x%12!Ix!,rsp.rc=0x%13!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=q6ad_atl_apr_cb
+{
+trans_obj->addr, ItemPtr -- 10
+trans_obj->port, ItemPtr -- 11
+trans_obj->apr_token, ItemPtr -- 12
+msg->u.rsp.status, ItemPtr -- 13
+}
+#typev q6ad_q6atl_main_c387 18 "%0 :end " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=q6ad_atl_apr_cb
+{
+}
+#typev q6ad_q6atl_main_c378 16 "%0ADCM.ATL.q6ad_atl_apr_cb - q6 msg rsp cmd payload size:[0x%10!Ix!],payload:" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=q6ad_atl_apr_cb
+{
+rsp_len, ItemPtr -- 10
+}
+#typev q6ad_q6atl_main_c357 14 "%0ADCM.ATL.q6ad_atl_apr_cb - sync rsp msg detail: src_addr=0x%10!Ix!,src_port=0x%11!Ix!,dst_addr=0x%12!Ix!,dst_port=0x%13!Ix!,opcode=0x%14!Ix!,token=0x%15!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=q6ad_atl_apr_cb
+{
+packet->src_addr, ItemPtr -- 10
+packet->src_port, ItemPtr -- 11
+key.addr, ItemPtr -- 12
+key.port, ItemPtr -- 13
+packet->opcode, ItemPtr -- 14
+key.client_token, ItemPtr -- 15
+}
+#typev q6ad_q6atl_main_c330 13 "%0ADCM.ATL.send(%10!08X!,%11!p!)|%12!08X!|<%13!04X!-%14!04X!><%15!04X!-%16!04X!>{%17!08X!}[%18!08X!],%19!d!,%20!08X!,accepted " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=q6ad_atl_apr_cb
+{
+0, ItemLong -- 10
+packet, ItemPtr -- 11
+0, ItemLong -- 12
+packet->src_addr, ItemLong -- 13
+packet->src_port, ItemLong -- 14
+packet->dst_addr, ItemLong -- 15
+packet->dst_port, ItemLong -- 16
+packet->token, ItemLong -- 17
+packet->opcode, ItemLong -- 18
+Q6AD_APRV2_PKT_GET_PACKET_BYTE_SIZE( packet->header ), ItemLong -- 19
+Q6AD_APRV2_PKT_GET_PAYLOAD( q6ad_aprv2_ibasic_evt_accepted_t. packet )->opcode, ItemLong -- 20
+}
+#typev q6ad_q6atl_main_c305 11 "%0ADCM.ATL.send(%10!08X!,%11!p!)|%12!08X!|<%13!04X!-%14!04X!><%15!04X!-%16!04X!>{%17!08X!}[%18!08X!],%19!d!,%20!08X!,result=0x%21!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=q6ad_atl_apr_cb
+{
+0, ItemLong -- 10
+packet, ItemPtr -- 11
+0, ItemLong -- 12
+packet->src_addr, ItemLong -- 13
+packet->src_port, ItemLong -- 14
+packet->dst_addr, ItemLong -- 15
+packet->dst_port, ItemLong -- 16
+packet->token, ItemLong -- 17
+packet->opcode, ItemLong -- 18
+Q6AD_APRV2_PKT_GET_PACKET_BYTE_SIZE( packet->header ), ItemLong -- 19
+Q6AD_APRV2_PKT_GET_PAYLOAD(q6ad_aprv2_ibasic_rsp_result_t. packet)->opcode, ItemLong -- 20
+Q6AD_APRV2_PKT_GET_PAYLOAD(q6ad_aprv2_ibasic_rsp_result_t. packet)->status, ItemLong -- 21
+}
+#typev q6ad_q6atl_main_c299 10 "%0ADCM.ATL.DI.q6ad_atl_apr_cb.TOKEN(0x%10!Ix!).OPCODE(0x%11!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_LATENCY FLAGS=ADCM_ATL_LATENCY FUNC=q6ad_atl_apr_cb
+{
+packet->token, ItemPtr -- 10
+packet->opcode, ItemPtr -- 11
+}
+#typev q6ad_q6atl_main_c813 36 "%0ADCM.ATL.Err.cannot deinit list for addr=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_apr_service_deinit
+{
+q6ad_atl_get_service(i)*(AUDIO_DOMIAN<<8), ItemPtr -- 10
+}
+#typev q6ad_q6atl_main_c935 44 "%0ADCM.ATL.Err.q6atl_async_dereg failed. Cannot find the client with addr=0x%10!Ix!,handle=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_async_dereg
+{
+addr, ItemPtr -- 10
+handle, ItemPtr -- 11
+}
+#typev q6ad_q6atl_main_c927 43 "%0ADCM.ATL.Err.q6atl_async_dereg - invalid params - addr=0x%10!Ix!,handle=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_async_dereg
+{
+addr, ItemPtr -- 10
+handle, ItemPtr -- 11
+}
+#typev q6ad_q6atl_main_c923 42 "%0ADCM.ATL.q6ad_atl_async_dereg - addr=0x%10!Ix!,handle=0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ATL_INFO FUNC=q6ad_atl_async_dereg
+{
+addr, ItemPtr -- 10
+handle, ItemPtr -- 11
+}
+#typev q6ad_q6atl_main_c887 41 "%0ADCM.ATL.Err.q6atl_async_reg failed. No mem for addr=0x%10!Ix!,handle=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_async_reg
+{
+addr, ItemPtr -- 10
+handle, ItemPtr -- 11
+}
+#typev q6ad_q6atl_main_c880 40 "%0ADCM.ATL.Err.q6atl_async_reg failed. invalid param.addr=0x%10!Ix!,handle=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_async_reg
+{
+addr, ItemPtr -- 10
+handle, ItemPtr -- 11
+}
+#typev q6ad_q6atl_main_c876 39 "%0ADCM.ATL.q6ad_atl_async_reg - addr=0x%10!Ix!,handle=0x%11!Ix!,client_data=0x%12!p!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ATL_INFO FUNC=q6ad_atl_async_reg
+{
+addr, ItemPtr -- 10
+handle, ItemPtr -- 11
+cb_data, ItemPtr -- 12
+}
+#typev q6ad_q6atl_main_c603 27 "%0ADCM.ATL.Err.no free trans_obj available" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_get_free_trans_obj
+{
+}
+#typev q6ad_q6atl_main_c744 35 "%0ADCM.ATL.Err.q6ad_atl_trans_init failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_init
+{
+}
+#typev q6ad_q6atl_main_c738 34 "%0ADCM.ATL.Err.q6ad_atl_apr_service_init failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_init
+{
+}
+#typev q6ad_q6atl_main_c736 26 "%0ADCM.ATL.Err.client list init failed. index=%10!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_init
+{
+i, ItemPtr -- 10
+}
+#typev q6ad_q6atl_main_c731 33 "%0ADCM.ATL.Err.main data malloc failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_init
+{
+}
+#typev q6ad_q6atl_main_c725 32 "%0ADCM.ATL.already initialized. nop" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ATL_INFO FUNC=q6ad_atl_init
+{
+}
+#typev q6ad_q6atl_main_c496 25 "%0ADCM.ATL.Err.malloc failed (size=%10!Id!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_malloc
+{
+size, ItemPtr -- 10
+}
+#typev q6ad_q6atl_main_c1119 54 "%0ADCM.ATL.DI.q6ad_atl_send leave - src_addr=0x%10!Ix!,src_port=0x%11!Ix!,token=0x%12!Ix!,rc=0x%13!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_LATENCY FLAGS=ADCM_ATL_LATENCY FUNC=q6ad_atl_send
+{
+trans->addr, ItemPtr -- 10
+trans->port, ItemPtr -- 11
+trans->apr_token, ItemPtr -- 12
+rc, ItemPtr -- 13
+}
+#typev q6ad_q6atl_main_c1117 53 "%0ADCM.ATL.q6ad_atl_send response status, rsp.rc = 0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=q6ad_atl_send
+{
+((struct q6msg*)trans->rsp_buf)->u.rsp.status, ItemPtr -- 10
+}
+#typev q6ad_q6atl_main_c1112 52 "%0ADCM.ATL.q6ad_atl_send.sync.q6ad_aprv2_ipc_send.TOKEN(0x%10!Ix!).OPCODE(0x%11!Ix!).rc(0x%12!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ATL_INFO FUNC=q6ad_atl_send
+{
+trans->apr_token, ItemPtr -- 10
+((struct q6ad_aprv2_packet_t*)send_buf)->opcode, ItemPtr -- 11
+rc, ItemPtr -- 12
+}
+#typev q6ad_q6atl_main_c1080 51 "%0ADCM.ATL.Sync q6ad_aprv2_ipc_send blocking call TOKEN:[0x%10!Ix!] OPCODE:[0x%11!Ix!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=q6ad_atl_send
+{
+trans->apr_token, ItemPtr -- 10
+((struct q6ad_aprv2_packet_t*)send_buf)->opcode, ItemPtr -- 11
+}
+#typev q6ad_q6atl_main_c1064 50 "%0ADCM.ATL.q6ad_atl_send sent and waiting for rsp - src_addr=0x%10!Ix!,src_port=0x%11!Ix!,token=0x%12!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=q6ad_atl_send
+{
+trans->addr, ItemPtr -- 10
+trans->port, ItemPtr -- 11
+trans->apr_token, ItemPtr -- 12
+}
+#typev q6ad_q6atl_main_c1055 49 "%0ADCM.ATL.Err.q6ad_atl_send - sending error - src_addr=0x%10!Ix!,src_port=0x%11!Ix!,token=0x%12!Ix!,rc=0x%13!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_send
+{
+trans->addr, ItemPtr -- 10
+trans->port, ItemPtr -- 11
+trans->apr_token, ItemPtr -- 12
+rc, ItemPtr -- 13
+}
+#typev q6ad_q6atl_main_c1044 48 "%0ADCM.ATL.q6ad_atl_send.sync.q6ad_aprv2_ipc_send.TOKEN(0x%10!Ix!).OPCODE(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=q6ad_atl_send
+{
+trans->apr_token, ItemPtr -- 10
+((struct q6ad_aprv2_packet_t*)send_buf)->opcode, ItemPtr -- 11
+}
+#typev q6ad_q6atl_main_c1015 47 "%0ADCM.ATL.Err.q6atl_send-trans_obj malloc failed. addr=0x%10!Ix!,port=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_send
+{
+((struct q6ad_aprv2_packet_t*)send_buf)->src_addr, ItemPtr -- 10
+((struct q6ad_aprv2_packet_t*)send_buf)->src_port, ItemPtr -- 11
+}
+#typev q6ad_q6atl_main_c999 46 "%0ADCM.ATL.q6ad_atl_send.Async.q6ad_aprv2_ipc_send.TOKEN(0x%10!Ix!).OPCODE(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ATL_INFO FUNC=q6ad_atl_send
+{
+((struct q6ad_aprv2_packet_t*)send_buf)->token, ItemPtr -- 10
+((struct q6ad_aprv2_packet_t*)send_buf)->opcode, ItemPtr -- 11
+}
+#typev q6ad_q6atl_main_c973 45 "%0ADCM.ATL.DO.q6ad_atl_send.src_addr(0x%10!Ix!).src_port(0x%11!Ix!).sync(%12!d!).packet_size(0x%13!Ix!).pkt_token(0x%14!Ix!).op(0x%15!Ix!).dst_addr(0x%16!Ix!).dst_port(0x%17!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_LATENCY FLAGS=ADCM_ATL_LATENCY FUNC=q6ad_atl_send
+{
+((struct q6ad_aprv2_packet_t*)send_buf)->src_addr, ItemPtr -- 10
+((struct q6ad_aprv2_packet_t*)send_buf)->src_port, ItemPtr -- 11
+is_sync, ItemLong -- 12
+Q6AD_APRV2_PKT_GET_PACKET_BYTE_SIZE(((struct q6ad_aprv2_packet_t*)send_buf)->header), ItemPtr -- 13
+((struct q6ad_aprv2_packet_t*)send_buf)->token, ItemPtr -- 14
+((struct q6ad_aprv2_packet_t*)send_buf)->opcode, ItemPtr -- 15
+((struct q6ad_aprv2_packet_t*)send_buf)->dst_addr, ItemPtr -- 16
+((struct q6ad_aprv2_packet_t*)send_buf)->dst_port, ItemPtr -- 17
+}
+#typev q6ad_q6atl_main_c664 29 "%0ADCM.ATL.Err.no mem for init trans" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_trans_init
+{
+}
+#typev q6ad_q6atl_main_c660 25 "%0ADCM.ATL.Err.malloc failed (size=%10!Id!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_trans_init
+{
+size, ItemPtr -- 10
+}
+#typev q6ad_q6atl_main_c672 30 "%0ADCM.ATL.Err.cannot create timer event" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_trans_init
+{
+}
+#typev q6ad_q6atl_main_c686 31 "%0ADCM.ATL.Err.cannot create sync event" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_trans_init
+{
+}
+#typev q6ad_q6atl_main_c653 28 "%0ADCM.ATL.Err.transaction list init failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=q6ad_atl_trans_init
+{
+}

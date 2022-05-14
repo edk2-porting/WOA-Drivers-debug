@@ -1,0 +1,41 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+0f2a5601-98c4-3fbe-4a3c-b49a7b79bb48 WMRIL // SRC=WMRilGetUiccServiceLock.cpp MJ= MN=
+#typev WMRilGetUiccServiceLock_cpp152 14 "%0%!LEVEL! %!FUNC!:GetUiccServiceLock resp: hUiccApp = 0x%10!08X!, keyRef = %11!s!(0x%12!04X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetUiccServiceLockClass::Execute
+{
+UiccLock.hUiccApp, ItemLong -- 10
+UiccLock.dwKeyRef, ItemEnum(RILUICCKEYREF) -- 11
+UiccLock.dwKeyRef, ItemLong -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetUiccServiceLock_cpp74 11 "%0%!LEVEL! %!FUNC!:GetUiccServiceLock input params: hUiccApp = 0x%10!08X!, Service = %11!s!(0x%12!04X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetUiccServiceLockClass::InitParams
+{
+m_Params.hUiccApp, ItemLong -- 10
+Debug::RILUICCServiceIdToStr(m_Params.dwService), ItemWString -- 11
+m_Params.dwService, ItemLong -- 12
+}
+#typev WMRilGetUiccServiceLock_cpp68 10 "%0%!LEVEL! %!FUNC!:invalid command size = %10!u!, expected size = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetUiccServiceLockClass::InitParams
+{
+dwBufferLength, ItemLong -- 10
+sizeof(RILUICCSERVICE), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetUiccServiceLock_cpp134 13 "%0%!LEVEL! %!FUNC!:hUiccApp(0x%10!08X!) app type is invalid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetUiccServiceLockClass::ValidateParams
+{
+m_Params.hUiccApp, ItemLong -- 10
+}
+#typev WMRilGetUiccServiceLock_cpp97 12 "%0%!LEVEL! %!FUNC!:Only FDN is supported for GetServiceLock, but service inputted = %10!s!(0x%11!04X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetUiccServiceLockClass::ValidateParams
+{
+Debug::RILUICCServiceIdToStr(m_Params.dwService), ItemWString -- 10
+m_Params.dwService, ItemLong -- 11
+}
+#enumv RILUICCKEYREF
+{
+RIL_UICCKEYREF_ALW,0x0
+RIL_UICCKEYREF_PIN1,0x1
+RIL_UICCKEYREF_UPIN,0x10
+RIL_UICCKEYREF_PIN2,0x81
+RIL_UICCKEYREF_NEV,0xFF
+}

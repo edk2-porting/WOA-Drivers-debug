@@ -1,0 +1,12 @@
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+de1b9a56-cc72-35dc-81d9-46879d2e43e1 src // SRC=q6ad_aprv2_ipc.c MJ= MN=
+#typev q6ad_atm_c192 11 "%0ADCM.ATL.Err: unknown domain_id %10!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ATL_ERROR FUNC=ProcessReceivedPacket
+{
+Q6AD_APR_GET_FIELD(Q6AD_APRV2_PKT_DOMAIN_ID. ((q6ad_aprv2_packet_t *)buf)->src_addr), ItemPtr -- 10
+}
+#typev q6ad_atm_c192 10 "%0ADCM.ATL.apr_tal: apr_rx_cb -provide read buffer, buf=0x%10!p!, len=%11!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ATL_VERBOSE FUNC=ProcessReceivedPacket
+{
+buf, ItemPtr -- 10
+*length, ItemPtr -- 11
+}

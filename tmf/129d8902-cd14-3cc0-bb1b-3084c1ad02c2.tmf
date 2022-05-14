@@ -1,0 +1,138 @@
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+129d8902-cd14-3cc0-bb1b-3084c1ad02c2 driver // SRC=ClockDriver.c MJ= MN=
+#typev ClockWin_c1091 37 "%0%10!s! (EnabledHW: 1)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=PepClockEnablePowerDomainHW
+{
+pPowerDomain->szName, ItemString -- 10
+}
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev ClockWin_c579 29 "%0%10!s! (Inverted: %11!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=PepClockInvertClock
+{
+pClock->szName, ItemString -- 10
+(uint32)bInvert, ItemLong -- 11
+}
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev ClockWin_c551 28 "%0%10!s! (Clock Divider: %11!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=PepClockSetClockDivider
+{
+pClock->szName, ItemString -- 10
+nDivider, ItemLong -- 11
+}
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev ClockDriver_c4429 40 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to resolve source ID for the %10!s! source name" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ConfigClock
+{
+CLOCK_XO_NAME, ItemString -- 10
+}
+#typev ClockDriver_c4391 39 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to resolve source ID for the %10!s! source name" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ConfigClock
+{
+CLOCK_XO_NAME, ItemString -- 10
+}
+#typev ClockDriver_c1803 26 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to resolve source ID for the %10!s! source name" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DisableClock
+{
+CLOCK_XO_NAME, ItemString -- 10
+}
+#typev ClockDriver_c1771 25 "%0%10!s! (Enabled: 0)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DisableClock
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c1449 21 "%0DALSYS_LOGEVENT_FATAL_ERROR: Clock domain root did not turn off after all domain clocks are off" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DisableClockDomain
+{
+}
+#typev ClockDriver_c3893 36 "%0%10!s! (Enabled: 0)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DisablePowerDomain
+{
+pPowerDomain->szName, ItemString -- 10
+}
+#typev ClockDriver_c4066 38 "%0%10!s! (EnabledHW: 0)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DisablePowerDomainHW
+{
+pPowerDomain->szName, ItemString -- 10
+}
+#typev ClockDriver_c569 19 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to free memory allocated to Clock DFS array." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverDeInit
+{
+}
+#typev ClockDriver_c314 16 "%0DALSYS_LOGEVENT_FATAL_ERROR: Clock_InitNPA failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c300 15 "%0DALSYS_LOGEVENT_FATAL_ERROR: Clock_InitTarget failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c286 14 "%0DALSYS_LOGEVENT_FATAL_ERROR: Clock_InitDFSDomains failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c272 13 "%0DALSYS_LOGEVENT_FATAL_ERROR: Clock_InitVoltage failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c236 12 "%0DALSYS_LOGEVENT_FATAL_ERROR: Clock_InitBases failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c192 11 "%0DALSYS_LOGEVENT_WARNING: Missing clock log defaults. Logging is disabled." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c169 10 "%0DALSYS_LOGEVENT_FATAL_ERROR: DALSYS_SyncCreate failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c1688 24 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to resolve source ID for the %10!s! source name" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_EnableClock
+{
+CLOCK_XO_NAME, ItemString -- 10
+}
+#typev ClockDriver_c1646 23 "%0DALSYS_LOGEVENT_WARNING: Unable to turn ON clock: %10!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_EnableClock
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c1626 22 "%0%10!s! (Enabled: 1)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_EnableClock
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c3804 35 "%0%10!s! (Enabled: 1)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_EnablePowerDomain
+{
+pPowerDomain->szName, ItemString -- 10
+}
+#typev ClockDriver_c1181 20 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to allocate %10!u! bytes for detected initial domain config." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_InitClockDomain
+{
+nSize, ItemLong -- 10
+}
+#typev ClockDriver_c858 17 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to allocate %10!u! bytes for Clock DFS array." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_InitDFSDomains
+{
+nSize, ItemLong -- 10
+}
+#typev ClockDriver_c858 18 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to initialize mux config from HW values." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_InitDFSDomains
+{
+}
+#typev ClockDriver_c2631 31 "%0%10!s! (Reset: 0)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ResetClock
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c2618 30 "%0%10!s! (Reset: 1)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ResetClock
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c2734 33 "%0%10!s! (ResetBranch: 0)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ResetClockBranch
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c2721 32 "%0%10!s! (ResetBranch: 1)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ResetClockBranch
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c3384 34 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to allocate %10!u! bytes for external source configuration." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SelectExternalSource
+{
+nSize, ItemLong -- 10
+}
+#typev ClockDriver_c2445 27 "%0%10!s! (Freq: %11!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SetClockFrequency
+{
+pClock->szName, ItemString -- 10
+pNewConfig->nFreqHz, ItemLong -- 11
+}
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev axicfgos_c255 27 "%0%10!s! (Freq: %11!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=AxiCfgOs_EnableClock
+{
+pClock->szName, ItemString -- 10
+pNewConfig->nFreqHz, ItemLong -- 11
+}
+#typev PEPClockTest_c992 27 "%0%10!s! (Freq: %11!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=ClockAllTest
+{
+pClock->szName, ItemString -- 10
+pNewConfig->nFreqHz, ItemLong -- 11
+}

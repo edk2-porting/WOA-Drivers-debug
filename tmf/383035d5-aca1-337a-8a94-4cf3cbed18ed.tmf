@@ -1,0 +1,235 @@
+// PDB:  QcUsbFnSsFilter850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+383035d5-aca1-337a-8a94-4cf3cbed18ed 10.4 // SRC=QcUsbFnCharging.c MJ= MN=
+#typev QcUsbFnCharging_c107 13 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnChargingSendSyncIoctl
+{
+}
+#typev QcUsbFnCharging_c95 12 "%0Ioctl failed: IoTarget %10!p!, code %11!x!, inBuff %12!p!, inBuffSiz %13!u!, outBuff %14!p!, outBuffSiz %15!u!, options %16!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnChargingSendSyncIoctl
+{
+IoTarget, ItemPtr -- 10
+IoctlCode, ItemLong -- 11
+InputBuffer, ItemPtr -- 12
+InputBufferSize, ItemLong -- 13
+OutputBuffer, ItemPtr -- 14
+OutputBufferSize, ItemLong -- 15
+OptionFlags, ItemLong -- 16
+}
+#typev QcUsbFnCharging_c59 11 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnChargingSendSyncIoctl
+{
+}
+#typev QcUsbFnCharging_c56 10 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnChargingSendSyncIoctl
+{
+}
+#typev QcUsbFnCharging_c720 56 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnCreateAttachInterface
+{
+}
+#typev QcUsbFnCharging_c714 55 "%0WdfDeviceAddQueryInterface failed w/ status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnCreateAttachInterface
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnCharging_c677 54 "%0WdfWaitLockCreate failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnCreateAttachInterface
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnCharging_c657 53 "%0WdfObjectAllocateContext(CHG_DET_CONTEXT) failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnCreateAttachInterface
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnCharging_c649 52 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnCreateAttachInterface
+{
+}
+#typev QcUsbFnCharging_c994 75 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnCreatePropChargingInterface
+{
+}
+#typev QcUsbFnCharging_c991 74 "%0WdfDeviceAddQueryInterface failed w/ status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnCreatePropChargingInterface
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnCharging_c955 73 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnCreatePropChargingInterface
+{
+}
+#typev QcUsbFnCharging_c350 33 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnDetectCharger
+{
+}
+#typev QcUsbFnCharging_c342 32 "%0PMIC internal error for PMIC Info %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnDetectCharger
+{
+pm_info.Result, ItemLong -- 10
+}
+#typev QcUsbFnCharging_c335 31 "%0PMIC internal error for charger detection %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnDetectCharger
+{
+result.err_status, ItemLong -- 10
+}
+#typev QcUsbFnCharging_c328 30 "%0IOCTL_PMIC_PUBLIC_GET_USB_PORT_DETECTION_RESULT failed with status %10!s!, PMIC errcode: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnDetectCharger
+{
+status, ItemNTSTATUS -- 10
+result.err_status, ItemLong -- 11
+}
+#typev QcUsbFnCharging_c310 29 "%0Overriding charger detection w/ SDP port type" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnDetectCharger
+{
+}
+#typev QcUsbFnCharging_c302 28 "%0IOCTL_PM_HARDWARE_GET_PMICS_INFO failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnDetectCharger
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnCharging_c283 27 "%0Invalid Parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnDetectCharger
+{
+}
+#typev QcUsbFnCharging_c279 26 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnDetectCharger
+{
+}
+#typev QcUsbFnCharging_c429 39 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnDetectHVDCP
+{
+}
+#typev QcUsbFnCharging_c414 38 "%0QcUsbFnDetectHVDCP: err code : %10!x!, result: %11!x!, voltage %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QcUsbFnDetectHVDCP
+{
+hvdcpResult.err_status, ItemLong -- 10
+hvdcpResult.hvdcp_detection_result, ItemLong -- 11
+hvdcpResult.hvdcp_voltage, ItemLong -- 12
+}
+#typev QcUsbFnCharging_c410 37 "%0PMIC internal error for hvdcp charger detection %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnDetectHVDCP
+{
+hvdcpResult.err_status, ItemLong -- 10
+}
+#typev QcUsbFnCharging_c404 36 "%0IOCTL_PMIC_PUBLIC_GET_HVDCP_DETECTION_RESULT failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnDetectHVDCP
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnCharging_c384 35 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnDetectHVDCP
+{
+}
+#typev QcUsbFnCharging_c381 34 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnDetectHVDCP
+{
+}
+#typev QcUsbFnCharging_c1035 79 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnFreeChargerResources
+{
+}
+#typev QcUsbFnCharging_c1023 78 "%0Cannot locate Charger Detection Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnFreeChargerResources
+{
+}
+#typev QcUsbFnCharging_c1017 77 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnFreeChargerResources
+{
+}
+#typev QcUsbFnCharging_c1014 76 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnFreeChargerResources
+{
+}
+#typev QcUsbFnCharging_c253 25 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnOpenRemoteIoTarget
+{
+}
+#typev QcUsbFnCharging_c238 24 "%0WdfIoTargetOpen failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnOpenRemoteIoTarget
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnCharging_c224 23 "%0WdfIoTargetCreate failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnOpenRemoteIoTarget
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnCharging_c216 22 "%0RtlUnicodeStringInit failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnOpenRemoteIoTarget
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnCharging_c210 21 "%0no device interface is found" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnOpenRemoteIoTarget
+{
+}
+#typev QcUsbFnCharging_c201 20 "%0IoGetDeviceInterfaces() failed (0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnOpenRemoteIoTarget
+{
+status, ItemLong -- 10
+}
+#typev QcUsbFnCharging_c193 19 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnOpenRemoteIoTarget
+{
+}
+#typev QcUsbFnCharging_c190 18 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnOpenRemoteIoTarget
+{
+}
+#typev QcUsbFnCharging_c767 60 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnProprietaryChargerAbortOperation
+{
+}
+#typev QcUsbFnCharging_c759 59 "%0Cannot locate Charger Detection Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnProprietaryChargerAbortOperation
+{
+}
+#typev QcUsbFnCharging_c751 58 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnProprietaryChargerAbortOperation
+{
+}
+#typev QcUsbFnCharging_c748 57 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnProprietaryChargerAbortOperation
+{
+}
+#typev QcUsbFnCharging_c901 72 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnProprietaryChargerDetect
+{
+}
+#typev QcUsbFnCharging_c897 71 "%0Unhandled Chg Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnProprietaryChargerDetect
+{
+chgCtxt->ChgType, ItemLong -- 10
+}
+#typev QcUsbFnCharging_c882 70 "%0unknown signal state" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnProprietaryChargerDetect
+{
+}
+#typev QcUsbFnCharging_c878 69 "%0detection abort signaled." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QcUsbFnProprietaryChargerDetect
+{
+}
+#typev QcUsbFnCharging_c870 68 "%0HVDCP Version %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=QcUsbFnProprietaryChargerDetect
+{
+hvdcpVer, ItemLong -- 10
+}
+#typev QcUsbFnCharging_c856 67 "%0detection abort signaled." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QcUsbFnProprietaryChargerDetect
+{
+}
+#typev QcUsbFnCharging_c839 66 "%0ChgType 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QcUsbFnProprietaryChargerDetect
+{
+chgCtxt->ChgType, ItemLong -- 10
+}
+#typev QcUsbFnCharging_c834 65 "%0Context of chg or filter cannot be null" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnProprietaryChargerDetect
+{
+}
+#typev QcUsbFnCharging_c826 64 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbFnProprietaryChargerDetect
+{
+}
+#typev QcUsbFnCharging_c823 63 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnProprietaryChargerDetect
+{
+}
+#typev QcUsbFnCharging_c794 62 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnProprietaryChargerResetOperation
+{
+}
+#typev QcUsbFnCharging_c793 61 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnProprietaryChargerResetOperation
+{
+}
+#typev QcUsbFnCharging_c575 47 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbfnGetAttachAction
+{
+}
+#typev QcUsbFnCharging_c568 46 "%0PortType %10!d!, AttachAction %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QcUsbfnGetAttachAction
+{
+OnAttach->PortType, ItemLong -- 10
+OnAttach->AttachAction, ItemLong -- 11
+}
+#typev QcUsbFnCharging_c531 45 "%0CoreType %10!d!, PMIC ChgType %11!d!, Count %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QcUsbfnGetAttachAction
+{
+filterExt->coreType, ItemLong -- 10
+chgTyp, ItemLong -- 11
+count, ItemLong -- 12
+}
+#typev QcUsbFnCharging_c526 44 "%0Invalid CoreType %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbfnGetAttachAction
+{
+filterExt->coreType, ItemLong -- 10
+}
+#typev QcUsbFnCharging_c501 43 "%0detection abort signaled." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QcUsbfnGetAttachAction
+{
+}
+#typev QcUsbFnCharging_c472 42 "%0Cannot locate Charger Detection  or Filter Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbfnGetAttachAction
+{
+}
+#typev QcUsbFnCharging_c463 41 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbfnGetAttachAction
+{
+}
+#typev QcUsbFnCharging_c460 40 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbfnGetAttachAction
+{
+}
+#typev QcUsbFnCharging_c622 51 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbfnGetAttachActionAbort
+{
+}
+#typev QcUsbFnCharging_c614 50 "%0Cannot locate Charger Detection Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbfnGetAttachActionAbort
+{
+}
+#typev QcUsbFnCharging_c606 49 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbfnGetAttachActionAbort
+{
+}
+#typev QcUsbFnCharging_c603 48 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbfnGetAttachActionAbort
+{
+}

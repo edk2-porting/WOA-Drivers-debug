@@ -1,0 +1,528 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+23ce0fe2-eb4f-35ec-3aca-b8171a5ad7dc WMRIL // SRC=WMRilCard.cpp MJ= MN=
+#typev WMRilCard_cpp54 10 "%0%!LEVEL! %!FUNC!:Card in Card State %10!s!(%11!u!) with Card Error Code %12!s!(%13!u!) and RIL slot state %14!s!(%15!u!) for slot %16!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CardClass
+{
+Debug::QMIUIMCardStateToStr(m_QMICardState), ItemWString -- 10
+m_QMICardState, ItemLong -- 11
+Debug::QMIUIMCardErrorToStr(m_CardError), ItemWString -- 12
+m_CardError, ItemLong -- 13
+m_RILSlotState, ItemEnum(RILUICCSLOTSTATE) -- 14
+m_RILSlotState, ItemLong -- 15
+m_slotId, ItemLong -- 16
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp194 13 "%0%!LEVEL! %!FUNC!:The application name of App (0x%10!08x!) is %11!s! (length = %12!u!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::AddAppToAppList
+{
+pNewApp->GethUiccApp(), ItemLong -- 10
+pNewApp->GetAppName(), ItemString -- 11
+pNewApp->GetAppNameLength(), ItemLong -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp277 16 "%0%!LEVEL! %!FUNC!:Sent RIL_NOTIFY_CARDAPPADDED for hUiccApp 0x%10!08x!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_UIM FUNC=WMRil::CardClass::AddToAppList
+{
+pApp->GethUiccApp(), ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp267 15 "%0%!LEVEL! %!FUNC!:Fail to fill RILUICCAPPINFO strucutre, no RIL_NOTIFY_CARDAPPADDED is sent for hUiccApp 0x%10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::AddToAppList
+{
+pApp->GethUiccApp(), ItemLong -- 10
+}
+#typev WMRilCard_cpp249 14 "%0%!LEVEL! %!FUNC!:Added app information to m_AppList (hUiccApp = 0x%10!08x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::AddToAppList
+{
+pApp->GethUiccApp(), ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp419 23 "%0%!LEVEL! %!FUNC!:%10!s! card result error: sw1 = 0x%11!02X!, sw2 = 0x%12!02X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CheckStatusWords
+{
+Debug::QMIReqToStr(QMIUIMService. msgID), ItemWString -- 10
+cardResult.sw1, ItemLong -- 11
+cardResult.sw2, ItemLong -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp413 22 "%0%!LEVEL! %!FUNC!:Unknown QMI UIM Command = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CheckStatusWords
+{
+Debug::QMIReqToStr(QMIUIMService. msgID), ItemWString -- 10
+}
+#typev WMRilCard_cpp385 21 "%0%!LEVEL! %!FUNC!: Card result sw1 = 0x%10!02X!, sw2 = 0x%11!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CheckStatusWords
+{
+cardResult.sw1, ItemLong -- 10
+cardResult.sw2, ItemLong -- 11
+}
+#typev WMRilCard_cpp379 20 "%0%!LEVEL! %!FUNC!:%10!s! does not include optional card result TLV" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CheckStatusWords
+{
+Debug::QMIReqToStr(QMIUIMService. msgID), ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1551 74 "%0%!LEVEL! %!FUNC!:Encrypted PIN1 for HUICCAPP 0x%10!08x! has been cleared." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::ClearEncryptedPIN1
+{
+pApp->GethUiccApp(), ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1234 61 "%0%!LEVEL! %!FUNC!:One of app at %10!u! is NULL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+appPos, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1216 60 "%0%!LEVEL! %!FUNC!:app list size %10!u! is different for compared card's app list size %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+static_cast<UINT>(m_AppList.size()), ItemLong -- 10
+pComparedCard->GetAppListSize(), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1192 58 "%0%!LEVEL! %!FUNC!:DebugDump Compared ICCID: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+WMRIL_LOG_XSTR(ICCIDFromComparedCard. MAXLENGTH_ICCID), ItemHEXDump -- 10
+}
+#typev WMRilCard_cpp1191 57 "%0%!LEVEL! %!FUNC!:DebugDump ICCID: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+WMRIL_LOG_XSTR(m_ICCID. MAXLENGTH_ICCID), ItemHEXDump -- 10
+}
+#typev WMRilCard_cpp1190 56 "%0%!LEVEL! %!FUNC!:ICCIDs are different" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1181 55 "%0%!LEVEL! %!FUNC!:One ICCID is avilable while the other does not have it" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1202 59 "%0%!LEVEL! %!FUNC!:number of apps %10!u! is different for compared card's number of apps %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+m_NumApps, ItemLong -- 10
+pComparedCard->GetNumApps(), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1174 54 "%0%!LEVEL! %!FUNC!:Fail to get ICCID from the compared card" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+}
+#typev WMRilCard_cpp1148 52 "%0%!LEVEL! %!FUNC!:Treat as the same although card error code %10!s!(%11!u!) after MSSR is different than compared card error code %12!s!(%13!u!) before MSSR" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+Debug::QMIUIMCardErrorToStr(m_CardError), ItemWString -- 10
+m_CardError, ItemLong -- 11
+Debug::QMIUIMCardErrorToStr(pComparedCard->GetCardError()), ItemWString -- 12
+pComparedCard->GetCardError(), ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1154 53 "%0%!LEVEL! %!FUNC!:card error code %10!s!(%11!u!) is different for compared card error code %12!s!(%13!u!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+Debug::QMIUIMCardErrorToStr(m_CardError), ItemWString -- 10
+m_CardError, ItemLong -- 11
+Debug::QMIUIMCardErrorToStr(pComparedCard->GetCardError()), ItemWString -- 12
+pComparedCard->GetCardError(), ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1127 51 "%0%!LEVEL! %!FUNC!:card state %10!s!(%11!u!) is different for compared card state %12!s!(%13!u!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+Debug::QMIUIMCardStateToStr(m_QMICardState), ItemWString -- 10
+m_QMICardState, ItemLong -- 11
+Debug::WMRilCallStateToStr(pComparedCard->GetCardState()), ItemWString -- 12
+pComparedCard->GetCardState(), ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1109 50 "%0%!LEVEL! %!FUNC!:Either current card or pComparedCard is a Virtual RUIM card but not both." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1097 49 "%0%!LEVEL! %!FUNC!:pComparedCard is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareCardDuringMSSR
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1356 66 "%0%!LEVEL! %!FUNC!:The current app object and/or the compared app object is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareStatesDuringMSSR
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1335 65 "%0%!LEVEL! %!FUNC!:Comparing states of VirtualRUIM apps." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareStatesDuringMSSR
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1330 64 "%0%!LEVEL! %!FUNC!:The app list size for the current virtual card and the compared card are both empty.  States are the same for both cards." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareStatesDuringMSSR
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1292 63 "%0%!LEVEL! %!FUNC!:compared card UPIN is not available" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareStatesDuringMSSR
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1272 62 "%0%!LEVEL! %!FUNC!:pComparedCard is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::CompareStatesDuringMSSR
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp500 24 "%0%!LEVEL! %!FUNC!:Invalid QMI card state %10!s!(%11!u!); RIL slot state is %12!s!(%13!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::ConvertQMICardStateToRILSlotState
+{
+Debug::QMIUIMCardStateToStr(QMICardState), ItemWString -- 10
+QMICardState, ItemLong -- 11
+RIL_UICCSLOT_ERROR, ItemEnum(RILUICCSLOTSTATE) -- 12
+RIL_UICCSLOT_ERROR, ItemLong -- 13
+}
+#typev WMRilCard_cpp511 25 "%0%!LEVEL! %!FUNC!:Invalid QMI card state %10!s!(%11!u!); RIL slot state is %12!s!(%13!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::ConvertQMICardStateToRILSlotState
+{
+Debug::QMIUIMCardStateToStr(QMICardState), ItemWString -- 10
+QMICardState, ItemLong -- 11
+RIL_UICCSLOT_ERROR, ItemEnum(RILUICCSLOTSTATE) -- 12
+RIL_UICCSLOT_ERROR, ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1470 70 "%0%!LEVEL! %!FUNC!:Could not find a channel assoicated with the channel group %10!s!(%11!u!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::DeleteOneLogicalChannelFromGroup
+{
+ChannelGroup, ItemEnum(RILUICCCHANNELGROUP) -- 10
+ChannelGroup, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1435 69 "%0%!LEVEL! %!FUNC!:Fail to find WMRIL logical channel id %10!u! from logical channel table" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::DeleteWMRILLogicalChannelId
+{
+dwWMRILChannelId, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp361 19 "%0%!LEVEL! %!FUNC!:Did not find application at index %10!u! for the card at slot %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::FindApp
+{
+RILAppIndex, ItemLong -- 10
+m_slotId, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp347 18 "%0%!LEVEL! %!FUNC!:Found application at index %10!u! for the card at slot %11!u!.  App type = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::FindApp
+{
+RILAppIndex, ItemLong -- 10
+m_slotId, ItemLong -- 11
+pApp->GetAppType(), ItemEnum(uim_app_type_enum_v01) -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp681 30 "%0%!LEVEL! %!FUNC!:One app is in new app list but not in old app list: hUiccApp 0x%10!08x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::FindNewAndRemovedApps
+{
+pNewApp->GethUiccApp(), ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp660 29 "%0%!LEVEL! %!FUNC!:One app is in new app list and also in old app list: hUiccApp 0x%10!08x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::FindNewAndRemovedApps
+{
+pApp->GethUiccApp(), ItemLong -- 10
+}
+#typev WMRilCard_cpp616 28 "%0%!LEVEL! %!FUNC!:Sent RIL_NOTIFY_CARDAPPREMOVED for hUiccApp 0x%10!08x!. It was in old app list but not in new app list." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_UIM FUNC=WMRil::CardClass::FindNewAndRemovedApps
+{
+hUiccApp, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp598 27 "%0%!LEVEL! %!FUNC!:hUiccApp 0x%10!08x! is in old app list and is also in new app list" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::FindNewAndRemovedApps
+{
+pApp->GethUiccApp(), ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1393 67 "%0%!LEVEL! %!FUNC!:Fail to create QMIUIMLogicalChannelClass object" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::GenerateWMRILLogicalChannelId
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp962 42 "%0%!LEVEL! %!FUNC!:Card Error = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::GetCardError
+{
+Debug::RILCardErrorToStr(hr), ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1051 48 "%0%!LEVEL! %!FUNC!:DebugDump EF_ICCID: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::GetICCIDFromQMIAndStore
+{
+WMRIL_LOG_XSTR(m_ICCID. MAXLENGTH_ICCID), ItemHEXDump -- 10
+}
+#typev WMRilCard_cpp1050 47 "%0%!LEVEL! %!FUNC!:EF_ICCID file read and store successfully." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_UIM FUNC=WMRil::CardClass::GetICCIDFromQMIAndStore
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1042 46 "%0%!LEVEL! %!FUNC!:QMI_UIM_READ_TRANSPARENT_RESP message content length (%10!u!) is larger than the IccID buffer (%11!u!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::GetICCIDFromQMIAndStore
+{
+readTransparentResp.read_result.content_len, ItemLong -- 10
+MAXLENGTH_ICCID, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1033 45 "%0%!LEVEL! %!FUNC!:missing read_result_valid_resp_msg TLV" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::GetICCIDFromQMIAndStore
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp1016 44 "%0%!LEVEL! %!FUNC!:QMI Result = %10!s!,  Error = %11!s!(0x%12!04X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::GetICCIDFromQMIAndStore
+{
+readTransparentResp.resp.result, ItemEnum(qmi_result_type_v01) -- 10
+readTransparentResp.resp.error, ItemEnum(qmi_error_type_v01) -- 11
+readTransparentResp.resp.error, ItemLong -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp993 43 "%0%!LEVEL! %!FUNC!:Error: Cannot get UIM session information.  %10!u! is an invalid slot index." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::GetICCIDFromQMIAndStore
+{
+m_slotId, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp311 17 "%0%!LEVEL! %!FUNC!:App list position %10!u! is taken" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::InsertAppToAppList
+{
+appPos, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp545 26 "%0%!LEVEL! %!FUNC!:Sent RIL_NOTIFY_CARDAPPREMOVED for hUiccApp 0x%10!08x!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_UIM FUNC=WMRil::CardClass::RemoveAllApps
+{
+pApp->GethUiccApp(), ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp142 12 "%0%!LEVEL! %!FUNC!:Card in slot %10!u! changed from %11!s!(%12!u!) to %13!s!(%14!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SetCardError
+{
+m_slotId, ItemLong -- 10
+Debug::QMIUIMCardErrorToStr(m_CardError), ItemWString -- 11
+m_CardError, ItemLong -- 12
+Debug::QMIUIMCardErrorToStr(error), ItemWString -- 13
+error, ItemLong -- 14
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp116 11 "%0%!LEVEL! %!FUNC!:Card in slot %10!u! changed from %11!s!(%12!u!) to %13!s!(%14!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SetCardState
+{
+m_slotId, ItemLong -- 10
+Debug::QMIUIMCardStateToStr(m_QMICardState), ItemWString -- 11
+m_QMICardState, ItemLong -- 12
+Debug::QMIUIMCardStateToStr(state), ItemWString -- 13
+state, ItemLong -- 14
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp903 39 "%0%!LEVEL! %!FUNC!:Fail to call CompareAppInfoToSendSecurityNotification" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SyncAppInfoAndSendSecurityNotification
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp911 40 "%0%!LEVEL! %!FUNC!:Fail to call SyncAppInfo" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SyncAppInfoAndSendSecurityNotification
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp843 36 "%0%!LEVEL! %!FUNC!:Fail to call CompareAppInfoToSendSecurityNotification" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SyncAppInfoAndSendSecurityNotification
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp851 37 "%0%!LEVEL! %!FUNC!:Fail to call SyncAppInfo" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SyncAppInfoAndSendSecurityNotification
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp922 41 "%0%!LEVEL! %!FUNC!:Fail to call SyncAppInfo" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SyncAppInfoAndSendSecurityNotification
+{
+}
+#typev WMRilCard_cpp857 38 "%0%!LEVEL! %!FUNC!:Provisioning Application updated info: HUICCAPP = 0x%10!08x!; session type = %11!s!(%12!d!); subscription index = %13!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SyncAppInfoAndSendSecurityNotification
+{
+pApp->GethUiccApp(), ItemLong -- 10
+Debug::QMIUIMSessionTypeToStr(pApp->GetSessionType()), ItemWString -- 11
+pApp->GetSessionType(), ItemLong -- 12
+pApp->GetSubscriptionIdx(), ItemLong -- 13
+}
+#typev WMRilCard_cpp836 35 "%0%!LEVEL! %!FUNC!:Provisioning Application with HUICCAPP = 0x%10!08x!, has been PERMANENTLY deactivated by the modem.  Cleaning up the application's session type and subscription index information." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SyncAppInfoAndSendSecurityNotification
+{
+pApp->GethUiccApp(), ItemLong -- 10
+}
+#typev WMRilCard_cpp771 32 "%0%!LEVEL! %!FUNC!:Provisioning Application with HUICCAPP = 0x%10!08x!, session type = %11!s!(%12!d!), subscription index = %13!u! has been deactivated by the modem." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SyncAppInfoAndSendSecurityNotification
+{
+pApp->GethUiccApp(), ItemLong -- 10
+Debug::QMIUIMSessionTypeToStr(pApp->GetSessionType()), ItemWString -- 11
+pApp->GetSessionType(), ItemLong -- 12
+pApp->GetSubscriptionIdx(), ItemLong -- 13
+}
+#typev WMRilCard_cpp784 33 "%0%!LEVEL! %!FUNC!:Provisioning Application with HUICCAPP = 0x%10!08x!, session type = %11!s!(%12!d!), subscription index = %13!u! has been deactivated by the modem." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SyncAppInfoAndSendSecurityNotification
+{
+pApp->GethUiccApp(), ItemLong -- 10
+Debug::QMIUIMSessionTypeToStr(pApp->GetSessionType()), ItemWString -- 11
+pApp->GetSessionType(), ItemLong -- 12
+pApp->GetSubscriptionIdx(), ItemLong -- 13
+}
+#typev WMRilCard_cpp797 34 "%0%!LEVEL! %!FUNC!:Provisioning Application with HUICCAPP = 0x%10!08x!, session type = %11!s!(%12!d!), subscription index = %13!u! has been deactivated by the modem." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SyncAppInfoAndSendSecurityNotification
+{
+pApp->GethUiccApp(), ItemLong -- 10
+Debug::QMIUIMSessionTypeToStr(pApp->GetSessionType()), ItemWString -- 11
+pApp->GetSessionType(), ItemLong -- 12
+pApp->GetSubscriptionIdx(), ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCard_cpp723 31 "%0%!LEVEL! %!FUNC!:Invalid slot ID for this CardClass object.  Number of cards reported in the QMI_UIM_STATUS_CHANGE_IND = %10!u!, m_slotId for this CardClass object = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::CardClass::SyncAppInfoAndSendSecurityNotification
+{
+newUimCardStatus.card_info_len, ItemLong -- 10
+m_slotId, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilUIMService_cpp4631 68 "%0%!LEVEL! %!FUNC!:Fail to find QMI UIM logical channel id from WMRIL logical channel id %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::UIMServiceClass::GetQMIUIMLogicalChannelId
+{
+dwWMRILChannelId, ItemLong -- 10
+}
+#enumv RILUICCSLOTSTATE
+{
+RIL_UICCSLOT_OFF_EMPTY,0x1
+RIL_UICCSLOT_OFF,0x2
+RIL_UICCSLOT_EMPTY,0x3
+RIL_UICCSLOT_NOT_READY,0x4
+RIL_UICCSLOT_ACTIVE,0x5
+RIL_UICCSLOT_ERROR,0x6
+RIL_UICCSLOT_MAX,0x6
+}
+#enumv RILUICCCHANNELGROUP
+{
+RIL_UICCCHANNELGROUP_NFC,0x1
+}
+#enumv uim_app_type_enum_v01
+{
+UIM_APP_TYPE_ENUM_MIN_ENUM_VAL_V01,0x80000001
+UIM_APP_TYPE_UNKNOWN_V01,0x0
+UIM_APP_TYPE_SIM_V01,0x1
+UIM_APP_TYPE_USIM_V01,0x2
+UIM_APP_TYPE_RUIM_V01,0x3
+UIM_APP_TYPE_CSIM_V01,0x4
+UIM_APP_TYPE_ISIM_V01,0x5
+UIM_APP_TYPE_ENUM_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}
+#enumv qmi_result_type_v01
+{
+QMI_RESULT_TYPE_MIN_ENUM_VAL_V01,0x80000001
+QMI_RESULT_SUCCESS_V01,0x0
+QMI_RESULT_FAILURE_V01,0x1
+QMI_RESULT_TYPE_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}
+#enumv qmi_error_type_v01
+{
+QMI_ERROR_TYPE_MIN_ENUM_VAL_V01,0x80000001
+QMI_ERR_NONE_V01,0x0
+QMI_ERR_MALFORMED_MSG_V01,0x1
+QMI_ERR_NO_MEMORY_V01,0x2
+QMI_ERR_INTERNAL_V01,0x3
+QMI_ERR_ABORTED_V01,0x4
+QMI_ERR_CLIENT_IDS_EXHAUSTED_V01,0x5
+QMI_ERR_UNABORTABLE_TRANSACTION_V01,0x6
+QMI_ERR_INVALID_CLIENT_ID_V01,0x7
+QMI_ERR_NO_THRESHOLDS_V01,0x8
+QMI_ERR_INVALID_HANDLE_V01,0x9
+QMI_ERR_INVALID_PROFILE_V01,0xA
+QMI_ERR_INVALID_PINID_V01,0xB
+QMI_ERR_INCORRECT_PIN_V01,0xC
+QMI_ERR_NO_NETWORK_FOUND_V01,0xD
+QMI_ERR_CALL_FAILED_V01,0xE
+QMI_ERR_OUT_OF_CALL_V01,0xF
+QMI_ERR_NOT_PROVISIONED_V01,0x10
+QMI_ERR_MISSING_ARG_V01,0x11
+QMI_ERR_ARG_TOO_LONG_V01,0x13
+QMI_ERR_INVALID_TX_ID_V01,0x16
+QMI_ERR_DEVICE_IN_USE_V01,0x17
+QMI_ERR_OP_NETWORK_UNSUPPORTED_V01,0x18
+QMI_ERR_OP_DEVICE_UNSUPPORTED_V01,0x19
+QMI_ERR_NO_EFFECT_V01,0x1A
+QMI_ERR_NO_FREE_PROFILE_V01,0x1B
+QMI_ERR_INVALID_PDP_TYPE_V01,0x1C
+QMI_ERR_INVALID_TECH_PREF_V01,0x1D
+QMI_ERR_INVALID_PROFILE_TYPE_V01,0x1E
+QMI_ERR_INVALID_SERVICE_TYPE_V01,0x1F
+QMI_ERR_INVALID_REGISTER_ACTION_V01,0x20
+QMI_ERR_INVALID_PS_ATTACH_ACTION_V01,0x21
+QMI_ERR_AUTHENTICATION_FAILED_V01,0x22
+QMI_ERR_PIN_BLOCKED_V01,0x23
+QMI_ERR_PIN_PERM_BLOCKED_V01,0x24
+QMI_ERR_SIM_NOT_INITIALIZED_V01,0x25
+QMI_ERR_MAX_QOS_REQUESTS_IN_USE_V01,0x26
+QMI_ERR_INCORRECT_FLOW_FILTER_V01,0x27
+QMI_ERR_NETWORK_QOS_UNAWARE_V01,0x28
+QMI_ERR_INVALID_ID_V01,0x29
+QMI_ERR_INVALID_QOS_ID_V01,0x29
+QMI_ERR_REQUESTED_NUM_UNSUPPORTED_V01,0x2A
+QMI_ERR_INTERFACE_NOT_FOUND_V01,0x2B
+QMI_ERR_FLOW_SUSPENDED_V01,0x2C
+QMI_ERR_INVALID_DATA_FORMAT_V01,0x2D
+QMI_ERR_GENERAL_V01,0x2E
+QMI_ERR_UNKNOWN_V01,0x2F
+QMI_ERR_INVALID_ARG_V01,0x30
+QMI_ERR_INVALID_INDEX_V01,0x31
+QMI_ERR_NO_ENTRY_V01,0x32
+QMI_ERR_DEVICE_STORAGE_FULL_V01,0x33
+QMI_ERR_DEVICE_NOT_READY_V01,0x34
+QMI_ERR_NETWORK_NOT_READY_V01,0x35
+QMI_ERR_CAUSE_CODE_V01,0x36
+QMI_ERR_MESSAGE_NOT_SENT_V01,0x37
+QMI_ERR_MESSAGE_DELIVERY_FAILURE_V01,0x38
+QMI_ERR_INVALID_MESSAGE_ID_V01,0x39
+QMI_ERR_ENCODING_V01,0x3A
+QMI_ERR_AUTHENTICATION_LOCK_V01,0x3B
+QMI_ERR_INVALID_TRANSITION_V01,0x3C
+QMI_ERR_NOT_A_MCAST_IFACE_V01,0x3D
+QMI_ERR_MAX_MCAST_REQUESTS_IN_USE_V01,0x3E
+QMI_ERR_INVALID_MCAST_HANDLE_V01,0x3F
+QMI_ERR_INVALID_IP_FAMILY_PREF_V01,0x40
+QMI_ERR_SESSION_INACTIVE_V01,0x41
+QMI_ERR_SESSION_INVALID_V01,0x42
+QMI_ERR_SESSION_OWNERSHIP_V01,0x43
+QMI_ERR_INSUFFICIENT_RESOURCES_V01,0x44
+QMI_ERR_DISABLED_V01,0x45
+QMI_ERR_INVALID_OPERATION_V01,0x46
+QMI_ERR_INVALID_QMI_CMD_V01,0x47
+QMI_ERR_TPDU_TYPE_V01,0x48
+QMI_ERR_SMSC_ADDR_V01,0x49
+QMI_ERR_INFO_UNAVAILABLE_V01,0x4A
+QMI_ERR_SEGMENT_TOO_LONG_V01,0x4B
+QMI_ERR_SEGMENT_ORDER_V01,0x4C
+QMI_ERR_BUNDLING_NOT_SUPPORTED_V01,0x4D
+QMI_ERR_OP_PARTIAL_FAILURE_V01,0x4E
+QMI_ERR_POLICY_MISMATCH_V01,0x4F
+QMI_ERR_SIM_FILE_NOT_FOUND_V01,0x50
+QMI_ERR_EXTENDED_INTERNAL_V01,0x51
+QMI_ERR_ACCESS_DENIED_V01,0x52
+QMI_ERR_HARDWARE_RESTRICTED_V01,0x53
+QMI_ERR_ACK_NOT_SENT_V01,0x54
+QMI_ERR_INJECT_TIMEOUT_V01,0x55
+QMI_ERR_INCOMPATIBLE_STATE_V01,0x5A
+QMI_ERR_FDN_RESTRICT_V01,0x5B
+QMI_ERR_SUPS_FAILURE_CAUSE_V01,0x5C
+QMI_ERR_NO_RADIO_V01,0x5D
+QMI_ERR_NOT_SUPPORTED_V01,0x5E
+QMI_ERR_NO_SUBSCRIPTION_V01,0x5F
+QMI_ERR_CARD_CALL_CONTROL_FAILED_V01,0x60
+QMI_ERR_NETWORK_ABORTED_V01,0x61
+QMI_ERR_MSG_BLOCKED_V01,0x62
+QMI_ERR_INVALID_SESSION_TYPE_V01,0x64
+QMI_ERR_INVALID_PB_TYPE_V01,0x65
+QMI_ERR_NO_SIM_V01,0x66
+QMI_ERR_PB_NOT_READY_V01,0x67
+QMI_ERR_PIN_RESTRICTION_V01,0x68
+QMI_ERR_PIN2_RESTRICTION_V01,0x69
+QMI_ERR_PUK_RESTRICTION_V01,0x6A
+QMI_ERR_PUK2_RESTRICTION_V01,0x6B
+QMI_ERR_PB_ACCESS_RESTRICTED_V01,0x6C
+QMI_ERR_PB_DELETE_IN_PROG_V01,0x6D
+QMI_ERR_PB_TEXT_TOO_LONG_V01,0x6E
+QMI_ERR_PB_NUMBER_TOO_LONG_V01,0x6F
+QMI_ERR_PB_HIDDEN_KEY_RESTRICTION_V01,0x70
+QMI_ERR_PB_NOT_AVAILABLE_V01,0x71
+QMI_ERR_DEVICE_MEMORY_ERROR_V01,0x72
+QMI_ERROR_TYPE_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}

@@ -1,0 +1,313 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+063ab1d5-3745-3e2f-09ed-df15d7152b63 MBB // SRC=MPIMSSQmi.c MJ= MN=
+#typev MPQMIS_DIS_c423 19 "%0%!FUNC!: ERROR, received pImssClient = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMIS_DisGetImsProfileInfo
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPSubPhone_c641 59 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ReleaseClients
+{
+subId, ItemLong -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPIMSSQmi_c228 18 "%0%!FUNC!: ERROR, received pImssClient = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIMSSQMI_GetDataMediumPreference
+{
+}
+#typev MPIMSSQmi_c37 10 "%0%!FUNC!: ERROR, Invalid parm: pnReqLen 0x%10!x!, pnRespLen 0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQCCI_GetIMSSRequestInfo
+{
+(UINT)pnReqLen, ItemLong -- 10
+(UINT)pnRespLen, ItemLong -- 11
+}
+#typev MPIMSSQmi_c101 12 "%0%!FUNC!: 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQCCI_GetIMSSRequestInfo
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPIMSSQmi_c41 11 "%0%!FUNC!: MsgId  = 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQCCI_GetIMSSRequestInfo
+{
+uMsgId, ItemLong -- 10
+}
+#typev MPIMSSQmi_c269 20 "%0<%10!s!|sub#%11!d!> <--%!FUNC!: Unsupported subscription index %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSBindSubscriptionReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+SubscriptionId, ItemLong -- 12
+}
+#typev MPIMSSQmi_c298 23 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, SendQMIRequest failed 0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_IMSSBindSubscriptionReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+#typev MPIMSSQmi_c284 22 "%0<%10!s!|sub#%11!d!> <--%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSBindSubscriptionReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c277 21 "%0<%10!s!|sub#%11!d!> <--%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSBindSubscriptionReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c732 53 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, wifi_call_preference INVALID." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_IMSSClientProvisioningConfigInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c727 52 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, IMSS client = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_IMSSClientProvisioningConfigInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c719 51 "%0<%10!s!|sub#%11!d!> %!FUNC!: wifi_call_preference=0x%12!x!, DataMediumPreference=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSClientProvisioningConfigInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+indStruct.wifi_call_preference, ItemLong -- 12
+pClient->DataMediumPreference, ItemLong -- 13
+}
+#typev MPIMSSQmi_c686 50 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, MPQCCI_DecodeIndication returned unsuccessful status!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_IMSSClientProvisioningConfigInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c678 49 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSClientProvisioningConfigInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c478 34 "%0<%10!s!|sub#%11!d!> %!FUNC!: wifi_call_preference=0x%12!x!, DataMediumPreference=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSGetClientProvisioningConfigResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->wifi_call_preference, ItemLong -- 12
+pClient->DataMediumPreference, ItemLong -- 13
+}
+#typev MPIMSSQmi_c441 33 "%0<%10!s!|sub#%11!d!> %!FUNC!: result=0x%12!x!, error=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSGetClientProvisioningConfigResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPIMSSQmi_c914 65 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, response failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_IMSSGetHandoverConfigReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c908 64 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, SendQMIRequest failed 0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_IMSSGetHandoverConfigReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+#typev MPIMSSQmi_c897 63 "%0<%10!s!|sub#%11!d!> %!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSGetHandoverConfigReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c890 62 "%0<%10!s!|sub#%11!d!> %!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSGetHandoverConfigReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c659 48 "%0<%10!s!|sub#%11!d!> %!FUNC!: IMS APN string = %12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSGetPolMgrConfigResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+(PCHAR)pImssClient->IMSApnString, ItemString -- 12
+}
+#typev MPIMSSQmi_c650 47 "%0<%10!s!|sub#%11!d!> %!FUNC!: pol_mgr_apn_name[%12!d!].pol_mgr_apn_name = %13!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSGetPolMgrConfigResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+i, ItemLong -- 12
+pResp->pol_mgr_apn_name[i].pol_mgr_apn_name, ItemString -- 13
+}
+#typev MPIMSSQmi_c635 46 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, settings_resp=0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_IMSSGetPolMgrConfigResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->settings_resp, ItemLong -- 12
+}
+#typev MPIMSSQmi_c626 45 "%0<%10!s!|sub#%11!d!> %!FUNC!: result=0x%12!x!, error=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSGetPolMgrConfigResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPIMSSQmi_c1003 70 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, response failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_IMSSSetHandoverConfigReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c997 69 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, SendQMIRequest failed 0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_IMSSSetHandoverConfigReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+#typev MPIMSSQmi_c981 68 "%0<%10!s!|sub#%11!d!> %!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSSetHandoverConfigReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c974 67 "%0<%10!s!|sub#%11!d!> %!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_IMSSSetHandoverConfigReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c808 58 "%0<%10!s!|sub#%11!d!>%!FUNC!: status= %12!s! (0x%13!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+ntStatus, ItemNTSTATUS -- 12
+ntStatus, ItemLong -- 13
+}
+#typev MPIMSSQmi_c806 44 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, SendQMIRequest failed 0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+#typev MPIMSSQmi_c806 43 "%0<%10!s!|sub#%11!d!> <--%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c806 42 "%0<%10!s!|sub#%11!d!> <--%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c805 32 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, SendQMIRequest failed 0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+#typev MPIMSSQmi_c805 31 "%0<%10!s!|sub#%11!d!> <--%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c805 30 "%0<%10!s!|sub#%11!d!> <--%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c804 28 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, SendQMIRequest failed 0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+#typev MPIMSSQmi_c804 27 "%0<%10!s!|sub#%11!d!> <--%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c804 26 "%0<%10!s!|sub#%11!d!> <--%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c796 57 "%0<%10!s!|sub#%11!d!> %!FUNC!: MPQCCI_InitClientFromServiceObj FAILED." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c783 56 "%0<%10!s!|sub#%11!d!> %!FUNC!: WdfWaitLockCreate FAILED, status=0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPIMSSQmi_c763 55 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, ExAllocatePoolWithTag FAILED" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPIMSSQmi_c754 54 "%0<sub#%10!d!> %!FUNC!:: HALTEX in progress." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitIMSSClient
+{
+subscriptionId, ItemLong -- 10
+}
+#typev MPIMSSQmi_c212 17 "%0%!FUNC!: ERROR, received pImssClient = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_OnIMSSWFCPreferenceChange
+{
+}
+#typev MPIMSSQmi_c168 15 "%0%!FUNC!: END." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQIMSSResponse
+{
+}
+#typev MPIMSSQmi_c160 71 "%0<%10!s!|sub#%11!d!> %!FUNC!: result=0x%12!x!, error=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQIMSSResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPIMSSQmi_c154 66 "%0<%10!s!|sub#%11!d!> %!FUNC!: result=0x%12!x!, error=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQIMSSResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPIMSSQmi_c125 25 "%0<%10!s!|sub#%11!d!> %!FUNC!: IMSS Svc subscription binding - Common response code = 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQIMSSResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->common_resp, ItemLong -- 12
+}
+#typev MPIMSSQmi_c125 24 "%0<%10!s!|sub#%11!d!> %!FUNC!: IMSS Svc subscription binding completed with result = 0x%12!x!, error = 0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQIMSSResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPIMSSQmi_c130 29 "%0<%10!s!|sub#%11!d!> %!FUNC!: result=0x%12!x!, error=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQIMSSResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPIMSSQmi_c142 41 "%0<%10!s!|sub#%11!d!> %!FUNC!: settings_resp=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQIMSSResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->settings_resp, ItemLong -- 12
+}
+#typev MPIMSSQmi_c142 40 "%0<%10!s!|sub#%11!d!> %!FUNC!: result=0x%12!x!, error=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQIMSSResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->resp.error, ItemLong -- 13
+}
+#typev MPIMSSQmi_c119 14 "%0%!FUNC!: MsgId = 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQIMSSResponse
+{
+pQMI->uMsgId, ItemLong -- 10
+}
+#typev MPIMSSQmi_c113 13 "%0%!FUNC!: ERROR, received pQMI = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQIMSSResponse
+{
+}
+#typev MPIMSSQmi_c870 61 "%0%!FUNC!: Release success!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ReleaseIMSSClient
+{
+}
+#typev MPIMSSQmi_c867 59 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ReleaseIMSSClient
+{
+subId, ItemLong -- 10
+}
+#typev MPIMSSQmi_c863 60 "%0%!FUNC!: error releasing client id : 0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ReleaseIMSSClient
+{
+qmiErr, ItemLong -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPQCCI_c280 16 "%0%!FUNC!: MsgId  = 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQMIIndication
+{
+uMsgId, ItemLong -- 10
+}

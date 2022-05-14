@@ -1,0 +1,50 @@
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+b425b4da-43ce-3b35-299e-2635d9df5045 QcUsbFnSnps // SRC=QcUsbFnCtrlStateCtrlData.c MJ= MN=
+#typev QcUsbFnCtrlStateCtrlData_c108 14 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=HandleXferComplete
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnCtrlStateCtrlData_c100 13 "%0Pending SETUP detected, bypass status stage: epIndex[%10!d!]" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_SNPS FUNC=HandleXferComplete
+{
+epIndex, ItemLong -- 10
+}
+#typev QcUsbFnCtrlStateCtrlData_c89 10 "%0Error: TRB_CTL (%10!s!) should be either DWC_TRB_CTL_CONTROL_DATA or DWC_TRB_CTL_NORMAL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=HandleXferComplete
+{
+TrbCtrlCode, ItemEnum(_TRB_CTL_TYPE) -- 10
+}
+#typev QcUsbFnCtrlStateCtrlData_c84 12 "%0no active urb found on epIndex[%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=HandleXferComplete
+{
+epIndex, ItemLong -- 10
+}
+#typev QcUsbFnCtrlStateCtrlData_c78 11 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=HandleXferComplete
+{
+}
+#typev QcUsbFnCtrlStateCtrlData_c165 17 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=HandleXferNotReady
+{
+}
+#typev QcUsbFnCtrlStateCtrlData_c142 16 "%0ERROR: Host should ask for DATA, not STATUS" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=HandleXferNotReady
+{
+}
+#typev QcUsbFnCtrlStateCtrlData_c136 15 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=HandleXferNotReady
+{
+}
+#typev QcUsbFnCtrlStateCtrlData_c212 19 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=transitionToCtrlData
+{
+}
+#typev QcUsbFnCtrlStateCtrlData_c206 18 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=transitionToCtrlData
+{
+}
+#enumv _TRB_CTL_TYPE
+{
+DWC_TRB_CTL_INVALID,0x0
+DWC_TRB_CTL_NORMAL,0x1
+DWC_TRB_CTL_CONTROL_SETUP,0x2
+DWC_TRB_CTL_CONTROL_STATUS_2,0x3
+DWC_TRB_CTL_CONTROL_STATUS_3,0x4
+DWC_TRB_CTL_CONTROL_DATA,0x5
+DWC_TRB_CTL_ISOCHRONOUS_FIRST,0x6
+DWC_TRB_CTL_ISOCHRONOUS,0x7
+DWC_TRB_CTL_LINK_TRB,0x8
+}

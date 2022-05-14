@@ -1,0 +1,41 @@
+// PDB:  qcgnss.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+7536ba1f-7b64-3404-7774-c01547184fa3 10.4 // SRC=gpsutil.c MJ= MN=
+#typev gpsutil_c330 13 "%0gpsutil.c::330 QCGPS: GnssErrorCodeDescription RtlStringCchCopyNW failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=GnssErrorCodeDescription
+{
+status, ItemLong -- 10
+}
+#typev gpsutil_c382 19 "%0gpsutil.c::382 QCGPS: SendErrorIndicationToAdaptor pGnssReqConfigDataEvt = NULL !!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=SendErrorIndicationToAdaptor
+{
+}
+#typev gpsutil_c376 18 "%0gpsutil.c::376 QCGPS: SendErrorIndicationToAdaptor send Error indication to adaptor" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendErrorIndicationToAdaptor
+{
+}
+#typev gpsutil_c359 17 "%0gpsutil.c::359 QCGPS: WdfRequestRetrieveOutputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=SendErrorIndicationToAdaptor
+{
+bufLength, ItemPtr -- 10
+sizeof(GNSS_EVENT), ItemLong -- 11
+}
+#typev gpsutil_c353 16 "%0gpsutil.c::353 QCGPS: SendErrorIndicationToAdaptor WdfRequestRetrieveOutputBuffer failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=SendErrorIndicationToAdaptor
+{
+status, ItemLong -- 10
+}
+#typev gpsutil_c346 15 "%0gpsutil.c::346 QCGPS: SendErrorIndicationToAdaptor no more pending IOCTL_GNSS_LISTEN_ERROR !!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendErrorIndicationToAdaptor
+{
+}
+#typev gpsutil_c343 14 "%0gpsutil.c::343 QCGPS: ---> SendErrorIndicationToAdaptor " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendErrorIndicationToAdaptor
+{
+}
+#typev gpsutil_c204 10 "%0gpsutil.c::204  in_convfactor := %10!s! out_convfactor = %11!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=errorEstimate
+{
+in_convfactor, ItemDouble -- 10
+out_convfactor, ItemDouble -- 11
+}
+#typev gpsutil_c219 12 "%0gpsutil.c::219 scalefactor is %10!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=getelipErrorEstimate
+{
+*out_scalefactor, ItemDouble -- 10
+}
+#typev gpsutil_c214 11 "%0gpsutil.c::214  Invalid confidence value = %10!d! requested, resetting to 95%" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=getelipErrorEstimate
+{
+out_conf, ItemLong -- 10
+}

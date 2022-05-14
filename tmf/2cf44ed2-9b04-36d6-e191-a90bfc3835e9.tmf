@@ -1,0 +1,31 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+2cf44ed2-9b04-36d6-e191-a90bfc3835e9 WMRIL // SRC=WMRilGetDriverVersion.cpp MJ= MN=
+#typev WMRilGetDriverVersion_cpp137 13 "%0%!LEVEL! %!FUNC!:WMRIL does not support any IHVRIL version advertised by the client. Min = 0x%10!08X!, Max = 0x%11!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::GetDriverVersionClass::Execute
+{
+m_Params.dwMinVersion, ItemLong -- 10
+m_Params.dwMaxVersion, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetDriverVersion_cpp145 14 "%0%!LEVEL! %!FUNC!:Negotiated version = %10!02u!.%11!02u!.%12!02u!.%13!02u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::GetDriverVersionClass::Execute
+{
+maxSupportedVersion, ItemLong -- 10
+WMRILVersion, ItemLong -- 11
+CISubmissionCount, ItemLong -- 12
+BranchPatchNumber, ItemLong -- 13
+}
+#typev WMRilGetDriverVersion_cpp117 12 "%0%!LEVEL! %!FUNC!:Min = 0x%10!08X!, Max = 0x%11!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::GetDriverVersionClass::Execute
+{
+m_Params.dwMinVersion, ItemLong -- 10
+m_Params.dwMaxVersion, ItemLong -- 11
+}
+#typev WMRilGetDriverVersion_cpp112 11 "%0%!LEVEL! %!FUNC!:Driver is not available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::GetDriverVersionClass::Execute
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetDriverVersion_cpp69 10 "%0%!LEVEL! %!FUNC!:Buffer size %10!u! != sizeof(RILGETDRIVERVERSIONPARAMS)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::GetDriverVersionClass::InitParams
+{
+dwBufferLength, ItemLong -- 10
+}

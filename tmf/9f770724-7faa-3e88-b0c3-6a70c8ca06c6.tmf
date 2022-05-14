@@ -1,0 +1,211 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+9f770724-7faa-3e88-b0c3-6a70c8ca06c6 WMRIL // SRC=WMRilOpenUiccLogicalChannel.cpp MJ= MN=
+#typev WMRilOpenUiccLogicalChannel_cpp120 15 "%0%!LEVEL! %!FUNC!:Cannot map slot index %10!u! to QMI UIM slot enum" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::Execute
+{
+m_Params.dwSlotIndex, ItemLong -- 10
+}
+#typev WMRilOpenUiccLogicalChannel_cpp99 14 "%0%!LEVEL! %!FUNC!:App id length %10!u! is larger than the maximum app id length %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::Execute
+{
+m_Params.dwAppIdLength, ItemLong -- 10
+MaxAppIdLength, ItemLong -- 11
+}
+#typev WMRilOpenUiccLogicalChannel_cpp88 13 "%0%!LEVEL! %!FUNC!:Getting card info for slot index %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::Execute
+{
+m_Params.dwSlotIndex, ItemLong -- 10
+}
+#typev WMRilOpenUiccLogicalChannel_cpp83 12 "%0%!LEVEL! %!FUNC!:There is no card at the specified index." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::Execute
+{
+}
+#typev WMRilOpenUiccLogicalChannel_cpp74 11 "%0%!LEVEL! %!FUNC!:Error: Slot index %10!u! is an invalid slot index.  The physical slot index must be less than %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::Execute
+{
+m_Params.dwSlotIndex, ItemLong -- 10
+numUiccSlots, ItemLong -- 11
+}
+#typev WMRilOpenUiccLogicalChannel_cpp66 10 "%0%!LEVEL! %!FUNC!:UIM service is not available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::Execute
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilOpenUiccLogicalChannel_cpp355 26 "%0%!LEVEL! %!FUNC!:OpenUiccLogicalChannel input params: slot index = %10!u!, app id length = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::InitParams
+{
+m_Params.dwSlotIndex, ItemLong -- 10
+m_Params.dwAppIdLength, ItemLong -- 11
+}
+#typev WMRilOpenUiccLogicalChannel_cpp348 25 "%0%!LEVEL! %!FUNC!:invalid command size = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::InitParams
+{
+dwBufferLength, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilOpenUiccLogicalChannel_cpp323 24 "%0%!LEVEL! %!FUNC!:Successfully open a logical channel with WMRIL channel id %10!u!, QMI channel id %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::ProcessResponse
+{
+dwWMRILLogicalChannelId, ItemLong -- 10
+pLogicalChannelResp->channel_id, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilOpenUiccLogicalChannel_cpp315 23 "%0%!LEVEL! %!FUNC!:Fail to call GenerateWMRILLogicalChannelId: QMI UIM channel id = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::ProcessResponse
+{
+pLogicalChannelResp->channel_id, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilOpenUiccLogicalChannel_cpp300 22 "%0%!LEVEL! %!FUNC!:UIM service is not available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::ProcessResponse
+{
+}
+#typev WMRilOpenUiccLogicalChannel_cpp290 21 "%0%!LEVEL! %!FUNC!:DebugDump SelectAIDResponse: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::ProcessResponse
+{
+WMRIL_LOG_XSTR(pOpenUiccLogicalChannelInfo->bSelectResponse. pLogicalChannelResp->select_response_len + 2), ItemHEXDump -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilOpenUiccLogicalChannel_cpp272 20 "%0%!LEVEL! %!FUNC!:pOpenUiccLogicalChannelInfo is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::ProcessResponse
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilOpenUiccLogicalChannel_cpp250 19 "%0%!LEVEL! %!FUNC!:card result TLV is missing" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::ProcessResponse
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilOpenUiccLogicalChannel_cpp227 18 "%0%!LEVEL! %!FUNC!:QMI Result = %10!s!,  Error = %11!s!(0x%12!04X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::ProcessResponse
+{
+pLogicalChannelResp->resp.result, ItemEnum(qmi_result_type_v01) -- 10
+pLogicalChannelResp->resp.error, ItemEnum(qmi_error_type_v01) -- 11
+pLogicalChannelResp->resp.error, ItemLong -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilOpenUiccLogicalChannel_cpp219 17 "%0%!LEVEL! %!FUNC!:Wrong QMI message ID %10!s!(0x%11!08X!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::ProcessResponse
+{
+Debug::QMIReqToStr(QMIUIMService. dwMsgID), ItemWString -- 10
+dwMsgID, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilOpenUiccLogicalChannel_cpp212 16 "%0%!LEVEL! %!FUNC!:Wrong QMI service ID 0x%10!02X!.  Expecting QMI_UIM_SERVICE" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::OpenUiccLogicalChannelClass::ProcessResponse
+{
+serviceID, ItemLong -- 10
+}
+#enumv qmi_result_type_v01
+{
+QMI_RESULT_TYPE_MIN_ENUM_VAL_V01,0x80000001
+QMI_RESULT_SUCCESS_V01,0x0
+QMI_RESULT_FAILURE_V01,0x1
+QMI_RESULT_TYPE_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}
+#enumv qmi_error_type_v01
+{
+QMI_ERROR_TYPE_MIN_ENUM_VAL_V01,0x80000001
+QMI_ERR_NONE_V01,0x0
+QMI_ERR_MALFORMED_MSG_V01,0x1
+QMI_ERR_NO_MEMORY_V01,0x2
+QMI_ERR_INTERNAL_V01,0x3
+QMI_ERR_ABORTED_V01,0x4
+QMI_ERR_CLIENT_IDS_EXHAUSTED_V01,0x5
+QMI_ERR_UNABORTABLE_TRANSACTION_V01,0x6
+QMI_ERR_INVALID_CLIENT_ID_V01,0x7
+QMI_ERR_NO_THRESHOLDS_V01,0x8
+QMI_ERR_INVALID_HANDLE_V01,0x9
+QMI_ERR_INVALID_PROFILE_V01,0xA
+QMI_ERR_INVALID_PINID_V01,0xB
+QMI_ERR_INCORRECT_PIN_V01,0xC
+QMI_ERR_NO_NETWORK_FOUND_V01,0xD
+QMI_ERR_CALL_FAILED_V01,0xE
+QMI_ERR_OUT_OF_CALL_V01,0xF
+QMI_ERR_NOT_PROVISIONED_V01,0x10
+QMI_ERR_MISSING_ARG_V01,0x11
+QMI_ERR_ARG_TOO_LONG_V01,0x13
+QMI_ERR_INVALID_TX_ID_V01,0x16
+QMI_ERR_DEVICE_IN_USE_V01,0x17
+QMI_ERR_OP_NETWORK_UNSUPPORTED_V01,0x18
+QMI_ERR_OP_DEVICE_UNSUPPORTED_V01,0x19
+QMI_ERR_NO_EFFECT_V01,0x1A
+QMI_ERR_NO_FREE_PROFILE_V01,0x1B
+QMI_ERR_INVALID_PDP_TYPE_V01,0x1C
+QMI_ERR_INVALID_TECH_PREF_V01,0x1D
+QMI_ERR_INVALID_PROFILE_TYPE_V01,0x1E
+QMI_ERR_INVALID_SERVICE_TYPE_V01,0x1F
+QMI_ERR_INVALID_REGISTER_ACTION_V01,0x20
+QMI_ERR_INVALID_PS_ATTACH_ACTION_V01,0x21
+QMI_ERR_AUTHENTICATION_FAILED_V01,0x22
+QMI_ERR_PIN_BLOCKED_V01,0x23
+QMI_ERR_PIN_PERM_BLOCKED_V01,0x24
+QMI_ERR_SIM_NOT_INITIALIZED_V01,0x25
+QMI_ERR_MAX_QOS_REQUESTS_IN_USE_V01,0x26
+QMI_ERR_INCORRECT_FLOW_FILTER_V01,0x27
+QMI_ERR_NETWORK_QOS_UNAWARE_V01,0x28
+QMI_ERR_INVALID_ID_V01,0x29
+QMI_ERR_INVALID_QOS_ID_V01,0x29
+QMI_ERR_REQUESTED_NUM_UNSUPPORTED_V01,0x2A
+QMI_ERR_INTERFACE_NOT_FOUND_V01,0x2B
+QMI_ERR_FLOW_SUSPENDED_V01,0x2C
+QMI_ERR_INVALID_DATA_FORMAT_V01,0x2D
+QMI_ERR_GENERAL_V01,0x2E
+QMI_ERR_UNKNOWN_V01,0x2F
+QMI_ERR_INVALID_ARG_V01,0x30
+QMI_ERR_INVALID_INDEX_V01,0x31
+QMI_ERR_NO_ENTRY_V01,0x32
+QMI_ERR_DEVICE_STORAGE_FULL_V01,0x33
+QMI_ERR_DEVICE_NOT_READY_V01,0x34
+QMI_ERR_NETWORK_NOT_READY_V01,0x35
+QMI_ERR_CAUSE_CODE_V01,0x36
+QMI_ERR_MESSAGE_NOT_SENT_V01,0x37
+QMI_ERR_MESSAGE_DELIVERY_FAILURE_V01,0x38
+QMI_ERR_INVALID_MESSAGE_ID_V01,0x39
+QMI_ERR_ENCODING_V01,0x3A
+QMI_ERR_AUTHENTICATION_LOCK_V01,0x3B
+QMI_ERR_INVALID_TRANSITION_V01,0x3C
+QMI_ERR_NOT_A_MCAST_IFACE_V01,0x3D
+QMI_ERR_MAX_MCAST_REQUESTS_IN_USE_V01,0x3E
+QMI_ERR_INVALID_MCAST_HANDLE_V01,0x3F
+QMI_ERR_INVALID_IP_FAMILY_PREF_V01,0x40
+QMI_ERR_SESSION_INACTIVE_V01,0x41
+QMI_ERR_SESSION_INVALID_V01,0x42
+QMI_ERR_SESSION_OWNERSHIP_V01,0x43
+QMI_ERR_INSUFFICIENT_RESOURCES_V01,0x44
+QMI_ERR_DISABLED_V01,0x45
+QMI_ERR_INVALID_OPERATION_V01,0x46
+QMI_ERR_INVALID_QMI_CMD_V01,0x47
+QMI_ERR_TPDU_TYPE_V01,0x48
+QMI_ERR_SMSC_ADDR_V01,0x49
+QMI_ERR_INFO_UNAVAILABLE_V01,0x4A
+QMI_ERR_SEGMENT_TOO_LONG_V01,0x4B
+QMI_ERR_SEGMENT_ORDER_V01,0x4C
+QMI_ERR_BUNDLING_NOT_SUPPORTED_V01,0x4D
+QMI_ERR_OP_PARTIAL_FAILURE_V01,0x4E
+QMI_ERR_POLICY_MISMATCH_V01,0x4F
+QMI_ERR_SIM_FILE_NOT_FOUND_V01,0x50
+QMI_ERR_EXTENDED_INTERNAL_V01,0x51
+QMI_ERR_ACCESS_DENIED_V01,0x52
+QMI_ERR_HARDWARE_RESTRICTED_V01,0x53
+QMI_ERR_ACK_NOT_SENT_V01,0x54
+QMI_ERR_INJECT_TIMEOUT_V01,0x55
+QMI_ERR_INCOMPATIBLE_STATE_V01,0x5A
+QMI_ERR_FDN_RESTRICT_V01,0x5B
+QMI_ERR_SUPS_FAILURE_CAUSE_V01,0x5C
+QMI_ERR_NO_RADIO_V01,0x5D
+QMI_ERR_NOT_SUPPORTED_V01,0x5E
+QMI_ERR_NO_SUBSCRIPTION_V01,0x5F
+QMI_ERR_CARD_CALL_CONTROL_FAILED_V01,0x60
+QMI_ERR_NETWORK_ABORTED_V01,0x61
+QMI_ERR_MSG_BLOCKED_V01,0x62
+QMI_ERR_INVALID_SESSION_TYPE_V01,0x64
+QMI_ERR_INVALID_PB_TYPE_V01,0x65
+QMI_ERR_NO_SIM_V01,0x66
+QMI_ERR_PB_NOT_READY_V01,0x67
+QMI_ERR_PIN_RESTRICTION_V01,0x68
+QMI_ERR_PIN2_RESTRICTION_V01,0x69
+QMI_ERR_PUK_RESTRICTION_V01,0x6A
+QMI_ERR_PUK2_RESTRICTION_V01,0x6B
+QMI_ERR_PB_ACCESS_RESTRICTED_V01,0x6C
+QMI_ERR_PB_DELETE_IN_PROG_V01,0x6D
+QMI_ERR_PB_TEXT_TOO_LONG_V01,0x6E
+QMI_ERR_PB_NUMBER_TOO_LONG_V01,0x6F
+QMI_ERR_PB_HIDDEN_KEY_RESTRICTION_V01,0x70
+QMI_ERR_PB_NOT_AVAILABLE_V01,0x71
+QMI_ERR_DEVICE_MEMORY_ERROR_V01,0x72
+QMI_ERROR_TYPE_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}

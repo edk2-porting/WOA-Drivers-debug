@@ -1,0 +1,541 @@
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+55c718ed-3cef-328c-ca34-3ac14ab100a7 PEP // SRC=Idle_MicroPep.c MJ= MN=
+#typev Idle_MicroPep_c188 15 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleFinishInitialization
+{
+}
+#typev Idle_MicroPep_c170 14 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleFinishInitialization
+{
+}
+#typev Idle_MicroPep_c1494 75 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInitializeHibernateVeto
+{
+}
+#typev Idle_MicroPep_c1475 74 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInitializeHibernateVeto
+{
+}
+#typev Idle_MicroPep_c164 13 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInitializeInternal
+{
+}
+#typev Idle_MicroPep_c140 12 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInitializeInternal
+{
+}
+#typev Idle_MicroPep_c472 26 "%0 [Info] :Cluster %10!d!, numCoresPerCluster = %11!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInitializeSyncFlags
+{
+i, ItemLong -- 10
+IdleGetActiveCpusInCluster(i), ItemLong -- 11
+}
+#typev Idle_MicroPep_c466 25 "%0 [Info] :numClusters = %10!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInitializeSyncFlags
+{
+IdleGetActiveClusterCount(), ItemLong -- 10
+}
+#typev Idle_MicroPep_c1233 62 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalAppendBootVeto
+{
+}
+#typev Idle_MicroPep_c1215 61 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalAppendBootVeto
+{
+}
+#typev Idle_MicroPep_c919 49 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalAppendToModeCallbackList
+{
+}
+#typev Idle_MicroPep_c893 48 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalAppendToModeCallbackList
+{
+}
+#typev Idle_MicroPep_c493 27 "%0 [Info] :Applying additional latency of %10!d! to %11!s!.%12!s! break-even (new break-even: %13!d!) 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalApplyUsbDebuggerBreakEvenOffset
+{
+ctxt->DebuggerHostLatency, ItemLong -- 10
+&ctxt->LprArray[mode->LprId].LprName, ItemPWString -- 11
+&mode->ModeName, ItemPWString -- 12
+mode->Attributes[0].BreakEven, ItemLong -- 13
+}
+#typev Idle_MicroPep_c242 22 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalCompareQueryString
+{
+}
+#typev Idle_MicroPep_c239 21 "%0 [Verb] :Match returned is %10!s! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalCompareQueryString
+{
+match, ItemEnum(QueryMatchType) -- 10
+}
+#typev Idle_MicroPep_c234 20 "%0 [Verb] :String lengths mismatch, but difference is wild 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalCompareQueryString
+{
+}
+#typev Idle_MicroPep_c218 19 "%0 [Verb] :Character mismatch at offset %10!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalCompareQueryString
+{
+j, ItemLong -- 10
+}
+#typev Idle_MicroPep_c210 18 "%0 [Verb] :Found * at offset %10!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalCompareQueryString
+{
+j, ItemLong -- 10
+}
+#typev Idle_MicroPep_c199 17 "%0 [Verb] :Comparing %10!s! of length %11!d! (search) to %12!s! of length %13!d! (query) 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalCompareQueryString
+{
+searchString, ItemWString -- 10
+searchStringLength, ItemLong -- 11
+queryString, ItemWString -- 12
+queryStringLength, ItemLong -- 13
+}
+#typev Idle_MicroPep_c198 16 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalCompareQueryString
+{
+}
+#typev Idle_MicroPep_c1940 82 "%0 [Err ] : IdlePerformOperation Failed  	[Idle_MicroPep.c::%!FUNC!::1940]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalCoreNotification
+{
+}
+#typev Idle_MicroPep_c1311 65 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalEnumerateBootVetoes
+{
+}
+#typev Idle_MicroPep_c1247 64 "%0 [Info] :Enumerating boot vetoes 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalEnumerateBootVetoes
+{
+}
+#typev Idle_MicroPep_c1239 63 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalEnumerateBootVetoes
+{
+}
+#typev Idle_MicroPep_c816 44 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalExecuteCallbackList
+{
+}
+#typev Idle_MicroPep_c804 43 "%0 [Verb] :Invoking registered callback at %10!p! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalExecuteCallbackList
+{
+PCallbackList->cb, ItemPtr -- 10
+}
+#typev Idle_MicroPep_c795 42 "%0 [Verb] :enter - CallbackList = %10!p!, CoreMask = %11!08x!, ModeId = %12!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalExecuteCallbackList
+{
+CallbackList, ItemPtr -- 10
+CoreMask, ItemLong -- 11
+ModeId, ItemLong -- 12
+}
+#typev Idle_MicroPep_c835 45 "%0 [Verb] :Invoking callback at %10!p!, passing %11!p! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalExecuteInitializedCbList
+{
+cb->cb, ItemPtr -- 10
+cb->context, ItemPtr -- 11
+}
+#typev Idle_MicroPep_c2214 104 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedIdleStates
+{
+}
+#typev Idle_MicroPep_c2210 103 "%0 [Err ] : IdleGetCoordinatedIdleStates Failed  	[Idle_MicroPep.c::%!FUNC!::2210]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedIdleStates
+{
+}
+#typev Idle_MicroPep_c2194 102 "%0 [Info] :Coordinated mode %10!d! details 
+    Latency: %11!d! 
+    BreakEvenDuration: %12!d!
+    DependencyCount: %13!d!
+    MaximumDependencySize: %14!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedIdleStates
+{
+i, ItemLong -- 10
+States[i].Latency, ItemLong -- 11
+States[i].BreakEvenDuration, ItemLong -- 12
+States[i].DependencyCount, ItemLong -- 13
+States[i].MaximumDependencySize, ItemLong -- 14
+}
+#typev Idle_MicroPep_c2180 101 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedIdleStates
+{
+}
+#typev Idle_MicroPep_c2316 111 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedStateDependency
+{
+}
+#typev Idle_MicroPep_c2307 110 "%0 [Err ] :Get dependency data for coordinated mode %10!d! failed.  (mode=%11!p!, index=%12!d!, arraysize=%13!d!) 	[Idle_MicroPep.c::%!FUNC!::2307]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedStateDependency
+{
+DependentStates->StateIndex, ItemLong -- 10
+mode, ItemPtr -- 11
+DependentStates->DependencyIndex, ItemLong -- 12
+mode ? mode->DependencyContainerArraySize : 0, ItemLong -- 13
+}
+#typev Idle_MicroPep_c2300 109 "%0 [Err ] :Actual dependency count, %10!d!, greater than allocated size, %11!d!. 	[Idle_MicroPep.c::%!FUNC!::2300]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedStateDependency
+{
+tmpDepCon.Count, ItemLong -- 10
+DependentStates->DependencySize, ItemLong -- 11
+}
+#typev Idle_MicroPep_c2294 108 "%0 [Info] :Dependencies above for TargetProcessor: %10!p! (%11!d!) 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedStateDependency
+{
+DependentStates->TargetProcessor, ItemPtr -- 10
+expectedLpr, ItemLong -- 11
+}
+#typev Idle_MicroPep_c2270 107 "%0 [Info] :Option %10!d! 
+    ExpectedStateIndex: %11!d!
+    Flags: %12!s!%13!s!%14!s! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedStateDependency
+{
+i, ItemLong -- 10
+DependentStates->Options[i].ExpectedStateIndex, ItemLong -- 11
+DependentStates->Options[i].InitiatingState ? 'InitiatingState ' : ' ', ItemString -- 12
+DependentStates->Options[i].LooseDependency ? 'LooseDependency ' : ' ', ItemString -- 13
+DependentStates->Options[i].DependentState ? 'DependentState ' : ' ', ItemString -- 14
+}
+#typev Idle_MicroPep_c2234 106 "%0 [Info] :Get dependency data at index %10!d! for coordinated mode %11!d! (%12!s!.%13!s!) 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedStateDependency
+{
+DependentStates->DependencyIndex, ItemLong -- 10
+DependentStates->StateIndex, ItemLong -- 11
+&Cntxt->LprArray[mode->LprId].LprName, ItemPWString -- 12
+&mode->ModeName, ItemPWString -- 13
+}
+#typev Idle_MicroPep_c2221 105 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedStateDependency
+{
+}
+#typev Idle_MicroPep_c2074 91 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedStatesCount
+{
+}
+#typev Idle_MicroPep_c2073 90 "%0 [Info] :returned count = %10!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedStatesCount
+{
+count, ItemLong -- 10
+}
+#typev Idle_MicroPep_c2058 89 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetCoordinatedStatesCount
+{
+}
+#typev Idle_MicroPep_c2170 100 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetProcessorStateData
+{
+}
+#typev Idle_MicroPep_c2166 99 "%0 [Err ] : IdleGetProcessorStateData Failed  	[Idle_MicroPep.c::%!FUNC!::2166]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetProcessorStateData
+{
+}
+#typev Idle_MicroPep_c2144 98 "%0 [Info] :State %10!d! details 
+    Latency: %11!d! 
+    BreakEvenDuration: %12!d!
+    CStateType: %13!d!
+    Flags: %14!s!%15!s!%16!s!%17!s!%18!s!%19!s! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetProcessorStateData
+{
+i, ItemLong -- 10
+IdleStates[i].Latency, ItemLong -- 11
+IdleStates[i].BreakEvenDuration, ItemLong -- 12
+IdleStates[i].CStateType, ItemLong -- 13
+IdleStates[i].Interruptible ? 'Interruptible. ' : ' ', ItemString -- 14
+IdleStates[i].CacheCoherent ? 'CacheCoherent. ' : ' ', ItemString -- 15
+IdleStates[i].ThreadContextRetained ? 'ContextRetained ' : ' ', ItemString -- 16
+IdleStates[i].PlatformOnly ? 'Platform ' : ' ', ItemString -- 17
+IdleStates[i].WakesSpuriously ? 'WakesSpuriously ' : ' ', ItemString -- 18
+IdleStates[i].Autonomous ? 'Autonomous ' : ' ', ItemString -- 19
+}
+#typev Idle_MicroPep_c2116 97 "%0 [Err ] : IdleGetProcessorStateData - State Count doesn't match with internal count  	[Idle_MicroPep.c::%!FUNC!::2116]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetProcessorStateData
+{
+}
+#typev Idle_MicroPep_c2109 96 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetProcessorStateData
+{
+}
+#typev Idle_MicroPep_c2099 95 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetProcessorStatesCount
+{
+}
+#typev Idle_MicroPep_c2097 94 "%0 [Info] :processor = %10!d!, returned count = %11!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetProcessorStatesCount
+{
+ProcNum, ItemLong -- 10
+count, ItemLong -- 11
+}
+#typev Idle_MicroPep_c2093 93 "%0 [Err ] : IdleGetProcessorStatesCount Failed  	[Idle_MicroPep.c::%!FUNC!::2093]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetProcessorStatesCount
+{
+}
+#typev Idle_MicroPep_c2084 92 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalGetProcessorStatesCount
+{
+}
+#typev Idle_MicroPep_c1466 73 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalInitAndApplyRegistryVetoes
+{
+}
+#typev Idle_MicroPep_c1393 72 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalInitAndApplyRegistryVetoes
+{
+}
+#typev Idle_MicroPep_c2411 120 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalInitiateWake
+{
+}
+#typev Idle_MicroPep_c2394 119 "%0 [Info] :Initiate wake on processor %10!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalInitiateWake
+{
+procNum, ItemLong -- 10
+}
+#typev Idle_MicroPep_c2393 118 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalInitiateWake
+{
+}
+#typev Idle_MicroPep_c779 41 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalLookupLprMode
+{
+}
+#typev Idle_MicroPep_c770 40 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalLookupLprMode
+{
+}
+#typev Idle_MicroPep_c766 39 "%0 [Info] :Found mode %10!s!.%11!s! - LprId: %12!d!, ModeId: %13!d!, CoordinatedModeId: %14!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalLookupLprMode
+{
+Lpr, ItemPWString -- 10
+Mode, ItemPWString -- 11
+ModeIdx->LprId, ItemLong -- 12
+ModeIdx->ModeId, ItemLong -- 13
+ModeIdx->CoordinatedModeId, ItemLong -- 14
+}
+#typev Idle_MicroPep_c743 38 "%0 [Warn] :exit - No LPRs found 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalLookupLprMode
+{
+}
+#typev Idle_MicroPep_c738 37 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalLookupLprMode
+{
+}
+#typev Idle_MicroPep_c727 36 "%0 [Warn] :exit - No functions found (%10!s!.%11!s!) 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalMapInternalFunctions
+{
+lpr, ItemPWString -- 10
+mode, ItemPWString -- 11
+}
+#typev Idle_MicroPep_c723 35 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalMapInternalFunctions
+{
+}
+#typev Idle_MicroPep_c719 34 "%0 [Info] :Found %10!s!.%11!s! match on lpr (%12!s!) and mode (%13!s!) 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalMapInternalFunctions
+{
+context->InternalFuncTable[j].LprQueryString, ItemWString -- 10
+context->InternalFuncTable[j].ModeQueryString, ItemWString -- 11
+savedLpr, ItemEnum(QueryMatchType) -- 12
+savedMode, ItemEnum(QueryMatchType) -- 13
+}
+#typev Idle_MicroPep_c706 33 "%0 [Verb] :Found a strong match -- search is done 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalMapInternalFunctions
+{
+}
+#typev Idle_MicroPep_c697 32 "%0 [Verb] :Found a weak match -- continue searching for strong match 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalMapInternalFunctions
+{
+}
+#typev Idle_MicroPep_c671 31 "%0 [Verb] :Checking table entry %10!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalMapInternalFunctions
+{
+i, ItemLong -- 10
+}
+#typev Idle_MicroPep_c658 30 "%0 [Warn] :exit - Input contains NULL data- context=%10!p! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalMapInternalFunctions
+{
+context, ItemPtr -- 10
+}
+#typev Idle_MicroPep_c651 29 "%0 [Info] :Searching function mapping for %10!s!.%11!s! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalMapInternalFunctions
+{
+lpr, ItemPWString -- 10
+mode, ItemPWString -- 11
+}
+#typev Idle_MicroPep_c650 28 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalMapInternalFunctions
+{
+}
+#typev Idle_MicroPep_c338 24 "%0 [Err ] :Not ready for coordinated mode change. 	[Idle_MicroPep.c::%!FUNC!::338]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalModeUpdateThreadStart
+{
+}
+#typev Idle_MicroPep_c317 23 "%0 [Err ] :KeWaitForSingleObject failed 	[Idle_MicroPep.c::%!FUNC!::317]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalModeUpdateThreadStart
+{
+}
+#typev Idle_MicroPep_c2044 88 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalNotification
+{
+}
+#typev Idle_MicroPep_c2032 87 "%0 [Err ] : IdlePerformOperation Failed  	[Idle_MicroPep.c::%!FUNC!::2032]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalNotification
+{
+}
+#typev Idle_MicroPep_c1993 86 "%0 [Info] :%10!s! notification for core %11!d!, for entry into mode %12!d! with %13!d! coordinated modes 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalNotification
+{
+params.Type, ItemEnum(PEP_IDLE_NOTIFY_ENUM) -- 10
+params.CoreId, ItemLong -- 11
+params.ModeId, ItemLong -- 12
+params.CoordinatedModesCount, ItemLong -- 13
+}
+#typev Idle_MicroPep_c1983 85 "%0 [Err ] :PEP Idle: Processor mode given is incorrect. Current core vs num lprs: %10!ld! vs %11!ld!, Mode Id vs Num Modes in LPR: %12!ld! vs %13!ld! 	[Idle_MicroPep.c::%!FUNC!::1983]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalNotification
+{
+params.CoreId, ItemLong -- 10
+cntxt->LprArraySize, ItemLong -- 11
+params.ModeId, ItemLong -- 12
+cntxt->LprArray[params.CoreId].ModeCount, ItemLong -- 13
+}
+#typev Idle_MicroPep_c1968 84 "%0 [Err ] :PEP Idle: Coordinated mode entries are invalid. States Array pointer: %10!p! Expected count: %11!ld!, Given count: %12!ld! 	[Idle_MicroPep.c::%!FUNC!::1968]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalNotification
+{
+params.CoordinatedModes, ItemPtr -- 10
+cntxt->CoordinatedModesArraySize, ItemLong -- 11
+params.CoordinatedModesCount, ItemLong -- 12
+}
+#typev Idle_MicroPep_c1962 83 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalNotification
+{
+}
+#typev Idle_MicroPep_c1910 81 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalPerformOperation
+{
+}
+#typev Idle_MicroPep_c1867 80 "%0 [Verb] :Invoking registered complete function at %10!p! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalPerformOperation
+{
+params.Mode->IdleModeFunctions.CompleteFunction, ItemPtr -- 10
+}
+#typev Idle_MicroPep_c1853 79 "%0 [Verb] :Invoking registered execute function at %10!p! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalPerformOperation
+{
+params.Mode->IdleModeFunctions.ExecuteFunction, ItemPtr -- 10
+}
+#typev Idle_MicroPep_c1839 78 "%0 [Verb] :Invoking registered preexecute function at %10!p! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalPerformOperation
+{
+params.Mode->IdleModeFunctions.PreExecuteFunction, ItemPtr -- 10
+}
+#typev Idle_MicroPep_c1796 77 "%0 [Verb] :Handling %10!s! for mode %11!s!.%12!s! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalPerformOperation
+{
+params.Type, ItemEnum(PEP_IDLE_NOTIFY_ENUM) -- 10
+&cntxt->LprArray[params.Mode->LprId].LprName, ItemPWString -- 11
+&params.Mode->ModeName, ItemPWString -- 12
+}
+#typev Idle_MicroPep_c1789 76 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalPerformOperation
+{
+}
+#typev Idle_MicroPep_c2385 117 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryStateName
+{
+}
+#typev Idle_MicroPep_c2378 116 "%0 [Info] :Returning name of %10!s! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryStateName
+{
+StateName->Name, ItemWString -- 10
+}
+#typev Idle_MicroPep_c2374 115 "%0 [Err ] : Error in swprintf_s 	[Idle_MicroPep.c::%!FUNC!::2374]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryStateName
+{
+}
+#typev Idle_MicroPep_c2361 114 "%0 [Info] :Returning size of %10!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryStateName
+{
+StateName->NameSize, ItemLong -- 10
+}
+#typev Idle_MicroPep_c2332 113 "%0 [Info] :Query state name for processor %10!d!, index %11!d! (size=%12!d!) 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryStateName
+{
+ProcNum, ItemLong -- 10
+StateName->StateIndex, ItemLong -- 11
+StateName->NameSize, ItemLong -- 12
+}
+#typev Idle_MicroPep_c2324 112 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryStateName
+{
+}
+#typev Idle_MicroPep_c1363 71 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryVetoReason
+{
+}
+#typev Idle_MicroPep_c1357 70 "%0 [Err ] :No data to return - unexpected NULL ctxt=%10!p!, QueryVetoReason=%11!p! 	[Idle_MicroPep.c::%!FUNC!::1357]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryVetoReason
+{
+ctxt, ItemPtr -- 10
+QueryVetoReason, ItemPtr -- 11
+}
+#typev Idle_MicroPep_c1351 69 "%0 [Warn] :No data to return - veto reason #%10!d!, registered count %11!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryVetoReason
+{
+QueryVetoReason->VetoReason, ItemLong -- 10
+ctxt->VetoInformation.RegisteredVetoCount, ItemLong -- 11
+}
+#typev Idle_MicroPep_c1343 68 "%0 [Info] :Veto reason #%10!d!, returning name of %11!s! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryVetoReason
+{
+QueryVetoReason->VetoReason, ItemLong -- 10
+QueryVetoReason->Name, ItemWString -- 11
+}
+#typev Idle_MicroPep_c1333 67 "%0 [Info] :Veto reason #%10!d!, returning size of %11!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryVetoReason
+{
+QueryVetoReason->VetoReason, ItemLong -- 10
+QueryVetoReason->NameSize, ItemLong -- 11
+}
+#typev Idle_MicroPep_c1318 66 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryVetoReason
+{
+}
+#typev Idle_MicroPep_c884 47 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalRegisterForInit
+{
+}
+#typev Idle_MicroPep_c850 46 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalRegisterForInit
+{
+}
+#typev Idle_MicroPep_c1040 53 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalRegisterForInitiateWakeCallback
+{
+}
+#typev Idle_MicroPep_c1014 52 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalRegisterForInitiateWakeCallback
+{
+}
+#typev Idle_MicroPep_c1006 51 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalRegisterForModeCallback
+{
+}
+#typev Idle_MicroPep_c931 50 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalRegisterForModeCallback
+{
+}
+#typev Idle_MicroPep_c1115 57 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalRegisterVetoReason
+{
+}
+#typev Idle_MicroPep_c1110 56 "%0 [Info] :Assigned veto id %10!d! for "%11!s!" 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalRegisterVetoReason
+{
+*VetoId, ItemLong -- 10
+VetoReason, ItemWString -- 11
+}
+#typev Idle_MicroPep_c1057 55 "%0 [Warn] :exit on NULL check 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalRegisterVetoReason
+{
+}
+#typev Idle_MicroPep_c1052 54 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalRegisterVetoReason
+{
+}
+#typev Idle_MicroPep_c1132 58 "%0 [Verb] :Veto state %10!s! for %11!s!.%12!s!, new count is %13!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalSendVeto
+{
+increment ? 'incremented' : 'decremented', ItemString -- 10
+&ctxt->LprArray[mode->LprId].LprName, ItemPWString -- 11
+&mode->ModeName, ItemPWString -- 12
+newCount, ItemLong -- 13
+}
+#typev Idle_MicroPep_c1206 60 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalUpdateVeto
+{
+}
+#typev Idle_MicroPep_c1148 59 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalUpdateVeto
+{
+}
+#typev Idle_MicroPep_c135 11 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdlePreInitializeInternal
+{
+}
+#typev Idle_MicroPep_c119 10 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdlePreInitializeInternal
+{
+}
+#typev Idle_MicroPep_c2627 136 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepIdleCompleteMicroPEP
+{
+}
+#typev Idle_MicroPep_c2612 135 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepIdleCompleteMicroPEP
+{
+}
+#typev Idle_MicroPep_c2597 134 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepIdleExecuteMicroPEP
+{
+}
+#typev Idle_MicroPep_c2582 133 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepIdleExecuteMicroPEP
+{
+}
+#typev Idle_MicroPep_c2696 142 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepIdleIsHaltedMicroPEP
+{
+}
+#typev Idle_MicroPep_c2691 141 "%0 [Info] :Processor %10!d! (%11!p!) (spm core %12!d!) is %13!s! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepIdleIsHaltedMicroPEP
+{
+procNum, ItemLong -- 10
+DeviceHandle, ItemPtr -- 11
+adjProcNum, ItemLong -- 12
+halted->Halted ? 'halted' : 'not halted', ItemString -- 13
+}
+#typev Idle_MicroPep_c2675 140 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepIdleIsHaltedMicroPEP
+{
+}
+#typev Idle_MicroPep_c2570 132 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepIdlePreExecute
+{
+}
+#typev Idle_MicroPep_c2553 131 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepIdlePreExecute
+{
+}
+#typev Idle_MicroPep_c2435 122 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepIdleTestIdleState
+{
+}
+#typev Idle_MicroPep_c2427 121 "%0 [Func]:%!FUNC! 	[Idle_MicroPep.c]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepIdleTestIdleState
+{
+}
+#typev Idle_MicroPep_c2707 143 "%0 [Verb] :enter 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepInitiateWakeMicroPEP
+{
+}
+#typev Idle_MicroPep_c2463 124 "%0 [Func]:%!FUNC! 	[Idle_MicroPep.c]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepQueryCoordinatedIdleDependency
+{
+}
+#typev Idle_MicroPep_c2449 123 "%0 [Func]:%!FUNC! 	[Idle_MicroPep.c]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepQueryCoordinatedIdleStates
+{
+}
+#typev Idle_MicroPep_c2537 130 "%0 [Func]:%!FUNC! 	[Idle_MicroPep.c]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepQueryCoordinatedStateName
+{
+}
+#typev Idle_MicroPep_c2509 128 "%0 [Func]:%!FUNC! 	[Idle_MicroPep.c]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepQueryEnumerateBootVetoes
+{
+}
+#typev Idle_MicroPep_c2639 137 "%0 [Func]:%!FUNC! 	[Idle_MicroPep.c]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepQueryPlatformStatesMicroPEP
+{
+}
+#typev Idle_MicroPep_c2667 139 "%0 [Verb] :exit 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepQueryProcessorIdleStates
+{
+}
+#typev Idle_MicroPep_c2654 138 "%0 [Func]:%!FUNC! 	[Idle_MicroPep.c]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepQueryProcessorIdleStates
+{
+}
+#typev Idle_MicroPep_c2524 129 "%0 [Func]:%!FUNC! 	[Idle_MicroPep.c]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepQueryProcessorStateName
+{
+}
+#typev Idle_MicroPep_c2497 127 "%0 [Func]:%!FUNC! 	[Idle_MicroPep.c]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepQueryVetoReason
+{
+}
+#typev Idle_MicroPep_c2481 126 "%0 [Info] :VetoReasonCount = %10!d! 	[Idle_MicroPep.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepQueryVetoReasons
+{
+QueryReasons->VetoReasonCount, ItemLong -- 10
+}
+#typev Idle_MicroPep_c2478 125 "%0 [Func]:%!FUNC! 	[Idle_MicroPep.c]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepQueryVetoReasons
+{
+}
+#enumv QueryMatchType
+{
+NO_MATCH,0x0
+WEAK_MATCH,0x1
+STRONG_MATCH,0x2
+}
+#enumv PEP_IDLE_NOTIFY_ENUM
+{
+PEP_INTERNAL_NOTIFY_INVALID,0x0
+PEP_INTERNAL_PREEXECUTE,0x1
+PEP_INTERNAL_EXECUTE,0x2
+PEP_INTERNAL_COMPLETE,0x3
+PEP_INTERNAL_NOTIFY_ENUM_MAX,0x4
+}

@@ -1,0 +1,166 @@
+// PDB:  QCDiagBridge850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+0cdb7b00-d470-39a6-7417-d08f15fc8acd sys // SRC=server.c MJ= MN=
+#typev driver_c429 20 "%0INFO: StopServer() Exited " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=DeviceContextCleanup
+{
+}
+#typev driver_c429 19 "%0INFO: StopServer() Entry " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=DeviceContextCleanup
+{
+}
+// PDB:  QCDiagBridge850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev server_c801 52 "%0INFO: AllocateSocketContext() Exited " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=AllocateSocketContext
+{
+}
+#typev server_c794 51 "%0ERROR: socketContext,  socketContext->WskBuf.Mdl failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AllocateSocketContext
+{
+}
+#typev server_c786 50 "%0ERROR: socketContext, socketContext->Irp failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AllocateSocketContext
+{
+}
+#typev server_c777 49 "%0ERROR: socketContext, ExAllocatePoolWithTag failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AllocateSocketContext
+{
+}
+#typev server_c773 48 "%0INFO: AllocateSocketContext() Entry " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=AllocateSocketContext
+{
+}
+#typev server_c651 42 "%0INFO: ClientDisconnect() Exited " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=ClientDisconnect
+{
+}
+#typev server_c642 41 "%0INFO: ClientDisconnect() Entry " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=ClientDisconnect
+{
+}
+#typev server_c454 31 "%0INFO: CompleteDiagRequest() Exited " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=CompleteDiagRequest
+{
+}
+#typev server_c447 30 "%0Reset the the client context *before* completing the request " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=CompleteDiagRequest
+{
+}
+#typev server_c440 29 "%0INFO: CompleteDiagRequest() Entry " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=CompleteDiagRequest
+{
+}
+#typev server_c707 45 "%0INFO: EvtDiagResponseTimeout() " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=EvtDiagResponseTimeout
+{
+}
+#typev server_c819 53 "%0INFO: FreeSocketContext and associated IRP " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=FreeSocketContext
+{
+}
+#typev server_c366 23 "%0ERROR: SendDiagRequest failed with Invalid STATUS_INVALID_DEVICE_STATE " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SendDiagRequest
+{
+}
+#typev server_c414 28 "%0INFO: SendDiagRequest() Exited " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=SendDiagRequest
+{
+}
+#typev server_c413 27 "%0INFO: SendDiagRequest, Diag packet dispatched " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=SendDiagRequest
+{
+}
+#typev server_c394 26 "%0INFO: SendDiagRequest, RequestCmd :  0x%10!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=SendDiagRequest
+{
+clientContext->RequestCmd, ItemLong -- 10
+}
+#typev server_c384 25 "%0ERROR: SendDiagRequest, DiagFormatPacket failed with error code :  0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SendDiagRequest
+{
+status, ItemLong -- 10
+}
+#typev server_c374 24 "%0ERROR: SendDiagRequest, WdfRequestRetrieveInputBuffer failed with error code :  0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SendDiagRequest
+{
+status, ItemLong -- 10
+}
+#typev server_c354 22 "%0ERROR: SendDiagRequest failed with Invalid Request Parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SendDiagRequest
+{
+}
+#typev server_c351 21 "%0INFO: SendDiagRequest() Entry " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=SendDiagRequest
+{
+}
+#typev server_c266 17 "%0INFO: StartServer() Exited " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=StartServer
+{
+}
+#typev server_c273 18 "%0INFO: StartServer() Exited with error" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=StartServer
+{
+}
+#typev server_c255 16 "%0ERROR: Bind the socket failed with IRP error code : 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=StartServer
+{
+irp->IoStatus.Status, ItemLong -- 10
+}
+#typev server_c221 15 "%0ERROR: listening socket failed with IRP error code : 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=StartServer
+{
+irp->IoStatus.Status, ItemLong -- 10
+}
+#typev server_c196 14 "%0ERROR: WskControlClient failed with error code : 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=StartServer
+{
+status, ItemLong -- 10
+}
+#typev server_c175 13 "%0ERROR: AllocateSocketContext failed with error code : 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=StartServer
+{
+status, ItemLong -- 10
+}
+#typev server_c163 12 "%0ERROR: WskCaptureProviderNPI failed with error code : 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=StartServer
+{
+status, ItemLong -- 10
+}
+#typev server_c153 11 "%0ERROR: WskRegister failed with error code : 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=StartServer
+{
+status, ItemLong -- 10
+}
+#typev server_c141 10 "%0INFO: StartServer() Entry " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=StartServer
+{
+}
+#typev server_c481 33 "%0ERROR: WskAcceptEvent failed with error code Invalid Parameters " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=WskAcceptEvent
+{
+}
+#typev server_c510 35 "%0INFO: WskAcceptEvent() Exited " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskAcceptEvent
+{
+}
+#typev server_c491 34 "%0ERROR: DiagAllocateClientContext failed with error code : 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=WskAcceptEvent
+{
+status, ItemLong -- 10
+}
+#typev server_c478 32 "%0INFO: WskAcceptEvent() Entry " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskAcceptEvent
+{
+}
+#typev server_c875 57 "%0INFO: WskCloseSocketAsync() Exited " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskCloseSocketAsync
+{
+}
+#typev server_c866 56 "%0ERROR: WskCloseSocketAsync failed with STATUS_INSUFFICIENT_RESOURCES status " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=WskCloseSocketAsync
+{
+}
+#typev server_c859 55 "%0ERROR: WskCloseSocketAsync failed with STATUS_INVALID_PARAMETER status " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=WskCloseSocketAsync
+{
+}
+#typev server_c855 54 "%0INFO: WskCloseSocketAsync() Entry " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskCloseSocketAsync
+{
+}
+#typev server_c889 58 "%0INFO: WskCloseSocketCompletionRoutiney " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskCloseSocketCompletionRoutine
+{
+}
+#typev server_c685 44 "%0INFO: WskDisconnectEvent Exited " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskDisconnectEvent
+{
+}
+#typev server_c667 43 "%0INFO: WskDisconnectEvent Entry " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskDisconnectEvent
+{
+}
+#typev server_c744 47 "%0INFO: WskEmptyCompletionRoutine " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskEmptyCompletionRoutine
+{
+}
+#typev server_c630 40 "%0INFO: WskReceiveEvent() Exited " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskReceiveEvent
+{
+}
+#typev server_c594 38 "%0INFO: DiagUnformatPacket completed successfully with buflength : 0x%10!I64x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskReceiveEvent
+{
+bufLength, ItemLongLongX -- 10
+}
+#typev server_c622 39 "%0INFO: If we get portion of the received data, we need to call WskReceive() to receive any data " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskReceiveEvent
+{
+}
+#typev server_c546 37 "%0INFO: Received complete packet with cmdCode: 0x%10!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskReceiveEvent
+{
+cmdCode, ItemLong -- 10
+}
+// PDB:  QCDiagBridge850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev server_c531 36 "%0INFO: WskReceiveEvent() Entry " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskReceiveEvent
+{
+}
+#typev server_c725 46 "%0INFO: WskSyncCompletionRoutine() " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=WskSyncCompletionRoutine
+{
+}

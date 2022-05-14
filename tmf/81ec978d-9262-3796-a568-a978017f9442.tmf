@@ -1,0 +1,56 @@
+// PDB:  qcgnss.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+81ec978d-9262-3796-a568-a978017f9442 10.4 // SRC=gpsdrivernmea.c MJ= MN=
+#typev gpsdrivernmea_c102 13 "%0gpsdrivernmea.c::102 ProcessNmeaEvtIndThread, InitializeListHead falied! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverNmeaModuleInit
+{
+}
+#typev gpsdrivernmea_c93 12 "%0gpsdrivernmea.c::93 ProcessNmeaEvtIndThread Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverNmeaModuleInit
+{
+}
+#typev gpsdrivernmea_c88 11 "%0gpsdrivernmea.c::88 Failed to create ProcessNmeaEvtIndThread thread" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverNmeaModuleInit
+{
+}
+#typev gpsdrivernmea_c68 10 "%0gpsdrivernmea.c::68 QCGPS_NMEA:  GPSDriverNmeaModuleInit, Failed creating waitlock " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverNmeaModuleInit
+{
+}
+#typev gpsdrivernmea_c166 19 "%0gpsdrivernmea.c::166 ProcessNmeaIndEventThread exit:%10!x!!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessNmeaEvtIndThread
+{
+TerminatedThread, ItemLong -- 10
+}
+#typev gpsdrivernmea_c155 18 "%0gpsdrivernmea.c::155 NmeaIndEvent WAIT_TIMEOUT!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessNmeaEvtIndThread
+{
+}
+#typev gpsdrivernmea_c150 17 "%0gpsdrivernmea.c::150 DriverUnloadEvent!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessNmeaEvtIndThread
+{
+}
+#typev gpsdrivernmea_c141 16 "%0gpsdrivernmea.c::141 QCGPS_NMEA: ProcessNmeaEvtIndThread Event Received" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=ProcessNmeaEvtIndThread
+{
+}
+#typev gpsdrivernmea_c134 15 "%0gpsdrivernmea.c::134 QCGPS_NMEA: ProcessNmeaEvtIndThread Enter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessNmeaEvtIndThread
+{
+}
+#typev gpsdrivernmea_c233 25 "%0gpsdrivernmea.c::233 QCGPS_NMEA:  ProcessNmeaRequest  - Send Request to OS Counter1 : %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=ProcessNmeaRequest
+{
+counter1, ItemLong -- 10
+}
+#typev gpsdrivernmea_c227 24 "%0gpsdrivernmea.c::227 QCGPS_NMEA:  ProcessNmeaRequest  - After Strcpy" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=ProcessNmeaRequest
+{
+}
+#typev gpsdrivernmea_c220 23 "%0gpsdrivernmea.c::220 QCGPS_NMEA: ProcessNmeaRequest NMEA ID(%10!d!)= NMEA : %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=ProcessNmeaRequest
+{
+counter1++, ItemLong -- 10
+qnmea_entry->nmea_string, ItemString -- 11
+}
+#typev gpsdrivernmea_c208 22 "%0gpsdrivernmea.c::208 QCGPS: ProcessNmeaRequest WdfRequestRetrieveOutputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=ProcessNmeaRequest
+{
+bufflen, ItemPtr -- 10
+sizeof(GNSS_EVENT), ItemLong -- 11
+}
+#typev gpsdrivernmea_c200 21 "%0gpsdrivernmea.c::200 QCGPS_NMEA: ProcessNmeaRequest WdfRequestRetrieveOutputBuffer failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=ProcessNmeaRequest
+{
+status, ItemLong -- 10
+}
+#typev gpsdrivernmea_c191 20 "%0gpsdrivernmea.c::191 QCGPS_NMEA:  ProcessNmeaRequest  no more pending IOCTLs, return immediately : counter %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=ProcessNmeaRequest
+{
+counter++, ItemLong -- 10
+}

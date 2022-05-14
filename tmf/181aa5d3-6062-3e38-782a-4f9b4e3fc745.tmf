@@ -1,0 +1,28 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+181aa5d3-6062-3e38-782a-4f9b4e3fc745 WMRIL // SRC=WMRilMediaEndpointVideo.cpp MJ= MN=
+#typev WMRilMediaEndpointVideo_cpp194 14 "%0%!LEVEL! %!FUNC!:Call Video Media Flag %10!s! cleared" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::MediaEndpointVideoClass::ClearCallVideoMediaFlag
+{
+Debug::RILCallVideoMediaFlagToStr(callVideoMediaFlag), ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilMediaEndpointVideo_cpp171 13 "%0%!LEVEL! %!FUNC!:New Call Video Media Flag = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::MediaEndpointVideoClass::SetCallVideoMediaFlag
+{
+Debug::RILCallVideoMediaFlagToStr(m_MediaStateCurrent.mediaStateUnion.stVideoState.dwFlags), ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilMediaEndpointVideo_cpp137 11 "%0%!LEVEL! %!FUNC!:New Call Video Media Capability = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::MediaEndpointVideoClass::UpdateVideoMediaCapabilities
+{
+Debug::RILCallMediaDirectionToStr(m_MediaStateCurrent.mediaStateUnion.stVideoState.dwPeerCapabilities), ItemWString -- 10
+}
+#typev WMRilMediaEndpointVideo_cpp147 12 "%0%!LEVEL! %!FUNC!:Call Video Media Capability = %10!s! is unchanged" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::MediaEndpointVideoClass::UpdateVideoMediaCapabilities
+{
+Debug::RILCallMediaDirectionToStr(videoCapabilities), ItemWString -- 10
+}
+#typev WMRilMediaEndpointVideo_cpp82 10 "%0%!LEVEL! %!FUNC!:Local video capability = %10!s!. Peer video capability = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::MediaEndpointVideoClass::UpdateVideoMediaCapabilities
+{
+Debug::RILCallMediaDirectionToStr(localVideoCapability), ItemWString -- 10
+Debug::RILCallMediaDirectionToStr(peerVideoCapability), ItemWString -- 11
+}

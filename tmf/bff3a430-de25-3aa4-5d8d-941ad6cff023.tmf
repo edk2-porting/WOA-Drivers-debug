@@ -1,0 +1,63 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+bff3a430-de25-3aa4-5d8d-941ad6cff023 WMRIL // SRC=WMRilClient.cpp MJ= MN=
+#typev WMRilClient_cpp253 16 "%0%!LEVEL! %!FUNC!:Supplied struct not big enough. Need buffer with %10!u! bytes." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::ClientClass::GetNextNotification
+{
+dwNeededSize, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilClient_cpp164 15 "%0%!LEVEL! %!FUNC!:Notification queue is empty!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::ClientClass::GetNextNotification
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilClient_cpp149 13 "%0%!LEVEL! %!FUNC!:Output buffer size %10!u! is smaller than offsetof(RILDRVNOTIFICATION, pbData)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::ClientClass::GetNextNotification
+{
+dwLenOut, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilClient_cpp139 12 "%0%!LEVEL! %!FUNC!:Output buffer size %10!u! is smaller than offsetof(RILDRVNOTIFICATION_V2, pbData)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::ClientClass::GetNextNotification
+{
+dwLenOut, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilClient_cpp125 11 "%0%!LEVEL! %!FUNC!:cbSize %10!u! is not equal to the output buffer size %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::ClientClass::GetNextNotification
+{
+pSuppliedNotificationBuf->cbSize, ItemLong -- 10
+dwLenOut, ItemLong -- 11
+}
+#typev WMRilClient_cpp118 10 "%0%!LEVEL! %!FUNC!:dwSuppliedBufferSize = %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::ClientClass::GetNextNotification
+{
+dwSuppliedBufferSize, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilClient_cpp347 22 "%0%!LEVEL! %!FUNC!:Original Handle = 0x%10!p! New Handle = 0x%11!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::ClientClass::InitNotificationEvents
+{
+handleOrig, ItemPtr -- 10
+handleDup, ItemPtr -- 11
+}
+#typev WMRilClient_cpp343 21 "%0%!LEVEL! %!FUNC!:duplicated notification event handle is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::ClientClass::InitNotificationEvents
+{
+}
+#typev WMRilClient_cpp336 20 "%0%!LEVEL! %!FUNC!:Failed to duplicate notification event handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::ClientClass::InitNotificationEvents
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilClient_cpp315 19 "%0%!LEVEL! %!FUNC!:Failed to create notification event" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::ClientClass::InitNotificationEvents
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilClient_cpp309 18 "%0%!LEVEL! %!FUNC!:Output buffer size of %10!u! bytes is too small.  Expecting %11!u! bytes" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::ClientClass::InitNotificationEvents
+{
+dwLenOut, ItemLong -- 10
+sizeof(HANDLE), ItemLong -- 11
+}
+#typev WMRilClient_cpp302 17 "%0%!LEVEL! %!FUNC!:failed to duplicate cancellation event" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::ClientClass::InitNotificationEvents
+{
+}

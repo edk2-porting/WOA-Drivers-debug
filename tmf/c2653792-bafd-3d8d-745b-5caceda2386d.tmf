@@ -1,0 +1,73 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+c2653792-bafd-3d8d-745b-5caceda2386d MBB // SRC=MPLockMgmt.c MJ= MN=
+#typev MPLockMgmt_c126 13 "%0%!FUNC!:: ERROR MPWaitLockList.bInitialized = %10!d! pWaitLock = 0x%11!p!. nWaitLockCount = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPLockMgmt_WaitLockAcquire
+{
+MPWaitLockList.bInitialized, ItemLong -- 10
+pWaitLock, ItemPtr -- 11
+MPWaitLockList.nWaitLockCount, ItemLong -- 12
+}
+#typev MPLockMgmt_c94 11 "%0%!FUNC!:: ERROR MPWaitLockList.bInitialized = %10!s! nWaitLockCount = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPLockMgmt_WaitLockCreate
+{
+MPWaitLockList.bInitialized, ItemListLong(false,true) -- 10
+MPWaitLockList.nWaitLockCount, ItemLong -- 11
+}
+#typev MPLockMgmt_c86 10 "%0%!FUNC!:: Ran out of available locks. New lock = 0x%10!p!. bAssigned = %11!d!. Total WaitLocks = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPLockMgmt_WaitLockCreate
+{
+pWaitLock, ItemPtr -- 10
+pWaitLock->bAssigned, ItemLong -- 11
+MPWaitLockList.nWaitLockCount, ItemLong -- 12
+}
+#typev MPLockMgmt_c111 12 "%0%!FUNC!:: ERROR MPWaitLockList.bInitialized = %10!d! pWaitLock = 0x%11!p!. nWaitLockCount = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPLockMgmt_WaitLockFree
+{
+MPWaitLockList.bInitialized, ItemLong -- 10
+pWaitLock, ItemPtr -- 11
+MPWaitLockList.nWaitLockCount, ItemLong -- 12
+}
+#typev MPLockMgmt_c139 14 "%0%!FUNC!:: ERROR MPWaitLockList.bInitialized = %10!d! pWaitLock = 0x%11!p!. nWaitLockCount = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPLockMgmt_WaitLockRelease
+{
+MPWaitLockList.bInitialized, ItemLong -- 10
+pWaitLock, ItemPtr -- 11
+MPWaitLockList.nWaitLockCount, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c987 18 "%0%!FUNC!:: nRefCount = %10!ld!. STATUS_SUCCESS." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPHaltEx
+{
+MPWaitLockList.nRefCount, ItemLong -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPInit_c700 17 "%0%!FUNC!:: nRefCount = %10!ld!, nWaitLockCount = %11!u!. STATUS_SUCCESS" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPInitializeEx
+{
+MPWaitLockList.nRefCount, ItemLong -- 10
+MPWaitLockList.nWaitLockCount, ItemLong -- 11
+}
+#typev MPInit_c700 15 "%0%!FUNC!:: Failed. STATUS_UNSUCCESSFUL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPInitializeEx
+{
+}
+#typev MPInit_c700 16 "%0%!FUNC!:: pWaitLock = 0x%10!p!. nWaitLockCount = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPInitializeEx
+{
+pWaitLock, ItemPtr -- 10
+MPWaitLockList.nWaitLockCount, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPQMI_c108 12 "%0%!FUNC!:: ERROR MPWaitLockList.bInitialized = %10!d! pWaitLock = 0x%11!p!. nWaitLockCount = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_FreeQMIRequestQueue
+{
+MPWaitLockList.bInitialized, ItemLong -- 10
+pWaitLock, ItemPtr -- 11
+MPWaitLockList.nWaitLockCount, ItemLong -- 12
+}
+#typev MPQMI_c108 14 "%0%!FUNC!:: ERROR MPWaitLockList.bInitialized = %10!d! pWaitLock = 0x%11!p!. nWaitLockCount = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_FreeQMIRequestQueue
+{
+MPWaitLockList.bInitialized, ItemLong -- 10
+pWaitLock, ItemPtr -- 11
+MPWaitLockList.nWaitLockCount, ItemLong -- 12
+}
+#typev MPQMI_c108 13 "%0%!FUNC!:: ERROR MPWaitLockList.bInitialized = %10!d! pWaitLock = 0x%11!p!. nWaitLockCount = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_FreeQMIRequestQueue
+{
+MPWaitLockList.bInitialized, ItemLong -- 10
+pWaitLock, ItemPtr -- 11
+MPWaitLockList.nWaitLockCount, ItemLong -- 12
+}

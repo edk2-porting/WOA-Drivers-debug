@@ -1,0 +1,103 @@
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+48dcce61-1360-307f-8a71-9e142c6c28c0 10.4 // SRC=MPTimer.c MJ= MN=
+#typev MPWork_c309 12 "%0<%10!s!> MPth: ABORT_ACTIVATION." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ProcessWorkInputList
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPTimer_c309 16 "%0<%10!s!> ---> ActivationTimerDpc." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ActivationTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c195 11 "%0<%10!s!> CancelTimerObject: Canceled timer  %11!d! Status is %12!d!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=CancelTimerObject
+{
+pAdapter->PortName, ItemString -- 10
+TimerType, ItemLong -- 11
+bCanceled, ItemLong -- 12
+}
+#typev MPTimer_c332 17 "%0<%10!s!> ---> DeactivationTimerDpc." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=DeactivationTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c283 15 "%0<%10!s!> Invalid ContextState (%11!d!) or OID (deactivate) not found when deactivation timer expired!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=HandleDeactivationTimerExpiry
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->DeviceContextState, ItemLong -- 11
+}
+#typev MPTimer_c262 14 "%0<%10!s!> Deactivation timer expired, complete pending OID_WWAN_CONNECT." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=HandleDeactivationTimerExpiry
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c237 13 "%0<%10!s!> MPth: ABORT_DEACTIVATION." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=HandleDeactivationTimerExpiry
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c376 19 "%0<%10!s!> <--- ReconfigTimerDpc." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ReconfigTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c359 18 "%0<%10!s!> ReconfigTimerDpc: indicating ConnStat CONNECT." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ReconfigTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c646 31 "%0<%10!s!> <--- ResetCompleteTimerDpc Status = 0x%11!x!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+Status, ItemLong -- 11
+}
+#typev MPTimer_c627 30 "%0<%10!s!> Dpc State COMPLETE - %11!d!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->nResetTimerCount, ItemLong -- 11
+}
+#typev MPTimer_c586 29 "%0<%10!s!> Dpc state: WAIT_DATAIF" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c567 28 "%0<%10!s!> Dpc state: TIMEOUT - %11!d!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->nResetTimerCount, ItemLong -- 11
+}
+#typev MPTimer_c548 27 "%0<%10!s!> Dpc State: QUEUES_EMPTY." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c532 26 "%0<%10!s!> Reset timed out waiting for queues to empty." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c519 25 "%0<%10!s!> Dpc Again." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c504 24 "%0<%10!s!> Dpc: Clean out OID responses & indications." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c475 23 "%0<%10!s!> Dpc: Clean out OID waiting." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c454 22 "%0<%10!s!> Dpc State: WAIT_FOR_EMPTY." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPTimer_c437 21 "%0<%10!s!> Dpc State: START_CLEANUP." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c421 20 "%0<%10!s!> ---> ResetCompleteTimerDpc." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPTimer_c151 10 "%0<%10!s!> SetTimerObject: Starting timer  %11!d! for %12!d!ms." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=SetTimerObject
+{
+pAdapter->PortName, ItemString -- 10
+TimerType, ItemLong -- 11
+TimeInMs, ItemLong -- 12
+}

@@ -1,0 +1,30 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+7a15a3f1-8511-34c8-7836-26e09245b707 WMRIL // SRC=WMRilWatchUiccFileChange.cpp MJ= MN=
+#typev WMRilWatchUiccFileChange_cpp194 13 "%0%!LEVEL! %!FUNC!:Error: File refresh registration did not complete successfully" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::WatchUiccFileChangeClass::Execute
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilWatchUiccFileChange_cpp210 14 "%0%!LEVEL! %!FUNC!:File refresh completed successfully" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::WatchUiccFileChangeClass::Execute
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilWatchUiccFileChange_cpp70 10 "%0%!LEVEL! %!FUNC!:The number of files passed in is %10!u!.  At least one file must be passed in and no more than %11!u! files when calling this command" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::WatchUiccFileChangeClass::InitParams
+{
+pParams->dwNumFiles, ItemLong -- 10
+QMI_UIM_REFRESH_FILES_MAX_V01, ItemLong -- 11
+}
+#typev WMRilWatchUiccFileChange_cpp85 11 "%0%!LEVEL! %!FUNC!:Buffer size %10!u! != %11!u! (the correct expected buffer size)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::WatchUiccFileChangeClass::InitParams
+{
+dwBufferLength, ItemLong -- 10
+correctInputBufferSize, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilWatchUiccFileChange_cpp111 12 "%0%!LEVEL! %!FUNC!:The buffer size is too small (%10!u!).  The buffer must be at least %11!u! bytes." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::WatchUiccFileChangeClass::ValidateParams
+{
+m_pBlob->GetSize(), ItemLong -- 10
+offsetof(RILUICCFILES. filePath), ItemLong -- 11
+}

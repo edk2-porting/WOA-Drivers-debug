@@ -1,0 +1,51 @@
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+a3cdaf31-4ad3-31ad-891c-8b28f7463b4c vcxproj // SRC=SPI_osal.c MJ= MN=
+#typev SPI_osal_c163 16 "%0wcd_SPI_write:wcd_SPI_write Warning: Expected %10!d! bytes transfer. Only %11!d! bytes got transferred " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_SPI_write
+{
+(uint32)buff.buffer_size, ItemLong -- 10
+bytesWritten, ItemLong -- 11
+}
+#typev SPI_osal_c157 15 "%0wcd_SPI_write:wcd_SPI_write failed. Status 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_SPI_write
+{
+Status, ItemLong -- 10
+}
+#typev SPI_osal_c144 14 "%0wcd_SPI_write:wcd_SPI_write failed. Status 0x%10!x! after attempt %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_SPI_write
+{
+Status, ItemLong -- 10
+retryCount, ItemLong -- 11
+}
+#typev SPI_osal_c120 13 "%0wcd_SPI_write:WdfRequestCreate failed. Status 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_SPI_write
+{
+Status, ItemLong -- 10
+}
+#typev SPI_osal_c244 20 "%0wcd_SPI_xfer:wcd_SPI_xfer Warning: Expected %10!d! bytes transfer. Only %11!d! bytes got transferred " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_SPI_xfer
+{
+(uint32)(buff.buffer_size + rbuff.buffer_size), ItemLong -- 10
+bytesTransferred, ItemLong -- 11
+}
+#typev SPI_osal_c238 19 "%0wcd_SPI_xfer:wcd_SPI_xfer failed. Status 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_SPI_xfer
+{
+Status, ItemLong -- 10
+}
+#typev SPI_osal_c225 18 "%0wcd_SPI_xfer:wcd_SPI_xfer failed. Status 0x%10!x! after attempt %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_SPI_xfer
+{
+Status, ItemLong -- 10
+retryCount, ItemLong -- 11
+}
+#typev SPI_osal_c195 17 "%0wcd_SPI_xfer:WdfRequestCreate failed. Status 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_SPI_xfer
+{
+Status, ItemLong -- 10
+}
+#typev SPI_osal_c66 10 "%0wcd_bus_init:WdfIoTargetCreate failed. Status 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_init_SPI_device
+{
+Status, ItemLong -- 10
+}
+#typev SPI_osal_c74 11 "%0wcd_bus_init:Target String Creation Failed. Status 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_init_SPI_device
+{
+Status, ItemLong -- 10
+}
+#typev SPI_osal_c83 12 "%0wcd_bus_init:WdfIoTargetOpen failed. Status 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=wcd_init_SPI_device
+{
+Status, ItemLong -- 10
+}

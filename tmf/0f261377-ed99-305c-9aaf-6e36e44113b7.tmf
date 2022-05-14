@@ -1,0 +1,56 @@
+// PDB:  qcSensors850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+0f261377-ed99-305c-9aaf-6e36e44113b7 qcSensors // SRC=Color.cpp MJ= MN=
+#typev Color_cpp83 10 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CColor::CColor
+{
+}
+#typev Color_cpp321 15 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=CColor::HandleStreamIndication
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev Color_cpp303 14 "%0%10!s! Raising data event -- Lux: %11!s! Temperature: %12!s! ChromaticityX: %13!s! ChromaticityY: %14!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=CColor::HandleStreamIndication
+{
+m_pwszFriendlyName, ItemWString -- 10
+LightData, ItemDouble -- 11
+TemperatureData, ItemDouble -- 12
+ChromaticityXData, ItemDouble -- 13
+ChromaticityYData, ItemDouble -- 14
+}
+#typev Color_cpp275 13 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CColor::HandleStreamIndication
+{
+}
+#typev Color_cpp252 12 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=CColor::InitPropertyValues
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev Color_cpp117 11 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CColor::InitPropertyValues
+{
+}
+#typev Color_cpp421 23 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=CColor::InitializeExtraCalibration
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev Color_cpp401 22 "%0Color_XYZ -- ALS: Extra calibration will be applied using piecewise linear function" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CColor::InitializeExtraCalibration
+{
+}
+#typev Color_cpp397 21 "%0WdfRegistryQueryMemory read wrong size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=CColor::InitializeExtraCalibration
+{
+}
+#typev Color_cpp391 20 "%0WdfMemoryCopyToBuffer failed: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=CColor::InitializeExtraCalibration
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Color_cpp373 19 "%0Color_XYZ -- ALS: Calibration function must have even number of points >= 2" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=CColor::InitializeExtraCalibration
+{
+}
+#typev Color_cpp360 18 "%0Color_XYZ -- ALS: No extra calibration found in registry: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CColor::InitializeExtraCalibration
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Color_cpp350 17 "%0Unable to open driver parameters registry key: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=CColor::InitializeExtraCalibration
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Color_cpp339 16 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CColor::InitializeExtraCalibration
+{
+}

@@ -1,0 +1,658 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+e2b3e97b-c75a-32eb-3bb1-09a7acd581bb MBB // SRC=MPExt.wp.c MJ= MN=
+#typev MPExt.wp_c305 14 "%0<%10!s!> %!FUNC!: Device Service Command not supported." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificDevSrvcOidResp
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c323 15 "%0<%10!s!> %!FUNC!: Device Service response exceeds max OID resp length %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificDevSrvcOidResp
+{
+pAdapter->PortName, ItemString -- 10
+SIZEOF_OID_RESPONSE, ItemLong -- 11
+}
+#typev MPExt.wp_c213 13 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDModemExecutorNumber sent." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificDevSrvcOidResp
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c188 12 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDMaxCntxtNumber sent." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificDevSrvcOidResp
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c179 11 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDModemDualSIMCap sent." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificDevSrvcOidResp
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c138 17 "%0<%10!s!> %!FUNC!: Device Service Command not supported." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificDevSrvcOidResp
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c138 16 "%0<%10!s!>MPExt_FillPlatSpecificIHVDevSrvcOidResp: pOid %11!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificDevSrvcOidResp
+{
+pAdapter->PortName, ItemString -- 10
+pOid, ItemPtr -- 11
+}
+#typev MPExt.wp_c89 10 "%0<%10!s!>MPExt_HandleDeviceServiceOid: pOid %11!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificDevSrvcOidResp
+{
+pAdapter->PortName, ItemString -- 10
+pOid, ItemPtr -- 11
+}
+#typev MPExt.wp_c1605 77 "%0<%10!s!> %!FUNC!: CommandID = _WinPhoneExtensionCommandIDIWlanState, isIWlanAvailable=%11!d!, uStatus=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+isIWlanAvailable, ItemLong -- 11
+pNdisWwanDevResp->uStatus, ItemLong -- 12
+}
+#typev MPExt.wp_c1569 76 "%0<%10!s!> %!FUNC!: MPQMI_WdsSetUlStatsNotificationTimer UL status register Notiication failed ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1561 75 "%0<%10!s!> %!FUNC!: MPQMI_WdsSetUlStatsNotificationTimer timer interval should not be less than 50 ms. ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1545 74 "%0<%10!s!> %!FUNC!: IPv4.ActualPDNRate =%11!d!. IPv4.QueueDepth =%12!d!, IPv6.ActualPDNRate =%13!d!, IPv6.QueueDepth=%14!d!, ActualTotalRate=%15!d!, AllowedTotalRate=%16!d!  ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pUlStatusQuery->IPv4.UplinkActualPDNRate, ItemLong -- 11
+pUlStatusQuery->IPv4.UplinkQueueDepth, ItemLong -- 12
+pUlStatusQuery->IPv6.UplinkActualPDNRate, ItemLong -- 13
+pUlStatusQuery->IPv6.UplinkQueueDepth, ItemLong -- 14
+pUlStatusQuery->UplinkActualTotalRate, ItemLong -- 15
+pUlStatusQuery->UplinkAllowedTotalRate, ItemLong -- 16
+}
+#typev MPExt.wp_c1534 73 "%0<%10!s!> %!FUNC!: MPQMI_WDSGetUlStatus  successful ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1529 72 "%0<%10!s!> %!FUNC!: MPQMI_WDSGetUlStatus failed ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1513 71 "%0<%10!s!> %!FUNC!: MPDfsQMI_GetFilterStats stats : bytesSent= %11!d!, bytesReceived= %12!d!, packetsSent= %13!d!, packetsReceived= %14!d! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pOffloadStats->bytesSent, ItemLong -- 11
+pOffloadStats->bytesReceived, ItemLong -- 12
+pOffloadStats->packetsSent, ItemLong -- 13
+pOffloadStats->packetsReceived, ItemLong -- 14
+}
+#typev MPExt.wp_c1501 70 "%0<%10!s!> %!FUNC!: MPDfsQMI_GetFilterStats failed ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1488 69 "%0<%10!s!> %!FUNC!: Received invalid filterId ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1475 68 "%0<%10!s!|sub#%11!d!> %!FUNC!: Media Offload filter(s) remove = 0x%12!x! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+(INT)filtersRemoved, ItemLong -- 12
+}
+#typev MPExt.wp_c1468 67 "%0<%10!s!> %!FUNC!: Received invalid filterId ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1451 66 "%0<%10!s!|sub#%11!d!> %!FUNC!: Media Offload filter added succesfully ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPExt.wp_c1444 65 "%0<%10!s!> %!FUNC!: MPDfsQMI_ComposeAddFilterReqSend failed ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1404 64 "%0<%10!s!|sub#%11!d!> %!FUNC!: _WinPhoneExtensionIDCommandOffloadCap returned %12!d! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+capability, ItemLong -- 12
+}
+#typev MPExt.wp_c1399 63 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionIDCommandOffloadCap  MPDfsQMI_SendCapQueryReq failed ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1383 62 "%0<%10!s!> %!FUNC!: CommandIDLTEInfo APN is %11!s!, IP type = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pActResp->LastAttachAPN, ItemWString -- 11
+pActResp->LastAttachBearerIPType, ItemLong -- 12
+}
+#typev MPExt.wp_c1366 61 "%0<%10!s!> %!FUNC!: Camped on LTE system." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1342 60 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDModemExecutorNumber                  modemNumber = %11!d!, ExecutorID = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pModemExecutorNumberResp->modemNumber, ItemLong -- 11
+pModemExecutorNumberResp->ExecutorID, ItemLong -- 12
+}
+#typev MPExt.wp_c1326 59 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDMaxCntxtNumber MaxCntxtNumberResp = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+*pMaxCntxtNumberResp, ItemLong -- 11
+}
+#typev MPExt.wp_c1320 58 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDMaxCntxtNumber Error: nNumOfSubscriptions = 0." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1302 57 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDModemDualSIMCapbIsModemTypeKnown = %11!d!, nActiveDataExecutors = %12!d!, nActiveExecutors = %13!d!, nExecutors =%14!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pModemDualSIMCapResp->bIsModemTypeKnown, ItemLong -- 11
+pModemDualSIMCapResp->nActiveDataExecutors, ItemLong -- 12
+pModemDualSIMCapResp->nActiveExecutors, ItemLong -- 13
+pModemDualSIMCapResp->nExecutors, ItemLong -- 14
+}
+#typev MPExt.wp_c1253 56 "%0<%10!s!> %!FUNC!: start dormancy timer." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1168 55 "%0<%10!s!> %!FUNC!: MipNai: Active Mip Profile found at index %11!d! and lenght = %12!Id! and name = %13!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->ActiveMipNaiIndex, ItemLong -- 11
+pAdapter->pSubPhoneInfo->ActiveMipNaiLength, ItemPtr -- 12
+pAdapter->pSubPhoneInfo->ActiveMipNai, ItemString -- 13
+}
+#typev MPExt.wp_c1165 54 "%0<%10!s!> %!FUNC!: MipNai: Active Mip Profile found at index %11!d! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->ActiveMipNaiIndex, ItemLong -- 11
+}
+#typev MPExt.wp_c1135 53 "%0<%10!s!> %!FUNC!: MipNai: Reading Active Mip Profile after modification at index %11!d! and lenght = %12!Id! and name = %13!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->ActiveMipNaiIndex, ItemLong -- 11
+pAdapter->pSubPhoneInfo->ActiveMipNaiLength, ItemPtr -- 12
+pAdapter->pSubPhoneInfo->ActiveMipNai, ItemString -- 13
+}
+#typev MPExt.wp_c1130 52 "%0<%10!s!> %!FUNC!: MipNai: Active Mip Profile name modified to %11!s! successful.." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+buffer, ItemString -- 11
+}
+#typev MPExt.wp_c1124 51 "%0<%10!s!> %!FUNC!: MipNai: Active Mip Profile found at index %11!d! and lenght = %12!Id! and name = %13!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->ActiveMipNaiIndex, ItemLong -- 11
+pAdapter->pSubPhoneInfo->ActiveMipNaiLength, ItemPtr -- 12
+pAdapter->pSubPhoneInfo->ActiveMipNai, ItemString -- 13
+}
+#typev MPExt.wp_c1116 50 "%0<%10!s!> %!FUNC!: MipNai: Active Mip Profile found at index %11!d! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->ActiveMipNaiIndex, ItemLong -- 11
+}
+#typev MPExt.wp_c1099 49 "%0<%10!s!> %!FUNC!: Data suspension state %11!d! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_FillPlatSpecificOidRespWithCachedData
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->DataSuspension, ItemLong -- 11
+}
+#typev MPExt.wp_c603 35 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: GET IPV6 on EHRPD configuration APN = %11!s!, Enabled = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+GlobalData.IPV6EHRPDConfigAPN, ItemWString -- 11
+GlobalData.IPV6EHRPDConfigEnable, ItemLong -- 12
+}
+#typev MPExt.wp_c596 34 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: Did not find IPv4 profile (%11!d!) to revert back to IPv4v6 for eHRPD when fIpv6Enable set to true.." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+currentProfileIndex, ItemLong -- 11
+}
+#typev MPExt.wp_c591 33 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: Modified IPv4 profile %11!d! back to IPv4v6 for eHRPD when fIpv6Enable set to true.." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+currentProfileIndex, ItemLong -- 11
+}
+#typev MPExt.wp_c586 32 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: Failed to modify IPv4 profile %11!d! back to IPv4v6 for eHRPD when fIpv6Enable set to true.." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+currentProfileIndex, ItemLong -- 11
+}
+#typev MPExt.wp_c574 31 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: previous IP type = %11!d! for fIpv6Enable TRUE.." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+prevIPTyle, ItemLong -- 11
+}
+#typev MPExt.wp_c537 27 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: Successfully modified the profile %11!d! to IPv4 for eHRPD." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+currentProfileIndex, ItemLong -- 11
+}
+#typev MPExt.wp_c532 26 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: Failed to modify %11!d! the profile to IPv4 for eHRPD." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+currentProfileIndex, ItemLong -- 11
+}
+#typev MPExt.wp_c523 25 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: Found IPv4v6 profile for eHRPD.." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c558 30 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: Found an existing IPv4 profile %11!d! for eHRPD." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+currentProfileIndex, ItemLong -- 11
+}
+#typev MPExt.wp_c553 29 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: IPv4 profile not found Successfully created the IPv4 profile for eHRPD." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c548 28 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: IPv4 profile not found and failed to create a new IPv4 profile for eHRPD." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c513 24 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: Found IPv6 profile for eHRPD.." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c473 23 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: SET IPV6 on EHRPD on APN = %11!s!, Enabled = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+pIPV6EHRPDConfig->APNString, ItemWString -- 11
+pIPV6EHRPDConfig->fIpv6Enable, ItemLong -- 12
+}
+#typev MPExt.wp_c462 22 "%0<%10!s!> %!FUNC!: _WinPhoneExtensionCommandIDIPV6eHRPDConfig: invalid input parameters." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c440 21 "%0<%10!s!> %!FUNC!: CommandID = _WinPhoneExtensionCommandIDDMConfig." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c426 20 "%0<%10!s!> %!FUNC!: CommandID = _WinPhoneExtensionCommandIDDMConnConfigV2." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c412 19 "%0<%10!s!> %!FUNC!: CommandID = _WinPhoneExtensionCommandIDDMConnConfig." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c400 39 "%0<%10!s!> %!FUNC!: _QCMBBIHVExtensionCommandIDEquipmentState: Query is not supported.." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c400 38 "%0<%10!s!> %!FUNC!: _QCMBBIHVExtensionCommandIDEquipmentState: Adapter not in connected state. No data call to end.." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c400 37 "%0<%10!s!> %!FUNC!: _QCMBBIHVExtensionCommandIDEquipmentState: invalid state %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+pEquipState->EquipmentState, ItemLong -- 11
+}
+#typev MPExt.wp_c400 36 "%0<%10!s!>MPExt_HandleIHVDeviceServiceOid: pOid %11!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+pOid, ItemPtr -- 11
+}
+#typev MPExt.wp_c391 18 "%0<%10!s!>MPExt_HandleDeviceServiceOid: Oid 0x%11!x!, pOid %12!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_HandlePlatSpecificDevSrvcOid
+{
+pAdapter->PortName, ItemString -- 10
+Oid, ItemLong -- 11
+pOid, ItemPtr -- 12
+}
+#typev MPExt.wp_c994 46 "%0<%10!s!> %!FUNC!: error reported during uplink stats was being indicated: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_SendPlatSpecificDevSrvcEvent
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c915 45 "%0<%10!s!> %!FUNC!: Unknown Offload error: %11!d! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_SendPlatSpecificDevSrvcEvent
+{
+pAdapter->PortName, ItemString -- 10
+*causeCode, ItemLong -- 11
+}
+#typev MPExt.wp_c869 44 "%0<%10!s!> %!FUNC!: LTEAttachDefaultBearer : AccessString =%11!s!, IPType = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_SendPlatSpecificDevSrvcEvent
+{
+pAdapter->PortName, ItemString -- 10
+pLTEAttachData->AccessString, ItemWString -- 11
+pLTEAttachData->IPType, ItemLong -- 12
+}
+#typev MPExt.wp_c826 43 "%0<%10!s!> %!FUNC!: DataSuspensionState :%11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_SendPlatSpecificDevSrvcEvent
+{
+pAdapter->PortName, ItemString -- 10
+DataSusp, ItemListLong(false,true) -- 11
+}
+#typev MPExt.wp_c793 42 "%0<%10!s!> %!FUNC!: ModemDualSIMCap bIsModemTypeKnown = %11!s!, nActiveDataExecutors = %12!u!, nActiveExecutors = %13!u!, nExecutors = %14!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_SendPlatSpecificDevSrvcEvent
+{
+pAdapter->PortName, ItemString -- 10
+pModemtypeCap->bIsModemTypeKnown, ItemListLong(false,true) -- 11
+pModemtypeCap->nActiveDataExecutors, ItemLong -- 12
+pModemtypeCap->nActiveExecutors, ItemLong -- 13
+pModemtypeCap->nExecutors, ItemLong -- 14
+}
+#typev MPExt.wp_c759 41 "%0<%10!s!> %!FUNC!: InternalErrorCode. uInternalErrorCodeGroup = %11!u!, uInternalErrorSpecificCause = %12!u!," //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_SendPlatSpecificDevSrvcEvent
+{
+pAdapter->PortName, ItemString -- 10
+pInternalError->uInternalErrorCodeGroup, ItemLong -- 11
+pInternalError->uInternalErrorSpecificCause, ItemLong -- 12
+}
+#typev MPExt.wp_c724 40 "%0<%10!s!> %!FUNC!: EventType = 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPExt_SendPlatSpecificDevSrvcEvent
+{
+pAdapter->PortName, ItemString -- 10
+EventType, ItemLong -- 11
+}
+#typev MPExt.wp_c1954 86 "%0<%10!s!> %!FUNC! : End, ResponseCode = 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfig
+{
+pAdapter->PortName, ItemString -- 10
+pConnConfigResp->ResponseCode, ItemLong -- 11
+}
+#typev MPExt.wp_c1888 85 "%0<%10!s!> %!FUNC!: pAdapter->cachedProfileSetting: apnDisabled (%11!d!, %12!d!), apnName (%13!s!, %14!d!), apnString (%15!s!, %16!d!), pdpType (%17!d!, %18!d!), ApnBearerValidValue (%19!d!, %20!I64u!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfig
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->cachedProfileSetting.apn_disabled_flag, ItemLong -- 11
+pAdapter->cachedProfileSetting.apn_disabled_flag_valid, ItemLong -- 12
+pAdapter->cachedProfileSetting.apn_name, ItemString -- 13
+pAdapter->cachedProfileSetting.apn_name_valid, ItemLong -- 14
+pAdapter->cachedProfileSetting.apn_string, ItemString -- 15
+pAdapter->cachedProfileSetting.apn_string_valid, ItemLong -- 16
+pAdapter->cachedProfileSetting.pdp_type, ItemLong -- 17
+pAdapter->cachedProfileSetting.pdp_type_valid, ItemLong -- 18
+pAdapter->cachedProfileSetting.apn_bearer_valid, ItemLong -- 19
+pAdapter->cachedProfileSetting.apn_bearer, ItemULongLong -- 20
+}
+#typev MPExt.wp_c1868 84 "%0<%10!s!> %!FUNC!: ERROR, getting profile info failed for profileType = %11!d!, profileIndex = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfig
+{
+pAdapter->PortName, ItemString -- 10
+profileType, ItemLong -- 11
+profileIndex, ItemLong -- 12
+}
+#typev MPExt.wp_c1835 83 "%0<%10!s!> %!FUNC!: ERROR, getting profile info failed for profileType = %11!d!, profileIndex = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfig
+{
+pAdapter->PortName, ItemString -- 10
+profileType, ItemLong -- 11
+profileIndex, ItemLong -- 12
+}
+#typev MPExt.wp_c1804 82 "%0<%10!s!> %!FUNC!: Unsupported OEM Connection ID %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfig
+{
+pAdapter->PortName, ItemString -- 10
+Buffer, ItemString -- 11
+}
+#typev MPExt.wp_c1788 81 "%0<%10!s!> %!FUNC!: ERROR, none of the profile was modified" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfig
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1776 80 "%0<%10!s!> %!FUNC!: ERROR, getting profile info failed for profileType = %11!d!, profileIndex = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfig
+{
+pAdapter->PortName, ItemString -- 10
+profileTypeModified, ItemLong -- 11
+profileIndex, ItemLong -- 12
+}
+#typev MPExt.wp_c1643 79 "%0<%10!s!> %!FUNC!: Unsupported OEM Connection ID %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfig
+{
+pAdapter->PortName, ItemString -- 10
+Buffer, ItemString -- 11
+}
+#typev MPExt.wp_c1629 78 "%0<%10!s!> %!FUNC! : Begin ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfig
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c1979 88 "%0<%10!s!> %!FUNC!: ERROR, NULL pointer passed to function ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c2543 103 "%0<%10!s!> %!FUNC!: pAdapter->cachedProfileSetting: pdn_level_auth_password_valid (%11!s!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->cachedProfileSetting.pdn_level_auth_password, ItemString -- 11
+}
+#typev MPExt.wp_c2523 102 "%0<%10!s!> %!FUNC!: pAdapter->cachedProfileSetting: pdn_level_user_id (%11!s!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->cachedProfileSetting.pdn_level_user_id, ItemString -- 11
+}
+#typev MPExt.wp_c2506 101 "%0<%10!s!> %!FUNC!: pAdapter->cachedProfileSetting: pdn_level_auth_protocol_valid (%11!d!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->cachedProfileSetting.pdn_level_auth_protocol_valid, ItemLong -- 11
+}
+#typev MPExt.wp_c2482 100 "%0<%10!s!> %!FUNC!: pAdapter->cachedProfileSetting: password (%11!s!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->cachedProfileSetting.password, ItemString -- 11
+}
+#typev MPExt.wp_c2465 99 "%0<%10!s!> %!FUNC!: pAdapter->cachedProfileSetting: username (%11!s!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->cachedProfileSetting.username, ItemString -- 11
+}
+#typev MPExt.wp_c2448 98 "%0<%10!s!> %!FUNC!: pAdapter->cachedProfileSetting: authentication_preference (%11!d!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->cachedProfileSetting.authentication_preference, ItemLong -- 11
+}
+#typev MPExt.wp_c2347 96 "%0<%10!s!> %!FUNC!: ERROR, getting profile info failed for profileType = %11!d!, profileIndex = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+profileType, ItemLong -- 11
+profileIndex, ItemLong -- 12
+}
+#typev MPExt.wp_c2314 95 "%0<%10!s!> %!FUNC!: ERROR, getting profile info failed for profileType = %11!d!, profileIndex = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+profileType, ItemLong -- 11
+profileIndex, ItemLong -- 12
+}
+#typev MPExt.wp_c2283 94 "%0<%10!s!> %!FUNC!: ERROR, Unsupported OEM Connection ID %11!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+Buffer, ItemString -- 11
+}
+#typev MPExt.wp_c2548 104 "%0<%10!s!> %!FUNC! : End, ResponseCode = 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+pConnConfigResp->ResponseCode, ItemLong -- 11
+}
+#typev MPExt.wp_c2252 92 "%0<%10!s!> %!FUNC!: ERROR, none of the profile was modified" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPExt.wp_c2263 93 "%0<%10!s!> %!FUNC!: isAttachGUID=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+isAttachGUID, ItemLong -- 11
+}
+#typev MPExt.wp_c2240 91 "%0<%10!s!> %!FUNC!: ERROR, getting profile info failed for profileType = %11!d!, profileIndex = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+profileTypeModified, ItemLong -- 11
+profileIndex, ItemLong -- 12
+}
+#typev MPExt.wp_c2180 90 "%0<%10!s!> %!FUNC!: Current 3GPP, apnName = %11!s! ipType = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+CurrentProfileInfo.APN_Name, ItemString -- 11
+CurrentProfileInfo.PDP_Type, ItemLong -- 12
+}
+#typev MPExt.wp_c2366 97 "%0<%10!s!> %!FUNC!: pAdapter->cachedProfileSetting: apnDisabled (%11!d!, %12!d!), apnName (%13!s!, %14!d!), apnString (%15!s!, %16!d!), pdpType (%17!d!, %18!d!), ApnBearerValidValue (%19!d!, %20!I64u!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->cachedProfileSetting.apn_disabled_flag, ItemLong -- 11
+pAdapter->cachedProfileSetting.apn_disabled_flag_valid, ItemLong -- 12
+pAdapter->cachedProfileSetting.apn_name, ItemString -- 13
+pAdapter->cachedProfileSetting.apn_name_valid, ItemLong -- 14
+pAdapter->cachedProfileSetting.apn_string, ItemString -- 15
+pAdapter->cachedProfileSetting.apn_string_valid, ItemLong -- 16
+pAdapter->cachedProfileSetting.pdp_type, ItemLong -- 17
+pAdapter->cachedProfileSetting.pdp_type_valid, ItemLong -- 18
+pAdapter->cachedProfileSetting.apn_bearer_valid, ItemLong -- 19
+pAdapter->cachedProfileSetting.apn_bearer, ItemULongLong -- 20
+}
+#typev MPExt.wp_c1995 89 "%0<%10!s!> %!FUNC!: ERROR, Unsupported OEM Connection ID %11!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+Buffer, ItemString -- 11
+}
+#typev MPExt.wp_c1975 87 "%0<%10!s!> %!FUNC! : Begin ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessDMConnConfigV2
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWork_c289 44 "%0<%10!s!> %!FUNC!: LTEAttachDefaultBearer : AccessString =%11!s!, IPType = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessInit
+{
+pAdapter->PortName, ItemString -- 10
+pLTEAttachData->AccessString, ItemWString -- 11
+pLTEAttachData->IPType, ItemLong -- 12
+}
+#typev MPWork_c289 43 "%0<%10!s!> %!FUNC!: DataSuspensionState :%11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessInit
+{
+pAdapter->PortName, ItemString -- 10
+DataSusp, ItemListLong(false,true) -- 11
+}
+#typev MPWork_c289 42 "%0<%10!s!> %!FUNC!: ModemDualSIMCap bIsModemTypeKnown = %11!s!, nActiveDataExecutors = %12!u!, nActiveExecutors = %13!u!, nExecutors = %14!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessInit
+{
+pAdapter->PortName, ItemString -- 10
+pModemtypeCap->bIsModemTypeKnown, ItemListLong(false,true) -- 11
+pModemtypeCap->nActiveDataExecutors, ItemLong -- 12
+pModemtypeCap->nActiveExecutors, ItemLong -- 13
+pModemtypeCap->nExecutors, ItemLong -- 14
+}
+#typev MPWork_c289 40 "%0<%10!s!> %!FUNC!: EventType = 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessInit
+{
+pAdapter->PortName, ItemString -- 10
+EventType, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPOID_c2504 47 "%0<%10!s!> %!FUNC!: %11!s! (0x%12!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_NonContextOidMask
+{
+pAdapter->PortName, ItemString -- 10
+MPOidToNameStr (Oid), ItemString -- 11
+Oid, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c2261 46 "%0<%10!s!> %!FUNC!: error reported during uplink stats was being indicated: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2261 44 "%0<%10!s!> %!FUNC!: LTEAttachDefaultBearer : AccessString =%11!s!, IPType = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pLTEAttachData->AccessString, ItemWString -- 11
+pLTEAttachData->IPType, ItemLong -- 12
+}
+#typev MPMain_c2261 43 "%0<%10!s!> %!FUNC!: DataSuspensionState :%11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+DataSusp, ItemListLong(false,true) -- 11
+}
+#typev MPMain_c2261 40 "%0<%10!s!> %!FUNC!: EventType = 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+EventType, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWDSQmi_c1644 44 "%0<%10!s!> %!FUNC!: LTEAttachDefaultBearer : AccessString =%11!s!, IPType = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+pLTEAttachData->AccessString, ItemWString -- 11
+pLTEAttachData->IPType, ItemLong -- 12
+}
+#typev MPWDSQmi_c1644 43 "%0<%10!s!> %!FUNC!: DataSuspensionState :%11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+DataSusp, ItemListLong(false,true) -- 11
+}
+#typev MPWDSQmi_c1644 40 "%0<%10!s!> %!FUNC!: EventType = 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+EventType, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWDSQmi_c1273 44 "%0<%10!s!> %!FUNC!: LTEAttachDefaultBearer : AccessString =%11!s!, IPType = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+pLTEAttachData->AccessString, ItemWString -- 11
+pLTEAttachData->IPType, ItemLong -- 12
+}
+#typev MPWDSQmi_c1273 43 "%0<%10!s!> %!FUNC!: DataSuspensionState :%11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+DataSusp, ItemListLong(false,true) -- 11
+}
+#typev MPWDSQmi_c1273 44 "%0<%10!s!> %!FUNC!: LTEAttachDefaultBearer : AccessString =%11!s!, IPType = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+pLTEAttachData->AccessString, ItemWString -- 11
+pLTEAttachData->IPType, ItemLong -- 12
+}
+#typev MPWDSQmi_c1273 43 "%0<%10!s!> %!FUNC!: DataSuspensionState :%11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+DataSusp, ItemListLong(false,true) -- 11
+}
+#typev MPWDSQmi_c1270 41 "%0<%10!s!> %!FUNC!: InternalErrorCode. uInternalErrorCodeGroup = %11!u!, uInternalErrorSpecificCause = %12!u!," //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+pInternalError->uInternalErrorCodeGroup, ItemLong -- 11
+pInternalError->uInternalErrorSpecificCause, ItemLong -- 12
+}
+#typev MPWDSQmi_c1270 40 "%0<%10!s!> %!FUNC!: EventType = 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+EventType, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWDSQmi_c1249 41 "%0<%10!s!> %!FUNC!: InternalErrorCode. uInternalErrorCodeGroup = %11!u!, uInternalErrorSpecificCause = %12!u!," //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+pInternalError->uInternalErrorCodeGroup, ItemLong -- 11
+pInternalError->uInternalErrorSpecificCause, ItemLong -- 12
+}
+#typev MPWDSQmi_c1249 40 "%0<%10!s!> %!FUNC!: EventType = 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+EventType, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWDSQmi_c1131 45 "%0<%10!s!> %!FUNC!: Unknown Offload error: %11!d! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+*causeCode, ItemLong -- 11
+}
+#typev MPWDSQmi_c1131 44 "%0<%10!s!> %!FUNC!: LTEAttachDefaultBearer : AccessString =%11!s!, IPType = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+pLTEAttachData->AccessString, ItemWString -- 11
+pLTEAttachData->IPType, ItemLong -- 12
+}
+#typev MPWDSQmi_c1131 43 "%0<%10!s!> %!FUNC!: DataSuspensionState :%11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+DataSusp, ItemListLong(false,true) -- 11
+}
+#typev MPWDSQmi_c1131 40 "%0<%10!s!> %!FUNC!: EventType = 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+EventType, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWDSQmi_c1065 45 "%0<%10!s!> %!FUNC!: Unknown Offload error: %11!d! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+*causeCode, ItemLong -- 11
+}
+#typev MPWDSQmi_c1065 44 "%0<%10!s!> %!FUNC!: LTEAttachDefaultBearer : AccessString =%11!s!, IPType = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+pLTEAttachData->AccessString, ItemWString -- 11
+pLTEAttachData->IPType, ItemLong -- 12
+}
+#typev MPWDSQmi_c1065 43 "%0<%10!s!> %!FUNC!: DataSuspensionState :%11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+DataSusp, ItemListLong(false,true) -- 11
+}
+#typev MPWDSQmi_c1065 40 "%0<%10!s!> %!FUNC!: EventType = 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+EventType, ItemLong -- 11
+}

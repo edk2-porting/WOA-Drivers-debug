@@ -1,0 +1,71 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+e033fb75-f9c6-3edf-d87b-9703b8ef6e0a MBB // SRC=MPQMUX.c MJ= MN=
+#typev MPOID_c4842 16 "%0ReadRegistryData: Get: ERR." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPOID_HandleGetWWANProvisionedContexts
+{
+}
+#typev MPOID_c4842 15 "%0ReadRegistryData: returned length %10!d! is too large." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPOID_HandleGetWWANProvisionedContexts
+{
+pReturnedValue->ParameterData.StringData.Length, ItemLong -- 10
+}
+#typev MPOID_c4842 14 "%0ReadRegistryData: NdisOpenConfig: ERR 0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPOID_HandleGetWWANProvisionedContexts
+{
+ndisStatus, ItemLong -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPQMUX_c229 13 "%0<%10!s!|sub#%11!d!> FilterRATKindNotifications: Filtering out RAT transitions: current RAT %12!d!, suppressed RAT %13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=FilterRATKindNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+CurrentDataClass, ItemLong -- 12
+NewCurrentDataClass, ItemLong -- 13
+}
+#typev MPQMUX_c720 20 "%0<%10!s!|sub#%11!d!>MPQCCI_ComposeQMIRequest: QMIclient is not initialized!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQCCI_ComposeQMIRequest
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPQMUX_c740 22 "%0<%10!s!|sub#%11!d!>MPQCCI_ComposeQMIRequest." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQCCI_ComposeQMIRequest
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPQMUX_c729 21 "%0<%10!s!|sub#%11!d!>MPQCCI_ComposeQMIRequest: Allocate QMIElement failed!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQCCI_ComposeQMIRequest
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPQMUX_c714 19 "%0<%10!s!|sub#%11!d!>MPQCCI_ComposeQMIRequest: QMIType 0x%12!x!, msgId 0x%13!x!, bSync %14!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQCCI_ComposeQMIRequest
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+uQMIType, ItemLong -- 12
+uMsgId, ItemLong -- 13
+bSync, ItemLong -- 14
+}
+#typev MPQMUX_c365 18 "%0WriteRegistryData: Set: ERR." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=WriteCDMAContext
+{
+}
+#typev MPQMUX_c365 17 "%0WriteRegistryData: NdisOpenConfig: ERR 0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=WriteCDMAContext
+{
+ndisStatus, ItemLong -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPNASQmi_c1968 11 "%0<%10!s!|sub#%11!d!> UpdateCachedNwError: uNewNwErr=%12!d!, RegisterState=0x%13!x!, PacketServiceState=0x%14!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+uNewNwErr, ItemLong -- 12
+pNewRegistrationState->RegistrationState.RegisterState, ItemLong -- 13
+pNewPacketServiceState->PacketService.PacketServiceState, ItemLong -- 14
+}
+#typev MPNASQmi_c1968 10 "%0<%10!s!|sub#%11!d!> UpdateCachedNwError: reg_reject_info_valid=%12!d!, reject_srv_domain=0x%13!x!, rej_cause=%14!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pRegRejectSysInfo->reg_reject_info_valid, ItemLong -- 12
+pRegRejectSysInfo->reg_reject_info.reject_srv_domain, ItemLong -- 13
+pRegRejectSysInfo->reg_reject_info.rej_cause, ItemLong -- 14
+}

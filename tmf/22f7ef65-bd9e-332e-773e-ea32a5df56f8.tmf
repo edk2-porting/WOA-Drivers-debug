@@ -1,0 +1,381 @@
+// PDB:  ConnectionManagerClientDLL.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+22f7ef65-bd9e-332e-773e-ea32a5df56f8 usermode // SRC=mbb_api.c MJ= MN=
+#typev mbb_api_c747 42 "%0%!FUNC!: DeviceIoControl() returned error %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+GetLastError (), ItemLong -- 10
+}
+#typev mbb_api_c743 41 "%0%!FUNC!: dwIoCode = %10!u! returned: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+dwIoCode, ItemLong -- 10
+bRc, ItemLong -- 11
+}
+#typev mbb_api_c730 40 "%0%!FUNC!: Device Opened for %10!s!, handle is 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+hDevice, ItemPtr -- 11
+}
+#typev mbb_api_c726 39 "%0%!FUNC!: CreateFile for %10!s! Failed : %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+GetLastError (), ItemLong -- 11
+}
+#typev mbb_api_c715 38 "%0%!FUNC!: Opening device for %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+}
+#typev mbb_api_c697 35 "%0%!FUNC!: Form device name failed for MBB" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+}
+// PDB:  qcgnss.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev mbb_api_c239 34 "%0%!FUNC!:: Error: Thread creation failed!. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBAPI_StartEmergencyDataCall_Ex
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c239 33 "%0%!FUNC!:: MBB_ASYNC_REQ_CONTEXT allocation success. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBAPI_StartEmergencyDataCall_Ex
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c229 12 "%0%!FUNC!:: pOutData allocation failed. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBAPI_StartEmergencyDataCall_Ex
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c216 11 "%0%!FUNC!:: pInData allocation failed. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBAPI_StartEmergencyDataCall_Ex
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c321 34 "%0%!FUNC!:: Error: Thread creation failed!. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBAPI_StopEmergencyDataCall
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c321 33 "%0%!FUNC!:: MBB_ASYNC_REQ_CONTEXT allocation success. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBAPI_StopEmergencyDataCall
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c308 14 "%0%!FUNC!:: pOutData allocation failed. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBAPI_StopEmergencyDataCall
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c298 13 "%0%!FUNC!:: pInData allocation failed. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBAPI_StopEmergencyDataCall
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c538 32 "%0%!FUNC!:: Thread %10!d! exiting." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c532 31 "%0%!FUNC!:: Thread %10!d! calling registered user-mode callback function." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c517 28 "%0%!FUNC!:: DeviceIoControl for dwIoCode = %10!u! completed immediately. GetLastError = 0x%11!x!. ThreadID = %12!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+pAsyncReqContext->dwIoCode, ItemLong -- 10
+GetLastError (), ItemLong -- 11
+GetCurrentThreadId (), ItemLong -- 12
+}
+#typev mbb_api_c529 30 "%0%!FUNC!:: Thread %10!d! signalled for overlapped event." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c524 29 "%0%!FUNC!:: Thread %10!d! waiting on overlapped event." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c509 27 "%0%!FUNC!:: DeviceIoControl for dwIoCode = %10!u! enqueued. GetLastError = 0x%11!x!. ThreadID = %12!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+pAsyncReqContext->dwIoCode, ItemLong -- 10
+GetLastError (), ItemLong -- 11
+GetCurrentThreadId (), ItemLong -- 12
+}
+#typev mbb_api_c502 26 "%0%!FUNC!:: Sending DeviceIoControl for dwIoCode = %10!u! failed. GetLastError = 0x%11!x!. ThreadID = %12!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+pAsyncReqContext->dwIoCode, ItemLong -- 10
+GetLastError (), ItemLong -- 11
+GetCurrentThreadId (), ItemLong -- 12
+}
+#typev mbb_api_c483 25 "%0%!FUNC!:: Sending DeviceIoControl for dwIoCode = %10!u!. ThreadID = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+pAsyncReqContext->dwIoCode, ItemLong -- 10
+GetCurrentThreadId (), ItemLong -- 11
+}
+#typev mbb_api_c479 24 "%0%!FUNC!:: Device Opened for %10!s!, handle is 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+DeviceName, ItemString -- 10
+pAsyncReqContext->hDevice, ItemPtr -- 11
+}
+#typev mbb_api_c475 23 "%0%!FUNC!:: Error: CreateFile for %10!s! Failed : %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+DeviceName, ItemString -- 10
+GetCurrentThreadId (), ItemLong -- 11
+}
+#typev mbb_api_c464 22 "%0%!FUNC!:: Opening device for %10!s!. ThreadID = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+DeviceName, ItemString -- 10
+GetCurrentThreadId (), ItemLong -- 11
+}
+#typev mbb_api_c459 21 "%0%!FUNC!:: Error: Form device name failed!. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c389 20 "%0%!FUNC!:: Performing cleanup. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_CleanupAsyncReq
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c356 17 "%0%!FUNC!:: IPType = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_StartEmgDataCallReqProcessProc
+{
+pEmgCallContext->IpAddrVal.IPType, ItemLong -- 10
+}
+#typev mbb_api_c352 16 "%0%!FUNC!:: ThreadID = %10!d!, bIMSInitiated = %11!d!, error = 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_StartEmgDataCallReqProcessProc
+{
+GetCurrentThreadId (), ItemLong -- 10
+pEmgCallContext->bIMSInitiated, ItemLong -- 11
+pEmgCallContext->error, ItemLong -- 12
+}
+#typev mbb_api_c336 15 "%0%!FUNC!:: ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_StopEmgDataCallReqProcessProc
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+// PDB:  QcIMSDataDaemon.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev mbb_conn_api_c2849 34 "%0%!FUNC!:: Error: Thread creation failed!. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBConn_StopDataCall
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_conn_api_c2849 33 "%0%!FUNC!:: MBB_ASYNC_REQ_CONTEXT allocation success. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBConn_StopDataCall
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_conn_api_c2849 14 "%0%!FUNC!:: pOutData allocation failed. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBConn_StopDataCall
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_conn_api_c2849 13 "%0%!FUNC!:: pInData allocation failed. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBConn_StopDataCall
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+// PDB:  QcIMSDataDaemon.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev mbb_api_c239 34 "%0%!FUNC!:: Error: Thread creation failed!. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBAPI_StartEmergencyDataCall_Ex
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c239 33 "%0%!FUNC!:: MBB_ASYNC_REQ_CONTEXT allocation success. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBAPI_StartEmergencyDataCall_Ex
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c229 12 "%0%!FUNC!:: pOutData allocation failed. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBAPI_StartEmergencyDataCall_Ex
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c216 11 "%0%!FUNC!:: pInData allocation failed. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBAPI_StartEmergencyDataCall_Ex
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c538 32 "%0%!FUNC!:: Thread %10!d! exiting." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c532 31 "%0%!FUNC!:: Thread %10!d! calling registered user-mode callback function." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c517 28 "%0%!FUNC!:: DeviceIoControl for dwIoCode = %10!u! completed immediately. GetLastError = 0x%11!x!. ThreadID = %12!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+pAsyncReqContext->dwIoCode, ItemLong -- 10
+GetLastError (), ItemLong -- 11
+GetCurrentThreadId (), ItemLong -- 12
+}
+#typev mbb_api_c529 30 "%0%!FUNC!:: Thread %10!d! signalled for overlapped event." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c524 29 "%0%!FUNC!:: Thread %10!d! waiting on overlapped event." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c509 27 "%0%!FUNC!:: DeviceIoControl for dwIoCode = %10!u! enqueued. GetLastError = 0x%11!x!. ThreadID = %12!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+pAsyncReqContext->dwIoCode, ItemLong -- 10
+GetLastError (), ItemLong -- 11
+GetCurrentThreadId (), ItemLong -- 12
+}
+#typev mbb_api_c502 26 "%0%!FUNC!:: Sending DeviceIoControl for dwIoCode = %10!u! failed. GetLastError = 0x%11!x!. ThreadID = %12!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+pAsyncReqContext->dwIoCode, ItemLong -- 10
+GetLastError (), ItemLong -- 11
+GetCurrentThreadId (), ItemLong -- 12
+}
+#typev mbb_api_c483 25 "%0%!FUNC!:: Sending DeviceIoControl for dwIoCode = %10!u!. ThreadID = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+pAsyncReqContext->dwIoCode, ItemLong -- 10
+GetCurrentThreadId (), ItemLong -- 11
+}
+#typev mbb_api_c479 24 "%0%!FUNC!:: Device Opened for %10!s!, handle is 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+DeviceName, ItemString -- 10
+pAsyncReqContext->hDevice, ItemPtr -- 11
+}
+#typev mbb_api_c475 23 "%0%!FUNC!:: Error: CreateFile for %10!s! Failed : %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+DeviceName, ItemString -- 10
+GetCurrentThreadId (), ItemLong -- 11
+}
+#typev mbb_api_c464 22 "%0%!FUNC!:: Opening device for %10!s!. ThreadID = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+DeviceName, ItemString -- 10
+GetCurrentThreadId (), ItemLong -- 11
+}
+#typev mbb_api_c459 21 "%0%!FUNC!:: Error: Form device name failed!. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_AsyncRespHandler
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c389 20 "%0%!FUNC!:: Performing cleanup. ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_CleanupAsyncReq
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+#typev mbb_api_c747 42 "%0%!FUNC!: DeviceIoControl() returned error %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+GetLastError (), ItemLong -- 10
+}
+#typev mbb_api_c743 41 "%0%!FUNC!: dwIoCode = %10!u! returned: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+dwIoCode, ItemLong -- 10
+bRc, ItemLong -- 11
+}
+#typev mbb_api_c730 40 "%0%!FUNC!: Device Opened for %10!s!, handle is 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+hDevice, ItemPtr -- 11
+}
+#typev mbb_api_c726 39 "%0%!FUNC!: CreateFile for %10!s! Failed : %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+GetLastError (), ItemLong -- 11
+}
+#typev mbb_api_c715 38 "%0%!FUNC!: Opening device for %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+}
+#typev mbb_api_c697 35 "%0%!FUNC!: Form device name failed for MBB" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+}
+#typev mbb_api_c356 17 "%0%!FUNC!:: IPType = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_StartEmgDataCallReqProcessProc
+{
+pEmgCallContext->IpAddrVal.IPType, ItemLong -- 10
+}
+#typev mbb_api_c352 16 "%0%!FUNC!:: ThreadID = %10!d!, bIMSInitiated = %11!d!, error = 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_StartEmgDataCallReqProcessProc
+{
+GetCurrentThreadId (), ItemLong -- 10
+pEmgCallContext->bIMSInitiated, ItemLong -- 11
+pEmgCallContext->error, ItemLong -- 12
+}
+#typev mbb_api_c336 15 "%0%!FUNC!:: ThreadID = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_StopEmgDataCallReqProcessProc
+{
+GetCurrentThreadId (), ItemLong -- 10
+}
+// PDB:  QcIMSQMIDaemon.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev mbb_api_c747 42 "%0%!FUNC!: DeviceIoControl() returned error %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+GetLastError (), ItemLong -- 10
+}
+#typev mbb_api_c743 41 "%0%!FUNC!: dwIoCode = %10!u! returned: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+dwIoCode, ItemLong -- 10
+bRc, ItemLong -- 11
+}
+#typev mbb_api_c730 40 "%0%!FUNC!: Device Opened for %10!s!, handle is 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+hDevice, ItemPtr -- 11
+}
+#typev mbb_api_c726 39 "%0%!FUNC!: CreateFile for %10!s! Failed : %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+GetLastError (), ItemLong -- 11
+}
+#typev mbb_api_c715 38 "%0%!FUNC!: Opening device for %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+}
+#typev mbb_api_c697 35 "%0%!FUNC!: Form device name failed for MBB" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+}
+// PDB:  RCS.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev mbb_api_c747 42 "%0%!FUNC!: DeviceIoControl() returned error %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+GetLastError (), ItemLong -- 10
+}
+#typev mbb_api_c743 41 "%0%!FUNC!: dwIoCode = %10!u! returned: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+dwIoCode, ItemLong -- 10
+bRc, ItemLong -- 11
+}
+#typev mbb_api_c730 40 "%0%!FUNC!: Device Opened for %10!s!, handle is 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+hDevice, ItemPtr -- 11
+}
+#typev mbb_api_c726 39 "%0%!FUNC!: CreateFile for %10!s! Failed : %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+GetLastError (), ItemLong -- 11
+}
+#typev mbb_api_c715 38 "%0%!FUNC!: Opening device for %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+}
+#typev mbb_api_c697 35 "%0%!FUNC!: Form device name failed for MBB" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilSetNotificationFilterState_cpp80 45 "%0%!FUNC!:: MBBUtil_SendSyncIoctl for NOTIFICATION_FILTER_STATE IOCTL returned: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=WMRil::SetNotificationFilterStateClass::Execute
+{
+bRc, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilNetworkService_cpp1307 45 "%0%!FUNC!:: MBBUtil_SendSyncIoctl for NOTIFICATION_FILTER_STATE IOCTL returned: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=WMRil::NetworkServiceClass::ReInitialize
+{
+bRc, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev mbb_api_c801 44 "%0%!FUNC!:: Waiting for %10!d!ms (power down dereg delay) before returning." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBAPI_SetEquipmentState
+{
+MBB_POWERDOWN_DEFAULT_DELAY, ItemLong -- 10
+}
+#typev mbb_api_c797 43 "%0%!FUNC!:: MBBUtil_SendSyncIoctl for EQUIPMENT_STATE IOCTL returned: %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBAPI_SetEquipmentState
+{
+bRc, ItemLong -- 10
+}
+#typev mbb_api_c747 42 "%0%!FUNC!: DeviceIoControl() returned error %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+GetLastError (), ItemLong -- 10
+}
+#typev mbb_api_c743 41 "%0%!FUNC!: dwIoCode = %10!u! returned: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+dwIoCode, ItemLong -- 10
+bRc, ItemLong -- 11
+}
+#typev mbb_api_c730 40 "%0%!FUNC!: Device Opened for %10!s!, handle is 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+hDevice, ItemPtr -- 11
+}
+#typev mbb_api_c726 39 "%0%!FUNC!: CreateFile for %10!s! Failed : %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+GetLastError (), ItemLong -- 11
+}
+#typev mbb_api_c715 38 "%0%!FUNC!: Opening device for %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+DeviceName, ItemString -- 10
+}
+#typev mbb_api_c697 35 "%0%!FUNC!: Form device name failed for MBB" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_API_WPP FUNC=MBBUtil_SendSyncIoctl
+{
+}

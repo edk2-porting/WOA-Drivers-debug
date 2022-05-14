@@ -1,0 +1,22 @@
+// PDB:  qcdiaglogging.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+b7a4e764-b627-3696-51cc-2017dd856a8e QCDiagLogging // SRC=Diag_LSM_Event.c MJ= MN=
+#typev Diag_LSM_Event_c241 13 "%0Failed to update event mask" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=EventAPI FUNC=event_update_mask
+{
+}
+#typev Diag_LSM_Event_c237 12 "%0%!FUNC!:Error in Get Mask, maskLen=%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=EventAPI FUNC=event_update_mask
+{
+maskLen_Recvd, ItemLong -- 10
+}
+#typev Diag_LSM_Event_c101 10 "%0%!FUNC!: failed, error %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=EventAPI FUNC=qcdiag_event_report_ext
+{
+GetLastError(), ItemLong -- 10
+}
+#typev Diag_LSM_Event_c159 10 "%0%!FUNC!: failed, error %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=EventAPI FUNC=qcdiag_event_report_payload_ext
+{
+GetLastError(), ItemLong -- 10
+}
+#typev Diag_LSM_Event_c151 11 "%0%!FUNC!: failed, error %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=EventAPI FUNC=qcdiag_event_report_payload_ext
+{
+GetLastError(), ItemLong -- 10
+}

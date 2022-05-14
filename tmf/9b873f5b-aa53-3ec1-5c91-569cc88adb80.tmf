@@ -1,0 +1,233 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+9b873f5b-aa53-3ec1-5c91-569cc88adb80 MBB // SRC=MPDataIf.c MJ= MN=
+#typev MPDataIf_c241 17 "%0<%10!s!>CancelSendNetBufferLists: %11!d!/%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPCancelSend
+{
+pAdapter->PortName, ItemString -- 10
+(int)CancelId, ItemLong -- 11
+(int)MaxNetBufferListInfo, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDataIf_c151 13 "%0<%10!s!> %!FUNC!: pAdapter->PortIndex = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDataIf_AssignPortIndex
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->PortIndex, ItemLong -- 11
+}
+#typev MPDataIf_c159 14 "%0<%10!s!> MPDataIf_AssignPortIndex: DataIf ports for MaxSupportedAdapters = %11!d! already in use!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDataIf_AssignPortIndex
+{
+pAdapter->PortName, ItemString -- 10
+maxSupportedAdapters, ItemLong -- 11
+}
+#typev MPDataIf_c583 37 "%0%!FUNC!: MaxXmitLinkSpeed=%10!I64u!, MaxRcvLinkSpeed=%11!I64u! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDataIf_Init
+{
+MPPhoneInfo_GetMaxXmitLinkSpeed(), ItemULongLong -- 10
+MPPhoneInfo_GetMaxRcvLinkSpeed(), ItemULongLong -- 11
+}
+#typev MPDataIf_c577 36 "%0%!FUNC!: 464XlatOffloadEnabled = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDataIf_Init
+{
+uDwordValue, ItemLong -- 10
+}
+#typev MPDataIf_c572 35 "%0Global RSCEnabled=%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDataIf_Init
+{
+bresult, ItemLong -- 10
+}
+#typev MPDataIf_c567 34 "%0Global EnableDlChecksumOffload=%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDataIf_Init
+{
+uDwordValue, ItemLong -- 10
+}
+#typev MPDataIf_c563 33 "%0Global EnableUlChecksumOffload=%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDataIf_Init
+{
+uDwordValue, ItemLong -- 10
+}
+#typev MPDataIf_c198 16 "%0<%10!s!> <%11!s!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDataIf_ReadyCbRoutine
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pPhysicalAdapter->PortName, ItemString -- 11
+}
+#typev MPDataIf_c194 15 "%0MPDataIf_ReadyCbRoutine pAdapter is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDataIf_ReadyCbRoutine
+{
+}
+#typev MPDataIf_c545 31 "%0%!FUNC!:: Invalid params: pAdapter=%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDataIf_UpdateAdapterRscState
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPDataIf_c553 32 "%0<%10!s!>%!FUNC!: dataifhandle=0x%11!I64x!, muxid: %12!u! RSCv4=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPDataIf_UpdateAdapterRscState
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->dataifhandle, ItemLongLongX -- 11
+pAdapter->MuxId, ItemLong -- 12
+pAdapter->bRSCv4Enabled, ItemLong -- 13
+}
+#typev MPDataIf_c472 26 "%0<%10!s!> <%11!s!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPRxProcessNBLFromPendingList
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pPhysicalAdapter->PortName, ItemString -- 11
+}
+#typev MPDataIf_c371 23 "%0<%10!s!> <%11!s!> %!FUNC!:: MPRxReturnNetBufferList:: NBL 0x%12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPRxReceiveNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pPhysicalAdapter->PortName, ItemString -- 11
+pRxNBL, ItemPtr -- 12
+}
+#typev MPDataIf_c402 25 "%0<%10!s!> <%11!s!> %!FUNC!:: NdisMIndicateReceiveNetBufferLists:: NBL 0x%12!p! AdapterHandle 0x%13!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPRxReceiveNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pPhysicalAdapter->PortName, ItemString -- 11
+pRxNBL, ItemPtr -- 12
+pAdapter->pPhysicalAdapter->AdapterHandle, ItemPtr -- 13
+}
+#typev MPDataIf_c384 24 "%0<%10!s!> <%11!s!> %!FUNC!:: MPRxAddNBLToPendingList:: NBL 0x%12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPRxReceiveNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pPhysicalAdapter->PortName, ItemString -- 11
+pRxNBL, ItemPtr -- 12
+}
+#typev MPDataIf_c353 22 "%0<%10!s!>(%11!I64u!) <%12!s!>(%13!I64u!) %!FUNC!::" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPRxReceiveNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->NdisPortNumber, ItemULongLong -- 11
+pAdapter->pPhysicalAdapter->PortName, ItemString -- 12
+pAdapter->pPhysicalAdapter->NdisPortNumber, ItemULongLong -- 13
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDataIf_c314 21 "%0<%10!s!> <%11!s!> %!FUNC!:: NBL 0x%12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPTxCompleteNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pPhysicalAdapter->PortName, ItemString -- 11
+NetBufferList, ItemPtr -- 12
+}
+#typev MPDataIf_c302 21 "%0<%10!s!> <%11!s!> %!FUNC!:: NBL 0x%12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pPhysicalAdapter->PortName, ItemString -- 11
+NetBufferList, ItemPtr -- 12
+}
+#typev MPDataIf_c300 20 "%0<%10!s!> <%11!s!> %!FUNC!:: MPTxCompleteNetBufferList: Adapter not ready, complete NBL 0x%12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+((PMP_ADAPTER)MiniportAdapterContext)->PortName, ItemString -- 11
+NetBufferLists, ItemPtr -- 12
+}
+#typev MPDataIf_c296 19 "%0<%10!s!> <%11!s!> %!FUNC!:: DataIoTxSendNetBufferList NBL 0x%12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+((PMP_ADAPTER)MiniportAdapterContext)->PortName, ItemString -- 11
+NetBufferLists, ItemPtr -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDataIf_c277 21 "%0<%10!s!> <%11!s!> %!FUNC!:: NBL 0x%12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pPhysicalAdapter->PortName, ItemString -- 11
+NetBufferList, ItemPtr -- 12
+}
+#typev MPDataIf_c274 18 "%0%!FUNC!:: ERROR:: pAdapter = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPTxSendNetBufferList
+{
+}
+#typev MPDataIf_c117 12 "%0<%10!s!> MPRxReceiveNetBufferList: Setting wake reason and waking up the worker thread " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessAOACDataPacketWakeUp
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c62 11 "%0<%10!s!> <%11!s!> %!FUNC!:: NBL 0x%12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessAOACDataPacketWakeUp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pPhysicalAdapter->PortName, ItemString -- 11
+pRxNBL, ItemPtr -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPOID_c10677 29 "%0<%10!s!>%!FUNC!: dataifhandle=0x%11!I64x!, muxid: %12!u! RSCv6=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->dataifhandle, ItemLongLongX -- 11
+pAdapter->MuxId, ItemLong -- 12
+pAdapter->bRSCv6Enabled, ItemLong -- 13
+}
+#typev MPOID_c10677 28 "%0<%10!s!>%!FUNC!: dataifhandle=0x%11!I64x!, muxid: %12!u! RSCv4=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->dataifhandle, ItemLongLongX -- 11
+pAdapter->MuxId, ItemLong -- 12
+pAdapter->bRSCv4Enabled, ItemLong -- 13
+}
+#typev MPOID_c10677 27 "%0%!FUNC!:: Invalid params: pAdapter=%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPOID_c10672 29 "%0<%10!s!>%!FUNC!: dataifhandle=0x%11!I64x!, muxid: %12!u! RSCv6=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->dataifhandle, ItemLongLongX -- 11
+pAdapter->MuxId, ItemLong -- 12
+pAdapter->bRSCv6Enabled, ItemLong -- 13
+}
+#typev MPOID_c10672 28 "%0<%10!s!>%!FUNC!: dataifhandle=0x%11!I64x!, muxid: %12!u! RSCv4=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->dataifhandle, ItemLongLongX -- 11
+pAdapter->MuxId, ItemLong -- 12
+pAdapter->bRSCv4Enabled, ItemLong -- 13
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPOID_c10643 28 "%0<%10!s!>%!FUNC!: dataifhandle=0x%11!I64x!, muxid: %12!u! RSCv4=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->dataifhandle, ItemLongLongX -- 11
+pAdapter->MuxId, ItemLong -- 12
+pAdapter->bRSCv4Enabled, ItemLong -- 13
+}
+#typev MPOID_c10643 27 "%0%!FUNC!:: Invalid params: pAdapter=%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPOID_c10672 27 "%0%!FUNC!:: Invalid params: pAdapter=%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPOID_c10620 30 "%0<%10!s!>%!FUNC!: Error: Unknown IpVer. muxid: %11!u! uIpVer=%12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->MuxId, ItemLong -- 11
+uIpVer, ItemLong -- 12
+}
+#typev MPOID_c10620 29 "%0<%10!s!>%!FUNC!: dataifhandle=0x%11!I64x!, muxid: %12!u! RSCv6=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->dataifhandle, ItemLongLongX -- 11
+pAdapter->MuxId, ItemLong -- 12
+pAdapter->bRSCv6Enabled, ItemLong -- 13
+}
+#typev MPOID_c10620 30 "%0<%10!s!>%!FUNC!: Error: Unknown IpVer. muxid: %11!u! uIpVer=%12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->MuxId, ItemLong -- 11
+uIpVer, ItemLong -- 12
+}
+#typev MPOID_c10620 29 "%0<%10!s!>%!FUNC!: dataifhandle=0x%11!I64x!, muxid: %12!u! RSCv6=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->dataifhandle, ItemLongLongX -- 11
+pAdapter->MuxId, ItemLong -- 12
+pAdapter->bRSCv6Enabled, ItemLong -- 13
+}
+#typev MPOID_c10638 28 "%0<%10!s!>%!FUNC!: dataifhandle=0x%11!I64x!, muxid: %12!u! RSCv4=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->dataifhandle, ItemLongLongX -- 11
+pAdapter->MuxId, ItemLong -- 12
+pAdapter->bRSCv4Enabled, ItemLong -- 13
+}
+#typev MPOID_c10638 27 "%0%!FUNC!:: Invalid params: pAdapter=%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPOID_Handle_OID_Tcp_Offload_Parameters
+{
+pAdapter, ItemPtr -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPTimer_c794 10 "%0<%10!s!> MP_USBCleanUp " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}

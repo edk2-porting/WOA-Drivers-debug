@@ -1,0 +1,118 @@
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+0680ee49-c2db-37c6-a26b-b249ab248dae qca11ad // SRC=wdi_p2p.c MJ= MN=
+#typev base_port_c4149 12 "%0<-- %!FUNC!" //   COMPID=COMP_P2P FUNC=PortsMgrLoadRegistryInformation
+{
+}
+#typev base_port_c4149 11 "%0%10!s!: P2pEnable=%11!d!" //   FLAGS=COMP_P2P LEVEL=DBG_NORMAL FUNC=PortsMgrLoadRegistryInformation
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+}
+#typev base_port_c4149 10 "%0--> %!FUNC!" //   COMPID=COMP_P2P FUNC=PortsMgrLoadRegistryInformation
+{
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev wdi_p2p_c776 34 "%0%10!s!:[ERROR] WDI failed to GenerateWdiIndicationP2pGroupOperatingChannel: at Line%11!d! " //   FLAGS=COMP_OID LEVEL=DBG_SERIOUS FUNC=P2PIndicateGroupOperatingChannel
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+}
+#typev wdi_p2p_c855 35 "%0%10!s!:[ERROR] WDI failed to GenerateWdiIndicationP2pOperatingChannelAttributes: at Line %11!d! " //   FLAGS=COMP_OID LEVEL=DBG_SERIOUS FUNC=P2PIndicateOpchanAttributes
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+}
+#typev wdi_p2p_c205 13 "%0P2POnPowerStateChanged: bIsWakeup %10!d! PowerChangeReason %11!d!" //   FLAGS=COMP_OID LEVEL=DBG_NORMAL FUNC=P2POnPowerStateChanged
+{
+Arg, ItemLong -- 10
+Arg, ItemLong -- 11
+}
+#typev wdi_p2p_c300 16 "%0StaAssoc_ConnectCtx_Init return Failed code=0x%10!x!" //   FLAGS=COMP_INIT_PNP LEVEL=DBG_SERIOUS FUNC=P2pCreatePort
+{
+Arg, ItemLong -- 10
+}
+#typev wdi_p2p_c273 14 "%0Failed to allocate %10!d! bytes for WFD_PORT" //   FLAGS=COMP_P2P LEVEL=DBG_SERIOUS FUNC=P2pCreatePort
+{
+Arg, ItemLong -- 10
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev wdi_p2p_c348 17 "%0%10!s! - BasePort is NULL" //   FLAGS=COMP_P2P LEVEL=DBG_SERIOUS FUNC=P2pDeletePort
+{
+Arg, ItemString -- 10
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev wdi_p2p_c648 30 "%0<-- %!FUNC!" //   COMPID=COMP_P2P FUNC=P2pHandleWdiCommand
+{
+}
+#typev wdi_p2p_c642 29 "%0Got non-implemented OID 0x%10!X!. Doing nothing but returning NDIS_STATUS_SUCCESS." //   FLAGS=COMP_INIT_PNP LEVEL=DBG_NORMAL FUNC=P2pHandleWdiCommand
+{
+Arg, ItemLong -- 10
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev wdi_p2p_c568 28 "%0%10!s!: Invalid NULL P2P port pointer" //   FLAGS=COMP_P2P LEVEL=DBG_SERIOUS FUNC=P2pHandleWdiCommand
+{
+Arg, ItemString -- 10
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev wdi_p2p_c560 27 "%0%10!s!: Invalid NULL WDI command pointer" //   FLAGS=COMP_P2P LEVEL=DBG_SERIOUS FUNC=P2pHandleWdiCommand
+{
+Arg, ItemString -- 10
+}
+// PDB:  qca11ad850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev wdi_p2p_c554 26 "%0--> %!FUNC!" //   COMPID=COMP_P2P FUNC=P2pHandleWdiCommand
+{
+}
+#typev wdi_p2p_c435 20 "%0<-- %!FUNC!" //   COMPID=COMP_P2P FUNC=P2pHandleWdiCommandDot11Reset
+{
+}
+#typev wdi_p2p_c418 19 "%0%10!s!: ParseWdiTaskDot11Reset failed with status=0x%11!x!" //   FLAGS=COMP_P2P LEVEL=DBG_SERIOUS FUNC=P2pHandleWdiCommandDot11Reset
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+}
+#typev wdi_p2p_c402 18 "%0--> %!FUNC!" //   COMPID=COMP_P2P FUNC=P2pHandleWdiCommandDot11Reset
+{
+}
+#typev wdi_p2p_c530 25 "%0<-- %!FUNC!" //   COMPID=COMP_P2P FUNC=P2pHandleWdiTaskChangeOperationMode
+{
+}
+#typev wdi_p2p_c509 24 "%0%10!s!: Changing P2P port %11!d! operation mode from %12!s! to %13!s!" //   FLAGS=COMP_P2P LEVEL=DBG_NORMAL FUNC=P2pHandleWdiTaskChangeOperationMode
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+Arg, ItemString -- 12
+Arg, ItemString -- 13
+}
+#typev wdi_p2p_c497 23 "%0%10!s!: Operation mode 0x%11!X!, %12!s!, is not supported by P2P ports" //   FLAGS=COMP_P2P LEVEL=DBG_SERIOUS FUNC=P2pHandleWdiTaskChangeOperationMode
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+Arg, ItemString -- 12
+}
+#typev wdi_p2p_c483 22 "%0%10!s!: ParseWdiTaskChangeOperationMode failed with status=0x%11!x!" //   FLAGS=COMP_P2P LEVEL=DBG_SERIOUS FUNC=P2pHandleWdiTaskChangeOperationMode
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+}
+#typev wdi_p2p_c470 21 "%0--> %!FUNC!" //   COMPID=COMP_P2P FUNC=P2pHandleWdiTaskChangeOperationMode
+{
+}
+#typev wdi_p2p_c699 33 "%0<-- %!FUNC!" //   COMPID=COMP_P2P FUNC=P2pHandleWmiEvent
+{
+}
+#typev wdi_p2p_c694 32 "%0%10!s!: Port %11!d! cannot handle WMI events in mode %12!d!" //   FLAGS=COMP_P2P LEVEL=DBG_SERIOUS FUNC=P2pHandleWmiEvent
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+}
+#typev wdi_p2p_c675 31 "%0--> %!FUNC!" //   COMPID=COMP_P2P FUNC=P2pHandleWmiEvent
+{
+}

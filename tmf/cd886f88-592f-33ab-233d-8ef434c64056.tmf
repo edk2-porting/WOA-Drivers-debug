@@ -1,0 +1,846 @@
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+cd886f88-592f-33ab-233d-8ef434c64056 BattMngr // SRC=BattMngrPlat_SMChg_FGGge_R3.c MJ= MN=
+#typev BattMngrPlat_SMChg_FGGge_R3_c4909 196 "%0BattMngrPlat_SMChg_FGGge_R3_BattErrHandle_Action_ErrShutdown:: System will perform error shutdown" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_BattErrHandle_Action_ErrShutdown
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4805 193 "%0BattMngrPlat_SMChg_FGGge_R3_BattErrHandle_Action_GetBattSt::battery category = %10!d!, battery in op. range = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_BattErrHandle_Action_GetBattSt
+{
+BattSt->BattCategory, ItemLong -- 10
+BattSt->IsBattInOpRange ? 1 : 0, ItemLong -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4797 192 "%0BattMngrPlat_SMChg_FGGge_R3_BattErrHandle_Action_GetBattSt::batteryRID = %10!d!, battery temperature = %11!d! C" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_BattErrHandle_Action_GetBattSt
+{
+BattInfo.batt_id, ItemLong -- 10
+BattInfo.batt_temp, ItemLong -- 11
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c4860 195 "%0BattMngrPlat_SMChg_FGGge_R3_BattErrHandle_Action_ReloadChgTable:: Charge Table (HW) Reprogrammed" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_BattErrHandle_Action_ReloadChgTable
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4837 194 "%0BattMngrPlat_SMChg_FGGge_R3_BattErrHandle_Action_ReloadChgTable:: Charge Table Reloaded" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_BattErrHandle_Action_ReloadChgTable
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3455 162 "%0BattMngrPlat_SMChg_FGGge_R3_ChargerConfig failed, Error Code = %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3444 164 "%0BattMngrPlat_SMChg_FGGge_R3_Set_USBIN_Allowance::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3444 163 "%0BattMngrPlat_SMChg_FGGge_R3_Set_USBIN_Allowance (+)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3398 161 "%0BattMngrPlat_SMChg_FGGge_R3_ChargerConfig::Config parameters changed,ibat_max =%10!d! mA, vdd_max =%11!d! mV,iusb_max =%12!d! mA,idc_max =%13!d! mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+MaxBatteryCurrent, ItemLong -- 10
+MaxBatteryVoltage, ItemLong -- 11
+IUSB, ItemLong -- 12
+IDC, ItemLong -- 13
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3357 160 "%0BattMngrPlat_SMB3pChg_SMB3pGge_R3_ChargerConfig: Float Voltage Adjustment Triggered" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3329 159 "%0BattMngrPlat_SMChg_FGGge_R3_ChargerConfig::Connector Temp Mitigation Armed. IUSB = %10!d! mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+IUSB, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3323 158 "%0BattMngrPlat_SMChg_FGGge_R3_ChargerConfig::Connector Temp Mitigation Disarmed. IUSB = %10!d! mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+IUSB, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3315 157 "%0BattMngrPlat_SMChg_FGGge_R3_ChargerConfig::Connector Temp Mitigation Armed. IUSB = %10!d! mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+IUSB, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3306 156 "%0BattMngrPlat_SMChg_FGGge_R3_ChargerConfig::SMB AUX_THERM = %10!d! DegreeC, SMB AUX_THERM Offset = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+SMBAuxtherm, ItemLong -- 10
+pDeviceContext->HWTempInfo.slave_auxtemp_offset, ItemLong -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3301 155 "%0BattMngrPlat_SMChg_FGGge_R3_ChargerConfig::Error::IOCTL_PM_EIC_GET_TADC_READING failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3286 154 "%0BattMngrPlat_SMB3pChg_SMB3pGge_R3_ChargerConfig: Float Voltage Adjustment Complete" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c3227 153 "%0BattMngrPlat_SMChg_FGGge_R3_ChargerConfig: SDP/Unknown Charger detected with CAD command: V/I=%10!d! mV/%11!d! mA, Force I=500 mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+pDeviceContext->BattMngrData.ControlCharging.batt_charger_voltage, ItemLong -- 10
+IUSB, ItemLong -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3205 152 "%0Foldback: i = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+i, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3196 151 "%0Foldback charger detected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3183 150 "%0Foldback: Event ID is charger cable event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3161 149 "%0Skipping charger config since foldback charger detetected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3135 148 "%0Jeita fcc is less than thermal fcc: thermal_fcc = %10!d! mA, jeita_fcc = %11!d! mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_ChargerConfig
+{
+MaxBatteryCurrent, ItemLong -- 10
+JeitaMaxBatteryCurrent, ItemLong -- 11
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c4147 181 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingStateChange::Reaching EOC in Jeita condition" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingStateChange
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4082 180 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingStateChange::Reaching EOC in Jeita condition" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingStateChange
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4178 182 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingStateChange::Change state to %10!d!       (%11!s!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingStateChange
+{
+*stateID, ItemLong -- 10
+*stateID, ItemEnum(BATTMNGR_STATE_ID_TYPE) -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4044 179 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingStateChange:: doneSts = %10!d!, vfloatadjustment = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingStateChange
+{
+doneSts, ItemLong -- 10
+VFloatAdjustmentTriggered, ItemLong -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4040 178 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingStateChange:: charging sts = 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingStateChange
+{
+charging_status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4182 183 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingStateChange::ERROR::Change state to %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingStateChange
+{
+*stateID, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5074 206 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions::ERROR::Checking ChargingThermalConditions failed, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5066 205 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions::Battery charge percentage is 0" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5048 203 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions::Battery temp is not within charging limit, battery temp is %10!d! degree C, change to state %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions
+{
+pBattMngrPlatSmbChgFGGgeR3Data->PlatBattData.BatteryTemp, ItemLong -- 10
+*nextStateID, ItemLong -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5057 204 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions::Battery temp is not within charging limit (hysteresis), battery temp is %10!d! degree C, change to state %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions
+{
+pBattMngrPlatSmbChgFGGgeR3Data->PlatBattData.BatteryTemp, ItemLong -- 10
+*nextStateID, ItemLong -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5035 202 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions::Battery temp is not within charging limit, battery temp is %10!d! degree C, change to state %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions
+{
+pBattMngrPlatSmbChgFGGgeR3Data->PlatBattData.BatteryTemp, ItemLong -- 10
+*nextStateID, ItemLong -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5021 201 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions::Change to state %10!d! because of HW Thermal Limiting" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions
+{
+*nextStateID, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5013 200 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions::AICL results : AICL_done = %10!d!, AICL_result = %11!d! mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions
+{
+aicl_done, ItemLong -- 10
+aicl_result, ItemLong -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5005 199 "%0BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions::AICL results : reg_active_status = %10!d!, temp_status = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_ChargingThermalConditions
+{
+reg_active_status, ItemLong -- 10
+temp_status, ItemLong -- 11
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c5553 218 "%0BattMngrPlat_SMChg_FGGge_R3_Check_FG_Slope_Limiter::same slope limiter value, no need to reconfigure" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_FG_Slope_Limiter
+{
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c5558 219 "%0BattMngrPlat_SMChg_FGGge_R3_Check_FG_Slope_Limiter::no state change, no need to reconfigure" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_FG_Slope_Limiter
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3919 176 "%0BattMngrPlat_SMChg_FGGge_R3_Check_For_Error::AFP Mode Triggered, battery temp is %10!d!, AFP Triggered Max Battery Temp = %11!d!, AFP Triggred Min Battery Temp = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_For_Error
+{
+pBattMngrPlatSmbChgFGGgeR3Data->PlatBattData.BatteryTemp, ItemLong -- 10
+pBattMngrPlatSmbChgFGGgeR3Data->PlatConfigData.PlatSpecificData.AFPTriggerMaxBattTemp, ItemLong -- 11
+pBattMngrPlatSmbChgFGGgeR3Data->PlatConfigData.PlatSpecificData.AFPTriggerMinBattTemp, ItemLong -- 12
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3882 173 "%0BattMngrPlat_SMChg_FGGge_R3_Check_For_Error::Battery ID is invalid" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_For_Error
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3999 177 "%0BattMngrPlat_SMChg_FGGge_R3_Check_For_Error::ERROR::Error Code is %10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_For_Error
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3915 175 "%0BattMngrPlat_SMChg_FGGge_R3_Check_For_Errord::ERROR:: BattMngrTech_SMChg_R1_En_AFP_Mode Failed. Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_For_Error
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3887 174 "%0BattMngrPlat_SMChg_FGGge_R3_Check_For_Error::Battery ID is Valid" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_For_Error
+{
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c2189 115 "%0qcbattmngr::WARNING::Test mode" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2547 135 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange::Charging start at SOC %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+BATT_MNGR_startcharge_soc, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2519 134 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange::Change state to %10!d! from %11!d!          (%12!s!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+*stateID, ItemLong -- 10
+pDeviceContext->CurrentStateID, ItemLong -- 11
+pDeviceContext->CurrentStateID, ItemEnum(BATTMNGR_STATE_ID_TYPE) -- 12
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2508 133 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange::Change state to entry from non charging state" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2499 132 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange::Charging start at SOC %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+BATT_MNGR_startcharge_soc, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2498 131 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange::Change state to fast from entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2495 130 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange::not starting FCC learning as SOC > FCC learning SOC threshold" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c2429 127 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange::Change to state %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+*stateID, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2427 126 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange:: No charger connected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2422 125 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange::Change to state %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+*stateID, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2421 124 "%0qcbattmngr::ERROR: Error mode, cable status returned error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2371 122 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange:: USB charger connected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2460 129 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange::Change to state %10!d! because of thermal mask 0x0%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+*stateID, ItemLong -- 10
+pDeviceContext->PlatformData.ThermalMask, ItemLong -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2449 128 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange::Charging source is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+pDeviceContext->BattMngrData.ChgStatus.charging_source, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2398 123 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange:: DC charger connected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2289 121 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange::Change to state %10!d! because of thermal mask 0x0%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+*stateID, ItemLong -- 10
+pDeviceContext->PlatformData.ThermalMask, ItemLong -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2242 120 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange:: forcing entry state" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2237 119 "%0BattMngrPlat_SMChg_FGGge_R3_Check_StateChange:: Exiting Error mode" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2231 118 "%0qcbattmngr::WARNING: Error mode" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2216 117 "%0qcbattmngr::ERROR: Checking for error condition for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Check_StateChange
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c5626 222 "%0BattMngrPlat_SMChg_FGGge_R3_ChargerConfig::Program ESR Success: bCtrlFCC=%10!d!, esrFCC=%11!d! mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Configure_ParallelCharging
+{
+parallel_charging_active, ItemLong -- 10
+ESR_PULSE_ABSOLUTE_FCC_DECREMENT_IN_MA, ItemLong -- 11
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c857 46 "%0BattMngrPlat_SMChg_FGGge_R3_DeInit::Deinitialization succeeded" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_DeInit
+{
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c860 47 "%0BattMngrPlat_SMChg_FGGge_R3_DeInit::ERROR::Deinitialization failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_DeInit
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c824 44 "%0qcbattmngr::ERROR:: Deinitializing charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_DeInit
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c804 43 "%0qcbattmngr::ERROR:: Deinitializing PMI8998 charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_DeInit
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3655 169 "%0BattMngrPlat_SMChg_FGGge_R3_En_Charger::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_En_Charger
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3643 168 "%0BattMngrPlat_SMChg_FGGge_R3_En_Charger:: ChargerState = %10!d!, SetChargerState = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_En_Charger
+{
+ChargerState, ItemLong -- 10
+SetChargerState, ItemLong -- 11
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c3623 167 "%0BattMngrPlat_SMChg_FGGge_R3_En_Charger: Float Voltage Adjustment Complete" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_En_Charger
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3548 166 "%0BattMngrPlat_SMChg_FGGge_R3_En_Charger:: state = %10!d!           (%11!s!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_En_Charger
+{
+pDeviceContext->CurrentStateID, ItemLong -- 10
+pDeviceContext->CurrentStateID, ItemEnum(BATTMNGR_STATE_ID_TYPE) -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3547 165 "%0BattMngrPlat_SMChg_FGGge_R3_En_Charger (+)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_En_Charger
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4605 186 "%0BattMngrPlat_SMChg_FGGge_R3_GetTimerHandle::Tolerable delay for ESR timer is %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_GetTimerHandle
+{
+tConfig.TolerableDelay, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4597 185 "%0BattMngrPlat_SMChg_FGGge_R3_GetTimerHandle::Tolerable delay for emergency timer is %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_GetTimerHandle
+{
+tConfig.TolerableDelay, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c5651 223 "%0BattMngrPlat_SMChg_FGGge_R3_HVDCP_shutdown::De-initialize with HVDCP attached!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_HVDCP_shutdown
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1479 88 "%0qcbattmngr::ERROR: Incorrect number of IRQ entries for charging and gauge" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_IO_And_Interrupt_Init
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c765 41 "%0qcbattmngr::WARNING:: Overriding parallel charging via registry failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c757 40 "%0qcbattmngr::ERROR:: Parsing parallel charging failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c741 39 "%0qcbattmngr::ERROR:: Reading Parallel Charging failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c723 38 "%0BattMngrPlat_SMChg_FGGge_R3_Init::Initialization succeeded" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c641 33 "%0qcbattmngr::ERROR:: Parsing interrupt data for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c624 32 "%0qcbattmngr::ERROR:: Reading acpi for interrupt data for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c607 31 "%0qcbattmngr::WARNING:: Overriding Recharge Mode registry for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c599 30 "%0qcbattmngr::ERROR:: Parsing Recharge Mode data for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c583 29 "%0qcbattmngr::ERROR:: Reading Recharge Mode data for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c555 27 "%0qcbattmngr::ERROR:: Read Charge Table Management Config failed, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c545 26 "%0qcbattmngr::ERROR:: Read Charge Table Management Config failed, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c532 25 "%0qcbattmngr::WARNING:: Overriding Charge Table Management configuration registry for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c525 24 "%0qcbattmngr::ERROR:: Parsing Charge Table Management Config failed, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c515 23 "%0qcbattmngr::ERROR:: Read Charge Table Management Config failed, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c500 22 "%0qcbattmngr::WARNING:: Overriding Battery Error Handling registry for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c493 21 "%0qcbattmngr::ERROR:: Parsing Battery Error Handling Config failed, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c465 19 "%0qcbattmngr::WARNING:: Populating Jeita Table failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c483 20 "%0qcbattmngr::ERROR:: Reading Battery Error Handling Config failed, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c772 42 "%0BattMngrPlat_SMChg_FGGge_R3_Init::ERROR::Initialization failed, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c456 18 "%0qcbattmngr::WARNING:: Overriding JEITA registry for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c448 17 "%0qcbattmngr::ERROR:: Parsing JEITA data for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c432 16 "%0qcbattmngr::ERROR:: Reading JEITA data for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c419 15 "%0qcbattmngr::WARNING:: Overriding registry for foldback data for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c411 14 "%0qcbattmngr::ERROR:: Parsing acpi for foldback data for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c393 13 "%0qcbattmngr::ERROR:: Reading acpi for foldback data for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c380 12 "%0qcbattmngr::WARNING:: Overriding registry for platform data for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c372 11 "%0qcbattmngr::ERROR:: Parsing acpi for platform data for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c354 10 "%0qcbattmngr::ERROR:: Reading acpi for platform data for charging and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1104 64 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Add::AllLoaded =%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+*AllLoaded, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1094 63 "%0qcbattmngr::All interfaces for charger and gauge arrived." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1107 65 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Add::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1086 62 "%0qcbattmngr::ERROR: One time initialization for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1068 61 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Add::Interface (GUID_DEVINTERFACE_PMIC_EIC_CHG) arrived" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1058 60 "%0qcbattmngr::ERROR: Adding interface (GUID_DEVINTERFACE_PMIC_EIC_CHG) for SMChg and FG failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1042 59 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Add::Interface (GUID_DEVINTERFACE_PMIC_PON) arrived" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1032 58 "%0qcbattmngr::ERROR: Adding interface (GUID_DEVINTERFACE_PMIC_PON) for SMChg and FG failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1016 57 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Add::Interface (GUID_DEVINTERFACE_PMIC_GPIO) arrived" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1006 56 "%0qcbattmngr::ERROR: Adding interface (GUID_DEVINTERFACE_PMIC_GPIO) for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c990 55 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Add::Interface (GUID_DEVINTERFACE_ADC) arrived" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c979 54 "%0qcbattmngr::ERROR: Adding interface (GUID_DEVINTERFACE_ADC) for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c962 53 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Add::Interface (GUID_DEVINTERFACE_PMIC_COIN_CHG) arrived" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c952 52 "%0qcbattmngr::ERROR: Adding interface (GUID_DEVINTERFACE_PMIC_COIN_CHG) for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c936 51 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Add::Interface (GUID_DEVINTERFACE_PMIC_FG) arrived" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c926 50 "%0qcbattmngr::ERROR: Adding interface (GUID_DEVINTERFACE_PMIC_FG) for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c910 49 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Add::Interface (GUID_DEVINTERFACE_PMIC_CHARGER) arrived" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c900 48 "%0qcbattmngr::ERROR: Adding interface (GUID_DEVINTERFACE_PMIC_CHARGER) for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1361 81 "%0qcbattmngr::Registering all interfaces for charger and gauge succeeded" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Register
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1366 82 "%0qcbattmngr::ERROR::Registering all interfaces for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Register
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1357 80 "%0qcbattmngr::ERROR::Registering for GUID_DEVINTERFACE_PMIC_EIC_CHG interface failed for charger and gauge,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Register
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1341 79 "%0qcbattmngr::ERROR::Registering for GUID_DEVINTERFACE_ADC interface failed for charger and gauge,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Register
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1325 78 "%0qcbattmngr::ERROR::Registering for GUID_DEVINTERFACE_PON interface failed for charger and gauge,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Register
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1309 77 "%0qcbattmngr::ERROR::Registering for GUID_DEVINTERFACE_PMIC_GPIO interface failed for charger and gauge,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Register
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1292 76 "%0qcbattmngr::ERROR::Registering for GUID_DEVINTERFACE_PMIC_FG interface failed for charger and gauge,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Register
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1276 75 "%0qcbattmngr::ERROR::Registering for GUID_DEVINTERFACE_PMIC_COIN_CHG interface failed for charger and gauge,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Register
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1260 74 "%0qcbattmngr::ERROR::Registering for GUID_DEVINTERFACE_PMIC_CHARGER interface failed for charger and gauge,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Register
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1218 73 "%0qcbattmngr::ERROR: Removing interfaces for charger and gauge failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Remove
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1203 72 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Remove::Interface (GUID_DEVINTERFACE_PMIC_EIC_CHG) removed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Remove
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1192 71 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Remove::Interface (GUID_DEVINTERFACE_PMIC_PON) removed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Remove
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1181 70 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Remove::Interface (GUID_DEVINTERFACE_PMIC_GPIO) removed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Remove
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1171 69 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Remove::Interface (GUID_DEVINTERFACE_ADC) removed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Remove
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1160 68 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Remove::Interface (GUID_DEVINTERFACE_PMIC_COIN_CHG) removed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Remove
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1150 67 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Remove::Interface (GUID_DEVINTERFACE_PMIC_FG) removed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Remove
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1140 66 "%0BattMngrPlat_SMChg_FGGge_R3_Interface_Remove::Interface (GUID_DEVINTERFACE_PMIC_CHARGER) removed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_Remove
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1448 87 "%0qcbattmngr::ERROR: Unregistering interface (GUID_DEVINTERFACE_PMIC_EIC_CHG) for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_UnRegister
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1435 86 "%0qcbattmngr::ERROR: Unregistering interface (GUID_DEVINTERFACE_PMIC_PON) for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_UnRegister
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1422 85 "%0qcbattmngr::ERROR: Unregistering interface (GUID_DEVINTERFACE_PMIC_FG) for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_UnRegister
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1409 84 "%0qcbattmngr::ERROR: Unregistering interface (GUID_DEVINTERFACE_PMIC_COIN_CHG) for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_UnRegister
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1396 83 "%0qcbattmngr::ERROR: Unregistering interface (GUID_DEVINTERFACE_PMIC_CHARGER) for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Interface_UnRegister
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5438 217 "%0BattMngrPlat_SMChg_FGGge_R3_JEITA_Adjustment::Entering JEITA zone, cancelling FCC learning" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_JEITA_Adjustment
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5408 216 "%0BattMngrPlat_SMChg_FGGge_R3_JEITA_Adjustment::Failed setting JEITA threshold!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_JEITA_Adjustment
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c3090 147 "%0BattMngrPlat_SMChg_FGGge_R3_OneTimeInit::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_OneTimeInit
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c1679 172 "%0BattMngrPlat_SMChg_FGGge_R3_UpdateBatteryTag::Valid Battery, Battery Tag = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StateInit_Action
+{
+pDeviceContext->BattMngrData.BattId.batt_id, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1679 171 "%0BattMngrPlat_SMChg_FGGge_R3_UpdateBatteryTag::Invalid Battery, Battery Tag = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StateInit_Action
+{
+pDeviceContext->BattMngrData.BattId.batt_id, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1671 170 "%0BattMngrPlat_SMChg_FGGge_R3_Set_PowerStateFlag::Current state is %10!d!,power state is %11!X!,BatteryPerc is %12!d!,battery current is %13!d! mA,Rate is %14!d! mAh,Voltage is %15!d! mV,capacity is %16!d! mWh" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StateInit_Action
+{
+pDeviceContext->CurrentStateID, ItemLong -- 10
+pDeviceContext->BattMngrData.ChgStatus.power_state, ItemLong -- 11
+pDeviceContext->PlatformData.BatteryPerc, ItemLong -- 12
+pDeviceContext->PlatformData.BatteryCurrent, ItemLong -- 13
+pDeviceContext->BattMngrData.ChgStatus.rate, ItemLong -- 14
+pDeviceContext->BattMngrData.ChgStatus.voltage, ItemLong -- 15
+pDeviceContext->BattMngrData.ChgStatus.capacity, ItemLong -- 16
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1666 96 "%0qcbattmngr::ERROR: Enabling/disabling charger failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_StateInit_Action
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1658 95 "%0qcbattmngr::ERROR: Configuring charging parameters failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_StateInit_Action
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1642 94 "%0qcbattmngr::ERROR: Getting charger status failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_StateInit_Action
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c2002 114 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action:: setting esr update step to normal temp failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1997 113 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action:: setting esr update step to normal temp." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1986 112 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action:: setting esr update step to Low temp failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1981 111 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action:: setting esr update step to Low temp." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1967 110 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action:: ESD : Emergency Timer stopped because battery is not critical" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1957 109 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action:: ESD : Emergency Timer started" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1946 108 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action:: ESD : Calling BattMngrTech_FGGge_R3_Test_Critical_VBatt function" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1943 107 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action:: ESD : VBAT_LOW event has triggered!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1927 106 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action:: Input Current Limiting status = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+rt_icl_status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c1921 105 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action::AICL results : AICL_done = %10!d!, AICL_result = %11!d! mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+aicl_done, ItemLong -- 10
+aicl_result, ItemLong -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1914 104 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action:: ESD : Emergency Timer is stopped due to charger cable insertion" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c1874 103 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action::firstSoc = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+pDeviceContext->BattMngrData.firstSoc, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c1852 102 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action::empty SOC IRQ triggered." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c1798 101 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action::charging status = 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+charging_status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1777 184 "%0sAverageVBatt value is now %10!d! mV" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+AverageVBatt, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1747 100 "%0BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action::pmic Temperature = %10!d! degree C" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+pmicTemp, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c1737 99 "%0qcbattmngr::ERROR: Function BattMngrPlat_SMChg_FGGge_R3_SRAMReadsAndWrites returned Failure error status = %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_StatePeriodic_Action
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1530 89 "%0qcbattmngr::ERROR::Reading timer acpi info for SM charger and FG gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Timer_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1582 93 "%0qcbattmngr::ERROR:Getting the ESR timer handle failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Timer_Init
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1567 92 "%0qcbattmngr::ERROR:Getting the emergency timer handle failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Timer_Init
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1549 91 "%0qcbattmngr::WARNING::Overriding timer registry data for SM charger and FG gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Timer_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c1541 90 "%0qcbattmngr::ERROR::Parsing timer acpi info for SM  charger and FG gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrPlat_SMChg_FGGge_R3_Timer_Init
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5577 221 "%0BattMngrPlat_SMChg_FGGge_R3_Update_ChargeCycle::BattAge = %10!d! cycles" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Update_ChargeCycle
+{
+pDeviceContext->BattMngrData.BattInfo.batt_info.cycle_count, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5576 220 "%0BattMngrPlat_SMChg_FGGge_R3_Update_ChargeCycle::latestSoc = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_Update_ChargeCycle
+{
+latestSoc, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c2772 146 "%0BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib::Pending Qualified VBAT, current VBAT=%10!d! mV" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib
+{
+currentVbat, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2718 141 "%0BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib:: Criteria for Calibration is not met, Skip Calibration" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2766 145 "%0BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib::No Calibration needed, v_diff=%10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib
+{
+v_diff, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2760 144 "%0BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib::Calibration: v_diff=%10!d!, Step=%11!d!, current_step=%12!d!, new_step=%13!d!, new_fv_adjust=%14!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib
+{
+v_diff, ItemLong -- 10
+step, ItemLong -- 11
+current_step, ItemLong -- 12
+new_step, ItemLong -- 13
+new_fv_adjust, ItemLong -- 14
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2755 143 "%0BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib::ERROR, set fv adjust failed, Error Code = %10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c2742 142 "%0BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib::ERROR, get current fv adjust failed, Error Code = %10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c2704 140 "%0BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib::FloatVoltage=%10!d! mV, based on VBAT =%11!d! mV" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib
+{
+vtarget, ItemLong -- 10
+currentVbat, ItemLong -- 11
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2698 139 "%0BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib:: Force FVCAL since vbatt go above threshold" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2672 138 "%0BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib::Latest FVCal Attempt is %10!u! second(s) away, Skip" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib
+{
+currentTimestampInSec - sLatestFVCalTimestampInSec, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2653 137 "%0BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib::HWCharging State = %10!d!, ParallelChargingActive = %11!d!, ibat = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib
+{
+charging_status, ItemLong -- 10
+bParallelChargingActive, ItemLong -- 11
+pDeviceContext->PlatformData.sramData.currentShadow, ItemLong -- 12
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c2649 136 "%0BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib::ERROR: Charger Status Reading fail! Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_VddMax_Calib
+{
+status, ItemLong -- 10
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4704 198 "%0BattMngrPlat_SMChg_FGGge_R3_BattErrHandle_Action_EnableTestMode:: Put the system in test mode" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_executeBattErrHandlingAction
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4699 197 "%0BattMngrPlat_SMChg_FGGge_R3_BattErrHandle_Action_EmergencyShutdown:: System will perform emergency shutdown" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_executeBattErrHandlingAction
+{
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c4679 191 "%0BattMngrPlat_SMChg_FGGge_R3_executeBattErrHandlingAction::executing battery error handling actions: 0x0%10!X!      (%11!s!) because of BattErrSt = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=BattMngrPlat_SMChg_FGGge_R3_executeBattErrHandlingAction
+{
+actions, ItemLong -- 10
+actions, ItemEnum(BATTMNGRTECH_BATTERRHANDLE_ACTION_ID) -- 11
+BattMngrTech_BattErrHandle_getCurrentBatteryErrSt(), ItemEnum(BATTMNGRTECH_BATTERRHANDLE_STATE_ID) -- 12
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrPlat_SMChg_FGGge_R3_c4646 190 "%0sBattMngrPlat_SMChg_FGGge_ESRTimerExpireFunc:: ESR : Timer Expiry hit; Signalling BATT_MNGR_DRV_ESR_EVENT" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=sBattMngrPlat_SMChg_FGGge_ESRTimerExpireFunc
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4635 189 "%0sBattMngrPlat_SMChg_FGGge_EmergencyTimerExpireFunc:: ESD : VBAT_LOW_RT_STS is false so do not restart timer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=sBattMngrPlat_SMChg_FGGge_EmergencyTimerExpireFunc
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4630 188 "%0sBattMngrPlat_SMChg_FGGge_EmergencyTimerExpireFunc:: ESD : Timer restarted after expiry because VBAT_LOW_RT_STS is true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=sBattMngrPlat_SMChg_FGGge_EmergencyTimerExpireFunc
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c4619 187 "%0sBattMngrPlat_SMChg_FGGge_EmergencyTimerExpireFunc:: ESD : Timer Expiry hit; Calling BattMngrTech_FGGge_R3_Test_Critical_VBatt" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_SMChgFGGge FUNC=sBattMngrPlat_SMChg_FGGge_EmergencyTimerExpireFunc
+{
+}
+#enumv BATTMNGR_STATE_ID_TYPE
+{
+BATTMNGR_STATE_ID_ENTRY,0x0
+BATTMNGR_STATE_ID_NO_CHG,0x1
+BATTMNGR_STATE_ID_FAST,0x2
+BATTMNGR_STATE_ID_TOP_OFF,0x3
+BATTMNGR_STATE_ID_DONE,0x4
+BATTMNGR_STATE_ID_RECHARGE,0x5
+BATTMNGR_STATE_ID_TDONE,0x6
+BATTMNGR_STATE_ID_NOT_CHARGING_THERMAL,0x7
+BATTMNGR_STATE_ID_ERROR,0x8
+BATTMNGR_STATE_ID_TEST,0x9
+BATTMNGR_STATE_ID_MAX,0xA
+BATTMNGR_STATE_ID_INVALID,0xB
+BATTMNGR_STATE_ID_NA,0xC
+}
+#enumv BATTMNGRTECH_BATTERRHANDLE_ACTION_ID
+{
+BATTMNGRTECH_BATTERRHANDLE_ACTION_ID_NONE,0x0
+BATTMNGRTECH_BATTERRHANDLE_ACTION_ID_RELOAD_CHGTABLE,0x1
+BATTMNGRTECH_BATTERRHANDLE_ACTION_ID_ERR_SHUTDOWN,0x2
+BATTMNGRTECH_BATTERRHANDLE_ACTION_ID_EMERGENCY_SHUTDOWN,0x4
+BATTMNGRTECH_BATTERRHANDLE_ACTION_ID_ENABLE_TESTMODE,0x8
+BATTMNGRTECH_BATTERRHANDLE_ACTION_ID_MAX,0x8
+}
+#enumv BATTMNGRTECH_BATTERRHANDLE_STATE_ID
+{
+BATTMNGRTECH_BATTERRHANDLE_STATE_ID_ENTRY,0x0
+BATTMNGRTECH_BATTERRHANDLE_STATE_ID_DEBUG,0x1
+BATTMNGRTECH_BATTERRHANDLE_STATE_ID_NORMAL,0x2
+BATTMNGRTECH_BATTERRHANDLE_STATE_ID_SMART_AUTHENTICATED,0x3
+BATTMNGRTECH_BATTERRHANDLE_STATE_ID_UNKNOWN,0x4
+BATTMNGRTECH_BATTERRHANDLE_STATE_ID_NOT_PRESENT,0x5
+BATTMNGRTECH_BATTERRHANDLE_STATE_ID_INVALID,0x6
+BATTMNGRTECH_BATTERRHANDLE_STATE_ID_OUT_OP_RANGE,0x7
+BATTMNGRTECH_BATTERRHANDLE_STATE_ID_MAX,0x8
+}

@@ -1,0 +1,227 @@
+// PDB:  qcSensors850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+fa94e8f1-0803-3c6a-85dc-fa07f75d3497 qcSensors // SRC=StdSensor.cpp MJ= MN=
+#typev StdSensor_cpp25 10 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CStdSensor::CStdSensor
+{
+}
+#typev StdSensor_cpp189 18 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=CStdSensor::CreateSensorRequestMsg
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev StdSensor_cpp185 17 "%0The msg_id: %10!d! hasn't been supported yet." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CStdSensor::CreateSensorRequestMsg
+{
+msgID, ItemLong -- 10
+}
+#typev StdSensor_cpp172 16 "%0sending SNS_STD_SENSOR_MSGID_SNS_STD_ON_CHANGE_CONFIG" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CStdSensor::CreateSensorRequestMsg
+{
+}
+#typev StdSensor_cpp110 15 "%0sending SNS_CLIENT_MSGID_SNS_CLIENT_DISABLE_REQ" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CStdSensor::CreateSensorRequestMsg
+{
+}
+#typev StdSensor_cpp102 14 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CStdSensor::CreateSensorRequestMsg
+{
+}
+#typev StdSensor_cpp341 33 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=CStdSensor::FillSensorThresholdValAndType
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev StdSensor_cpp331 32 "%0%10!s! PropKeyFindKeyGetFloat for the %11!d! threshold failed! %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=CStdSensor::FillSensorThresholdValAndType
+{
+m_pwszFriendlyName, ItemWString -- 10
+dataNum, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev StdSensor_cpp319 31 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CStdSensor::FillSensorThresholdValAndType
+{
+}
+#typev StdSensor_cpp50 12 "%0Fill sns_resampler_config" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CStdSensor::FillSnsResamplerConfigRequest
+{
+}
+#typev StdSensor_cpp36 11 "%0Fill sns_std_sensor_config" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CStdSensor::FillSnsStdSensorConfigRequest
+{
+}
+#typev StdSensor_cpp76 13 "%0Fill sns_threshold_config" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CStdSensor::FillSnsThresholdConfigRequest
+{
+}
+#typev StdSensor_cpp411 39 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=CStdSensor::HandleSensorDataIndication
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev StdSensor_cpp408 38 "%0Invalid Std Data Indication msg_id %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=CStdSensor::HandleSensorDataIndication
+{
+pb_event.msg_id(), ItemLong -- 10
+}
+#typev StdSensor_cpp390 37 "%0DataType=%10!s!, msg_id=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CStdSensor::HandleSensorDataIndication
+{
+m_Datatype.c_str(), ItemString -- 10
+pb_event.msg_id(), ItemLong -- 11
+}
+#typev StdSensor_cpp389 36 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CStdSensor::HandleSensorDataIndication
+{
+}
+#typev StdSensor_cpp295 29 "%0%!FUNC! Exception in populating attributes while processing SensorType= %10!s! 	 Suid= 0x%11!I64x! 0x%12!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=CStdSensor::PopulateSensorAttributes
+{
+m_pwszFriendlyName, ItemWString -- 10
+m_Suid.high, ItemLongLongX -- 11
+m_Suid.low, ItemLongLongX -- 12
+}
+#typev StdSensor_cpp289 28 "%0%!FUNC! RunTime Exception in populating attributes while processing SensorType= %10!s! 	 Suid= 0x%11!I64x! 0x%12!I64x!, Exception reason: %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=CStdSensor::PopulateSensorAttributes
+{
+m_pwszFriendlyName, ItemWString -- 10
+m_Suid.high, ItemLongLongX -- 11
+m_Suid.low, ItemLongLongX -- 12
+e.what(), ItemString -- 13
+}
+#typev StdSensor_cpp300 30 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=CStdSensor::PopulateSensorAttributes
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev StdSensor_cpp284 27 "%0invalid stream_type %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=CStdSensor::PopulateSensorAttributes
+{
+static_cast<UINT32>(streamType), ItemLong -- 10
+}
+#typev StdSensor_cpp273 26 "%0The resolutions is %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CStdSensor::PopulateSensorAttributes
+{
+m_ResolutionS1, ItemDouble -- 10
+}
+#typev StdSensor_cpp256 25 "%0The minimum range is %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CStdSensor::PopulateSensorAttributes
+{
+m_MinRangeS1, ItemDouble -- 10
+}
+#typev StdSensor_cpp255 24 "%0The maximum range is %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CStdSensor::PopulateSensorAttributes
+{
+m_MaxRangeS1, ItemDouble -- 10
+}
+#typev StdSensor_cpp248 23 "%0The minimum interval is %10!s! ms" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CStdSensor::PopulateSensorAttributes
+{
+m_MinimumIntervalMs, ItemDouble -- 10
+}
+#typev StdSensor_cpp244 22 "%0ERROR:The maxium sample rate of streaming sensor should not be zero!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=CStdSensor::PopulateSensorAttributes
+{
+}
+#typev StdSensor_cpp225 21 "%0Truncating Model Name to %10!d! bytes: %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DEBUG_SPEW FUNC=CStdSensor::PopulateSensorAttributes
+{
+numCharsCopied, ItemLong -- 10
+m_pwszModel, ItemWString -- 11
+}
+#typev StdSensor_cpp216 20 "%0Truncating Manufacturer Name to %10!d! bytes: %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DEBUG_SPEW FUNC=CStdSensor::PopulateSensorAttributes
+{
+numCharsCopied, ItemLong -- 10
+m_pwszManufacturer, ItemWString -- 11
+}
+#typev StdSensor_cpp203 19 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CStdSensor::PopulateSensorAttributes
+{
+}
+#typev StdSensor_cpp295 29 "%0%!FUNC! Exception in populating attributes while processing SensorType= %10!s! 	 Suid= 0x%11!I64x! 0x%12!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$10
+{
+m_pwszFriendlyName, ItemWString -- 10
+m_Suid.high, ItemLongLongX -- 11
+m_Suid.low, ItemLongLongX -- 12
+}
+#typev StdSensor_cpp289 28 "%0%!FUNC! RunTime Exception in populating attributes while processing SensorType= %10!s! 	 Suid= 0x%11!I64x! 0x%12!I64x!, Exception reason: %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$10
+{
+m_pwszFriendlyName, ItemWString -- 10
+m_Suid.high, ItemLongLongX -- 11
+m_Suid.low, ItemLongLongX -- 12
+e.what(), ItemString -- 13
+}
+#typev StdSensor_cpp300 30 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$10
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev StdSensor_cpp284 27 "%0invalid stream_type %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$10
+{
+static_cast<UINT32>(streamType), ItemLong -- 10
+}
+#typev StdSensor_cpp273 26 "%0The resolutions is %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$10
+{
+m_ResolutionS1, ItemDouble -- 10
+}
+#typev StdSensor_cpp256 25 "%0The minimum range is %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$10
+{
+m_MinRangeS1, ItemDouble -- 10
+}
+#typev StdSensor_cpp255 24 "%0The maximum range is %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$10
+{
+m_MaxRangeS1, ItemDouble -- 10
+}
+#typev StdSensor_cpp248 23 "%0The minimum interval is %10!s! ms" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$10
+{
+m_MinimumIntervalMs, ItemDouble -- 10
+}
+#typev StdSensor_cpp244 22 "%0ERROR:The maxium sample rate of streaming sensor should not be zero!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$10
+{
+}
+#typev StdSensor_cpp225 21 "%0Truncating Model Name to %10!d! bytes: %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$10
+{
+numCharsCopied, ItemLong -- 10
+m_pwszModel, ItemWString -- 11
+}
+#typev StdSensor_cpp216 20 "%0Truncating Manufacturer Name to %10!d! bytes: %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$10
+{
+numCharsCopied, ItemLong -- 10
+m_pwszManufacturer, ItemWString -- 11
+}
+#typev StdSensor_cpp203 19 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$10
+{
+}
+#typev StdSensor_cpp295 29 "%0%!FUNC! Exception in populating attributes while processing SensorType= %10!s! 	 Suid= 0x%11!I64x! 0x%12!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$11
+{
+m_pwszFriendlyName, ItemWString -- 10
+m_Suid.high, ItemLongLongX -- 11
+m_Suid.low, ItemLongLongX -- 12
+}
+#typev StdSensor_cpp289 28 "%0%!FUNC! RunTime Exception in populating attributes while processing SensorType= %10!s! 	 Suid= 0x%11!I64x! 0x%12!I64x!, Exception reason: %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$11
+{
+m_pwszFriendlyName, ItemWString -- 10
+m_Suid.high, ItemLongLongX -- 11
+m_Suid.low, ItemLongLongX -- 12
+e.what(), ItemString -- 13
+}
+#typev StdSensor_cpp300 30 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$11
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev StdSensor_cpp284 27 "%0invalid stream_type %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$11
+{
+static_cast<UINT32>(streamType), ItemLong -- 10
+}
+#typev StdSensor_cpp273 26 "%0The resolutions is %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$11
+{
+m_ResolutionS1, ItemDouble -- 10
+}
+#typev StdSensor_cpp256 25 "%0The minimum range is %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$11
+{
+m_MinRangeS1, ItemDouble -- 10
+}
+#typev StdSensor_cpp255 24 "%0The maximum range is %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$11
+{
+m_MaxRangeS1, ItemDouble -- 10
+}
+#typev StdSensor_cpp248 23 "%0The minimum interval is %10!s! ms" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$11
+{
+m_MinimumIntervalMs, ItemDouble -- 10
+}
+#typev StdSensor_cpp244 22 "%0ERROR:The maxium sample rate of streaming sensor should not be zero!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$11
+{
+}
+#typev StdSensor_cpp225 21 "%0Truncating Model Name to %10!d! bytes: %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$11
+{
+numCharsCopied, ItemLong -- 10
+m_pwszModel, ItemWString -- 11
+}
+#typev StdSensor_cpp216 20 "%0Truncating Manufacturer Name to %10!d! bytes: %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DEBUG_SPEW FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$11
+{
+numCharsCopied, ItemLong -- 10
+m_pwszManufacturer, ItemWString -- 11
+}
+#typev StdSensor_cpp203 19 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=`CStdSensor::PopulateSensorAttributes'::`1'::catch$11
+{
+}
+#typev StdSensor_cpp378 35 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=CStdSensor::RestartSensorReading
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev StdSensor_cpp356 34 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CStdSensor::RestartSensorReading
+{
+}

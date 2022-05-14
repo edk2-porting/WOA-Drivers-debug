@@ -1,0 +1,414 @@
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+2a21f193-b793-379c-27b3-be016a6dbcd8 wifinotifiersrvc // SRC=WifiMeasurementEngine.c MJ= MN=
+#typev WifiMeasurementEngine_c634 32 "%0%!FUNC!:: Remove item with SSID = %10!s!, SINR  = %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+pBSSItem->SSID, ItemString -- 10
+pBSSItem->SINR, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c620 31 "%0%!FUNC!:: Remove item with SSID = %10!s!, SINR  = %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+pBSSItem->SSID, ItemString -- 10
+pBSSItem->SINR, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c605 30 "%0%!FUNC!:: Remove item with SSID = %10!s!, SINR  = %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+pBSSItem->SSID, ItemString -- 10
+pBSSItem->SINR, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c575 29 "%0%!FUNC!:: Remove item with SSID = %10!s!, rssi  = %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+pBSSItem->SSID, ItemString -- 10
+pBSSItem->RSSI, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c561 28 "%0%!FUNC!:: Remove item with SSID = %10!s!, rssi  = %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+pBSSItem->SSID, ItemString -- 10
+pBSSItem->RSSI, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c509 26 "%0%!FUNC!:: Remove item with SSID = %10!s!, BSSID  = %11!02x!-%12!02x!-%13!02x!-%14!02x!-%15!02x!-%16!02x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+pBSSItem->SSID, ItemString -- 10
+pBSSItem->BSSID[0], ItemLong -- 11
+pBSSItem->BSSID[1], ItemLong -- 12
+pBSSItem->BSSID[2], ItemLong -- 13
+pBSSItem->BSSID[3], ItemLong -- 14
+pBSSItem->BSSID[4], ItemLong -- 15
+pBSSItem->BSSID[5], ItemLong -- 16
+}
+#typev WifiMeasurementEngine_c477 23 "%0%!FUNC!:: bSSIDMatched = TRUE, removing entry." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+}
+#typev WifiMeasurementEngine_c546 27 "%0%!FUNC!:: Remove item with SSID = %10!s!, rssi  = %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+pBSSItem->SSID, ItemString -- 10
+pBSSItem->RSSI, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c484 24 "%0%!FUNC!:: bSSIDMatched = TRUE & bBSSIDAnyMatched = TRUE , do not remove entry." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+}
+#typev WifiMeasurementEngine_c458 21 "%0%!FUNC!:: BSSID info matched to any BSSID i.e. 0xFF..." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+}
+#typev WifiMeasurementEngine_c467 22 "%0%!FUNC!:: BSSID info matched to any BSSID index = %10!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+nIdentBSSID, ItemLong -- 10
+}
+#typev WifiMeasurementEngine_c489 25 "%0%!FUNC!:: bSSIDMatched = TRUE & bBSSIDMatched = FALSE , removing entry." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WifiMeasurementEngine_c431 20 "%0%!FUNC!:: SSID info matched to any SSID i.e. 0xFF..." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEFilterEntriesBasedOnIndicationFilters
+{
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WifiMeasurementEngine_c1213 59 "%0%!FUNC!:: <ThreadID: 0x%10!x!> Adding pReportItem for WifiMeasID = %11!u! in WifiReportItemList." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandleMeasuringReportStartRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+pIndication->wifi_meas_id, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1204 58 "%0%!FUNC!:: <ThreadID: 0x%10!x!> Report Timer set for %11!u!ms interval for WifiMeasID = %12!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandleMeasuringReportStartRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+pIndication->report_interval, ItemLong -- 11
+pIndication->wifi_meas_id, ItemLong -- 12
+}
+#typev WifiMeasurementEngine_c1218 60 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR:: Cleaning up for WifiMeasID = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandleMeasuringReportStartRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+pIndication->wifi_meas_id, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1198 57 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: Report Timer CreateTimerQueueTimer failed (%11!d!) for WifiMeasID = %12!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandleMeasuringReportStartRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+GetLastError(), ItemLong -- 11
+pIndication->wifi_meas_id, ItemLong -- 12
+}
+#typev WifiMeasurementEngine_c1178 56 "%0%!FUNC!:: <ThreadID: 0x%10!x!> Sampling Timer set for %11!u!ms interval for WifiMeasID = %12!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandleMeasuringReportStartRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+pIndication->sampling_timer, ItemLong -- 11
+pIndication->wifi_meas_id, ItemLong -- 12
+}
+#typev WifiMeasurementEngine_c1172 55 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: Sampling Timer CreateTimerQueueTimer failed (%11!d!) for WifiMeasID = %12!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandleMeasuringReportStartRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+GetLastError(), ItemLong -- 11
+pIndication->wifi_meas_id, ItemLong -- 12
+}
+#typev WifiMeasurementEngine_c1145 54 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: Memory allocation failed for WifiMeasID = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandleMeasuringReportStartRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+pIndication->wifi_meas_id, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1302 63 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR:: RSSI Breach Request failed for WifiMeasID = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandleOneTimeAfterThresholdMeasuringReportStartRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+pIndication->wifi_meas_id, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1292 62 "%0%!FUNC!:: <ThreadID: 0x%10!x!> RSSI Breach Request processed for WifiMeasID = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandleOneTimeAfterThresholdMeasuringReportStartRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+pIndication->wifi_meas_id, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1252 61 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: Memory allocation failed for WifiMeasID = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandleOneTimeAfterThresholdMeasuringReportStartRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+pIndication->wifi_meas_id, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1477 73 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: WifiReportItemList empty for WifiMeasID = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandlePeriodicMeasuringStopRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+WifiMeasID, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1468 71 "%0%!FUNC!:: <ThreadID: 0x%10!x!> Match found for WifiMeasID = %11!u!, status = %12!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandlePeriodicMeasuringStopRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+WifiMeasID, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev WifiMeasurementEngine_c1473 72 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: No Matching item for WifiMeasID = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandlePeriodicMeasuringStopRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+WifiMeasID, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1441 70 "%0%!FUNC!:: <ThreadID: 0x%10!x!> for WifiMeasID = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEHandlePeriodicMeasuringStopRequest
+{
+GetCurrentThreadId(), ItemLong -- 10
+WifiMeasID, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c117 10 "%0%!FUNC!:: ERROR: pReportItem = %10!p! is not in the list." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEIsValidReportItem
+{
+pReportItem, ItemPtr -- 10
+}
+#typev WifiMeasurementEngine_c1100 52 "%0%!FUNC!:: ERROR: Invalid parameter." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEPeriodicReportingTimerProc
+{
+}
+#typev WifiMeasurementEngine_c1120 53 "%0%!FUNC!:: ERROR: Invalid parameter." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEPeriodicSamplingTimerProc
+{
+}
+#typev WifiMeasurementEngine_c236 16 "%0%!FUNC!:: Adding QMI_DSD_WIFI_MEAS_PARAM_PACKET_ERROR_RATE_V01 information. downlink_packet_error_rate =%10!d! uplink_packet_error_rate = %11!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=WMEPopulateBSSEntryInMeasurementReport
+{
+pBSSEntry->PacketErrorRate.DownlinkPacketErrorRate, ItemLong -- 10
+pBSSEntry->PacketErrorRate.UplinkPacketErrorRate, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c224 15 "%0%!FUNC!:: Adding QMI_DSD_WIFI_MEAS_PARAM_PHY_RATE_V01 information. downlink =%10!d!, uplink = %11!d!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=WMEPopulateBSSEntryInMeasurementReport
+{
+pBSSEntry->PhysicalRate.DownlinkRate, ItemLong -- 10
+pBSSEntry->PhysicalRate.UplinkRate, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c211 14 "%0%!FUNC!:: Adding QMI_DSD_WIFI_MEAS_PARAM_BSS_LOAD_V01 information. capacity = %10!d!, utilization = %11!d!, station_count = %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=WMEPopulateBSSEntryInMeasurementReport
+{
+pBSSEntry->BssLoad.AvailableAdmissionCapacity, ItemLong -- 10
+pBSSEntry->BssLoad.ChannelUtilization, ItemLong -- 11
+pBSSEntry->BssLoad.StationCount, ItemLong -- 12
+}
+#typev WifiMeasurementEngine_c201 13 "%0%!FUNC!:: Adding QMI_DSD_WIFI_MEAS_PARAM_SINR_V01 information. SINR = %10!d!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=WMEPopulateBSSEntryInMeasurementReport
+{
+pBSSEntry->SINR, ItemLong -- 10
+}
+#typev WifiMeasurementEngine_c194 12 "%0%!FUNC!:: Adding QMI_DSD_WIFI_MEAS_PARAM_RSSI_V01 information. RSSI = %10!d!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=WMEPopulateBSSEntryInMeasurementReport
+{
+pBSSEntry->RSSI, ItemLong -- 10
+}
+#typev WifiMeasurementEngine_c183 11 "%0%!FUNC!:: wifi_meas_id = %10!u!, tx_id = %11!u!, currentIndex = %12!u!, SSID: %13!s!, RSSI = %14!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WMEPopulateBSSEntryInMeasurementReport
+{
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 10
+pFinalReport->tx_id, ItemLong -- 11
+currentIndex, ItemLong -- 12
+pBSSEntry->SSID, ItemString -- 13
+pBSSEntry->RSSI, ItemLong -- 14
+}
+#typev WifiMeasurementEngine_c280 18 "%0%!FUNC!:: ERROR: nSSID out of bounds." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEPopulateMeasurementReportFromBSSList
+{
+}
+#typev WifiMeasurementEngine_c337 19 "%0%!FUNC!:: Remaining pBSSEntryList->nEntries = %10!u!, TxID = %11!u!, LastReport = %12!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEPopulateMeasurementReportFromBSSList
+{
+pBSSEntryList->nEntries, ItemLong -- 10
+nTxID, ItemLong -- 11
+pFinalReport->is_last_report_of_transaction, ItemLong -- 12
+}
+#typev WifiMeasurementEngine_c276 17 "%0%!FUNC!:: Entry with SSID %10!s! removed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEPopulateMeasurementReportFromBSSList
+{
+szTempSSID, ItemString -- 10
+}
+#typev WifiMeasurementEngine_c827 37 "%0%!FUNC!:: ERROR: Invalid parameter %10!p!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicReportingMeasurementReport
+{
+(PVOID)pReportItem, ItemPtr -- 10
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WifiMeasurementEngine_c934 45 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: WMEPopulateMeasurementReportFromBSSList failed with error code = %11!d!. Wifi ID/nTxID = %12!d!/%13!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicReportingMeasurementReport
+{
+status, ItemLong -- 10
+GetCurrentThreadId(), ItemLong -- 11
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 12
+nTxID, ItemLong -- 13
+}
+#typev WifiMeasurementEngine_c924 44 "%0%!FUNC!:: <ThreadID: 0x%10!x!> Preparing Measurement report for WifiMeasID = %11!u!. TxID = %12!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicReportingMeasurementReport
+{
+GetCurrentThreadId(), ItemLong -- 10
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 11
+nTxID, ItemLong -- 12
+}
+#typev WifiMeasurementEngine_c919 43 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: No entries available after filtering BSS list." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicReportingMeasurementReport
+{
+GetCurrentThreadId(), ItemLong -- 10
+}
+#typev WifiMeasurementEngine_c910 42 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: Failed to get BSS Entries with error code = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicReportingMeasurementReport
+{
+GetCurrentThreadId(), ItemLong -- 10
+status, ItemLong -- 11
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WifiMeasurementEngine_c847 38 "%0%!FUNC!:: <ThreadID: 0x%10!x!> Preparing DSD_WIFI_MEAS_REPORT_TYPE_PERIODIC_RAW Measurement report for WifiMeasID = %11!u!. TxID = %12!u!. Report type = %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicReportingMeasurementReport
+{
+GetCurrentThreadId(), ItemLong -- 10
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 11
+nTxID, ItemLong -- 12
+pReportItem->IndicationInfo.report_type, ItemLong -- 13
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WifiMeasurementEngine_c869 39 "%0%!FUNC!:: <0x%10!0x!> Preparing DSD_WIFI_MEAS_REPORT_TYPE_ONE_TIME_AFTER_THRESHOLD Measurement report for WifiMeasID = %11!u!. TxID = %12!u!. Report type = %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicReportingMeasurementReport
+{
+GetCurrentThreadId(), ItemLong -- 10
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 11
+nTxID, ItemLong -- 12
+pReportItem->IndicationInfo.report_type, ItemLong -- 13
+}
+#typev WifiMeasurementEngine_c891 40 "%0%!FUNC!:: NOT ACTION NEEDED: DSD_WIFI_MEAS_REPORT_TYPE_PERIODIC_AFTER_THRESHOLD_V01. WifiMeasID = %10!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicReportingMeasurementReport
+{
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 10
+}
+#typev WifiMeasurementEngine_c898 41 "%0%!FUNC!:: NOT ACTION NEEDED: DEFAULT (%10!d!). WifiMeasID = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicReportingMeasurementReport
+{
+pReportItem->IndicationInfo.report_type, ItemLong -- 10
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c961 46 "%0%!FUNC!:: ERROR: Invalid parameter %10!p!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicSamplingMeasurementReport
+{
+(PVOID)pReportItem, ItemPtr -- 10
+}
+#typev WifiMeasurementEngine_c1082 51 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: sampling_timer_valid = %11!d!, alpha_valid = %12!d! for WifiMeasID = %13!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicSamplingMeasurementReport
+{
+GetCurrentThreadId(), ItemLong -- 10
+pReportItem->IndicationInfo.sampling_timer_valid, ItemLong -- 11
+pReportItem->IndicationInfo.alpha_valid, ItemLong -- 12
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 13
+}
+#typev WifiMeasurementEngine_c1068 50 "%0%!FUNC!:: <ThreadID: 0x%10!x!> Removing 0x%11!p! ONE_TIME_AFTER_THRESHOLD WifiMeasID = %12!u!. Threshold condition met." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicSamplingMeasurementReport
+{
+GetCurrentThreadId(), ItemLong -- 10
+pReportItem, ItemPtr -- 11
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 12
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WifiMeasurementEngine_c1044 49 "%0%!FUNC!:: <ThreadID: 0x%10!x!> Setting bReportThresholdMet = TRUE for WifiMeasID = %11!u!, Average RSSI = %12!d!, Average LinkQuality = %13!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicSamplingMeasurementReport
+{
+GetCurrentThreadId(), ItemLong -- 10
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 11
+pReportItem->LastAveragedSample.RSSI, ItemLong -- 12
+pReportItem->LastAveragedSample.LinkQuality, ItemLong -- 13
+}
+#typev WifiMeasurementEngine_c1009 48 "%0%!FUNC!:: <ThreadID: 0x%10!x!> Processing subsequent sample with Alpha = %11!s!, RSSI = %12!d! for WifiMeasID = %13!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicSamplingMeasurementReport
+{
+GetCurrentThreadId(), ItemLong -- 10
+Alpha, ItemDouble -- 11
+CurrentBSSEntry.RSSI, ItemLong -- 12
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 13
+}
+#typev WifiMeasurementEngine_c995 47 "%0%!FUNC!:: <ThreadID: 0x%10!x!> Processing first sample with Alpha = %11!s!, RSSI = %12!d! for WifiMeasID = %13!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEProcessPeriodicSamplingMeasurementReport
+{
+GetCurrentThreadId(), ItemLong -- 10
+Alpha, ItemDouble -- 11
+CurrentBSSEntry.RSSI, ItemLong -- 12
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 13
+}
+#typev WifiMeasurementEngine_c751 36 "%0%!FUNC!:: WifiMeasID = %10!u!, SSID = %11!s! with sinr  = %12!d! and match criteria high(%13!d!)/low(%14!d!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEbIsMatchingThresholdCriteria
+{
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 10
+pBSSEntry->SSID, ItemString -- 11
+pBSSEntry->SINR, ItemLong -- 12
+pReportItem->IndicationInfo.sinr_threshold.sinr_high, ItemLong -- 13
+pReportItem->IndicationInfo.sinr_threshold.sinr_low, ItemLong -- 14
+}
+#typev WifiMeasurementEngine_c736 35 "%0%!FUNC!:: WifiMeasID = %10!u!, SSID = %11!s! with RSSI (%12!d!) matched (%13!d!) criteria high(%14!d!) matched." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEbIsMatchingThresholdCriteria
+{
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 10
+pBSSEntry->SSID, ItemString -- 11
+pBSSEntry->RSSI, ItemLong -- 12
+bMatched, ItemLong -- 13
+pReportItem->IndicationInfo.rssi_threshold.rssi_high, ItemLong -- 14
+}
+#typev WifiMeasurementEngine_c715 34 "%0%!FUNC!:: WifiMeasID = %10!u!, SSID = %11!s! with RSSI (%12!d!) matched (%13!d!) criteria low(%14!d!) matched." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEbIsMatchingThresholdCriteria
+{
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 10
+pBSSEntry->SSID, ItemString -- 11
+pBSSEntry->RSSI, ItemLong -- 12
+bMatched, ItemLong -- 13
+pReportItem->IndicationInfo.rssi_threshold.rssi_low, ItemLong -- 14
+}
+#typev WifiMeasurementEngine_c695 33 "%0%!FUNC!:: WifiMeasID = %10!u!, SSID = %11!s! withRSSI (%12!d!) matched (%13!d!) criteria high(%14!d!)/low(%15!d!) matched." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WMEbIsMatchingThresholdCriteria
+{
+pReportItem->IndicationInfo.wifi_meas_id, ItemLong -- 10
+pBSSEntry->SSID, ItemString -- 11
+pBSSEntry->RSSI, ItemLong -- 12
+bMatched, ItemLong -- 13
+pReportItem->IndicationInfo.rssi_threshold.rssi_high, ItemLong -- 14
+pReportItem->IndicationInfo.rssi_threshold.rssi_low, ItemLong -- 15
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WifiMeasurementEngine_c1635 82 "%0%!FUNC!:: Terminating WNS measurement engine worker thread." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WifiMeasurementEngineDeInit
+{
+}
+#typev WifiMeasurementEngine_c1574 78 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: WifiReportItemList empty for WifiMeasID = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineHandleRssiBreachEventAsync
+{
+GetCurrentThreadId(), ItemLong -- 10
+WifiMeasID, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1561 76 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ONE_TIME_AFTER_THRESHOLD report item with WifiMeasID = %11!u!. Complete." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineHandleRssiBreachEventAsync
+{
+GetCurrentThreadId(), ItemLong -- 10
+WifiMeasID, ItemLong -- 11
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WifiMeasurementEngine_c1540 75 "%0%!FUNC!:: <ThreadID: 0x%10!x!> WifiMeasID = %11!u!, breach event RSSI = %12!d! and WLAN Query RSSI = %13!d!. Thresholds (high (%14!d!)/ low (%15!d!))." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineHandleRssiBreachEventAsync
+{
+GetCurrentThreadId(), ItemLong -- 10
+WifiMeasID, ItemLong -- 11
+Rssi, ItemLong -- 12
+CurrentBSSEntry.RSSI, ItemLong -- 13
+pReportItem->IndicationInfo.rssi_threshold.rssi_high, ItemLong -- 14
+pReportItem->IndicationInfo.rssi_threshold.rssi_low, ItemLong -- 15
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WifiMeasurementEngine_c1525 74 "%0%!FUNC!:: <ThreadID: 0x%10!x!> Match found for WifiMeasID = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineHandleRssiBreachEventAsync
+{
+GetCurrentThreadId(), ItemLong -- 10
+WifiMeasID, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1569 77 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: No Matching item for WifiMeasID = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineHandleRssiBreachEventAsync
+{
+GetCurrentThreadId(), ItemLong -- 10
+WifiMeasID, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1617 81 "%0%!FUNC!:: <ThreadID: 0x%10!x!> Wifi Measurement Engine initialized." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineInit
+{
+GetCurrentThreadId(), ItemLong -- 10
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WifiMeasurementEngine_c1608 80 "%0%!FUNC!:: ERROR: Worker thread initialization failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineInit
+{
+}
+#typev WifiMeasurementEngine_c1384 68 "%0%!FUNC!:: <ThreadID: 0x%10!x!> status = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineRegisterMeasuringIndicationAsync
+{
+GetCurrentThreadId(), ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1336 64 "%0%!FUNC!:: <ThreadID: 0x%10!x!> DSD_WIFI_MEAS_REPORT_TYPE_PERIODIC_RAW_V01 for WifiMeasID = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineRegisterMeasuringIndicationAsync
+{
+GetCurrentThreadId(), ItemLong -- 10
+pIndication->wifi_meas_id, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1344 65 "%0%!FUNC!:: <ThreadID: 0x%10!x!> DSD_WIFI_MEAS_REPORT_TYPE_ONE_TIME_AFTER_THRESHOLD_V01 for WifiMeasID = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineRegisterMeasuringIndicationAsync
+{
+GetCurrentThreadId(), ItemLong -- 10
+pIndication->wifi_meas_id, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1360 66 "%0%!FUNC!:: <ThreadID: 0x%10!x!> DSD_WIFI_MEAS_REPORT_TYPE_PERIODIC_AFTER_THRESHOLD_V01 for WifiMeasID = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineRegisterMeasuringIndicationAsync
+{
+GetCurrentThreadId(), ItemLong -- 10
+pIndication->wifi_meas_id, ItemLong -- 11
+}
+#typev WifiMeasurementEngine_c1368 67 "%0%!FUNC!:: <ThreadID: 0x%10!x!> ERROR: TODO: default for WifiMeasID = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WifiMeasurementEngineRegisterMeasuringIndicationAsync
+{
+GetCurrentThreadId(), ItemLong -- 10
+pIndication->wifi_meas_id, ItemLong -- 11
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WNDWSQmi_c781 79 "%0%!FUNC!:: <ThreadID: 0x%10!x!> WifiMeasID = %11!u! and RSSI = %12!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WNDWS_ProcessInboundIndication
+{
+GetCurrentThreadId(), ItemLong -- 10
+WifiMeasID, ItemLong -- 11
+Rssi, ItemLong -- 12
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WNServiceHandler_c112 84 "%0%!FUNC!:: No indications in the WifiReportItemList." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WNServiceHandlerProcessSSR
+{
+}
+#typev WNServiceHandler_c112 83 "%0%!FUNC!:: Removing WifiMeasID = %10!u!, status = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WNServiceHandlerProcessSSR
+{
+WifiMeasID, ItemLong -- 10
+status, ItemLong -- 11
+}

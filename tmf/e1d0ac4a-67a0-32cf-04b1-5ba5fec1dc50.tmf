@@ -1,0 +1,37 @@
+// PDB:  qcadc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+e1d0ac4a-67a0-32cf-04b1-5ba5fec1dc50 kmdf // SRC=VAdcTMLog.c MJ= MN=
+#typev VAdcTMDevice_c735 17 "%0VAdcTMLog.c::%!FUNC! ERROR: Adc - could not create log's spin lock %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=VAdcTM_DeviceInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev VAdcTMDevice_c611 13 "%0VAdcTMLog.c::%!FUNC! VADCTM EOC Interrupt" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=VAdcTM_EvtInterruptIsr
+{
+}
+#typev VAdcTMDevice_c550 12 "%0VAdcTMLog.c::%!FUNC! VADCTM thresh set: meas %10!u!, thresh %11!u!, triggered %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=VAdcTM_EvtInterruptWorkItem
+{
+uMeasIdx, ItemLong -- 10
+(uint32)eThreshold, ItemLong -- 11
+nTriggered, ItemLong -- 12
+}
+#typev VAdcTMDevice_c1222 14 "%0VAdcTMLog.c::%!FUNC! ERROR: VADCTM error %10!u!, error code: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=VAdcTM_PMICInit
+{
+eError, ItemLong -- 10
+nErrorCode, ItemLong -- 11
+}
+#typev VAdcTMDevice_c1456 10 "%0VAdcTMLog.c::%!FUNC! VADCTM thresh set: meas %10!u!, thresh %11!u!, desired %12!d!, set %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=VAdcTM_TMSetThreshold
+{
+uMeasIdx, ItemLong -- 10
+(uint32)eThreshold, ItemLong -- 11
+nThresholdDesired, ItemLong -- 12
+nThresholdSet, ItemLong -- 13
+}
+#typev VAdcTMDevice_c1400 11 "%0VAdcTMLog.c::%!FUNC! VADCTM thresh cleared: meas %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=VAdcTM_TMSetThreshold
+{
+uMeasIdx, ItemLong -- 10
+}
+#typev VAdcTMLog_c230 14 "%0VAdcTMLog.c::%!FUNC! ERROR: VADCTM error %10!u!, error code: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=VAdcTM_LogError
+{
+eError, ItemLong -- 10
+nErrorCode, ItemLong -- 11
+}

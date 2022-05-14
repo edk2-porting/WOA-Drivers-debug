@@ -1,0 +1,62 @@
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+3c177c9e-73ec-3e93-d20a-81e04901805e 10.4 // SRC=qmap_wda.c MJ= MN=
+#typev qmap_qcci_c208 22 "%0QMI::%!FUNC! ERROR pQMI/pRespBuff NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapQCCIProcessInboundQMIResponse
+{
+}
+#typev qmap_qcci_c208 24 "%0QMI::%!FUNC! ul_data_aggregation_protocol=0x%10!x!, dl_data_aggregation_protocol=0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapQCCIProcessInboundQMIResponse
+{
+pResp->ul_data_aggregation_protocol, ItemLong -- 10
+pResp->dl_data_aggregation_protocol, ItemLong -- 11
+}
+#typev qmap_qcci_c208 23 "%0QMI::%!FUNC! ERROR pResp result = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapQCCIProcessInboundQMIResponse
+{
+pResp->resp.result, ItemLong -- 10
+}
+#typev qmap_qcci_c208 21 "%0QMI::%!FUNC! ERROR Msg not supported msgId = 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapQCCIProcessInboundQMIResponse
+{
+pQMIElement->uMsgId, ItemLong -- 10
+}
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qmap_main_c552 14 "%0QMI::%!FUNC! WDAQmiclient -  %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapCleanup
+{
+qmiErr, ItemLong -- 10
+}
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qmap_main_c882 15 "%0QMI::%!FUNC! ExAllocatePoolWithTag Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapConnect
+{
+}
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qmap_main_c1389 14 "%0QMI::%!FUNC! WDAQmiclient -  %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapQMIClientDeinit
+{
+qmiErr, ItemLong -- 10
+}
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qmap_main_c1362 13 "%0QMAP::%!FUNC!: -- %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapQMIClientInit
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_main_c1362 12 "%0QMI::%!FUNC!: ERROR, Request buffer is null." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapQMIClientInit
+{
+}
+#typev qmap_main_c1362 11 "%0QMI::%!FUNC!: ERROR, Allocate QMI element failed." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapQMIClientInit
+{
+}
+#typev qmap_main_c1362 10 "%0QMI::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapQMIClientInit
+{
+}
+#typev qmap_main_c1356 18 "%0QMI::%!FUNC! MPQMI_SendWdaDataFormatReq Status - %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapQMIClientInit
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qmap_main_c1356 17 "%0QMI::%!FUNC! ERROR QmapQCCIInitClientFromServiceObj" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapQMIClientInit
+{
+}

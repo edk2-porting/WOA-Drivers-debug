@@ -1,0 +1,214 @@
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+78a16987-1059-30cb-7de3-0b4011446719 src // SRC=q6ad_voc_common.c MJ= MN=
+#typev q6ad_voc_common_c316 14 "%0ADCM.VOC.Err.q6ad_voc_PhyMemAlloc.Err.MDLAllocation - Failed to allocate 0x%10!x! bytes for SMMU Approach *****" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_PhyMemAlloc
+{
+buf_size, ItemLong -- 10
+}
+#typev q6ad_voc_common_c324 15 "%0ADCM.VOC.Err.q6ad_voc_PhyMemAlloc: MDL Memory map failed - SMMU Model " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_PhyMemAlloc
+{
+}
+#typev q6ad_voc_common_c346 16 "%0ADCM.VOC.Err.q6ad_voc_PhyMemAlloc: Mapping the buffers with SMMU failed index: %10!d! rc : 0x%11!x! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_PhyMemAlloc
+{
+Count, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_voc_common_c373 17 "%0ADCM.VOC.Err.q6ad_voc_PhyMemFree: Unmapping the bufffers with SMMU failed index : %10!d! rc : 0x%11!x! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_PhyMemFree
+{
+counter, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_voc_common_c370 13 "%0ADCM.VOC.Err.q6ad_voc_vcm_unmap_memory : q6ad_vcm_smmu_mem_unmap failed res - 0x%10!x!  " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_PhyMemFree
+{
+res, ItemLong -- 10
+}
+#typev q6ad_voc_common_c1165 39 "%0ADCM.VOC.q6ad_voc_common_map_outband_buffer:rc - %10!d! voip_session_index - %11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_voc_common_map_outband_buffer
+{
+rc, ItemLong -- 10
+voip_session_index, ItemLong -- 11
+}
+#typev q6ad_voc_common_c1157 38 "%0ADCM.VOC.q6ad_voc_common_map_outband_buffer:phy buff address [0x%10!I64x!], size[0x%11!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_voc_common_map_outband_buffer
+{
+pPmemTable->blocks[0].mem_address, ItemLongLongX -- 10
+pPmemTable->blocks[0].mem_size, ItemLong -- 11
+}
+#typev q6ad_voc_common_c1143 37 "%0ADCM.VOC.Err.q6ad_voc_common_map_outband_buffer : memory not allocated for memory cmd table index - %10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_common_map_outband_buffer
+{
+bufTableIndex, ItemLong -- 10
+}
+#typev q6ad_voc_common_c969 29 "%0ADCM.VOC.q6ad_voc_common_prepare_map_memory_cmd:rc - %10!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_voc_common_prepare_map_memory_cmd
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_voc_common_c961 28 "%0ADCM.VOC.q6ad_voc_common_prepare_map_memory_cmd:phy buff address [0x%10!I64x!], size[0x%11!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_voc_common_prepare_map_memory_cmd
+{
+pPmemTable->blocks[0].mem_address, ItemLongLongX -- 10
+pPmemTable->blocks[0].mem_size, ItemLong -- 11
+}
+#typev q6ad_voc_common_c917 27 "%0ADCM.VOC.Err.q6ad_voc_common_prepare_map_memory_cmd : no free available memory tables" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_common_prepare_map_memory_cmd
+{
+}
+#typev q6ad_voc_common_c906 26 "%0ADCM.VOC.q6ad_voc_common_prepare_map_memory_cmd: calib_type - %10!d!,buf_index - %11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_voc_common_prepare_map_memory_cmd
+{
+calib_type, ItemLong -- 10
+buf_index, ItemLong -- 11
+}
+#typev q6ad_voc_common_c489 20 "%0ADCM.VOC.Err.Q6AD_VOC_COMMON: ACDB_CMD_GET_TARGET_SPECIFIC_DEVICE_INFO ACDB_DEVICE_TYPE_INT_BTFM_PARAM failed %10!d! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_common_query_device_info
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_voc_common_c542 23 "%0ADCM.VOC.Err.Q6AD_VOC_COMMON: ACDB_CMD_GET_TARGET_SPECIFIC_DEVICE_INFO ACDB_DEVICE_TYPE_TDM_PARAM failed %10!d! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_common_query_device_info
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_voc_common_c566 25 "%0ADCM.VOC.Err.Q6AD_VOC_COMMON: No device type!!!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_common_query_device_info
+{
+}
+#typev q6ad_voc_common_c471 19 "%0ADCM.VOC.Err.Q6AD_VOC_COMMON: ACDB_CMD_GET_TARGET_SPECIFIC_DEVICE_INFO ACDB_DEVICE_TYPE_SLIMBUS_PARAM failed %10!d! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_common_query_device_info
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_voc_common_c558 24 "%0ADCM.VOC.Err.Q6AD_VOC_COMMON: ACDB_CMD_GET_TARGET_SPECIFIC_DEVICE_INFO ACDB_DEVICE_TYPE_USB_PARAM failed %10!d! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_common_query_device_info
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_voc_common_c525 22 "%0ADCM.VOC.Err.Q6AD_VOC_COMMON: ACDB_CMD_GET_TARGET_SPECIFIC_DEVICE_INFO ACDB_DEVICE_TYPE_I2S_PARAM failed %10!d! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_common_query_device_info
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_voc_common_c507 21 "%0ADCM.VOC.Err.Q6AD_VOC_COMMON: ACDB_CMD_GET_TARGET_SPECIFIC_DEVICE_INFO ACDB_DEVICE_TYPE_PCM_PARAM failed %10!d! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_common_query_device_info
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_voc_common_c452 18 "%0ADCM.VOC.Err.Q6AD_VOC_COMMON: ACDB_CMD_GET_COMMON_DEVICE_INFO failed %10!d! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_common_query_device_info
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_voc_common_c229 11 "%0ADCM.VOC.q6ad_voc_free_memory_cmd_table_buf_index: freeing index - %10!d!/%11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_voc_free_memory_cmd_table_buf_index
+{
+index, ItemLong -- 10
+Q6AD_VOC_COMMON_MEMORY_CMD_TABLES_MAX, ItemLong -- 11
+}
+#typev q6ad_voc_common_c211 10 "%0ADCM.VOC.q6ad_voc_get_memory_cmd_table_buf_index: returning index - %10!d!/%11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_voc_get_memory_cmd_table_buf_index
+{
+counter, ItemLong -- 10
+Q6AD_VOC_COMMON_MEMORY_CMD_TABLES_MAX, ItemLong -- 11
+}
+#typev q6ad_voc_common_c250 12 "%0ADCM.VOC.Err.q6ad_voc_vcm_map_memory : q6ad_vcm_smmu_mem_map failed res - 0x%10!x!  " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_voc_vcm_map_memory
+{
+res, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vs_c740 33 "%0ADCM.VOC.Err.q6ad_voc_common_get_mem_mapped_buffer_index : all mapped buffers are in use,rc - %10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_open
+{
+rc, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vc_c1000 33 "%0ADCM.VOC.Err.q6ad_voc_common_get_mem_mapped_buffer_index : all mapped buffers are in use,rc - %10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_deprecate_vc_set_device_config
+{
+rc, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vc_c878 33 "%0ADCM.VOC.Err.q6ad_voc_common_get_mem_mapped_buffer_index : all mapped buffers are in use,rc - %10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_deprecate_vc_set_device_config
+{
+rc, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vc_c810 33 "%0ADCM.VOC.Err.q6ad_voc_common_get_mem_mapped_buffer_index : all mapped buffers are in use,rc - %10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_deprecate_vc_set_device_config
+{
+rc, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vc_c1928 33 "%0ADCM.VOC.Err.q6ad_voc_common_get_mem_mapped_buffer_index : all mapped buffers are in use,rc - %10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vc_ioctl
+{
+rc, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vc_c1806 33 "%0ADCM.VOC.Err.q6ad_voc_common_get_mem_mapped_buffer_index : all mapped buffers are in use,rc - %10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vc_ioctl
+{
+rc, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vc_c1738 33 "%0ADCM.VOC.Err.q6ad_voc_common_get_mem_mapped_buffer_index : all mapped buffers are in use,rc - %10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vc_ioctl
+{
+rc, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vm_c1961 42 "%0ADCM.VOC.q6ad_voc_common_ims_buffer:rc - %10!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vm_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vm_c1961 41 "%0ADCM.VOC.q6ad_voc_common_ims_buffer:phy buff address [0x%10!I64x!], size[0x%11!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vm_ioctl
+{
+pPmemTable->blocks[0].mem_address, ItemLongLongX -- 10
+pPmemTable->blocks[0].mem_size, ItemLong -- 11
+}
+#typev q6ad_vm_c1961 40 "%0ADCM.VOC.Err.q6ad_voc_common_ims_buffer : memory not allocated for memory cmd table index - %10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vm_ioctl
+{
+bufTableIndex, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vm_c1961 42 "%0ADCM.VOC.q6ad_voc_common_ims_buffer:rc - %10!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vm_ioctl$filt$0
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vm_c1961 41 "%0ADCM.VOC.q6ad_voc_common_ims_buffer:phy buff address [0x%10!I64x!], size[0x%11!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vm_ioctl$filt$0
+{
+pPmemTable->blocks[0].mem_address, ItemLongLongX -- 10
+pPmemTable->blocks[0].mem_size, ItemLong -- 11
+}
+#typev q6ad_vm_c1961 40 "%0ADCM.VOC.Err.q6ad_voc_common_ims_buffer : memory not allocated for memory cmd table index - %10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vm_ioctl$filt$0
+{
+bufTableIndex, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vm_c482 32 "%0ADCM.VOC.q6ad_voc_common_get_free_buffer_index open_type - %10!d!,buffer_index - %11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vm_map_memory
+{
+open_type, ItemLong -- 10
+*buffer_index, ItemLong -- 11
+}
+#typev q6ad_vm_c482 31 "%0ADCM.VOC.Err.q6ad_voc_common_get_free_buffer_index :no free available sessions  rc - %10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vm_map_memory
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vm_c482 30 "%0ADCM.VOC.q6ad_voc_common_get_buffer_index open_type - %10!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vm_map_memory
+{
+open_type, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vm_c334 10 "%0ADCM.VOC.q6ad_voc_get_memory_cmd_table_buf_index: returning index - %10!d!/%11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vm_map_memory_calib_buffers
+{
+counter, ItemLong -- 10
+Q6AD_VOC_COMMON_MEMORY_CMD_TABLES_MAX, ItemLong -- 11
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vm_c428 10 "%0ADCM.VOC.q6ad_voc_get_memory_cmd_table_buf_index: returning index - %10!d!/%11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vm_map_outband_buffer
+{
+counter, ItemLong -- 10
+Q6AD_VOC_COMMON_MEMORY_CMD_TABLES_MAX, ItemLong -- 11
+}
+#typev q6ad_vm_c418 36 "%0ADCM.VOC.q6ad_voc_common_get_free_voip_buf_index,buffer_index - %10!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vm_map_outband_buffer
+{
+*voip_session_index, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vm_c418 35 "%0ADCM.VOC.Err.q6ad_voc_common_get_free_voip_buf_index :no free available sessions  rc - %10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vm_map_outband_buffer
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vm_c418 34 "%0ADCM.VOC.q6ad_voc_common_get_free_voip_buf_index" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vm_map_outband_buffer
+{
+}

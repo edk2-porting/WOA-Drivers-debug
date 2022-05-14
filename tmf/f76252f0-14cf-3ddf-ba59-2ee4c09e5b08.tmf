@@ -1,0 +1,1660 @@
+// PDB:  libadsprpc.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+f76252f0-14cf-3ddf-ba59-2ee4c09e5b08 lib // SRC=apps_std_imp.c MJ= MN=
+#typev apps_std_skel_c535 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_skel_c537 39 "%0%10!s!:oldname:%11!s! newname:%12!s! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+oldname, ItemString -- 11
+newname, ItemString -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_skel_c537 38 "%0Error %10!x!: failed to rename:%11!s! to %12!s!, errno is %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+nErr, ItemLong -- 10
+oldname, ItemString -- 11
+newname, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+}
+#typev apps_std_skel_c1193 26 "%0Error %10!x!: failed to closedir:%11!I64d! errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+nErr, ItemLong -- 10
+dir->handle, ItemLongLong -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_skel_c1193 27 "%0%10!s!: closedir:%11!I64d! nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_skel_c1157 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_skel_c1153 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+// PDB:  libadsprpc.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev apps_std_imp_c150 11 "%0%10!s!: Allocated sinfo:%11!p! sinfo->fd:%12!x! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_alloc
+{
+__FUNCTION__, ItemString -- 10
+sinfo, ItemPtr -- 11
+sinfo->fd, ItemLong -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c107 10 "%0%10!s!: Freed sinfo:%11!p! sinfo->fd:%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_free
+{
+__FUNCTION__, ItemString -- 10
+sfree, ItemPtr -- 11
+sfree->fd, ItemLong -- 12
+}
+#typev apps_std_imp_c464 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_clearerr
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c258 18 "%0%10!s!: fclose for %11!x! failed. errno: %12!s! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fclose
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+strerror(ERRNO), ItemString -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c246 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fclose
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c438 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_feof
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c451 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_ferror
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c236 17 "%0%10!s!: fflush for %11!x! failed. errno: %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fflush
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c229 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fflush
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c326 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fgetpos
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1159 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fgets
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c477 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_flen
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c195 13 "%0%10!s!: fopen in %11!s! mode for %12!s! failed. errno: %13!s! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fopen
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c1107 23 "%0%10!s!: fopen in %11!s! mode for %12!s! returned fd:%13!x! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fopen_with_env
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+*psout, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c290 20 "%0%10!s!:fread for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes nErr:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c277 19 "%0Error %10!x!: fread for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes, errno is %14!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+nErr, ItemLong -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+err, ItemLong -- 14
+}
+#typev apps_std_imp_c268 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c218 15 "%0%10!s!: freopen in %11!s! mode for %12!s! failed. errno: %13!s! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_freopen
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c207 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_freopen
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1199 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fsync
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c369 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_ftell
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c317 22 "%0%10!s!: fwrite for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fwrite
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c307 21 "%0Error %10!x!: fwrite for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes, errno is %14!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fwrite
+{
+nErr, ItemLong -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+err, ItemLong -- 14
+}
+#typev apps_std_imp_c298 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fwrite
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1468 37 "%0%10!s!:mkdir %11!s! with nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_mkdir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1464 36 "%0Error %10!x!: failed to mkdir %11!s!,errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_mkdir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1307 25 "%0%10!s!: opendir %11!s!, returned handle:%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_opendir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+dir->handle, ItemLongLong -- 12
+}
+#typev apps_std_imp_c1307 24 "%0Error %10!x!: failed to opendir %11!s!, errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_opendir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_imp_c1352 31 "%0%10!s!: Found file:%11!s! in directory:%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dirent->name, ItemString -- 11
+dir->handle, ItemLongLong -- 12
+}
+#typev apps_std_imp_c1346 30 "%0Error %10!x!: failed to readdir:%11!I64d! errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+nErr, ItemLong -- 10
+dir->handle, ItemLongLong -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_imp_c1342 29 "%0%10!s!: reached end of directory for:%11!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+}
+#typev apps_std_imp_c1336 28 "%0%10!s!: Invalid directory handle:%11!I64d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+}
+#typev apps_std_imp_c425 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_rewind
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1368 33 "%0%10!s!: Remove directory:%11!s! nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_rmdir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1366 32 "%0Error %10!x!: failed to remove directory %11!s!,errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_rmdir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1391 35 "%0%10!s!: stat %11!s!, nErr:%12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1391 34 "%0Error %10!x!: failed to stat %11!s!, errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1391 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+// PDB:  libadsprpcarm32.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev apps_std_skel_c537 39 "%0%10!s!:oldname:%11!s! newname:%12!s! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+oldname, ItemString -- 11
+newname, ItemString -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_skel_c537 38 "%0Error %10!x!: failed to rename:%11!s! to %12!s!, errno is %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+nErr, ItemLong -- 10
+oldname, ItemString -- 11
+newname, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+}
+#typev apps_std_skel_c1193 26 "%0Error %10!x!: failed to closedir:%11!I64d! errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+nErr, ItemLong -- 10
+dir->handle, ItemLongLong -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_skel_c1193 27 "%0%10!s!: closedir:%11!I64d! nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_skel_c1149 22 "%0%10!s!: fwrite for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_skel_c1149 21 "%0Error %10!x!: fwrite for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes, errno is %14!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+nErr, ItemLong -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+err, ItemLong -- 14
+}
+#typev apps_std_skel_c1141 15 "%0%10!s!: freopen in %11!s! mode for %12!s! failed. errno: %13!s! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+nErr, ItemLong -- 14
+}
+// PDB:  libadsprpcarm32.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev apps_std_imp_c150 11 "%0%10!s!: Allocated sinfo:%11!p! sinfo->fd:%12!x! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_alloc
+{
+__FUNCTION__, ItemString -- 10
+sinfo, ItemPtr -- 11
+sinfo->fd, ItemLong -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c107 10 "%0%10!s!: Freed sinfo:%11!p! sinfo->fd:%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_free
+{
+__FUNCTION__, ItemString -- 10
+sfree, ItemPtr -- 11
+sfree->fd, ItemLong -- 12
+}
+#typev apps_std_imp_c169 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_get
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c464 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_clearerr
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c258 18 "%0%10!s!: fclose for %11!x! failed. errno: %12!s! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fclose
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+strerror(ERRNO), ItemString -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c438 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_feof
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c451 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_ferror
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c236 17 "%0%10!s!: fflush for %11!x! failed. errno: %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fflush
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1159 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fgets
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c477 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_flen
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c195 13 "%0%10!s!: fopen in %11!s! mode for %12!s! failed. errno: %13!s! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fopen
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c1107 23 "%0%10!s!: fopen in %11!s! mode for %12!s! returned fd:%13!x! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fopen_with_env
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+*psout, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c290 20 "%0%10!s!:fread for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes nErr:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c277 19 "%0Error %10!x!: fread for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes, errno is %14!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+nErr, ItemLong -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+err, ItemLong -- 14
+}
+#typev apps_std_imp_c1199 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fsync
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c369 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_ftell
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1468 37 "%0%10!s!:mkdir %11!s! with nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_mkdir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1464 36 "%0Error %10!x!: failed to mkdir %11!s!,errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_mkdir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1311 25 "%0%10!s!: opendir %11!s!, returned handle:%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_opendir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+dir->handle, ItemLongLong -- 12
+}
+#typev apps_std_imp_c1307 24 "%0Error %10!x!: failed to opendir %11!s!, errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_opendir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_imp_c1352 31 "%0%10!s!: Found file:%11!s! in directory:%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dirent->name, ItemString -- 11
+dir->handle, ItemLongLong -- 12
+}
+#typev apps_std_imp_c1346 30 "%0Error %10!x!: failed to readdir:%11!I64d! errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+nErr, ItemLong -- 10
+dir->handle, ItemLongLong -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_imp_c1342 29 "%0%10!s!: reached end of directory for:%11!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+}
+#typev apps_std_imp_c1336 28 "%0%10!s!: Invalid directory handle:%11!I64d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+}
+#typev apps_std_imp_c425 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_rewind
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1368 33 "%0%10!s!: Remove directory:%11!s! nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_rmdir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1366 32 "%0Error %10!x!: failed to remove directory %11!s!,errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_rmdir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1419 35 "%0%10!s!: stat %11!s!, nErr:%12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1410 34 "%0Error %10!x!: failed to stat %11!s!, errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+// PDB:  libcdsprpc.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev apps_std_skel_c535 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_skel_c537 39 "%0%10!s!:oldname:%11!s! newname:%12!s! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+oldname, ItemString -- 11
+newname, ItemString -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_skel_c537 38 "%0Error %10!x!: failed to rename:%11!s! to %12!s!, errno is %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+nErr, ItemLong -- 10
+oldname, ItemString -- 11
+newname, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+}
+#typev apps_std_skel_c1193 26 "%0Error %10!x!: failed to closedir:%11!I64d! errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+nErr, ItemLong -- 10
+dir->handle, ItemLongLong -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_skel_c1193 27 "%0%10!s!: closedir:%11!I64d! nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_skel_c1157 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_skel_c1153 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+// PDB:  libcdsprpc.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev apps_std_imp_c150 11 "%0%10!s!: Allocated sinfo:%11!p! sinfo->fd:%12!x! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_alloc
+{
+__FUNCTION__, ItemString -- 10
+sinfo, ItemPtr -- 11
+sinfo->fd, ItemLong -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c107 10 "%0%10!s!: Freed sinfo:%11!p! sinfo->fd:%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_free
+{
+__FUNCTION__, ItemString -- 10
+sfree, ItemPtr -- 11
+sfree->fd, ItemLong -- 12
+}
+#typev apps_std_imp_c464 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_clearerr
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c258 18 "%0%10!s!: fclose for %11!x! failed. errno: %12!s! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fclose
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+strerror(ERRNO), ItemString -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c246 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fclose
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c438 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_feof
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c451 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_ferror
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c236 17 "%0%10!s!: fflush for %11!x! failed. errno: %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fflush
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c229 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fflush
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c326 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fgetpos
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1159 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fgets
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c477 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_flen
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c195 13 "%0%10!s!: fopen in %11!s! mode for %12!s! failed. errno: %13!s! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fopen
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c1107 23 "%0%10!s!: fopen in %11!s! mode for %12!s! returned fd:%13!x! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fopen_with_env
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+*psout, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c290 20 "%0%10!s!:fread for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes nErr:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c277 19 "%0Error %10!x!: fread for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes, errno is %14!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+nErr, ItemLong -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+err, ItemLong -- 14
+}
+#typev apps_std_imp_c268 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c218 15 "%0%10!s!: freopen in %11!s! mode for %12!s! failed. errno: %13!s! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_freopen
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c207 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_freopen
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1199 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fsync
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c369 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_ftell
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c317 22 "%0%10!s!: fwrite for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fwrite
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c307 21 "%0Error %10!x!: fwrite for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes, errno is %14!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fwrite
+{
+nErr, ItemLong -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+err, ItemLong -- 14
+}
+#typev apps_std_imp_c298 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fwrite
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1468 37 "%0%10!s!:mkdir %11!s! with nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_mkdir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1464 36 "%0Error %10!x!: failed to mkdir %11!s!,errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_mkdir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1307 25 "%0%10!s!: opendir %11!s!, returned handle:%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_opendir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+dir->handle, ItemLongLong -- 12
+}
+#typev apps_std_imp_c1307 24 "%0Error %10!x!: failed to opendir %11!s!, errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_opendir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_imp_c1352 31 "%0%10!s!: Found file:%11!s! in directory:%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dirent->name, ItemString -- 11
+dir->handle, ItemLongLong -- 12
+}
+#typev apps_std_imp_c1346 30 "%0Error %10!x!: failed to readdir:%11!I64d! errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+nErr, ItemLong -- 10
+dir->handle, ItemLongLong -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_imp_c1342 29 "%0%10!s!: reached end of directory for:%11!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+}
+#typev apps_std_imp_c1336 28 "%0%10!s!: Invalid directory handle:%11!I64d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+}
+#typev apps_std_imp_c425 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_rewind
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1368 33 "%0%10!s!: Remove directory:%11!s! nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_rmdir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1366 32 "%0Error %10!x!: failed to remove directory %11!s!,errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_rmdir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1391 35 "%0%10!s!: stat %11!s!, nErr:%12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1391 34 "%0Error %10!x!: failed to stat %11!s!, errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1391 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+// PDB:  libcdsprpcarm32.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev apps_std_skel_c537 39 "%0%10!s!:oldname:%11!s! newname:%12!s! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+oldname, ItemString -- 11
+newname, ItemString -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_skel_c537 38 "%0Error %10!x!: failed to rename:%11!s! to %12!s!, errno is %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+nErr, ItemLong -- 10
+oldname, ItemString -- 11
+newname, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+}
+#typev apps_std_skel_c1193 26 "%0Error %10!x!: failed to closedir:%11!I64d! errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+nErr, ItemLong -- 10
+dir->handle, ItemLongLong -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_skel_c1193 27 "%0%10!s!: closedir:%11!I64d! nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_skel_c1149 22 "%0%10!s!: fwrite for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_skel_c1149 21 "%0Error %10!x!: fwrite for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes, errno is %14!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+nErr, ItemLong -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+err, ItemLong -- 14
+}
+#typev apps_std_skel_c1141 15 "%0%10!s!: freopen in %11!s! mode for %12!s! failed. errno: %13!s! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+nErr, ItemLong -- 14
+}
+// PDB:  libcdsprpcarm32.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev apps_std_imp_c150 11 "%0%10!s!: Allocated sinfo:%11!p! sinfo->fd:%12!x! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_alloc
+{
+__FUNCTION__, ItemString -- 10
+sinfo, ItemPtr -- 11
+sinfo->fd, ItemLong -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c107 10 "%0%10!s!: Freed sinfo:%11!p! sinfo->fd:%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_free
+{
+__FUNCTION__, ItemString -- 10
+sfree, ItemPtr -- 11
+sfree->fd, ItemLong -- 12
+}
+#typev apps_std_imp_c169 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_get
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c464 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_clearerr
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c258 18 "%0%10!s!: fclose for %11!x! failed. errno: %12!s! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fclose
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+strerror(ERRNO), ItemString -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c438 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_feof
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c451 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_ferror
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c236 17 "%0%10!s!: fflush for %11!x! failed. errno: %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fflush
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1159 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fgets
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c477 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_flen
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c195 13 "%0%10!s!: fopen in %11!s! mode for %12!s! failed. errno: %13!s! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fopen
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c1107 23 "%0%10!s!: fopen in %11!s! mode for %12!s! returned fd:%13!x! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fopen_with_env
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+*psout, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c290 20 "%0%10!s!:fread for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes nErr:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c277 19 "%0Error %10!x!: fread for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes, errno is %14!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+nErr, ItemLong -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+err, ItemLong -- 14
+}
+#typev apps_std_imp_c1199 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fsync
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c369 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_ftell
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1468 37 "%0%10!s!:mkdir %11!s! with nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_mkdir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1464 36 "%0Error %10!x!: failed to mkdir %11!s!,errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_mkdir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1311 25 "%0%10!s!: opendir %11!s!, returned handle:%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_opendir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+dir->handle, ItemLongLong -- 12
+}
+#typev apps_std_imp_c1307 24 "%0Error %10!x!: failed to opendir %11!s!, errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_opendir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_imp_c1352 31 "%0%10!s!: Found file:%11!s! in directory:%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dirent->name, ItemString -- 11
+dir->handle, ItemLongLong -- 12
+}
+#typev apps_std_imp_c1346 30 "%0Error %10!x!: failed to readdir:%11!I64d! errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+nErr, ItemLong -- 10
+dir->handle, ItemLongLong -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_imp_c1342 29 "%0%10!s!: reached end of directory for:%11!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+}
+#typev apps_std_imp_c1336 28 "%0%10!s!: Invalid directory handle:%11!I64d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+}
+#typev apps_std_imp_c425 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_rewind
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1368 33 "%0%10!s!: Remove directory:%11!s! nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_rmdir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1366 32 "%0Error %10!x!: failed to remove directory %11!s!,errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_rmdir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1419 35 "%0%10!s!: stat %11!s!, nErr:%12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1410 34 "%0Error %10!x!: failed to stat %11!s!, errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+// PDB:  libsdsprpc.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev apps_std_skel_c535 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_skel_c537 39 "%0%10!s!:oldname:%11!s! newname:%12!s! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+oldname, ItemString -- 11
+newname, ItemString -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_skel_c537 38 "%0Error %10!x!: failed to rename:%11!s! to %12!s!, errno is %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+nErr, ItemLong -- 10
+oldname, ItemString -- 11
+newname, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+}
+#typev apps_std_skel_c1193 26 "%0Error %10!x!: failed to closedir:%11!I64d! errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+nErr, ItemLong -- 10
+dir->handle, ItemLongLong -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_skel_c1193 27 "%0%10!s!: closedir:%11!I64d! nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_skel_c1157 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_skel_c1153 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+// PDB:  libsdsprpc.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev apps_std_imp_c150 11 "%0%10!s!: Allocated sinfo:%11!p! sinfo->fd:%12!x! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_alloc
+{
+__FUNCTION__, ItemString -- 10
+sinfo, ItemPtr -- 11
+sinfo->fd, ItemLong -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c107 10 "%0%10!s!: Freed sinfo:%11!p! sinfo->fd:%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_free
+{
+__FUNCTION__, ItemString -- 10
+sfree, ItemPtr -- 11
+sfree->fd, ItemLong -- 12
+}
+#typev apps_std_imp_c464 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_clearerr
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c258 18 "%0%10!s!: fclose for %11!x! failed. errno: %12!s! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fclose
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+strerror(ERRNO), ItemString -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c246 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fclose
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c438 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_feof
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c451 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_ferror
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c236 17 "%0%10!s!: fflush for %11!x! failed. errno: %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fflush
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c229 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fflush
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c326 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fgetpos
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1159 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fgets
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c477 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_flen
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c195 13 "%0%10!s!: fopen in %11!s! mode for %12!s! failed. errno: %13!s! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fopen
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c1107 23 "%0%10!s!: fopen in %11!s! mode for %12!s! returned fd:%13!x! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fopen_with_env
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+*psout, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c290 20 "%0%10!s!:fread for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes nErr:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c277 19 "%0Error %10!x!: fread for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes, errno is %14!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+nErr, ItemLong -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+err, ItemLong -- 14
+}
+#typev apps_std_imp_c268 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c218 15 "%0%10!s!: freopen in %11!s! mode for %12!s! failed. errno: %13!s! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_freopen
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c207 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_freopen
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1199 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fsync
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c369 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_ftell
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c317 22 "%0%10!s!: fwrite for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fwrite
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c307 21 "%0Error %10!x!: fwrite for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes, errno is %14!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fwrite
+{
+nErr, ItemLong -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+err, ItemLong -- 14
+}
+#typev apps_std_imp_c298 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fwrite
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1468 37 "%0%10!s!:mkdir %11!s! with nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_mkdir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1464 36 "%0Error %10!x!: failed to mkdir %11!s!,errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_mkdir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1307 25 "%0%10!s!: opendir %11!s!, returned handle:%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_opendir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+dir->handle, ItemLongLong -- 12
+}
+#typev apps_std_imp_c1307 24 "%0Error %10!x!: failed to opendir %11!s!, errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_opendir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_imp_c1352 31 "%0%10!s!: Found file:%11!s! in directory:%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dirent->name, ItemString -- 11
+dir->handle, ItemLongLong -- 12
+}
+#typev apps_std_imp_c1346 30 "%0Error %10!x!: failed to readdir:%11!I64d! errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+nErr, ItemLong -- 10
+dir->handle, ItemLongLong -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_imp_c1342 29 "%0%10!s!: reached end of directory for:%11!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+}
+#typev apps_std_imp_c1336 28 "%0%10!s!: Invalid directory handle:%11!I64d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+}
+#typev apps_std_imp_c425 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_rewind
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1368 33 "%0%10!s!: Remove directory:%11!s! nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_rmdir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1366 32 "%0Error %10!x!: failed to remove directory %11!s!,errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_rmdir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1391 35 "%0%10!s!: stat %11!s!, nErr:%12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1391 34 "%0Error %10!x!: failed to stat %11!s!, errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1391 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+// PDB:  libsdsprpcarm32.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev apps_std_skel_c537 39 "%0%10!s!:oldname:%11!s! newname:%12!s! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+oldname, ItemString -- 11
+newname, ItemString -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_skel_c537 38 "%0Error %10!x!: failed to rename:%11!s! to %12!s!, errno is %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=_skel_invoke
+{
+nErr, ItemLong -- 10
+oldname, ItemString -- 11
+newname, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+}
+#typev apps_std_skel_c1193 26 "%0Error %10!x!: failed to closedir:%11!I64d! errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+nErr, ItemLong -- 10
+dir->handle, ItemLongLong -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_skel_c1193 27 "%0%10!s!: closedir:%11!I64d! nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_skel_c1149 22 "%0%10!s!: fwrite for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_skel_c1149 21 "%0Error %10!x!: fwrite for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes, errno is %14!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+nErr, ItemLong -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+err, ItemLong -- 14
+}
+#typev apps_std_skel_c1141 15 "%0%10!s!: freopen in %11!s! mode for %12!s! failed. errno: %13!s! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_skel_invoke
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+nErr, ItemLong -- 14
+}
+// PDB:  libsdsprpcarm32.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev apps_std_imp_c150 11 "%0%10!s!: Allocated sinfo:%11!p! sinfo->fd:%12!x! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_alloc
+{
+__FUNCTION__, ItemString -- 10
+sinfo, ItemPtr -- 11
+sinfo->fd, ItemLong -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c107 10 "%0%10!s!: Freed sinfo:%11!p! sinfo->fd:%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_free
+{
+__FUNCTION__, ItemString -- 10
+sfree, ItemPtr -- 11
+sfree->fd, ItemLong -- 12
+}
+#typev apps_std_imp_c169 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_FILE_get
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c464 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_clearerr
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c258 18 "%0%10!s!: fclose for %11!x! failed. errno: %12!s! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fclose
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+strerror(ERRNO), ItemString -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c438 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_feof
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c451 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_ferror
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c236 17 "%0%10!s!: fflush for %11!x! failed. errno: %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fflush
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1159 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fgets
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c477 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_flen
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c195 13 "%0%10!s!: fopen in %11!s! mode for %12!s! failed. errno: %13!s! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fopen
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+strerror(ERRNO), ItemString -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c1107 23 "%0%10!s!: fopen in %11!s! mode for %12!s! returned fd:%13!x! nErr:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fopen_with_env
+{
+__FUNCTION__, ItemString -- 10
+mode, ItemString -- 11
+name, ItemString -- 12
+*psout, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c290 20 "%0%10!s!:fread for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes nErr:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+__FUNCTION__, ItemString -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+nErr, ItemLong -- 14
+}
+#typev apps_std_imp_c277 19 "%0Error %10!x!: fread for fd:%11!x! returning %12!d! bytes, requested was %13!d! bytes, errno is %14!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_fread
+{
+nErr, ItemLong -- 10
+sin, ItemLong -- 11
+out, ItemLong -- 12
+bufLen, ItemLong -- 13
+err, ItemLong -- 14
+}
+#typev apps_std_imp_c1199 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_fsync
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c369 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_ftell
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1468 37 "%0%10!s!:mkdir %11!s! with nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_mkdir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1464 36 "%0Error %10!x!: failed to mkdir %11!s!,errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_mkdir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1311 25 "%0%10!s!: opendir %11!s!, returned handle:%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_opendir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+dir->handle, ItemLongLong -- 12
+}
+#typev apps_std_imp_c1307 24 "%0Error %10!x!: failed to opendir %11!s!, errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_opendir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_imp_c1352 31 "%0%10!s!: Found file:%11!s! in directory:%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dirent->name, ItemString -- 11
+dir->handle, ItemLongLong -- 12
+}
+#typev apps_std_imp_c1346 30 "%0Error %10!x!: failed to readdir:%11!I64d! errno is %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+nErr, ItemLong -- 10
+dir->handle, ItemLongLong -- 11
+GetLastError(), ItemLong -- 12
+}
+#typev apps_std_imp_c1342 29 "%0%10!s!: reached end of directory for:%11!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+}
+#typev apps_std_imp_c1336 28 "%0%10!s!: Invalid directory handle:%11!I64d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_readdir
+{
+__FUNCTION__, ItemString -- 10
+dir->handle, ItemLongLong -- 11
+}
+#typev apps_std_imp_c425 12 "%0%10!s!: Found fd:%11!x! in sinfo:%12!p! nErr:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_rewind
+{
+__FUNCTION__, ItemString -- 10
+fd, ItemLong -- 11
+sinfo, ItemPtr -- 12
+nErr, ItemLong -- 13
+}
+#typev apps_std_imp_c1368 33 "%0%10!s!: Remove directory:%11!s! nErr:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_QDSP FUNC=apps_std_rmdir
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1366 32 "%0Error %10!x!: failed to remove directory %11!s!,errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_rmdir
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}
+#typev apps_std_imp_c1419 35 "%0%10!s!: stat %11!s!, nErr:%12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+__FUNCTION__, ItemString -- 10
+name, ItemString -- 11
+nErr, ItemLong -- 12
+}
+#typev apps_std_imp_c1410 34 "%0Error %10!x!: failed to stat %11!s!, errno is %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_QDSP FUNC=apps_std_stat
+{
+nErr, ItemLong -- 10
+name, ItemString -- 11
+strerror(ERRNO), ItemString -- 12
+}

@@ -1,0 +1,116 @@
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+13f5bc43-1623-302a-06a3-77fbb1a8f857 10.4 // SRC=RevDSDClient.c MJ= MN=
+#typev RevDSDClient_c195 25 "%0%10!s! <%!FUNC!> : pClient = 0x%11!p!, status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=hIFRHandle FLAGS=RVRM_WPP FUNC=RevDSDClient_Init
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevDSDClient_c194 24 "%0%10!s!: pClient = 0x%11!p!, status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDSDClient_Init
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevDSDClient_c187 23 "%0%10!s! <%!FUNC!> : FAILED, QmiType=%11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=hIFRHandle FLAGS=RVRM_WPP FUNC=RevDSDClient_Init
+{
+pClient->PortName, ItemString -- 10
+QmiType, ItemLong -- 11
+}
+#typev RevDSDClient_c186 22 "%0%10!s!: FAILED, QmiType=%11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDSDClient_Init
+{
+pClient->PortName, ItemString -- 10
+QmiType, ItemLong -- 11
+}
+#typev RevDSDClient_c164 21 "%0<%!FUNC!> : STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=hIFRHandle FLAGS=RVRM_WPP FUNC=RevDSDClient_Init
+{
+}
+#typev RevDSDClient_c163 20 "%0<%!FUNC!> : STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDSDClient_Init
+{
+}
+#typev RevDSDClient_c287 33 "%0: pClient/pQMIInd = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDSDIndication
+{
+}
+#typev RevDSDClient_c305 35 "%0%10!s!: MsgId 0x%11!x!. Invalid DSD IND." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDSDIndication
+{
+pClient->PortName, ItemString -- 10
+pQMIInd->uMsgId, ItemLong -- 11
+}
+#typev RevDSDClient_c295 34 "%0%10!s!: SSR in progress. Exiting DSD indication processing." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDSDIndication
+{
+pClient->PortName, ItemString -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev RevDSDClient_c47 11 "%0%10!s!: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDSDNotifyDataSettingReq
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevDSDClient_c58 12 "%0%10!s!: END. pClient = 0x%11!p!. status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDSDNotifyDataSettingReq
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevDSDClient_c40 10 "%0: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDSDNotifyDataSettingReq
+{
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev RevRmQCCI_c925 31 "%0: MsgId 0x%10!x!. Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QCCI_GetRequestInfo
+{
+uMsgId, ItemLong -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev RevRmQCCI_c925 32 "%0: MsgId 0x%10!x! and status = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QCCI_GetRequestInfo
+{
+uMsgId, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevRmQCCI_c925 30 "%0: MsgId 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QCCI_GetRequestInfo
+{
+uMsgId, ItemLong -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev RevRmQCCI_c355 14 "%0: Response success." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQMIResponse
+{
+}
+#typev RevRmQCCI_c355 13 "%0: Error in Response. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQMIResponse
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+#typev RevRmQCCI_c355 36 "%0: uQMIType 0x%10!x!. Invalid DSD Response." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQMIResponse
+{
+pQMIElement->uQMIType, ItemLong -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev RevRmnet_c2019 16 "%0: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_InitContexts
+{
+}
+#typev RevRmnet_c2019 15 "%0Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmnet_InitContexts
+{
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev RevRmnet_c475 29 "%0 success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmnet_ReleaseQmiHandles
+{
+}
+#typev RevRmnet_c475 28 "%0%10!s!: error releasing 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_ReleaseQmiHandles
+{
+pClient->PortName, ItemString -- 10
+qmiErr, ItemLong -- 11
+}
+#typev RevRmnet_c475 27 "%0%10!s!: Releasing DSD client = %11!p! with handle = %12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_ReleaseQmiHandles
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+pClient->handle, ItemPtr -- 12
+}
+#typev RevRmnet_c475 26 "%0: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_ReleaseQmiHandles
+{
+}

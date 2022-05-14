@@ -1,0 +1,151 @@
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+90cd032e-5380-3630-3e19-5ffbdd7a3b06 10.4 // SRC=MPDataIf.c MJ= MN=
+#typev MPDataIf_c198 15 "%0<%10!s!> -->CancelSendNetBufferLists: %11!d!/%12!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPCancelSend
+{
+pAdapter->PortName, ItemString -- 10
+(int)CancelId, ItemLong -- 11
+(int)MaxNetBufferListInfo, ItemLong -- 12
+}
+#typev MPDataIf_c179 14 "%0<%10!s!> adapter ePDG, No sending " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPCancelSend
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c173 13 "%0adapter is NULL, can't proceeed 0x%10!p!" //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPCancelSend
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPDataIf_c133 12 "%0MPDataIf_ReadyCbRoutine pAdapter is NULL." //   MASK=MP_DBG_MASK_READ LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPDataIf_ReadyCbRoutine
+{
+}
+#typev MPDataIf_c647 38 "%0<%10!s!> MPRxProcessNBLFromPendingList:  called " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPRxProcessNBLFromPendingList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c577 36 "%0<%10!s!> MPRxReceiveNetBufferList:  Indicating to NDIS pRxNBL 0x%11!p! " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPRxReceiveNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+pRxNBL, ItemPtr -- 11
+}
+#typev MPDataIf_c556 35 "%0<%10!s!> MPRxReceiveNetBufferList: Setting wake reason and waking up the worker thread " //   MASK=MP_DBG_MASK_READ LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPRxReceiveNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c498 37 "%0<%10!s!> MPRxAddNBLToPendingList:  Indicating to NDIS pRxNBL 0x%11!p! " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPRxReceiveNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+pRxNBL, ItemPtr -- 11
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDataIf_c451 34 "%0<%10!s!> MPRxReturnNetBufferList:  Indicating to NDIS NetBufferLists 0x%11!p! " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPRxReturnNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+NetBufferLists, ItemPtr -- 11
+}
+#typev MPDataIf_c443 33 "%0%!FUNC! <%10!s!> ePDG adapter " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPRxReturnNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c437 32 "%0adapter is NULL, can't proceeed 0x%10!p!" //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPRxReturnNetBufferList
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPDataIf_c417 31 "%0<%10!s!> MPTxCompleteNetBufferList:  Dropping the Packet NetBufferList 0x%11!p! " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxCompleteNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+NetBufferList, ItemPtr -- 11
+}
+#typev MPDataIf_c405 31 "%0<%10!s!> MPTxCompleteNetBufferList:  Dropping the Packet NetBufferList 0x%11!p! " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+NetBufferList, ItemPtr -- 11
+}
+#typev MPDataIf_c404 30 "%0<%10!s!> MPTxSendNetBufferLists:  Adapter is Power Down OR Pause State, So Complete NetBufferLists 0x%11!p! " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+NetBufferLists, ItemPtr -- 11
+}
+#typev MPDataIf_c398 31 "%0<%10!s!> MPTxCompleteNetBufferList:  Dropping the Packet NetBufferList 0x%11!p! " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+NetBufferList, ItemPtr -- 11
+}
+#typev MPDataIf_c397 29 "%0<%10!s!> MPTxSendNetBufferList: bSendNBL is FALSE So Complete NetBufferLists 0x%11!p! " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+NetBufferLists, ItemPtr -- 11
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDataIf_c390 28 "%0<%10!s!> MPTxSendNetBufferList: Processing the packet NetBufferLists 0x%11!p! " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+NetBufferLists, ItemPtr -- 11
+}
+#typev MPDataIf_c365 27 "%0<%10!s!> MPTxSendNetBufferList: HOPOPTS pkt - drop " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c357 26 "%0<%10!s!> MPTxSendNetBufferList: ICMPv6 pkt - drop " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c343 25 "%0<%10!s!> MPTxSendNetBufferList: MDNS multicast pkt - drop " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c336 24 "%0<%10!s!> MPTxSendNetBufferList: DHCP pkt - drop " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c331 23 "%0<%10!s!> MPTxSendNetBufferList: %11!d! %12!d! " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+UDPSrcPort, ItemLong -- 11
+UDPDestPort, ItemLong -- 12
+}
+#typev MPDataIf_c322 22 "%0<%10!s!> MPTxSendNetBufferList: UDP protocol " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c317 21 "%0<%10!s!> MPTxSendNetBufferList: IPv6 packet " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c311 20 "%0<%10!s!> MPTxSendNetBufferList: IPv4 packet, Drop the IPV4 packet " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c271 19 "%0<%10!s!> MPTxSendNetBufferList:: pktLen %11!d!    " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+pktLen, ItemLong -- 11
+}
+#typev MPDataIf_c259 18 "%0<%10!s!> MPTxSendNetBufferList:: currentNBL 0x%11!p!  nextNBL = 0x%12!p!  " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+currentNBL, ItemPtr -- 11
+nextNBL, ItemPtr -- 12
+}
+#typev MPDataIf_c253 17 "%0<%10!s!> MPTxSendNetBufferList:: ePDG adapter, no sending " //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDataIf_c233 16 "%0adapter is NULL, can't proceeed 0x%10!p!" //   MASK=MP_DBG_MASK_WRITE LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPTxSendNetBufferList
+{
+pAdapter, ItemPtr -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPTimer_c440 10 "%0<%10!s!> <--- MP_USBCleanUp " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=ResetCompleteTimerDpc
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPInit_c863 11 "%0<%10!s!> MPDataIf_AssignPortIndex: DataIf ports for MaxSupportedAdapters = %11!d! already in use!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPInitializeEx
+{
+pAdapter->PortName, ItemString -- 10
+maxSupportedAdapters, ItemLong -- 11
+}

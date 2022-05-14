@@ -1,0 +1,92 @@
+// PDB:  qcspi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+40eb5951-c3bf-3d92-acb9-d5bbb5627801 10.4 // SRC=qcWdfSpidriver.c MJ= MN=
+#typev qcWdfSpidriver_c230 18 "%0WdfDpcCreate(BuildScatterGatherDpc) failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=CreateDpcs
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidriver_c220 17 "%0WdfDpcCreate(TransferCompleteDpc) failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=CreateDpcs
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidriver_c287 20 "%0WdfTimerCreate() failed for abort timer %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=CreateTimers
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidriver_c272 19 "%0WdfTimerCreate() failed for delay timer %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=CreateTimers
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidriver_c87 12 "%00x%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=DriverEntry
+{
+status, ItemLong -- 10
+}
+#typev qcWdfSpidriver_c76 11 "%0registry path = "%10!s!"" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=DriverEntry
+{
+RegistryPath->Buffer, ItemWString -- 10
+}
+#typev qcWdfSpidriver_c75 10 "%00x%10!p!, 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=DriverEntry
+{
+DriverObject, ItemPtr -- 10
+RegistryPath, ItemPtr -- 11
+}
+// PDB:  qcspi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qcWdfSpidriver_c449 22 "%0WdfSpinLockCreate(BuildSGLock) for device lock failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=InitDeviceContext
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidriver_c453 24 "%0ChipFamily %10!d!, ChipID = %11!s![0x%12!x!], ChipVersion = 0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=InitDeviceContext
+{
+device_ctxt->ChipFamily, ItemLong -- 10
+buffer, ItemString -- 11
+device_ctxt->ChipId, ItemLong -- 12
+device_ctxt->ChipVersion, ItemLong -- 13
+}
+#typev qcWdfSpidriver_c449 21 "%0WdfSpinLockCreate(Lock) for device lock failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=InitDeviceContext
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidriver_c437 23 "%0WdfInterruptCreate() for device lock failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=InitDeviceContext
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidriver_c655 30 "%0%10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidriver_c650 26 "%0SpbDeviceInitialize() failed (0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnDeviceAdd
+{
+Status, ItemLong -- 10
+}
+#typev qcWdfSpidriver_c646 25 "%0WdfDeviceAssignS0IdleSettings() failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidriver_c625 16 "%0WdfDeviceCreate() failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidriver_c625 15 "%0WdfDeviceInitAssignSDDLString() failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidriver_c619 29 "%0WdfFdoInitWdmGetPhysicalDevice() failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnDeviceAdd
+{
+}
+#typev qcWdfSpidriver_c612 28 "%0SpbDeviceInitConfig failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidriver_c607 27 "%00x%10!p!, 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnDeviceAdd
+{
+Driver, ItemPtr -- 10
+DeviceInit, ItemPtr -- 11
+}
+#typev qcWdfSpidriver_c111 14 "%0void" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnDriverCleanup
+{
+}
+#typev qcWdfSpidriver_c110 13 "%00x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnDriverCleanup
+{
+Object, ItemPtr -- 10
+}

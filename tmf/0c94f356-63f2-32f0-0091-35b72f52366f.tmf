@@ -1,0 +1,77 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+0c94f356-63f2-32f0-0091-35b72f52366f WMRIL // SRC=WMRilGetDevCaps.cpp MJ= MN=
+#typev WMRilGetDevCaps_cpp120 11 "%0%!LEVEL! %!FUNC!:Unsupported Caps Type: %10!s!(0x%11!02X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DMS FUNC=WMRil::GetDevCapsClass::Execute
+{
+m_CapsType, ItemEnum(RILCAPSTYPE) -- 10
+m_CapsType, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetDevCaps_cpp71 10 "%0%!LEVEL! %!FUNC!:Caps Type = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::GetDevCapsClass::Execute
+{
+m_CapsType, ItemEnum(RILCAPSTYPE) -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetDevCaps_cpp189 14 "%0%!LEVEL! %!FUNC!:Call Support = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::GetDevCapsClass::GetCallSupport
+{
+dwCallSupport, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetDevCaps_cpp384 19 "%0%!LEVEL! %!FUNC!:Nitz = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::GetDevCapsClass::GetNitzImplementation
+{
+dwNitzCaps, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetDevCaps_cpp236 17 "%0%!LEVEL! %!FUNC!:PB MAX REC READ CAPS = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::GetDevCapsClass::GetPBMaxRead
+{
+dwPBCapsMaxRead, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetDevCaps_cpp221 16 "%0%!LEVEL! %!FUNC!:PB STORELOC CAPS = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::GetDevCapsClass::GetPBStoreLocations
+{
+dwPBCapsStoreLocations, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetDevCaps_cpp203 15 "%0%!LEVEL! %!FUNC!:SMS Support = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_DRIVER FUNC=WMRil::GetDevCapsClass::GetSMSSupport
+{
+dwSMSSupport, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetDevCaps_cpp252 18 "%0%!LEVEL! %!FUNC!:SQ CAPS = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::GetDevCapsClass::GetSQImplementation
+{
+dwSQCaps, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetDevCaps_cpp152 12 "%0%!LEVEL! %!FUNC!:Buffer size %10!u! != sizeof(DWORD)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DMS FUNC=WMRil::GetDevCapsClass::InitParams
+{
+dwBufferLength, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetDevCaps_cpp171 13 "%0%!LEVEL! %!FUNC!:Invalid Caps Type %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DMS FUNC=WMRil::GetDevCapsClass::ValidateParams
+{
+m_CapsType, ItemLong -- 10
+}
+#enumv RILCAPSTYPE
+{
+RIL_CAPSTYPE_PERSOLOCKSUPPORT,0x1
+RIL_CAPSTYPE_PERSOLOCKPWDLENGTH,0x2
+RIL_CAPSTYPE_PBMAXREAD,0x3
+RIL_CAPSTYPE_PBSTORELOCATIONS,0x4
+RIL_CAPSTYPE_RADIOCONFIGURATIONS,0x5
+RIL_CAPSTYPE_SIGNALQUALITYIMPLEMENTATION,0x6
+RIL_CAPSTYPE_NITZNOTIFICATION,0x7
+RIL_CAPSTYPE_CALLSUPPORT,0x9
+RIL_CAPSTYPE_SMSSUPPORT,0xA
+RIL_CAPSTYPE_ARG_SMALLEST,0x1
+RIL_CAPSTYPE_ARG_LARGEST,0xA
+RIL_CAPSTYPE_MAX,0xA
+}

@@ -1,0 +1,58 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+5949d85a-2f57-3537-63ea-0a0515bb9ce4 WMRIL // SRC=WMRilCallState.cpp MJ= MN=
+#typev WMRilCallState_cpp344 19 "%0%!LEVEL! %!FUNC!:Invalid %10!s! call state transition from %11!s! (%12!u!) to %13!s! (%14!u!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_CALL FUNC=WMRil::CallStateClass::GetStateTransitionEvent
+{
+Debug::QMIVoiceCallModeToStr(m_Mode), ItemWString -- 10
+Debug::WMRilCallStateToStr(m_LastState), ItemWString -- 11
+m_LastState, ItemLong -- 12
+Debug::WMRilCallStateToStr(m_State), ItemWString -- 13
+m_State, ItemLong -- 14
+}
+#typev WMRilCallState_cpp327 18 "%0%!LEVEL! %!FUNC!:Checking call state transition validity for service mode %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_CALL FUNC=WMRil::CallStateClass::GetStateTransitionEvent
+{
+m_Mode, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCallState_cpp159 13 "%0%!LEVEL! %!FUNC!:State %10!u! is an invalid call state!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::CallStateClass::Set
+{
+NewState, ItemLong -- 10
+}
+#typev WMRilCallState_cpp176 15 "%0%!LEVEL! %!FUNC!:Call %10!u! state is not changed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::CallStateClass::Set
+{
+dwRILCallID, ItemLong -- 10
+}
+#typev WMRilCallState_cpp167 14 "%0%!LEVEL! %!FUNC!:Call %10!u! state is changed from %11!s! to %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::CallStateClass::Set
+{
+dwRILCallID, ItemLong -- 10
+Debug::WMRilCallStateToStr(m_State), ItemWString -- 11
+Debug::WMRilCallStateToStr(NewState), ItemWString -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCallState_cpp123 10 "%0%!LEVEL! %!FUNC!:ModemCallState %10!u! is an invalid modem call state!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::CallStateClass::Set
+{
+ModemCallState, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilCallState_cpp120 16 "%0%!LEVEL! %!FUNC!:Invalid modem call state %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::CallStateClass::Set
+{
+ModemCallState, ItemLong -- 10
+}
+#typev WMRilCallState_cpp140 12 "%0%!LEVEL! %!FUNC!:Call %10!u! state is not changed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::CallStateClass::Set
+{
+dwRILCallID, ItemLong -- 10
+}
+#typev WMRilCallState_cpp131 11 "%0%!LEVEL! %!FUNC!:Call %10!u! state is changed from %11!s! to %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_CALL FUNC=WMRil::CallStateClass::Set
+{
+dwRILCallID, ItemLong -- 10
+Debug::WMRilCallStateToStr(m_State), ItemWString -- 11
+Debug::WMRilCallStateToStr(NewState), ItemWString -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilVoiceCall_cpp357 17 "%0%!LEVEL! %!FUNC!:CPI should not be unknown!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_CALL FUNC=WMRil::VoiceCallClass::GetCPIStatus
+{
+}

@@ -1,0 +1,27 @@
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+46e24b11-36bc-3408-63b4-64094e1e3565 src // SRC=acdb.c MJ= MN=
+#typev acdb_c1816 14 "%0Received Bad Params for command request with cmd id %10!08X! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ACDB_ERROR FUNC=acdb_ioctl
+{
+nCommandId, ItemLong -- 10
+}
+#typev acdb_c1820 15 "%0Received command request with cmd id %10!08X! with insufficient memory" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ACDB_ERROR FUNC=acdb_ioctl
+{
+nCommandId, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev acdb_c1775 12 "%0Output from GetMetaInfoSize command : %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ACDB_ERROR FUNC=acdb_ioctl
+{
+pOutput->nSize, ItemLong -- 10
+}
+#typev acdb_c1795 13 "%0Bytes copied in output buffer from GetMetaInfo command : %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ACDB_ERROR FUNC=acdb_ioctl
+{
+pOutput->nBytesUsedInBuffer, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev acdb_c402 10 "%0Received unsupported command request with cmd id %10!08X! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ACDB_ERROR FUNC=acdb_ioctl_codec
+{
+nCommandId, ItemLong -- 10
+}

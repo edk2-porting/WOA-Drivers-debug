@@ -1,0 +1,322 @@
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+1a571469-5c85-3bc6-d556-eb3dbb51e02a wifinotifiersrvc // SRC=WlanInfo.c MJ= MN=
+#typev WlanInfo_c109 23 "%0%!FUNC!:: LUID: %10!I64u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+pWifiInfo->Luid.Value, ItemULongLong -- 10
+}
+#typev WlanInfo_c104 22 "%0%!FUNC!:: Interface Index IPv6: %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+pWifiInfo->IfIndexv6, ItemLong -- 10
+}
+#typev WlanInfo_c99 21 "%0%!FUNC!:: Interface Index IPv4: %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+pWifiInfo->IfIndexv4, ItemLong -- 10
+}
+#typev WlanInfo_c92 20 "%0%!FUNC!:: IPv6 Mac Address: %10!02X!-%11!02X!-%12!02X!-%13!02X!-%14!02X!-%15!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+pWifiInfo->GatewayIPv6MacAddress[0], ItemLong -- 10
+pWifiInfo->GatewayIPv6MacAddress[1], ItemLong -- 11
+pWifiInfo->GatewayIPv6MacAddress[2], ItemLong -- 12
+pWifiInfo->GatewayIPv6MacAddress[3], ItemLong -- 13
+pWifiInfo->GatewayIPv6MacAddress[4], ItemLong -- 14
+pWifiInfo->GatewayIPv6MacAddress[5], ItemLong -- 15
+}
+#typev WlanInfo_c80 19 "%0%!FUNC!:: IPv4 Gateway Mac Address: %10!02X!-%11!02X!-%12!02X!-%13!02X!-%14!02X!-%15!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+pWifiInfo->GatewayIPv4MacAddress[0], ItemLong -- 10
+pWifiInfo->GatewayIPv4MacAddress[1], ItemLong -- 11
+pWifiInfo->GatewayIPv4MacAddress[2], ItemLong -- 12
+pWifiInfo->GatewayIPv4MacAddress[3], ItemLong -- 13
+pWifiInfo->GatewayIPv4MacAddress[4], ItemLong -- 14
+pWifiInfo->GatewayIPv4MacAddress[5], ItemLong -- 15
+}
+#typev WlanInfo_c75 18 "%0%!FUNC!:: GatewayIPv4: %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+ntohl(pWifiInfo->GatewayIPv4.IP_Addr.IPv4), ItemIPAddr -- 10
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WlanInfo_c67 17 "%0%!FUNC!:: bSSIDValid = %10!d!, nSSID = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+pWifiInfo->bBSSIDValid, ItemLong -- 10
+pWifiInfo->nSSID, ItemLong -- 11
+}
+#typev WlanInfo_c61 16 "%0%!FUNC!:: bBSSIDValid = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+pWifiInfo->bBSSIDValid, ItemLong -- 10
+}
+#typev WlanInfo_c54 15 "%0%!FUNC!:: nWifiIPv6DNSAddress = %10!d!, bWifiIPv6DNSAddressValid = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+pWifiInfo->nWifiIPv6DNSAddress, ItemLong -- 10
+pWifiInfo->bWifiIPv6DNSAddressValid, ItemLong -- 11
+}
+#typev WlanInfo_c51 14 "%0%!FUNC!:: WifiIPv4DNSAddress[1]: %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+ntohl(pWifiInfo->WifiIPv4DNSAddresses[1].IP_Addr.IPv4), ItemIPAddr -- 10
+}
+#typev WlanInfo_c50 13 "%0%!FUNC!:: WifiIPv4DNSAddress[0]: %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+ntohl(pWifiInfo->WifiIPv4DNSAddresses[0].IP_Addr.IPv4), ItemIPAddr -- 10
+}
+#typev WlanInfo_c47 12 "%0%!FUNC!:: nWifiIPv4DNSAddress = %10!d!, bWifiIPv4DNSAddressValid = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+pWifiInfo->nWifiIPv4DNSAddress, ItemLong -- 10
+pWifiInfo->bWifiIPv4DNSAddressValid, ItemLong -- 11
+}
+#typev WlanInfo_c41 11 "%0%!FUNC!:: bWiFiIPv6Valid = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+pWifiInfo->bWiFiIPv6Valid, ItemLong -- 10
+}
+#typev WlanInfo_c39 10 "%0%!FUNC!:: bWiFiIPv4Valid = %10!d!. Wi-Fi IP Address: %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoDumpWifiInfo
+{
+pWifiInfo->bWiFiIPv4Valid, ItemLong -- 10
+ntohl(pWifiInfo->WiFiIPv4.IP_Addr.IPv4), ItemIPAddr -- 11
+}
+#typev WlanInfo_c176 28 "%0%!FUNC!:: ERROR:: malloc fail" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInfoGetIPAddressInfo
+{
+}
+#typev WlanInfo_c330 27 "%0%!FUNC!:: WifiIPv6DNSAddresses[%10!d!] already has the address." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoGetIPAddressInfo
+{
+count, ItemLong -- 10
+}
+#typev WlanInfo_c330 26 "%0%!FUNC!:: Duplicate DNS address detected." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoGetIPAddressInfo
+{
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WlanInfo_c269 32 "%0%!FUNC!:: IPv4 Gateway Address: %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInfoGetIPAddressInfo
+{
+ntohl(pWifiInformation->GatewayIPv4.IP_Addr.IPv4), ItemIPAddr -- 10
+}
+#typev WlanInfo_c241 25 "%0%!FUNC!:: WifiIPv4DNSAddresses[%10!d!] already has the address." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoGetIPAddressInfo
+{
+count, ItemLong -- 10
+}
+#typev WlanInfo_c241 24 "%0%!FUNC!:: Duplicate DNS address detected." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoGetIPAddressInfo
+{
+}
+#typev WlanInfo_c243 31 "%0%!FUNC!:: Found valid Wi-Fi DNS address[%10!d!]: %11!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInfoGetIPAddressInfo
+{
+DNSCount, ItemLong -- 10
+ntohl(IPAddr.IP_Addr.IPv4), ItemIPAddr -- 11
+}
+#typev WlanInfo_c226 30 "%0%!FUNC!:: Found valid Wi-Fi IP address: %10!s!. LUID = %11!I64u!, IfIndex = %12!I64u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInfoGetIPAddressInfo
+{
+ntohl(pWifiInformation->WiFiIPv4.IP_Addr.IPv4), ItemIPAddr -- 10
+pWifiInformation->Luid.Value, ItemULongLong -- 11
+pWifiInformation->IfIndexv4, ItemULongLong -- 12
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WlanInfo_c289 33 "%0%!FUNC!:: Invalid Wi-Fi IP address: %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInfoGetIPAddressInfo
+{
+pTempIPv4Address->sin_addr.S_un.S_addr, ItemIPAddr -- 10
+}
+#typev WlanInfo_c196 29 "%0%!FUNC!:: dwRetVal = %10!u!. IP Family = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInfoGetIPAddressInfo
+{
+dwRetVal, ItemLong -- 10
+Family, ItemLong -- 11
+}
+#typev WlanInfo_c474 36 "%0%!FUNC!:: ERROR: WlanQueryInterface failed with error: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInfoGetSSIDAndBSSIDInfo
+{
+dwResult, ItemLong -- 10
+}
+#typev WlanInfo_c519 38 "%0%!FUNC!:: bBSSIDValid = %10!d!, bSSIDValid = %11!d!. Status = %12!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInfoGetSSIDAndBSSIDInfo
+{
+pWifiInformation->bBSSIDValid, ItemLong -- 10
+pWifiInformation->bSSIDValid, ItemLong -- 11
+dwResult, ItemLong -- 12
+}
+#typev WlanInfo_c507 37 "%0%!FUNC!:: ERROR: WlanCloseHandle failed with error: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInfoGetSSIDAndBSSIDInfo
+{
+dwResult, ItemLong -- 10
+}
+#typev WlanInfo_c443 35 "%0%!FUNC!:: ERROR: WlanOpenHandle failed with error: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInfoGetSSIDAndBSSIDInfo
+{
+dwResult, ItemLong -- 10
+}
+#typev WlanInfo_c436 34 "%0%!FUNC!:: ERROR: pWifiInformation == NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInfoGetSSIDAndBSSIDInfo
+{
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WlanInterfaceChangeNotification_c101 23 "%0%!FUNC!:: LUID: %10!I64u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->Luid.Value, ItemULongLong -- 10
+}
+#typev WlanInterfaceChangeNotification_c101 22 "%0%!FUNC!:: Interface Index IPv6: %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->IfIndexv6, ItemLong -- 10
+}
+#typev WlanInterfaceChangeNotification_c101 21 "%0%!FUNC!:: Interface Index IPv4: %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->IfIndexv4, ItemLong -- 10
+}
+#typev WlanInterfaceChangeNotification_c101 20 "%0%!FUNC!:: IPv6 Mac Address: %10!02X!-%11!02X!-%12!02X!-%13!02X!-%14!02X!-%15!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->GatewayIPv6MacAddress[0], ItemLong -- 10
+pWifiInfo->GatewayIPv6MacAddress[1], ItemLong -- 11
+pWifiInfo->GatewayIPv6MacAddress[2], ItemLong -- 12
+pWifiInfo->GatewayIPv6MacAddress[3], ItemLong -- 13
+pWifiInfo->GatewayIPv6MacAddress[4], ItemLong -- 14
+pWifiInfo->GatewayIPv6MacAddress[5], ItemLong -- 15
+}
+#typev WlanInterfaceChangeNotification_c101 19 "%0%!FUNC!:: IPv4 Gateway Mac Address: %10!02X!-%11!02X!-%12!02X!-%13!02X!-%14!02X!-%15!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->GatewayIPv4MacAddress[0], ItemLong -- 10
+pWifiInfo->GatewayIPv4MacAddress[1], ItemLong -- 11
+pWifiInfo->GatewayIPv4MacAddress[2], ItemLong -- 12
+pWifiInfo->GatewayIPv4MacAddress[3], ItemLong -- 13
+pWifiInfo->GatewayIPv4MacAddress[4], ItemLong -- 14
+pWifiInfo->GatewayIPv4MacAddress[5], ItemLong -- 15
+}
+#typev WlanInterfaceChangeNotification_c101 18 "%0%!FUNC!:: GatewayIPv4: %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+ntohl(pWifiInfo->GatewayIPv4.IP_Addr.IPv4), ItemIPAddr -- 10
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WlanInterfaceChangeNotification_c101 17 "%0%!FUNC!:: bSSIDValid = %10!d!, nSSID = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->bBSSIDValid, ItemLong -- 10
+pWifiInfo->nSSID, ItemLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c101 16 "%0%!FUNC!:: bBSSIDValid = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->bBSSIDValid, ItemLong -- 10
+}
+#typev WlanInterfaceChangeNotification_c101 15 "%0%!FUNC!:: nWifiIPv6DNSAddress = %10!d!, bWifiIPv6DNSAddressValid = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->nWifiIPv6DNSAddress, ItemLong -- 10
+pWifiInfo->bWifiIPv6DNSAddressValid, ItemLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c101 14 "%0%!FUNC!:: WifiIPv4DNSAddress[1]: %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+ntohl(pWifiInfo->WifiIPv4DNSAddresses[1].IP_Addr.IPv4), ItemIPAddr -- 10
+}
+#typev WlanInterfaceChangeNotification_c101 13 "%0%!FUNC!:: WifiIPv4DNSAddress[0]: %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+ntohl(pWifiInfo->WifiIPv4DNSAddresses[0].IP_Addr.IPv4), ItemIPAddr -- 10
+}
+#typev WlanInterfaceChangeNotification_c101 12 "%0%!FUNC!:: nWifiIPv4DNSAddress = %10!d!, bWifiIPv4DNSAddressValid = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->nWifiIPv4DNSAddress, ItemLong -- 10
+pWifiInfo->bWifiIPv4DNSAddressValid, ItemLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c101 11 "%0%!FUNC!:: bWiFiIPv6Valid = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->bWiFiIPv6Valid, ItemLong -- 10
+}
+#typev WlanInterfaceChangeNotification_c101 10 "%0%!FUNC!:: bWiFiIPv4Valid = %10!d!. Wi-Fi IP Address: %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->bWiFiIPv4Valid, ItemLong -- 10
+ntohl(pWifiInfo->WiFiIPv4.IP_Addr.IPv4), ItemIPAddr -- 11
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WlanInterfaceChangeNotification_c95 23 "%0%!FUNC!:: LUID: %10!I64u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->Luid.Value, ItemULongLong -- 10
+}
+#typev WlanInterfaceChangeNotification_c95 22 "%0%!FUNC!:: Interface Index IPv6: %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->IfIndexv6, ItemLong -- 10
+}
+#typev WlanInterfaceChangeNotification_c95 21 "%0%!FUNC!:: Interface Index IPv4: %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->IfIndexv4, ItemLong -- 10
+}
+#typev WlanInterfaceChangeNotification_c95 20 "%0%!FUNC!:: IPv6 Mac Address: %10!02X!-%11!02X!-%12!02X!-%13!02X!-%14!02X!-%15!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->GatewayIPv6MacAddress[0], ItemLong -- 10
+pWifiInfo->GatewayIPv6MacAddress[1], ItemLong -- 11
+pWifiInfo->GatewayIPv6MacAddress[2], ItemLong -- 12
+pWifiInfo->GatewayIPv6MacAddress[3], ItemLong -- 13
+pWifiInfo->GatewayIPv6MacAddress[4], ItemLong -- 14
+pWifiInfo->GatewayIPv6MacAddress[5], ItemLong -- 15
+}
+#typev WlanInterfaceChangeNotification_c95 19 "%0%!FUNC!:: IPv4 Gateway Mac Address: %10!02X!-%11!02X!-%12!02X!-%13!02X!-%14!02X!-%15!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->GatewayIPv4MacAddress[0], ItemLong -- 10
+pWifiInfo->GatewayIPv4MacAddress[1], ItemLong -- 11
+pWifiInfo->GatewayIPv4MacAddress[2], ItemLong -- 12
+pWifiInfo->GatewayIPv4MacAddress[3], ItemLong -- 13
+pWifiInfo->GatewayIPv4MacAddress[4], ItemLong -- 14
+pWifiInfo->GatewayIPv4MacAddress[5], ItemLong -- 15
+}
+#typev WlanInterfaceChangeNotification_c95 18 "%0%!FUNC!:: GatewayIPv4: %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+ntohl(pWifiInfo->GatewayIPv4.IP_Addr.IPv4), ItemIPAddr -- 10
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WlanInterfaceChangeNotification_c95 17 "%0%!FUNC!:: bSSIDValid = %10!d!, nSSID = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->bBSSIDValid, ItemLong -- 10
+pWifiInfo->nSSID, ItemLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c95 16 "%0%!FUNC!:: bBSSIDValid = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->bBSSIDValid, ItemLong -- 10
+}
+#typev WlanInterfaceChangeNotification_c95 15 "%0%!FUNC!:: nWifiIPv6DNSAddress = %10!d!, bWifiIPv6DNSAddressValid = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->nWifiIPv6DNSAddress, ItemLong -- 10
+pWifiInfo->bWifiIPv6DNSAddressValid, ItemLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c95 14 "%0%!FUNC!:: WifiIPv4DNSAddress[1]: %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+ntohl(pWifiInfo->WifiIPv4DNSAddresses[1].IP_Addr.IPv4), ItemIPAddr -- 10
+}
+#typev WlanInterfaceChangeNotification_c95 13 "%0%!FUNC!:: WifiIPv4DNSAddress[0]: %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+ntohl(pWifiInfo->WifiIPv4DNSAddresses[0].IP_Addr.IPv4), ItemIPAddr -- 10
+}
+#typev WlanInterfaceChangeNotification_c95 12 "%0%!FUNC!:: nWifiIPv4DNSAddress = %10!d!, bWifiIPv4DNSAddressValid = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->nWifiIPv4DNSAddress, ItemLong -- 10
+pWifiInfo->bWifiIPv4DNSAddressValid, ItemLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c95 11 "%0%!FUNC!:: bWiFiIPv6Valid = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->bWiFiIPv6Valid, ItemLong -- 10
+}
+#typev WlanInterfaceChangeNotification_c95 10 "%0%!FUNC!:: bWiFiIPv4Valid = %10!d!. Wi-Fi IP Address: %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInfo->bWiFiIPv4Valid, ItemLong -- 10
+ntohl(pWifiInfo->WiFiIPv4.IP_Addr.IPv4), ItemIPAddr -- 11
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WlanInterfaceChangeNotification_c92 39 "%0%!FUNC!:: bWiFiIPv4Valid = %10!d!, bWifiIPv4DNSAddressValid = %11!d!, bWiFiIPv6Valid = %12!d!, bWifiIPv6DNSAddressValid = %13!d!, bBSSIDValid = %14!d!, bSSIDValid = %15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanProcessNotification
+{
+pWifiInformation->bWiFiIPv4Valid, ItemLong -- 10
+pWifiInformation->bWifiIPv4DNSAddressValid, ItemLong -- 11
+pWifiInformation->bWiFiIPv6Valid, ItemLong -- 12
+pWifiInformation->bWifiIPv6DNSAddressValid, ItemLong -- 13
+pWifiInformation->bBSSIDValid, ItemLong -- 14
+pWifiInformation->bSSIDValid, ItemLong -- 15
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WNDSDQmi_c616 39 "%0%!FUNC!:: bWiFiIPv4Valid = %10!d!, bWifiIPv4DNSAddressValid = %11!d!, bWiFiIPv6Valid = %12!d!, bWifiIPv6DNSAddressValid = %13!d!, bBSSIDValid = %14!d!, bSSIDValid = %15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WNDSD_NatKeepAliveIndication
+{
+pWifiInformation->bWiFiIPv4Valid, ItemLong -- 10
+pWifiInformation->bWifiIPv4DNSAddressValid, ItemLong -- 11
+pWifiInformation->bWiFiIPv6Valid, ItemLong -- 12
+pWifiInformation->bWifiIPv6DNSAddressValid, ItemLong -- 13
+pWifiInformation->bBSSIDValid, ItemLong -- 14
+pWifiInformation->bSSIDValid, ItemLong -- 15
+}
+// PDB:  wifinotifiersrvc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WNServiceHandler_c71 39 "%0%!FUNC!:: bWiFiIPv4Valid = %10!d!, bWifiIPv4DNSAddressValid = %11!d!, bWiFiIPv6Valid = %12!d!, bWifiIPv6DNSAddressValid = %13!d!, bBSSIDValid = %14!d!, bSSIDValid = %15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WNServiceQueryWifiStatusAndNotifyModem
+{
+pWifiInformation->bWiFiIPv4Valid, ItemLong -- 10
+pWifiInformation->bWifiIPv4DNSAddressValid, ItemLong -- 11
+pWifiInformation->bWiFiIPv6Valid, ItemLong -- 12
+pWifiInformation->bWifiIPv6DNSAddressValid, ItemLong -- 13
+pWifiInformation->bBSSIDValid, ItemLong -- 14
+pWifiInformation->bSSIDValid, ItemLong -- 15
+}

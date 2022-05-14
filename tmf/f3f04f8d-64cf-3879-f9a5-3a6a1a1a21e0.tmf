@@ -1,0 +1,95 @@
+// PDB:  qcadsprpc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+f3f04f8d-64cf-3879-f9a5-3a6a1a1a21e0 driver // SRC=driver.c MJ= MN=
+#typev driver_c122 11 "%0WdfDriverCreate failed with status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=DriverEntry
+{
+status, ItemLong -- 10
+}
+#typev driver_c114 10 "%0FastRPC DriverEntry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=DriverEntry
+{
+}
+// PDB:  qcadsprpc850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev driver_c470 21 "%0FastRPC D0Entry failed with status:%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_POWER FUNC=FastRPCDriverD0Entry
+{
+status, ItemLong -- 10
+}
+#typev driver_c463 20 "%0FastRPC Previous State:0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_POWER FUNC=FastRPCDriverD0Entry
+{
+State, ItemLong -- 10
+}
+#typev driver_c454 19 "%0FastRPC D0Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_POWER FUNC=FastRPCDriverD0Entry
+{
+}
+#typev driver_c433 17 "%0FastRPC Target State:0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_POWER FUNC=FastRPCDriverD0Exit
+{
+State, ItemLong -- 10
+}
+#typev driver_c441 18 "%0FastRPC D0Exit failed with status:%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_POWER FUNC=FastRPCDriverD0Exit
+{
+status, ItemLong -- 10
+}
+#typev driver_c422 16 "%0FastRPC Target State:0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_POWER FUNC=FastRPCDriverD0Exit
+{
+State, ItemLong -- 10
+}
+#typev driver_c420 15 "%0FastRPC D0Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_POWER FUNC=FastRPCDriverD0Exit
+{
+}
+#typev driver_c346 13 "%0FastRPC DeviceAdd failed with status:0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=FastRPCEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev driver_c185 12 "%0FastRPC DeviAdd" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=FastRPCEvtDeviceAdd
+{
+}
+#typev driver_c2640 32 "%0FastRPC fl:0x%10!p! already cleaned" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_FILE FUNC=FastRPCEvtDeviceFileCleanup
+{
+fileContext, ItemPtr -- 10
+}
+#typev driver_c2637 31 "%0FastRPC File Cleanup fl:0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_FILE FUNC=FastRPCEvtDeviceFileCleanup
+{
+fileContext, ItemPtr -- 10
+}
+#typev driver_c2687 33 "%0FastRPC File Close fl:0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_FILE FUNC=FastRPCEvtDeviceFileClose
+{
+fileContext, ItemPtr -- 10
+}
+#typev driver_c2606 30 "%0FastRPC File Open failed for file:0x%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_FILE FUNC=FastRPCEvtDeviceFileCreate
+{
+fileContext, ItemPtr -- 10
+}
+#typev driver_c2582 29 "%0FastRPC Channel cid:%10!d! opened by file:0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_FILE FUNC=FastRPCEvtDeviceFileCreate
+{
+cid, ItemLong -- 10
+fileContext, ItemPtr -- 11
+}
+#typev driver_c2558 28 "%0FastRPC File Open" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_FILE FUNC=FastRPCEvtDeviceFileCreate
+{
+}
+#typev driver_c2107 27 "%0FastRPC nRet = %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_GLINK FUNC=FastRPCEvtIoDeviceControl
+{
+reqContext->nRet, ItemLong -- 10
+}
+#typev driver_c2028 26 "%0FastRPC Invocation has been alerted for reqContext:%10!p! belonging to file:%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_FILE FUNC=FastRPCEvtIoDeviceControl
+{
+reqContext, ItemPtr -- 10
+fileContext, ItemPtr -- 11
+}
+#typev driver_c2004 25 "%0FastRPC Notifying all contexts to wakeup for file:0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_FILE FUNC=FastRPCEvtIoDeviceControl
+{
+fileContext, ItemPtr -- 10
+}
+#typev driver_c493 24 "%0FastRPC PowerActionHibernate" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_POWER FUNC=FastRPCEvtWdmIrpPreprocess
+{
+}
+#typev driver_c488 23 "%0FastRPC PowerActionShutdown" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_POWER FUNC=FastRPCEvtWdmIrpPreprocess
+{
+}
+#typev driver_c485 22 "%0FastRPC Received IrpPreProcess Callback" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_POWER FUNC=FastRPCEvtWdmIrpPreprocess
+{
+}
+#typev driver_c390 14 "%0FastRPC Received SSR Notfication for cid:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SSR FUNC=OnRpeNotification
+{
+cid, ItemLong -- 10
+}

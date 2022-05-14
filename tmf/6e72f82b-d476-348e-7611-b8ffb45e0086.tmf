@@ -1,0 +1,870 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+6e72f82b-d476-348e-7611-b8ffb45e0086 MBB // SRC=MPNASQmi.c MJ= MN=
+#typev MPOID_c4285 161 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_HandleWWANVisibleProviders
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPOID_c4285 160 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_HandleWWANVisibleProviders
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPOID_c4285 159 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_HandleWWANVisibleProviders
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPNASQmi_c1180 39 "%0%!FUNC!: Received roam_status = [%10!u!] , converted RI = [%11!u!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ConvertRoamStatusToRI
+{
+roam_status, ItemLong -- 10
+RI, ItemLong -- 11
+}
+#typev MPNASQmi_c822 15 "%0<%10!s!|sub#%11!d!> %!FUNC!: WwanRegisterState=%12!d!, srv_status=%13!d!, srv_domain=%14!d!, roam_status=%15!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=GetWwanRegState
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+WwanRegisterState, ItemLong -- 12
+srv_status, ItemLong -- 13
+srv_domain, ItemLong -- 14
+roam_status, ItemLong -- 15
+}
+#typev MPNASQmi_c1995 69 "%0<%10!s!|sub#%11!d!> %!FUNC!: isDDS=%12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+MPQMI_IsDDS (MPSubPhoneInfo_GetNasClient (pAdapter->pSubPhoneInfo)), ItemLong -- 12
+}
+#typev MPNASQmi_c1987 68 "%0<%10!s!|sub#%11!d!> %!FUNC!: RegisterState = 0x%12!x!, AvailableDataClass = 0x%13!x!, uNwError = 0x%14!x!, ProviderID = %15!s! DTMSupport (ignore if n/w not G/E) = %16!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+NdisRegisterState.RegistrationState.RegisterState, ItemLong -- 12
+WwanServingState.PacketService.AvailableDataClass, ItemLong -- 13
+WwanServingState.PacketService.uNwError, ItemLong -- 14
+NdisRegisterState.RegistrationState.ProviderId, ItemWString -- 15
+isDTMSupported, ItemLong -- 16
+}
+#typev MPNASQmi_c1974 67 "%0<%10!s!|sub#%11!d!> %!FUNC!: Before ORing, AvailableDataClass = 0x%12!x!, CurrentDataClass = 0x%13!x! , NASCurrentDataClass = 0x%14!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+WwanServingState.PacketService.AvailableDataClass, ItemLong -- 12
+WwanServingState.PacketService.CurrentDataClass, ItemLong -- 13
+pNasQmiClient->nCurrentDataClass, ItemLong -- 14
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPNASQmi_c1955 66 "%0<%10!s!|sub#%11!d!> %!FUNC!: NwError=%12!d!, RegisterState=0x%13!x!, RegisterMode=0x%14!x! ProviderId=%15!s!, ProviderName=%16!s!, RoamingText=%17!s!, WwanRegFlags=0x%18!x!, CurrentCellularClass=0x%19!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+NdisRegisterState.RegistrationState.uNwError, ItemLong -- 12
+NdisRegisterState.RegistrationState.RegisterState, ItemLong -- 13
+NdisRegisterState.RegistrationState.RegisterMode, ItemLong -- 14
+NdisRegisterState.RegistrationState.ProviderId, ItemWString -- 15
+NdisRegisterState.RegistrationState.ProviderName, ItemWString -- 16
+NdisRegisterState.RegistrationState.RoamingText, ItemWString -- 17
+NdisRegisterState.RegistrationState.WwanRegFlags, ItemLong -- 18
+NdisRegisterState.RegistrationState.CurrentCellularClass, ItemLong -- 19
+}
+#typev MPNASQmi_c1947 65 "%0<%10!s!|sub#%11!d!> %!FUNC!: uNwError=%12!d!, PacketServiceState=0x%13!x!, AvailableDataClass=0x%14!x! CurrentDataClass=0x%15!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+WwanServingState.PacketService.uNwError, ItemLong -- 12
+WwanServingState.PacketService.PacketServiceState, ItemLong -- 13
+WwanServingState.PacketService.AvailableDataClass, ItemLong -- 14
+WwanServingState.PacketService.CurrentDataClass, ItemLong -- 15
+}
+#typev MPNASQmi_c1918 64 "%0%!FUNC!: Non-HDR block." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+}
+#typev MPNASQmi_c1911 63 "%0%!FUNC!: Catching netCodeArray access Out of Bounds ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+}
+#typev MPNASQmi_c1894 62 "%0%!FUNC!: HDR block." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+}
+#typev MPNASQmi_c1858 61 "%0%!FUNC!: is1x = %10!s!, isEHRPD = %11!s!, isHDRRoam = %12!s!, index = %13!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+is1x, ItemListLong(false,true) -- 10
+isEHRPD, ItemListLong(false,true) -- 11
+isHDRRoam, ItemListLong(false,true) -- 12
+index, ItemLong -- 13
+}
+#typev MPNASQmi_c1849 60 "%0Forcing packet service as attached (0x%10!x!) when in HDR roam and DataClass = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+WwanServingState.PacketService.PacketServiceState, ItemLong -- 10
+WwanServingState.PacketService.CurrentDataClass, ItemLong -- 11
+}
+#typev MPNASQmi_c1752 57 "%0<%10!s!|sub#%11!d!>%!FUNC!: Valid wcdma network id found in wcdma_sys_info mcc = [%12!d!] mnc = [%13!d!]." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+netCodeArray[index].mcc, ItemLong -- 12
+netCodeArray[index].mnc, ItemLong -- 13
+}
+#typev MPNASQmi_c1628 56 "%0<%10!s!|sub#%11!d!>%!FUNC!: TDSCDMA system is valid." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1622 55 "%0<%10!s!|sub#%11!d!>%!FUNC!: Valid wcdma network id found in wcdma_sys_info mcc = [%12!d!] mnc = [%13!d!]." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+netCodeArray[index].mcc, ItemLong -- 12
+netCodeArray[index].mnc, ItemLong -- 13
+}
+#typev MPNASQmi_c1510 54 "%0<%10!s!|sub#%11!d!>%!FUNC!: WCDMA system is valid." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1822 59 "%0<%10!s!|sub#%11!d!>%!FUNC!: Valid lte network id found in lte_sys_info mcc = [%12!d!] mnc = [%13!d!]." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+netCodeArray[index].mcc, ItemLong -- 12
+netCodeArray[index].mnc, ItemLong -- 13
+}
+#typev MPNASQmi_c1758 58 "%0<%10!s!|sub#%11!d!>%!FUNC!: LTE system is valid." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1504 53 "%0<%10!s!|sub#%11!d!>%!FUNC!: Valid gsm network id found in gsm_sys_info mcc = [%12!d!] mnc = [%13!d!]." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+netCodeArray[index].mcc, ItemLong -- 12
+netCodeArray[index].mnc, ItemLong -- 13
+}
+#typev MPNASQmi_c1419 52 "%0<%10!s!|sub#%11!d!>%!FUNC!: GSM system is valid." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1405 51 "%0<%10!s!|sub#%11!d!>%!FUNC!: is an EHRPD system." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1394 50 "%0<%10!s!>%!FUNC!: HDR+1xRTT system, updating with the CDMA value." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPNASQmi_c1385 49 "%0<%10!s!>%!FUNC!: No ERI algorithm defined, using the HDR roam status value as is %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+hdr_sys_info.common_sys_info.roam_status, ItemLong -- 11
+}
+#typev MPNASQmi_c1380 48 "%0<%10!s!>%!FUNC!: ERI algorithm defined, using the HDR ConvertRoamStatusToRI value." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPNASQmi_c1368 47 "%0<%10!s!>%!FUNC!: hdr_sys_info.hdr_specific_sys_info.hdr_active_prot = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+hdr_sys_info.hdr_specific_sys_info.hdr_active_prot, ItemLong -- 11
+}
+#typev MPNASQmi_c1347 46 "%0<%10!s!>%!FUNC!: hdr_sys_info.hdr_specific_sys_info.hdr_active_prot = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+hdr_sys_info.hdr_specific_sys_info.hdr_active_prot, ItemLong -- 11
+}
+#typev MPNASQmi_c1324 45 "%0<%10!s!|sub#%11!d!>%!FUNC!: HDR system is valid." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1313 44 "%0<%10!s!>%!FUNC!: No ERI algorithm defined, using the CDMA roam status value as is %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+cdma_sys_info.common_sys_info.roam_status, ItemLong -- 11
+}
+#typev MPNASQmi_c1308 43 "%0<%10!s!>%!FUNC!: ERI algorithm defined, using ConvertRoamStatusToRI value." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPNASQmi_c1281 42 "%0<%10!s!|sub#%11!d!>%!FUNC!: 1XRTT system is valid." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1270 41 "%0<%10!s!|sub#%11!d!>%!FUNC!: 1xRTT sys info is valid. sid = [%12!d!] nid = [%13!d!]." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+netCodeArray[index].sid, ItemLong -- 12
+netCodeArray[index].nid, ItemLong -- 13
+}
+#typev MPNASQmi_c1231 40 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSysInfo
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c934 21 "%0<%10!s!|sub#%11!d!> %!FUNC!: indicationId = %12!d! isHome = %13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IsERIHomeSystem
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+indicationId, ItemLong -- 12
+retVal, ItemLong -- 13
+}
+#typev MPNASQmi_c907 20 "%0<%10!s!|sub#%11!d!> %!FUNC!: indicationId = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IsERIHomeSystem
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+indicationId, ItemLong -- 12
+}
+#typev MPNASQmi_c890 19 "%0<%10!s!|sub#%11!d!> %!FUNC!: indicationId = %12!d! found in Sprint Intl Roaming ERI table." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IsERISprintIntlRoamingSystem
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+indicationId, ItemLong -- 12
+}
+#typev MPNASQmi_c879 18 "%0<%10!s!|sub#%11!d!> %!FUNC!: indicationId = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IsERISprintIntlRoamingSystem
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+indicationId, ItemLong -- 12
+}
+#typev MPNASQmi_c4071 162 "%0%!FUNC!: ERROR, received pNasClient=NULL!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPNASQMI_IsEHRPD
+{
+}
+#typev MPNASQmi_c268 11 "%0%!FUNC!: Invalid parm: pnReqLen %10!p!, pnRespLen %11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQCCI_GetNASRequestInfo
+{
+pnReqLen, ItemPtr -- 10
+pnRespLen, ItemPtr -- 11
+}
+#typev MPNASQmi_c399 12 "%0%!FUNC!: 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQCCI_GetNASRequestInfo
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPNASQmi_c263 10 "%0%!FUNC!: MsgId 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQCCI_GetNASRequestInfo
+{
+uMsgId, ItemLong -- 10
+}
+#typev MPNASQmi_c4236 169 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_CleanNasClientContext
+{
+subId, ItemLong -- 10
+}
+#typev MPNASQmi_c2491 106 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeNasGetPLMNReqSend
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPNASQmi_c2475 105 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeNasGetPLMNReqSend
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2467 104 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeNasGetPLMNReqSend
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2461 103 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeNasGetPLMNReqSend
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2244 92 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeNasLimitSysInfoIndReportingReqSend
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2233 91 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeNasLimitSysInfoIndReportingReqSend
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2221 90 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeNasLimitSysInfoIndReportingReqSend
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2216 89 "%0<%10!s!|sub#%11!d!>%!FUNC!: limitMask = 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeNasLimitSysInfoIndReportingReqSend
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+(UINT)limitMask, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPNASQmi_c2417 102 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeNasSetEventReportReqSend
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2410 101 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeNasSetEventReportReqSend
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2405 100 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeNasSetEventReportReqSend
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c4207 168 "%0<%10!s!|sub#%11!d!>%!FUNC!: status= %12!s! (0x%13!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+ntStatus, ItemNTSTATUS -- 12
+ntStatus, ItemLong -- 13
+}
+#typev MPNASQmi_c4205 76 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPNASQmi_c4205 75 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c4205 74 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c4196 167 "%0<%10!s!|sub#%11!d!>%!FUNC!: MPQMI_SendNasBindSubscriptionReq FAILED." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPNASQmi_c4192 73 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPNASQmi_c4192 72 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c4192 71 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c4192 70 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c4185 166 "%0<%10!s!|sub#%11!d!>%!FUNC!: MPQCCI_InitClientFromServiceObj FAILED." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPNASQmi_c4174 165 "%0<%10!s!|sub#%11!d!> %!FUNC!: WdfWaitLockCreate FAILED, status=0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPNASQmi_c4154 164 "%0<%10!s!|sub#%11!d!> %!FUNC!: ExAllocatePoolWithTag FAILED" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPNASQmi_c4145 163 "%0<sub#%10!d!> %!FUNC!:: HALTEX in progress." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitNasClient
+{
+subscriptionId, ItemLong -- 10
+}
+#typev MPNASQmi_c3872 158 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_NASSendGetHomeNetwork
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPNASQmi_c3859 157 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_NASSendGetHomeNetwork
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c3854 156 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_NASSendGetHomeNetwork
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c561 14 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c545 121 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, MPQCCI_DecodeIndication returned unsuccessful status!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c545 120 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c550 142 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, MPQCCI_DecodeIndication returned unsuccessful status!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c550 141 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c540 135 "%0<%10!s!|sub#%11!d!> %!FUNC!: standby_pref=%12!d!, default_data_subs=%13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+indStruct.standby_pref.standby_pref, ItemLong -- 12
+indStruct.standby_pref.default_data_subs, ItemLong -- 13
+}
+#typev MPNASQmi_c540 134 "%0<%10!s!|sub#%11!d!>%!FUNC!: standby_pref_valid=%12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+indStruct.standby_pref_valid, ItemLong -- 12
+}
+#typev MPNASQmi_c540 133 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, MPQCCI_DecodeIndication returned unsuccessful status!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c522 13 "%0<%10!s!|sub#%11!d!>%!FUNC!: msgId 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+uMsgId, ItemLong -- 12
+}
+#typev MPNASQmi_c470 116 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c488 152 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c488 151 "%0<%10!s!|sub#%11!d!>%!FUNC!: result=%12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+}
+#typev MPNASQmi_c500 119 "%0<%10!s!|sub#%11!d!> %!FUNC!: result = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+}
+#typev MPNASQmi_c494 155 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, qmiErr=0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.error, ItemLong -- 12
+}
+#typev MPNASQmi_c494 154 "%0<%10!s!|sub#%11!d!>%!FUNC!: completed successfully!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c494 153 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c476 118 "%0<%10!s!|sub#%11!d!> %!FUNC!: NAM name = %12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->ERINAMName, ItemWString -- 12
+}
+#typev MPNASQmi_c476 117 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c464 124 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c482 150 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c482 149 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c452 125 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c458 143 "%0<%10!s!|sub#%11!d!> %!FUNC!: resp ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c428 146 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c434 147 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c440 122 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c446 127 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR callback is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c446 126 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQNASResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c3272 132 "%0<%10!s!|sub#%11!d!> %!FUNC!: RejectCause in Indication 0x%12!x! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->nwRejectCause, ItemLong -- 12
+}
+#typev MPNASQmi_c3261 131 "%0<%10!s!|sub#%11!d!> %!FUNC!: SignalStrength in Indication raw %12!d! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pIndStruct->signal_strength.sig_strength, ItemLong -- 12
+}
+#typev MPNASQmi_c3253 130 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, MPQCCI_DecodeIndication returned unsuccessful status!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c3241 129 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, allocate pIndStruct failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c3237 128 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c3694 148 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasGetHomeNetworkResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c3550 145 "%0<%10!s!|sub#%11!d!>%!FUNC!: MCC: %12!d! MNC: %13!d! RAT: %14!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasPerformNetworkScanResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->nas_network_radio_access_technology[i].mcc, ItemLong -- 12
+pResp->nas_network_radio_access_technology[i].mnc, ItemLong -- 13
+pResp->nas_network_radio_access_technology[i].rat, ItemLong -- 14
+}
+#typev MPNASQmi_c3424 144 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasPerformNetworkScanResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c3346 140 "%0<%10!s!|sub#%11!d!>%!FUNC!: is_default_data_subs_valid=%12!d!, is_default_data_subs=%13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasSubscriptionInfoInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+indStruct.is_default_data_subs_valid, ItemLong -- 12
+indStruct.is_default_data_subs, ItemLong -- 13
+}
+#typev MPNASQmi_c3343 139 "%0<%10!s!|sub#%11!d!>%!FUNC!: is_active_valid=%12!d!, is_active=%13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasSubscriptionInfoInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+indStruct.is_active_valid, ItemLong -- 12
+indStruct.is_active, ItemLong -- 13
+}
+#typev MPNASQmi_c3340 138 "%0<%10!s!|sub#%11!d!>%!FUNC!: is_priority_subs_valid=%12!d!, is_priority_subs=%13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasSubscriptionInfoInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+indStruct.is_priority_subs_valid, ItemLong -- 12
+indStruct.is_priority_subs, ItemLong -- 13
+}
+#typev MPNASQmi_c3335 137 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, MPQCCI_DecodeIndication returned unsuccessful status!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasSubscriptionInfoInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c3327 136 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessNasSubscriptionInfoInd
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c4263 171 "%0%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ReleaseNasClient
+{
+}
+#typev MPNASQmi_c4259 169 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ReleaseNasClient
+{
+subId, ItemLong -- 10
+}
+#typev MPNASQmi_c4254 170 "%0%!FUNC!: error releasing client id : 0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ReleaseNasClient
+{
+qmiErr, ItemLong -- 10
+}
+#typev MPNASQmi_c2205 88 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasGetSignalStrengthReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPNASQmi_c2196 87 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasGetSignalStrengthReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2190 86 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasGetSignalStrengthReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2185 85 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasGetSignalStrengthReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2170 84 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasIndicationRegisterReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPNASQmi_c2150 83 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_SendNasIndicationRegisterReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2143 82 "%0<%10!s!|sub#%11!d!> %!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_SendNasIndicationRegisterReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2138 81 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasIndicationRegisterReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2124 80 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasSetDualStandbyPrefReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPNASQmi_c2109 79 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_SendNasSetDualStandbyPrefReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2102 78 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_SendNasSetDualStandbyPrefReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2097 77 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasSetDualStandbyPrefReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2556 111 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasSetSystemSelectionPreferenceReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPNASQmi_c2535 110 "%0<%10!s!|sub#%11!d!> %!FUNC!: bAttach=%12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasSetSystemSelectionPreferenceReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+bAttach, ItemLong -- 12
+}
+#typev MPNASQmi_c2527 109 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasSetSystemSelectionPreferenceReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2520 108 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasSetSystemSelectionPreferenceReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c2513 107 "%0%!FUNC!: ERROR, pAdapter is NULL." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendNasSetSystemSelectionPreferenceReq
+{
+}
+#typev MPNASQmi_c2979 123 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseNasPLMN
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1135 36 "%0<%10!s!|sub#%11!d!> %!FUNC!: Use mandatory rif %12!d! cnx %13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseSignalStrength
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->signal_strength.radio_if, ItemLong -- 12
+pAdapter->DeviceContextState, ItemLong -- 13
+}
+#typev MPNASQmi_c1154 38 "%0<%10!s!|sub#%11!d!> %!FUNC!: Use Optional %12!d! %13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseSignalStrength
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->signal_strength_list[i].sig_strength, ItemLong -- 12
+pResp->signal_strength_list[i].radio_if, ItemLong -- 13
+}
+#typev MPNASQmi_c1148 37 "%0<%10!s!|sub#%11!d!> %!FUNC!: Optional %12!d! %13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseSignalStrength
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->signal_strength_list[i].sig_strength, ItemLong -- 12
+pResp->signal_strength_list[i].radio_if, ItemLong -- 13
+}
+#typev MPNASQmi_c1111 35 "%0<%10!s!|sub#%11!d!> %!FUNC!: %12!d! %13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseSignalStrength
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->signal_strength.sig_strength, ItemLong -- 12
+pResp->signal_strength.radio_if, ItemLong -- 13
+}
+#typev MPNASQmi_c1097 34 "%0<%10!s!|sub#%11!d!> %!FUNC!: Non-Sprint setting WwanRegisterStateRoaming." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1089 33 "%0<%10!s!|sub#%11!d!> %!FUNC!: setting WwanRegisterStatePartner." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1083 32 "%0<%10!s!|sub#%11!d!> %!FUNC!: setting WwanRegisterStateRoaming." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1072 31 "%0<%10!s!|sub#%11!d!> %!FUNC!: setting WwanRegisterStateHome." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1063 30 "%0<%10!s!|sub#%11!d!> %!FUNC!: STEP_B ProviderName = %12!s! roamStatus = 0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pNdisRegisterState->RegistrationState.ProviderName, ItemWString -- 12
+roamStatus, ItemLong -- 13
+}
+#typev MPNASQmi_c1049 29 "%0<%10!s!|sub#%11!d!> %!FUNC!: Non-Sprint STEP_C setting WwanRegisterStateRoaming." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1040 28 "%0<%10!s!|sub#%11!d!> %!FUNC!: STEP_C setting WwanRegisterStatePartner." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1034 27 "%0<%10!s!|sub#%11!d!> %!FUNC!: STEP_C setting WwanRegisterStateRoaming." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1023 26 "%0<%10!s!|sub#%11!d!> %!FUNC!: STEP_C setting WwanRegisterStateHome." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1015 25 "%0<%10!s!|sub#%11!d!> %!FUNC!: STEP_C ProviderName = %12!s! roamStatus = 0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pNdisRegisterState->RegistrationState.ProviderName, ItemWString -- 12
+roamStatus, ItemLong -- 13
+}
+#typev MPNASQmi_c1007 17 "%0<%10!s!|sub#%11!d!> %!FUNC!: matching entry found!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c1007 16 "%0<%10!s!|sub#%11!d!> %!FUNC!: indicationID %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+indicationID, ItemLong -- 12
+}
+#typev MPNASQmi_c1006 24 "%0<%10!s!|sub#%11!d!> %!FUNC!: roamStatus = 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+roamStatus, ItemLong -- 12
+}
+#typev MPNASQmi_c1001 23 "%0<%10!s!|sub#%11!d!> %!FUNC!: decoding step used : 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+step, ItemLong -- 12
+}
+#typev MPNASQmi_c975 115 "%0<%10!s!|sub#%11!d!>%!FUNC!: SendQMIRequest nts=0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+#typev MPNASQmi_c975 114 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c975 113 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c975 112 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPNASQmi_c965 22 "%0<%10!s!|sub#%11!d!> %!FUNC!: prl data (%12!d!, %13!d!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=UpdateERIOperatorName
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+cdma_sys_info.cdma_hdr_only_sys_info.is_sys_prl_match_valid, ItemLong -- 12
+cdma_sys_info.cdma_hdr_only_sys_info.is_sys_prl_match, ItemLong -- 13
+}

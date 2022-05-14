@@ -1,0 +1,55 @@
+// PDB:  qcgnss.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+72851bdc-c2de-32c5-071c-e3715a70cf05 10.4 // SRC=xtratime.c MJ= MN=
+#typev xtratime_c176 24 "%0xtratime.c::176 QCGNSS_XtraTime:: WdfWaitLockAcquire() Failed " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverXTRATimeInit
+{
+}
+#typev xtratime_c122 19 "%0xtratime.c::122 QCGPS:  InjectTime " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=InjectTime
+{
+}
+#typev xtratime_c109 18 "%0xtratime.c::109 QCGPS:  InjectTime highWord %10!u! low word %11!u!, uncertainty:%12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=InjectTime
+{
+pGnssInjectTime->UtcTime.dwHighDateTime, ItemLong -- 10
+pGnssInjectTime->UtcTime.dwLowDateTime, ItemLong -- 11
+pGnssInjectTime->TimeUncertainty, ItemLong -- 12
+}
+#typev xtratime_c91 17 "%0xtratime.c::91 [GPSSEQDIA] XTRA_TIME_REQ_D2A " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestTime
+{
+}
+#typev xtratime_c89 16 "%0xtratime.c::89 QCGPS:  RaiseRequestTime  - RequestType %10!d!- Send Request to OS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestTime
+{
+pGnssAssistanceDataEvent->AgnssRequest.RequestType, ItemLong -- 10
+}
+#typev xtratime_c70 15 "%0xtratime.c::70 QCGPS: WdfRequestRetrieveOutputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=RaiseRequestTime
+{
+bufLength, ItemPtr -- 10
+sizeof(GNSS_EVENT), ItemLong -- 11
+}
+#typev xtratime_c63 14 "%0xtratime.c::63 QCGPS: RaiseRequestBlob WdfRequestRetrieveOutputBuffer failed 0x%10!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=RaiseRequestTime
+{
+status, ItemLong -- 10
+}
+#typev xtratime_c60 13 "%0xtratime.c::60 QCGPS: RaiseRequestTime IRP IOCTL_GNSS_LISTEN_AGNSS <---" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=RaiseRequestTime
+{
+}
+#typev xtratime_c55 12 "%0xtratime.c::55 [TELY] E_PENDING_IOCTL_UNAVAILABLE IOCTL_GNSS_LISTEN_AGNSS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestTime
+{
+}
+#typev xtratime_c53 11 "%0xtratime.c::53 QCGPS: RaiseRequestTime no pending IOCTL_GNSS_LISTEN_AGNSS, wait for pending IOCTL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=RaiseRequestTime
+{
+}
+#typev xtratime_c42 10 "%0xtratime.c::42 QCGPS: platform doesnt support AgnssInjection TIME " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=RaiseRequestTime
+{
+}
+#typev xtratime_c163 23 "%0xtratime.c::163 QCGPS: WaitForXtratCmdDone FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitForXtratCmdDone
+{
+}
+#typev xtratime_c160 22 "%0xtratime.c::160 QCGPS: WaitForXtratCmdDone SUCCESS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=WaitForXtratCmdDone
+{
+}
+#typev xtratime_c150 21 "%0xtratime.c::150 QMIXtraTimeResponseIndEvent WAIT_TIMEOUT!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitForXtratCmdDone
+{
+}
+#typev xtratime_c143 20 "%0xtratime.c::143 WaitForXtraTCmdDone Event Received" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=WaitForXtratCmdDone
+{
+}

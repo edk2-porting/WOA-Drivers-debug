@@ -1,0 +1,431 @@
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+cbf12e07-52ba-3dfb-ebd3-f5585d67091e 10.4 // SRC=MPOID.c MJ= MN=
+#typev MPSet_c372 94 "%0 -->MPQBI_Handle_OID_Remove_WOL_PATTERN. Deleting Pattern %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPSetInformation
+{
+patternId, ItemLong -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPSet_c372 93 "%0 -->MPQBI_Handle_OID_Remove_WOL_PATTERN. " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPSetInformation
+{
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPSet_c394 96 "%0 -->Enabled value= %10!d!, Encapsulation = %11!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPSetInformation
+{
+pOffloadEncap->IPv4.Enabled, ItemLong -- 10
+pOffloadEncap->IPv4.EncapsulationType, ItemLong -- 11
+}
+#typev MPSet_c394 95 "%0 -->MPOID_Handle_OID_Offload_Encapsulation. " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPSetInformation
+{
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPSet_c85 53 "%0<%10!s! > MPOID_ProcessNonContextOid - 0x%11!x! (mask 0x%12!x!) already part of global mask 0x%13!x! - outstanding OID" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPSetInformation
+{
+pAdapter->PortName, ItemString -- 10
+Oid, ItemLong -- 11
+mask, ItemLong -- 12
+GlobalData.uNonContextOIDMask, ItemLong -- 13
+}
+#typev MPSet_c85 52 "%0<%10!s! > MPOID_ProcessNonContextOid - 0x%11!x! (mask 0x%12!x!) added to global mask 0x%13!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPSetInformation
+{
+pAdapter->PortName, ItemString -- 10
+Oid, ItemLong -- 11
+mask, ItemLong -- 12
+GlobalData.uNonContextOIDMask, ItemLong -- 13
+}
+#typev MPSet_c85 51 "%0<%10!s! > MPOID_ProcessNonContextOid - 0x%11!x! will be processed" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPSetInformation
+{
+pAdapter->PortName, ItemString -- 10
+Oid, ItemLong -- 11
+}
+#typev MPSet_c85 50 "%0<%10!s! > MPOID_ProcessNonContextOid - 0x%11!x! is not a non-context-specific OID" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPSetInformation
+{
+pAdapter->PortName, ItemString -- 10
+Oid, ItemLong -- 11
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWork_c796 14 "%0<%10!s! > Indicating Link State: LinkState.MediaConnectState %11!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=ProcessMssrEvent
+{
+pAdapter->PortName, ItemString -- 10
+LinkState.MediaConnectState, ItemLong -- 11
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWork_c409 68 "%0<%10!s! ><--MPQCCI_OIDtoQMI 0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=ProcessOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPWork_c409 67 "%0<%10!s! >-->OIDtoQMI: Oid 0x%11!Ix!, pOid 0x%12!p!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=ProcessOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+pOid->Oid, ItemPtr -- 11
+pOid, ItemPtr -- 12
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPOID_c1074 39 "%0
+<%10!s!> <--MPCancelDirectOidRequest" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPCancelDirectOidRequest
+{
+GlobalData.DeviceName, ItemString -- 10
+}
+#typev MPOID_c1067 38 "%0
+<%10!s!> -->MPCancelDirectOidRequest" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPCancelDirectOidRequest
+{
+GlobalData.DeviceName, ItemString -- 10
+}
+#typev MPOID_c1021 35 "%0<%10!s! > <--MPCancelOidRequest: 0x%11!p!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPCancelOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+RequestId, ItemPtr -- 11
+}
+#typev MPOID_c1004 34 "%0<%10!s! > -->MPCancelOidRequest: 0x%11!p!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPCancelOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+RequestId, ItemPtr -- 11
+}
+#typev MPOID_c1046 37 "%0
+<%10!s!> <--MPDirectOidRequest" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPDirectOidRequest
+{
+GlobalData.DeviceName, ItemString -- 10
+}
+#typev MPOID_c1039 36 "%0
+<%10!s!> -->MPDirectOidRequest" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPDirectOidRequest
+{
+GlobalData.DeviceName, ItemString -- 10
+}
+#typev MPOID_c705 23 "%0<%10!s! > <--_CancelAllPendingOids: C%11!d!/P%12!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPOID_CancelAllPendingOids
+{
+pAdapter->PortName, ItemString -- 10
+numCompleted, ItemLong -- 11
+pAdapter->nPendingOidReq, ItemLong -- 12
+}
+#typev MPOID_c679 22 "%0<%10!s! > OID (Cx 0x%11!p!) ST 0x%12!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_CancelAllPendingOids
+{
+pAdapter->PortName, ItemString -- 10
+req->OidRequest, ItemPtr -- 11
+ndisStatus, ItemLong -- 12
+}
+#typev MPOID_c665 21 "%0<%10!s! > -->_CancelAllPendingOids: C%11!d!/P%12!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPOID_CancelAllPendingOids
+{
+pAdapter->PortName, ItemString -- 10
+numCompleted, ItemLong -- 11
+pAdapter->nPendingOidReq, ItemLong -- 12
+}
+#typev MPOID_c1295 45 "%0<%10!s! > <--MPOID_CleanupOidCopy: 0x%11!p!-P%12!d! C0x%13!X!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_CleanupOidCopy
+{
+pAdapter->PortName, ItemString -- 10
+pOid->OidReference, ItemPtr -- 11
+pAdapter->nPendingOidReq, ItemLong -- 12
+cleaned, ItemLong -- 13
+}
+#typev MPOID_c1226 43 "%0<%10!s! > <--MPOID_CleanupOidCopy: NULL OID-P%11!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_CleanupOidCopy
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->nPendingOidReq, ItemLong -- 11
+}
+#typev MPOID_c1216 42 "%0<%10!s! > -->MPOID_CleanupOidCopy: 0x%11!p!/0x%12!p!-P%13!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_CleanupOidCopy
+{
+pAdapter->PortName, ItemString -- 10
+pOid->OidReference, ItemPtr -- 11
+pOid, ItemPtr -- 12
+pAdapter->nPendingOidReq, ItemLong -- 13
+}
+#typev MPOID_c1385 48 "%0<%10!s! > <--MPOID_CompleteOid" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPOID_CompleteOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPOID_c1366 47 "%0<%10!s! > -->MPOID_CompleteOid: pOid->oidAsyncType=0x%11!x!, pOid->fOidComplete=%12!d!, pOid->OIDStatus=0x%13!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPOID_CompleteOid
+{
+pAdapter->PortName, ItemString -- 10
+pOid->oidAsyncType, ItemLong -- 11
+pOid->fOidComplete, ItemLong -- 12
+pOid->OIDStatus, ItemLong -- 13
+}
+#typev MPOID_c1193 41 "%0<%10!s! > <--MPOID_CreateOidCopy: 0x%11!p!-P%12!d! (ST 0x%13!x!)" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPOID_CreateOidCopy
+{
+pAdapter->PortName, ItemString -- 10
+NdisOidRequest, ItemPtr -- 11
+pAdapter->nPendingOidReq, ItemLong -- 12
+ndisStatus, ItemLong -- 13
+}
+#typev MPOID_c1094 40 "%0<%10!s! > -->MPOID_CreateOidCopy: 0x%11!p!/0x%12!p!-P%13!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPOID_CreateOidCopy
+{
+pAdapter->PortName, ItemString -- 10
+NdisOidRequest, ItemPtr -- 11
+Oid, ItemPtr -- 12
+pAdapter->nPendingOidReq, ItemLong -- 13
+}
+#typev MPOID_c2049 64 "%0<%10!s! > OID Response OID 0x%11!x! filling with error " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_FillOidRespWithError
+{
+pAdapter->PortName, ItemString -- 10
+pOid->Oid, ItemLong -- 11
+}
+#typev MPOID_c2040 63 "%0<%10!s! > FillOidResponseWithError: invalid parameters" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_FillOidRespWithError
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPOID_c2020 62 "%0<%10!s! ><--MPOID_FillOidResponse 0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_FillOidResponse
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPOID_c1793 61 "%0<%10!s! >-->MPOID_FillOidResponse: Oid 0x%11!Ix!, pOid 0x%12!p!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_FillOidResponse
+{
+pAdapter->PortName, ItemString -- 10
+Oid, ItemPtr -- 11
+pOid, ItemPtr -- 12
+}
+#typev MPOID_c986 33 "%0<%10!s! > <--_CompleteOidRequest: 0x%11!p!/0x%12!p!-C%13!d!/P%14!d! (0x%15!x!)" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPOID_FindAndCompleteOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+NdisRequest, ItemPtr -- 11
+RequestId, ItemPtr -- 12
+numCompleted, ItemLong -- 13
+pAdapter->nPendingOidReq, ItemLong -- 14
+retST, ItemLong -- 15
+}
+#typev MPOID_c965 32 "%0<%10!s! > _CompleteOidRequest: already completed 0x%11!p!/0x%12!p!, recycle 0x%13!p!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_FindAndCompleteOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+NdisRequest, ItemPtr -- 11
+RequestId, ItemPtr -- 12
+oidReq, ItemPtr -- 13
+}
+#typev MPOID_c882 30 "%0<%10!s! > filling QUERY OID 0x%11!p! BUF(0x%12!p!, 0x%13!p!)" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_FindAndCompleteOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+req->OidRequest, ItemPtr -- 11
+oidReq->RequestInfoBuffer, ItemPtr -- 12
+oidReq->OidReqCopy.DATA.SET_INFORMATION.InformationBuffer, ItemPtr -- 13
+}
+#typev MPOID_c853 29 "%0<%10!s! > filling SET OID 0x%11!p! BUF(0x%12!p!, 0x%13!p!)" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_FindAndCompleteOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+req->OidRequest, ItemPtr -- 11
+oidReq->RequestInfoBuffer, ItemPtr -- 12
+oidReq->OidReqCopy.DATA.QUERY_INFORMATION.InformationBuffer, ItemPtr -- 13
+}
+#typev MPOID_c929 31 "%0<%10!s! > filling OID error: 0x%11!p!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_FindAndCompleteOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+req->OidRequest, ItemPtr -- 11
+}
+#typev MPOID_c836 28 "%0<%10!s! > OID (Ce 0x%11!p!) ST 0x%12!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_FindAndCompleteOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+req->OidRequest, ItemPtr -- 11
+NdisStatus, ItemLong -- 12
+}
+#typev MPOID_c827 27 "%0<%10!s! > OID (C 0x%11!p!) ST 0x%12!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPOID_FindAndCompleteOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+req->OidRequest, ItemPtr -- 11
+NdisStatus, ItemLong -- 12
+}
+#typev MPOID_c807 26 "%0<%10!s! > OID (Temp enqueue 0x%11!p!) " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_FindAndCompleteOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+req->OidRequest, ItemPtr -- 11
+}
+#typev MPOID_c770 25 "%0<%10!s! > OID (Find and complete 0x%11!p!) " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_FindAndCompleteOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+req->OidRequest, ItemPtr -- 11
+}
+#typev MPOID_c755 24 "%0<%10!s! > <--_CompleteOidRequest: OID queued empty" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_FindAndCompleteOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPOID_c2150 66 "%0<%10!s! > Set context state with older header revision - will bring up IPv4!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_HandleSetWWANConnect
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPOID_c2115 65 "%0<%10!s! > QMUX: OID_WWAN_CONNECT SET.  Activate %11!d!, AccessString %12!s!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_HandleSetWWANConnect
+{
+pAdapter->PortName, ItemString -- 10
+pSetContext->SetContextState.ActivationCommand, ItemLong -- 11
+pSetContext->SetContextState.AccessString, ItemWString -- 12
+}
+#typev MPOID_c2988 91 "%0 -->MPQBI_Handle_OID_ADD_WOL_PATTERN. Unsupported Packet Type %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_Handle_OID_Add_WOL_PATTERN
+{
+pFilterInfo->WoLPacketType, ItemLong -- 10
+}
+#typev MPOID_c3008 92 "%0 -->MPQBI_Handle_OID_ADD_WOL_PATTERN. Updating Pattern %10!d! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_Handle_OID_Add_WOL_PATTERN
+{
+pFilterInfo->PatternId, ItemLong -- 10
+}
+#typev MPOID_c2969 90 "%0 -->Handle_OID_ADD_WOL_PATTERN. " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_Handle_OID_Add_WOL_PATTERN
+{
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPOID_c357 13 "%0<%10!s! > Sending CONTEXT_STATE: ConnectionId=%11!d!, ActivationState=%12!d!, VoiceCallState=%13!d!, IPType=%14!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_IndicationContextState
+{
+pAdapter->PortName, ItemString -- 10
+ContextState.ContextState.ConnectionId, ItemLong -- 11
+ContextState.ContextState.ActivationState, ItemLong -- 12
+ContextState.ContextState.VoiceCallState, ItemLong -- 13
+ContextState.ContextState.IPType, ItemLong -- 14
+}
+#typev MPOID_c1528 49 "%0<%10!s! > MPOID_NonContextOidMask: OID 0x%11!x! mask 0x%12!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_NonContextOidMask
+{
+pAdapter->PortName, ItemString -- 10
+Oid, ItemLong -- 11
+mask, ItemLong -- 12
+}
+#typev MPOID_c1729 60 "%0<%10!s! > <--MPOID_ProcessDefaultOid" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_ProcessDefaultOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPOID_c1703 59 "%0<%10!s! > MPOID_ProcessDefaultOid: OID Enqueue 0x%11!p! pOid 0x%12!p! Status 0x%13!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPOID_ProcessDefaultOid
+{
+pAdapter->PortName, ItemString -- 10
+pQCOidRef->OidRequest, ItemPtr -- 11
+pOid, ItemPtr -- 12
+Status, ItemLong -- 13
+}
+#typev MPOID_c1687 58 "%0<%10!s! > <--MPOID_ProcessDefaultOid: OID back to free" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_ProcessDefaultOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPOID_c1666 46 "%0<%10!s! > MPOID_GetFreeOid: Could not find a free OID 0x%11!p! 0x%12!p!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_ProcessDefaultOid
+{
+pAdapter->PortName, ItemString -- 10
+&pAdapter->OIDFreeList, ItemPtr -- 11
+pAdapter->OIDFreeList.Flink, ItemPtr -- 12
+}
+#typev MPOID_c1660 57 "%0<%10!s! > -->MPOID_ProcessDefaultOid" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_ProcessDefaultOid
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPOID_c299 56 "%0<%10!s! > MPOID_CompleteNonContextOid - 0x%11!x! (mask 0x%12!x!) missing from global mask 0x%13!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPOID_ResponseIndication
+{
+pAdapter->PortName, ItemString -- 10
+Oid, ItemLong -- 11
+mask, ItemLong -- 12
+GlobalData.uNonContextOIDMask, ItemLong -- 13
+}
+#typev MPOID_c299 55 "%0<%10!s! > MPOID_CompleteNonContextOid - 0x%11!x! (mask 0x%12!x!) removed from global mask 0x%13!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_ResponseIndication
+{
+pAdapter->PortName, ItemString -- 10
+Oid, ItemLong -- 11
+mask, ItemLong -- 12
+GlobalData.uNonContextOIDMask, ItemLong -- 13
+}
+#typev MPOID_c299 54 "%0<%10!s! > MPOID_CompleteNonContextOid - 0x%11!x! is not a non-context-specific OID" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_ResponseIndication
+{
+pAdapter->PortName, ItemString -- 10
+Oid, ItemLong -- 11
+}
+#typev MPOID_c238 12 "%0<%10!s! > MPOID_ResponseIndication: pAdapter->ContextState.ContextState.ActivationState=0x%11!x!, contextState.ActivationState=0x%12!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_ResponseIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->ContextState.ContextState.ActivationState, ItemLong -- 11
+contextState.ActivationState, ItemLong -- 12
+}
+#typev MPOID_c222 11 "%0<%10!s! > MPOID_ResponseIndication: ERROR, memory allocation for statusIndication failed." //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_ResponseIndication
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPOID_c214 10 "%0<%10!s! > MPOID_ResponseIndication: oidIndicationType=0x%11!x!, OIDStatus=0x%12!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOID_ResponseIndication
+{
+pAdapter->PortName, ItemString -- 10
+pOid->oidIndicationType, ItemLong -- 11
+OIDStatus, ItemLong -- 12
+}
+#typev MPOID_c2485 72 "%0<%10!s! > QMUX: StartNwInterface Mapping verbose CE reason 0x%11!x!:0x%12!x! to 0x%13!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_WdsStartNetworkInterfaceCB
+{
+pAdapter->PortName, ItemString -- 10
+pVCEData->pCEReason->call_end_reason_type, ItemLong -- 11
+pVCEData->pCEReason->call_end_reason, ItemLong -- 12
+pContextState->ContextState.uNwError, ItemLong -- 13
+}
+#typev MPOID_c2460 71 "%0<%10!s! > QMUX: StartNwInterface requests failed" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPOID_WdsStartNetworkInterfaceCB
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPOID_c2446 70 "%0<%10!s! > Abort pending - fail StartNwIface" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_INFO FUNC=MPOID_WdsStartNetworkInterfaceCB
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPOID_c2434 69 "%0<%10!s! > QMUX: StartNwInterface waiting for second SNI response" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_INFO FUNC=MPOID_WdsStartNetworkInterfaceCB
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPOID_c2790 83 "%0<%10!s! > MPOID_WdsStopNetworkInterfaceCB: waiting for second StopNI response" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_INFO FUNC=MPOID_WdsStopNetworkInterfaceCB
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPOID_c2774 82 "%0<%10!s! > MPOID_WdsStopNetworkInterfaceCB: connID=%11!d!, requestId=0x%12!p!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_INFO FUNC=MPOID_WdsStopNetworkInterfaceCB
+{
+pAdapter->PortName, ItemString -- 10
+pContextState->ContextState.ConnectionId, ItemLong -- 11
+pOid->OidReqCopy.RequestId, ItemPtr -- 12
+}
+#typev MPOID_c597 18 "%0<%10!s! > <--MPOidRequest: 0x%11!p! (0x%12!x!) P%13!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+NdisRequest, ItemPtr -- 11
+ndisStatus, ItemLong -- 12
+pAdapter->nPendingOidReq, ItemLong -- 13
+}
+#typev MPOID_c588 17 "%0<%10!s! > OID (Cd 0x%11!p!) ST 0x%12!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+NdisRequest, ItemPtr -- 11
+ndisStatus, ItemLong -- 12
+}
+#typev MPOID_c573 16 "%0<%10!s! > MPOidRequest: NOT_SUPPORTED" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPOID_c532 20 "%0<%10!s! > <--MPMethod: 0x%11!p!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+NdisRequest, ItemPtr -- 11
+}
+#typev MPOID_c532 19 "%0<%10!s! > -->MPMethod: 0x%11!p!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPOidRequest
+{
+pAdapter->PortName, ItemString -- 10
+NdisRequest, ItemPtr -- 11
+}
+#typev MPOID_c2914 89 "%0 -->Print_WOL_Pattern. Patternata[%10!d!] is %11!x! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=Print_WOL_Pattern
+{
+index, ItemLong -- 10
+pattern->WoLBitMapPattern.PatternData[index], ItemLong -- 11
+}
+#typev MPOID_c2904 88 "%0 -->Print_WOL_Pattern. PatternSize %10!x! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=Print_WOL_Pattern
+{
+pattern->WoLBitMapPattern.PatternSize, ItemLong -- 10
+}
+#typev MPOID_c2896 87 "%0 -->Print_WOL_Pattern. MaskData[%10!d!] is %11!x! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=Print_WOL_Pattern
+{
+index, ItemLong -- 10
+pattern->WoLBitMapPattern.MaskData[index], ItemLong -- 11
+}
+#typev MPOID_c2886 86 "%0 -->Print_WOL_Pattern. MaskSize %10!x! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=Print_WOL_Pattern
+{
+pattern->WoLBitMapPattern.MaskSize, ItemLong -- 10
+}
+#typev MPOID_c2880 85 "%0 -->Print_WOL_Pattern. PatternId %10!x! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=Print_WOL_Pattern
+{
+pattern->PatternId, ItemLong -- 10
+}
+#typev MPOID_c2873 84 "%0 -->Print_WOL_Pattern. Friendly Name %10!s! " //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=Print_WOL_Pattern
+{
+pattern->FriendlyName.String, ItemWString -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c394 14 "%0<%10!s! > Indicating Link State: LinkState.MediaConnectState %11!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPMAIN_ConnectEPDGAdapter
+{
+pAdapter->PortName, ItemString -- 10
+LinkState.MediaConnectState, ItemLong -- 11
+}

@@ -1,0 +1,44 @@
+// PDB:  qcImproveTouch850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+2cd8a483-cd06-3ffa-3ccc-5c805021c56d Common // SRC=idle.c MJ= MN=
+#typev TouchScreenDevice_c2419 16 "%0TouchScreenIdle:Error finding Idle notification request in IdleQueue:0x%10!p! - %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=TRACE_FLAG_IDLE FUNC=OnD0Entry
+{
+FxDeviceContext->IdleQueue, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev TouchScreenDevice_c2419 17 "%0TouchScreenIdle:Completed Idle notification Request:0x%10!p! from IdleQueue:0x%11!p! - %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_IDLE FUNC=OnD0Entry
+{
+request, ItemPtr -- 10
+FxDeviceContext->IdleQueue, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+// PDB:  qcImproveTouch850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev idle_c217 14 "%0TouchScreenIdle:Error: Idle Notification request %10!p! has no pwrIdle callback info - %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_IDLE FUNC=TchProcessIdleRequest
+{
+Request, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev idle_c247 15 "%0TouchScreenIdle:Error creating creating pwrIdle work item - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_IDLE FUNC=TchProcessIdleRequest
+{
+status, ItemNTSTATUS -- 10
+}
+#typev idle_c197 13 "%0TouchScreenIdle:Error: Input buffer is too small to process pwrIdle request - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_IDLE FUNC=TchProcessIdleRequest
+{
+status, ItemNTSTATUS -- 10
+}
+#typev idle_c178 12 "%0TchProcessIdleRequest: f/w update is going on, so ignoring idle irp request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_HID FUNC=TchProcessIdleRequest
+{
+}
+#typev idle_c107 11 "%0TouchScreenIdle: Forwarded pwrIdle notification Request:0x%10!p! to IdleQueue:0x%11!p! - %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_IDLE FUNC=TchPwrIdleIrpWorkitem
+{
+pwrIdleWorkItemContext->FxRequest, ItemPtr -- 10
+deviceContext->IdleQueue, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev idle_c92 10 "%0TouchScreenIdle: Error forwarding pwrIdle notification Request:0x%10!p! to IdleQueue:0x%11!p! - %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_IDLE FUNC=TchPwrIdleIrpWorkitem
+{
+pwrIdleWorkItemContext->FxRequest, ItemPtr -- 10
+deviceContext->IdleQueue, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}

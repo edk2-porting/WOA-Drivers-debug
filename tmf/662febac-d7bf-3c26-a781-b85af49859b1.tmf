@@ -1,0 +1,76 @@
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+662febac-d7bf-3c26-a781-b85af49859b1 PEP // SRC=PEP_FState_Mgmt.c MJ= MN=
+#typev PEP_FState_Mgmt_c418 27 "%0 [Verb] PEP_FState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepNotifyComponentIdleState
+{
+}
+#typev PEP_FState_Mgmt_c411 26 "%0 [Err ] PEP_FState_Mgmt.c::%!FUNC!::411 :Device: %10!s!,component: %11!d!RequestPEPWorker failed for F-state request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepNotifyComponentIdleState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+NotifyIdleState->Component, ItemLong -- 11
+}
+#typev PEP_FState_Mgmt_c390 25 "%0 [Verb] PEP_FState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepNotifyComponentIdleState
+{
+}
+#typev PEP_FState_Mgmt_c387 24 "%0 [Info] PEP_FState_Mgmt.c::%!FUNC! :Device: %10!s!,component: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepNotifyComponentIdleState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+NotifyIdleState->Component, ItemLong -- 11
+}
+#typev PEP_FState_Mgmt_c370 23 "%0 [Verb] PEP_FState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepNotifyComponentIdleState
+{
+}
+#typev PEP_FState_Mgmt_c368 22 "%0 [Info] PEP_FState_Mgmt.c::%!FUNC! :(Pre-Notification and Fx) OR (Post-Notification and F0) to Mini PEP, do nothing" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepNotifyComponentIdleState
+{
+}
+#typev PEP_FState_Mgmt_c354 21 "%0 [Info] PEP_FState_Mgmt.c::%!FUNC! :Device: %10!s!,component: %11!d! currIRQL = %12!u!, NotifyIdleState->IdleState = %13!u!), NotifyIdleState->DriverNotified = %14!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepNotifyComponentIdleState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+NotifyIdleState->Component, ItemLong -- 11
+currIRQL, ItemLong -- 12
+NotifyIdleState->IdleState, ItemLong -- 13
+NotifyIdleState->DriverNotified, ItemLong -- 14
+}
+#typev PEP_FState_Mgmt_c346 20 "%0 [Err ] PEP_FState_Mgmt.c::%!FUNC!::346 :NotifyIdleState: failed, could not find a relevant component for Component: %10!d! in device: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepNotifyComponentIdleState
+{
+NotifyIdleState->Component, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_FState_Mgmt_c319 19 "%0 [Err ] PEP_FState_Mgmt.c::%!FUNC!::319 :Device Handle is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepNotifyComponentIdleState
+{
+}
+#typev PEP_FState_Mgmt_c306 18 "%0 [Err ] PEP_FState_Mgmt.c::%!FUNC!::306 :NotifyIdleState is NULL, Exiting!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepNotifyComponentIdleState
+{
+}
+#typev PEP_FState_Mgmt_c299 17 "%0 [Verb] PEP_FState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepNotifyComponentIdleState
+{
+}
+#typev PEP_FState_Mgmt_c238 16 "%0 [Verb] PEP_FState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepNotifyComponentIdleStateWork
+{
+}
+#typev PEP_FState_Mgmt_c188 15 "%0 [Err ] PEP_FState_Mgmt.c::%!FUNC!::188 :You are in Work function but Post-Notification for F0 should be handled right away for Device: %10!s!,component: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepNotifyComponentIdleStateWork
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+NotifyIdleState->Component, ItemLong -- 11
+}
+#typev PEP_FState_Mgmt_c168 14 "%0 [Err ] PEP_FState_Mgmt.c::%!FUNC!::168 : You are in Work function but Pre-Notification for F%10!d! should be handled right away for Device: %11!s!,component: %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepNotifyComponentIdleStateWork
+{
+PTempCompListNode->F_State->currentIndex, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+NotifyIdleState->Component, ItemLong -- 12
+}
+#typev PEP_FState_Mgmt_c126 13 "%0 [Err ] PEP_FState_Mgmt.c::%!FUNC!::126 :Could not find the right component" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepNotifyComponentIdleStateWork
+{
+}
+#typev PEP_FState_Mgmt_c99 12 "%0 [Info] PEP_FState_Mgmt.c::%!FUNC! :Device: %10!s!,component: %11!d!(NotifyIdleState->IdleState: %12!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepNotifyComponentIdleStateWork
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+NotifyIdleState->Component, ItemLong -- 11
+NotifyIdleState->IdleState, ItemLong -- 12
+}
+#typev PEP_FState_Mgmt_c92 11 "%0 [Err ] PEP_FState_Mgmt.c::%!FUNC!::92 :Device Handle is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepNotifyComponentIdleStateWork
+{
+}
+#typev PEP_FState_Mgmt_c80 10 "%0 [Verb] PEP_FState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepNotifyComponentIdleStateWork
+{
+}

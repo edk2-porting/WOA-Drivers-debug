@@ -1,0 +1,128 @@
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+44c8f26a-70dd-3707-6bde-1f16bcc50b68 10.4 // SRC=MPQuery.c MJ= MN=
+#typev MPQuery_c763 33 "%0<%10!s!> <--- MPQueryInformation Status = 0x%11!x! IRQL %12!d!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+Status, ItemLong -- 11
+KeGetCurrentIrql(), ItemLong -- 12
+}
+#typev MPQuery_c723 32 "%0<%10!s!> QMI failure (%11!u!L) or no connect, OID_GEN_LINK_SPEED=0" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+ulInfoLen, ItemLong -- 11
+}
+#typev MPQuery_c697 31 "%0<%10!s! > OID_GEN_LINK_SPEED: cached max rx %11!u! tx %12!u!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->ulServingSystemRxRate, ItemLong -- 11
+pAdapter->ulServingSystemTxRate, ItemLong -- 12
+}
+#typev MPQuery_c426 22 "%0<%10!s!> OID_PNP_QUERY_POWER: NIL BUF" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c391 21 "%0<%10!s!> ToPowerDown: ConnStat: DISCONNECT" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c377 20 "%0<%10!s!> OID_PNP_QUERY_POWER: UNKNOWN %11!u!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+pwrState, ItemLong -- 11
+}
+#typev MPQuery_c369 19 "%0<%10!s!> OID_PNP_QUERY_POWER: D3" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c361 18 "%0<%10!s!> OID_PNP_QUERY_POWER: D2" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c353 17 "%0<%10!s!> OID_PNP_QUERY_POWER: D1" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c345 16 "%0<%10!s!> OID_PNP_QUERY_POWER: D0" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c337 15 "%0<%10!s!> OID_PNP_QUERY_POWER: UNSPECIFIED" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c319 14 "%0<%10!s!> OID_PNP_QUERY_POWER: BUF SHORT %11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+InformationBufferLength, ItemLong -- 11
+}
+#typev MPQuery_c225 13 "%0<%10!s!> OID_PNP_CAPABILITIES: all Unspecified (len %11!d!)" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+InformationBufferLength, ItemLong -- 11
+}
+#typev MPQuery_c213 12 "%0<%10!s!> OID_PNP_CAPABILITIES: NIL BUF" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c200 11 "%0<%10!s!> OID_PNP_CAPABILITIES: BUF SHORT %11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+InformationBufferLength, ItemLong -- 11
+}
+#typev MPQuery_c678 30 "%0<%10!s!> MPSetInformation: OID_OFFLOAD_ENCAPSULATION: Query received " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c546 25 "%0<%10!s!> GoodReceives: %11!I64u!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->GoodReceives, ItemULongLong -- 11
+}
+#typev MPQuery_c524 24 "%0<%10!s!> GoodTransmits: %11!I64u!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->GoodTransmits, ItemULongLong -- 11
+}
+#typev MPQuery_c665 29 "%0<%10!s!> OID_GEN_STATISTICS: Rg %11!I64u!B Re %12!I64u!F Rd %13!I64u!F Tg %14!I64u!B Te %15!I64u!F Td %16!I64u!F." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+StatisticsInfo.ifHCInOctets, ItemULongLong -- 11
+StatisticsInfo.ifInErrors, ItemULongLong -- 12
+StatisticsInfo.ifInDiscards, ItemULongLong -- 13
+StatisticsInfo.ifHCOutOctets, ItemULongLong -- 14
+StatisticsInfo.ifOutErrors, ItemULongLong -- 15
+StatisticsInfo.ifOutDiscards, ItemULongLong -- 16
+}
+#typev MPQuery_c597 28 "%0<%10!s! > NDIS_STATISTICS_INFO: BUF SHORT %11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+InformationBufferLength, ItemLong -- 11
+}
+#typev MPQuery_c568 27 "%0<%10!s!> RCV_ERROR: %11!I64u!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->DroppedReceives, ItemULongLong -- 11
+}
+#typev MPQuery_c557 26 "%0<%10!s!> XMIT_ERROR: %11!I64u!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->BadTransmits, ItemULongLong -- 11
+}
+#typev MPQuery_c501 23 "%0<%10!s!> OID_GEN_MEDIA_CONNECT_STATUS: %11!u!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+ulInfo, ItemLong -- 11
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPQuery_c88 10 "%0<%10!s!> ---> MPQueryInformation %11!u! <S%12!u!, R%13!u!> QueryOID: %14!s! (0x%15!x!) IRQL %16!u!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_TRACE FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->nBusyOID, ItemLong -- 11
+pAdapter->ulMaxBusySends, ItemLong -- 12
+pAdapter->ulMaxBusyRecvs, ItemLong -- 13
+MPOidToNameStr(Oid), ItemString -- 14
+Oid, ItemLong -- 15
+KeGetCurrentIrql(), ItemLong -- 16
+}

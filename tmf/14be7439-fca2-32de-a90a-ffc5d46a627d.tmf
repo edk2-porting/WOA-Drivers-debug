@@ -1,0 +1,222 @@
+// PDB:  qcglink850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+14be7439-fca2-32de-a90a-ffc5d46a627d kmdf // SRC=smem_drv.c MJ= MN=
+#typev driver_c1282 30 "%0SMEM::SmemEvtDeviceReleaseHardware: Releasing allocated resources" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=GlinkEvtDeviceReleaseHardware
+{
+}
+// PDB:  qcglink850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev driver_c974 31 "%0smem_drv.c::%!FUNC! Trying to use shared memory before driver is initialized" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=GlinkSetupRPE
+{
+}
+#typev driver_c973 32 "%0smem_drv.c::%!FUNC! Trying to use shared memory before driver is initialized" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=GlinkSetupRPE
+{
+}
+// PDB:  qcglink850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev smem_drv_c321 20 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Shared memory address and size not available at IMEM or TZ_WONCE. Smem will not work as expected. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+}
+#typev smem_drv_c411 29 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Shared memory initialized(va=0x%10!p!, size=0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+smem_va, ItemPtr -- 10
+smem_size, ItemLong -- 11
+}
+#typev smem_drv_c406 28 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Initializing shared memory" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+}
+#typev smem_drv_c391 27 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Error mapping IPC register at physical address %10!I64x! size %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+base_add.QuadPart, ItemLongLongX -- 10
+size, ItemLong -- 11
+}
+#typev smem_drv_c379 26 "%0SMEM::SmemEvtDevicePrepareHardwareV1: IPC register size %10!d! invalid" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+size, ItemLong -- 10
+}
+#typev smem_drv_c372 25 "%0%10!s!:%11!d!: Got IPC_REGISTER size: %12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+size, ItemLong -- 12
+}
+#typev smem_drv_c366 24 "%0%10!s!:%11!d!: Got IPC_REGISTER PhysicalAddress: %12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+base_add.QuadPart, ItemLongLongX -- 12
+}
+#typev smem_drv_c348 23 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Error mapping RPM MSG RAM at physical address %10!I64x! size %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+base_add.QuadPart, ItemLongLongX -- 10
+size, ItemLong -- 11
+}
+#typev smem_drv_c339 22 "%0%10!s!:%11!d!: Got RPM_MSG_RAM size: %12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+size, ItemLong -- 12
+}
+#typev smem_drv_c333 21 "%0%10!s!:%11!d!: Got RPM_MSG_RAM PhysicalAddress: %12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+base_add.QuadPart, ItemLongLongX -- 12
+}
+#typev smem_drv_c311 19 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Error mapping shared memory at physical address %10!I64x! size %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+pa.QuadPart, ItemLongLongX -- 10
+smem_size, ItemLong -- 11
+}
+#typev smem_drv_c293 18 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Error mapping smem_info_ptr at physical address %10!I64x! size %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+pa.QuadPart, ItemLongLongX -- 10
+sizeof(smem_targ_info_type), ItemLong -- 11
+}
+#typev smem_drv_c272 17 "%0%10!s!:%11!d!: Got TZ_WONCE Register size: %12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+size, ItemLong -- 12
+}
+#typev smem_drv_c266 16 "%0%10!s!:%11!d!: Got TZ_WONCE Register PhysicalAddress: %12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+base_add.QuadPart, ItemLongLongX -- 12
+}
+#typev smem_drv_c252 15 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Expected %10!d! hardware mutexes but only %11!d! enumerated" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+SPINLOCK_NUM_LOCKS, ItemLong -- 10
+smem_hw_mutex_size / 4, ItemLong -- 11
+}
+#typev smem_drv_c236 14 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Error mapping hardware mutex at physical address %10!I64x! size %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+base_add.QuadPart, ItemLongLongX -- 10
+size, ItemLong -- 11
+}
+#typev smem_drv_c224 13 "%0%10!s!:%11!d!: Got H/W Mutex Register size: %12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+size, ItemLong -- 12
+}
+#typev smem_drv_c218 12 "%0%10!s!:%11!d!: Got H/W Mutex Register PhysicalAddress: %12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+base_add.QuadPart, ItemLongLongX -- 12
+}
+#typev smem_drv_c205 11 "%0Glink::%10!s!:%11!d!:WdfDriverOpenParametersRegistryKey failed with status 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev smem_drv_c193 10 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Unable to allocate structure for %10!d! IPC registers" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1
+{
+smem_ipc_register_count, ItemLong -- 10
+}
+#typev smem_drv_c321 20 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Shared memory address and size not available at IMEM or TZ_WONCE. Smem will not work as expected. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+}
+#typev smem_drv_c411 29 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Shared memory initialized(va=0x%10!p!, size=0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+smem_va, ItemPtr -- 10
+smem_size, ItemLong -- 11
+}
+#typev smem_drv_c406 28 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Initializing shared memory" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+}
+#typev smem_drv_c391 27 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Error mapping IPC register at physical address %10!I64x! size %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+base_add.QuadPart, ItemLongLongX -- 10
+size, ItemLong -- 11
+}
+#typev smem_drv_c379 26 "%0SMEM::SmemEvtDevicePrepareHardwareV1: IPC register size %10!d! invalid" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+size, ItemLong -- 10
+}
+#typev smem_drv_c372 25 "%0%10!s!:%11!d!: Got IPC_REGISTER size: %12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+size, ItemLong -- 12
+}
+#typev smem_drv_c366 24 "%0%10!s!:%11!d!: Got IPC_REGISTER PhysicalAddress: %12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+base_add.QuadPart, ItemLongLongX -- 12
+}
+#typev smem_drv_c348 23 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Error mapping RPM MSG RAM at physical address %10!I64x! size %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+base_add.QuadPart, ItemLongLongX -- 10
+size, ItemLong -- 11
+}
+#typev smem_drv_c339 22 "%0%10!s!:%11!d!: Got RPM_MSG_RAM size: %12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+size, ItemLong -- 12
+}
+#typev smem_drv_c333 21 "%0%10!s!:%11!d!: Got RPM_MSG_RAM PhysicalAddress: %12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+base_add.QuadPart, ItemLongLongX -- 12
+}
+#typev smem_drv_c311 19 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Error mapping shared memory at physical address %10!I64x! size %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+pa.QuadPart, ItemLongLongX -- 10
+smem_size, ItemLong -- 11
+}
+#typev smem_drv_c293 18 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Error mapping smem_info_ptr at physical address %10!I64x! size %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+pa.QuadPart, ItemLongLongX -- 10
+sizeof(smem_targ_info_type), ItemLong -- 11
+}
+#typev smem_drv_c272 17 "%0%10!s!:%11!d!: Got TZ_WONCE Register size: %12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+size, ItemLong -- 12
+}
+#typev smem_drv_c266 16 "%0%10!s!:%11!d!: Got TZ_WONCE Register PhysicalAddress: %12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+base_add.QuadPart, ItemLongLongX -- 12
+}
+#typev smem_drv_c252 15 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Expected %10!d! hardware mutexes but only %11!d! enumerated" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+SPINLOCK_NUM_LOCKS, ItemLong -- 10
+smem_hw_mutex_size / 4, ItemLong -- 11
+}
+#typev smem_drv_c236 14 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Error mapping hardware mutex at physical address %10!I64x! size %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+base_add.QuadPart, ItemLongLongX -- 10
+size, ItemLong -- 11
+}
+#typev smem_drv_c224 13 "%0%10!s!:%11!d!: Got H/W Mutex Register size: %12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+size, ItemLong -- 12
+}
+#typev smem_drv_c218 12 "%0%10!s!:%11!d!: Got H/W Mutex Register PhysicalAddress: %12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+base_add.QuadPart, ItemLongLongX -- 12
+}
+#typev smem_drv_c205 11 "%0Glink::%10!s!:%11!d!:WdfDriverOpenParametersRegistryKey failed with status 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev smem_drv_c193 10 "%0SMEM::SmemEvtDevicePrepareHardwareV1: Unable to allocate structure for %10!d! IPC registers" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmemEvtDevicePrepareHardwareV1$fin$0
+{
+smem_ipc_register_count, ItemLong -- 10
+}

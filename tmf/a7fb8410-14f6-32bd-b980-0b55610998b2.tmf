@@ -1,0 +1,24 @@
+// PDB:  qcImproveTouch850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+a7fb8410-14f6-32bd-b980-0b55610998b2 Common // SRC=gpio.c MJ= MN=
+#typev gpio_c181 14 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPIO FUNC=TouchGPIOCreateOpenIoTarget
+{
+}
+#typev gpio_c168 13 "%0TouchScreenGPIO:Error: WdfIoTargetOpen failed. %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPIO FUNC=TouchGPIOCreateOpenIoTarget
+{
+status, ItemNTSTATUS -- 10
+}
+#typev gpio_c152 12 "%0Info: GPIO Target String %10!d! %11!d! %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPIO FUNC=TouchGPIOCreateOpenIoTarget
+{
+GpioConnId.LowPart, ItemLong -- 10
+GpioConnId.HighPart, ItemLong -- 11
+&ReadString, ItemPWString -- 12
+}
+#typev gpio_c145 11 "%0TouchScreenGPIO:Error: Target String Creation Failed%10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPIO FUNC=TouchGPIOCreateOpenIoTarget
+{
+status, ItemNTSTATUS -- 10
+}
+#typev gpio_c125 10 "%0TouchScreenGPIO:Error: WdfIoTargetCreate failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPIO FUNC=TouchGPIOCreateOpenIoTarget
+{
+status, ItemNTSTATUS -- 10
+}

@@ -1,0 +1,44 @@
+// PDB:  QCDiagKernelLogging.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+654dfe0d-b5cd-370f-908d-90344baa934c QCDiagKernelLogging // SRC=Diag_LSM_Log.c MJ= MN=
+#typev Diag_LSM_Log_c565 19 "%0%!FUNC!:Failed to update log mask" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=LogAPI FUNC=log_update_mask
+{
+}
+#typev Diag_LSM_Log_c104 10 "%0%!FUNC!: invalid length %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=LogAPI FUNC=qcdiag_log_alloc_ext
+{
+length, ItemLong -- 10
+}
+#typev Diag_LSM_Log_c130 12 "%0%!FUNC!: Log code %10!x! not enabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=LogAPI FUNC=qcdiag_log_alloc_ext
+{
+code, ItemLong -- 10
+}
+#typev Diag_LSM_Log_c125 11 "%0%!FUNC!:qcdiaglogging:Dropped log 0x%10!x!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=LogAPI FUNC=qcdiag_log_alloc_ext
+{
+code, ItemLong -- 10
+}
+#typev Diag_LSM_Log_c218 15 "%0%!FUNC!:bad length %10!u! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=LogAPI FUNC=qcdiag_log_commit_ext
+{
+phdr_ptr->len, ItemLong -- 10
+}
+// PDB:  QCDiagKernelLogging.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev Diag_LSM_Log_c178 14 "%0%!FUNC!:Length %10!u! >= existing length, invalid shorten " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=LogAPI FUNC=qcdiag_log_shorten_ext
+{
+length, ItemLong -- 10
+}
+#typev Diag_LSM_Log_c160 13 "%0%!FUNC!:Length too small %10!u! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=LogAPI FUNC=qcdiag_log_shorten_ext
+{
+length, ItemLong -- 10
+}
+#typev Diag_LSM_Log_c289 16 "%0%!FUNC!: Un-supported version %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=LogAPI FUNC=qcdiag_log_submit_ext
+{
+version, ItemLong -- 10
+}
+#typev Diag_LSM_Log_c314 18 "%0%!FUNC!: Bad length %10!x! or LogCode %11!x! is not enabled" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=LogAPI FUNC=qcdiag_log_submit_ext
+{
+length, ItemLong -- 10
+code, ItemLong -- 11
+}
+#typev Diag_LSM_Log_c309 17 "%0%!FUNC!: failed in DiagSvc_Malloc" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=LogAPI FUNC=qcdiag_log_submit_ext
+{
+}

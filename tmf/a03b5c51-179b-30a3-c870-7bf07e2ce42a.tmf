@@ -1,0 +1,375 @@
+// PDB:  qcdx11arm32um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+a03b5c51-179b-30a3-c870-7bf07e2ce42a core // SRC=dxdevicestate.cpp MJ= MN=
+#typev dxdevicestate_cpp3560 23 "%0Device=0x%10!p!: SRT: Status DSV=0x%11!p! Res=0x%12!p! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+pNewDsv, ItemPtr -- 11
+pNewDsv->Resource(), ItemPtr -- 12
+}
+#typev dxdevicestate_cpp3489 22 "%0Device=0x%10!p!:SRT:Status RTV rtIndex=%11!d! RTV=0x%12!p!,Resource = %13!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+x, ItemLong -- 11
+pNewRtvs[x], ItemPtr -- 12
+pNewRtvs[x]->Resource(), ItemPtr -- 13
+}
+#typev dxdevicestate_cpp3407 21 "%0Device=0x%10!p!: SRT: Status UnsetRT rtIndex=%11!d! NullRTV=0x%12!p! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+slot, ItemLong -- 11
+m_pNullRtView, ItemPtr -- 12
+}
+#typev dxdevicestate_cpp3367 20 "%0Device=0x%10!p!: SRT: Status SetRT rtIndex=%11!d! RTV=%12!p! Res=0x%13!p! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+x, ItemLong -- 11
+pNewRtvs[x], ItemPtr -- 12
+pNewRtvs[x]->Resource(), ItemPtr -- 13
+}
+#typev dxdevicestate_cpp3297 19 "%0Device=0x%10!p!: SRT: numRtViews=%11!d! numToUnset=%12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+numRtViews, ItemLong -- 11
+numToUnset, ItemLong -- 12
+}
+#typev dxdevicestate_cpp3259 18 "%0Device=0x%10!p!, Unset Rect:left = %11!x!,top = %12!x!,right = %13!x!,bottom = %14!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetScissors
+{
+this, ItemPtr -- 10
+ClearScissor.left, ItemLong -- 11
+ClearScissor.top, ItemLong -- 12
+ClearScissor.right, ItemLong -- 13
+ClearScissor.bottom, ItemLong -- 14
+}
+#typev dxdevicestate_cpp3238 17 "%0Device=0x%10!p!, Set Rect: left = %11!x!,top = %12!x!,right = %13!x!,bottom = %14!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetScissors
+{
+this, ItemPtr -- 10
+pScissors[x].left, ItemLong -- 11
+pScissors[x].top, ItemLong -- 12
+pScissors[x].right, ItemLong -- 13
+pScissors[x].bottom, ItemLong -- 14
+}
+#typev dxdevicestate_cpp2275 15 "%0Device=0x%10!p!: Set SRV: Type=%11!d! Slot=%12!d! SRV=0x%13!p! Res=0x%14!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetShaderResourceViews
+{
+this, ItemPtr -- 10
+shaderType, ItemLong -- 11
+slot, ItemLong -- 12
+pSrView, ItemPtr -- 13
+pSrView->Resource(), ItemPtr -- 14
+}
+// PDB:  qcdx11arm32um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevicestate_cpp60 10 "%0Device=0x%10!p!: VAL GFX STATE: gfxDirty=0x%11!016I64X! genPreamble=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateGfxState
+{
+this, ItemPtr -- 10
+m_ddiState.gfxDirty.value, ItemLongLongXX -- 11
+m_stateFlags.genPreamble, ItemLong -- 12
+}
+#typev dxdevicestate_cpp579 13 "%0Device:0x%10!p! Shader size %11!u! exceeds allowed storage size %12!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateShaderObject
+{
+this, ItemPtr -- 10
+static_cast<UINT>(storeValueLen), ItemLong -- 11
+m_maxCachedPgmSizeInBytes, ItemLong -- 12
+}
+#typev dxdevicestate_cpp572 12 "%0Device:0x%10!p! Unable to store shader. Error Code: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateShaderObject
+{
+this, ItemPtr -- 10
+storeCachedValueResult, ItemLong -- 11
+}
+#typev dxdevicestate_cpp484 11 "%0Device:0x%10!p! Shader not found in cache. Error Code: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateShaderObject
+{
+this, ItemPtr -- 10
+getCachedValueResult, ItemLong -- 11
+}
+// PDB:  qcdx11arm32um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp1560 14 "%0DrawAuto called with a non-StreamOut Vertex Buffer." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDdi::DdiDrawAuto
+{
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevicestate_cpp3560 23 "%0Device=0x%10!p!: SRT: Status DSV=0x%11!p! Res=0x%12!p! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+pNewDsv, ItemPtr -- 11
+pNewDsv->Resource(), ItemPtr -- 12
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevicestate_cpp3489 22 "%0Device=0x%10!p!:SRT:Status RTV rtIndex=%11!d! RTV=0x%12!p!,Resource = %13!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+x, ItemLong -- 11
+pNewRtvs[x], ItemPtr -- 12
+pNewRtvs[x]->Resource(), ItemPtr -- 13
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevicestate_cpp3407 21 "%0Device=0x%10!p!: SRT: Status UnsetRT rtIndex=%11!d! NullRTV=0x%12!p! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+slot, ItemLong -- 11
+m_pNullRtView, ItemPtr -- 12
+}
+#typev dxdevicestate_cpp3367 20 "%0Device=0x%10!p!: SRT: Status SetRT rtIndex=%11!d! RTV=%12!p! Res=0x%13!p! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+x, ItemLong -- 11
+pNewRtvs[x], ItemPtr -- 12
+pNewRtvs[x]->Resource(), ItemPtr -- 13
+}
+#typev dxdevicestate_cpp3297 19 "%0Device=0x%10!p!: SRT: numRtViews=%11!d! numToUnset=%12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+numRtViews, ItemLong -- 11
+numToUnset, ItemLong -- 12
+}
+#typev dxdevicestate_cpp3259 18 "%0Device=0x%10!p!, Unset Rect:left = %11!x!,top = %12!x!,right = %13!x!,bottom = %14!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetScissors
+{
+this, ItemPtr -- 10
+ClearScissor.left, ItemLong -- 11
+ClearScissor.top, ItemLong -- 12
+ClearScissor.right, ItemLong -- 13
+ClearScissor.bottom, ItemLong -- 14
+}
+#typev dxdevicestate_cpp3238 17 "%0Device=0x%10!p!, Set Rect: left = %11!x!,top = %12!x!,right = %13!x!,bottom = %14!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetScissors
+{
+this, ItemPtr -- 10
+pScissors[x].left, ItemLong -- 11
+pScissors[x].top, ItemLong -- 12
+pScissors[x].right, ItemLong -- 13
+pScissors[x].bottom, ItemLong -- 14
+}
+#typev dxdevicestate_cpp2275 15 "%0Device=0x%10!p!: Set SRV: Type=%11!d! Slot=%12!d! SRV=0x%13!p! Res=0x%14!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetShaderResourceViews
+{
+this, ItemPtr -- 10
+shaderType, ItemLong -- 11
+slot, ItemLong -- 12
+pSrView, ItemPtr -- 13
+pSrView->Resource(), ItemPtr -- 14
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevicestate_cpp60 10 "%0Device=0x%10!p!: VAL GFX STATE: gfxDirty=0x%11!016I64X! genPreamble=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateGfxState
+{
+this, ItemPtr -- 10
+m_ddiState.gfxDirty.value, ItemLongLongXX -- 11
+m_stateFlags.genPreamble, ItemLong -- 12
+}
+#typev dxdevicestate_cpp579 13 "%0Device:0x%10!p! Shader size %11!u! exceeds allowed storage size %12!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateShaderObject
+{
+this, ItemPtr -- 10
+static_cast<UINT>(storeValueLen), ItemLong -- 11
+m_maxCachedPgmSizeInBytes, ItemLong -- 12
+}
+#typev dxdevicestate_cpp572 12 "%0Device:0x%10!p! Unable to store shader. Error Code: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateShaderObject
+{
+this, ItemPtr -- 10
+storeCachedValueResult, ItemLong -- 11
+}
+#typev dxdevicestate_cpp484 11 "%0Device:0x%10!p! Shader not found in cache. Error Code: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateShaderObject
+{
+this, ItemPtr -- 10
+getCachedValueResult, ItemLong -- 11
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp1560 14 "%0DrawAuto called with a non-StreamOut Vertex Buffer." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDdi::DdiDrawAuto
+{
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevicestate_cpp1103 14 "%0DrawAuto called with a non-StreamOut Vertex Buffer." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::DrawAuto
+{
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevicestate_cpp3560 23 "%0Device=0x%10!p!: SRT: Status DSV=0x%11!p! Res=0x%12!p! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+pNewDsv, ItemPtr -- 11
+pNewDsv->Resource(), ItemPtr -- 12
+}
+#typev dxdevicestate_cpp3489 22 "%0Device=0x%10!p!:SRT:Status RTV rtIndex=%11!d! RTV=0x%12!p!,Resource = %13!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+x, ItemLong -- 11
+pNewRtvs[x], ItemPtr -- 12
+pNewRtvs[x]->Resource(), ItemPtr -- 13
+}
+#typev dxdevicestate_cpp3407 21 "%0Device=0x%10!p!: SRT: Status UnsetRT rtIndex=%11!d! NullRTV=0x%12!p! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+slot, ItemLong -- 11
+m_pNullRtView, ItemPtr -- 12
+}
+#typev dxdevicestate_cpp3367 20 "%0Device=0x%10!p!: SRT: Status SetRT rtIndex=%11!d! RTV=%12!p! Res=0x%13!p! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+x, ItemLong -- 11
+pNewRtvs[x], ItemPtr -- 12
+pNewRtvs[x]->Resource(), ItemPtr -- 13
+}
+#typev dxdevicestate_cpp3297 19 "%0Device=0x%10!p!: SRT: numRtViews=%11!d! numToUnset=%12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+numRtViews, ItemLong -- 11
+numToUnset, ItemLong -- 12
+}
+#typev dxdevicestate_cpp3259 18 "%0Device=0x%10!p!, Unset Rect:left = %11!x!,top = %12!x!,right = %13!x!,bottom = %14!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetScissors
+{
+this, ItemPtr -- 10
+ClearScissor.left, ItemLong -- 11
+ClearScissor.top, ItemLong -- 12
+ClearScissor.right, ItemLong -- 13
+ClearScissor.bottom, ItemLong -- 14
+}
+#typev dxdevicestate_cpp3238 17 "%0Device=0x%10!p!, Set Rect: left = %11!x!,top = %12!x!,right = %13!x!,bottom = %14!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetScissors
+{
+this, ItemPtr -- 10
+pScissors[x].left, ItemLong -- 11
+pScissors[x].top, ItemLong -- 12
+pScissors[x].right, ItemLong -- 13
+pScissors[x].bottom, ItemLong -- 14
+}
+#typev dxdevicestate_cpp2275 15 "%0Device=0x%10!p!: Set SRV: Type=%11!d! Slot=%12!d! SRV=0x%13!p! Res=0x%14!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetShaderResourceViews
+{
+this, ItemPtr -- 10
+shaderType, ItemLong -- 11
+slot, ItemLong -- 12
+pSrView, ItemPtr -- 13
+pSrView->Resource(), ItemPtr -- 14
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevicestate_cpp60 10 "%0Device=0x%10!p!: VAL GFX STATE: gfxDirty=0x%11!016I64X! genPreamble=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateGfxState
+{
+this, ItemPtr -- 10
+m_ddiState.gfxDirty.value, ItemLongLongXX -- 11
+m_stateFlags.genPreamble, ItemLong -- 12
+}
+#typev dxdevicestate_cpp579 13 "%0Device:0x%10!p! Shader size %11!u! exceeds allowed storage size %12!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateShaderObject
+{
+this, ItemPtr -- 10
+static_cast<UINT>(storeValueLen), ItemLong -- 11
+m_maxCachedPgmSizeInBytes, ItemLong -- 12
+}
+#typev dxdevicestate_cpp572 12 "%0Device:0x%10!p! Unable to store shader. Error Code: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateShaderObject
+{
+this, ItemPtr -- 10
+storeCachedValueResult, ItemLong -- 11
+}
+#typev dxdevicestate_cpp484 11 "%0Device:0x%10!p! Shader not found in cache. Error Code: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateShaderObject
+{
+this, ItemPtr -- 10
+getCachedValueResult, ItemLong -- 11
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp1560 14 "%0DrawAuto called with a non-StreamOut Vertex Buffer." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDdi::DdiDrawAuto
+{
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevicestate_cpp1103 14 "%0DrawAuto called with a non-StreamOut Vertex Buffer." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::DrawAuto
+{
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevicestate_cpp3560 23 "%0Device=0x%10!p!: SRT: Status DSV=0x%11!p! Res=0x%12!p! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+pNewDsv, ItemPtr -- 11
+pNewDsv->Resource(), ItemPtr -- 12
+}
+#typev dxdevicestate_cpp3489 22 "%0Device=0x%10!p!:SRT:Status RTV rtIndex=%11!d! RTV=0x%12!p!,Resource = %13!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+x, ItemLong -- 11
+pNewRtvs[x], ItemPtr -- 12
+pNewRtvs[x]->Resource(), ItemPtr -- 13
+}
+#typev dxdevicestate_cpp3407 21 "%0Device=0x%10!p!: SRT: Status UnsetRT rtIndex=%11!d! NullRTV=0x%12!p! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+slot, ItemLong -- 11
+m_pNullRtView, ItemPtr -- 12
+}
+#typev dxdevicestate_cpp3367 20 "%0Device=0x%10!p!: SRT: Status SetRT rtIndex=%11!d! RTV=%12!p! Res=0x%13!p! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+x, ItemLong -- 11
+pNewRtvs[x], ItemPtr -- 12
+pNewRtvs[x]->Resource(), ItemPtr -- 13
+}
+#typev dxdevicestate_cpp3297 19 "%0Device=0x%10!p!: SRT: numRtViews=%11!d! numToUnset=%12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetRenderTarget
+{
+this, ItemPtr -- 10
+numRtViews, ItemLong -- 11
+numToUnset, ItemLong -- 12
+}
+#typev dxdevicestate_cpp3259 18 "%0Device=0x%10!p!, Unset Rect:left = %11!x!,top = %12!x!,right = %13!x!,bottom = %14!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetScissors
+{
+this, ItemPtr -- 10
+ClearScissor.left, ItemLong -- 11
+ClearScissor.top, ItemLong -- 12
+ClearScissor.right, ItemLong -- 13
+ClearScissor.bottom, ItemLong -- 14
+}
+#typev dxdevicestate_cpp3238 17 "%0Device=0x%10!p!, Set Rect: left = %11!x!,top = %12!x!,right = %13!x!,bottom = %14!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetScissors
+{
+this, ItemPtr -- 10
+pScissors[x].left, ItemLong -- 11
+pScissors[x].top, ItemLong -- 12
+pScissors[x].right, ItemLong -- 13
+pScissors[x].bottom, ItemLong -- 14
+}
+#typev dxdevicestate_cpp2275 15 "%0Device=0x%10!p!: Set SRV: Type=%11!d! Slot=%12!d! SRV=0x%13!p! Res=0x%14!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SetShaderResourceViews
+{
+this, ItemPtr -- 10
+shaderType, ItemLong -- 11
+slot, ItemLong -- 12
+pSrView, ItemPtr -- 13
+pSrView->Resource(), ItemPtr -- 14
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevicestate_cpp60 10 "%0Device=0x%10!p!: VAL GFX STATE: gfxDirty=0x%11!016I64X! genPreamble=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateGfxState
+{
+this, ItemPtr -- 10
+m_ddiState.gfxDirty.value, ItemLongLongXX -- 11
+m_stateFlags.genPreamble, ItemLong -- 12
+}
+#typev dxdevicestate_cpp579 13 "%0Device:0x%10!p! Shader size %11!u! exceeds allowed storage size %12!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateShaderObject
+{
+this, ItemPtr -- 10
+static_cast<UINT>(storeValueLen), ItemLong -- 11
+m_maxCachedPgmSizeInBytes, ItemLong -- 12
+}
+#typev dxdevicestate_cpp572 12 "%0Device:0x%10!p! Unable to store shader. Error Code: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateShaderObject
+{
+this, ItemPtr -- 10
+storeCachedValueResult, ItemLong -- 11
+}
+#typev dxdevicestate_cpp484 11 "%0Device:0x%10!p! Shader not found in cache. Error Code: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ValidateShaderObject
+{
+this, ItemPtr -- 10
+getCachedValueResult, ItemLong -- 11
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp1560 14 "%0DrawAuto called with a non-StreamOut Vertex Buffer." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDdi::DdiDrawAuto
+{
+}

@@ -1,0 +1,965 @@
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+568ef0cc-c786-3750-6d94-5a3e4994e278 src // SRC=q6ad_vs.c MJ= MN=
+#typev q6ad_c493 24 "%0ADCM.VS.q6ad_vs_dinit.In " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_deinit
+{
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_c398 23 "%0ADCM.VS.q6ad_vs_init.In " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_init
+{
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vs_c913 52 "%0ADCM.VS.Err.q6ad_vs_close.AlreadyClosed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_close
+{
+}
+#typev q6ad_vs_c999 57 "%0ADCM.VS.q6ad_vs_close.Handle(0x%10!x!).Status(0x%11!x!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_close
+{
+handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_vs_c981 56 "%0ADCM.VS.Err.q6ad_vs_close.qad_atl_send.Err(0x%10!x!).rOpcode(0x%11!x!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_close
+{
+result.u.rsp.status, ItemLong -- 10
+result.hdr.opcode, ItemLong -- 11
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vs_c933 53 "%0ADCM.VS.Err.q6ad_vs_close.DEREG_CALIB.qad_atl_send.Err(0x%10!x!).rOpcode(0x%11!x!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_close
+{
+result.u.rsp.status, ItemLong -- 10
+result.hdr.opcode, ItemLong -- 11
+}
+#typev q6ad_vs_c970 55 "%0ADCM.VS.q6ad_vs_close.packet header(0x%10!x!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_close
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c941 54 "%0ADCM.VS.q6ad_vs_close.DEREG_CALIB.qad_atl_send(%10!d!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_close
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c907 51 "%0ADCM.VS.q6ad_vs_close.Handle(0x%10!x!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_close
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c2311 160 "%0ADCM.VS.q6ad_vs_get_parm_SharedMem:get_param success " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_get_parm_SharedMem
+{
+}
+#typev q6ad_vs_c2306 159 "%0ADCM.VS.Err.q6ad_vs_get_parm_SharedMem:get_param failed due to bad param/module " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_get_parm_SharedMem
+{
+}
+#typev q6ad_vs_c2282 157 "%0ADCM.VS.Err.q6ad_vs_get_parm_SharedMem qad_atl_send failed for VS GET PARM" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_get_parm_SharedMem
+{
+}
+#typev q6ad_vs_c2288 158 "%0ADCM.VS.Err.q6ad_vs_get_parm_SharedMem: improper param size " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_get_parm_SharedMem
+{
+}
+#typev q6ad_vs_c2269 156 "%0ADCM.VS.q6ad_vs_get_parm_SharedMem module_id - 0x%10!x! param_id - 0x%11!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_get_parm_SharedMem
+{
+msg.u.voc_get_cal.module_id, ItemLong -- 10
+msg.u.voc_get_cal.param_id, ItemLong -- 11
+}
+#typev q6ad_vs_c2239 155 "%0q6ad_vc_get_parm_SharedMem physical addr msw - 0x%10!I64x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_get_parm_SharedMem
+{
+shrMemAdd, ItemLongLongX -- 10
+}
+#typev q6ad_vs_c2218 154 "%0ADCM.VS.Read: q6ad_vs_get_parm_SharedMem Handle [0x%10!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_get_parm_SharedMem
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c2066 145 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_DEREGISTER_EVENT_CLASS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c2055 144 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c2031 143 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_DEREGISTER_EVENT_CLASS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1803 129 "%0ADCM.VS.Err.q6ad_vs_ioctl Q6AD_CMD_VS_REGISTER_EVENT_CLASS  MmMapLockedPagesSpecifyCache raised exception " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1848 132 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1852 133 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_REGISTER_EVENT_CLASS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1822 131 "%0ADCM.VS.Err.q6ad_vs_ioctl Q6AD_CMD_VS_REGISTER_EVENT_CLASS  MmGetSystemAddressForMdlSafe returned NULL " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1812 130 "%0ADCM.VS.Err.q6ad_vs_ioctl Q6AD_CMD_VS_REGISTER_EVENT_CLASS  MmMapLockedPagesSpecifyCache returned NULL " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1792 128 "%0ADCM.VS.Err.q6ad_vs_ioctl Q6AD_CMD_VS_REGISTER_EVENT_CLASS  MmAllocatePagesForMdlEx failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1772 127 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENT_CLASS pEvtRxPathDelay failed with status [0x%10!x!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c1753 126 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_REGISTER_EVENT_CLASS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1671 125 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_PKTEXG_MAILBOX_RESET " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1667 124 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1659 123 "%0ADCM.VS.q6ad_vs_ioctl - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1646 122 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_PKTEXG_MAILBOX_RESET " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1640 121 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_PKTEXG_SET_MODE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1636 120 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1628 119 "%0ADCM.VS.q6ad_vs_ioctl - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1616 118 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_PKTEXG_SET_MODE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1609 117 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_MAILBOX_START " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1605 116 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1597 115 "%0ADCM.VS.q6ad_vs_ioctl.VS_MAILBOX_START - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1582 114 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_MAILBOX_START " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1575 113 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_MAILBOX_SET_CONFIG " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1571 112 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1563 111 "%0ADCM.VS.q6ad_vs_ioctl - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1553 110 "%0ADCM.VS.q6ad_vs_ioctl.VS_MAILBOX_SET_CONFIG mem_handle 0x%10!x! rx_circ_buf 0x%11!I64x! rx_size 0x%12!x! tx_circ_buf 0x%13!I64x! tx_size 0x%14!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.u.vs_mailbox_set_config.mem_handle, ItemLong -- 10
+msg.u.vs_mailbox_set_config.rx_circ_buf_mem_address, ItemLongLongX -- 11
+msg.u.vs_mailbox_set_config.rx_circ_buf_mem_size, ItemLong -- 12
+msg.u.vs_mailbox_set_config.tx_circ_buf_mem_address, ItemLongLongX -- 13
+msg.u.vs_mailbox_set_config.tx_circ_buf_mem_size, ItemPtr -- 14
+}
+#typev q6ad_vs_c1541 109 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_MAILBOX_SET_CONFIG " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1525 108 "%0ADCM.VS.Err.q6ad_vs_ioctl Q6AD_CMD_VS_MAILBOX_GET_VOC_PACKET_PROPERTIES,ioctl_cmd=0x%10!Ix!,rsp_opcode=0x%11!Ix!,status=0x%12!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+code, ItemPtr -- 10
+result.hdr.opcode, ItemPtr -- 11
+result.u.rsp_w_data.status, ItemPtr -- 12
+}
+#typev q6ad_vs_c1521 107 "%0ADCM.VS.Err.q6ad_vs_ioctl Q6AD_CMD_VS_MAILBOX_GET_VOC_PACKET_PROPERTIES- qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1515 106 "%0ADCM.VS.q6ad_vs_ioctl.VS_MAILBOX_GET_VOC_PACKET_PROPERTIES - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1504 105 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_MAILBOX_GET_VOC_PACKET_PROPERTIES " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1495 104 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_ENC_DTX_MODE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1491 103 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1483 102 "%0ADCM.VS.q6ad_vs_ioctl.SetEncDtxMode - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1469 101 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_ENC_RATE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1462 100 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_ENC_RATE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1458 99 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1450 98 "%0ADCM.VS.q6ad_vs_ioctl.SetEncRate - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1428 97 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_ENC_RATE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c2107 147 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_DEREGISTER_EVENTS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c2073 146 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_DEREGISTER_EVENTS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1875 135 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENTS failed because of invalid paramters. One of the handles is NULL " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c2023 142 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_REGISTER_EVENTS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1997 141 "%0ADCM.VS.q6ad_vs_ioctl - initializing events for IMS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1973 140 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENTS pHandleEvtDriverSurpriseRemovedImsAck failed  with status [0x%10!x!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c1945 139 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENTS pHandleEvtDriverSurpriseRemoved failed  with status [0x%10!x!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c1921 138 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENTS pHandleEvtMailboxStart failed  with status [0x%10!x!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c1902 137 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENTS pHandleEvtNotReady failed  with status [0x%10!x!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c1888 136 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENTS pHandleEvtReady failed with status [0x%10!x!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c1860 134 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_REGISTER_EVENTS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1337 86 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_STOP_RECORD " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1333 85 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1325 84 "%0ADCM.VS.q6ad_vs_ioctl.StopRecord - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1324 83 "%0ADCM.VS.q6ad_vs_ioctl qad_atl_send " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1310 82 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_STOP_RECORD " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1303 81 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_START_RECORD " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1299 80 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1290 79 "%0ADCM.VS.q6ad_vs_ioctl.StartRecord.mode(0x%10!x!).port_id(0x%11!x!).packet header(0x%12!x!).rx_tap_point(%13!d!). tx_tap_point(%14!d!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.u.vs_start_record.mode, ItemLong -- 10
+msg.u.vs_start_record.port_id, ItemLong -- 11
+msg.hdr.header, ItemLong -- 12
+msg.u.vs_start_record.rx_tap_point, ItemLong -- 13
+msg.u.vs_start_record.tx_tap_point, ItemLong -- 14
+}
+#typev q6ad_vs_c1272 78 "%0ADCM.VS.Err.Q6AD:AFE Can not get dev info from acdb or local db (%10!Id!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+vs_start_record_params->device_id, ItemPtr -- 10
+}
+#typev q6ad_vs_c1260 77 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_START_RECORD " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1248 76 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VOLUME_SET_MUTE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1244 75 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1234 74 "%0ADCM.VS.q6ad_vs_ioctl - packet header=0x%10!x! direction=%11!d! mute_flag=%12!d! ramp_duration = %13!d! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.hdr.header, ItemLong -- 10
+msg.u.set_mute.direction, ItemLong -- 11
+msg.u.set_mute.mute_flag, ItemLong -- 12
+msg.u.set_mute.ramp_duration_ms, ItemLong -- 13
+}
+#typev q6ad_vs_c1231 73 "%0ADCM.VS.q6ad_vs_ioctl qad_atl_send " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1212 72 "%0ADCM.VS.q6ad_vs_ioctl Q6AD_CMD_VOLUME_SET_MUTE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1208 71 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VOLUME_SET_MUTE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1140 67 "%0ADCM.VS.Err.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1163 68 "%0ADCM.VS.Err.q6ad_vs_ioctl:Q6AD_CMD_VS_SET_MEDIA_TYPE:unable to get free memory mapped buffers for OOB exchange" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1198 70 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_MEDIA_TYPE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1193 69 "%0ADCM.VS.Err.q6ad_vs_ioctl:VSS_IPKTEXG_CMD_OOB_SET_CONFIG qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1131 66 "%0q6ad_vs_ioctl:Q6AD_CMD_VS_SET_MEDIA_TYPE:VSS_IPKTEXG_CMD_SET_MODE" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1110 65 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_MEDIA_TYPE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1105 64 "%0ADCM.VS.Err.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1095 63 "%0ADCM.VS.q6ad_vs_ioctl - packet header=0x%10!x! rx_media_id=0x%11!x! tx_media_id=0x%12!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.hdr.header, ItemLong -- 10
+msg.u.vs_set_media.rx_media_id, ItemLong -- 11
+msg.u.vs_set_media.tx_media_id, ItemLong -- 12
+}
+#typev q6ad_vs_c1092 62 "%0q6ad_vs_ioctl qad_atl_send " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1072 61 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_MEDIA_TYPE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1387 92 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_START_PLAYBACK " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1384 91 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1376 90 "%0ADCM.VS.q6ad_vs_ioctl.StartPlay - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1375 89 "%0ADCM.VS.q6ad_vs_ioctl qad_atl_send " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1360 88 "%0ADCM.VS.Err.Q6AD:AFE Can not get dev info from acdb or local db (%10!Id!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+vs_start_playback_params->device_id, ItemPtr -- 10
+}
+#typev q6ad_vs_c1343 87 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_START_PLAYBACK " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1060 60 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_GET_CVS_HANDLE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1041 59 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_GET_CVS_HANDLE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c2116 148 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] rc [0x%11!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_vs_c1421 96 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_STOP_PLAYBACK " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1417 95 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl
+{
+}
+#typev q6ad_vs_c1409 94 "%0ADCM.VS.q6ad_vs_ioctl.StopPlayback - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1394 93 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_STOP_PLAYBACK " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1021 58 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c2066 145 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_DEREGISTER_EVENT_CLASS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c2055 144 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c2031 143 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_DEREGISTER_EVENT_CLASS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1803 129 "%0ADCM.VS.Err.q6ad_vs_ioctl Q6AD_CMD_VS_REGISTER_EVENT_CLASS  MmMapLockedPagesSpecifyCache raised exception " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1848 132 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1852 133 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_REGISTER_EVENT_CLASS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1822 131 "%0ADCM.VS.Err.q6ad_vs_ioctl Q6AD_CMD_VS_REGISTER_EVENT_CLASS  MmGetSystemAddressForMdlSafe returned NULL " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1812 130 "%0ADCM.VS.Err.q6ad_vs_ioctl Q6AD_CMD_VS_REGISTER_EVENT_CLASS  MmMapLockedPagesSpecifyCache returned NULL " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1792 128 "%0ADCM.VS.Err.q6ad_vs_ioctl Q6AD_CMD_VS_REGISTER_EVENT_CLASS  MmAllocatePagesForMdlEx failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1772 127 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENT_CLASS pEvtRxPathDelay failed with status [0x%10!x!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c1753 126 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_REGISTER_EVENT_CLASS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1671 125 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_PKTEXG_MAILBOX_RESET " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1667 124 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1659 123 "%0ADCM.VS.q6ad_vs_ioctl - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1646 122 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_PKTEXG_MAILBOX_RESET " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1640 121 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_PKTEXG_SET_MODE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1636 120 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1628 119 "%0ADCM.VS.q6ad_vs_ioctl - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1616 118 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_PKTEXG_SET_MODE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1609 117 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_MAILBOX_START " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1605 116 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1597 115 "%0ADCM.VS.q6ad_vs_ioctl.VS_MAILBOX_START - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1582 114 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_MAILBOX_START " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1575 113 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_MAILBOX_SET_CONFIG " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1571 112 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1563 111 "%0ADCM.VS.q6ad_vs_ioctl - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1553 110 "%0ADCM.VS.q6ad_vs_ioctl.VS_MAILBOX_SET_CONFIG mem_handle 0x%10!x! rx_circ_buf 0x%11!I64x! rx_size 0x%12!x! tx_circ_buf 0x%13!I64x! tx_size 0x%14!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.u.vs_mailbox_set_config.mem_handle, ItemLong -- 10
+msg.u.vs_mailbox_set_config.rx_circ_buf_mem_address, ItemLongLongX -- 11
+msg.u.vs_mailbox_set_config.rx_circ_buf_mem_size, ItemLong -- 12
+msg.u.vs_mailbox_set_config.tx_circ_buf_mem_address, ItemLongLongX -- 13
+msg.u.vs_mailbox_set_config.tx_circ_buf_mem_size, ItemPtr -- 14
+}
+#typev q6ad_vs_c1541 109 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_MAILBOX_SET_CONFIG " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1525 108 "%0ADCM.VS.Err.q6ad_vs_ioctl Q6AD_CMD_VS_MAILBOX_GET_VOC_PACKET_PROPERTIES,ioctl_cmd=0x%10!Ix!,rsp_opcode=0x%11!Ix!,status=0x%12!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+code, ItemPtr -- 10
+result.hdr.opcode, ItemPtr -- 11
+result.u.rsp_w_data.status, ItemPtr -- 12
+}
+#typev q6ad_vs_c1521 107 "%0ADCM.VS.Err.q6ad_vs_ioctl Q6AD_CMD_VS_MAILBOX_GET_VOC_PACKET_PROPERTIES- qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1515 106 "%0ADCM.VS.q6ad_vs_ioctl.VS_MAILBOX_GET_VOC_PACKET_PROPERTIES - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1504 105 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_MAILBOX_GET_VOC_PACKET_PROPERTIES " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1495 104 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_ENC_DTX_MODE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1491 103 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1483 102 "%0ADCM.VS.q6ad_vs_ioctl.SetEncDtxMode - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1469 101 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_ENC_RATE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1462 100 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_ENC_RATE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1458 99 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1450 98 "%0ADCM.VS.q6ad_vs_ioctl.SetEncRate - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1428 97 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_ENC_RATE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c2107 147 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_DEREGISTER_EVENTS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c2073 146 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_DEREGISTER_EVENTS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1875 135 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENTS failed because of invalid paramters. One of the handles is NULL " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c2023 142 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_REGISTER_EVENTS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1997 141 "%0ADCM.VS.q6ad_vs_ioctl - initializing events for IMS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1973 140 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENTS pHandleEvtDriverSurpriseRemovedImsAck failed  with status [0x%10!x!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c1945 139 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENTS pHandleEvtDriverSurpriseRemoved failed  with status [0x%10!x!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c1921 138 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENTS pHandleEvtMailboxStart failed  with status [0x%10!x!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c1902 137 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENTS pHandleEvtNotReady failed  with status [0x%10!x!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c1888 136 "%0ADCM.VS.Err.Q6AD_CMD_VS_REGISTER_EVENTS pHandleEvtReady failed with status [0x%10!x!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c1860 134 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_REGISTER_EVENTS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1337 86 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_STOP_RECORD " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1333 85 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1325 84 "%0ADCM.VS.q6ad_vs_ioctl.StopRecord - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1324 83 "%0ADCM.VS.q6ad_vs_ioctl qad_atl_send " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1310 82 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_STOP_RECORD " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1303 81 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_START_RECORD " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1299 80 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1290 79 "%0ADCM.VS.q6ad_vs_ioctl.StartRecord.mode(0x%10!x!).port_id(0x%11!x!).packet header(0x%12!x!).rx_tap_point(%13!d!). tx_tap_point(%14!d!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.u.vs_start_record.mode, ItemLong -- 10
+msg.u.vs_start_record.port_id, ItemLong -- 11
+msg.hdr.header, ItemLong -- 12
+msg.u.vs_start_record.rx_tap_point, ItemLong -- 13
+msg.u.vs_start_record.tx_tap_point, ItemLong -- 14
+}
+#typev q6ad_vs_c1272 78 "%0ADCM.VS.Err.Q6AD:AFE Can not get dev info from acdb or local db (%10!Id!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+vs_start_record_params->device_id, ItemPtr -- 10
+}
+#typev q6ad_vs_c1260 77 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_START_RECORD " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1248 76 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VOLUME_SET_MUTE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1244 75 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1234 74 "%0ADCM.VS.q6ad_vs_ioctl - packet header=0x%10!x! direction=%11!d! mute_flag=%12!d! ramp_duration = %13!d! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.hdr.header, ItemLong -- 10
+msg.u.set_mute.direction, ItemLong -- 11
+msg.u.set_mute.mute_flag, ItemLong -- 12
+msg.u.set_mute.ramp_duration_ms, ItemLong -- 13
+}
+#typev q6ad_vs_c1231 73 "%0ADCM.VS.q6ad_vs_ioctl qad_atl_send " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1212 72 "%0ADCM.VS.q6ad_vs_ioctl Q6AD_CMD_VOLUME_SET_MUTE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1208 71 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VOLUME_SET_MUTE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1140 67 "%0ADCM.VS.Err.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1163 68 "%0ADCM.VS.Err.q6ad_vs_ioctl:Q6AD_CMD_VS_SET_MEDIA_TYPE:unable to get free memory mapped buffers for OOB exchange" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1198 70 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_MEDIA_TYPE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1193 69 "%0ADCM.VS.Err.q6ad_vs_ioctl:VSS_IPKTEXG_CMD_OOB_SET_CONFIG qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1131 66 "%0q6ad_vs_ioctl:Q6AD_CMD_VS_SET_MEDIA_TYPE:VSS_IPKTEXG_CMD_SET_MODE" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1110 65 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_MEDIA_TYPE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1105 64 "%0ADCM.VS.Err.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1095 63 "%0ADCM.VS.q6ad_vs_ioctl - packet header=0x%10!x! rx_media_id=0x%11!x! tx_media_id=0x%12!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.hdr.header, ItemLong -- 10
+msg.u.vs_set_media.rx_media_id, ItemLong -- 11
+msg.u.vs_set_media.tx_media_id, ItemLong -- 12
+}
+#typev q6ad_vs_c1092 62 "%0q6ad_vs_ioctl qad_atl_send " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1072 61 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_SET_MEDIA_TYPE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1387 92 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_START_PLAYBACK " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1384 91 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1376 90 "%0ADCM.VS.q6ad_vs_ioctl.StartPlay - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1375 89 "%0ADCM.VS.q6ad_vs_ioctl qad_atl_send " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1360 88 "%0ADCM.VS.Err.Q6AD:AFE Can not get dev info from acdb or local db (%10!Id!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+vs_start_playback_params->device_id, ItemPtr -- 10
+}
+#typev q6ad_vs_c1343 87 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_START_PLAYBACK " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1060 60 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_GET_CVS_HANDLE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1041 59 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_CMD_VS_GET_CVS_HANDLE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c2116 148 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] rc [0x%11!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_vs_c1421 96 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_STOP_PLAYBACK " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1417 95 "%0ADCM.VS.Err.q6ad_vs_ioctl qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_ioctl$filt$0
+{
+}
+#typev q6ad_vs_c1409 94 "%0ADCM.VS.q6ad_vs_ioctl.StopPlayback - packet header=0x%10!x! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_ioctl$filt$0
+{
+msg.hdr.header, ItemLong -- 10
+}
+#typev q6ad_vs_c1394 93 "%0q6ad_vs_ioctl Handle [0x%10!x!] Q6AD_VS_IOCTL_STOP_PLAYBACK " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c1021 58 "%0ADCM.VS.q6ad_vs_ioctl Handle [0x%10!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_ioctl$filt$0
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c269 13 "%0ADCM.VS.Err.q6ad_vs_obj_atl_cb.Err.NOTIFY_DEC_BUFFER_REQUEST.NullCBpointer " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_obj_atl_cb
+{
+}
+#typev q6ad_vs_c407 22 "%0ADCM.VS.q6ad_vs_obj_atl_cb.VSS_IAVSYNC_EVT_RX_PATH_DELAY_ret(0x%10!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_obj_atl_cb
+{
+ret, ItemPtr -- 10
+}
+#typev q6ad_vs_c397 21 "%0ADCM.VS.q6ad_vs_obj_atl_cb.VSS_IAVSYNC_EVT_RX_PATH_DELAY(0x%10!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_obj_atl_cb
+{
+msg->u.vs_iavsync_rx_delay.delay_us, ItemPtr -- 10
+}
+#typev q6ad_vs_c386 20 "%0ADCM.VS.q6ad_vs_obj_atl_cb.VSS_IPKTEXG_EVT_MAILBOX_REQUEST_TO_START(0x%10!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_obj_atl_cb
+{
+ret, ItemPtr -- 10
+}
+#typev q6ad_vs_c340 17 "%0ADCM.VS.Err.q6ad_vs_obj_atl_cb.OOB_NOTIFY_ENC_BUFFER_READY.Err.NullCBpointer " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_obj_atl_cb
+{
+}
+#typev q6ad_vs_c331 16 "%0ADCM.VS.q6ad_vs_obj_atl_cb.VSS_IPKTEXG_EVT_OOB_NOTIFY_ENC_BUFFER_CONSUMED  " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_obj_atl_cb
+{
+}
+#typev q6ad_vs_c324 15 "%0ADCM.VS.Err.q6ad_vs_obj_atl_cb.q6ad_atl_send.VSS_IPKTEXG_EVT_OOB_NOTIFY_ENC_BUFFER_CONSUMED.Err(0x%10!IX!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_obj_atl_cb
+{
+rc1, ItemPtr -- 10
+}
+#typev q6ad_vs_c371 19 "%0ADCM.VS.q6ad_vs_obj_atl_cb.VSS_ISTREAM_EVT_READY(0x%10!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_obj_atl_cb
+{
+ret, ItemPtr -- 10
+}
+#typev q6ad_vs_c356 18 "%0ADCM.VS.q6ad_vs_obj_atl_cb.VSS_ISTREAM_EVT_READY(0x%10!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_obj_atl_cb
+{
+ret, ItemPtr -- 10
+}
+#typev q6ad_vs_c292 14 "%0ADCM.VS.Err.q6ad_vs_obj_atl_cb.Err.SEND_ENC_BUFFER.NullCBpointer " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_obj_atl_cb
+{
+}
+#typev q6ad_vs_c248 12 "%0ADCM.VS.Err.q6ad_vs_obj_atl_cb.Err.REQUEST_DEC_BUFFER.NullCBpointer " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_obj_atl_cb
+{
+}
+#typev q6ad_vs_c234 11 "%0ADCM.VS.q6ad_vs_obj_atl_cb.OpCode(0x%10!Ix!).len(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_obj_atl_cb
+{
+packet->opcode, ItemPtr -- 10
+buf_len, ItemPtr -- 11
+}
+#typev q6ad_vs_c227 10 "%0ADCM.VS.Err.q6ad_vs_obj_atl_cb.Err.InvalidClientData " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_obj_atl_cb
+{
+}
+#typev q6ad_vs_c868 50 "%0ADCM.VS.q6ad_vs_open.Status(0x%10!x!).Handle(0x%11!x!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+rc, ItemLong -- 10
+open_id, ItemLong -- 11
+}
+#typev q6ad_vs_c706 35 "%0ADCM.VS.Err.q6ad_vs_open.q6ad_atl_send.Err(0x%10!Ix!).rOpcode(0x%11!Ix!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_open
+{
+result.u.rsp.status, ItemPtr -- 10
+result.hdr.opcode, ItemPtr -- 11
+}
+#typev q6ad_vs_c786 43 "%0ADCM.VS.Err.q6ad_vs_open.get_columns_info_size.Err(%10!d!).columns_info_size(%11!d!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_open
+{
+rc, ItemLong -- 10
+columns_info_size, ItemLong -- 11
+}
+#typev q6ad_vs_c827 46 "%0ADCM.VS.Err.q6ad_vs_open.get_columns_info.Err(%10!d!).columns_info_read(%11!d!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_open
+{
+rc, ItemLong -- 10
+columns_info_read, ItemLong -- 11
+}
+#typev q6ad_vs_c851 48 "%0ADCM.VS.Err.q6ad_vs_open.q6ad_vs_register_calibration.q6ad_atl_send.Err(0x%10!x!).rOpcode(0x%11!x!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_open
+{
+result.u.rsp.status, ItemLong -- 10
+result.hdr.opcode, ItemLong -- 11
+}
+#typev q6ad_vs_c861 49 "%0ADCM.VS.q6ad_vs_open.Status(%10!d!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c834 47 "%0ADCM.VS.q6ad_vs_open.get_columns_info(%10!d!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+columns_info_read, ItemLong -- 10
+}
+#typev q6ad_vs_c803 45 "%0ADCM.VS.Err.q6ad_vs_open.ExAllocatePoolWithTag.StreamCalib.Err(size %10!d!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_open
+{
+msg_len, ItemLong -- 10
+}
+#typev q6ad_vs_c792 44 "%0ADCM.VS.q6ad_vs_open.ColumnsSize(%10!d!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+columns_info_size, ItemLong -- 10
+}
+#typev q6ad_vs_c773 42 "%0ADCM.VS.Err.q6ad_vs_open.q6ad_voc_common_get_calibration.Err(%10!d!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_open
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_vs_c767 41 "%0ADCM.VS.q6ad_vs_open.q6ad_voc_common_get_calibration(%10!d!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+cal_read, ItemLong -- 10
+}
+#typev q6ad_vs_c755 40 "%0ADCM.VS.Err.q6ad_vs_open.Err.AllocPhysicalMemory " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_open
+{
+}
+#typev q6ad_vs_c748 39 "%0ADCM.VS.q6ad_vs_open.buf_index(%10!d!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+buf_index, ItemLong -- 10
+}
+#typev q6ad_vs_c744 38 "%0ADCM.VS.Err.q6ad_vs_open.MemMap.Err(0x%10!x!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_open
+{
+rc, ItemLong -- 10
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_vs_c721 37 "%0ADCM.VS.q6ad_vs_open.Out.Q6AD_VS_OPENID_PASSIVE_CONTROL " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+}
+#typev q6ad_vs_c715 36 "%0ADCM.VS.q6ad_vs_open.q6ad_atl_send(0x%10!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_vs_c695 34 "%0ADCM.VS.q6ad_vs_open(0x%10!x!).qad_atl_send.Header(0x%11!x!).name(%12!s!).Handle(%13!d!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_open
+{
+open_id, ItemLong -- 10
+msg.hdr.header, ItemLong -- 11
+msg.u.vs_passive_control.name, ItemString -- 12
+pVsSess->h_q6ad_vs, ItemLong -- 13
+}
+#typev q6ad_vs_c673 33 "%0ADCM.VS.q6ad_vs_open.Handle(%10!d!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+pVsSess->h_q6ad_vs, ItemLong -- 10
+}
+#typev q6ad_vs_c659 32 "%0ADCM.VS.q6ad_vs_open.In.Q6AD_VS_OPENID_PASSIVE_CONTROL " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+}
+#typev q6ad_vs_c640 30 "%0ADCM.VS.Err.q6ad_vs_open.q6ad_atl_send.Err(0x%10!Ix!).rOpcode(0x%11!Ix!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_open
+{
+result.u.rsp.status, ItemPtr -- 10
+result.hdr.opcode, ItemPtr -- 11
+}
+#typev q6ad_vs_c649 31 "%0ADCM.VS.q6ad_vs_open.q6ad_atl_send(0x%10!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_vs_c626 29 "%0ADCM.VS.q6ad_vs_open(0x%10!x!).Direction(%11!d!).enc_media(%12!d!).dec_media(%13!d!).network_id(%14!d!).Handle(%15!d!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_open
+{
+open_id, ItemLong -- 10
+msg.u.vs_full_control.direction, ItemLong -- 11
+msg.u.vs_full_control.enc_media_type, ItemLong -- 12
+msg.u.vs_full_control.dec_media_type, ItemLong -- 13
+msg.u.vs_full_control.network_id, ItemLong -- 14
+pVsSess->h_q6ad_vs, ItemLong -- 15
+}
+#typev q6ad_vs_c599 28 "%0ADCM.VS.q6ad_vs_open.CB.Registered " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+}
+#typev q6ad_vs_c593 27 "%0ADCM.VS.q6ad_vs_open.Handle(%10!d!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+pVsSess->h_q6ad_vs, ItemLong -- 10
+}
+#typev q6ad_vs_c578 26 "%0ADCM.VS.q6ad_vs_open.Q6AD_VS_OPENID_FULL_CONTROL " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+}
+#typev q6ad_vs_c561 25 "%0ADCM.VS.q6ad_vs_open.ID(0x%10!x!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_open
+{
+open_id, ItemLong -- 10
+}
+#typev q6ad_vs_c2431 164 "%0ADCM.VS.Err.q6ad_vs_read qad_atl_send failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_set_parm_SharedMem
+{
+}
+#typev q6ad_vs_c2420 163 "%0ADCM.VS.q6ad_vs_set_parm_SharedMem module_id - 0x%10!x! param_id - 0x%11!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_VOICE_INFO FUNC=q6ad_vs_set_parm_SharedMem
+{
+vs_parmData.module_id, ItemLong -- 10
+vs_parmData.param_id, ItemLong -- 11
+}
+#typev q6ad_vs_c2376 162 "%0q6ad_vc_set_parm_SharedMem physical addr msw - 0x%10!I64x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_set_parm_SharedMem
+{
+shrMemAdd, ItemLongLongX -- 10
+}
+#typev q6ad_vs_c2348 161 "%0ADCM.VS.q6ad_vs_set_parm_SharedMem Handle [0x%10!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_set_parm_SharedMem
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_vs_c2189 153 "%0ADCM.VS.q6ad_vs_write sucesfull (media_id=0x%10!x!, size=0x%11!x!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_write
+{
+vs_write_params->media_id, ItemLong -- 10
+vs_write_params->buf_size, ItemLong -- 11
+}
+#typev q6ad_vs_c2184 152 "%0ADCM.VS.Err.q6ad_vs_write failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_VOICE_ERROR FUNC=q6ad_vs_write
+{
+}
+#typev q6ad_vs_c2162 150 "%0ADCM.VS.q6ad_vs_write  (media_id=0x%10!x!, size=0x%11!x!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_DATA FLAGS=ADCM_VOICE_DATA FUNC=q6ad_vs_write
+{
+vs_write_params->media_id, ItemLong -- 10
+vs_write_params->buf_size, ItemLong -- 11
+}
+#typev q6ad_vs_c2141 149 "%0ADCM.VS.q6ad_vs_write:handle_id (0x%10!x!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_VOICE_VERBOSE FUNC=q6ad_vs_write
+{
+handle, ItemLong -- 10
+}

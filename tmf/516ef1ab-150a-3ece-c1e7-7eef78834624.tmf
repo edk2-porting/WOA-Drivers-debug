@@ -1,0 +1,21 @@
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+516ef1ab-150a-3ece-c1e7-7eef78834624 driver // SRC=ClockApps.c MJ= MN=
+#typev ClockWin_c1225 13 "%0%10!s! SUPPRESSIBLE clock restored back to on" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=PepClockProcessorRestore
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockWin_c1198 12 "%0%10!s! SUPPRESSIBLE clock forced off" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=PepClockProcessorSleep
+{
+pClock->szName, ItemString -- 10
+}
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev ClockApps_c391 10 "%0DALSYS_LOGEVENT_ERROR: Failed to create NPA client for %10!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_HMSSAHBNodeReadyCallback
+{
+(char *)pResourceName, ItemString -- 10
+}
+#typev ClockApps_c442 11 "%0DALSYS_LOGEVENT_ERROR: Failed to create NPA client for %10!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_MMNOCAHBNodeReadyCallback
+{
+(char *)pResourceName, ItemString -- 10
+}

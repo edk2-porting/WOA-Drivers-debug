@@ -1,0 +1,112 @@
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+53c0e100-190d-3b6c-14a7-fac6070fed00 PEP // SRC=PEP_DState_Mgmt.c MJ= MN=
+#typev PEP_DState_Mgmt_c410 27 "%0 [Verb] PEP_DState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepDevicePowerState
+{
+}
+#typev PEP_DState_Mgmt_c402 26 "%0 [Err ] PEP_DState_Mgmt.c::%!FUNC!::402 :Device: (%10!s!))RequestPEPWorker failed for a D-state power request: D%11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+DevicePowerState->PowerState - 1, ItemLong -- 11
+}
+#typev PEP_DState_Mgmt_c388 25 "%0 [Verb] PEP_DState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepDevicePowerState
+{
+}
+#typev PEP_DState_Mgmt_c367 24 "%0 [Err ] PEP_DState_Mgmt.c::%!FUNC!::367 :Incorrect Power Device State: D%10!d! for Device: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+DevicePowerState->PowerState - 1, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_DState_Mgmt_c356 23 "%0 [Info] PEP_DState_Mgmt.c::%!FUNC! :Device: (%10!s!))Transition to D%11!u! is Starting, return - Do nothing)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+DevicePowerState->PowerState - 1, ItemLong -- 11
+}
+#typev PEP_DState_Mgmt_c333 22 "%0 [Err ] PEP_DState_Mgmt.c::%!FUNC!::333 : Wrong IRQL. Correct IRQL PASSIVE_LEVEL, Current IRQL: %10!d! for Device: %11!s!, Power Device State: D%12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+currIRQL, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+DevicePowerState->PowerState - 1, ItemLong -- 12
+}
+#typev PEP_DState_Mgmt_c324 21 "%0 [Info] PEP_DState_Mgmt.c::%!FUNC! :Device:(%10!s!)) D0 starts )" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_DState_Mgmt_c300 20 "%0 [Err ] PEP_DState_Mgmt.c::%!FUNC!::300 : Wrong IRQL. Correct IRQL PASSIVE_LEVEL, Current IRQL: %10!d! for Device: %11!s!, Power Device State: D%12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+currIRQL, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+DevicePowerState->PowerState - 1, ItemLong -- 12
+}
+#typev PEP_DState_Mgmt_c291 19 "%0 [Info] PEP_DState_Mgmt.c::%!FUNC! :Device: (%10!s!))a previous D-State Change In Progress, unblocked event hDStateProgressEvent!!!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_DState_Mgmt_c237 18 "%0 [Err ] PEP_DState_Mgmt.c::%!FUNC!::237 :Incorrect Power Device State: %10!d! , so need to Assert for Device: (%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+DevicePowerState->PowerState, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_DState_Mgmt_c227 17 "%0 [Info] PEP_DState_Mgmt.c::%!FUNC! :Device: (%10!s!)currIRQL = %11!u!, Transition to D%12!d! is Complete !!!  --> Adjust resource later" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+currIRQL, ItemLong -- 11
+DevicePowerState->PowerState - 1, ItemLong -- 12
+}
+#typev PEP_DState_Mgmt_c214 16 "%0 [Info] PEP_DState_Mgmt.c::%!FUNC! :Device: (%10!s!))PTempDevListNode->DStateChangeInProgress set to FALSE, D0 is Complete, return)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_DState_Mgmt_c185 15 "%0 [Verb] PEP_DState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepDevicePowerState
+{
+}
+#typev PEP_DState_Mgmt_c177 14 "%0 [Warn] PEP_DState_Mgmt.c::%!FUNC! :Device: (%10!s!)Current D-state is the same as requested one, Exiting!!!Requested power state D%11!u!, Current power state D%12!u!, DStateChangeInProgress=%13!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+DevicePowerState->PowerState-1, ItemLong -- 11
+PTempDevListNode->D_State->setArray[0].currentState, ItemLong -- 12
+PTempDevListNode->DStateChangeInProgress, ItemLong -- 13
+}
+#typev PEP_DState_Mgmt_c152 13 "%0 [Info] PEP_DState_Mgmt.c::%!FUNC! :Device: (%10!s!)D%11!u! %12!s! transition, Prev Req Pending=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+DevicePowerState->PowerState - 1, ItemLong -- 11
+DevicePowerState->Complete ? L'End' : L'Start', ItemWString -- 12
+PTempDevListNode->DStateChangeInProgress, ItemLong -- 13
+}
+#typev PEP_DState_Mgmt_c139 12 "%0 [Verb] PEP_DState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepDevicePowerState
+{
+}
+#typev PEP_DState_Mgmt_c137 11 "%0 [Err ] PEP_DState_Mgmt.c::%!FUNC!::137 :Invalid device handle for device" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerState
+{
+}
+#typev PEP_DState_Mgmt_c101 10 "%0 [Verb] PEP_DState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepDevicePowerState
+{
+}
+#typev PEP_DState_Mgmt_c599 35 "%0 [Verb] PEP_DState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepDevicePowerStateWork
+{
+}
+#typev PEP_DState_Mgmt_c583 34 "%0 [Info] PEP_DState_Mgmt.c::%!FUNC! :Device: (%10!s!))Adjusted resources for D%11!u!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerStateWork
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempDevListNode->D_State->setArray[0].currentState, ItemLong -- 11
+}
+#typev PEP_DState_Mgmt_c567 33 "%0 [Info] PEP_DState_Mgmt.c::%!FUNC! :Device: (%10!s!))PTempDevListNode->DStateChangeInProgress set to FALSE)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerStateWork
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_DState_Mgmt_c465 32 "%0 [Verb] PEP_DState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepDevicePowerStateWork
+{
+}
+#typev PEP_DState_Mgmt_c462 31 "%0 [Err ] PEP_DState_Mgmt.c::%!FUNC!::462 :Device is NULLPTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerStateWork
+{
+}
+#typev PEP_DState_Mgmt_c454 30 "%0 [Verb] PEP_DState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepDevicePowerStateWork
+{
+}
+#typev PEP_DState_Mgmt_c452 29 "%0 [Err ] PEP_DState_Mgmt.c::%!FUNC!::452 :PPEP_DEVICE_POWER_STATE is NULL, so exiting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepDevicePowerStateWork
+{
+}
+#typev PEP_DState_Mgmt_c449 28 "%0 [Verb] PEP_DState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepDevicePowerStateWork
+{
+}

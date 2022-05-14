@@ -1,0 +1,1055 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+1e2d1c19-a5d8-3c57-298e-02ad246e2ea6 MBB // SRC=MPSubPhoneState.c MJ= MN=
+#typev MPSubPhoneState_c890 45 "%0<sub#%10!d!> %!FUNC!:: fSvdCapable=%11!d!, VoiceDataCap=0x%12!x!, CurrentDataClass=0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IsCurrentNwSvdCapable
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+fSvdCapable, ItemLong -- 11
+VoiceDataCap, ItemLong -- 12
+pSubPhoneInfo->WwanServingState.PacketService.CurrentDataClass, ItemLong -- 13
+}
+#typev MPSubPhoneState_c2753 173 "%0<sub#%10!d!> %!FUNC!:: SSRInitRefCount = %11!d!, bResetInProgresss = %12!d!, MssrState = %13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_AdaptersInitCompleted
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->SSRInitRefCount, ItemLong -- 11
+pSubPhoneInfo->bResetInProgresss, ItemLong -- 12
+pSubPhoneInfo->MssrState, ItemLong -- 13
+}
+#typev MPSubPhoneState_c2733 172 "%0<sub#%10!d!> %!FUNC!:: Handle dangling Virtual Adapters." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_AdaptersInitCompleted
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2730 171 "%0<sub#%10!d!> %!FUNC!:: SSR handling complete." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_AdaptersInitCompleted
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2114 131 "%0<sub#%10!d!> %!FUNC!:: IGNORED evt=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+evt, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2098 130 "%0<sub#%10!d!> %!FUNC!:: MODEM_DOWN nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c2082 129 "%0<sub#%10!d!> %!FUNC!:: CALL_UP nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c2074 128 "%0<sub#%10!d!> %!FUNC!:: DATACLASS_LOST nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c2059 127 "%0<sub#%10!d!> %!FUNC!:: DATACLASS_LOST, PS Detach notification suppressed ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2053 126 "%0<sub#%10!d!> %!FUNC!:: DATACLASS_LOST, SuppressNwPSDetachNotification=%11!d!, bPSDetachRequestedByOS=%12!d!, bServiceLost=%13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+GlobalData.SuppressNwPSDetachNotification, ItemLong -- 11
+pSubPhoneInfo->bPSDetachRequestedByOS, ItemLong -- 12
+bServiceLost, ItemLong -- 13
+}
+#typev MPSubPhoneState_c2044 125 "%0<sub#%10!d!> %!FUNC!:: DATACLASS_LOST, ignored, bDDSSwitchInProgress=%11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->bDDSSwitchInProgress, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2030 124 "%0<sub#%10!d!> %!FUNC!:: SUBPHONE_EVT_SERVICE_IWLAN_STATE_CHANGED notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2021 123 "%0<sub#%10!d!> %!FUNC!:: SERVICE_SIGNAL_CHANGED notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2012 122 "%0<sub#%10!d!> %!FUNC!:: DATACLASS_CHANGE notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1979 121 "%0<sub#%10!d!> %!FUNC!:: SERVICE_HOME notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1974 120 "%0<sub#%10!d!> %!FUNC!:: SERVICE_ROAMING notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1954 119 "%0<sub#%10!d!> %!FUNC!:: RADIO_STATE_CHANGED." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c1946 118 "%0<sub#%10!d!> %!FUNC!:: SERVICE_LOST." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c1935 117 "%0<sub#%10!d!> %!FUNC!:: SIM_REMOVED." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c1926 116 "%0<sub#%10!d!> %!FUNC!:: EXIT notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1917 115 "%0<sub#%10!d!> %!FUNC!:: ENTRY notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1896 114 "%0<sub#%10!d!> %!FUNC!:: PRENTRY_CHECK nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Attached_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c2892 181 "%0<sub#%10!d!> %!FUNC!:: ERROR, pSubPhoneAdapter=NULL, No Adapter to start the OOS Recovery timer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_DSDDataClassChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2875 180 "%0<sub#%10!d!> %!FUNC!:: bDataCallup = %11!d!. DsdCurrentDataClass = 0x%12!x!. PacketServiceDetachRequestSentByOS = %13!d!. NasRegisterState = 0x%14!x!. OOS recovery timer = %15!d! seconds." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_DSDDataClassChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+bDataCallup, ItemLong -- 11
+DsdCurrentDataClass, ItemLong -- 12
+pSubPhoneInfo->bPSDetachRequestedByOS, ItemLong -- 13
+NasRegState, ItemLong -- 14
+GlobalData.OOSRecoveryTimer, ItemLong -- 15
+}
+#typev MPSubPhoneState_c2943 183 "%0<sub#%10!d!> %!FUNC!:: IGNORED! Device is not in DSDA_2DATA mode" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_DSDDataClassChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2922 182 "%0<sub#%10!d!> %!FUNC!:: PROCESSING!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_DSDDataClassChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2857 179 "%0<sub#%10!d!> %!FUNC!:: ePDG ON" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_DSDDataClassChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2849 178 "%0<sub#%10!d!> %!FUNC!:: ePDG OFF" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_DSDDataClassChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2845 177 "%0<sub#%10!d!> %!FUNC!:: DsdCurrentDataClass = 0x%11!x!, isCurrentDataClassEPDG = %12!d!, isEPDGOn = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_DSDDataClassChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+DsdCurrentDataClass, ItemLong -- 11
+isCurrentDataClassEPDG, ItemLong -- 12
+isEPDGOn, ItemLong -- 13
+}
+#typev MPSubPhoneState_c2830 176 "%0<sub#%10!d!> %!FUNC!:: IGNORED! DSDS or DSDA_1DATA device with non-DDS subscription or DSDA_2DATA device." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_DataClassChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2800 175 "%0<sub#%10!d!> %!FUNC!:: ERROR, pSubPhoneWdsAdapter=NULL, No Adapter to start the OOS Recovery timer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_DataClassChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2783 174 "%0<sub#%10!d!> %!FUNC!:: bDataCallup = %11!d!. WdsCurrentDataClass = 0x%12!x!. PacketServiceDetachRequestSentByOS = %13!d!. NasRegisterState = 0x%14!x!. OOS recovery timer = %15!d! seconds." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_DataClassChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+bDataCallup, ItemLong -- 11
+WdsCurrentDataClass, ItemLong -- 12
+pSubPhoneInfo->bPSDetachRequestedByOS, ItemLong -- 13
+NasRegState, ItemLong -- 14
+GlobalData.OOSRecoveryTimer, ItemLong -- 15
+}
+#typev MPSubPhoneState_c721 35 "%0<sub#%10!d!> %!FUNC!:: Notified CurrentCellularClass=0x%11!x!, Updated CurrentCellularClass=0x%12!x!, bChanged=%13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_HasCellularClassChanged
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.CurrentCellularClass, ItemLong -- 11
+pSubPhoneInfo->NdisRegisterState.RegistrationState.CurrentCellularClass, ItemLong -- 12
+bChanged, ItemLong -- 13
+}
+#typev MPSubPhoneState_c745 36 "%0<sub#%10!d!> %!FUNC!:: RegisterState=0x%11!x!, bServiceLost=%12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_HasLostService
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->RegisterState, ItemLong -- 11
+bServiceLost, ItemLong -- 12
+}
+#typev MPSubPhoneState_c348 16 "%0<sub#%10!d!> %!FUNC!:: bChanged=%11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_HasPacketInfoChanged
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+bChanged, ItemLong -- 11
+}
+#typev MPSubPhoneState_c341 15 "%0<sub#%10!d!> %!FUNC!:: isDDS=%11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_HasPacketInfoChanged
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+MPQMI_IsDDS (MPSubPhoneInfo_GetNasClient (pSubPhoneInfo)), ItemLong -- 11
+}
+#typev MPSubPhoneState_c332 14 "%0<sub#%10!d!> %!FUNC!:: NOTIFIED uNwError=%11!d!, PacketServiceState=0x%12!x!, AvailableDataClass=0x%13!x! CurrentDataClass=0x%14!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_HasPacketInfoChanged
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NotifiedWwanServingState.PacketService.uNwError, ItemLong -- 11
+pSubPhoneInfo->NotifiedWwanServingState.PacketService.PacketServiceState, ItemLong -- 12
+pSubPhoneInfo->NotifiedWwanServingState.PacketService.AvailableDataClass, ItemLong -- 13
+pSubPhoneInfo->NotifiedWwanServingState.PacketService.CurrentDataClass, ItemLong -- 14
+}
+#typev MPSubPhoneState_c325 13 "%0<sub#%10!d!> %!FUNC!:: UPDATED uNwError=%11!d!, PacketServiceState=0x%12!x!, AvailableDataClass=0x%13!x! CurrentDataClass=0x%14!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_HasPacketInfoChanged
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->WwanServingState.PacketService.uNwError, ItemLong -- 11
+pSubPhoneInfo->WwanServingState.PacketService.PacketServiceState, ItemLong -- 12
+pSubPhoneInfo->WwanServingState.PacketService.AvailableDataClass, ItemLong -- 13
+pSubPhoneInfo->WwanServingState.PacketService.CurrentDataClass, ItemLong -- 14
+}
+#typev MPSubPhoneState_c312 12 "%0<sub#%10!d!> %!FUNC!:: bChanged=%11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_HasRegisterInfoChanged
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+bChanged, ItemLong -- 11
+}
+#typev MPSubPhoneState_c296 11 "%0<sub#%10!d!> %!FUNC!:: NOTIFIED NwError=%11!d!, RegisterState=0x%12!x!, RegisterMode=0x%13!x! ProviderId=%14!s!, ProviderName=%15!s!, RoamingText=%16!s!, WwanRegFlags=0x%17!x!, CurrentCellularClass=0x%18!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_HasRegisterInfoChanged
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.uNwError, ItemLong -- 11
+pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.RegisterState, ItemLong -- 12
+pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.RegisterMode, ItemLong -- 13
+pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.ProviderId, ItemWString -- 14
+pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.ProviderName, ItemWString -- 15
+pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.RoamingText, ItemWString -- 16
+pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.WwanRegFlags, ItemLong -- 17
+pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.CurrentCellularClass, ItemLong -- 18
+}
+#typev MPSubPhoneState_c285 10 "%0<sub#%10!d!> %!FUNC!:: UPDATED NwError=%11!d!, RegisterState=0x%12!x!, RegisterMode=0x%13!x! ProviderId=%14!s!, ProviderName=%15!s!, RoamingText=%16!s!, WwanRegFlags=0x%17!x!, CurrentCellularClass=0x%18!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_HasRegisterInfoChanged
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NdisRegisterState.RegistrationState.uNwError, ItemLong -- 11
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RegisterState, ItemLong -- 12
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RegisterMode, ItemLong -- 13
+pSubPhoneInfo->NdisRegisterState.RegistrationState.ProviderId, ItemWString -- 14
+pSubPhoneInfo->NdisRegisterState.RegistrationState.ProviderName, ItemWString -- 15
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RoamingText, ItemWString -- 16
+pSubPhoneInfo->NdisRegisterState.RegistrationState.WwanRegFlags, ItemLong -- 17
+pSubPhoneInfo->NdisRegisterState.RegistrationState.CurrentCellularClass, ItemLong -- 18
+}
+#typev MPSubPhoneState_c2955 184 "%0<sub#%10!d!> %!FUNC!:: IMSSDataMediumPreference = 0x%11!x!, DSDDataMediumPreference = 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_IMSSWFCPreferenceChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+IMSSDataMediumPreference, ItemLong -- 11
+DSDDataMediumPreference, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPSubPhoneState_c2453 151 "%0<sub#%10!d!> %!FUNC!:: IGNORED evt=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+evt, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2438 150 "%0<sub#%10!d!> %!FUNC!:: MODEM_DOWN nextState=0x%11!x!, notifications=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c2422 149 "%0<sub#%10!d!> %!FUNC!:: CALL_DOWN nextState=0x%11!x!, notifications=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c2402 148 "%0<sub#%10!d!> %!FUNC!:: CALL_UP notifications=0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2390 147 "%0<sub#%10!d!> %!FUNC!:: CALL_UP NOT PROCESSED bPSAttached=%11!d!, bServiceLost=%12!d!, notifications=0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+bPSAttached, ItemLong -- 11
+bServiceLost, ItemLong -- 12
+*pNotifications, ItemLong -- 13
+}
+#typev MPSubPhoneState_c2376 146 "%0<sub#%10!d!> %!FUNC!:: SERVICE_SIGNAL_CHANGED notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2367 145 "%0<sub#%10!d!> %!FUNC!:: DATACLASS_CHANGE notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2336 144 "%0<sub#%10!d!> %!FUNC!:: SERVICE_HOME notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2331 143 "%0<sub#%10!d!> %!FUNC!:: SERVICE_ROAMING notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2311 142 "%0<sub#%10!d!> %!FUNC!:: RADIO_STATE_CHANGED bPSAttached=%11!d!, bServiceLost=%12!d!, notifications=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+bPSAttached, ItemLong -- 11
+bServiceLost, ItemLong -- 12
+*pNotifications, ItemLong -- 13
+}
+#typev MPSubPhoneState_c2292 141 "%0<sub#%10!d!> %!FUNC!:: DATACLASS_LOST nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c2256 140 "%0<sub#%10!d!> %!FUNC!:: DATACLASS_LOST, PS Detach notification suppressed ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2250 139 "%0<sub#%10!d!> %!FUNC!:: DATACLASS_LOST, SuppressNwPSDetachNotification=%11!d!, bPSDetachRequestedByOS=%12!d!, bServiceLost=%13!d!, OOS recovery timer = %14!d! seconds." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+GlobalData.SuppressNwPSDetachNotification, ItemLong -- 11
+pSubPhoneInfo->bPSDetachRequestedByOS, ItemLong -- 12
+bServiceLost, ItemLong -- 13
+GlobalData.OOSRecoveryTimer, ItemLong -- 14
+}
+#typev MPSubPhoneState_c2236 138 "%0<sub#%10!d!> %!FUNC!:: SERVICE_LOST notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2219 137 "%0<sub#%10!d!> %!FUNC!:: SERVICE_LOST bDataCallUp=%11!d!, bVoiceCallUp=%12!d!, bPSAttached=%13!d!, OOS recovery timer = %14!d! seconds." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+bDataCallUp, ItemLong -- 11
+bVoiceCallUp, ItemLong -- 12
+bPSAttached, ItemLong -- 13
+GlobalData.OOSRecoveryTimer, ItemLong -- 14
+}
+#typev MPSubPhoneState_c2201 136 "%0<sub#%10!d!> %!FUNC!:: SUBPHONE_EVT_SERVICE_IWLAN_STATE_CHANGED notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2192 135 "%0<sub#%10!d!> %!FUNC!:: SIM_REMOVED." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2183 134 "%0<sub#%10!d!> %!FUNC!:: EXIT notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2163 133 "%0<sub#%10!d!> %!FUNC!:: ENTRY notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2147 132 "%0<sub#%10!d!> %!FUNC!:: PRENTRY_CHECK nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Incall_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1090 58 "%0<sub#%10!d!> %!FUNC!:: nts=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_InitClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nts, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1089 57 "%0<sub#%10!d!> %!FUNC!:: nts=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_InitClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nts, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1085 56 "%0<sub#%10!d!> %!FUNC!:: ERROR, nts=0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_InitClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nts, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1084 55 "%0<sub#%10!d!> %!FUNC!:: ERROR, nts=0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_InitClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nts, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1076 187 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_InitClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c1056 54 "%0<sub#%10!d!> %!FUNC!:: Failed to initialize DSD client." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_InitClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c1048 53 "%0<sub#%10!d!> %!FUNC!:: [NVUpdater]PDC client initialized successfully. nts=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_InitClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nts, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1043 52 "%0<sub#%10!d!> %!FUNC!:: [NVUpdater]ERROR, Failed to initialize PDC client. nts=0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_InitClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nts, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1031 51 "%0<sub#%10!d!> %!FUNC!:: ERROR, Failed to initialize IMSS client. nts=0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_InitClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nts, ItemLong -- 11
+}
+#typev MPSubPhoneState_c974 50 "%0<sub#%10!d!> %!FUNC!:: already initialized." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_InitClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c970 49 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_InitClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c944 47 "%0<sub#%10!d!> %!FUNC!:: bReturn=%11!d!, pSubPhoneInfo->DataSuspension=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_IsDataSuspensionChanged
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+bReturn, ItemLong -- 11
+pSubPhoneInfo->DataSuspension, ItemLong -- 12
+}
+#typev MPSubPhoneState_c912 46 "%0<sub#%10!d!> %!FUNC!:: bDataSuspNeeded=%11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_IsDataSuspensionNeeded
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+bDataSuspNeeded, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1121 59 "%0<sub#%10!d!> %!FUNC!:: DONE!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ModemDownResetNotifications
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c1101 28 "%0<sub#%10!d!>: %!FUNC!: ReadyState=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ModemDownResetNotifications
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+ReadyState, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2706 170 "%0<sub#%10!d!> %!FUNC!:: SSRInitRefCount = %11!d!, bResetInProgresss = %12!d!, MssrState = %13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ModemWentDown
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->SSRInitRefCount, ItemLong -- 11
+pSubPhoneInfo->bResetInProgresss, ItemLong -- 12
+pSubPhoneInfo->MssrState, ItemLong -- 13
+}
+#typev MPSubPhoneState_c2701 169 "%0<sub#%10!d!> %!FUNC!:: SSRInitRefCount = %11!d!, bResetInProgresss = %12!d!, MssrState = %13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ModemWentDown
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->SSRInitRefCount, ItemLong -- 11
+pSubPhoneInfo->bResetInProgresss, ItemLong -- 12
+pSubPhoneInfo->MssrState, ItemLong -- 13
+}
+#typev MPSubPhoneState_c2688 168 "%0<sub#%10!d!> %!FUNC!:: Adapter List is empty. This should never happen." //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ModemWentDown
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2687 167 "%0<sub#%10!d!> %!FUNC!:: Adapter List is empty. This should never happen." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ModemWentDown
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2673 166 "%0<sub#%10!d!> %!FUNC!:: subphone in QCCIInitialized state, SSR processing ignored. QCCIInitialized state has retries for client inits." //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ModemWentDown
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2672 165 "%0<sub#%10!d!> %!FUNC!:: subphone in QCCIInitialized state, SSR processing ignored. QCCIInitialized state has retries for client inits." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ModemWentDown
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2667 164 "%0<sub#%10!d!> %!FUNC!:: [NVUpdater]ConfigChangeReason set to WwanModemConfigReasonModemReset" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ModemWentDown
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c2664 163 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ModemWentDown
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c3078 192 "%0<sub#%10!d!> %!FUNC!:: ERROR, pSubPhoneAdapter=NULL, No Adapter to start the OOS Recovery timer." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_NasChanges
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c3060 191 "%0<sub#%10!d!> %!FUNC!:: bDataCallup = %11!d!. DsdCurrentDataClass = 0x%12!x!. PacketServiceDetachRequestSentByOS = %13!d!. NasRegisterState = 0x%14!x!. OOS recovery timer = %15!d! seconds." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_NasChanges
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+bDataCallup, ItemLong -- 11
+DsdCurrentDataClass, ItemLong -- 12
+pSubPhoneInfo->bPSDetachRequestedByOS, ItemLong -- 13
+regState, ItemLong -- 14
+GlobalData.OOSRecoveryTimer, ItemLong -- 15
+}
+#typev MPSubPhoneState_c3051 190 "%0<sub#%10!d!> %!FUNC!:: changes=0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_NasChanges
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+changes, ItemLong -- 11
+}
+#typev MPSubPhoneState_c2472 152 "%0<sub#%10!d!> %!FUNC!:: Notifications=0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_NotifyAllAdapters
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+Notifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1189 64 "%0<sub#%10!d!> %!FUNC!:: IGNORED evt=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_PowerDownState_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+evt, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1164 63 "%0<sub#%10!d!> %!FUNC!:: QMIINITAILIZED nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_PowerDownState_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1155 62 "%0<sub#%10!d!> %!FUNC!:: EXIT notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_PowerDownState_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1147 61 "%0<sub#%10!d!> %!FUNC!:: ENTRY notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_PowerDownState_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1139 60 "%0<sub#%10!d!> %!FUNC!:: PRENTRY_CHECK nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_PowerDownState_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c2559 195 "%0<sub#%10!d!> %!FUNC!:: evt=0x%11!x!, Notifications=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ProcessEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+evt, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c2556 195 "%0<sub#%10!d!> %!FUNC!:: evt=0x%11!x!, Notifications=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ProcessEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+evt, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c2552 195 "%0<sub#%10!d!> %!FUNC!:: evt=0x%11!x!, Notifications=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ProcessEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+evt, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c2548 195 "%0<sub#%10!d!> %!FUNC!:: evt=0x%11!x!, Notifications=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ProcessEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+evt, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c2545 153 "%0<sub#%10!d!> %!FUNC!:: state=0x%11!x!, evt=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_ProcessEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->State, ItemLong -- 11
+evt, ItemLong -- 12
+}
+#typev MPSubPhoneState_c3007 188 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QCCIInitCompleted
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c1308 72 "%0<sub#%10!d!> %!FUNC!:: IGNORED evt=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QCCIInitialized_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+evt, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1280 71 "%0<sub#%10!d!> %!FUNC!:: MODEM_UP nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QCCIInitialized_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1272 70 "%0<sub#%10!d!> %!FUNC!:: EXIT notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QCCIInitialized_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1254 69 "%0<sub#%10!d!> %!FUNC!:: ENTRY, client init attempt = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QCCIInitialized_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nClientReInitCounter, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1242 68 "%0<sub#%10!d!> %!FUNC!:: ENTRY notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QCCIInitialized_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1233 67 "%0<sub#%10!d!> %!FUNC!:: PRENTRY_CHECK nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QCCIInitialized_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1225 66 "%0<sub#%10!d!> %!FUNC!:: PRENTRY_CHECK- SSR in progress, nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QCCIInitialized_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1220 65 "%0<sub#%10!d!> %!FUNC!:: PRENTRY_CHECK- SSR in progress, ClientsInitialized=TRUE, releasing the subphone clients." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QCCIInitialized_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c1478 85 "%0<sub#%10!d!> %!FUNC!:: IGNORED evt=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+evt, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1460 84 "%0<sub#%10!d!> %!FUNC!:: MODEM_DOWN nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1449 83 "%0<sub#%10!d!> %!FUNC!:: CALL_UP nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1441 82 "%0<sub#%10!d!> %!FUNC!:: DATACLASS_CHANGE notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1429 81 "%0<sub#%10!d!> %!FUNC!:: SERVICE_HOME nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1424 80 "%0<sub#%10!d!> %!FUNC!:: SERVICE_ROAMING nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1401 79 "%0<sub#%10!d!> %!FUNC!:: SIM_VALIDATED readyState=0x%11!x!, nextState=0x%12!x!, notifications=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+readyState, ItemLong -- 11
+nextState, ItemLong -- 12
+*pNotifications, ItemLong -- 13
+}
+#typev MPSubPhoneState_c1386 78 "%0<sub#%10!d!> %!FUNC!:: SUBPHONE_EVT_SERVICE_IWLAN_STATE_CHANGED notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1377 77 "%0<sub#%10!d!> %!FUNC!:: RADIO_STATE_CHANGED notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1367 76 "%0<sub#%10!d!> %!FUNC!:: EXIT notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1357 75 "%0<sub#%10!d!> %!FUNC!:: ENTRY notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1346 74 "%0<sub#%10!d!> %!FUNC!:: PRENTRY_CHECK nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1339 73 "%0<sub#%10!d!> %!FUNC!:: PRENTRY_CHECK nextState=0x%11!x!, notifications=0x%12!x! SENT!!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QMIServicesUp_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c957 48 "%0%!FUNC!: ERROR pSubPhoneInfo = NULL or pSubPhoneInfo->pClientInitData = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_QueryCurrentModemStatus
+{
+}
+#typev MPSubPhoneState_c2640 161 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_RadioStateChanged
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c1658 98 "%0<sub#%10!d!> %!FUNC!:: IGNORED evt=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+evt, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1640 97 "%0<sub#%10!d!> %!FUNC!:: MODEM_DOWN nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1630 96 "%0<sub#%10!d!> %!FUNC!:: CALL_UP nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1621 95 "%0<sub#%10!d!> %!FUNC!:: SERVICE_HOME nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1616 94 "%0<sub#%10!d!> %!FUNC!:: SERVICE_ROAMING nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1592 93 "%0<sub#%10!d!> %!FUNC!:: SIM_REMOVED nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1582 92 "%0<sub#%10!d!> %!FUNC!:: SUBPHONE_EVT_SERVICE_IWLAN_STATE_CHANGED notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1573 91 "%0<sub#%10!d!> %!FUNC!:: DATACLASS_CHANGE notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1554 90 "%0<sub#%10!d!> %!FUNC!:: RADIO_STATE_CHANGED notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1544 89 "%0<sub#%10!d!> %!FUNC!:: SIM_VALIDATED readyState=0x%11!x!, nextState=0x%12!x!, notifications=0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+readyState, ItemLong -- 11
+nextState, ItemLong -- 12
+*pNotifications, ItemLong -- 13
+}
+#typev MPSubPhoneState_c1529 88 "%0<sub#%10!d!> %!FUNC!:: EXIT notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1520 87 "%0<sub#%10!d!> %!FUNC!:: ENTRY notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1511 86 "%0<sub#%10!d!> %!FUNC!:: PRENTRY_CHECK nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Ready_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1863 113 "%0<sub#%10!d!> %!FUNC!:: IGNORED evt=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+evt, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1846 112 "%0<sub#%10!d!> %!FUNC!:: MODEM_DOWN nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1836 111 "%0<sub#%10!d!> %!FUNC!:: CALL_UP nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1828 110 "%0<sub#%10!d!> %!FUNC!:: SERVICE_LOST nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1816 109 "%0<sub#%10!d!> %!FUNC!:: SUBPHONE_EVT_SERVICE_DATACLASS_CHANGE notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1796 108 "%0<sub#%10!d!> %!FUNC!:: SUBPHONE_EVT_SERVICE_IWLAN_STATE_CHANGED notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1787 107 "%0<sub#%10!d!> %!FUNC!:: SERVICE_SIGNAL_CHANGED notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1777 106 "%0<sub#%10!d!> %!FUNC!:: SERVICE_HOME notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1772 105 "%0<sub#%10!d!> %!FUNC!:: SERVICE_ROAMING notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1746 104 "%0<sub#%10!d!> %!FUNC!:: RADIO_STATE_CHANGED." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c1738 103 "%0<sub#%10!d!> %!FUNC!:: SIM_REMOVED." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c1729 102 "%0<sub#%10!d!> %!FUNC!:: EXIT notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1719 101 "%0<sub#%10!d!> %!FUNC!:: ENTRY notifications=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+*pNotifications, ItemLong -- 11
+}
+#typev MPSubPhoneState_c1709 100 "%0<sub#%10!d!> %!FUNC!:: PRENTRY_CHECK nextState=0x%11!x!, notifications=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+nextState, ItemLong -- 11
+*pNotifications, ItemLong -- 12
+}
+#typev MPSubPhoneState_c1699 99 "%0<sub#%10!d!> %!FUNC!:: Setting state to SubPhoneInfoStateRegistered" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_Registered_HandleEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c3158 194 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_SendDataSuspension
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c3153 193 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_SendDataSuspension
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c3040 156 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UIMCardChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c3036 158 "%0<sub#%10!d!> %!FUNC!:: [NVUpdater]ConfigChangeReason set to WwanModemConfigReasonSIMDetected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UIMCardChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c3036 157 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UIMCardChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c3032 160 "%0<sub#%10!d!> %!FUNC!:: [NVUpdater]ConfigChangeReason set to WwanModemConfigReasonNOSIM" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UIMCardChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c3032 159 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UIMCardChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c3022 189 "%0<sub#%10!d!> %!FUNC!:: current cardState=%11!d!, new cardState=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UIMCardChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->cardState, ItemLong -- 11
+cardState, ItemLong -- 12
+}
+#typev MPSubPhoneState_c703 34 "%0<sub#%10!d!> %!FUNC!:: RoamingText=%11!s!, WwanRegFlags=0x%12!x!, CurrentCellularClass=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateCellularClass
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RoamingText, ItemWString -- 11
+pSubPhoneInfo->NdisRegisterState.RegistrationState.WwanRegFlags, ItemLong -- 12
+pSubPhoneInfo->NdisRegisterState.RegistrationState.CurrentCellularClass, ItemLong -- 13
+}
+#typev MPSubPhoneState_c695 33 "%0<sub#%10!d!> %!FUNC!:: uNwError=0x%11!x!, RegisterState=0x%12!x!, RegisterMode=0x%13!x!, ProviderId=%14!s!, ProviderName=%15!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateCellularClass
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NdisRegisterState.RegistrationState.uNwError, ItemLong -- 11
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RegisterState, ItemLong -- 12
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RegisterMode, ItemLong -- 13
+pSubPhoneInfo->NdisRegisterState.RegistrationState.ProviderId, ItemWString -- 14
+pSubPhoneInfo->NdisRegisterState.RegistrationState.ProviderName, ItemWString -- 15
+}
+#typev MPSubPhoneState_c676 32 "%0<sub#%10!d!> %!FUNC!:: RoamingText=%11!s!, WwanRegFlags=0x%12!x!, CurrentCellularClass=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateCellularClass
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RoamingText, ItemWString -- 11
+pSubPhoneInfo->NdisRegisterState.RegistrationState.WwanRegFlags, ItemLong -- 12
+pSubPhoneInfo->NdisRegisterState.RegistrationState.CurrentCellularClass, ItemLong -- 13
+}
+#typev MPSubPhoneState_c666 31 "%0<sub#%10!d!> %!FUNC!:: uNwError=0x%11!x!, RegisterState=0x%12!x!, RegisterMode=0x%13!x!, ProviderId=%14!s!, ProviderName=%15!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateCellularClass
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NdisRegisterState.RegistrationState.uNwError, ItemLong -- 11
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RegisterState, ItemLong -- 12
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RegisterMode, ItemLong -- 13
+pSubPhoneInfo->NdisRegisterState.RegistrationState.ProviderId, ItemWString -- 14
+pSubPhoneInfo->NdisRegisterState.RegistrationState.ProviderName, ItemWString -- 15
+}
+#typev MPSubPhoneState_c837 44 "%0<sub#%10!d!> %!FUNC!:: PacketServiceState=%11!d!, AvailableDataClass=0x%12!x!, CurrentDataClass=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateCurrentDataClass
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->WwanServingState.PacketService.PacketServiceState, ItemLong -- 11
+pSubPhoneInfo->WwanServingState.PacketService.AvailableDataClass, ItemLong -- 12
+pSubPhoneInfo->WwanServingState.PacketService.CurrentDataClass, ItemLong -- 13
+}
+#typev MPSubPhoneState_c822 43 "%0<sub#%10!d!> %!FUNC!:: isDDS=%11!d!, MPNASQMI_GetAvailableDataClass(nasClient)=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateCurrentDataClass
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+MPQMI_IsDDS (MPSubPhoneInfo_GetNasClient (pSubPhoneInfo)), ItemLong -- 11
+MPNASQMI_GetAvailableDataClass (MPSubPhoneInfo_GetNasClient (pSubPhoneInfo)), ItemLong -- 12
+}
+#typev MPSubPhoneState_c818 42 "%0<sub#%10!d!> %!FUNC!:: pSubPhoneInfo->CurrentDataClass=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateCurrentDataClass
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+CurrentDataClass, ItemLong -- 11
+}
+#typev MPSubPhoneState_c812 41 "%0<sub#%10!d!> %!FUNC!:: PacketServiceState=%11!d!, AvailableDataClass=0x%12!x!, CurrentDataClass=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateCurrentDataClass
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->WwanServingState.PacketService.PacketServiceState, ItemLong -- 11
+pSubPhoneInfo->WwanServingState.PacketService.AvailableDataClass, ItemLong -- 12
+pSubPhoneInfo->WwanServingState.PacketService.CurrentDataClass, ItemLong -- 13
+}
+#typev MPSubPhoneState_c390 19 "%0<sub#%10!d!>: %!FUNC!: bDataSuspension=%11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateDeviceSuspension
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+bDataSuspension, ItemLong -- 11
+}
+#typev MPSubPhoneState_c793 40 "%0<sub#%10!d!> %!FUNC!:: RoamingText=%11!s!, WwanRegFlags=0x%12!x!, CurrentCellularClass=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateError
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RoamingText, ItemWString -- 11
+pSubPhoneInfo->NdisRegisterState.RegistrationState.WwanRegFlags, ItemLong -- 12
+pSubPhoneInfo->NdisRegisterState.RegistrationState.CurrentCellularClass, ItemLong -- 13
+}
+#typev MPSubPhoneState_c785 39 "%0<sub#%10!d!> %!FUNC!:: uNwError=0x%11!x!, RegisterState=0x%12!x!, RegisterMode=0x%13!x!, ProviderId=%14!s!, ProviderName=%15!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateError
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NdisRegisterState.RegistrationState.uNwError, ItemLong -- 11
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RegisterState, ItemLong -- 12
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RegisterMode, ItemLong -- 13
+pSubPhoneInfo->NdisRegisterState.RegistrationState.ProviderId, ItemWString -- 14
+pSubPhoneInfo->NdisRegisterState.RegistrationState.ProviderName, ItemWString -- 15
+}
+#typev MPSubPhoneState_c768 38 "%0<sub#%10!d!> %!FUNC!:: RoamingText=%11!s!, WwanRegFlags=0x%12!x!, CurrentCellularClass=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateError
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RoamingText, ItemWString -- 11
+pSubPhoneInfo->NdisRegisterState.RegistrationState.WwanRegFlags, ItemLong -- 12
+pSubPhoneInfo->NdisRegisterState.RegistrationState.CurrentCellularClass, ItemLong -- 13
+}
+#typev MPSubPhoneState_c759 37 "%0<sub#%10!d!> %!FUNC!:: uNwError=0x%11!x!, RegisterState=0x%12!x!, RegisterMode=0x%13!x!, ProviderId=%14!s!, ProviderName=%15!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateError
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NdisRegisterState.RegistrationState.uNwError, ItemLong -- 11
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RegisterState, ItemLong -- 12
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RegisterMode, ItemLong -- 13
+pSubPhoneInfo->NdisRegisterState.RegistrationState.ProviderId, ItemWString -- 14
+pSubPhoneInfo->NdisRegisterState.RegistrationState.ProviderName, ItemWString -- 15
+}
+#typev MPSubPhoneState_c419 20 "%0<sub#%10!d!>: %!FUNC!: isIWlanAvailable=%11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateIWlanState
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+isIWlanAvailable, ItemLong -- 11
+}
+#typev MPSubPhoneState_c458 21 "%0<sub#%10!d!>: %!FUNC!: LTEAttachIPType=0x%11!x!, LTEAttachApnString=%12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateLTEAttachInfo
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->LTEAttachIPType, ItemLong -- 11
+(CHAR*)pSubPhoneInfo->LTEAttachApnString, ItemString -- 12
+}
+#typev MPSubPhoneState_c563 25 "%0<sub#%10!d!> %!FUNC!:: DeviceRadioState=0x%11!x!, SwRadioState=0x%12!x!, HwRadioState=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateRadioStateInternal
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->DeviceRadioState, ItemLong -- 11
+pSubPhoneInfo->RadioState.RadioState.SwRadioState, ItemLong -- 12
+pSubPhoneInfo->RadioState.RadioState.HwRadioState, ItemLong -- 13
+}
+#typev MPSubPhoneState_c560 24 "%0<sub#%10!d!> %!FUNC!:: EquipmentState=0x%11!x!, DeviceReadyState=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateRadioStateInternal
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->EquipmentState, ItemLong -- 11
+pSubPhoneInfo->DeviceReadyState, ItemLong -- 12
+}
+#typev MPSubPhoneState_c498 23 "%0<sub#%10!d!> %!FUNC!:: DeviceRadioState=0x%11!x!, SwRadioState=0x%12!x!, HwRadioState=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateRadioStateInternal
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->DeviceRadioState, ItemLong -- 11
+pSubPhoneInfo->RadioState.RadioState.SwRadioState, ItemLong -- 12
+pSubPhoneInfo->RadioState.RadioState.HwRadioState, ItemLong -- 13
+}
+#typev MPSubPhoneState_c495 22 "%0<sub#%10!d!> %!FUNC!:: EquipmentState=0x%11!x!, DeviceReadyState=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateRadioStateInternal
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->EquipmentState, ItemLong -- 11
+pSubPhoneInfo->DeviceReadyState, ItemLong -- 12
+}
+#typev MPSubPhoneState_c628 28 "%0<sub#%10!d!>: %!FUNC!: ReadyState=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateReadyInfo
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+ReadyState, ItemLong -- 11
+}
+#typev MPSubPhoneState_c657 30 "%0<sub#%10!d!> %!FUNC!:: RegisterState=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateRegisterState
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RegisterState, ItemLong -- 11
+}
+#typev MPSubPhoneState_c652 29 "%0<sub#%10!d!> %!FUNC!:: RegisterState=0x%11!x!, NasRegisterState=0x%12!x!, CurrentDataClass=0x%13!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateRegisterState
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->NdisRegisterState.RegistrationState.RegisterState, ItemLong -- 11
+RegisterState, ItemLong -- 12
+CurrentDataClass, ItemLong -- 13
+}
+#typev MPSubPhoneState_c614 27 "%0<sub#%10!d!> %!FUNC!:: Rssi=%11!d!, ErrorRate=%12!d!, RssiInterval=%13!d!, RssiThreshold=0x%14!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateSignalState
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->SignalState.SignalState.Rssi, ItemLong -- 11
+pSubPhoneInfo->SignalState.SignalState.ErrorRate, ItemLong -- 12
+pSubPhoneInfo->SignalState.SignalState.RssiInterval, ItemLong -- 13
+pSubPhoneInfo->SignalState.SignalState.RssiThreshold, ItemLong -- 14
+}
+#typev MPSubPhoneState_c591 26 "%0<sub#%10!d!> %!FUNC!:: Rssi=%11!d!, ErrorRate=%12!d!, RssiInterval=%13!d!, RssiThreshold=0x%14!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_UpdateSignalState
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pSubPhoneInfo->SignalState.SignalState.Rssi, ItemLong -- 11
+pSubPhoneInfo->SignalState.SignalState.ErrorRate, ItemLong -- 12
+pSubPhoneInfo->SignalState.SignalState.RssiInterval, ItemLong -- 13
+pSubPhoneInfo->SignalState.SignalState.RssiThreshold, ItemLong -- 14
+}
+#typev MPSubPhoneState_c2574 154 "%0<sub#%10!d!> %!FUNC!:: bCallUp=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_VoiceCallStatusChange
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+bCallUp, ItemLong -- 11
+}
+#typev MPSubPhoneState_c3237 199 "%0<sub#%10!d!> %!FUNC!:: ntStatusTimeout=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_WaitForDDSSetNASAcquiredPSEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+ntStatusTimeout, ItemLong -- 11
+}
+#typev MPSubPhoneState_c3230 198 "%0<sub#%10!d!> %!FUNC!:: ERROR, timeout waiting for DDSSetNASAcquiredPSEvent!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_WaitForDDSSetNASAcquiredPSEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPSubPhoneState_c3211 197 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSubPhoneInfo_WaitForDDSSetNASAcquiredPSEvent
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWork_c537 196 "%0 %!FUNC!: ERROR, received pSubPhoneInfo=NULL!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessTimerExpiry
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWDSQmi_c8055 186 "%0<sub#%10!d!> %!FUNC!:: pSubPhoneInfo->pWdsClient != NULL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitWdsClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPWDSQmi_c8055 185 "%0<sub#%10!d!> %!FUNC!:: pAdapter = %11!p!, pWdsClient = %12!p!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitWdsClients
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+pData, ItemPtr -- 11
+pClient, ItemPtr -- 12
+}

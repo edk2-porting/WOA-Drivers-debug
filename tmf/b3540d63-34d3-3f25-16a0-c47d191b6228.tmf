@@ -1,0 +1,38 @@
+// PDB:  qcpmicEIC850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+b3540d63-34d3-3f25-16a0-c47d191b6228 pmicEICDrv // SRC=PmicEICQueue.c MJ= MN=
+#typev PmicEICQueue_c364 15 "%0PmicEICQueue.c:%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PmicEICWPP_Trace FUNC=OnIoDefault
+{
+}
+#typev PmicEICQueue_c449 19 "%0-PmicEICQueue.c:%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PmicEICWPP_Trace FUNC=OnIoDeviceControl
+{
+}
+// PDB:  qcpmicEIC850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev PmicEICQueue_c432 18 "%0PmicEICQueue.c:%!FUNC!: Could not get request output buffer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicEICWPP_Core FUNC=OnIoDeviceControl
+{
+}
+#typev PmicEICQueue_c419 17 "%0PmicEICQueue.c:%!FUNC!: Could not get request input buffer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicEICWPP_Core FUNC=OnIoDeviceControl
+{
+}
+#typev PmicEICQueue_c410 16 "%0+PmicEICQueue.c:%!FUNC!: Queue 0x%10!p!, Request 0x%11!p! IoControlCode 0x%12!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicEICWPP_Trace FUNC=OnIoDeviceControl
+{
+Queue, ItemPtr -- 10
+Request, ItemPtr -- 11
+IoControlCode, ItemLong -- 12
+}
+#typev PmicEICQueue_c339 14 "%0PmicEICQueue.c:%!FUNC!: OnTimerDPC Request 0x%10!p! is STATUS_CANCELLED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicEICWPP_Core FUNC=OnTimer
+{
+Request, ItemPtr -- 10
+}
+#typev PmicEICQueue_c333 13 "%0PmicEICQueue.c:%!FUNC!: OnTimerDPC Complete request 0x%10!p!, Status 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicEICWPP_Core FUNC=OnTimer
+{
+Request, ItemPtr -- 10
+Status, ItemLong -- 11
+}
+#typev PmicEICQueue_c151 11 "%0PmicEIC::ERROR:: Error creating timer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicEICWPP_SelfHost FUNC=PmicEICQueueInitialize
+{
+}
+#typev PmicEICQueue_c127 10 "%0PmicEIC::ERROR:: WdfIoQueueCreate failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicEICWPP_SelfHost FUNC=PmicEICQueueInitialize
+{
+}

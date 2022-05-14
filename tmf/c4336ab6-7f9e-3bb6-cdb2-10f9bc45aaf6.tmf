@@ -1,0 +1,209 @@
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+c4336ab6-7f9e-3bb6-cdb2-10f9bc45aaf6 10.4 // SRC=QcUsbFnDevice.c MJ= MN=
+#typev QcUsbFnDevice_c153 17 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnDeviceEvtIoControl
+{
+}
+#typev QcUsbFnDevice_c134 13 "%0Failed to simulate cable attach: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=QcUsbFnDeviceEvtIoControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c132 12 "%0Simulated cable attach" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTL FUNC=QcUsbFnDeviceEvtIoControl
+{
+}
+#typev QcUsbFnDevice_c142 15 "%0Failed to simulate cable detach: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=QcUsbFnDeviceEvtIoControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c140 14 "%0Simulated cable detach" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTL FUNC=QcUsbFnDeviceEvtIoControl
+{
+}
+#typev QcUsbFnDevice_c146 16 "%0Unsupported IOCTL code[0x%10!x!]" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTL FUNC=QcUsbFnDeviceEvtIoControl
+{
+IoControlCode, ItemLong -- 10
+}
+#typev QcUsbFnDevice_c120 11 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnDeviceEvtIoControl
+{
+}
+#typev QcUsbFnDevice_c257 21 "%0WdfRequestForwardToIoQueue failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=QcUsbFnDeviceEvtIoInternalDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c270 22 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnDeviceEvtIoInternalDeviceControl
+{
+}
+#typev QcUsbFnDevice_c245 20 "%0Unable to handle Request, failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=QcUsbFnDeviceEvtIoInternalDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c239 19 "%0Unsupported IOCTL code[0x%10!x!]" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_PNP FUNC=QcUsbFnDeviceEvtIoInternalDeviceControl
+{
+IoControlCode, ItemLong -- 10
+}
+#typev QcUsbFnDevice_c184 18 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnDeviceEvtIoInternalDeviceControl
+{
+}
+#typev QcUsbFnDevice_c89 10 "%0ChipFamily %10!d!, ChipID = %11!s![0x%12!x!], ChipVersion = 0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PNP FUNC=QcUsbFnDeviceQueryChipInfo
+{
+ufnContext->ChipFamily, ItemLong -- 10
+buffer, ItemString -- 11
+ufnContext->ChipId, ItemLong -- 12
+ufnContext->ChipVersion, ItemLong -- 13
+}
+#typev QcUsbFnDevice_c621 45 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnDeviceCreate
+{
+}
+#typev QcUsbFnDevice_c614 44 "%0WdfFdoQueryForInterface failed with status code %10!s!. SDP will be assumed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c593 43 "%0WdfDeviceCreateDeviceInterface failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c585 42 "%0WdfWaitLockCreate failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c574 41 "%0UsbFnUtilInitList failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c563 40 "%0UsbFnUtilInitList failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c551 39 "%0Create Free event pool failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c529 38 "%0UsbFnPowerSetPowerPolicy failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c510 37 "%0WdfSpinLockCreate failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c494 36 "%0UsbFnPdoBuildChildTree failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c480 35 "%0UsbFnConfigLoadUsbDescriptors failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c471 34 "%0Failed to create controller library: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c460 33 "%0WdfRegistryOpenKey failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c451 32 "%0USBFn Driver RootKey Registry Path[%10!s!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+&sString, ItemPWString -- 10
+}
+#typev QcUsbFnDevice_c443 31 "%0WdfIoQueueCreate failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c418 30 "%0QcUsbFnControllerGetMaxPhysEP failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_CI FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c394 29 "%0WdfDeviceCreate failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c364 28 "%0WdfDeviceInitAssignName failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c357 27 "%0Invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnDeviceCreate
+{
+}
+#typev QcUsbFnDevice_c354 26 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnDeviceCreate
+{
+}
+#typev QcUsbFnDevice_c712 52 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnEvtDevicePrepareHardware
+{
+}
+#typev QcUsbFnDevice_c705 51 "%0QcUSbFnClientInit failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnEvtDevicePrepareHardware
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnDevice_c681 48 "%0QcUSbFnEventInit failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnEvtDevicePrepareHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c672 47 "%0Controller PrepareHardware failed: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnEvtDevicePrepareHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c667 46 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnEvtDevicePrepareHardware
+{
+}
+#typev QcUsbFnDevice_c782 57 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnEvtDeviceQueryRemove
+{
+}
+#typev QcUsbFnDevice_c780 56 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnEvtDeviceQueryRemove
+{
+}
+#typev QcUsbFnDevice_c759 55 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnEvtDeviceReleaseHardware
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnDevice_c739 53 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnEvtDeviceReleaseHardware
+{
+}
+#typev QcUsbFnDevice_c881 66 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnEvtDeviceSelfManagedIoCleanup
+{
+}
+#typev QcUsbFnDevice_c878 65 "%0Failed to destroy controller library: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=UsbFnEvtDeviceSelfManagedIoCleanup
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnDevice_c872 64 "%0UsbFnReleaseMemory failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnEvtDeviceSelfManagedIoCleanup
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnDevice_c865 63 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnEvtDeviceSelfManagedIoCleanup
+{
+}
+#typev QcUsbFnDevice_c844 62 "%0QcUsbFnPowerSetIdleTimeoutDxState failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_POWER FUNC=UsbFnEvtDeviceSelfManagedIoInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnDevice_c826 60 "%0Failed to register for CAD notification status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnEvtDeviceSelfManagedIoInit
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnDevice_c807 59 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnEvtDeviceSurpriseRemoval
+{
+}
+#typev QcUsbFnDevice_c803 58 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnEvtDeviceSurpriseRemoval
+{
+}
+#typev QcUsbFnDevice_c325 25 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnReleaseMemory
+{
+}
+#typev QcUsbFnDevice_c320 24 "%0UsbFnConfigReleaseUsbDescriptors failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_PNP FUNC=UsbFnReleaseMemory
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnDevice_c295 23 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbFnReleaseMemory
+{
+}

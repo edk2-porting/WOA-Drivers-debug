@@ -1,0 +1,225 @@
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+e4726514-5abf-397b-2198-92d9e6e55470 src // SRC=q6ad_asm_q6.c MJ= MN=
+#typev q6ad_asm_q6_c839 42 "%0ADCM.ASM.Err.q6ad_asm_get_dsp_path_delay: get dsp path delay failed with rsp status = 0x%10!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_get_dsp_path_delay
+{
+result.u.get_dsp_path_delay.status, ItemLong -- 10
+}
+#typev q6ad_asm_q6_c846 43 "%0ADCM.ASM.q6ad_asm_get_dsp_path_delay: MSW:0x%10!Ix! LSW:0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_DATA FLAGS=ADCM_ASM_DATA FUNC=q6ad_asm_get_dsp_path_delay
+{
+param->dsp_path_delay_high, ItemPtr -- 10
+param->dsp_path_delay_low, ItemPtr -- 11
+}
+#typev q6ad_asm_q6_c833 41 "%0ADCM.ASM.Err.q6ad_asm_get_dsp_path_delay: q6ad_atl_send error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_get_dsp_path_delay
+{
+}
+#typev q6ad_asm_q6_c734 35 "%0ADCM.ASM.Err.q6ad_asm_get_session_time: Not supported for Ultra low latency session Stream Handle[0x%10!Ix!]   " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_get_session_time
+{
+stream->handle, ItemPtr -- 10
+}
+#typev q6ad_asm_q6_c749 36 "%0ADCM.ASM.Err.q6ad_asm_get_session_time: Matrix direction (0x%10!Ix!) invalid " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_get_session_time
+{
+msg.u.get_mtmx_params.direction, ItemPtr -- 10
+}
+#typev q6ad_asm_q6_c775 38 "%0ADCM.ASM.Err.q6ad_asm_get_session_time: get session time receive error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_get_session_time
+{
+}
+#typev q6ad_asm_q6_c797 39 "%0ADCM.ASM.q6ad_asm_get_session_time: Session(MSW:0x%10!Ix! LSW:0x%11!Ix!).Absolute(MSW:0x%12!Ix! LSW:0x%13!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_DATA FLAGS=ADCM_ASM_DATA FUNC=q6ad_asm_get_session_time
+{
+param->session_ts_high, ItemPtr -- 10
+param->session_ts_low, ItemPtr -- 11
+param->ts_high, ItemPtr -- 12
+param->ts_low, ItemPtr -- 13
+}
+#typev q6ad_asm_q6_c764 37 "%0ADCM.ASM.Err.q6ad_asm_get_session_time: q6ad_atl_send error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_get_session_time
+{
+}
+#typev q6ad_asm_q6_c1095 55 "%0ADCM.ASM.Err.q6ad_asm_q6_create_stream_gain.MultiChannelDBGain.Err.q6ad_cal_db_to_q28 db_gain(%10!Id!), rc(%11!Id!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_create_stream_gain
+{
+vol->u.multi_ch_db_gain.gain_data[idx].channel_gain, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_asm_q6_c1110 57 "%0 " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ASM_INFO FUNC=q6ad_asm_q6_create_stream_gain
+{
+}
+#typev q6ad_asm_q6_c1101 56 "%0(channel:[%10!Id!], DB:[%11!Id!], Q28:[%12!Iu!])" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ASM_INFO FUNC=q6ad_asm_q6_create_stream_gain
+{
+msg->u.set_pp.data[0].u.multichannel_gain.gain_data[idx].channel_type, ItemPtr -- 10
+vol->u.multi_ch_db_gain.gain_data[idx].channel_gain, ItemPtr -- 11
+msg->u.set_pp.data[0].u.multichannel_gain.gain_data[idx].gain, ItemPtr -- 12
+}
+#typev q6ad_asm_q6_c1082 54 "%0ADCM.ASM.q6ad_asm_q6_create_stream_gain.MultiChannelDBGain.channels(%10!Id!)." //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ASM_INFO FUNC=q6ad_asm_q6_create_stream_gain
+{
+msg->u.set_pp.data[0].u.multichannel_gain.num_channels, ItemPtr -- 10
+}
+#typev q6ad_asm_q6_c1044 53 "%0ADCM.ASM.Err.invalid number of channels %10!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_create_stream_gain
+{
+vol->u.multi_ch_gain.num_channels, ItemPtr -- 10
+}
+#typev q6ad_asm_q6_c922 49 "%0ADCM.ASM.Err.rsp error in send ASM CMD,as_handle=0x%10!Ix!,rsp_opcode=0x%11!Ix!,status=0x%12!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_get_peak_meter_values_and_chk_basic_rsp
+{
+stream->handle, ItemPtr -- 10
+result.hdr.opcode, ItemPtr -- 11
+result.u.rsp_w_data.status, ItemPtr -- 12
+}
+#typev q6ad_asm_q6_c915 48 "%0ADCM.ASM.Err.error in send ASM CMD,as_handle=0x%10!Ix!,atl ret=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_get_peak_meter_values_and_chk_basic_rsp
+{
+stream->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_asm_q6_c909 47 "%0ADCM.ASM.send ASM CMD,as_handle=0x%10!Ix!,opcode=0x%11!Ix!,msg_len=0x%12!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ASM_VERBOSE FUNC=q6ad_asm_q6_get_peak_meter_values_and_chk_basic_rsp
+{
+stream->handle, ItemPtr -- 10
+opcode, ItemPtr -- 11
+msg_len, ItemPtr -- 12
+}
+#typev q6ad_asm_q6_c883 46 "%0ADCM.ASM.Err.rsp error in send ASM CMD,as_handle=0x%10!Ix!,rsp_opcode=0x%11!Ix!,status=0x%12!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_send_asm_cmd_and_chk_basic_rsp
+{
+stream->handle, ItemPtr -- 10
+result.hdr.opcode, ItemPtr -- 11
+result.u.rsp.status, ItemPtr -- 12
+}
+#typev q6ad_asm_q6_c876 45 "%0ADCM.ASM.Err.error in send ASM CMD,as_handle=0x%10!Ix!,atl ret=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_send_asm_cmd_and_chk_basic_rsp
+{
+stream->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_asm_q6_c870 44 "%0ADCM.ASM.send ASM CMD,as_handle=0x%10!Ix!,opcode=0x%11!Ix!,msg_len=0x%12!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ASM_VERBOSE FUNC=q6ad_asm_q6_send_asm_cmd_and_chk_basic_rsp
+{
+stream->handle, ItemPtr -- 10
+opcode, ItemPtr -- 11
+msg_len, ItemPtr -- 12
+}
+#typev q6ad_asm_q6_c980 51 "%0ADCM.ASM.Err.q6ad_asm_q6_send_flush => invalid opcode (%10!Id!) for session flush" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_send_flush
+{
+stream->open.op_code, ItemPtr -- 10
+}
+#typev q6ad_asm_q6_c987 52 "%0ADCM.ASM.Err.session flush failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_send_flush
+{
+}
+#typev q6ad_asm_q6_c957 50 "%0ADCM.ASM.Err.q6ad_asm_q6_send_flush=> flush command unsupported for session handle 0x%10!x!, feature mask 0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_send_flush
+{
+stream->handle, ItemLong -- 10
+stream->open.feature_mask, ItemLong -- 11
+}
+#typev q6ad_asm_q6_c196 12 "%0ADCM.ASM.q6ad_asm_q6_send_w_buf leave:stream=0x%10!p!,op=0x%11!Ix!,token=0x%12!Ix!,rc=0x%13!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ASM_VERBOSE FUNC=q6ad_asm_q6_send_w_buf
+{
+stream, ItemPtr -- 10
+msg.hdr.opcode, ItemPtr -- 11
+msg.hdr.token, ItemPtr -- 12
+rc, ItemPtr -- 13
+}
+#typev q6ad_asm_q6_c185 10 "%0ADCM.ASM.q6ad_asm_q6_send_w_buf enter:stream=0x%10!p!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ASM_VERBOSE FUNC=q6ad_asm_q6_send_w_buf
+{
+stream, ItemPtr -- 10
+}
+#typev q6ad_asm_q6_c459 19 "%0ADCM.ASM.Err.session run failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_session_pause
+{
+}
+#typev q6ad_asm_q6_c515 21 "%0ADCM.ASM.Err.session run failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_session_run
+{
+}
+#typev q6ad_asm_q6_c487 20 "%0ADCM.ASM.Err.session suspend failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_session_suspend
+{
+}
+#typev q6ad_asm_q6_c652 29 "%0ADCM.ASM.Err.rx encdec params receive error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_set_encdec_params_rx
+{
+}
+#typev q6ad_asm_q6_c639 27 "%0ADCM.ASM.Err.rx encdec params creation error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_set_encdec_params_rx
+{
+}
+#typev q6ad_asm_q6_c646 28 "%0ADCM.ASM.Err.rx encdec params send error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_set_encdec_params_rx
+{
+}
+#typev q6ad_asm_q6_c382 16 "%0ADCM.ASM.Err.render window end: lsw = 0x%10!Ix! ,msw = 0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_set_render_window_set_param
+{
+temp_param_window->window_lsw, ItemPtr -- 10
+temp_param_window->window_msw, ItemPtr -- 11
+}
+#typev q6ad_asm_q6_c389 17 "%0ADCM.ASM.Err.=>q6ad_asm_q6_set_render_window_set_param Invalid opcode for matrix direction = 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_set_render_window_set_param
+{
+stream->open.op_code, ItemPtr -- 10
+}
+#typev q6ad_asm_q6_c407 18 "%0ADCM.ASM.Err.=>q6ad_asm_q6_set_render_window_set_param failed for param id = Ox%10!Ix!, stream handle = Ox%11!Ix!, rc=0x%12!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_set_render_window_set_param
+{
+param_id, ItemPtr -- 10
+stream->handle, ItemPtr -- 11
+rc, ItemPtr -- 12
+}
+#typev q6ad_asm_q6_c377 15 "%0ADCM.ASM.render window end: lsw = 0x%10!Ix! ,msw = 0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ASM_INFO FUNC=q6ad_asm_q6_set_render_window_set_param
+{
+temp_param_window->window_lsw, ItemPtr -- 10
+temp_param_window->window_msw, ItemPtr -- 11
+}
+#typev q6ad_asm_q6_c371 14 "%0ADCM.ASM.render window start: lsw =  0x%10!Ix! ,msw =  0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ASM_INFO FUNC=q6ad_asm_q6_set_render_window_set_param
+{
+temp_param_window->window_lsw, ItemPtr -- 10
+temp_param_window->window_msw, ItemPtr -- 11
+}
+#typev q6ad_asm_q6_c1243 61 "%0ADCM.ASM.Err.q6ad_asm_q6_set_rx_underflow_evt failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_set_rx_underflow_evt
+{
+}
+#typev q6ad_asm_q6_c1215 60 "%0ADCM.ASM.Err.q6ad_asm_q6_set_soft_step_pause_params failed !!! stream handle = %10!d!, rc=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_set_soft_step_pause_params
+{
+stream->handle, ItemLong -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_asm_q6_c1204 59 "%0ADCM.ASM.q6ad_asm_q6_set_soft_step_pause_params.period(0x%10!Ix!).step(0x%11!Ix!).Curve(0x%12!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ASM_INFO FUNC=q6ad_asm_q6_set_soft_step_pause_params
+{
+msg.u.set_pp.data[0].u.soft_pause_stepping.period, ItemPtr -- 10
+msg.u.set_pp.data[0].u.soft_pause_stepping.step, ItemPtr -- 11
+msg.u.set_pp.data[0].u.soft_pause_stepping.ramping_curve, ItemPtr -- 12
+}
+// PDB:  qcadcm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev q6ad_asm_q6_c1272 62 "%0ADCM.ASM.Err.q6ad_asm_q6_set_tx_overflow_evt failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_set_tx_overflow_evt
+{
+}
+#typev q6ad_asm_q6_c1161 58 "%0ADCM.ASM.q6ad_asm_q6_stream_create_soft_step_volume_params.period(0x%10!Ix!).step(0x%11!Ix!).Curve(0x%12!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ASM_INFO FUNC=q6ad_asm_q6_stream_create_soft_step_volume_params
+{
+soft_step_vol->period, ItemPtr -- 10
+soft_step_vol->step, ItemPtr -- 11
+soft_step_vol->ramping_curve, ItemPtr -- 12
+}
+#typev q6ad_asm_q6_c284 13 "%0ADCM.ASM.Err.q6ad_asm_q6_stream_open - result.hdr.opcode =0x%10!Ix!,result.u.rsp.status=0x%11!Ix!first_boot_dynamic_modules_load_state= %12!Id!, current_boot_dynamic_modules_load_state = %13!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_stream_open
+{
+result.hdr.opcode, ItemPtr -- 10
+result.u.rsp.status, ItemPtr -- 11
+first_boot_dynamic_modules_load_state, ItemPtr -- 12
+current_boot_dynamic_modules_load_state, ItemPtr -- 13
+}
+#typev q6ad_asm_q6_c711 34 "%0ADCM.ASM.q6ad_asm_q6_stream_set_eos leave:stream=0x%10!p!,op=0x%11!Ix!,token=0x%12!Ix!,rc=0x%13!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ASM_INFO FUNC=q6ad_asm_q6_stream_set_eos
+{
+stream, ItemPtr -- 10
+msg.hdr.opcode, ItemPtr -- 11
+msg.hdr.token, ItemPtr -- 12
+rc, ItemPtr -- 13
+}
+#typev q6ad_asm_q6_c702 33 "%0ADCM.ASM.q6ad_asm_q6_stream_set_eos enter:stream=0x%10!p!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ASM_VERBOSE FUNC=q6ad_asm_q6_stream_set_eos
+{
+stream, ItemPtr -- 10
+}
+#typev q6ad_asm_q6_c614 26 "%0ADCM.ASM.Err.rx config receive error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_stream_set_fmt_rx
+{
+}
+#typev q6ad_asm_q6_c581 23 "%0ADCM.ASM.Err.rx config send error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_stream_set_fmt_rx
+{
+}
+#typev q6ad_asm_q6_c574 22 "%0ADCM.ASM.Err.rx config creation error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_stream_set_fmt_rx
+{
+}
+#typev q6ad_asm_q6_c606 25 "%0ADCM.ASM.Err.rx config send error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_stream_set_fmt_rx
+{
+}
+#typev q6ad_asm_q6_c599 24 "%0ADCM.ASM.Err.rx config creation error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_stream_set_fmt_rx
+{
+}
+#typev q6ad_asm_q6_c687 32 "%0ADCM.ASM.Err.tx config receive error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_stream_set_fmt_tx
+{
+}
+#typev q6ad_asm_q6_c681 31 "%0ADCM.ASM.Err.tx config send error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_stream_set_fmt_tx
+{
+}
+#typev q6ad_asm_q6_c674 30 "%0ADCM.ASM.Err.tx config create error" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_q6_stream_set_fmt_tx
+{
+}

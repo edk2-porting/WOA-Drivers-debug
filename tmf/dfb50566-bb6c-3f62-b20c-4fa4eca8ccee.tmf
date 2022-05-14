@@ -1,0 +1,986 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+dfb50566-bb6c-3f62-b20c-4fa4eca8ccee MBB // SRC=MPMain.c MJ= MN=
+#typev MPPDCQmi_c1118 166 "%0<%10!s!> %!FUNC!: Sending StatusCode %11!s!(0x%12!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_PDCSendPendingConfigResponse
+{
+pAdapter->PortName, ItemString -- 10
+MPIndicateStatusToNameStr(GeneralStatus), ItemString -- 11
+GeneralStatus, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPPDCQmi_c1064 166 "%0<%10!s!> %!FUNC!: Sending StatusCode %11!s!(0x%12!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_PDCSendUnsolicitedConfigResponse
+{
+pAdapter->PortName, ItemString -- 10
+MPIndicateStatusToNameStr(GeneralStatus), ItemString -- 11
+GeneralStatus, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPOID_c1419 166 "%0<%10!s!> %!FUNC!: Sending StatusCode %11!s!(0x%12!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPOID_IndicationReadyInfo
+{
+pAdapter->PortName, ItemString -- 10
+MPIndicateStatusToNameStr(GeneralStatus), ItemString -- 11
+GeneralStatus, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c479 165 "%0%!FUNC!: <%10!s!> System does not support valid NDIS version for this driver." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+GlobalData.DeviceName, ItemString -- 10
+}
+#typev MPMain_c672 20 "%0<qcnet> %!FUNC!: WdfRegistryQueryULong failed: key %10!s!\OSVer, status %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+GlobalData.ParamPath.Buffer, ItemWString -- 10
+ntStatus, ItemNTSTATUS -- 11
+}
+#typev MPMain_c664 19 "%0<qcnet> %!FUNC!: WdfRegistryOpenKey failed: key %10!s!, status %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+GlobalData.ParamPath.Buffer, ItemWString -- 10
+ntStatus, ItemNTSTATUS -- 11
+}
+#typev MPMain_c632 18 "%0<qcnet>%!FUNC!: NdisMRegisterMiniportDriver failed %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev MPMain_c567 17 "%0<qcnet>%!FUNC!: AllocMemory for RegistryParamPath failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+}
+#typev MPMain_c551 16 "%0<qcnet>%!FUNC!: AllocMemory for RegistrySevicePath failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+}
+#typev MPMain_c539 15 "%0<qcnet> %!FUNC!: RegPath: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+asRegPath.Buffer, ItemString -- 10
+}
+#typev MPMain_c528 14 "%0<qcnet> %!FUNC!: RtlUnicodeStringToAnsiString failed: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev MPMain_c479 164 "%0<%10!s!>%!FUNC!: QCMP_NDIS630_Ok" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+GlobalData.DeviceName, ItemString -- 10
+}
+#typev MPMain_c474 13 "%0<qcnet>%!FUNC!: WdfDriverCreate failed = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev MPMain_c446 11 "%0WppRecorderLogCreate SUCCESS" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=*pLogHandle FLAGS=MBB_WPP FUNC=DriverEntry
+{
+}
+#typev MPMain_c446 10 "%0%!FUNC! WppRecorderLogCreate failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=DriverEntry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev MPMain_c443 12 "%0<qcnet>%!FUNC!: built on %10!s! at %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+cDate, ItemString -- 10
+cTime, ItemString -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c1988 84 "%0<%10!s!> %!FUNC!: failed to initialize WDS clients" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=HandleSubPhoneInitialized
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2018 87 "%0<%10!s!|sub#%11!d!>%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSubPhoneInitialized
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c1996 85 "%0<%10!s!> %!FUNC!: failed to initialize DFS clients" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=HandleSubPhoneInitialized
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1948 83 "%0<%10!s!|sub#%11!d!> %!FUNC! MPQBI_Open = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSubPhoneInitialized
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev MPMain_c1941 82 "%0<%10!s!|sub#%11!d!> %!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=HandleSubPhoneInitialized
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c897 36 "%0<%10!s!> %!FUNC!: ReconfigTimer idling." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPHaltEx
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c891 35 "%0<%10!s!> %!FUNC!: ReconfigTimer cancelled." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPHaltEx
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c845 34 "%0%!FUNC!: Removing MTU IRP." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPHaltEx
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c811 33 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, timeout waiting for AdapterListEditCompleteEvent!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPHaltEx
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c792 32 "%0<%10!s!|sub#%11!d!> %!FUNC!: Halt Action %12!d!. IRQL: %13!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPHaltEx
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+HaltAction, ItemLong -- 12
+KeGetCurrentIrql(), ItemListByte(Low,APC,DPC) -- 13
+}
+#typev MPMain_c2604 126 "%0<%10!s!>%!FUNC!: MP cxl in pro." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_CancelMPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2596 125 "%0<%10!s!>%!FUNC!: MP Cxl: wrong IRQL." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_CancelMPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2592 124 "%0<%10!s!> MP Cxl." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_CancelMPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1651 67 "%0<%10!s!> %!FUNC!: ERROR, no DMS client/handle." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_GetDeviceDescription
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1666 70 "%0<%10!s!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_GetDeviceDescription
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1663 69 "%0<%10!s!> %!FUNC!: Voice# <%11!s!>." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_GetDeviceDescription
+{
+pAdapter->PortName, ItemString -- 10
+MPDMSQMI_GetDeviceMSISDN(pAdapter->pSubPhoneInfo), ItemWString -- 11
+}
+#typev MPMain_c1659 68 "%0<%10!s!> %!FUNC!: MFR <%11!s!>." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_GetDeviceDescription
+{
+pAdapter->PortName, ItemString -- 10
+MPDMSQMI_GetDeviceManufacturer(pAdapter->pSubPhoneInfo), ItemWString -- 11
+}
+#typev MPMain_c1645 66 "%0<%10!s!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_GetDeviceDescription
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c3021 156 "%0<%10!s!>%!FUNC!: MPth: OUT (0x%11!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c2795 135 "%0<%10!s!>%!FUNC!: MPth: CANCEL." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c3013 155 "%0<%10!s!>%!FUNC!: MPth: unexpected evt-0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c3004 154 "%0<%10!s!>%!FUNC!: MPth: Could not open DataIf Interface!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2996 153 "%0<%10!s!>%!FUNC!: MPth: after portIndex: %11!u! MUXIDISSUE pAdapter->MuxId: %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->PortIndex, ItemLong -- 11
+pAdapter->MuxId, ItemLong -- 12
+}
+#typev MPMain_c2993 152 "%0<%10!s!> %!FUNC!: MPQCCI_Common_Init failed with %11!x!!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev MPMain_c2974 151 "%0<%10!s!> %!FUNC!: DataIoConnect: pAdapter->MuxId = %11!u!, pAdapter->PortIndex = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->PortIndex, ItemLong -- 11
+pAdapter->MuxId, ItemLong -- 12
+}
+#typev MPMain_c2967 150 "%0<%10!s!>%!FUNC!: MPth: DATA_IF_UP." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2959 149 "%0<%10!s!>%!FUNC!: MPth: IODEV_ACT." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2949 148 "%0<%10!s!>%!FUNC!: MPth: RECONFIG_TIMER_EXPIRED." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2933 147 "%0 %!FUNC!: FAILURE, Not aquiring IP addresses to send Link State notification!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+}
+#typev MPMain_c2926 146 "%0<%10!s!>%!FUNC!: ERROR, Timeout waiting for ConnMediaDeterminedEvent!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2918 145 "%0<%10!s!>%!FUNC!: Waiting for Connection Media of adapter to be determined!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2911 144 "%0<%10!s!>%!FUNC!: timeout waiting for SecondMediaConnect!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2898 143 "%0<%10!s!>%!FUNC!: MPth: Waiting for other IP address ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2887 142 "%0 %!FUNC!: FAILURE, Not aquiring IP addresses to send Link State notification!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+}
+#typev MPMain_c2879 141 "%0<%10!s!>%!FUNC!: ERROR, Timeout waiting for ConnMediaDeterminedEvent!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2871 140 "%0<%10!s!>%!FUNC!: Waiting for Connection Media of adapter to be determined!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2860 139 "%0<%10!s!>%!FUNC!: ERROR, Timeout waiting for IPTypeDeterminedEvent!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2852 138 "%0<%10!s!>%!FUNC!: Waiting for IPType of adapter to be determined!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2836 137 "%0<%10!s!> %!FUNC!: MEDIA_CONN for eHRPD, performing media bounce after getting IPv6 and DNS addresses." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c2821 136 "%0<%10!s!>%!FUNC!: MPth: MEDIA_CONN." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2759 134 "%0<%10!s!>%!FUNC!: MPth: Work failure." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2747 133 "%0<%10!s!>%!FUNC!: MPth: NO_MEM." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2731 132 "%0<%10!s!>%!FUNC!: MPth: wrong IRQL." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c3327 163 "%0<%10!s!>%!FUNC!: ERROR, Ignoring LinkState MediaConnected notification and IP address advertising. DeviceContextState=%11!d! (!=ATTACHED)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_ProcessMediaConnectEvent
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->DeviceContextState, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c3289 162 "%0<%10!s!>%!FUNC!: MPth: MEDIA_CONN: IP failure - v6." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_ProcessMediaConnectEvent
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c3276 161 "%0<%10!s!>%!FUNC!: MPth: MEDIA_CONN: IP failure - type %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_ProcessMediaConnectEvent
+{
+pAdapter->PortName, ItemString -- 10
+uQMIType, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c3231 160 "%0<%10!s!> %!FUNC!: IP Addr %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_RemoveIPSettings
+{
+pAdapter->PortName, ItemString -- 10
+IPAddress.IP_Addr.IPv4, ItemIPAddr -- 11
+}
+#typev MPMain_c1635 65 "%0<%10!s!>%!FUNC! IPO: _SetDeviceId: (%11!d!, %12!d!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_SetDeviceId
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->DeviceId, ItemLong -- 11
+pAdapter->DeviceId2, ItemLong -- 12
+}
+#typev MPMain_c2522 119 "%0<%10!s!>%!FUNC!: MPThread up/resumed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_StartMPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2543 120 "%0<%10!s!>%!FUNC!: MP th failure." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_StartMPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2581 123 "%0<%10!s!>%!FUNC!: MP handle=0x%11!p! thOb=0x%12!p!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_StartMPThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->hMPThreadHandle, ItemPtr -- 11
+pAdapter->pMPThread, ItemPtr -- 12
+}
+#typev MPMain_c2573 122 "%0<%10!s!>%!FUNC!: MP ZwClose failed - 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_StartMPThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c2566 121 "%0<%10!s!>%!FUNC!: MP: ObReferenceObjectByHandle failed 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_StartMPThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c2516 118 "%0<%10!s!> %!FUNC!: - wrong IRQL:%11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_StartMPThread
+{
+pAdapter->PortName, ItemString -- 10
+KeGetCurrentIrql(), ItemLong -- 11
+}
+#typev MPMain_c4504 212 "%0<%10!s!|sub#%11!d!> %!FUNC!: Resetting IPTypes, pAdapter->WWanServiceConnectHandle = %12!d!, pAdapter->IPType = %13!d!, pAdapter->ReportedIPType = %14!d!, pAdapter->CurrentConnMediaState = %15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ConnectionMediaChangesHandler
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->WWanServiceConnectHandle, ItemLong -- 12
+pAdapter->IPType, ItemLong -- 13
+pAdapter->ReportedIPType, ItemLong -- 14
+pAdapter->CurrentConnMediaState, ItemLong -- 15
+}
+#typev MPMain_c4450 211 "%0<%10!s!|sub#%11!d!> %!FUNC!: FAILURE, Connection Media Preference not honored. Sending context state notification." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ConnectionMediaChangesHandler
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c4429 210 "%0<%10!s!|sub#%11!d!> %!FUNC!: Context State: ConnectionMedia = %12!d! [%13!d!-Unknown,%14!d!-Cellular,%15!d!-IWlan], MediaPreference = %16!d! [%17!d!-Any,%18!d!-Cellular,%19!d!-CellularPref,%20!d!-WiFi,%21!d!-WiFiPref]." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ConnectionMediaChangesHandler
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pContextState->ConnectionMedia, ItemLong -- 12
+WwanConnectionMediaUnknown, ItemLong -- 13
+WwanConnectionMediaCellular, ItemLong -- 14
+WwanConnectionMediaWiFi, ItemLong -- 15
+pSetContextState->MediaPreference, ItemLong -- 16
+WwanPsMediaPreferenceNone, ItemLong -- 17
+WwanPsMediaPreferenceCellularOnly, ItemLong -- 18
+WwanPsMediaPreferenceCellularPreferred, ItemLong -- 19
+WwanPsMediaPreferenceWiFiOnly, ItemLong -- 20
+WwanPsMediaPreferenceWiFiPreferred, ItemLong -- 21
+}
+#typev MPMain_c4427 209 "%0<%10!s!|sub#%11!d!> %!FUNC!: Completing the pending activation OID." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ConnectionMediaChangesHandler
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c4392 208 "%0 %!FUNC!: ERROR, pAdapter is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_ConnectionMediaChangesHandler
+{
+}
+#typev MPMain_c2678 128 "%0%10!s! %!FUNC! DataIO SSR indication received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_DataIoSSRNotification
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2672 127 "%0%!FUNC!: Invalid Context." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_DataIoSSRNotification
+{
+}
+#typev MPMain_c3989 185 "%0MBB: %!FUNC!: IPV6 control state for EHRPD = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigInit
+{
+GlobalData.IPV6EHRPDConfigEnable, ItemLong -- 10
+}
+#typev MPMain_c3928 184 "%0MBB: %!FUNC!: IPV6 control APN for EHRPD = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigInit
+{
+GlobalData.IPV6EHRPDConfigAPN, ItemWString -- 10
+}
+#typev MPMain_c3823 183 "%0<%10!s!> %!FUNC!: ZwSetValueKey for IPV6EHRPDConfigEnable failed!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigSet
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c3807 182 "%0<%10!s!> %!FUNC!: ZwSetValueKey for IPV6EHRPDConfigAPN failed!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigSet
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c3789 181 "%0<%10!s!> %!FUNC!: ZwOpenKey failed!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigSet
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c3780 180 "%0<%10!s!> %!FUNC!: APN String = %11!s!, Enable = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigSet
+{
+pAdapter->PortName, ItemString -- 10
+APNString, ItemWString -- 11
+ulEnable, ItemLong -- 12
+}
+#typev MPMain_c3754 179 "%0<%10!s!> %!FUNC!: IPV6 ENABLED on outgoing packets!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigUpdateLocalFlag
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c3748 178 "%0<%10!s!> %!FUNC!: APN matches current EHRPD APN. IPV6 DISABLED on outgoing packets!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigUpdateLocalFlag
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c3734 177 "%0<%10!s!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigUpdateLocalFlag
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c4081 191 "%0MBB: %!FUNC!: Error getting EHRPD IPV6 media notify state registry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDMediaNotifyInit
+{
+}
+#typev MPMain_c4077 190 "%0MBB: %!FUNC!: EHRPD IPV6 media notify state for EHRPD = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDMediaNotifyInit
+{
+GlobalData.IPV6EHRPDMediaNotify, ItemLong -- 10
+}
+#typev MPMain_c4050 187 "%0MBB: %!FUNC!: IPV6 EHRPD media notify found" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDMediaNotifyInit
+{
+}
+#typev MPMain_c4064 189 "%0MBB: %!FUNC!: Unknown ntStatus" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDMediaNotifyInit
+{
+}
+#typev MPMain_c4057 188 "%0MBB: %!FUNC!: Query overflow" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDMediaNotifyInit
+{
+}
+#typev MPMain_c4018 186 "%0MBB: %!FUNC!: ZwOpenKey failed!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDMediaNotifyInit
+{
+}
+#typev MPMain_c2713 131 "%0 %!FUNC!: FAILURE, Requested Media Preference not honored!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IsRequestedConnMediaPrefHonored
+{
+}
+#typev MPMain_c2697 130 "%0<%10!s!|sub#%11!d!> %!FUNC!: Activated media = %12!d! [%13!d!-Unknown,%14!d!-Cellular,%15!d!-IWlan], Requested media = %16!d! [%17!d!-Any,%18!d!-Cellular,%19!d!-CellularPref,%20!d!-WiFi,%21!d!-WiFiPref]." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IsRequestedConnMediaPrefHonored
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->CurrentConnMediaState, ItemLong -- 12
+ConnectionMediaUnknown, ItemLong -- 13
+ConnectionMediaCellular, ItemLong -- 14
+ConnectionMediaIWlan, ItemLong -- 15
+pAdapter->RequestedConnMediaPref, ItemLong -- 16
+ConnectionMediaPrefNone, ItemLong -- 17
+ConnectionMediaPrefCellularOnly, ItemLong -- 18
+ConnectionMediaPrefCellularPreferred, ItemLong -- 19
+ConnectionMediaPrefWiFiOnly, ItemLong -- 20
+ConnectionMediaPrefWiFiPreferred, ItemLong -- 21
+}
+#typev MPMain_c2692 129 "%0 %!FUNC!: ERROR, pAdapter is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_IsRequestedConnMediaPrefHonored
+{
+}
+#typev MPMain_c4378 207 "%0<%10!s!|sub#%11!d!> %!FUNC! MPQBI_Open = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ReleasePerAdapterClients
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev MPMain_c4373 206 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR releasing pQMIDFSv6Client qmiErr: 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ReleasePerAdapterClients
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+qmiErr, ItemLong -- 12
+}
+#typev MPMain_c4366 205 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR releasing pQMIDFSv4Client qmiErr: 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ReleasePerAdapterClients
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+qmiErr, ItemLong -- 12
+}
+#typev MPMain_c4358 204 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR releasing pQMIWDSV6Client qmiErr: 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ReleasePerAdapterClients
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+qmiErr, ItemLong -- 12
+}
+#typev MPMain_c4351 203 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR releasing pQMIWDSClient qmiErr: 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ReleasePerAdapterClients
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+qmiErr, ItemLong -- 12
+}
+#typev MPMain_c4345 202 "%0<%10!s!|sub#%11!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_ReleasePerAdapterClients
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c4341 201 "%0%!FUNC!: ERROR received pAdapter=NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_ReleasePerAdapterClients
+{
+}
+#typev MPMain_c1776 72 "%0%!FUNC!:: ERROR:: INVALID_ARGUMENTS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SendUpdatedRegisterState
+{
+}
+#typev MPMain_c1815 75 "%0<%10!s!> %!FUNC!: Sending StatusCode %11!s!(0x%12!x!) on NDIS port = %13!I64u! and MiniportAdapterHandle = %14!p!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SendUpdatedRegisterState
+{
+pAdapter->PortName, ItemString -- 10
+MPIndicateStatusToNameStr(pStatusIndication->StatusCode), ItemString -- 11
+pStatusIndication->StatusCode, ItemLong -- 12
+pAdapter->NdisPortNumber, ItemULongLong -- 13
+pStatusIndication->SourceHandle, ItemPtr -- 14
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c1806 74 "%0<%10!s!> %!FUNC!:: Updated NDIS_STATUS_WWAN_REGISTER_STATE (WwanRegisterStateRoaming) %11!x! --> %12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SendUpdatedRegisterState
+{
+pAdapter->PortName, ItemString -- 10
+pRegisterState->RegistrationState.RegisterState, ItemLong -- 11
+WwanRegisterStateRoaming, ItemLong -- 12
+}
+#typev MPMain_c1800 73 "%0<%10!s!> %!FUNC!:: Updated NDIS_STATUS_WWAN_REGISTER_STATE (WwanRegisterStateHome) %11!x! --> %12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SendUpdatedRegisterState
+{
+pAdapter->PortName, ItemString -- 10
+pRegisterState->RegistrationState.RegisterState, ItemLong -- 11
+WwanRegisterStateHome, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c4315 200 "%0%!FUNC!: The device's drivers have not yet reported the device's properties. IOCTL could not be sent to AMSS ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_SendWakeupIOCTL
+{
+}
+#typev MPMain_c4309 199 "%0%!FUNC!: Invalid DeviceProperty value specified WdfDeviceQueryProperty. IOCTL could not be sent to AMSS ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_SendWakeupIOCTL
+{
+}
+#typev MPMain_c4303 198 "%0%!FUNC!: Buffer size given to WdfDeviceQueryProperty too small. IOCTL could not be sent to AMSS ." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_SendWakeupIOCTL
+{
+}
+#typev MPMain_c4295 197 "%0 %!FUNC!: pIRP NULL . IOCTL could not be sent to AMSS." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_SendWakeupIOCTL
+{
+}
+#typev MPMain_c4274 196 "%0%!FUNC!: Bus Address returned is %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SendWakeupIOCTL
+{
+childWakeParams.BusAddress, ItemLong -- 10
+}
+#typev MPMain_c2453 112 "%0<%10!s!> %!FUNC!: END." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2427 111 "%0<%10!s!|sub#%11!d!>%!FUNC!: Sending MPSUBPHONE_OS_SMS_STATUS:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c2410 110 "%0<%10!s!|sub#%11!d!>%!FUNC!: Sending MPSUBPHONE_OS_SIGNAL_STATE:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c2393 109 "%0<%10!s!|sub#%11!d!>%!FUNC!: Sending MPSUBPHONE_OS_LTE_ATTACH_INFO:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c2376 108 "%0<%10!s!|sub#%11!d!>%!FUNC!: Sending MPSUBPHONE_IWLAN_STATE_INFO: IWLAN_AVAILABLE=%12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->IWlanAvailable, ItemLong -- 12
+}
+#typev MPMain_c2359 107 "%0<%10!s!|sub#%11!d!>%!FUNC!: Sending MPSUBPHONE_OS_DATASUSPENSION_INFO: DATA_SUSPENSION_ON=%12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->DataSuspension, ItemLong -- 12
+}
+#typev MPMain_c2341 106 "%0<%10!s!|sub#%11!d!>%!FUNC!: Sending NDIS_WWAN_REGISTRATION_STATE: NwError=%12!d!, RegisterState=0x%13!x!, RegisterMode=0x%14!x! ProviderId=%15!s!, ProviderName=%16!s!, RoamingText=%17!s!, WwanRegFlags=0x%18!x!, CurrentCellularClass=0x%19!x!." //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.uNwError, ItemLong -- 12
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.RegisterState, ItemLong -- 13
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.RegisterMode, ItemLong -- 14
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.ProviderId, ItemWString -- 15
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.ProviderName, ItemWString -- 16
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.RoamingText, ItemWString -- 17
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.WwanRegFlags, ItemLong -- 18
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.CurrentCellularClass, ItemLong -- 19
+}
+#typev MPMain_c2330 105 "%0<%10!s!|sub#%11!d!>%!FUNC!: Sending NDIS_WWAN_REGISTRATION_STATE: NwError=%12!d!, RegisterState=0x%13!x!, RegisterMode=0x%14!x! ProviderId=%15!s!, ProviderName=%16!s!, RoamingText=%17!s!, WwanRegFlags=0x%18!x!, CurrentCellularClass=0x%19!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.uNwError, ItemLong -- 12
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.RegisterState, ItemLong -- 13
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.RegisterMode, ItemLong -- 14
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.ProviderId, ItemWString -- 15
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.ProviderName, ItemWString -- 16
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.RoamingText, ItemWString -- 17
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.WwanRegFlags, ItemLong -- 18
+pAdapter->pSubPhoneInfo->NotifiedNdisRegisterState.RegistrationState.CurrentCellularClass, ItemLong -- 19
+}
+#typev MPMain_c2310 104 "%0<%10!s!|sub#%11!d!>%!FUNC!: Sending NDIS_WWAN_PACKET_SERVICE_STATE: PacketServiceState=0x%12!x!, AvailableDataClass=0x%13!x!, CurrentDataClass=0x%14!x!, uNwError=%15!d!." //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->NotifiedWwanServingState.PacketService.PacketServiceState, ItemLong -- 12
+pAdapter->pSubPhoneInfo->NotifiedWwanServingState.PacketService.AvailableDataClass, ItemLong -- 13
+pAdapter->pSubPhoneInfo->NotifiedWwanServingState.PacketService.CurrentDataClass, ItemLong -- 14
+pAdapter->pSubPhoneInfo->NotifiedWwanServingState.PacketService.uNwError, ItemLong -- 15
+}
+#typev MPMain_c2304 103 "%0<%10!s!|sub#%11!d!>%!FUNC!: Sending NDIS_WWAN_PACKET_SERVICE_STATE: PacketServiceState=0x%12!x!, AvailableDataClass=0x%13!x!, CurrentDataClass=0x%14!x!, uNwError=%15!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->NotifiedWwanServingState.PacketService.PacketServiceState, ItemLong -- 12
+pAdapter->pSubPhoneInfo->NotifiedWwanServingState.PacketService.AvailableDataClass, ItemLong -- 13
+pAdapter->pSubPhoneInfo->NotifiedWwanServingState.PacketService.CurrentDataClass, ItemLong -- 14
+pAdapter->pSubPhoneInfo->NotifiedWwanServingState.PacketService.uNwError, ItemLong -- 15
+}
+#typev MPMain_c2291 102 "%0<%10!s!|sub#%11!d!>%!FUNC!: Sending NDIS_WWAN_PACKET_SERVICE_STATE: DON'T SEND, if SSR going on and PacketServiceState=Attached!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c2271 101 "%0<%10!s!|sub#%11!d!>%!FUNC!: sending NDIS_STATUS_WWAN_RADIO_STATE: DeviceRadioState=0x%12!x!, SwRadioState=0x%13!x!, HwRadioState=0x%14!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->DeviceRadioState, ItemLong -- 12
+pAdapter->pSubPhoneInfo->RadioState.RadioState.SwRadioState, ItemLong -- 13
+pAdapter->pSubPhoneInfo->RadioState.RadioState.HwRadioState, ItemLong -- 14
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c2233 100 "%0<%10!s!|sub#%11!d!>%!FUNC!: ALERT: ReconfigTimer running, NOT sending NDIS_STATUS_WWAN_CONTEXT_STATE." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c2223 99 "%0<%10!s!|sub#%11!d!>%!FUNC!: Sending CONTEXT_STATE Deactivated." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c2218 98 "%0<%10!s!|sub#%11!d!>%!FUNC!: Sending LINK_STATE disconnected." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c2113 96 "%0%!FUNC!: Notification received on %10!s! in D2 ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2103 95 "%0<%10!s!>%!FUNC!: ERROR, pAdapter->pSubPhoneInfo=NULL." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2088 94 "%0<%10!s!> %!FUNC!: ERROR, MPPhone_GetSubPhoneInfo returned NULL." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2074 93 "%0<%10!s!> %!FUNC!: MPSUBPHONE_MBB_INIT.." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2060 92 "%0<%10!s!> %!FUNC!: MPSUBPHONE_MBB_REINIT.." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2048 91 "%0<%10!s!> %!FUNC!: MPSUBPHONE_DISCONNECT_DATA_CALL, CurrentConnMediaState=0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->CurrentConnMediaState, ItemLong -- 11
+}
+#typev MPMain_c2043 90 "%0<%10!s!> %!FUNC!: SendNdisIndicationEnable is True." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2038 89 "%0<%10!s!> %!FUNC!: SendNdisIndicationEnable is False." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2032 88 "%0<%10!s!> %!FUNC!: BEGIN, SendNdisIndicationEnable=%11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_SubPhoneNotifications
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->SendNdisIndicationEnable, ItemLong -- 11
+}
+#typev MPMain_c3698 176 "%0<%10!s!>%!FUNC!: ConnectionID %11!d! already in use by adapter %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_UnusedConnectionId
+{
+pAdapter->PortName, ItemString -- 10
+uConnectionId, ItemLong -- 11
+pTmpAdapter->InstanceIdx, ItemLong -- 12
+}
+#typev MPMain_c3558 171 "%0<%10!s!>%!FUNC!: Flags 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPause
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->Flags, ItemLong -- 11
+}
+#typev MPMain_c3554 170 "%0<%10!s!> %!FUNC!: - waiting(%11!u!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPause
+{
+pAdapter->PortName, ItemString -- 10
+pauseCount, ItemLong -- 11
+}
+#typev MPMain_c3542 169 "%0<%10!s!>%!FUNC!: Flags 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPause
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->Flags, ItemLong -- 11
+}
+#typev MPMain_c1537 60 "%0<%10!s!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1533 59 "%0<%10!s!>%!FUNC! unknown PnP event: %11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+PnPEvent, ItemLong -- 11
+}
+#typev MPMain_c1527 58 "%0<%10!s!>%!FUNC! The host system is running on AC power." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1523 57 "%0<%10!s!>%!FUNC! The host system is running on battery power." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1515 56 "%0<%10!s!>%!FUNC!: NdisDevicePnPEventPowerProfileChanged." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1504 55 "%0<%10!s!> %!FUNC!: NdisDevicePnPEventStopped." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1495 54 "%0<%10!s!> %!FUNC!: NdisDevicePnPEventQueryStopped." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1465 53 "%0<%10!s!> %!FUNC!: NdisDevicePnPEventSurpriseRemoved." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1457 52 "%0<%10!s!> %!FUNC!: NdisDevicePnPEventRemoved." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1449 51 "%0<%10!s!> %!FUNC!: NdisDevicePnPEventQueryRemoved." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1436 50 "%0<%10!s!>%!FUNC! IRQL: %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+KeGetCurrentIrql(), ItemListByte(Low,APC,DPC) -- 11
+}
+#typev MPMain_c4174 195 "%0<%10!s!|sub#%11!d!> %!FUNC!: WdfWaitLockCreate FAILED(v4), status=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitDfsClients
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPMain_c4168 194 "%0<%10!s!|sub#%11!d!> %!FUNC!: Client init FAILED(v4), status=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitDfsClients
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPMain_c4162 193 "%0<%10!s!|sub#%11!d!> %!FUNC!: WdfWaitLockCreate(v6) FAILED, status=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitDfsClients
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPMain_c4156 192 "%0<%10!s!|sub#%11!d!> %!FUNC!: Client init FAILED(v6), status=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitDfsClients
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPMain_c3579 173 "%0<%10!s!>%!FUNC!: Flags 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPRestart
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->Flags, ItemLong -- 11
+}
+#typev MPMain_c3575 172 "%0<%10!s!>%!FUNC!: Flags 0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPRestart
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->Flags, ItemLong -- 11
+}
+#typev MPMain_c3620 175 "%0<%10!s!> %!FUNC!:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSetOptions
+{
+GlobalData.DeviceName, ItemString -- 10
+}
+#typev MPMain_c3618 174 "%0<%10!s!> %!FUNC!: MPSetOptions" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSetOptions
+{
+GlobalData.DeviceName, ItemString -- 10
+}
+#typev MPMain_c1322 49 "%0 %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPShutdownEx
+{
+}
+#typev MPMain_c1254 48 "%0%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUnload
+{
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c744 31 "%0%!FUNC!: MediaConfigSourceServiceMMS = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ReadFromRegistry
+{
+GlobalData.MediaConfigSourceServiceMMS, ItemLong -- 10
+}
+#typev MPMain_c734 30 "%0%!FUNC!: DRIVERVERSIONMINOR = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ReadFromRegistry
+{
+GlobalData.dwDriverVersionMinor, ItemLong -- 10
+}
+#typev MPMain_c731 29 "%0%!FUNC!: DRIVERVERSIONMAJOR = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ReadFromRegistry
+{
+GlobalData.dwDriverVersionMajor, ItemLong -- 10
+}
+#typev MPMain_c728 28 "%0%!FUNC!: OOSRecoveryTimer = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ReadFromRegistry
+{
+GlobalData.OOSRecoveryTimer, ItemLong -- 10
+}
+#typev MPMain_c724 27 "%0%!FUNC!: eHRPDIPTypeCache = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ReadFromRegistry
+{
+GlobalData.eHRPDIPTypeCache, ItemLong -- 10
+}
+#typev MPMain_c721 26 "%0%!FUNC!: disableMBBAOAC = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ReadFromRegistry
+{
+GlobalData.disableMBBAOAC, ItemLong -- 10
+}
+#typev MPMain_c717 25 "%0%!FUNC!: nMaxAdaptersOnSub0 = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ReadFromRegistry
+{
+GlobalData.nMaxAdaptersOnSub0, ItemLong -- 10
+}
+#typev MPMain_c713 24 "%0%!FUNC!: nMaxNumberofAdapters = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ReadFromRegistry
+{
+GlobalData.nMaxNumberofAdapters, ItemLong -- 10
+}
+#typev MPMain_c710 23 "%0%!FUNC!: SuppressNwPSDetachNotification = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ReadFromRegistry
+{
+GlobalData.SuppressNwPSDetachNotification, ItemLong -- 10
+}
+#typev MPMain_c706 22 "%0%!FUNC!: RoamingMTUDataSize = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ReadFromRegistry
+{
+GlobalData.RoamingMTUDataSize, ItemLong -- 10
+}
+#typev MPMain_c701 21 "%0%!FUNC!: MTUDataSize = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ReadFromRegistry
+{
+GlobalData.MTUDataSize, ItemLong -- 10
+}
+#typev MPMain_c1581 64 "%0<%10!s!>%!FUNC!, nBusyOID = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ResetOIDWaitingQueue
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->nBusyOID, ItemLong -- 11
+}
+#typev MPMain_c1571 63 "%0<%10!s!>%!FUNC! Failed Set Complete (Oid: 0x%11!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ResetOIDWaitingQueue
+{
+pAdapter->PortName, ItemString -- 10
+pWaitingOid->Oid, ItemLong -- 11
+}
+#typev MPMain_c1565 62 "%0<%10!s!>%!FUNC! Failed Query Complete (Oid: 0x%11!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ResetOIDWaitingQueue
+{
+pAdapter->PortName, ItemString -- 10
+pWaitingOid->Oid, ItemLong -- 11
+}
+#typev MPMain_c1551 61 "%0<%10!s!>%!FUNC!, nBusyOID = %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ResetOIDWaitingQueue
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->nBusyOID, ItemLong -- 11
+}
+#typev MPMain_c3498 168 "%0.<%10!s!> %!FUNC!: Prepare to send WWAN_PCO_STATUS, EventWrite May be needed further" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MyNdisMIndicateStatus
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c3391 167 "%0<%10!s!|sub#%11!d!> %!FUNC!: pAdapter->ContextState.ContextState.ActivationState=0x%12!x!, contextState.ActivationState=0x%13!x!, IPType = 0x%14!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MyNdisMIndicateStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->ContextState.ContextState.ActivationState, ItemLong -- 12
+pContextState->ActivationState, ItemLong -- 13
+pNdisContextState->ContextState.IPType, ItemLong -- 14
+}
+#typev MPMain_c3379 166 "%0<%10!s!> %!FUNC!: Sending StatusCode %11!s!(0x%12!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MyNdisMIndicateStatus
+{
+pAdapter->PortName, ItemString -- 10
+MPIndicateStatusToNameStr(GeneralStatus), ItemString -- 11
+GeneralStatus, ItemLong -- 12
+}
+#typev MPMain_c1926 81 "%0<%10!s!> %!FUNC!: Sending StatusCode %11!s!(0x%12!x!) on NDIS port = %13!I64u! and MiniportAdapterHandle = %14!p!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=SendNdisMIndicateStatus
+{
+pAdapter->PortName, ItemString -- 10
+MPIndicateStatusToNameStr(GeneralStatus), ItemString -- 11
+GeneralStatus, ItemLong -- 12
+pAdapter->NdisPortNumber, ItemULongLong -- 13
+MiniportAdapterHandle, ItemPtr -- 14
+}
+#typev MPMain_c1920 80 "%0<%10!s!> %!FUNC!: Enqueue StatusCode %11!s!(0x%12!x!) on NDIS port = %13!I64u! and MiniportAdapterHandle = %14!p!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=SendNdisMIndicateStatus
+{
+pAdapter->PortName, ItemString -- 10
+MPIndicateStatusToNameStr(GeneralStatus), ItemString -- 11
+GeneralStatus, ItemLong -- 12
+pAdapter->NdisPortNumber, ItemULongLong -- 13
+MiniportAdapterHandle, ItemPtr -- 14
+}
+#typev MPMain_c1902 79 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, memory allocation for pStatusIndication failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=SendNdisMIndicateStatus
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPMain_c1871 78 "%0.<%10!s!>%!FUNC!: ERROR, MBB in D2 Could not send 0x%11!x!. Insufficient Memory for NIndication." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=SendNdisMIndicateStatus
+{
+pAdapter->PortName, ItemString -- 10
+GeneralStatus, ItemLong -- 11
+}
+#typev MPMain_c1866 77 "%0.<%10!s!>%!FUNC!: ERROR, MBB in D2 Could not send 0x%11!x!. Insufficient Memory for newBuffer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=SendNdisMIndicateStatus
+{
+pAdapter->PortName, ItemString -- 10
+GeneralStatus, ItemLong -- 11
+}
+#typev MPMain_c1852 76 "%0.<%10!s!> %!FUNC!  MBB in D2. Inserting  0x%11!x! in AOAC.PendingWorkFromD2StateList . ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=SendNdisMIndicateStatus
+{
+pAdapter->PortName, ItemString -- 10
+GeneralStatus, ItemLong -- 11
+}
+#typev MPMain_c1221 47 "%0<%10!s!>%!FUNC!: nBusyOID = %11!d! F%12!d! W%13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=cleanupQueues
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->nBusyOID, ItemLong -- 11
+listDepth(&pAdapter->OIDFreeList. &pAdapter->OIDLock), ItemLong -- 12
+listDepth(&pAdapter->OIDWaitingList. &pAdapter->OIDLock), ItemLong -- 13
+}
+#typev MPMain_c1219 46 "%0<%10!s!> %!FUNC!: results - ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=cleanupQueues
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c1159 45 "%0<%10!s!>%!FUNC!: %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=queuesAreEmpty
+{
+pAdapter->PortName, ItemString -- 10
+allQueuesClear, ItemLong -- 11
+}
+#typev MPMain_c1148 44 "%0<%10!s!>%!FUNC!: %11!s!: nBusyOID = %12!d! R%13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=queuesAreEmpty
+{
+pAdapter->PortName, ItemString -- 10
+caller, ItemString -- 11
+pAdapter->nBusyCtrlMsg, ItemLong -- 12
+listDepth(&pAdapter->WorkInputList. &pAdapter->WorkInputListLock), ItemLong -- 13
+}
+#typev MPMain_c1136 43 "%0<%10!s!>%!FUNC!: %11!s!: nBusyOID = %12!d! F%13!d! W%14!d! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=queuesAreEmpty
+{
+pAdapter->PortName, ItemString -- 10
+caller, ItemString -- 11
+pAdapter->nBusyOID, ItemLong -- 12
+listDepth(&pAdapter->OIDFreeList. &pAdapter->OIDLock), ItemLong -- 13
+listDepth(&pAdapter->OIDWaitingList. &pAdapter->OIDLock), ItemLong -- 14
+}
+#typev MPMain_c1124 42 "%0<%10!s!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=queuesAreEmpty
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPInit_c971 65 "%0<%10!s!>%!FUNC! IPO: _SetDeviceId: (%11!d!, %12!d!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPInitializeEx
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->DeviceId, ItemLong -- 11
+pAdapter->DeviceId2, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPInit_c703 71 "%0<%10!s!> %!FUNC!:: ERROR: %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPInitializeEx
+{
+pAdapter->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWMSQmi_c773 166 "%0<%10!s!> %!FUNC!: Sending StatusCode %11!s!(0x%12!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessWmsListMessagesResp
+{
+pAdapter->PortName, ItemString -- 10
+MPIndicateStatusToNameStr(GeneralStatus), ItemString -- 11
+GeneralStatus, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWDSQmi_c3232 168 "%0.<%10!s!> %!FUNC!: Prepare to send WWAN_PCO_STATUS, EventWrite May be needed further" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessWdsGetRuntimeSettingResp
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPWDSQmi_c3232 166 "%0<%10!s!> %!FUNC!: Sending StatusCode %11!s!(0x%12!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessWdsGetRuntimeSettingResp
+{
+pAdapter->PortName, ItemString -- 10
+MPIndicateStatusToNameStr(GeneralStatus), ItemString -- 11
+GeneralStatus, ItemLong -- 12
+}

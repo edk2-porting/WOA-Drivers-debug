@@ -1,0 +1,50 @@
+// PDB:  QcTftpKmdf850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+4fdadad3-9101-3513-bdb6-7b4cb63893c2 kmdf // SRC=tftp_log.c MJ= MN=
+#typev tftp_log_c498 13 "%4!s! | tftp_log.c(498) ::%10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QCTFTP_KMDF FUNC=tftp_log_raw_tftp_buf
+{
+line_buf, ItemString -- 10
+}
+// PDB:  QcTftpKmdf850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev tftp_log_c511 14 "%4!s! | tftp_log.c(511) ::%10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QCTFTP_KMDF FUNC=tftp_log_raw_tftp_buf
+{
+line_buf, ItemString -- 10
+}
+// PDB:  QcTftpKmdf850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev tftp_log_c523 15 "%4!s! | tftp_log.c(523) ::%10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QCTFTP_KMDF FUNC=tftp_log_raw_tftp_buf
+{
+line_buf, ItemString -- 10
+}
+// PDB:  QcTftpKmdf850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev tftp_log_c533 16 "%4!s! | tftp_log.c(533) ::TFTP Error Opcode Pkt : TFTP-Error-Code =  %10!d!(%11!s!) | Error-Msg = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=tftp_log_raw_tftp_buf
+{
+errcode_h, ItemLong -- 10
+errcode_h, ItemEnum(_tftp_pkt_error_code_) -- 11
+(LPCSTR)&pkt_buf[idx], ItemString -- 12
+}
+#typev tftp_log_c561 17 "%4!s! | tftp_log.c(561) ::%10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QCTFTP_KMDF FUNC=tftp_log_raw_tftp_buf
+{
+line_buf, ItemString -- 10
+}
+// PDB:  QcTftpKmdf850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev tftp_log_c423 12 "%4!s! | tftp_log.c(423) ::%10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QCTFTP_KMDF FUNC=tftp_log_raw_tftp_buf
+{
+line_buf, ItemString -- 10
+}
+#enumv _tftp_pkt_error_code_
+{
+TFTP_PKT_ERROR_CODE_NOT_DEFINED,0x0
+TFTP_PKT_ERROR_CODE_FILE_NOT_FOUND,0x1
+TFTP_PKT_ERROR_CODE_ACCESS_VIOLATION,0x2
+TFTP_PKT_ERROR_CODE_DISK_FULL,0x3
+TFTP_PKT_ERROR_CODE_ILLEGAL_FTP_OPERATION,0x4
+TFTP_PKT_ERROR_CODE_UNKNOWN_TRANSFER_ID,0x5
+TFTP_PKT_ERROR_CODE_FILE_ALREADY_EXISTS,0x6
+TFTP_PKT_ERROR_CODE_NO_SUCH_USER,0x7
+TFTP_PKT_ERROR_CODE_INVALID_OPTIONS,0x8
+TFTP_PKT_ERROR_CODE_END_OF_TRANSFER,0x9
+}

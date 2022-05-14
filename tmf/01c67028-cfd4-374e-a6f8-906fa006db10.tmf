@@ -1,0 +1,1149 @@
+// PDB:  qcdx11arm32um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+01c67028-cfd4-374e-a6f8-906fa006db10 core // SRC=dxdevice.cpp MJ= MN=
+#typev dxdevice_cpp5175 27 "%0Device=0x%10!p! ADD DISCARD RECT: Current discard mode: %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+Settings()->enableDiscards, ItemLong -- 11
+}
+#typev dxdevice_cpp5172 26 "%0Device=0x%10!p! ADD DISCARD RECT: No discard rects (partial or full) is added to list." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp5168 25 "%0Device=0x%10!p! ADD DISCARD RECT:    Full Surface" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp5153 24 "%0Device=0x%10!p! ADD DISCARD RECT:    t=%11!08x! l=%12!08x! b=%13!08x! r=%14!08x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+pRect[j].top, ItemLong -- 11
+pRect[j].left, ItemLong -- 12
+pRect[j].bottom, ItemLong -- 13
+pRect[j].right, ItemLong -- 14
+}
+#typev dxdevice_cpp11499 49 "%0Error 0x%10!x! in copying to the decomp resource." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=core FUNC=DxDevice::DecompressResourceForImmediateFlip
+{
+result, ItemLong -- 10
+}
+#typev dxdevice_cpp11466 48 "%0Decompressing UBWC resource as immediate flip is being used." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::DecompressResourceForImmediateFlip
+{
+}
+#typev dxdevice_cpp1559 10 "%0Filling WDDM 2.4 video functions" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InitVideoDdiFuncs
+{
+}
+#typev dxdevice_cpp1563 11 "%0Unknown WDDM version reported by KMD " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InitVideoDdiFuncs
+{
+}
+#typev dxdevice_cpp5749 30 "%0Device:0x%10!p! InsertWaitForSyncObjFromGpu Wait inserted, result(0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InsertWaitForQueuedPagingOperation
+{
+this, ItemPtr -- 10
+result, ItemLong -- 11
+}
+#typev dxdevice_cpp5716 29 "%0Device:0x%10!p! InsertWaitForQueuedPagingOperation MaxFenceValue=0x%11!I64x! CurrFenceValue=0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InsertWaitForQueuedPagingOperation
+{
+this, ItemPtr -- 10
+m_maxFenceValue, ItemLongLongX -- 11
+(*pFenceValue), ItemLongLongX -- 12
+}
+#typev dxdevice_cpp5866 33 "%0Device:0x%10!p! MakeResident First try failed for %11!d! allocs, numBytesToTrim=%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResident
+{
+this, ItemPtr -- 10
+numAllocs, ItemLong -- 11
+makeResident.NumBytesToTrim, ItemLongLong -- 12
+}
+#typev dxdevice_cpp6430 41 "%0Device:0x%10!p! MakeResidentBoundPending Queueing MakeResident for %11!d! allocations" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+numBoundPendingEntries, ItemLong -- 11
+}
+#typev dxdevice_cpp6409 40 "%0Device:0x%10!p! MakeResidentBoundPending Alloc already present in BoundResident List VidMem(%11!d!)=0x%12!p! GpuVirtAddr=0x%13!I64x! hAllocation=0x%14!x! AllocInfo=0x%15!p! refNode=0x%16!p! refCbId=%17!I64d! UsageFlags=0x%18!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+entry, ItemLong -- 11
+pVidMemAllocInfo->pVideoMem, ItemPtr -- 12
+pVidMemAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pVidMemAllocInfo->hAllocation, ItemLong -- 14
+pVidMemAllocInfo, ItemPtr -- 15
+pVidMemAllocInfo->residencyListItem[DxBoundResidentList], ItemPtr -- 16
+pVidMemAllocInfo->cbData[cmdMgrType].refCbId, ItemLongLong -- 17
+pVidMemAllocInfo->cbData[cmdMgrType].usageFlags, ItemLong -- 18
+}
+#typev dxdevice_cpp6383 39 "%0Device:0x%10!p! MakeResidentBoundPending VidMem(%11!d!)=0x%12!p! GpuVirtAddr=0x%13!I64x! hAllocation=0x%14!x! AllocInfo=0x%15!p! refCbId=%16!I64d! UsageFlags=0x%17!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+entry, ItemLong -- 11
+pVidMemAllocInfo->pVideoMem, ItemPtr -- 12
+pVidMemAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pVidMemAllocInfo->hAllocation, ItemLong -- 14
+pVidMemAllocInfo, ItemPtr -- 15
+pVidMemAllocInfo->cbData[cmdMgrType].refCbId, ItemLongLong -- 16
+pVidMemAllocInfo->cbData[cmdMgrType].usageFlags, ItemLong -- 17
+}
+#typev dxdevice_cpp6348 38 "%0Device:0x%10!p! MakeResidentBoundPending NumPendingEntries=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+numBoundPendingEntries, ItemLong -- 11
+}
+#typev dxdevice_cpp5980 34 "%0Device:0x%10!p!, MakeResidentImmediate Alloc added to Bound resident list pAllocInfo:0x%11!p! hAllocation:0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentImmediate
+{
+this, ItemPtr -- 10
+pAllocInfo, ItemPtr -- 11
+pAllocInfo->hAllocation, ItemLongLongX -- 12
+}
+#typev dxdevice_cpp5823 32 "%0Device:0x%10!p! MakeResident made %11!d! allocs resident PagingFenceValue=0x%12!I64x! result=0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentInternal
+{
+this, ItemPtr -- 10
+pMakeResident->NumAllocations, ItemLong -- 11
+pMakeResident->PagingFenceValue, ItemLongLongX -- 12
+result, ItemLong -- 13
+}
+#typev dxdevice_cpp2934 16 "%0Device:0x%10!p! Flip Interval:0x%11!x! Present Flags: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::Present
+{
+this, ItemPtr -- 10
+pPresentData->flipInterval, ItemLong -- 11
+pPresentData->flags.value, ItemLong -- 12
+}
+#typev dxdevice_cpp8986 44 "%0Device:0x%10!p! Flip Interval:0x%11!x! Present Flags: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::PresentMpo1
+{
+this, ItemPtr -- 10
+pPresentOverlay->FlipInterval, ItemLong -- 11
+pPresentOverlay->Flags.Value, ItemLong -- 12
+}
+#typev dxdevice_cpp8826 43 "%0Device:0x%10!p! Flip Interval:0x%11!x! Present Flags: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::PresentMpo
+{
+this, ItemPtr -- 10
+pPresentOverlay->FlipInterval, ItemLong -- 11
+pPresentOverlay->Flags.Value, ItemLong -- 12
+}
+#typev dxdevice_cpp10544 47 "%0Device:0x%10!p! Unbound Resource Cleared:0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ProcessUnBoundClears
+{
+this, ItemPtr -- 10
+pClearedRes, ItemPtr -- 11
+}
+// PDB:  qcdx11arm32um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp3026 20 "%0Device=0x%10!p! RESCOPY: DST Res=0x%11!p! Fmt:%12!d! (T=%13!d! L=%14!d!) (B=%15!d! R=%16!d!) F=%17!d! B=%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopy
+{
+this, ItemPtr -- 10
+pDstResource, ItemPtr -- 11
+pDstResource->QctPixelFormat(), ItemLong -- 12
+dstBox.top, ItemLong -- 13
+dstBox.left, ItemLong -- 14
+dstBox.bottom, ItemLong -- 15
+dstBox.right, ItemLong -- 16
+dstBox.front, ItemLong -- 17
+dstBox.back, ItemLong -- 18
+}
+#typev dxdevice_cpp3026 19 "%0Device=0x%10!p! RESCOPY: SRC Res=0x%11!p! Fmt:%12!d! (T=%13!d! L=%14!d!) (B=%15!d! R=%16!d!) F=%17!d! B=%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopy
+{
+this, ItemPtr -- 10
+pSrcResource, ItemPtr -- 11
+pSrcResource->QctPixelFormat(), ItemLong -- 12
+pSrcBox->top, ItemLong -- 13
+pSrcBox->left, ItemLong -- 14
+pSrcBox->bottom, ItemLong -- 15
+pSrcBox->right, ItemLong -- 16
+pSrcBox->front, ItemLong -- 17
+pSrcBox->back, ItemLong -- 18
+}
+#typev dxdevice_cpp3026 18 "%0Device=0x%10!p! RESCOPY: Copy fmt emulated for typed<->typeless copy. Fmt:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopy
+{
+this, ItemPtr -- 10
+srcFmt, ItemLong -- 11
+}
+#typev dxdevice_cpp3181 20 "%0Device=0x%10!p! RESCOPY: DST Res=0x%11!p! Fmt:%12!d! (T=%13!d! L=%14!d!) (B=%15!d! R=%16!d!) F=%17!d! B=%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopyRegion
+{
+this, ItemPtr -- 10
+pDstResource, ItemPtr -- 11
+pDstResource->QctPixelFormat(), ItemLong -- 12
+dstBox.top, ItemLong -- 13
+dstBox.left, ItemLong -- 14
+dstBox.bottom, ItemLong -- 15
+dstBox.right, ItemLong -- 16
+dstBox.front, ItemLong -- 17
+dstBox.back, ItemLong -- 18
+}
+#typev dxdevice_cpp3175 19 "%0Device=0x%10!p! RESCOPY: SRC Res=0x%11!p! Fmt:%12!d! (T=%13!d! L=%14!d!) (B=%15!d! R=%16!d!) F=%17!d! B=%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopyRegion
+{
+this, ItemPtr -- 10
+pSrcResource, ItemPtr -- 11
+pSrcResource->QctPixelFormat(), ItemLong -- 12
+pSrcBox->top, ItemLong -- 13
+pSrcBox->left, ItemLong -- 14
+pSrcBox->bottom, ItemLong -- 15
+pSrcBox->right, ItemLong -- 16
+pSrcBox->front, ItemLong -- 17
+pSrcBox->back, ItemLong -- 18
+}
+#typev dxdevice_cpp3120 18 "%0Device=0x%10!p! RESCOPY: Copy fmt emulated for typed<->typeless copy. Fmt:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopyRegion
+{
+this, ItemPtr -- 10
+srcFmt, ItemLong -- 11
+}
+#typev dxdevice_cpp1740 15 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp1711 14 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp1683 13 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp1653 12 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp9660 45 "%0device =%10!p!: SetMarkerMode" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetMarkerMode
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp5786 31 "%0Device:0x%10!p! SubmitCommands IB1 GPU VA(0x%11!I64x!) Length(0x%12!x!) result(0x%13!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SubmitCommands
+{
+this, ItemPtr -- 10
+pSubmitCmds->Commands, ItemLongLongX -- 11
+pSubmitCmds->CommandLength, ItemLong -- 12
+result, ItemLong -- 13
+}
+#typev dxdevice_cpp4375 23 "%0Device=0x%10!p! SWRESCOPY: DST CPUptr=0x%11!p! T=%12!d! B=%13!d! L=%14!d! R=%15!d! F=%16!d! B=%17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SwResourceCopyRegion
+{
+this, ItemPtr -- 10
+pDstPtr, ItemPtr -- 11
+dstBox.top, ItemLong -- 12
+dstBox.bottom, ItemLong -- 13
+dstBox.left, ItemLong -- 14
+dstBox.right, ItemLong -- 15
+dstBox.front, ItemLong -- 16
+dstBox.back, ItemLong -- 17
+}
+#typev dxdevice_cpp4370 22 "%0Device=0x%10!p! SWRESCOPY: SRC CPUptr=0x%11!p! T=%12!d! B=%13!d! L=%14!d! R=%15!d! F=%16!d! B=%17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SwResourceCopyRegion
+{
+this, ItemPtr -- 10
+pSrcPtr, ItemPtr -- 11
+srcBox.top, ItemLong -- 12
+srcBox.bottom, ItemLong -- 13
+srcBox.left, ItemLong -- 14
+srcBox.right, ItemLong -- 15
+srcBox.front, ItemLong -- 16
+srcBox.back, ItemLong -- 17
+}
+#typev dxdevice_cpp6093 37 "%0Device:0x%10!p! TrimUnboundList Skipping removing Alloc=0x%11!I64x! pVidMemAllocInfo=0x%12!p! (Node=0x%13!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::TrimUnboundList
+{
+this, ItemPtr -- 10
+pVidMemAllocInfo->hAllocation, ItemLongLongX -- 11
+pVidMemAllocInfo, ItemPtr -- 12
+refNode, ItemPtr -- 13
+}
+#typev dxdevice_cpp6070 36 "%0Device:0x%10!p! TrimUnboundList Removing Alloc=0x%11!I64x! pVidMemAllocInfo=0x%12!p! (Node=0x%13!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::TrimUnboundList
+{
+this, ItemPtr -- 10
+pVidMemAllocInfo->hAllocation, ItemLongLongX -- 11
+pVidMemAllocInfo, ItemPtr -- 12
+refNode, ItemPtr -- 13
+}
+#typev dxdevice_cpp6025 35 "%0Device:0x%10!p! TrimUnboundList trimFlags=0x%11!x! numBytesToTrim=%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::TrimUnboundList
+{
+this, ItemPtr -- 10
+trimFlags.value, ItemLong -- 11
+numBytesToTrim, ItemLongLong -- 12
+}
+#typev dxdevice_cpp3309 21 "%0Device = 0x%10!p!, UpdatesubresourceUP: Dst resource = 0x%11!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::UpdateSubresourceUP
+{
+this, ItemPtr -- 10
+pDstResource, ItemPtr -- 11
+}
+// PDB:  qcdx11arm32um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxnullddi_cpp3014 17 "%0Device:0x%10!p! CheckPresentDuration Escape failed, returnCode:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDdi::DdiDxgiNullCheckPresentDurationSupport
+{
+this, ItemPtr -- 10
+escapeCheckPresentDuration.header.returnCode, ItemLong -- 11
+}
+// PDB:  qcdx11arm32um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp4970 28 "%0Device=0x%10!p!: DISCARD View=0x%11!p! Res=0x%12!p!
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDdi::DdiDiscard
+{
+this, ItemPtr -- 10
+pView, ItemPtr -- 11
+pResource, ItemPtr -- 12
+}
+// PDB:  qcdx11arm32um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp5301 17 "%0Device:0x%10!p! CheckPresentDuration Escape failed, returnCode:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDdi::DdiDxgiCheckPresentDurationSupport
+{
+this, ItemPtr -- 10
+escapeCheckPresentDuration.header.returnCode, ItemLong -- 11
+}
+// PDB:  qcdx11arm32um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp4584 46 "%0device =%10!p!: SetMarker" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDdi::DdiSetMarker
+{
+this, ItemPtr -- 10
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp5175 27 "%0Device=0x%10!p! ADD DISCARD RECT: Current discard mode: %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+Settings()->enableDiscards, ItemLong -- 11
+}
+#typev dxdevice_cpp5172 26 "%0Device=0x%10!p! ADD DISCARD RECT: No discard rects (partial or full) is added to list." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp5168 25 "%0Device=0x%10!p! ADD DISCARD RECT:    Full Surface" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp5153 24 "%0Device=0x%10!p! ADD DISCARD RECT:    t=%11!08x! l=%12!08x! b=%13!08x! r=%14!08x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+pRect[j].top, ItemLong -- 11
+pRect[j].left, ItemLong -- 12
+pRect[j].bottom, ItemLong -- 13
+pRect[j].right, ItemLong -- 14
+}
+#typev dxdevice_cpp11499 49 "%0Error 0x%10!x! in copying to the decomp resource." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=core FUNC=DxDevice::DecompressResourceForImmediateFlip
+{
+result, ItemLong -- 10
+}
+#typev dxdevice_cpp11466 48 "%0Decompressing UBWC resource as immediate flip is being used." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::DecompressResourceForImmediateFlip
+{
+}
+#typev dxdevice_cpp1563 11 "%0Unknown WDDM version reported by KMD " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InitVideoDdiFuncs
+{
+}
+#typev dxdevice_cpp1559 10 "%0Filling WDDM 2.4 video functions" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InitVideoDdiFuncs
+{
+}
+#typev dxdevice_cpp5749 30 "%0Device:0x%10!p! InsertWaitForSyncObjFromGpu Wait inserted, result(0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InsertWaitForQueuedPagingOperation
+{
+this, ItemPtr -- 10
+result, ItemLong -- 11
+}
+#typev dxdevice_cpp5716 29 "%0Device:0x%10!p! InsertWaitForQueuedPagingOperation MaxFenceValue=0x%11!I64x! CurrFenceValue=0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InsertWaitForQueuedPagingOperation
+{
+this, ItemPtr -- 10
+m_maxFenceValue, ItemLongLongX -- 11
+(*pFenceValue), ItemLongLongX -- 12
+}
+#typev dxdevice_cpp5886 32 "%0Device:0x%10!p! MakeResident made %11!d! allocs resident PagingFenceValue=0x%12!I64x! result=0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResident
+{
+this, ItemPtr -- 10
+pMakeResident->NumAllocations, ItemLong -- 11
+pMakeResident->PagingFenceValue, ItemLongLongX -- 12
+result, ItemLong -- 13
+}
+#typev dxdevice_cpp5866 33 "%0Device:0x%10!p! MakeResident First try failed for %11!d! allocs, numBytesToTrim=%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResident
+{
+this, ItemPtr -- 10
+numAllocs, ItemLong -- 11
+makeResident.NumBytesToTrim, ItemLongLong -- 12
+}
+#typev dxdevice_cpp5858 32 "%0Device:0x%10!p! MakeResident made %11!d! allocs resident PagingFenceValue=0x%12!I64x! result=0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResident
+{
+this, ItemPtr -- 10
+pMakeResident->NumAllocations, ItemLong -- 11
+pMakeResident->PagingFenceValue, ItemLongLongX -- 12
+result, ItemLong -- 13
+}
+#typev dxdevice_cpp6430 41 "%0Device:0x%10!p! MakeResidentBoundPending Queueing MakeResident for %11!d! allocations" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+numBoundPendingEntries, ItemLong -- 11
+}
+#typev dxdevice_cpp6409 40 "%0Device:0x%10!p! MakeResidentBoundPending Alloc already present in BoundResident List VidMem(%11!d!)=0x%12!p! GpuVirtAddr=0x%13!I64x! hAllocation=0x%14!x! AllocInfo=0x%15!p! refNode=0x%16!p! refCbId=%17!I64d! UsageFlags=0x%18!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+entry, ItemLong -- 11
+pVidMemAllocInfo->pVideoMem, ItemPtr -- 12
+pVidMemAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pVidMemAllocInfo->hAllocation, ItemLong -- 14
+pVidMemAllocInfo, ItemPtr -- 15
+pVidMemAllocInfo->residencyListItem[DxBoundResidentList], ItemPtr -- 16
+pVidMemAllocInfo->cbData[cmdMgrType].refCbId, ItemLongLong -- 17
+pVidMemAllocInfo->cbData[cmdMgrType].usageFlags, ItemLong -- 18
+}
+#typev dxdevice_cpp6383 39 "%0Device:0x%10!p! MakeResidentBoundPending VidMem(%11!d!)=0x%12!p! GpuVirtAddr=0x%13!I64x! hAllocation=0x%14!x! AllocInfo=0x%15!p! refCbId=%16!I64d! UsageFlags=0x%17!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+entry, ItemLong -- 11
+pVidMemAllocInfo->pVideoMem, ItemPtr -- 12
+pVidMemAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pVidMemAllocInfo->hAllocation, ItemLong -- 14
+pVidMemAllocInfo, ItemPtr -- 15
+pVidMemAllocInfo->cbData[cmdMgrType].refCbId, ItemLongLong -- 16
+pVidMemAllocInfo->cbData[cmdMgrType].usageFlags, ItemLong -- 17
+}
+#typev dxdevice_cpp6348 38 "%0Device:0x%10!p! MakeResidentBoundPending NumPendingEntries=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+numBoundPendingEntries, ItemLong -- 11
+}
+#typev dxdevice_cpp5980 34 "%0Device:0x%10!p!, MakeResidentImmediate Alloc added to Bound resident list pAllocInfo:0x%11!p! hAllocation:0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentImmediate
+{
+this, ItemPtr -- 10
+pAllocInfo, ItemPtr -- 11
+pAllocInfo->hAllocation, ItemLongLongX -- 12
+}
+#typev dxdevice_cpp2934 16 "%0Device:0x%10!p! Flip Interval:0x%11!x! Present Flags: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::Present
+{
+this, ItemPtr -- 10
+pPresentData->flipInterval, ItemLong -- 11
+pPresentData->flags.value, ItemLong -- 12
+}
+#typev dxdevice_cpp8986 44 "%0Device:0x%10!p! Flip Interval:0x%11!x! Present Flags: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::PresentMpo1
+{
+this, ItemPtr -- 10
+pPresentOverlay->FlipInterval, ItemLong -- 11
+pPresentOverlay->Flags.Value, ItemLong -- 12
+}
+#typev dxdevice_cpp8826 43 "%0Device:0x%10!p! Flip Interval:0x%11!x! Present Flags: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::PresentMpo
+{
+this, ItemPtr -- 10
+pPresentOverlay->FlipInterval, ItemLong -- 11
+pPresentOverlay->Flags.Value, ItemLong -- 12
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp10544 47 "%0Device:0x%10!p! Unbound Resource Cleared:0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ProcessUnBoundClears
+{
+this, ItemPtr -- 10
+pClearedRes, ItemPtr -- 11
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp3181 20 "%0Device=0x%10!p! RESCOPY: DST Res=0x%11!p! Fmt:%12!d! (T=%13!d! L=%14!d!) (B=%15!d! R=%16!d!) F=%17!d! B=%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopyRegion
+{
+this, ItemPtr -- 10
+pDstResource, ItemPtr -- 11
+pDstResource->QctPixelFormat(), ItemLong -- 12
+dstBox.top, ItemLong -- 13
+dstBox.left, ItemLong -- 14
+dstBox.bottom, ItemLong -- 15
+dstBox.right, ItemLong -- 16
+dstBox.front, ItemLong -- 17
+dstBox.back, ItemLong -- 18
+}
+#typev dxdevice_cpp3175 19 "%0Device=0x%10!p! RESCOPY: SRC Res=0x%11!p! Fmt:%12!d! (T=%13!d! L=%14!d!) (B=%15!d! R=%16!d!) F=%17!d! B=%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopyRegion
+{
+this, ItemPtr -- 10
+pSrcResource, ItemPtr -- 11
+pSrcResource->QctPixelFormat(), ItemLong -- 12
+pSrcBox->top, ItemLong -- 13
+pSrcBox->left, ItemLong -- 14
+pSrcBox->bottom, ItemLong -- 15
+pSrcBox->right, ItemLong -- 16
+pSrcBox->front, ItemLong -- 17
+pSrcBox->back, ItemLong -- 18
+}
+#typev dxdevice_cpp3120 18 "%0Device=0x%10!p! RESCOPY: Copy fmt emulated for typed<->typeless copy. Fmt:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopyRegion
+{
+this, ItemPtr -- 10
+srcFmt, ItemLong -- 11
+}
+#typev dxdevice_cpp1740 15 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp1711 14 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp1683 13 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp1653 12 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp5786 31 "%0Device:0x%10!p! SubmitCommands IB1 GPU VA(0x%11!I64x!) Length(0x%12!x!) result(0x%13!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SubmitCommands
+{
+this, ItemPtr -- 10
+pSubmitCmds->Commands, ItemLongLongX -- 11
+pSubmitCmds->CommandLength, ItemLong -- 12
+result, ItemLong -- 13
+}
+#typev dxdevice_cpp4375 23 "%0Device=0x%10!p! SWRESCOPY: DST CPUptr=0x%11!p! T=%12!d! B=%13!d! L=%14!d! R=%15!d! F=%16!d! B=%17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SwResourceCopyRegion
+{
+this, ItemPtr -- 10
+pDstPtr, ItemPtr -- 11
+dstBox.top, ItemLong -- 12
+dstBox.bottom, ItemLong -- 13
+dstBox.left, ItemLong -- 14
+dstBox.right, ItemLong -- 15
+dstBox.front, ItemLong -- 16
+dstBox.back, ItemLong -- 17
+}
+#typev dxdevice_cpp4370 22 "%0Device=0x%10!p! SWRESCOPY: SRC CPUptr=0x%11!p! T=%12!d! B=%13!d! L=%14!d! R=%15!d! F=%16!d! B=%17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SwResourceCopyRegion
+{
+this, ItemPtr -- 10
+pSrcPtr, ItemPtr -- 11
+srcBox.top, ItemLong -- 12
+srcBox.bottom, ItemLong -- 13
+srcBox.left, ItemLong -- 14
+srcBox.right, ItemLong -- 15
+srcBox.front, ItemLong -- 16
+srcBox.back, ItemLong -- 17
+}
+#typev dxdevice_cpp6093 37 "%0Device:0x%10!p! TrimUnboundList Skipping removing Alloc=0x%11!I64x! pVidMemAllocInfo=0x%12!p! (Node=0x%13!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::TrimUnboundList
+{
+this, ItemPtr -- 10
+pVidMemAllocInfo->hAllocation, ItemLongLongX -- 11
+pVidMemAllocInfo, ItemPtr -- 12
+refNode, ItemPtr -- 13
+}
+#typev dxdevice_cpp6070 36 "%0Device:0x%10!p! TrimUnboundList Removing Alloc=0x%11!I64x! pVidMemAllocInfo=0x%12!p! (Node=0x%13!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::TrimUnboundList
+{
+this, ItemPtr -- 10
+pVidMemAllocInfo->hAllocation, ItemLongLongX -- 11
+pVidMemAllocInfo, ItemPtr -- 12
+refNode, ItemPtr -- 13
+}
+#typev dxdevice_cpp6025 35 "%0Device:0x%10!p! TrimUnboundList trimFlags=0x%11!x! numBytesToTrim=%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::TrimUnboundList
+{
+this, ItemPtr -- 10
+trimFlags.value, ItemLong -- 11
+numBytesToTrim, ItemLongLong -- 12
+}
+#typev dxdevice_cpp3309 21 "%0Device = 0x%10!p!, UpdatesubresourceUP: Dst resource = 0x%11!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::UpdateSubresourceUP
+{
+this, ItemPtr -- 10
+pDstResource, ItemPtr -- 11
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxnullddi_cpp3014 17 "%0Device:0x%10!p! CheckPresentDuration Escape failed, returnCode:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDdi::DdiDxgiNullCheckPresentDurationSupport
+{
+this, ItemPtr -- 10
+escapeCheckPresentDuration.header.returnCode, ItemLong -- 11
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp4970 28 "%0Device=0x%10!p!: DISCARD View=0x%11!p! Res=0x%12!p!
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDdi::DdiDiscard
+{
+this, ItemPtr -- 10
+pView, ItemPtr -- 11
+pResource, ItemPtr -- 12
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp5301 17 "%0Device:0x%10!p! CheckPresentDuration Escape failed, returnCode:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDdi::DdiDxgiCheckPresentDurationSupport
+{
+this, ItemPtr -- 10
+escapeCheckPresentDuration.header.returnCode, ItemLong -- 11
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp4584 46 "%0device =%10!p!: SetMarker" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDdi::DdiSetMarker
+{
+this, ItemPtr -- 10
+}
+#typev dxddi_cpp4561 45 "%0device =%10!p!: SetMarkerMode" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDdi::DdiSetMarkerMode
+{
+this, ItemPtr -- 10
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp5175 27 "%0Device=0x%10!p! ADD DISCARD RECT: Current discard mode: %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+Settings()->enableDiscards, ItemLong -- 11
+}
+#typev dxdevice_cpp5172 26 "%0Device=0x%10!p! ADD DISCARD RECT: No discard rects (partial or full) is added to list." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp5168 25 "%0Device=0x%10!p! ADD DISCARD RECT:    Full Surface" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp5153 24 "%0Device=0x%10!p! ADD DISCARD RECT:    t=%11!08x! l=%12!08x! b=%13!08x! r=%14!08x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+pRect[j].top, ItemLong -- 11
+pRect[j].left, ItemLong -- 12
+pRect[j].bottom, ItemLong -- 13
+pRect[j].right, ItemLong -- 14
+}
+#typev dxdevice_cpp2998 17 "%0Device:0x%10!p! CheckPresentDuration Escape failed, returnCode:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::CheckPresentDurationSupport
+{
+this, ItemPtr -- 10
+escapeCheckPresentDuration.header.returnCode, ItemLong -- 11
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp11499 49 "%0Error 0x%10!x! in copying to the decomp resource." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=core FUNC=DxDevice::DecompressResourceForImmediateFlip
+{
+result, ItemLong -- 10
+}
+#typev dxdevice_cpp11466 48 "%0Decompressing UBWC resource as immediate flip is being used." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::DecompressResourceForImmediateFlip
+{
+}
+#typev dxdevice_cpp5198 28 "%0Device=0x%10!p!: DISCARD View=0x%11!p! Res=0x%12!p!
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::Discard
+{
+this, ItemPtr -- 10
+pView, ItemPtr -- 11
+pResource, ItemPtr -- 12
+}
+#typev dxdevice_cpp1563 11 "%0Unknown WDDM version reported by KMD " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InitVideoDdiFuncs
+{
+}
+#typev dxdevice_cpp1559 10 "%0Filling WDDM 2.4 video functions" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InitVideoDdiFuncs
+{
+}
+#typev dxdevice_cpp5749 30 "%0Device:0x%10!p! InsertWaitForSyncObjFromGpu Wait inserted, result(0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InsertWaitForQueuedPagingOperation
+{
+this, ItemPtr -- 10
+result, ItemLong -- 11
+}
+#typev dxdevice_cpp5716 29 "%0Device:0x%10!p! InsertWaitForQueuedPagingOperation MaxFenceValue=0x%11!I64x! CurrFenceValue=0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InsertWaitForQueuedPagingOperation
+{
+this, ItemPtr -- 10
+m_maxFenceValue, ItemLongLongX -- 11
+(*pFenceValue), ItemLongLongX -- 12
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp5866 33 "%0Device:0x%10!p! MakeResident First try failed for %11!d! allocs, numBytesToTrim=%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResident
+{
+this, ItemPtr -- 10
+numAllocs, ItemLong -- 11
+makeResident.NumBytesToTrim, ItemLongLong -- 12
+}
+#typev dxdevice_cpp5858 32 "%0Device:0x%10!p! MakeResident made %11!d! allocs resident PagingFenceValue=0x%12!I64x! result=0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResident
+{
+this, ItemPtr -- 10
+pMakeResident->NumAllocations, ItemLong -- 11
+pMakeResident->PagingFenceValue, ItemLongLongX -- 12
+result, ItemLong -- 13
+}
+#typev dxdevice_cpp6430 41 "%0Device:0x%10!p! MakeResidentBoundPending Queueing MakeResident for %11!d! allocations" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+numBoundPendingEntries, ItemLong -- 11
+}
+#typev dxdevice_cpp6409 40 "%0Device:0x%10!p! MakeResidentBoundPending Alloc already present in BoundResident List VidMem(%11!d!)=0x%12!p! GpuVirtAddr=0x%13!I64x! hAllocation=0x%14!x! AllocInfo=0x%15!p! refNode=0x%16!p! refCbId=%17!I64d! UsageFlags=0x%18!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+entry, ItemLong -- 11
+pVidMemAllocInfo->pVideoMem, ItemPtr -- 12
+pVidMemAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pVidMemAllocInfo->hAllocation, ItemLong -- 14
+pVidMemAllocInfo, ItemPtr -- 15
+pVidMemAllocInfo->residencyListItem[DxBoundResidentList], ItemPtr -- 16
+pVidMemAllocInfo->cbData[cmdMgrType].refCbId, ItemLongLong -- 17
+pVidMemAllocInfo->cbData[cmdMgrType].usageFlags, ItemLong -- 18
+}
+#typev dxdevice_cpp6383 39 "%0Device:0x%10!p! MakeResidentBoundPending VidMem(%11!d!)=0x%12!p! GpuVirtAddr=0x%13!I64x! hAllocation=0x%14!x! AllocInfo=0x%15!p! refCbId=%16!I64d! UsageFlags=0x%17!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+entry, ItemLong -- 11
+pVidMemAllocInfo->pVideoMem, ItemPtr -- 12
+pVidMemAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pVidMemAllocInfo->hAllocation, ItemLong -- 14
+pVidMemAllocInfo, ItemPtr -- 15
+pVidMemAllocInfo->cbData[cmdMgrType].refCbId, ItemLongLong -- 16
+pVidMemAllocInfo->cbData[cmdMgrType].usageFlags, ItemLong -- 17
+}
+#typev dxdevice_cpp6348 38 "%0Device:0x%10!p! MakeResidentBoundPending NumPendingEntries=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+numBoundPendingEntries, ItemLong -- 11
+}
+#typev dxdevice_cpp5980 34 "%0Device:0x%10!p!, MakeResidentImmediate Alloc added to Bound resident list pAllocInfo:0x%11!p! hAllocation:0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentImmediate
+{
+this, ItemPtr -- 10
+pAllocInfo, ItemPtr -- 11
+pAllocInfo->hAllocation, ItemLongLongX -- 12
+}
+#typev dxdevice_cpp5823 32 "%0Device:0x%10!p! MakeResident made %11!d! allocs resident PagingFenceValue=0x%12!I64x! result=0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentInternal
+{
+this, ItemPtr -- 10
+pMakeResident->NumAllocations, ItemLong -- 11
+pMakeResident->PagingFenceValue, ItemLongLongX -- 12
+result, ItemLong -- 13
+}
+#typev dxdevice_cpp2934 16 "%0Device:0x%10!p! Flip Interval:0x%11!x! Present Flags: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::Present
+{
+this, ItemPtr -- 10
+pPresentData->flipInterval, ItemLong -- 11
+pPresentData->flags.value, ItemLong -- 12
+}
+#typev dxdevice_cpp8986 44 "%0Device:0x%10!p! Flip Interval:0x%11!x! Present Flags: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::PresentMpo1
+{
+this, ItemPtr -- 10
+pPresentOverlay->FlipInterval, ItemLong -- 11
+pPresentOverlay->Flags.Value, ItemLong -- 12
+}
+#typev dxdevice_cpp8826 43 "%0Device:0x%10!p! Flip Interval:0x%11!x! Present Flags: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::PresentMpo
+{
+this, ItemPtr -- 10
+pPresentOverlay->FlipInterval, ItemLong -- 11
+pPresentOverlay->Flags.Value, ItemLong -- 12
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp10544 47 "%0Device:0x%10!p! Unbound Resource Cleared:0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ProcessUnBoundClears
+{
+this, ItemPtr -- 10
+pClearedRes, ItemPtr -- 11
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp3181 20 "%0Device=0x%10!p! RESCOPY: DST Res=0x%11!p! Fmt:%12!d! (T=%13!d! L=%14!d!) (B=%15!d! R=%16!d!) F=%17!d! B=%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopyRegion
+{
+this, ItemPtr -- 10
+pDstResource, ItemPtr -- 11
+pDstResource->QctPixelFormat(), ItemLong -- 12
+dstBox.top, ItemLong -- 13
+dstBox.left, ItemLong -- 14
+dstBox.bottom, ItemLong -- 15
+dstBox.right, ItemLong -- 16
+dstBox.front, ItemLong -- 17
+dstBox.back, ItemLong -- 18
+}
+#typev dxdevice_cpp3175 19 "%0Device=0x%10!p! RESCOPY: SRC Res=0x%11!p! Fmt:%12!d! (T=%13!d! L=%14!d!) (B=%15!d! R=%16!d!) F=%17!d! B=%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopyRegion
+{
+this, ItemPtr -- 10
+pSrcResource, ItemPtr -- 11
+pSrcResource->QctPixelFormat(), ItemLong -- 12
+pSrcBox->top, ItemLong -- 13
+pSrcBox->left, ItemLong -- 14
+pSrcBox->bottom, ItemLong -- 15
+pSrcBox->right, ItemLong -- 16
+pSrcBox->front, ItemLong -- 17
+pSrcBox->back, ItemLong -- 18
+}
+#typev dxdevice_cpp3120 18 "%0Device=0x%10!p! RESCOPY: Copy fmt emulated for typed<->typeless copy. Fmt:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopyRegion
+{
+this, ItemPtr -- 10
+srcFmt, ItemLong -- 11
+}
+#typev dxdevice_cpp1740 15 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp1711 14 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp1683 13 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp1653 12 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp9697 46 "%0device =%10!p!: SetMarker" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetMarker
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp9660 45 "%0device =%10!p!: SetMarkerMode" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetMarkerMode
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp5786 31 "%0Device:0x%10!p! SubmitCommands IB1 GPU VA(0x%11!I64x!) Length(0x%12!x!) result(0x%13!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SubmitCommands
+{
+this, ItemPtr -- 10
+pSubmitCmds->Commands, ItemLongLongX -- 11
+pSubmitCmds->CommandLength, ItemLong -- 12
+result, ItemLong -- 13
+}
+#typev dxdevice_cpp4375 23 "%0Device=0x%10!p! SWRESCOPY: DST CPUptr=0x%11!p! T=%12!d! B=%13!d! L=%14!d! R=%15!d! F=%16!d! B=%17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SwResourceCopyRegion
+{
+this, ItemPtr -- 10
+pDstPtr, ItemPtr -- 11
+dstBox.top, ItemLong -- 12
+dstBox.bottom, ItemLong -- 13
+dstBox.left, ItemLong -- 14
+dstBox.right, ItemLong -- 15
+dstBox.front, ItemLong -- 16
+dstBox.back, ItemLong -- 17
+}
+#typev dxdevice_cpp4370 22 "%0Device=0x%10!p! SWRESCOPY: SRC CPUptr=0x%11!p! T=%12!d! B=%13!d! L=%14!d! R=%15!d! F=%16!d! B=%17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SwResourceCopyRegion
+{
+this, ItemPtr -- 10
+pSrcPtr, ItemPtr -- 11
+srcBox.top, ItemLong -- 12
+srcBox.bottom, ItemLong -- 13
+srcBox.left, ItemLong -- 14
+srcBox.right, ItemLong -- 15
+srcBox.front, ItemLong -- 16
+srcBox.back, ItemLong -- 17
+}
+#typev dxdevice_cpp6093 37 "%0Device:0x%10!p! TrimUnboundList Skipping removing Alloc=0x%11!I64x! pVidMemAllocInfo=0x%12!p! (Node=0x%13!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::TrimUnboundList
+{
+this, ItemPtr -- 10
+pVidMemAllocInfo->hAllocation, ItemLongLongX -- 11
+pVidMemAllocInfo, ItemPtr -- 12
+refNode, ItemPtr -- 13
+}
+#typev dxdevice_cpp6070 36 "%0Device:0x%10!p! TrimUnboundList Removing Alloc=0x%11!I64x! pVidMemAllocInfo=0x%12!p! (Node=0x%13!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::TrimUnboundList
+{
+this, ItemPtr -- 10
+pVidMemAllocInfo->hAllocation, ItemLongLongX -- 11
+pVidMemAllocInfo, ItemPtr -- 12
+refNode, ItemPtr -- 13
+}
+#typev dxdevice_cpp6025 35 "%0Device:0x%10!p! TrimUnboundList trimFlags=0x%11!x! numBytesToTrim=%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::TrimUnboundList
+{
+this, ItemPtr -- 10
+trimFlags.value, ItemLong -- 11
+numBytesToTrim, ItemLongLong -- 12
+}
+#typev dxdevice_cpp3309 21 "%0Device = 0x%10!p!, UpdatesubresourceUP: Dst resource = 0x%11!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::UpdateSubresourceUP
+{
+this, ItemPtr -- 10
+pDstResource, ItemPtr -- 11
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxnullddi_cpp3014 17 "%0Device:0x%10!p! CheckPresentDuration Escape failed, returnCode:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDdi::DdiDxgiNullCheckPresentDurationSupport
+{
+this, ItemPtr -- 10
+escapeCheckPresentDuration.header.returnCode, ItemLong -- 11
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp4970 28 "%0Device=0x%10!p!: DISCARD View=0x%11!p! Res=0x%12!p!
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDdi::DdiDiscard
+{
+this, ItemPtr -- 10
+pView, ItemPtr -- 11
+pResource, ItemPtr -- 12
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp5301 17 "%0Device:0x%10!p! CheckPresentDuration Escape failed, returnCode:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDdi::DdiDxgiCheckPresentDurationSupport
+{
+this, ItemPtr -- 10
+escapeCheckPresentDuration.header.returnCode, ItemLong -- 11
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp4584 46 "%0device =%10!p!: SetMarker" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDdi::DdiSetMarker
+{
+this, ItemPtr -- 10
+}
+#typev dxddi_cpp4561 45 "%0device =%10!p!: SetMarkerMode" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDdi::DdiSetMarkerMode
+{
+this, ItemPtr -- 10
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp5175 27 "%0Device=0x%10!p! ADD DISCARD RECT: Current discard mode: %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+Settings()->enableDiscards, ItemLong -- 11
+}
+#typev dxdevice_cpp5172 26 "%0Device=0x%10!p! ADD DISCARD RECT: No discard rects (partial or full) is added to list." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp5168 25 "%0Device=0x%10!p! ADD DISCARD RECT:    Full Surface" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp5153 24 "%0Device=0x%10!p! ADD DISCARD RECT:    t=%11!08x! l=%12!08x! b=%13!08x! r=%14!08x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::AddDiscardRectToResource
+{
+this, ItemPtr -- 10
+pRect[j].top, ItemLong -- 11
+pRect[j].left, ItemLong -- 12
+pRect[j].bottom, ItemLong -- 13
+pRect[j].right, ItemLong -- 14
+}
+#typev dxdevice_cpp2998 17 "%0Device:0x%10!p! CheckPresentDuration Escape failed, returnCode:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::CheckPresentDurationSupport
+{
+this, ItemPtr -- 10
+escapeCheckPresentDuration.header.returnCode, ItemLong -- 11
+}
+#typev dxdevice_cpp11499 49 "%0Error 0x%10!x! in copying to the decomp resource." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=core FUNC=DxDevice::DecompressResourceForImmediateFlip
+{
+result, ItemLong -- 10
+}
+#typev dxdevice_cpp11466 48 "%0Decompressing UBWC resource as immediate flip is being used." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::DecompressResourceForImmediateFlip
+{
+}
+#typev dxdevice_cpp5198 28 "%0Device=0x%10!p!: DISCARD View=0x%11!p! Res=0x%12!p!
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::Discard
+{
+this, ItemPtr -- 10
+pView, ItemPtr -- 11
+pResource, ItemPtr -- 12
+}
+#typev dxdevice_cpp1563 11 "%0Unknown WDDM version reported by KMD " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InitVideoDdiFuncs
+{
+}
+#typev dxdevice_cpp1559 10 "%0Filling WDDM 2.4 video functions" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InitVideoDdiFuncs
+{
+}
+#typev dxdevice_cpp5749 30 "%0Device:0x%10!p! InsertWaitForSyncObjFromGpu Wait inserted, result(0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InsertWaitForQueuedPagingOperation
+{
+this, ItemPtr -- 10
+result, ItemLong -- 11
+}
+#typev dxdevice_cpp5716 29 "%0Device:0x%10!p! InsertWaitForQueuedPagingOperation MaxFenceValue=0x%11!I64x! CurrFenceValue=0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::InsertWaitForQueuedPagingOperation
+{
+this, ItemPtr -- 10
+m_maxFenceValue, ItemLongLongX -- 11
+(*pFenceValue), ItemLongLongX -- 12
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp5866 33 "%0Device:0x%10!p! MakeResident First try failed for %11!d! allocs, numBytesToTrim=%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResident
+{
+this, ItemPtr -- 10
+numAllocs, ItemLong -- 11
+makeResident.NumBytesToTrim, ItemLongLong -- 12
+}
+#typev dxdevice_cpp6430 41 "%0Device:0x%10!p! MakeResidentBoundPending Queueing MakeResident for %11!d! allocations" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+numBoundPendingEntries, ItemLong -- 11
+}
+#typev dxdevice_cpp6409 40 "%0Device:0x%10!p! MakeResidentBoundPending Alloc already present in BoundResident List VidMem(%11!d!)=0x%12!p! GpuVirtAddr=0x%13!I64x! hAllocation=0x%14!x! AllocInfo=0x%15!p! refNode=0x%16!p! refCbId=%17!I64d! UsageFlags=0x%18!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+entry, ItemLong -- 11
+pVidMemAllocInfo->pVideoMem, ItemPtr -- 12
+pVidMemAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pVidMemAllocInfo->hAllocation, ItemLong -- 14
+pVidMemAllocInfo, ItemPtr -- 15
+pVidMemAllocInfo->residencyListItem[DxBoundResidentList], ItemPtr -- 16
+pVidMemAllocInfo->cbData[cmdMgrType].refCbId, ItemLongLong -- 17
+pVidMemAllocInfo->cbData[cmdMgrType].usageFlags, ItemLong -- 18
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp6383 39 "%0Device:0x%10!p! MakeResidentBoundPending VidMem(%11!d!)=0x%12!p! GpuVirtAddr=0x%13!I64x! hAllocation=0x%14!x! AllocInfo=0x%15!p! refCbId=%16!I64d! UsageFlags=0x%17!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+entry, ItemLong -- 11
+pVidMemAllocInfo->pVideoMem, ItemPtr -- 12
+pVidMemAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pVidMemAllocInfo->hAllocation, ItemLong -- 14
+pVidMemAllocInfo, ItemPtr -- 15
+pVidMemAllocInfo->cbData[cmdMgrType].refCbId, ItemLongLong -- 16
+pVidMemAllocInfo->cbData[cmdMgrType].usageFlags, ItemLong -- 17
+}
+#typev dxdevice_cpp6348 38 "%0Device:0x%10!p! MakeResidentBoundPending NumPendingEntries=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentBoundPending
+{
+this, ItemPtr -- 10
+numBoundPendingEntries, ItemLong -- 11
+}
+#typev dxdevice_cpp5980 34 "%0Device:0x%10!p!, MakeResidentImmediate Alloc added to Bound resident list pAllocInfo:0x%11!p! hAllocation:0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentImmediate
+{
+this, ItemPtr -- 10
+pAllocInfo, ItemPtr -- 11
+pAllocInfo->hAllocation, ItemLongLongX -- 12
+}
+#typev dxdevice_cpp5823 32 "%0Device:0x%10!p! MakeResident made %11!d! allocs resident PagingFenceValue=0x%12!I64x! result=0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::MakeResidentInternal
+{
+this, ItemPtr -- 10
+pMakeResident->NumAllocations, ItemLong -- 11
+pMakeResident->PagingFenceValue, ItemLongLongX -- 12
+result, ItemLong -- 13
+}
+#typev dxdevice_cpp2934 16 "%0Device:0x%10!p! Flip Interval:0x%11!x! Present Flags: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::Present
+{
+this, ItemPtr -- 10
+pPresentData->flipInterval, ItemLong -- 11
+pPresentData->flags.value, ItemLong -- 12
+}
+#typev dxdevice_cpp8986 44 "%0Device:0x%10!p! Flip Interval:0x%11!x! Present Flags: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::PresentMpo1
+{
+this, ItemPtr -- 10
+pPresentOverlay->FlipInterval, ItemLong -- 11
+pPresentOverlay->Flags.Value, ItemLong -- 12
+}
+#typev dxdevice_cpp8826 43 "%0Device:0x%10!p! Flip Interval:0x%11!x! Present Flags: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::PresentMpo
+{
+this, ItemPtr -- 10
+pPresentOverlay->FlipInterval, ItemLong -- 11
+pPresentOverlay->Flags.Value, ItemLong -- 12
+}
+#typev dxdevice_cpp10544 47 "%0Device:0x%10!p! Unbound Resource Cleared:0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ProcessUnBoundClears
+{
+this, ItemPtr -- 10
+pClearedRes, ItemPtr -- 11
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxdevice_cpp3026 20 "%0Device=0x%10!p! RESCOPY: DST Res=0x%11!p! Fmt:%12!d! (T=%13!d! L=%14!d!) (B=%15!d! R=%16!d!) F=%17!d! B=%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopy
+{
+this, ItemPtr -- 10
+pDstResource, ItemPtr -- 11
+pDstResource->QctPixelFormat(), ItemLong -- 12
+dstBox.top, ItemLong -- 13
+dstBox.left, ItemLong -- 14
+dstBox.bottom, ItemLong -- 15
+dstBox.right, ItemLong -- 16
+dstBox.front, ItemLong -- 17
+dstBox.back, ItemLong -- 18
+}
+#typev dxdevice_cpp3026 19 "%0Device=0x%10!p! RESCOPY: SRC Res=0x%11!p! Fmt:%12!d! (T=%13!d! L=%14!d!) (B=%15!d! R=%16!d!) F=%17!d! B=%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopy
+{
+this, ItemPtr -- 10
+pSrcResource, ItemPtr -- 11
+pSrcResource->QctPixelFormat(), ItemLong -- 12
+pSrcBox->top, ItemLong -- 13
+pSrcBox->left, ItemLong -- 14
+pSrcBox->bottom, ItemLong -- 15
+pSrcBox->right, ItemLong -- 16
+pSrcBox->front, ItemLong -- 17
+pSrcBox->back, ItemLong -- 18
+}
+#typev dxdevice_cpp3026 18 "%0Device=0x%10!p! RESCOPY: Copy fmt emulated for typed<->typeless copy. Fmt:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopy
+{
+this, ItemPtr -- 10
+srcFmt, ItemLong -- 11
+}
+#typev dxdevice_cpp3181 20 "%0Device=0x%10!p! RESCOPY: DST Res=0x%11!p! Fmt:%12!d! (T=%13!d! L=%14!d!) (B=%15!d! R=%16!d!) F=%17!d! B=%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopyRegion
+{
+this, ItemPtr -- 10
+pDstResource, ItemPtr -- 11
+pDstResource->QctPixelFormat(), ItemLong -- 12
+dstBox.top, ItemLong -- 13
+dstBox.left, ItemLong -- 14
+dstBox.bottom, ItemLong -- 15
+dstBox.right, ItemLong -- 16
+dstBox.front, ItemLong -- 17
+dstBox.back, ItemLong -- 18
+}
+#typev dxdevice_cpp3175 19 "%0Device=0x%10!p! RESCOPY: SRC Res=0x%11!p! Fmt:%12!d! (T=%13!d! L=%14!d!) (B=%15!d! R=%16!d!) F=%17!d! B=%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopyRegion
+{
+this, ItemPtr -- 10
+pSrcResource, ItemPtr -- 11
+pSrcResource->QctPixelFormat(), ItemLong -- 12
+pSrcBox->top, ItemLong -- 13
+pSrcBox->left, ItemLong -- 14
+pSrcBox->bottom, ItemLong -- 15
+pSrcBox->right, ItemLong -- 16
+pSrcBox->front, ItemLong -- 17
+pSrcBox->back, ItemLong -- 18
+}
+#typev dxdevice_cpp3120 18 "%0Device=0x%10!p! RESCOPY: Copy fmt emulated for typed<->typeless copy. Fmt:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::ResourceCopyRegion
+{
+this, ItemPtr -- 10
+srcFmt, ItemLong -- 11
+}
+#typev dxdevice_cpp1740 15 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp1711 14 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp1683 13 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp1653 12 "%0Device:0x%10!p! Video Active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::RetrieveSubObject
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp9697 46 "%0device =%10!p!: SetMarker" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetMarker
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp9660 45 "%0device =%10!p!: SetMarkerMode" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::SetMarkerMode
+{
+this, ItemPtr -- 10
+}
+#typev dxdevice_cpp5786 31 "%0Device:0x%10!p! SubmitCommands IB1 GPU VA(0x%11!I64x!) Length(0x%12!x!) result(0x%13!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SubmitCommands
+{
+this, ItemPtr -- 10
+pSubmitCmds->Commands, ItemLongLongX -- 11
+pSubmitCmds->CommandLength, ItemLong -- 12
+result, ItemLong -- 13
+}
+#typev dxdevice_cpp4375 23 "%0Device=0x%10!p! SWRESCOPY: DST CPUptr=0x%11!p! T=%12!d! B=%13!d! L=%14!d! R=%15!d! F=%16!d! B=%17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SwResourceCopyRegion
+{
+this, ItemPtr -- 10
+pDstPtr, ItemPtr -- 11
+dstBox.top, ItemLong -- 12
+dstBox.bottom, ItemLong -- 13
+dstBox.left, ItemLong -- 14
+dstBox.right, ItemLong -- 15
+dstBox.front, ItemLong -- 16
+dstBox.back, ItemLong -- 17
+}
+#typev dxdevice_cpp4370 22 "%0Device=0x%10!p! SWRESCOPY: SRC CPUptr=0x%11!p! T=%12!d! B=%13!d! L=%14!d! R=%15!d! F=%16!d! B=%17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::SwResourceCopyRegion
+{
+this, ItemPtr -- 10
+pSrcPtr, ItemPtr -- 11
+srcBox.top, ItemLong -- 12
+srcBox.bottom, ItemLong -- 13
+srcBox.left, ItemLong -- 14
+srcBox.right, ItemLong -- 15
+srcBox.front, ItemLong -- 16
+srcBox.back, ItemLong -- 17
+}
+#typev dxdevice_cpp6093 37 "%0Device:0x%10!p! TrimUnboundList Skipping removing Alloc=0x%11!I64x! pVidMemAllocInfo=0x%12!p! (Node=0x%13!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::TrimUnboundList
+{
+this, ItemPtr -- 10
+pVidMemAllocInfo->hAllocation, ItemLongLongX -- 11
+pVidMemAllocInfo, ItemPtr -- 12
+refNode, ItemPtr -- 13
+}
+#typev dxdevice_cpp6070 36 "%0Device:0x%10!p! TrimUnboundList Removing Alloc=0x%11!I64x! pVidMemAllocInfo=0x%12!p! (Node=0x%13!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::TrimUnboundList
+{
+this, ItemPtr -- 10
+pVidMemAllocInfo->hAllocation, ItemLongLongX -- 11
+pVidMemAllocInfo, ItemPtr -- 12
+refNode, ItemPtr -- 13
+}
+#typev dxdevice_cpp6025 35 "%0Device:0x%10!p! TrimUnboundList trimFlags=0x%11!x! numBytesToTrim=%12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::TrimUnboundList
+{
+this, ItemPtr -- 10
+trimFlags.value, ItemLong -- 11
+numBytesToTrim, ItemLongLong -- 12
+}
+#typev dxdevice_cpp3309 21 "%0Device = 0x%10!p!, UpdatesubresourceUP: Dst resource = 0x%11!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDevice::UpdateSubresourceUP
+{
+this, ItemPtr -- 10
+pDstResource, ItemPtr -- 11
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxnullddi_cpp3014 17 "%0Device:0x%10!p! CheckPresentDuration Escape failed, returnCode:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDdi::DdiDxgiNullCheckPresentDurationSupport
+{
+this, ItemPtr -- 10
+escapeCheckPresentDuration.header.returnCode, ItemLong -- 11
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp4970 28 "%0Device=0x%10!p!: DISCARD View=0x%11!p! Res=0x%12!p!
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDdi::DdiDiscard
+{
+this, ItemPtr -- 10
+pView, ItemPtr -- 11
+pResource, ItemPtr -- 12
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp5301 17 "%0Device:0x%10!p! CheckPresentDuration Escape failed, returnCode:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxDdi::DdiDxgiCheckPresentDurationSupport
+{
+this, ItemPtr -- 10
+escapeCheckPresentDuration.header.returnCode, ItemLong -- 11
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxddi_cpp4584 46 "%0device =%10!p!: SetMarker" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDdi::DdiSetMarker
+{
+this, ItemPtr -- 10
+}

@@ -1,0 +1,146 @@
+// PDB:  qcdiagrouter850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+4831eefd-5070-3b2b-97d4-178248c6ac23 QCDiagRouter // SRC=DiagLogging.c MJ= MN=
+#typev DiagLogging_c700 27 "%0Unknown wait object" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=DiagRouterLoggingThreadProc
+{
+}
+#typev DiagLogging_c175 11 "%0LoggingInitialize: WdfMemoryCreate for LogWrite %10!u! failed with status 0x%11!08X! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=LoggingInitialize
+{
+idx, ItemLong -- 10
+Status, ItemLong -- 11
+}
+#typev DiagLogging_c187 12 "%0LoggingInitialize: WdfRequestCreate failed for Transport Log Write %10!u!, status = %11!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=LoggingInitialize
+{
+idx, ItemLong -- 10
+Status, ItemLong -- 11
+}
+#typev DiagLogging_c195 13 "%0LoggingInitialize: IoAllocateMdl for LogSend %10!u! failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=LoggingInitialize
+{
+idx, ItemLong -- 10
+}
+#typev DiagLogging_c202 14 "%0LoggingInitialize: IoAllocateIrp for LogSend %10!u! failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=LoggingInitialize
+{
+idx, ItemLong -- 10
+}
+#typev DiagLogging_c229 16 "%0%!FUNC!: failed to start buffer-drain thread,status%10!08x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=LoggingInitialize
+{
+Status, ItemLong -- 10
+}
+#typev DiagLogging_c225 15 "%0%!FUNC!: started buffer-drain thread and closed HANDLE " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=LoggingInitialize
+{
+}
+#typev DiagLogging_c161 10 "%0LoggingInitialize: WdfMemoryCreate for DiagLoggingBufMem failed with status 0x%10!08X! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=LoggingInitialize
+{
+Status, ItemLong -- 10
+}
+#typev DiagLogging_c998 44 "%0SendLogMemToTransport: WskSend Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=SendLogMemToTransport
+{
+}
+#typev DiagLogging_c1018 46 "%0SendLogMemToTransport: Transport Write failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=SendLogMemToTransport
+{
+}
+#typev DiagLogging_c1012 45 "%0SendLogMemToTransport: WdfIoTargetFormatRequestForWrite failed, status %10!08x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=SendLogMemToTransport
+{
+Status, ItemLong -- 10
+}
+#typev DiagLogging_c462 19 "%0Bad head/tail values!! iHead = %10!d!, iTail = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_alloc_internal
+{
+iHead, ItemLong -- 10
+iTail, ItemLong -- 11
+}
+#typev DiagLogging_c552 24 "%0Ring buffer corrupt, final sanity check!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_alloc_internal
+{
+}
+#typev DiagLogging_c507 23 "%0Ring buffer currupt!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_alloc_internal
+{
+}
+#typev DiagLogging_c501 22 "%0Bad iHead after alloc, %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_alloc_internal
+{
+iHead, ItemLong -- 10
+}
+#typev DiagLogging_c486 21 "%0Bad head index after wrap!! iHeadIdx = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_alloc_internal
+{
+iHeadIdx, ItemLong -- 10
+}
+#typev DiagLogging_c480 20 "%0Bad head value after wrap!! iHead = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_alloc_internal
+{
+iHead, ItemLong -- 10
+}
+#typev DiagLogging_c454 18 "%0Ring buffer corrupt!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_alloc_internal
+{
+}
+#typev DiagLogging_c443 17 "%0diagbuf_alloc_internal: buffer_used (%10!u!) > DIAGBUF_SIZE (%11!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_alloc_internal
+{
+buffer_used, ItemLong -- 10
+DIAGBUF_SIZE, ItemLong -- 11
+}
+#typev DiagLogging_c609 25 "%0%!FUNC!:Invalid commit address 0x%10!Ix!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_commit
+{
+(UINT_PTR)ptr, ItemPtr -- 10
+}
+#typev DiagLogging_c616 26 "%0%!FUNC!:overrun pattern did not match" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_commit
+{
+}
+#typev DiagLogging_c747 28 "%0Invalid tail value %10!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Log FUNC=diagbuf_drain
+{
+iTail, ItemLong -- 10
+}
+#typev DiagLogging_c762 30 "%0iTailIdx invalid %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_drain
+{
+iTailIdx, ItemLong -- 10
+}
+#typev DiagLogging_c825 35 "%0Ring buffer corrupt after diagbuf_send_pkt! Head = %10!d!, tail = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_drain
+{
+iHead, ItemLong -- 10
+iTail_temp, ItemLong -- 11
+}
+#typev DiagLogging_c833 36 "%0Ring buffer corrupt after Moving tail! head = %10!d!, tail = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_drain
+{
+iHead, ItemLong -- 10
+iTail_temp, ItemLong -- 11
+}
+#typev DiagLogging_c839 37 "%0Invalid Tail values for diagbuf " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_drain
+{
+}
+#typev DiagLogging_c848 38 "%0Invalid Tail values for diagbuf " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_drain
+{
+}
+#typev DiagLogging_c856 39 "%0Ring buffer corrupt after moving pad iHead = %10!d!, diagbuf_tail = %11!d! 
+!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_drain
+{
+iHead, ItemLong -- 10
+diagbuf_tail, ItemLong -- 11
+}
+#typev DiagLogging_c777 31 "%0iTailIdx invalid after advancing header %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_drain
+{
+iTailIdx, ItemLong -- 10
+}
+#typev DiagLogging_c792 32 "%0Ring buffer corrupt!, Head = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_drain
+{
+iHead, ItemLong -- 10
+}
+#typev DiagLogging_c797 33 "%0iTail_temp invalid = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_drain
+{
+iTail_temp, ItemLong -- 10
+}
+#typev DiagLogging_c809 34 "%0After wrap, diagbuf_tail invalid %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_drain
+{
+diagbuf_tail, ItemLong -- 10
+}
+#typev DiagLogging_c752 29 "%0Ring buffer corrupt!! iHead = %10!d!, iTail = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_drain
+{
+iHead, ItemLong -- 10
+iTail, ItemLong -- 11
+}
+#typev DiagLogging_c903 40 "%0Bad state passed to diagbuf_send_pkt, exiting" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Log FUNC=diagbuf_send_pkt
+{
+}
+#typev DiagLogging_c932 41 "%0No free memory found to send logging to transport layer, returning " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Log FUNC=diagbuf_send_pkt
+{
+}
+#typev DiagLogging_c959 43 "%0HDLC encode cursory size-check failed, sending out existing packet" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=diagbuf_send_pkt
+{
+}
+#typev DiagLogging_c952 42 "%0Couldn't fit HDLC encoded data into memory " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Log FUNC=diagbuf_send_pkt
+{
+}

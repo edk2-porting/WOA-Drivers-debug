@@ -1,0 +1,748 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+d2d0f569-8956-36df-9dcf-4d3f152cd1ae MBB // SRC=MPDMSQmi.c MJ= MN=
+#typev MPDMSQmi_c329 11 "%0%!FUNC!: Invalid parm: pnReqLen %10!p!, pnRespLen %11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQCCI_GetDMSRequestInfo
+{
+pnReqLen, ItemPtr -- 10
+pnRespLen, ItemPtr -- 11
+}
+#typev MPDMSQmi_c485 12 "%0%!FUNC!: 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQCCI_GetDMSRequestInfo
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPDMSQmi_c324 10 "%0%!FUNC!: MsgId 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQCCI_GetDMSRequestInfo
+{
+uMsgId, ItemLong -- 10
+}
+#typev MPDMSQmi_c3506 144 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_CleanDmsClientContext
+{
+subId, ItemLong -- 10
+}
+#typev MPDMSQmi_c3466 143 "%0<%10!s!|sub#%11!d!>%!FUNC!: status= %12!s! (0x%13!x!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitDmsClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+ntStatus, ItemNTSTATUS -- 12
+ntStatus, ItemLong -- 13
+}
+#typev MPDMSQmi_c3452 142 "%0<%10!s!|sub#%11!d!>%!FUNC!: MPQMI_SendDmsBindSubscriptionReq FAILED." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitDmsClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3448 62 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitDmsClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionType, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c3448 61 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitDmsClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionType, ItemLong -- 11
+}
+#typev MPDMSQmi_c3448 60 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitDmsClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionType, ItemLong -- 11
+}
+#typev MPDMSQmi_c3448 59 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitDmsClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionType, ItemLong -- 11
+}
+#typev MPDMSQmi_c3442 141 "%0<%10!s!|sub#%11!d!>%!FUNC!: MPQCCI_InitClientFromServiceObj FAILED." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitDmsClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3432 140 "%0<%10!s!|sub#%11!d!> %!FUNC!: WdfWaitLockCreate FAILED, status=0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitDmsClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPDMSQmi_c3412 139 "%0<%10!s!|sub#%11!d!>%!FUNC!: ExAllocatePoolWithTag FAILED" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitDmsClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3402 138 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitDmsClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3399 137 "%0<sub#%10!d!> %!FUNC!:: HALTEX in progress." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitDmsClient
+{
+subscriptionId, ItemLong -- 10
+}
+#typev MPDMSQmi_c739 26 "%0<%10!s!|sub#%11!d!>%!FUNC!:operatingMode.OperatingMode == 0x01 indication is received!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c681 25 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR! subs_voice_data_capability_valid=FALSE" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c673 24 "%0<%10!s!|sub#%11!d!> %!FUNC!: for sub#%12!d! subs_voice_data_capability=%13!d!, VoiceDataCap=%14!d! [subs_voice_data_capability_len=%15!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+i, ItemLong -- 12
+pIndStruct->subs_voice_data_capability[i].subs_voice_data_capability, ItemLong -- 13
+pDMSWrapperClient->VoiceDataCap, ItemLong -- 14
+pIndStruct->subs_voice_data_capability_len, ItemLong -- 15
+}
+#typev MPDMSQmi_c640 23 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR! subs_voice_data_capability_len=0" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c622 21 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, callback data or function for phone are NULL!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c611 20 "%0<%10!s!|sub#%11!d!>%!FUNC!: nNumOfSubscriptions=%12!d!, nNumOfActiveSubscriptions=%13!d!, nNumofActiveDataSubscriptions=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pDMSWrapperClient->phoneCaps.nNumOfSubscriptions, ItemLong -- 12
+pDMSWrapperClient->phoneCaps.nNumOfActiveSubscriptions, ItemLong -- 13
+pDMSWrapperClient->phoneCaps.nNumofActiveDataSubscriptions, ItemLong -- 14
+}
+#typev MPDMSQmi_c595 19 "%0<%10!s!|sub#%11!d!> %!FUNC!: max_subscriptions=%12!d!, subscription_config_list_len=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pIndStruct->multisim_capability.max_subscriptions, ItemLong -- 12
+pIndStruct->multisim_capability.subscription_config_list_len, ItemLong -- 13
+}
+#typev MPDMSQmi_c585 18 "%0<%10!s!|sub#%11!d!> %!FUNC!: max_subscriptions=%12!d!, subscription_config_list_len=%13!d!, max_active=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pIndStruct->multisim_capability.max_subscriptions, ItemLong -- 12
+pIndStruct->multisim_capability.subscription_config_list_len, ItemLong -- 13
+pIndStruct->multisim_capability.subscription_config_list[0].max_active, ItemLong -- 14
+}
+#typev MPDMSQmi_c633 22 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, pDMSWrapperClient=NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c568 17 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR, pDMSWrapperClient=NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c556 16 "%0<%10!s!|sub#%11!d!> %!FUNC!: OperatingMode = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+operatingMode.OperatingMode, ItemLong -- 12
+}
+#typev MPDMSQmi_c528 15 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, MPQCCI_DecodeIndication returned unsuccessful status!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c515 14 "%0<%10!s!|sub#%11!d!> %!FUNC!: ExAllocatePoolWithTag FAILED" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c510 13 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c1613 48 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR! subs_voice_data_capability_valid=FALSE" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceCapResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c1576 47 "%0<%10!s!|sub#%11!d!> %!FUNC!: subs_voice_data_capability_len=%12!d!, for sub#%13!d! subs_voice_data_capability=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceCapResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pResp->subs_voice_data_capability_len, ItemLong -- 12
+i, ItemLong -- 13
+pResp->subs_voice_data_capability[i].subs_voice_data_capability, ItemLong -- 14
+}
+#typev MPDMSQmi_c1571 46 "%0<%10!s!|sub#%11!d!> %!FUNC!: ERROR! subs_voice_data_capability_len=0" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceCapResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c1565 45 "%0<%10!s!|sub#%11!d!> %!FUNC!: nNumOfSubscriptions=%12!d!, nNumOfActiveSubscriptions=%13!d!, nNumofActiveDataSubscriptions=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceCapResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pDMSWrapperClient->phoneCaps.nNumOfSubscriptions, ItemLong -- 12
+pDMSWrapperClient->phoneCaps.nNumOfActiveSubscriptions, ItemLong -- 13
+pDMSWrapperClient->phoneCaps.nNumofActiveDataSubscriptions, ItemLong -- 14
+}
+#typev MPDMSQmi_c1512 43 "%0<%10!s!|sub#%11!d!> %!FUNC!: pAdapter->pSubPhoneInfo->DeviceClass 0x%12!x! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceCapResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->DeviceClass, ItemLong -- 12
+}
+#typev MPDMSQmi_c1047 28 "%0<%10!s!|sub#%11!d!> %!FUNC!: DeviceManufacturer<%12!Id!B:%13!s!>." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceMfgResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+wcslen (pDMSClient->DeviceManufacturer), ItemPtr -- 12
+pDMSClient->DeviceManufacturer, ItemWString -- 13
+}
+#typev MPDMSQmi_c1090 29 "%0<%10!s!|sub#%11!d!> %!FUNC!: DeviceModelID<%12!Id!B|%13!s!>." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceModelIDResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+wcslen (pDMSClient->DeviceModelID), ItemPtr -- 12
+pDMSClient->DeviceModelID, ItemWString -- 13
+}
+#typev MPDMSQmi_c1192 33 "%0<%10!s!|sub#%11!d!> %!FUNC!: DevicePriID<%12!s!>." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceRevIDResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pDMSClient->DevicePriID, ItemWString -- 12
+}
+#typev MPDMSQmi_c1173 32 "%0<%10!s!|sub#%11!d!> %!FUNC!: DeviceRevisionID<%12!Id!B|%13!s!>." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceRevIDResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+wcslen (pDMSClient->DeviceRevisionID), ItemPtr -- 12
+pDMSClient->DeviceRevisionID, ItemWString -- 13
+}
+#typev MPDMSQmi_c1451 42 "%0<%10!s!|sub#%11!d!> %!FUNC!: SerNum too long: %12!Id!B." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceSerialNumResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+length, ItemPtr -- 12
+}
+#typev MPDMSQmi_c1445 41 "%0<%10!s!|sub#%11!d!> %!FUNC!: DeviceSerialNumberMEID<%12!Id!B:%13!s!>." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceSerialNumResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+length, ItemPtr -- 12
+pDMSClient->DeviceSerialNumberMEID, ItemWString -- 13
+}
+#typev MPDMSQmi_c1438 40 "%0<%10!s!|sub#%11!d!> %!FUNC!: SerNum MEID." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceSerialNumResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c1431 39 "%0<%10!s!|sub#%11!d!> %!FUNC!: SerNum too long: %12!Id!B." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceSerialNumResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+length, ItemPtr -- 12
+}
+#typev MPDMSQmi_c1425 38 "%0<%10!s!|sub#%11!d!> %!FUNC!: SerNum<%12!Id!B:%13!s!>." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceSerialNumResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+length, ItemPtr -- 12
+pDMSClient->DeviceSerialNumberIMEI, ItemWString -- 13
+}
+#typev MPDMSQmi_c1418 37 "%0<%10!s!|sub#%11!d!> %!FUNC!: SerNum IMEI." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceSerialNumResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c1412 36 "%0<%10!s!|sub#%11!d!> %!FUNC!: SerNum too long: %12!Id!B." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceSerialNumResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+length, ItemPtr -- 12
+}
+#typev MPDMSQmi_c1406 35 "%0<%10!s!|sub#%11!d!> %!FUNC!: DeviceSerialNumberESN<%12!Id!B:%13!s!>." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceSerialNumResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+length, ItemPtr -- 12
+pDMSClient->DeviceSerialNumberESN, ItemWString -- 13
+}
+#typev MPDMSQmi_c1400 34 "%0<%10!s!|sub#%11!d!> %!FUNC!: SerNum ESN." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetDeviceSerialNumResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c1765 53 "%0<%10!s!|sub#%11!d!> %!FUNC!: %12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetICCIDResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->ICCID, ItemString -- 12
+}
+#typev MPDMSQmi_c1672 51 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetOperatingModeResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c1653 50 "%0<%10!s!|sub#%11!d!> %!FUNC!: OperatingMode 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetOperatingModeResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pResp->operating_mode, ItemLong -- 12
+}
+#typev MPDMSQmi_c1643 49 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsGetOperatingModeResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2030 56 "%0<%10!s!|sub#%11!d!> %!FUNC!: Operation Blocking 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessDmsUIMGetCkStatusResp
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pResp->operation_blocking, ItemLong -- 12
+}
+#typev MPDMSQmi_c975 58 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDMSResponse
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c970 54 "%0<%10!s!|sub#%11!d!> %!FUNC!: %12!I64u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDMSResponse
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pResp->band_capability, ItemULongLong -- 12
+}
+#typev MPDMSQmi_c945 55 "%0<%10!s!|sub#%11!d!> %!FUNC!: UIMGetStatus 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDMSResponse
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pResp->uim_state, ItemLong -- 12
+}
+#typev MPDMSQmi_c940 57 "%0<%10!s!|sub#%11!d!> %!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDMSResponse
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c901 52 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQDMSResponse
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3540 146 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ReleaseDmsClient
+{
+subId, ItemLong -- 10
+}
+#typev MPDMSQmi_c3531 145 "%0<sub#%10!d!> %!FUNC!:: error releasing client id : 0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ReleaseDmsClient
+{
+subId, ItemLong -- 10
+qmiErr, ItemLong -- 11
+}
+#typev MPDMSQmi_c3352 136 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSGetBandCapReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c3339 135 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSGetBandCapReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3334 134 "%0<%10!s!|sub#%11!d!>%!FUNC! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSGetBandCapReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3121 118 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSGetIMSIReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c3110 117 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSGetIMSIReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3105 116 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSGetIMSIReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2965 103 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSGetMSISDNReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c2956 102 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSGetMSISDNReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2951 101 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSGetMSISDNReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3190 124 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSGetOperatingModeReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3177 123 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSGetOperatingModeReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3172 122 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSGetOperatingModeReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3226 127 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSUIMGetICCIDReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3213 126 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSUIMGetICCIDReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3208 125 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSUIMGetICCIDReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3296 133 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSUIMGetPinStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c3283 132 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSUIMGetPinStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3278 131 "%0<%10!s!|sub#%11!d!>%!FUNC! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSUIMGetPinStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3261 130 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSUIMGetStateReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c3248 129 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSUIMGetStateReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c3243 128 "%0<%10!s!|sub#%11!d!>%!FUNC! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDMSUIMGetStateReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2434 69 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsGetDeviceCapReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2422 68 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_SendDmsGetDeviceCapReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2417 67 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsGetDeviceCapReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2492 73 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsSetOperatingModeReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c2466 72 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsSetOperatingModeReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2458 71 "%0<%10!s!|sub#%11!d!>%!FUNC!: pRadioState is NULL!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_SendDmsSetOperatingModeReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2454 70 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsSetOperatingModeReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2891 95 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMGetCkStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c2876 94 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMGetCkStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2871 93 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMGetCkStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2785 90 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMSetCkProtectionReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c2758 89 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMSetCkProtectionReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2749 88 "%0<%10!s!|sub#%11!d!>%!FUNC!: pOid is NULL and its an OID request!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMSetCkProtectionReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2745 87 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMSetCkProtectionReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2724 86 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMSetPinProtectionReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c2695 85 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMSetPinProtectionReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2690 84 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMSetPinProtectionReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2613 80 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMUnblockCkReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c2591 79 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMUnblockCkReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2583 78 "%0<%10!s!|sub#%11!d!>%!FUNC!: pOid is NULL and its an OID request!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMUnblockCkReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2579 77 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMUnblockCkReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2669 83 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMVerifyPinReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c2640 82 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMVerifyPinReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2635 81 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendDmsUIMVerifyPinReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2397 66 "%0<%10!s!|sub#%11!d!> %!FUNC!: SendQMIRequest for SetOperatingMode failed 0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_SendSetOperatingModeReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+#typev MPDMSQmi_c2381 65 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendSetOperatingModeReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2373 64 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendSetOperatingModeReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2368 63 "%0<%10!s!|sub#%11!d!>%!FUNC!: mode=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendSetOperatingModeReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+mode, ItemLong -- 12
+}
+#typev MPDMSQmi_c2852 92 "%0<%10!s!|sub#%11!d!> %!FUNC!: SendQMIRequest for SetOperatingMode failed 0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_SendUIMChangePinReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+nts, ItemLong -- 12
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c2813 91 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendUIMChangePinReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c836 115 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c836 114 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c836 113 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c833 121 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c833 120 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c833 119 "%0<%10!s!|sub#%11!d!>%!FUNC! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c830 112 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c830 111 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c830 110 "%0<%10!s!|sub#%11!d!>%!FUNC! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c827 109 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c827 108 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c827 107 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c821 106 "%0<%10!s!|sub#%11!d!>%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c821 105 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c821 104 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c818 27 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_GetDeviceInfo
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2935 100 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_SendDmsSetEventReportReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2934 99 "%0<%10!s!|sub#%11!d!>%!FUNC!:." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_SendDmsSetEventReportReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2919 98 "%0<%10!s!|sub#%11!d!>%!FUNC!: request buffer is null." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMUX_SendDmsSetEventReportReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2912 97 "%0<%10!s!|sub#%11!d!>%!FUNC!: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_SendDmsSetEventReportReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c2907 96 "%0<%10!s!|sub#%11!d!>%!FUNC!: ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMUX_SendDmsSetEventReportReq
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+}
+#typev MPDMSQmi_c1135 31 "%0<%10!s!|sub#%11!d!> %!FUNC!: CurrentCarrier<%12!s!>." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MapCurrentCarrier
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->CurrentCarrier, ItemString -- 12
+}
+#typev MPDMSQmi_c1124 30 "%0<%10!s!|sub#%11!d!> %!FUNC!: CarrierID 0x%12!x! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MapCurrentCarrier
+{
+pAdapter->PortName, ItemString -- 10
+subId, ItemLong -- 11
+value, ItemLong -- 12
+}

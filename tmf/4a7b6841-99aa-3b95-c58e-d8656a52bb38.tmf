@@ -1,0 +1,47 @@
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+4a7b6841-99aa-3b95-c58e-d8656a52bb38 vcxproj // SRC=swr_master_hal.c MJ= MN=
+#typev swr_master_hal_c243 19 "%0=SWR:<swr_master_read: 0x%10!x!, 0x%11!x!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_read_imp
+{
+read->reg, ItemLong -- 10
+read->data.w_data, ItemLong -- 11
+}
+#typev swr_master_hal_c228 18 "%0=SWR:<ERROR status didnt change>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=swr_master_read_imp
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev swr_master_hal_c221 17 "%0=SWR:<poll status>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_read_imp
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev swr_master_hal_c202 16 "%0=SWR:<set read address>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_read_imp
+{
+}
+#typev swr_master_hal_c195 15 "%0=SWR:<configure read size to %10!d!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_read_imp
+{
+read->length + 1, ItemLong -- 10
+}
+#typev swr_master_hal_c164 14 "%0=SWR:<ERROR status didnt change>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=swr_master_write_imp
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev swr_master_hal_c158 13 "%0=SWR:<poll for status>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_write_imp
+{
+}
+// PDB:  qcauddev850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev swr_master_hal_c142 12 "%0=SWR:<copy data bytes and address to temporal buffer>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_write_imp
+{
+}
+#typev swr_master_hal_c133 11 "%0=SWR:<configure write size to %10!d! >" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_write_imp
+{
+write.length + 1, ItemLong -- 10
+}
+#typev swr_master_hal_c124 10 "%0=SWR:<swr_master_write: 0x%10!x!, 0x%11!x!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=swr_master_write_imp
+{
+write.reg, ItemLong -- 10
+write.data.w_data & (0xFFFFFFFF>>((SWR_REG_LEN_4-write.length)*8)), ItemLong -- 11
+}

@@ -1,0 +1,174 @@
+// PDB:  qcSensors850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+1a18e6c6-57dd-3a61-e365-057356e7d59d qcSensors // SRC=Orientation.cpp MJ= MN=
+#typev Orientation_cpp107 11 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=COrientation::~COrientation
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp91 10 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=COrientation::~COrientation
+{
+}
+#typev Orientation_cpp677 51 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=COrientation::HandleStreamIndication
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp640 50 "%0%10!s! Raising data event rotvctr: East(X):%11!s! North(Y):%12!s! Up(Z):%13!s! Theta(W):%14!s!; status: %15!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=COrientation::HandleStreamIndication
+{
+m_pwszFriendlyName, ItemWString -- 10
+rotvctrData[0], ItemDouble -- 11
+rotvctrData[1], ItemDouble -- 12
+rotvctrData[2], ItemDouble -- 13
+rotvctrData[3], ItemDouble -- 14
+rotvStatus, ItemLong -- 15
+}
+#typev Orientation_cpp629 49 "%0%10!s! Raising data event gravity: X:%11!s! Y:%12!s! Z:%13!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=COrientation::HandleStreamIndication
+{
+m_pwszFriendlyName, ItemWString -- 10
+gravityData[0], ItemDouble -- 11
+gravityData[1], ItemDouble -- 12
+gravityData[2], ItemDouble -- 13
+}
+#typev Orientation_cpp618 48 "%0%10!s! Raising data event gyro: X:%11!s! Y:%12!s! Z:%13!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=COrientation::HandleStreamIndication
+{
+m_pwszFriendlyName, ItemWString -- 10
+CalGyroData.X, ItemDouble -- 11
+CalGyroData.Y, ItemDouble -- 12
+CalGyroData.Z, ItemDouble -- 13
+}
+#typev Orientation_cpp602 47 "%0%10!s! Raising data event gyrocal: Bias(X):%11!s! Bias(Y):%12!s! Bias(Z):%13!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=COrientation::HandleStreamIndication
+{
+m_pwszFriendlyName, ItemWString -- 10
+biasGyroCalData[0], ItemDouble -- 11
+biasGyroCalData[1], ItemDouble -- 12
+biasGyroCalData[2], ItemDouble -- 13
+}
+#typev Orientation_cpp576 46 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=COrientation::HandleStreamIndication
+{
+}
+#typev Orientation_cpp425 28 "%0 Init property values status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+Status, ItemLong -- 10
+}
+#typev Orientation_cpp424 27 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=COrientation::InitPropertyValues
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp236 26 "%0Adding rotv to g_createdSensorsMap" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+}
+#typev Orientation_cpp233 25 "%0 ERROR: m_pRotVctrObj->Initialize status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+Status, ItemLong -- 10
+}
+#typev Orientation_cpp226 24 "%0 ERROR: Failure while creating Rotation Vector Object" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+}
+#typev Orientation_cpp220 23 "%0Adding gyro_cal to g_createdSensorsMap from Orientation initialization" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+}
+#typev Orientation_cpp217 22 "%0 ERROR: m_pGyrocalObj->Initialize status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+Status, ItemLong -- 10
+}
+#typev Orientation_cpp210 21 "%0 ERROR: Failure while creating Gyrocal Object" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+}
+#typev Orientation_cpp204 20 "%0Adding gravity to g_createdSensorsMap" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+}
+#typev Orientation_cpp201 19 "%0 ERROR: m_pGravityVctrObj->Initialize status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+Status, ItemLong -- 10
+}
+#typev Orientation_cpp194 18 "%0 ERROR: Failure while creating Gravity Vector Object" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+}
+#typev Orientation_cpp187 17 "%0Sensor %10!s! has no SNS_STD_SENSOR_ATTRID_RIGID_BODY attribute " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+m_pwszFriendlyName, ItemWString -- 10
+}
+#typev Orientation_cpp181 16 "%0The SNS_STD_SENSOR_ATTRID_RIGID_BODY attribute -- %10!u! hasn't been supported " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+static_cast<UINT32>(rigidBodyVals.at(0)), ItemLong -- 10
+}
+#typev Orientation_cpp160 15 "%0 ERROR: InitCommonPropertyValues status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+Status, ItemLong -- 10
+}
+#typev Orientation_cpp147 14 "%0 ERROR: Sensor Suid's for Orientation Sensor is empty!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+}
+#typev Orientation_cpp138 13 "%0DataType: %10!s! 	 Suid = 0x%11!I64x! 0x%12!I64x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=COrientation::InitPropertyValues
+{
+elem.second.c_str(), ItemString -- 10
+elem.first.high, ItemLongLongX -- 11
+elem.first.low, ItemLongLongX -- 12
+}
+#typev Orientation_cpp122 12 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=COrientation::InitPropertyValues
+{
+}
+#typev Orientation_cpp549 45 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=COrientation::IntervalChanged
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp545 44 "%0 CStdSensor::IntervalChanged() failed! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::IntervalChanged
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp539 43 "%0 m_pGravityVctrObj::IntervalChanged() failed! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::IntervalChanged
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp533 42 "%0 m_pRotVctrObj::IntervalChanged() failed! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::IntervalChanged
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp527 41 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=COrientation::IntervalChanged
+{
+}
+#typev Orientation_cpp470 34 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=COrientation::StartSensorReading
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp464 33 "%0 CSensor::StartSensorReading() failed! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::StartSensorReading
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp457 32 "%0 m_pGyrocalObj::StartSensorReading() failed! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::StartSensorReading
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp450 31 "%0 m_pGravityVctrObj::StartSensorReading() failed! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::StartSensorReading
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp443 30 "%0 m_pRotVctrObj::StartSensorReading() failed! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::StartSensorReading
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp437 29 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=COrientation::StartSensorReading
+{
+}
+#typev Orientation_cpp515 40 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=COrientation::StopSensorReading
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp509 39 "%0 CSensor::StopSensorReading() failed! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::StopSensorReading
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp502 38 "%0 m_pGyrocalObj::StopSensorReading() failed! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::StopSensorReading
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp495 37 "%0 m_pGravityVctrObj::StopSensorReading() failed! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::StopSensorReading
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp488 36 "%0 m_pRotVctrObj::StopSensorReading() failed! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=COrientation::StopSensorReading
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Orientation_cpp481 35 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=COrientation::StopSensorReading
+{
+}

@@ -1,0 +1,182 @@
+// PDB:  qcdxkm850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+6d2dc6cb-22af-3e9f-7c61-d57e5de267e3 src // SRC=dpdriver.c MJ= MN=
+#typev dpdriver_c1287 27 "%0DP: HPD out is detected [Display:%10!d! uInterrupts:0x%11!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_DecodeAndClearInterrupts
+{
+eDisplayId, ItemLong -- 10
+pDecodedInterrupts->uInterrupts, ItemLong -- 11
+}
+#typev dpdriver_c1282 26 "%0DP: DPDriver_SetConnectionStatus: DP_Host_SetProperty failed to set connection status eLocalStatus =%10!d! [Display:%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_DecodeAndClearInterrupts
+{
+eLocalStatus, ItemLong -- 10
+eDisplayId, ItemLong -- 11
+}
+#typev dpdriver_c1266 25 "%0DP: HPD REPLUG is detected [Display:%10!d! uInterrupts:0x%11!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_DecodeAndClearInterrupts
+{
+eDisplayId, ItemLong -- 10
+pDecodedInterrupts->uInterrupts, ItemLong -- 11
+}
+#typev dpdriver_c1258 24 "%0DP: HPD IRQ is detected [Display:%10!d! uInterrupts:0x%11!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_DecodeAndClearInterrupts
+{
+eDisplayId, ItemLong -- 10
+pDecodedInterrupts->uInterrupts, ItemLong -- 11
+}
+#typev dpdriver_c1593 31 "%0DP: GetAudioModes [Display:%10!d! Index:%11!d!  Fmt:%12!d!  SR Mask: 0x%13!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_GetAudioModeInfo
+{
+eDisplayId, ItemLong -- 10
+psAudioModeInfo->uAudioModeIndex, ItemLong -- 11
+psAudioModeInfo->eAudioFormat, ItemLong -- 12
+psAudioModeInfo->uSupportedAudioSampleRateMask, ItemLong -- 13
+}
+#typev dpdriver_c1871 39 "%0DP: KSV [%10!02x! %11!02x! %12!02x! %13!02x! %14!02x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_GetDownstreamKSVList
+{
+psKSVList->psKSV[i].uKSV[0], ItemLong -- 10
+psKSVList->psKSV[i].uKSV[1], ItemLong -- 11
+psKSVList->psKSV[i].uKSV[2], ItemLong -- 12
+psKSVList->psKSV[i].uKSV[3], ItemLong -- 13
+psKSVList->psKSV[i].uKSV[4], ItemLong -- 14
+}
+#typev dpdriver_c1863 38 "%0DP: KSV [Display:%10!d! Entries: %11!d!  sts: %12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_GetDownstreamKSVList
+{
+eDisplayId, ItemLong -- 10
+psKSVList->uBufferSize/5, ItemLong -- 11
+eRetStatus, ItemLong -- 12
+}
+#typev dpdriver_c1469 29 "%0DP: EDID [%10!02x! %11!02x! %12!02x! %13!02x! %14!02x! %15!02x! %16!02x! %17!02x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_GetEDID
+{
+pEDID[uIndex+0], ItemLong -- 10
+pEDID[uIndex+1], ItemLong -- 11
+pEDID[uIndex+2], ItemLong -- 12
+pEDID[uIndex+3], ItemLong -- 13
+pEDID[uIndex+4], ItemLong -- 14
+pEDID[uIndex+5], ItemLong -- 15
+pEDID[uIndex+6], ItemLong -- 16
+pEDID[uIndex+7], ItemLong -- 17
+}
+#typev dpdriver_c1461 28 "%0DP: EDID Read [Display:%10!d! Size: %11!d!bytes  sts: %12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_GetEDID
+{
+eDisplayId, ItemLong -- 10
+sDPProp.sEdidInfo.uDataLength, ItemLong -- 11
+eRetStatus, ItemLong -- 12
+}
+#typev dpdriver_c1751 34 "%0DP: GetHDCPInfo [Display:%10!d! status:%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_GetHDCPInfo
+{
+eDisplayId, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dpdriver_c1743 33 "%0DP: GetHDCPInfo [Display:%10!d! status:%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_GetHDCPInfo
+{
+eDisplayId, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dpdriver_c1818 37 "%0DP: HDCP [Display:%10!d! HDCP level:%11!d! sts:%12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_GetHDCPStatus
+{
+eDisplayId, ItemLong -- 10
+*peHDCPLevel, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dpdriver_c1806 36 "%0DP: HDCP [Display:%10!d! HDCPStatus:%11!d! sts:%12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_GetHDCPStatus
+{
+eDisplayId, ItemLong -- 10
+*peHDCPStatus, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dpdriver_c1787 35 "%0DP: GetHDCPStatus [Display:%10!d! status:%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_GetHDCPStatus
+{
+eDisplayId, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dpdriver_c1087 20 "%0DP: GetMode [Display:%10!d! Index:%11!d!  %12!d!x%13!d! @ %14!d!Hz PClk:%15!d!Hz  Fmt: %16!d! Audio: %17!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_GetModeInfo
+{
+eDisplayId, ItemLong -- 10
+sDPProp.sPanelInfo.uModeIndex, ItemLong -- 11
+psModeInfo->uWidthPx, ItemLong -- 12
+psModeInfo->uHeightPx, ItemLong -- 13
+(psModeInfo->uRefreshRate >> 16), ItemLong -- 14
+psModeInfo->uPixelRate, ItemLong -- 15
+psModeInfo->eColorFormat, ItemLong -- 16
+psModeInfo->bAudioSupported ? 1 : 0, ItemLong -- 17
+}
+#typev dpdriver_c614 11 "%0DP: Audio routing info for Display:%10!d! - controller: %11!d!, stream: %12!d!, sts: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_GetRoutingInfo
+{
+eDisplayId, ItemLong -- 10
+pRoutingInfo->uControllerId, ItemLong -- 11
+pRoutingInfo->uStreamId, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dpdriver_c567 10 "%0DP: Open [Display:%10!d! sts: %11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_Open
+{
+eDisplayId, ItemLong -- 10
+eRetStatus, ItemLong -- 11
+}
+#typev dpdriver_c932 19 "%0DP: Power [Display:%10!d! Enable:%11!d!  sts: %12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_Power
+{
+eDisplayId, ItemLong -- 10
+bPowerEnable, ItemLong -- 11
+eRetStatus, ItemLong -- 12
+}
+#typev dpdriver_c916 18 "%0DP: Power DISP_PAL_POWER_DisplayPower failed[Display:%10!d! sts: %11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_Power
+{
+eDisplayId, ItemLong -- 10
+eRetStatus, ItemLong -- 11
+}
+#typev dpdriver_c910 17 "%0DP: Power DP_Host_Close failed[Display:%10!d! sts: %11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_Power
+{
+eDisplayId, ItemLong -- 10
+eRetStatus, ItemLong -- 11
+}
+#typev dpdriver_c904 16 "%0DP: HDCP [Display:%10!d! Enable:%11!d! Flags: %12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_Power
+{
+eDisplayId, ItemLong -- 10
+sProcessParams.bContentProtectionEnable, ItemLong -- 11
+sProcessParams.uFlags, ItemLong -- 12
+}
+#typev dpdriver_c1551 30 "%0DP: HDCP [Display:%10!d! Enable:%11!d! Flags: %12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_SetConnectionStatus
+{
+eDisplayId, ItemLong -- 10
+sProcessParams.bContentProtectionEnable, ItemLong -- 11
+sProcessParams.uFlags, ItemLong -- 12
+}
+#typev dpdriver_c1210 23 "%0DP: DPDriver_SetEvent: DP_Host_SetProperty failed  [Display:%10!d! eDPStatus :%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_SetEvent
+{
+eDisplayId, ItemLong -- 10
+eDPStatus, ItemLong -- 11
+}
+#typev dpdriver_c1194 22 "%0DP: DPDriver_SetEvent: DP_Host_SetProperty failed  [Display:%10!d! eDPStatus :%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_SetEvent
+{
+eDisplayId, ItemLong -- 10
+eDPStatus, ItemLong -- 11
+}
+#typev dpdriver_c1180 21 "%0DP: DPDriver_SetEvent: DPDriver_Open failed  [Display:%10!d! eDPStatus :%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_SetEvent
+{
+eDisplayId, ItemLong -- 10
+eDPStatus, ItemLong -- 11
+}
+#typev dpdriver_c1707 32 "%0DP: HDCP [Display:%10!d! Enable:%11!d!  sts: %12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+psDPAttr->bContentProtectionEnable, ItemLong -- 11
+eRetStatus, ItemLong -- 12
+}
+#typev dpdriver_c833 15 "%0DP: SetMode [Display:%10!d! Mode:%11!d! sts: %12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_SetMode
+{
+eDisplayId, ItemLong -- 10
+uModeIndex, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dpdriver_c829 14 "%0DP: HDCP [Display:%10!d! Enable:%11!d! Flags: %12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_SetMode
+{
+eDisplayId, ItemLong -- 10
+sProcessParams.bContentProtectionEnable, ItemLong -- 11
+sProcessParams.uFlags, ItemLong -- 12
+}
+#typev dpdriver_c754 13 "%0DP: Term [Display:%10!d! sts: %11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_Term
+{
+eDisplayId, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dpdriver_c737 12 "%0DPDriver_Open() DISP_OSAL_AcquireLockEvent() failed[Display:%10!d! sts: %11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDMI FUNC=DPDriver_Term
+{
+eDisplayId, ItemLong -- 10
+eStatus, ItemLong -- 11
+}

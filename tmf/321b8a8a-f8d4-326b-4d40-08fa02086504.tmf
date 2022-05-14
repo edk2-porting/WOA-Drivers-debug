@@ -1,0 +1,45 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+321b8a8a-f8d4-326b-4d40-08fa02086504 WMRIL // SRC=WMRilEmergencyModeControl.cpp MJ= MN=
+#typev WMRilEmergencyModeControl_cpp136 13 "%0%!LEVEL! %!FUNC!:Waiting for exit ECBM internal indication." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::EmergencyModeControlClass::Execute
+{
+}
+#typev WMRilEmergencyModeControl_cpp130 12 "%0%!LEVEL! %!FUNC!:Failed to set system selection preference. error = 0x%10!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::EmergencyModeControlClass::Execute
+{
+SysSelectionPrefResp.resp.error, ItemLong -- 10
+}
+#typev WMRilEmergencyModeControl_cpp86 11 "%0%!LEVEL! %!FUNC!:Emergency mode not turned on" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::EmergencyModeControlClass::Execute
+{
+}
+#typev WMRilEmergencyModeControl_cpp67 10 "%0%!LEVEL! %!FUNC!:Only RIL_EMC_EXIT_CDMA_ECBM is supported." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::EmergencyModeControlClass::Execute
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilEmergencyModeControl_cpp158 15 "%0%!LEVEL! %!FUNC!:executor-id = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_NETWORK FUNC=WMRil::EmergencyModeControlClass::InitParams
+{
+m_Params.dwExecutor, ItemLong -- 10
+}
+#typev WMRilEmergencyModeControl_cpp151 14 "%0%!LEVEL! %!FUNC!:Buffer size %10!u! != sizeof(RILEMERGENCYMODECONTROLPARAMS)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::EmergencyModeControlClass::InitParams
+{
+dwBufferLength, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilEmergencyModeControl_cpp194 18 "%0%!LEVEL! %!FUNC!:Emergency mode is turned off." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_NETWORK FUNC=WMRil::EmergencyModeControlClass::ProcessInternalIndication
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilEmergencyModeControl_cpp190 17 "%0%!LEVEL! %!FUNC!:Subscription index %10!u! != executor %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::EmergencyModeControlClass::ProcessInternalIndication
+{
+dwSubscriptionIdx, ItemLong -- 10
+m_Params.dwExecutor, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilEmergencyModeControl_cpp183 16 "%0%!LEVEL! %!FUNC!:Unexpected internal indication %10!s!(%11!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_NETWORK FUNC=WMRil::EmergencyModeControlClass::ProcessInternalIndication
+{
+Debug::WMRilInternalIndicationToStr(InternalIndicationID), ItemWString -- 10
+InternalIndicationID, ItemLong -- 11
+}

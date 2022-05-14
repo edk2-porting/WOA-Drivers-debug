@@ -1,0 +1,155 @@
+// PDB:  qcgnss.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+9952e828-d36d-3afc-76ad-ffb9ed497c1d 10.4 // SRC=xtradata.c MJ= MN=
+#typev xtradata_c450 51 "%0xtradata.c::450 Failed to create ProcessXtra2_5Thread thread" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverXTRADataInit
+{
+}
+#typev xtradata_c421 50 "%0xtradata.c::421 QCGNSS_XtraData:: WdfWaitLockAcquire() Failed " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverXTRADataInit
+{
+}
+#typev xtradata_c405 49 "%0xtradata.c::405 GPSDriverXtraAutoDownLoadStatus: AutoDownloadStatus Int Value %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverXtraAutoDownLoadStatus
+{
+gAutoDownloadStatus, ItemLong -- 10
+}
+#typev xtradata_c402 48 "%0xtradata.c::402 GPSDriverXtraAutoDownLoadStatus: Conversion from UNICODE String to Int Failed! 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverXtraAutoDownLoadStatus
+{
+RegReadStatus, ItemLong -- 10
+}
+#typev xtradata_c398 47 "%0xtradata.c::398 GPSDriverXtraAutoDownLoadStatus: AutoDownloadStatus String = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverXtraAutoDownLoadStatus
+{
+&AutoDownloadStatus, ItemPWString -- 10
+}
+#typev xtradata_c394 46 "%0xtradata.c::394 GPSDriverXtraAutoDownLoadStatus: Reading Registry Failed for AutoDownloadStatus " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=GPSDriverXtraAutoDownLoadStatus
+{
+}
+#typev xtradata_c386 45 "%0xtradata.c::386 AutoDownloadStatus.Buffer failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverXtraAutoDownLoadStatus
+{
+}
+#typev xtradata_c275 32 "%0xtradata.c::275 [GPSSEQDIA] XTRA_DATA_RESP_D2M status=%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=InjectData
+{
+status, ItemLong -- 10
+}
+#typev xtradata_c272 31 "%0xtradata.c::272 QCGPS: InjectBlob SUCCESS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=InjectData
+{
+}
+#typev xtradata_c255 30 "%0xtradata.c::255 XTRA First byte value = %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=InjectData
+{
+*pDatablob, ItemLong -- 10
+}
+#typev xtradata_c248 29 "%0xtradata.c::248 GPS::HandleBlobRequest: exceeds max allowable file size maxfileSize %10!d! blob size %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=InjectData
+{
+maxFileSizeInBytes, ItemLong -- 10
+m_CntDataLength, ItemLong -- 11
+}
+#typev xtradata_c224 28 "%0xtradata.c::224 GPS::InjectPart: ERROR: injection failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=InjectPart
+{
+}
+#typev xtradata_c194 27 "%0xtradata.c::194 GPS::InjectPart: part #%10!d!, %11!d! bytes, first byte 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=InjectPart
+{
+g_injectDataReq.partNum, ItemLong -- 10
+g_injectDataReq.partData_len, ItemLong -- 11
+g_injectDataReq.partData[0], ItemLong -- 12
+}
+#typev xtradata_c172 26 "%0xtradata.c::172 GPS::InjectPart:ERROR: passed data end" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=InjectPart
+{
+}
+#typev xtradata_c167 25 "%0xtradata.c::167 GPS::InjectPart: length %10!d!, offset %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=InjectPart
+{
+m_CntDataLength, ItemLong -- 10
+m_idxByteOffset, ItemLong -- 11
+}
+#typev xtradata_c150 24 "%0xtradata.c::150 QCGPS: RaiseRequestBlob RequestType %10!d! Send Request to OS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestBlob
+{
+pGnssAssistanceDataEvent->AgnssRequest.RequestType, ItemLong -- 10
+}
+#typev xtradata_c138 23 "%0xtradata.c::138 [GPSSEQDIA] XTRA_DATA_REQ_D2A xtra_ver= GNSS_AGNSSFORMAT_XTRA2" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestBlob
+{
+}
+#typev xtradata_c137 22 "%0xtradata.c::137 QCGPS:  RaiseRequestBlob BlobFormat GNSS_AGNSSFORMAT_XTRA2 " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestBlob
+{
+}
+#typev xtradata_c132 21 "%0xtradata.c::132 [GPSSEQDIA] XTRA_DATA_REQ_D2A xtra_ver= GNSS_AGNSSFORMAT_XTRA3" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestBlob
+{
+}
+#typev xtradata_c131 20 "%0xtradata.c::131 QCGPS:  RaiseRequestBlob BlobFormat GNSS_AGNSSFORMAT_XTRA3 " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestBlob
+{
+}
+#typev xtradata_c126 19 "%0xtradata.c::126 [GPSSEQDIA] XTRA_DATA_REQ_D2A xtra_ver= GNSS_AGNSSFORMAT_XTRA3_1" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestBlob
+{
+}
+#typev xtradata_c125 18 "%0xtradata.c::125 QCGPS:  RaiseRequestBlob BlobFormat GNSS_AGNSSFORMAT_XTRA3_1 " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestBlob
+{
+}
+#typev xtradata_c120 17 "%0xtradata.c::120 QCGPS:  RaiseRequestBlob Force XTRA req to: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestBlob
+{
+g_force_xtra_ver_req, ItemLong -- 10
+}
+#typev xtradata_c117 16 "%0xtradata.c::117 QCGPS: RaiseRequestBlob AgnssFormatSupported %10!d!, g_force_xtra_ver_req: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestBlob
+{
+platform_capability.AgnssFormatSupported, ItemLong -- 10
+g_force_xtra_ver_req, ItemLong -- 11
+}
+#typev xtradata_c103 15 "%0xtradata.c::103 QCGPS: WdfRequestRetrieveOutputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=RaiseRequestBlob
+{
+bufLength, ItemPtr -- 10
+sizeof(GNSS_EVENT), ItemLong -- 11
+}
+#typev xtradata_c96 14 "%0xtradata.c::96 QCGPS: RaiseRequestBlob WdfRequestRetrieveOutputBuffer failed 0x%10!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=RaiseRequestBlob
+{
+status, ItemLong -- 10
+}
+#typev xtradata_c93 13 "%0xtradata.c::93 QCGPS: RaiseRequestBlob IRP IOCTL_GNSS_LISTEN_AGNSS <---" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=RaiseRequestBlob
+{
+}
+#typev xtradata_c88 12 "%0xtradata.c::88 [TELY] E_PENDING_IOCTL_UNAVAILABLE IOCTL_GNSS_LISTEN_AGNSS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RaiseRequestBlob
+{
+}
+#typev xtradata_c86 11 "%0xtradata.c::86 QCGPS: RaiseRequestBlob no pending IOCTL_GNSS_LISTEN_AGNSS, wait for pending IOCTL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=RaiseRequestBlob
+{
+}
+#typev xtradata_c66 10 "%0xtradata.c::66 QCGPS:  platform doesnt support AgnssInjection BLOB" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=RaiseRequestBlob
+{
+}
+#typev xtradata_c332 39 "%0xtradata.c::332 QCGPS: WaitForXtradCmdDone FAILED. Injection failure for PartNum %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitForXtradCmdDone
+{
+partNum, ItemLong -- 10
+}
+#typev xtradata_c329 38 "%0xtradata.c::329 QCGPS: WaitForXtradCmdDone SUCCESS. Injected PartNum %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=WaitForXtradCmdDone
+{
+partNum, ItemLong -- 10
+}
+#typev xtradata_c320 37 "%0xtradata.c::320 QMIXtraDataRespIndEvent WAIT_TIMEOUT!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitForXtradCmdDone
+{
+}
+#typev xtradata_c313 36 "%0xtradata.c::313 QCGPS: WaitForXtradCmdDone PartNum Invalid!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=WaitForXtradCmdDone
+{
+}
+#typev xtradata_c303 35 "%0xtradata.c::303 QCGPS: ConstellationMask:0x%10!I64x! (GPS:0x01, GLO:0x02, BDS: 0x04, GAL:0x08, QZSS:0x10)!!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=WaitForXtradCmdDone
+{
+g_resp_inject_blob_info.respInjectXtraIndPayload.ConstellationMask, ItemLongLongX -- 10
+}
+#typev xtradata_c299 34 "%0xtradata.c::299 QCGPS: WaitForXtradCmdDone PartNum Invalid!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=WaitForXtradCmdDone
+{
+}
+#typev xtradata_c289 33 "%0xtradata.c::289 WaitForXtraCmdDone Event Received" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=WaitForXtradCmdDone
+{
+}
+#typev xtradata_c370 44 "%0xtradata.c::370 QCGPS: read_forced_xtra_ver_config g_force_xtra_ver Value: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=read_forced_xtra_ver_config
+{
+g_force_xtra_ver_req, ItemLong -- 10
+}
+#typev xtradata_c364 43 "%0xtradata.c::364 read_forced_xtra_ver_config: Conversion from UNICODE String to Int Failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=read_forced_xtra_ver_config
+{
+}
+#typev xtradata_c360 42 "%0xtradata.c::360 RegForceXtraVer String = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=read_forced_xtra_ver_config
+{
+&readData, ItemPWString -- 10
+}
+#typev xtradata_c356 41 "%0xtradata.c::356 QCGPS: RegForceXtraVer Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=read_forced_xtra_ver_config
+{
+}
+#typev xtradata_c348 40 "%0xtradata.c::348 QCGNSS_GF: read_forced_xtra_ver_config ExAllocatePoolWithTag failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=read_forced_xtra_ver_config
+{
+}

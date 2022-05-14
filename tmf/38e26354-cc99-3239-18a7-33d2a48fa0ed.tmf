@@ -1,0 +1,323 @@
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+38e26354-cc99-3239-18a7-33d2a48fa0ed 10.4 // SRC=RevDFSClient.c MJ= MN=
+#typev RevDFSClient_c786 61 "%0<%!FUNC!>: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDFSClient_Allocate
+{
+}
+#typev RevDFSClient_c781 60 "%0<%!FUNC!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDFSClient_Allocate
+{
+}
+#typev RevDFSClient_c919 75 "%0%10!s!<%!FUNC!>: error releasing 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDFSClient_DeInit
+{
+pClient->PortName, ItemString -- 10
+qmiErr, ItemLong -- 11
+}
+#typev RevDFSClient_c915 74 "%0%10!s!<%!FUNC!>: Releasing DFD client = %11!p! with handle = %12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDFSClient_DeInit
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+pClient->handle, ItemPtr -- 12
+}
+#typev RevDFSClient_c911 73 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDFSClient_DeInit
+{
+}
+#typev RevDFSClient_c907 72 "%0<%!FUNC!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDFSClient_DeInit
+{
+}
+#typev RevDFSClient_c896 71 "%0%10!s!<%!FUNC!> : pClient = 0x%11!p! DFS port = %12!d! status = %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=hIFRHandle FLAGS=RVRM_WPP FUNC=RevDFSClient_Init
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+portIndex, ItemLong -- 12
+status, ItemNTSTATUS -- 13
+}
+#typev RevDFSClient_c880 70 "%0%10!s!<%!FUNC!>: FAILED iptype=%11!d!, QmiType=%12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=hIFRHandle FLAGS=RVRM_WPP FUNC=RevDFSClient_Init
+{
+pClient->PortName, ItemString -- 10
+IPType, ItemLong -- 11
+QmiType, ItemLong -- 12
+}
+#typev RevDFSClient_c879 69 "%0%10!s!<%!FUNC!>: FAILED iptype=%11!d!, QmiType=%12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDFSClient_Init
+{
+pClient->PortName, ItemString -- 10
+IPType, ItemLong -- 11
+QmiType, ItemLong -- 12
+}
+#typev RevDFSClient_c862 68 "%0%10!s!<%!FUNC!> : ERROR, STATUS_INVALID_PARAMETER iptype=%11!d!, QmiType=%12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=hIFRHandle FLAGS=RVRM_WPP FUNC=RevDFSClient_Init
+{
+pClient->PortName, ItemString -- 10
+IPType, ItemLong -- 11
+QmiType, ItemLong -- 12
+}
+#typev RevDFSClient_c847 67 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=hIFRHandle FLAGS=RVRM_WPP FUNC=RevDFSClient_Init
+{
+}
+#typev RevDFSClient_c846 66 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDFSClient_Init
+{
+}
+#typev RevDFSClient_c841 65 "%0<%!FUNC!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDFSClient_Init
+{
+}
+#typev RevDFSClient_c1014 79 "%0: pClient/pQMIInd = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDFSIndication
+{
+}
+#typev RevDFSClient_c1032 81 "%0%10!s!<%!FUNC!>: MsgId 0x%11!x!. DFS_REVERSE_IP_TRANSPORT_FILTER_UPDATE_IND." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDFSIndication
+{
+pClient->PortName, ItemString -- 10
+pQMIInd->uMsgId, ItemLong -- 11
+}
+#typev RevDFSClient_c1039 82 "%0%10!s!<%!FUNC!>: MsgId 0x%11!x!. QMI_DFS_REMOTE_SOCKET_REQUEST_IND_V01." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDFSIndication
+{
+pClient->PortName, ItemString -- 10
+pQMIInd->uMsgId, ItemLong -- 11
+}
+#typev RevDFSClient_c1046 59 "%0%10!s!<%!FUNC!>: RevSocketsMgmt_ReleaseSocket failed with %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDFSIndication
+{
+pDFSClient->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevDFSClient_c1046 58 "%0%10!s!<%!FUNC!>: DFS_Remote_Socket_Release_Ind decoding failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDFSIndication
+{
+pDFSClient->PortName, ItemString -- 10
+}
+#typev RevDFSClient_c1046 57 "%0<%!FUNC!> : STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDFSIndication
+{
+}
+#typev RevDFSClient_c1045 83 "%0%10!s!<%!FUNC!>: MsgId 0x%11!x!. QMI_DFS_REMOTE_SOCKET_RELEASE_IND_V01." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDFSIndication
+{
+pClient->PortName, ItemString -- 10
+pQMIInd->uMsgId, ItemLong -- 11
+}
+#typev RevDFSClient_c1051 84 "%0%10!s!<%!FUNC!>: MsgId 0x%11!x!. Invalid DFS IND." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDFSIndication
+{
+pClient->PortName, ItemString -- 10
+pQMIInd->uMsgId, ItemLong -- 11
+}
+#typev RevDFSClient_c1022 80 "%0%10!s!: SSR in progress. Exiting DFS indication processing." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDFSIndication
+{
+pClient->PortName, ItemString -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev RevDFSClient_c181 18 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDFSGetReverseIPTransportFiltersReq
+{
+}
+#typev RevDFSClient_c188 19 "%0%10!s!<%!FUNC!>: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDFSGetReverseIPTransportFiltersReq
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevDFSClient_c196 20 "%0%10!s!<%!FUNC!>: END. pClient = 0x%11!p!. status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDFSGetReverseIPTransportFiltersReq
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevDFSClient_c87 11 "%0%10!s!<%!FUNC!>: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDFSIndicationRegistrationReq
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevDFSClient_c97 12 "%0%10!s!<%!FUNC!>: END. pClient = 0x%11!p!. status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDFSIndicationRegistrationReq
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevDFSClient_c79 10 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDFSIndicationRegistrationReq
+{
+}
+#typev RevDFSClient_c379 38 "%0%10!s!<%!FUNC!>: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDfsBindDataPortReq
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevDFSClient_c427 40 "%0%10!s!<%!FUNC!>: pClient = 0x%11!p!. status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDfsBindDataPortReq
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevDFSClient_c388 39 "%0%10!s!<%!FUNC!>: MuxID = %11!d!, iptype = %12!d!, QmiType = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDfsBindDataPortReq
+{
+pClient->PortName, ItemString -- 10
+MuxID, ItemLong -- 11
+ipType, ItemLong -- 12
+QmiType, ItemLong -- 13
+}
+#typev RevDFSClient_c629 54 "%0%10!s!<%!FUNC!>: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_DFSRemoteSocketRequestInd
+{
+pDFSClient->PortName, ItemString -- 10
+}
+#typev RevDFSClient_c695 33 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_DFSRemoteSocketRequestInd
+{
+}
+#typev RevDFSClient_c695 34 "%0%10!s!<%!FUNC!>: END. pClient = 0x%11!p!. status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_DFSRemoteSocketRequestInd
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevDFSClient_c695 32 "%0<%!FUNC!>:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_DFSRemoteSocketRequestInd
+{
+}
+#typev RevDFSClient_c686 56 "%0%10!s!<%!FUNC!>: Socket allocation failed for: ListItem = %11!u!, ipFamily = %12!u!, xport_prot = %13!u!, port = %14!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_DFSRemoteSocketRequestInd
+{
+pDFSClient->PortName, ItemString -- 10
+i, ItemLong -- 11
+pRemoteSocketInd->request_socket_list[i].ip_family, ItemLong -- 12
+pRemoteSocketInd->request_socket_list[i].xport_prot, ItemLong -- 13
+pRemoteSocketInd->request_socket_list[i].port_no, ItemLong -- 14
+}
+#typev RevDFSClient_c674 55 "%0<%!FUNC!>: Error: Invalid port_property = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_DFSRemoteSocketRequestInd
+{
+pRemoteSocketInd->port_pref.port_property, ItemLong -- 10
+}
+#typev RevDFSClient_c622 53 "%0%10!s!<%!FUNC!>: DFS_Remote_Socket_Request_Ind decoding failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_DFSRemoteSocketRequestInd
+{
+pDFSClient->PortName, ItemString -- 10
+}
+#typev RevDFSClient_c611 52 "%0<%!FUNC!>: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_DFSRemoteSocketRequestInd
+{
+}
+#typev RevDFSClient_c598 51 "%0<%!FUNC!>:Enter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_DFSRemoteSocketRequestInd
+{
+}
+#typev RevDFSClient_c577 50 "%0%10!s!<%!FUNC!>: pClient = 0x%11!p!. status = %12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_DFSReverseFilterUpdateInd
+{
+pDFSClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevDFSClient_c561 49 "%0%10!s!<%!FUNC!>: No filter_rules is being passed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_DFSReverseFilterUpdateInd
+{
+pDFSClient->PortName, ItemString -- 10
+}
+#typev RevDFSClient_c547 48 "%0%10!s!<%!FUNC!>: Posting Reverse IP Transport filters ADDED notification" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_DFSReverseFilterUpdateInd
+{
+pDFSClient->PortName, ItemString -- 10
+}
+#typev RevDFSClient_c539 47 "%0%10!s!<%!FUNC!>: No filter_rules is being passed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_DFSReverseFilterUpdateInd
+{
+pDFSClient->PortName, ItemString -- 10
+}
+#typev RevDFSClient_c526 46 "%0%10!s!<%!FUNC!>: Posting Reverse IP Transport filters DELETED notification." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_DFSReverseFilterUpdateInd
+{
+pDFSClient->PortName, ItemString -- 10
+}
+#typev RevDFSClient_c517 45 "%0%10!s!<%!FUNC!>: DFS_Reverse_Filter_Update_Ind decoding failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_DFSReverseFilterUpdateInd
+{
+pDFSClient->PortName, ItemString -- 10
+}
+#typev RevDFSClient_c505 44 "%0<%!FUNC!>: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_DFSReverseFilterUpdateInd
+{
+}
+#typev RevDFSClient_c494 43 "%0<%!FUNC!>: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_DFSReverseFilterUpdateInd
+{
+}
+#typev RevDFSClient_c1098 35 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+}
+#typev RevDFSClient_c1098 37 "%0<%!FUNC!>: Response success." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+}
+#typev RevDFSClient_c1098 36 "%0<%!FUNC!>: ERROR: Response failed. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+#typev RevDFSClient_c1092 29 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+}
+#typev RevDFSClient_c1092 31 "%0<%!FUNC!>: remote_socket_capability_valid = %10!u!, remote_socket_capability = %11!u!, remote_socket_capability_version_valid = %12!u!, remote_socket_capability_version = %13!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+pResp->remote_socket_capability_valid, ItemLong -- 10
+pResp->remote_socket_capability, ItemLong -- 11
+pResp->remote_socket_capability_version_valid, ItemLong -- 12
+pResp->remote_socket_capability_version, ItemLong -- 13
+}
+#typev RevDFSClient_c1092 30 "%0<%!FUNC!>: ERROR: Response failed. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+#typev RevDFSClient_c1103 85 "%0<%!FUNC!>: uQMIType 0x%10!x!. Invalid DFS Response." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+pQMIElement->uQMIType, ItemLong -- 10
+}
+#typev RevDFSClient_c1086 21 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+}
+#typev RevDFSClient_c1086 25 "%0<%!FUNC!>: END" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+}
+#typev RevDFSClient_c1086 24 "%0<%!FUNC!>: No filter_rules is being passed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+}
+#typev RevDFSClient_c1086 23 "%0<%!FUNC!>: Filter rules valid, number of filter is %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+pResp->filter_rules_len, ItemLong -- 10
+}
+#typev RevDFSClient_c1086 22 "%0<%!FUNC!>: ERROR: Response failed. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+#typev RevDFSClient_c1076 17 "%0<%!FUNC!>: Response success." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+}
+#typev RevDFSClient_c1076 16 "%0<%!FUNC!>: ERROR: Response failed. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+#typev RevDFSClient_c1081 42 "%0<%!FUNC!>: Response success." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+}
+#typev RevDFSClient_c1081 41 "%0<%!FUNC!>: ERROR: Response failed. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQDFSResponse
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev RevRmQCCI_c919 77 "%0<%!FUNC!>: MsgId 0x%10!x!. Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QCCI_GetRequestInfo
+{
+uMsgId, ItemLong -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev RevRmQCCI_c919 78 "%0<%!FUNC!>: MsgId 0x%10!x! and status = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QCCI_GetRequestInfo
+{
+uMsgId, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevRmQCCI_c919 76 "%0<%!FUNC!>: MsgId 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QCCI_GetRequestInfo
+{
+uMsgId, ItemLong -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev RevRmnet_c809 13 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_QmiIndicationsRegistration
+{
+}
+#typev RevRmnet_c809 14 "%0%10!s!<%!FUNC!>: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_QmiIndicationsRegistration
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevRmnet_c809 15 "%0%10!s!<%!FUNC!>: END. pClient = 0x%11!p!. status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmnet_QmiIndicationsRegistration
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevRmnet_c805 26 "%0<%!FUNC!>: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_QmiIndicationsRegistration
+{
+}
+#typev RevRmnet_c805 27 "%0%10!s!<%!FUNC!>: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_QmiIndicationsRegistration
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevRmnet_c805 28 "%0%10!s!<%!FUNC!>: END. pClient = 0x%11!p!. status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmnet_QmiIndicationsRegistration
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}

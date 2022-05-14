@@ -1,0 +1,1541 @@
+// PDB:  qcgnss.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+8ec0d2cf-afdb-36f6-5c15-d85692219ab6 10.4 // SRC=gpsdriverqmiloc.c MJ= MN=
+#typev gpsdriverqmiloc_c579 50 "%0gpsdriverqmiloc.c::579 <--- AddClient " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=AddClient
+{
+}
+#typev gpsdriverqmiloc_c564 49 "%0gpsdriverqmiloc.c::564 QCGPS: AddClient: ZPP request received! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=AddClient
+{
+}
+#typev gpsdriverqmiloc_c555 48 "%0gpsdriverqmiloc.c::555 [GPSSEQDIA] START_FIX_REQ_A2D Sess_Type=CT SID=%10!d! HA=%11!d! HC=%12!d! TBF=%13!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=AddClient
+{
+GpsDriverclient[CT_INDEX].gps_start_fix_param.FixSessionID, ItemLong -- 10
+GpsDriverclient[CT_INDEX].gps_start_fix_param.HorizontalAccuracy, ItemLong -- 11
+GpsDriverclient[CT_INDEX].gps_start_fix_param.HorizontalConfidence, ItemLong -- 12
+GpsDriverclient[CT_INDEX].gps_start_fix_param.ContinuousParam.PreferredInterval, ItemLong -- 13
+}
+#typev gpsdriverqmiloc_c540 47 "%0gpsdriverqmiloc.c::540 CT AddClient: client_count: %10!d! SID: %11!d! HA: %12!d! HC: %13!d! TBF: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=AddClient
+{
+current_client_count, ItemLong -- 10
+GpsDriverclient[CT_INDEX].gps_start_fix_param.FixSessionID, ItemLong -- 11
+GpsDriverclient[CT_INDEX].gps_start_fix_param.HorizontalAccuracy, ItemLong -- 12
+GpsDriverclient[CT_INDEX].gps_start_fix_param.HorizontalConfidence, ItemLong -- 13
+GpsDriverclient[CT_INDEX].gps_start_fix_param.ContinuousParam.PreferredInterval, ItemLong -- 14
+}
+#typev gpsdriverqmiloc_c525 46 "%0gpsdriverqmiloc.c::525 [GPSSEQDIA] START_FIX_REQ_A2D Sess_Type=SS SID=%10!d! HA=%11!d! HC=%12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=AddClient
+{
+GpsDriverclient[SS_INDEX].gps_start_fix_param.FixSessionID, ItemLong -- 10
+GpsDriverclient[SS_INDEX].gps_start_fix_param.HorizontalAccuracy, ItemLong -- 11
+GpsDriverclient[SS_INDEX].gps_start_fix_param.HorizontalConfidence, ItemLong -- 12
+}
+#typev gpsdriverqmiloc_c511 45 "%0gpsdriverqmiloc.c::511 SS AddClient: client_count: %10!d! SID: %11!d! HA: %12!d! HC: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=AddClient
+{
+current_client_count, ItemLong -- 10
+GpsDriverclient[SS_INDEX].gps_start_fix_param.FixSessionID, ItemLong -- 11
+GpsDriverclient[SS_INDEX].gps_start_fix_param.HorizontalAccuracy, ItemLong -- 12
+GpsDriverclient[SS_INDEX].gps_start_fix_param.HorizontalConfidence, ItemLong -- 13
+}
+#typev gpsdriverqmiloc_c504 44 "%0gpsdriverqmiloc.c::504 AddClient SessionType: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=AddClient
+{
+pGNSSFixSessionParam->SessionType, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c500 43 "%0gpsdriverqmiloc.c::500 <--- AddClient " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=AddClient
+{
+}
+#typev gpsdriverqmiloc_c499 42 "%0gpsdriverqmiloc.c::499 AddClient One Instance of this Session type: %10!d! is already active, ignore this request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=AddClient
+{
+pGNSSFixSessionParam->SessionType, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c488 41 "%0gpsdriverqmiloc.c::488 QCGPS: WdfRequestRetrieveInputBuffer failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=AddClient
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c476 40 "%0gpsdriverqmiloc.c::476 QCGPS:  AddClient out of array bounds for client count %10!d!. ERROR " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=AddClient
+{
+current_client_count, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c472 39 "%0gpsdriverqmiloc.c::472 ---> AddClient current_client_count %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=AddClient
+{
+current_client_count, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c4024 388 "%0gpsdriverqmiloc.c::4024 QCGPS: AddFileHandle <--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=AddFileHandle
+{
+}
+#typev gpsdriverqmiloc_c4021 387 "%0gpsdriverqmiloc.c::4021 QCGPS: AddFileHandle ERROR max connections reached" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=AddFileHandle
+{
+}
+#typev gpsdriverqmiloc_c4013 386 "%0gpsdriverqmiloc.c::4013 QCGPS: AddFileHandle --> FileObject %10!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=AddFileHandle
+{
+FileObject, ItemPtr -- 10
+}
+#typev gpsdriverqmiloc_c1493 132 "%0gpsdriverqmiloc.c::1493 <-- CalculateNewSessParams NewInterval: %10!d! NewHorizontalAccuracy: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=CalculateNewSessParams
+{
+*pNewInterval, ItemLong -- 10
+*pHorizontalAccuracy, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c1488 131 "%0gpsdriverqmiloc.c::1488 QCGPS: Active SS session" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=CalculateNewSessParams
+{
+}
+#typev gpsdriverqmiloc_c1471 130 "%0gpsdriverqmiloc.c::1471 CTInterval: %10!d! current_ms: %11!d!, last_fix_request_time: %12!d!, New PreferredInterval: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=CalculateNewSessParams
+{
+GpsActiveSessionParam.CTInterval, ItemLong -- 10
+current_ms, ItemLong -- 11
+GpsDriverclient[CT_INDEX].last_fix_request_time, ItemLong -- 12
+*pNewInterval, ItemLong -- 13
+}
+#typev gpsdriverqmiloc_c1466 129 "%0gpsdriverqmiloc.c::1466 QCGPS: CT session is active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=CalculateNewSessParams
+{
+}
+#typev gpsdriverqmiloc_c1453 128 "%0gpsdriverqmiloc.c::1453 QCGPS: Both SS and CT are active, send default preferred interval" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=CalculateNewSessParams
+{
+}
+#typev gpsdriverqmiloc_c1450 127 "%0gpsdriverqmiloc.c::1450 --> CalculateNewSessParams" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=CalculateNewSessParams
+{
+}
+#typev gpsdriverqmiloc_c2737 267 "%0gpsdriverqmiloc.c::2737 <--- CheckIfModifyFixisAllowed result %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=CheckIfModifyFixIsAllowed
+{
+result, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2732 266 "%0gpsdriverqmiloc.c::2732 QCGPS: No matching session ID for modify fix req id: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=CheckIfModifyFixIsAllowed
+{
+pGNSSFixSessionParam->FixSessionID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2721 265 "%0gpsdriverqmiloc.c::2721 QCGPS: SS Modify fix paramas HA %10!d!, HC %11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=CheckIfModifyFixIsAllowed
+{
+pGNSSFixSessionParam->HorizontalAccuracy, ItemLong -- 10
+pGNSSFixSessionParam->HorizontalConfidence, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c2713 264 "%0gpsdriverqmiloc.c::2713 QCGPS: CT Modify fix paramas TBF %10!d!, HA %11!d!, HC %12!d! TBF %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=CheckIfModifyFixIsAllowed
+{
+pGNSSFixSessionParam->ContinuousParam.PreferredInterval, ItemLong -- 10
+pGNSSFixSessionParam->HorizontalAccuracy, ItemLong -- 11
+pGNSSFixSessionParam->HorizontalConfidence, ItemLong -- 12
+pGNSSFixSessionParam->ContinuousParam.PreferredInterval, ItemLong -- 13
+}
+#typev gpsdriverqmiloc_c2707 263 "%0gpsdriverqmiloc.c::2707 QCGPS: session ID matched for modify fix req id: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=CheckIfModifyFixIsAllowed
+{
+pGNSSFixSessionParam->FixSessionID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2702 262 "%0gpsdriverqmiloc.c::2702 QCGPS: cnt: %10!d!, FixSessionID %11!d!, Modify FixSessionID: %12!d! SessionType: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=CheckIfModifyFixIsAllowed
+{
+cnt, ItemLong -- 10
+GpsDriverclient[cnt].gps_start_fix_param.FixSessionID, ItemLong -- 11
+pGNSSFixSessionParam->FixSessionID, ItemLong -- 12
+pGNSSFixSessionParam->SessionType, ItemLong -- 13
+}
+#typev gpsdriverqmiloc_c2693 261 "%0gpsdriverqmiloc.c::2693 QCGPS: CheckIfModifyFixisAllowed WdfRequestRetrieveInputBuffer failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=CheckIfModifyFixIsAllowed
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2685 260 "%0gpsdriverqmiloc.c::2685 ---> CheckIfModifyFixisAllowed client count: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=CheckIfModifyFixIsAllowed
+{
+current_client_count, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1734 157 "%0gpsdriverqmiloc.c::1734 QCGPS: XTRA Version Check feature is not supported in this PL!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=GPSDriverInjectXtraVerCheck
+{
+}
+#typev gpsdriverqmiloc_c1727 156 "%0gpsdriverqmiloc.c::1727 QCGPS:  locclientSendReq done status %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=GPSDriverInjectXtraVerCheck
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1725 155 "%0gpsdriverqmiloc.c::1725 QCGPS: Sending QMI_LOC_SET_XTRA_VERSION_CHECK_REQ_V02 VersionCheckMode %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverInjectXtraVerCheck
+{
+SetXtraVersionReq.xtraVersionCheckMode, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2590 247 "%0gpsdriverqmiloc.c::2590 QCGPS: <--- GPSDriverQMIProcessGSMCellInfo Status %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIInjectGSMCellInfoAfterSSR
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2587 246 "%0gpsdriverqmiloc.c::2587 QCGPS: pGSMCellInfo=NULL!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMIInjectGSMCellInfoAfterSSR
+{
+}
+#typev gpsdriverqmiloc_c2579 245 "%0gpsdriverqmiloc.c::2579 QCGPS:  locclientSendReq done" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=GPSDriverQMIInjectGSMCellInfoAfterSSR
+{
+}
+#typev gpsdriverqmiloc_c2577 244 "%0gpsdriverqmiloc.c::2577 QCGPS: Sending QMI_LOC_INJECT_GSM_CELL_INFO_REQ" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIInjectGSMCellInfoAfterSSR
+{
+}
+#typev gpsdriverqmiloc_c2554 243 "%0gpsdriverqmiloc.c::2554 QCGPS: RoamingStatus %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIInjectGSMCellInfoAfterSSR
+{
+g_GSMCellInfo.roamingStatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2552 242 "%0gpsdriverqmiloc.c::2552 QCGPS: CID  %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIInjectGSMCellInfoAfterSSR
+{
+g_GSMCellInfo.gsmCellInfo.CID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2551 241 "%0gpsdriverqmiloc.c::2551 QCGPS: LAC  %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIInjectGSMCellInfoAfterSSR
+{
+g_GSMCellInfo.gsmCellInfo.LAC, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2550 240 "%0gpsdriverqmiloc.c::2550 QCGPS: MNC  %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIInjectGSMCellInfoAfterSSR
+{
+g_GSMCellInfo.gsmCellInfo.MNC, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2549 239 "%0gpsdriverqmiloc.c::2549 QCGPS: MCC  %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIInjectGSMCellInfoAfterSSR
+{
+g_GSMCellInfo.gsmCellInfo.MCC, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2545 238 "%0gpsdriverqmiloc.c::2545 QCGPS: ---> GPSDriverQMIInjectGSMCellInfoAfterSSR " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIInjectGSMCellInfoAfterSSR
+{
+}
+#typev gpsdriverqmiloc_c2177 193 "%0gpsdriverqmiloc.c::2177 QCGPS: GPSDriverQMILocDeInit: locClientClose returned %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMILocDeInit
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2047 188 "%0gpsdriverqmiloc.c::2047 CTSessionErrorTimer DefaultCTSessionErrorTimeout %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMILocInit
+{
+DefaultCTSessionErrorTimeout, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2040 187 "%0gpsdriverqmiloc.c::2040 Conversion from UNICODE String to Int Failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c2036 186 "%0gpsdriverqmiloc.c::2036 CTSessionErrorTimer String = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMILocInit
+{
+&CTSessionTimeout, ItemPWString -- 10
+}
+#typev gpsdriverqmiloc_c2032 185 "%0gpsdriverqmiloc.c::2032 Read CTSessionErrorTimer Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c2023 184 "%0gpsdriverqmiloc.c::2023 QCGNSS_GF: CTSessionTimeout.Buffer failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c2010 183 "%0gpsdriverqmiloc.c::2010 TrackSessionStopTimer Int Value %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMILocInit
+{
+DefaultTrackSessionStopTimeout, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2007 182 "%0gpsdriverqmiloc.c::2007 Conversion from UNICODE String to Int Failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c2003 181 "%0gpsdriverqmiloc.c::2003 TrackSessionStopTimer String = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMILocInit
+{
+&TrackSessionTimeout, ItemPWString -- 10
+}
+#typev gpsdriverqmiloc_c1999 180 "%0gpsdriverqmiloc.c::1999 Read TrackSessionStopTimer Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c1990 179 "%0gpsdriverqmiloc.c::1990 QCGNSS_GF: TrackSessionTimeout.Buffer failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c1979 178 "%0gpsdriverqmiloc.c::1979 UseEmergencyPdnForEmergencySupl Int Value %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMILocInit
+{
+UseEmergencyPdnForEmergencySupl, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1976 177 "%0gpsdriverqmiloc.c::1976 Conversion from UNICODE String to Int Failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c1972 176 "%0gpsdriverqmiloc.c::1972 PdnForEmergencySupl String = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMILocInit
+{
+&PdnForEmergencySupl, ItemPWString -- 10
+}
+#typev gpsdriverqmiloc_c1968 175 "%0gpsdriverqmiloc.c::1968 Read PdnForEmergencySupl Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c1959 174 "%0gpsdriverqmiloc.c::1959 QCGNSS_GF: PdnForEmergencySupl.Buffer failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c1950 173 "%0gpsdriverqmiloc.c::1950 Successfully created Single Shot Tracking Session Timer " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c1945 172 "%0gpsdriverqmiloc.c::1945 Failed to create Single Shot Tracking Session Timer 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+wdfstatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1932 171 "%0gpsdriverqmiloc.c::1932 Failed to start ProcesQMIEventThread " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c1928 170 "%0gpsdriverqmiloc.c::1928 ProcesQMIEventThread, started " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c1908 169 "%0gpsdriverqmiloc.c::1908 QCGNSS_qmiloc:: WdfWaitLockAcquire() Failed " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c1897 168 "%0gpsdriverqmiloc.c::1897 QCGNSS_qmiloc:: WdfWaitLockCreate() Failed for GpsDriverQmiIndLock" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c1891 167 "%0gpsdriverqmiloc.c::1891 QCGNSS_qmiloc:: WdfWaitLockCreate() Failed for GpsDriverQmiRespLock" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c1873 166 "%0gpsdriverqmiloc.c::1873 QCGPS: GPSDriverQMILocInit <---locClientOpen returned ERROR " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c1865 165 "%0gpsdriverqmiloc.c::1865 GPSDriverQMILocInit <---locClientOpen returned %10!d! %11!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=GPSDriverQMILocInit
+{
+status, ItemLong -- 10
+g_handleQmiLoc, ItemPtr -- 11
+}
+#typev gpsdriverqmiloc_c1858 164 "%0gpsdriverqmiloc.c::1858 QCGNSS_device:: GPSDriverQMILocInit() Failed to init --- %10!d! try " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SSR FUNC=GPSDriverQMILocInit
+{
+ctr, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1852 163 "%0gpsdriverqmiloc.c::1852  --->GPSDriverQMILocInit locClientOpen" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMILocInit
+{
+}
+#typev gpsdriverqmiloc_c2209 196 "%0gpsdriverqmiloc.c::2209 GPSDriverQMILocReInit <---locClientOpen returned ERROR " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SSR FUNC=GPSDriverQMILocReInit
+{
+}
+#typev gpsdriverqmiloc_c2204 195 "%0gpsdriverqmiloc.c::2204 GPSDriverQMILocReInit <---locClientOpen returned %10!d! %11!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SSR FUNC=GPSDriverQMILocReInit
+{
+status, ItemLong -- 10
+g_handleQmiLoc, ItemPtr -- 11
+}
+#typev gpsdriverqmiloc_c2202 194 "%0gpsdriverqmiloc.c::2202 GPSDriverQMILocReInit --->locClientOpen " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SSR FUNC=GPSDriverQMILocReInit
+{
+}
+#typev gpsdriverqmiloc_c2671 259 "%0gpsdriverqmiloc.c::2671 QCGPS: <--- GPSDriverQMIProcessGSMCellInfo Status %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessGSMCellInfo
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2666 258 "%0gpsdriverqmiloc.c::2666 QCGPS: pGSMCellInfo=NULL!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMIProcessGSMCellInfo
+{
+}
+#typev gpsdriverqmiloc_c2658 257 "%0gpsdriverqmiloc.c::2658 QCGPS:  locclientSendReq done" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=GPSDriverQMIProcessGSMCellInfo
+{
+}
+#typev gpsdriverqmiloc_c2656 256 "%0gpsdriverqmiloc.c::2656 QCGPS: Sending QMI_LOC_INJECT_GSM_CELL_INFO_REQ" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessGSMCellInfo
+{
+}
+#typev gpsdriverqmiloc_c2632 255 "%0gpsdriverqmiloc.c::2632 QCGPS: RoamingStatus %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessGSMCellInfo
+{
+pGSMCellInfo->roamingStatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2630 254 "%0gpsdriverqmiloc.c::2630 QCGPS: CID  %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessGSMCellInfo
+{
+pGSMCellInfo->gsmCellInfo.CID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2629 253 "%0gpsdriverqmiloc.c::2629 QCGPS: LAC  %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessGSMCellInfo
+{
+pGSMCellInfo->gsmCellInfo.LAC, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2628 252 "%0gpsdriverqmiloc.c::2628 QCGPS: MNC  %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessGSMCellInfo
+{
+pGSMCellInfo->gsmCellInfo.MNC, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2627 251 "%0gpsdriverqmiloc.c::2627 QCGPS: MCC  %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessGSMCellInfo
+{
+pGSMCellInfo->gsmCellInfo.MCC, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2620 250 "%0gpsdriverqmiloc.c::2620 QCGPS: BufferLength < sizeof(GNSS_QCOM_GSM_CELLINFO_STRUCT) !!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMIProcessGSMCellInfo
+{
+}
+#typev gpsdriverqmiloc_c2614 249 "%0gpsdriverqmiloc.c::2614 QCGPS: WdfRequestRetrieveInputBuffer failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverQMIProcessGSMCellInfo
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2607 248 "%0gpsdriverqmiloc.c::2607 QCGPS: ---> GPSDriverQMIProcessGSMCellInfo " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessGSMCellInfo
+{
+}
+#typev gpsdriverqmiloc_c2894 288 "%0gpsdriverqmiloc.c::2894 QCGPS: GPSDriverQMIProcessIOCTL report error status to client" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2889 287 "%0gpsdriverqmiloc.c::2889 QCGPS: GPSDriverQMIProcessIOCTL no action.." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2879 286 "%0gpsdriverqmiloc.c::2879 QCGPS: GPSDriverQMIProcessIOCTL calling ProcessGpsStopRequest" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2874 285 "%0gpsdriverqmiloc.c::2874 QCGPS: GPSDriverQMIProcessIOCTL starting 5sec timer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2865 284 "%0gpsdriverqmiloc.c::2865 QCGPS: GPSDriverQMIProcessIOCTL call ModifyGpsFixRequest" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2849 283 "%0gpsdriverqmiloc.c::2849 QCGPS: GPSDriverQMIProcessIOCTL call ProcessGpsFixRequest" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2831 282 "%0gpsdriverqmiloc.c::2831 QCGPS: GPSDriverQMIProcessIOCTL IOCTL_GNSS_MODIFY_FIXSESSION received redundant MODIFY" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2825 281 "%0gpsdriverqmiloc.c::2825 QCGPS: GPSDriverQMIProcessIOCTL The fix session is currently stopped or not active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2822 280 "%0gpsdriverqmiloc.c::2822 QCGPS: modifySessAllowed is TRUE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2818 279 "%0gpsdriverqmiloc.c::2818 QCGPS: IOCTL_GNSS_MODIFY_FIXSESSION" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2809 278 "%0gpsdriverqmiloc.c::2809 QCGPS: GPSDriverQMIProcessIOCTL IOCTL_GNSS_STOP_FIXSESSION  received redundant STOP" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2804 277 "%0gpsdriverqmiloc.c::2804 QCGPS: Failed to Remove client!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2801 276 "%0gpsdriverqmiloc.c::2801 QCGPS: RemoveClient success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2797 275 "%0gpsdriverqmiloc.c::2797 QCGPS: Calling RemoveClient" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2794 274 "%0gpsdriverqmiloc.c::2794 QCGPS: IOCTL_GNSS_STOP_FIXSESSION" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2788 273 "%0gpsdriverqmiloc.c::2788 QCGPS: AddClient Failed!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2784 272 "%0gpsdriverqmiloc.c::2784 QCGPS: AddClient success clientcount: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+g_current_clientcount, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2775 271 "%0gpsdriverqmiloc.c::2775 QCGPS: New session request current_client_count: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+current_client_count, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2773 270 "%0gpsdriverqmiloc.c::2773 QCGPS: IOCTL_GNSS_START_FIXSESSION" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2766 269 "%0gpsdriverqmiloc.c::2766 QCGPS:  CLIENT_STATE: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTL
+{
+client_state, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2765 268 "%0gpsdriverqmiloc.c::2765 QCGPS:  ---> GPSDriverQMIProcessIOCTL " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=GPSDriverQMIProcessIOCTL
+{
+}
+#typev gpsdriverqmiloc_c2359 219 "%0gpsdriverqmiloc.c::2359 QCGPS: GPSDriverQMIProcessIOCTLModemDown report error status to client" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2354 218 "%0gpsdriverqmiloc.c::2354 QCGPS: GPSDriverQMIProcessIOCTLModemDown no action.." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2349 217 "%0gpsdriverqmiloc.c::2349 QCGPS: GPSDriverQMIProcessIOCTLModemDown change cleint state to CLIENT_STATE_STOPPED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2344 216 "%0gpsdriverqmiloc.c::2344 QCGPS: GPSDriverQMIProcessIOCTLModemDown change cleint state to CLIENT_STATE_STARTED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2333 215 "%0gpsdriverqmiloc.c::2333 QCGPS: IOCTL_GNSS_MODIFY_FIXSESSION received redundant MODIFY" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2327 214 "%0gpsdriverqmiloc.c::2327 QCGPS: The fix session is currently stopped or not active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2324 213 "%0gpsdriverqmiloc.c::2324 QCGPS: modifySessAllowed is TRUE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2320 212 "%0gpsdriverqmiloc.c::2320 QCGPS: GPSDriverQMIProcessIOCTLModemDown IOCTL_GNSS_MODIFY_FIXSESSION" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2311 211 "%0gpsdriverqmiloc.c::2311 QCGPS: IOCTL_GNSS_STOP_FIXSESSION  received redundant STOP" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2306 210 "%0gpsdriverqmiloc.c::2306 QCGPS: Failed to Remove client!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2303 209 "%0gpsdriverqmiloc.c::2303 QCGPS: RemoveClient success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2298 208 "%0gpsdriverqmiloc.c::2298 QCGPS: Calling RemoveClient" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2295 207 "%0gpsdriverqmiloc.c::2295 QCGPS: GPSDriverQMIProcessIOCTLModemDown IOCTL_GNSS_STOP_FIXSESSION" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2289 206 "%0gpsdriverqmiloc.c::2289 QCGPS: AddClient Failed!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2285 205 "%0gpsdriverqmiloc.c::2285 QCGPS: AddClient success clientcount: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+g_current_clientcount, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2275 204 "%0gpsdriverqmiloc.c::2275 QCGPS: New session request current_client_count: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+current_client_count, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2273 203 "%0gpsdriverqmiloc.c::2273 QCGPS: GPSDriverQMIProcessIOCTLModemDown IOCTL_GNSS_START_FIXSESSION" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2266 202 "%0gpsdriverqmiloc.c::2266 QCGPS: CLIENT_STATE: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+client_state, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2265 201 "%0gpsdriverqmiloc.c::2265 QCGPS_SSR:  ---> GPSDriverQMIProcessIOCTLModemDown " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=GPSDriverQMIProcessIOCTLModemDown
+{
+}
+#typev gpsdriverqmiloc_c2481 231 "%0gpsdriverqmiloc.c::2481 QCGPS: GPSDriverReqtDrivrConfig pGnssReqConfigDataEvt = NULL !!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=GPSDriverReqtDrivrConfig
+{
+}
+#typev gpsdriverqmiloc_c2475 230 "%0gpsdriverqmiloc.c::2475 QCGPS: <-- GPSDriverReqtDrivrConfig requested for SUPL config" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverReqtDrivrConfig
+{
+}
+#typev gpsdriverqmiloc_c2460 229 "%0gpsdriverqmiloc.c::2460 QCGPS: WdfRequestRetrieveOutputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=GPSDriverReqtDrivrConfig
+{
+bufLength, ItemPtr -- 10
+sizeof(GNSS_EVENT), ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c2454 228 "%0gpsdriverqmiloc.c::2454 QCGPS: GPSDriverReqtDrivrConfig WdfRequestRetrieveOutputBuffer failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=GPSDriverReqtDrivrConfig
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2447 227 "%0gpsdriverqmiloc.c::2447 QCGPS: no more pending IOCTL_GNSS_LISTEN_DRIVER_REQUEST !!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverReqtDrivrConfig
+{
+}
+#typev gpsdriverqmiloc_c2443 226 "%0gpsdriverqmiloc.c::2443 QCGPS: ---> GPSDriverReqtDrivrConfig " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSDriverReqtDrivrConfig
+{
+}
+#typev gpsdriverqmiloc_c1672 149 "%0gpsdriverqmiloc.c::1672 QCGPS: disableAgnssMask %10!d! enablePowerTesting %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GPSReadRegistryvalues
+{
+g_regSettings.disableAgnssMask, ItemLong -- 10
+g_regSettings.enablePowerTesting, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c1665 148 "%0gpsdriverqmiloc.c::1665 QCGPS: Conversion from UNICODE String to Int Failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSReadRegistryvalues
+{
+}
+#typev gpsdriverqmiloc_c1661 147 "%0gpsdriverqmiloc.c::1661 RegEnablePowerTesting: String = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=GPSReadRegistryvalues
+{
+&DisableMask, ItemPWString -- 10
+}
+#typev gpsdriverqmiloc_c1657 146 "%0gpsdriverqmiloc.c::1657 QCGPS: Read RegEnablePowerTesting Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=GPSReadRegistryvalues
+{
+}
+#typev gpsdriverqmiloc_c1648 145 "%0gpsdriverqmiloc.c::1648 QCGPS: Conversion from UNICODE String to Int Failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSReadRegistryvalues
+{
+}
+#typev gpsdriverqmiloc_c1644 144 "%0gpsdriverqmiloc.c::1644 DisableMask: String = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=GPSReadRegistryvalues
+{
+&DisableMask, ItemPWString -- 10
+}
+#typev gpsdriverqmiloc_c1640 143 "%0gpsdriverqmiloc.c::1640 QCGPS: Read RegDisableAgnssMask Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=GPSReadRegistryvalues
+{
+}
+#typev gpsdriverqmiloc_c1630 142 "%0gpsdriverqmiloc.c::1630 QCGNSS_GF: nGeofenceResponsivness.Buffer failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSReadRegistryvalues
+{
+}
+#typev gpsdriverqmiloc_c282 24 "%0gpsdriverqmiloc.c::282 **************************************" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GetChipInfo
+{
+}
+#typev gpsdriverqmiloc_c276 23 "%0gpsdriverqmiloc.c::276 PhoneRadioSoftwareRevision  %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GetChipInfo
+{
+g_chipinfo.mpssvername, ItemString -- 10
+}
+#typev gpsdriverqmiloc_c269 22 "%0gpsdriverqmiloc.c::269 Unable to query PhoneRadioSoftwareRevision registry value: Win32 error %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GetChipInfo
+{
+err, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c261 21 "%0gpsdriverqmiloc.c::261 PhoneHardwareVariant        %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GetChipInfo
+{
+g_chipinfo.platformName, ItemString -- 10
+}
+#typev gpsdriverqmiloc_c254 20 "%0gpsdriverqmiloc.c::254 Unable to query PhoneHardwareVariant registry value: Win32 error %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GetChipInfo
+{
+err, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c245 19 "%0gpsdriverqmiloc.c::245 PhoneSOCVersion             %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GetChipInfo
+{
+g_chipinfo.hardwareName, ItemString -- 10
+}
+#typev gpsdriverqmiloc_c238 18 "%0gpsdriverqmiloc.c::238 Unable to query PhoneSOCVersion registry value: Win32 error %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GetChipInfo
+{
+err, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c225 17 "%0gpsdriverqmiloc.c::225 Unable to open device targeting registry key: Win32 error %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GetChipInfo
+{
+err, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c219 16 "%0gpsdriverqmiloc.c::219 ************** ChipInfo **************" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GetChipInfo
+{
+}
+#typev gpsdriverqmiloc_c4297 412 "%0gpsdriverqmiloc.c::4297  Track GetTimerHandle Successfull " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GetTrackTimerHandle
+{
+}
+#typev gpsdriverqmiloc_c4277 411 "%0gpsdriverqmiloc.c::4277  Track GetTimerHandle " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=GetTrackTimerHandle
+{
+}
+#typev gpsdriverqmiloc_c3936 379 "%0gpsdriverqmiloc.c::3936 Client State %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=IsClientActive
+{
+client_state, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1563 137 "%0gpsdriverqmiloc.c::1563 QCGPS: ModifyGpsFixRequest Status %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ModifyGpsFixRequest
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1559 136 "%0gpsdriverqmiloc.c::1559 QCGPS: ModifyGpsFixRequest locclientSendReq done" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=ModifyGpsFixRequest
+{
+}
+#typev gpsdriverqmiloc_c1555 135 "%0gpsdriverqmiloc.c::1555 ModifyGpsFixRequest SID: %10!d!, minInterval: %11!d!, AccuracyLevel: %12!d!, fixRecurrence: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ModifyGpsFixRequest
+{
+req.pStartReq->sessionId, ItemLong -- 10
+req.pStartReq->minInterval, ItemLong -- 11
+req.pStartReq->horizontalAccuracyLevel, ItemLong -- 12
+req.pStartReq->fixRecurrence, ItemLong -- 13
+}
+#typev gpsdriverqmiloc_c1508 134 "%0gpsdriverqmiloc.c::1508 NewUpdateInterval: %10!d! HorizontalAccuracy: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ModifyGpsFixRequest
+{
+NewUpdateInterval, ItemLong -- 10
+HorizontalAccuracy, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c1504 133 "%0gpsdriverqmiloc.c::1504 --> ModifyGpsFixRequest" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ModifyGpsFixRequest
+{
+}
+#typev gpsdriverqmiloc_c1439 126 "%0gpsdriverqmiloc.c::1439 [GPSSEQDIA] START_FIX_REQ_D2M Status=%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessGpsFixRequest
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1438 125 "%0gpsdriverqmiloc.c::1438 QCGPS: Sending START FIX Status %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessGpsFixRequest
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1433 124 "%0gpsdriverqmiloc.c::1433 QCGPS: locclientSendReq done" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=ProcessGpsFixRequest
+{
+}
+#typev gpsdriverqmiloc_c1429 123 "%0gpsdriverqmiloc.c::1429 QCGPS: Sending START FIX session ID %10!d! fixRecurrence %11!d! minInterval %12!d! timeout %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessGpsFixRequest
+{
+req.pStartReq->sessionId, ItemLong -- 10
+req.pStartReq->fixRecurrence, ItemLong -- 11
+req.pStartReq->minInterval, ItemLong -- 12
+req.pStartReq->positionReportTimeout, ItemLong -- 13
+}
+#typev gpsdriverqmiloc_c1367 122 "%0gpsdriverqmiloc.c::1367 QCGPS: --> ProcessGpsFixRequest" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessGpsFixRequest
+{
+}
+#typev gpsdriverqmiloc_c1600 141 "%0gpsdriverqmiloc.c::1600 [GPSSEQDIA] STOP_FIX_REQ_D2M Status=%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessGpsStopRequest
+{
+qmiStatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1599 140 "%0gpsdriverqmiloc.c::1599 QCGPS: STOP FIX Status %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessGpsStopRequest
+{
+qmiStatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1592 139 "%0gpsdriverqmiloc.c::1592 QCGPS: No need to send STOP FIX " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessGpsStopRequest
+{
+}
+#typev gpsdriverqmiloc_c1585 138 "%0gpsdriverqmiloc.c::1585 QCGPS: Sending STOP FIX for sessionId %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessGpsStopRequest
+{
+stopReq.sessionId, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1356 121 "%0gpsdriverqmiloc.c::1356 ProcessQMIEventIndThread exit:%10!x!!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessQMIEventIndThread
+{
+TerminatedThread, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1347 120 "%0gpsdriverqmiloc.c::1347 QMIEventIndEvent default!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessQMIEventIndThread
+{
+}
+#typev gpsdriverqmiloc_c1343 119 "%0gpsdriverqmiloc.c::1343 QMIEventIndEvent WAIT_TIMEOUT!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessQMIEventIndThread
+{
+}
+#typev gpsdriverqmiloc_c1339 118 "%0gpsdriverqmiloc.c::1339 DriverUnloadEvent!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessQMIEventIndThread
+{
+}
+#typev gpsdriverqmiloc_c1323 117 "%0gpsdriverqmiloc.c::1323 SendPositionToOS for FixSessionId %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=ProcessQMIEventIndThread
+{
+GpsDriverclient[ctr].gps_start_fix_param.FixSessionID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1312 116 "%0gpsdriverqmiloc.c::1312 SendPositionErrToOS for FixSessionId %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=ProcessQMIEventIndThread
+{
+GpsDriverclient[ctr].gps_start_fix_param.FixSessionID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1299 115 "%0gpsdriverqmiloc.c::1299 [TELY] E_PENDING_IOCTL_UNAVAILABLE IOCTL_GNSS_GET_FIXDATA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessQMIEventIndThread
+{
+}
+#typev gpsdriverqmiloc_c1298 114 "%0gpsdriverqmiloc.c::1298 ProcessQMIEventIndThread no more pending IOCTLs for FixSessionID: %10!d!, return immediately" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_WARNING FUNC=ProcessQMIEventIndThread
+{
+GpsDriverclient[ctr].gps_start_fix_param.FixSessionID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1293 113 "%0gpsdriverqmiloc.c::1293 Not sending position for FixSessionId %10!d! after error sent" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=ProcessQMIEventIndThread
+{
+GpsDriverclient[ctr].gps_start_fix_param.FixSessionID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1271 112 "%0gpsdriverqmiloc.c::1271 QCGPS: SV Info present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=ProcessQMIEventIndThread
+{
+}
+#typev gpsdriverqmiloc_c1261 111 "%0gpsdriverqmiloc.c::1261 QCGPS: ProcessQMIEventIndThread client_count %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=ProcessQMIEventIndThread
+{
+client_count, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1247 110 "%0gpsdriverqmiloc.c::1247 coarse_wifi_position_request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=ProcessQMIEventIndThread
+{
+}
+#typev gpsdriverqmiloc_c1225 109 "%0gpsdriverqmiloc.c::1225 QCGNSS_x2_5: Can't able to request xtra: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=ProcessQMIEventIndThread
+{
+}
+#typev gpsdriverqmiloc_c1212 108 "%0gpsdriverqmiloc.c::1212 xtra_data_request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=ProcessQMIEventIndThread
+{
+}
+#typev gpsdriverqmiloc_c1204 107 "%0gpsdriverqmiloc.c::1204 xtra_time_request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=ProcessQMIEventIndThread
+{
+}
+#typev gpsdriverqmiloc_c1163 106 "%0gpsdriverqmiloc.c::1163 QMIEventIndication Event Received " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessQMIEventIndThread
+{
+}
+#typev gpsdriverqmiloc_c1157 105 "%0gpsdriverqmiloc.c::1157 ProcessQMIEventIndThread Enter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=ProcessQMIEventIndThread
+{
+}
+#typev gpsdriverqmiloc_c3883 375 "%0gpsdriverqmiloc.c::3883 QCGPS: GPS driver QMIErrorIndCb stopping delayed stop fix timer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SSR FUNC=QMIErrorIndCb
+{
+}
+#typev gpsdriverqmiloc_c3875 374 "%0gpsdriverqmiloc.c::3875 QCGPS: GPS driver QMIErrorIndCb Changing client state to STOPPED from STOPPING as modem is down" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SSR FUNC=QMIErrorIndCb
+{
+}
+#typev gpsdriverqmiloc_c3871 373 "%0gpsdriverqmiloc.c::3871 QCGPS: GPS driver QMIErrorIndCb error %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SSR FUNC=QMIErrorIndCb
+{
+errorId, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3358 337 "%0gpsdriverqmiloc.c::3358 QCGPS:  QMIEventIndCb  received QMI_LOC_EVENT_INJECT_SRN_AP_DATA_REQ_IND_V02 srnTechMask %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+eventIndPayload.pInjectSrnApDataReqIndEvent->srnTechMask, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3349 336 "%0gpsdriverqmiloc.c::3349 [GPSSEQDIA] LB_BATCHING_STATUS_IND_M2D reqId=%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+eventIndPayload.pBatchingStatusEvent->batchingStatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3347 335 "%0gpsdriverqmiloc.c::3347 QCGPS:  QMIEventIndCb  received QMI_LOC_EVENT_BATCHING_STATUS_IND_V02 status %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+eventIndPayload.pBatchingStatusEvent->batchingStatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3338 334 "%0gpsdriverqmiloc.c::3338 [GPSSEQDIA] LB_BATCH_FULL_IND_M2D reqId=%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+eventIndPayload.pBatchFullEvent->batchCount, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3336 333 "%0gpsdriverqmiloc.c::3336 QCGPS:  QMIEventIndCb  received QMI_LOC_EVENT_BATCH_FULL_NOTIFICATION_IND_V02 batch count %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+eventIndPayload.pBatchFullEvent->batchCount, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3330 332 "%0gpsdriverqmiloc.c::3330 QCGPS: Setting DBT ZPP Event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3321 331 "%0gpsdriverqmiloc.c::3321 QCGPS:  QMIEventIndCb  received QMI_LOC_EVENT_DBT_POSITION_REPORT_IND_V02 Illegal Event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3318 330 "%0gpsdriverqmiloc.c::3318 QCGPS: QMIEventIndCb received QMI_LOC_EVENT_DBT_SESSION_STATUS_IND_V02 DBT_UNABLE_TO_TRACK " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3310 329 "%0gpsdriverqmiloc.c::3310 QCGPS: QMIEventIndCb received QMI_LOC_EVENT_DBT_SESSION_STATUS_IND_V02 DBT_ABLE_TO_TRACK " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3304 328 "%0gpsdriverqmiloc.c::3304 QCGPS:  QMIEventIndCb  received QMI_LOC_EVENT_DBT_SESSION_STATUS_IND_V02 Session Status %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+eventIndPayload.pDbtSessionStatusEvent->dbtSessionStatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3294 327 "%0gpsdriverqmiloc.c::3294 [GPSSEQDIA] DBT_POS_REPORT_M2D reqId=%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+eventIndPayload.pDbtPositionReportEvent->reqId, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3292 326 "%0gpsdriverqmiloc.c::3292 QCGPS:  QMIEventIndCb  received QMI_LOC_EVENT_DBT_POSITION_REPORT_IND_V02 req ID %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+eventIndPayload.pDbtPositionReportEvent->reqId, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3275 324 "%0gpsdriverqmiloc.c::3275 QCGPS:  QMIEventIndCb  received QMIEventIndEvent Set " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3263 323 "%0gpsdriverqmiloc.c::3263 QCGPS: SBM requirement - overriding emergency PDN with non-mergency PDN" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3253 322 "%0gpsdriverqmiloc.c::3253 [GPSSEQDIA] CON_REQ_M2D connHandle=%10!d! requestType=%11!d! wwanType=%12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+eventIndPayload.pLocationServerConnReqEvent->connHandle, ItemLong -- 10
+eventIndPayload.pLocationServerConnReqEvent->requestType, ItemLong -- 11
+eventIndPayload.pLocationServerConnReqEvent->wwanType, ItemLong -- 12
+}
+#typev gpsdriverqmiloc_c3251 321 "%0gpsdriverqmiloc.c::3251 QCGPS:  QMIEventIndCb  received ATL connection request Handle: %10!ld!, Req Type: %11!d!, Wwan Type: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+eventIndPayload.pLocationServerConnReqEvent->connHandle, ItemLong -- 10
+eventIndPayload.pLocationServerConnReqEvent->requestType, ItemLong -- 11
+eventIndPayload.pLocationServerConnReqEvent->wwanType, ItemLong -- 12
+}
+#typev gpsdriverqmiloc_c3241 320 "%0gpsdriverqmiloc.c::3241 QCGPS:  QMIEventIndCb  new_pd_info_received %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+new_pd_info_received, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3232 319 "%0gpsdriverqmiloc.c::3232 QCGPS:  QMIEventIndCb  set QMIEventIndEvent Set " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3217 318 "%0gpsdriverqmiloc.c::3217 QCGPS: QMIEventIndCb received eQMI_LOC_SESS_STATUS_TIMEOUT_V02 sessionID %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+eventIndPayload.pPositionReportEvent->sessionId, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3211 317 "%0gpsdriverqmiloc.c::3211 QCGPS:  QMIEventIndCb  received QMIEventIndEvent Set " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3200 316 "%0gpsdriverqmiloc.c::3200 QCGPS:  QMIEventIndCb  received Position Report  sessionID %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+eventIndPayload.pPositionReportEvent->sessionId, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3195 315 "%0gpsdriverqmiloc.c::3195 [GPSSEQDIA] POSITION_REPORT_M2D sessionStatus=%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+eventIndPayload.pPositionReportEvent->sessionStatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3193 314 "%0gpsdriverqmiloc.c::3193 QCGPS:  QMIEventIndCb  received QMI_LOC_EVENT_POSITION_REPORT_IND_V02 sessionStatus %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+eventIndPayload.pPositionReportEvent->sessionStatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3185 313 "%0gpsdriverqmiloc.c::3185 QCGPS_QMI_NMEA:  NmeaEventIndCb  NMEA Data QMI_LOC_EVENT_NMEA_IND_V02 NMEA OFF " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3181 312 "%0gpsdriverqmiloc.c::3181 QCGPS_QMI_NMEA: NmeaEventIndCb  received QMI_LOC_EVENT_NMEA_IND_V02 nmea: %10!s! counter: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+eventIndPayload.pNmeaReportEvent->nmea, ItemString -- 10
+counter1++, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3179 311 "%0gpsdriverqmiloc.c::3179 QCGPS_QMI_NMEA:  Unable to allocate memory for nmea string " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_WARNING FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3176 310 "%0gpsdriverqmiloc.c::3176 QCGPS_QMI_NMEA: NmeaEventIndCb NMEA Counter: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+counter++, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3155 309 "%0gpsdriverqmiloc.c::3155 QCGPS:  valid svcount = %10!d! min_snr = %11!s! max_snr = %12!s! avg_snr = %13!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+valid_snr_cnt, ItemLong -- 10
+msrstats.min, ItemDouble -- 11
+msrstats.max, ItemDouble -- 12
+msrstats.avg, ItemDouble -- 13
+}
+#typev gpsdriverqmiloc_c3153 308 "%0gpsdriverqmiloc.c::3153 QCGPS:  #SVINF 	======================================================================================================" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3136 307 "%0gpsdriverqmiloc.c::3136 QCGPS:  #SVINF 	|%10!d!	|%11!d!	|%12!d!	|%13!s!	|%14!s!	|%15!s!	|%16!d!	|%17!d!	|%18!d!|" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+g_event_sv_info.eventIndSvPayload.svList[i].system, ItemLong -- 10
+g_event_sv_info.eventIndSvPayload.svList[i].gnssSvId, ItemLong -- 11
+g_event_sv_info.eventIndSvPayload.svList[i].svStatus, ItemLong -- 12
+g_event_sv_info.eventIndSvPayload.svList[i].snr, ItemDouble -- 13
+g_event_sv_info.eventIndSvPayload.svList[i].elevation, ItemDouble -- 14
+g_event_sv_info.eventIndSvPayload.svList[i].azimuth, ItemDouble -- 15
+g_event_sv_info.eventIndSvPayload.svList[i].healthStatus, ItemLong -- 16
+g_event_sv_info.eventIndSvPayload.svList[i].svInfoMask, ItemLong -- 17
+g_event_sv_info.eventIndSvPayload.svList[i].validMask, ItemLong -- 18
+}
+#typev gpsdriverqmiloc_c3132 306 "%0gpsdriverqmiloc.c::3132 QCGPS:  #SVINF 	|SYS	|SVID	|SVST	|SNR	|ELE	|AZI	|HLT	|SVMK	|MSK|" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3131 305 "%0gpsdriverqmiloc.c::3131 QCGPS:  #SVINF 	num SV's: %10!d!	altitude assumed : %11!d!	validity: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+g_event_sv_info.eventIndSvPayload.svList_len, ItemLong -- 10
+g_event_sv_info.eventIndSvPayload.altitudeAssumed, ItemLong -- 11
+g_event_sv_info.eventIndSvPayload.svList_valid, ItemLong -- 12
+}
+#typev gpsdriverqmiloc_c3130 304 "%0gpsdriverqmiloc.c::3130 QCGPS:  #SVINF 	======================================================================================================" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3112 303 "%0gpsdriverqmiloc.c::3112 QMIEventIndCb  received Satellite Report QMI_LOC_EVENT_GNSS_SV_INFO_IND_V02 sessionID %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+eventIndPayload.pPositionReportEvent->sessionId, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3105 302 "%0gpsdriverqmiloc.c::3105 QCGPS:  QMIEventIndCb  received XTRA DATA Request . maxFileSize %10!d!, maxPartSize %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+injectPredictedOrbitsAllowedSizes.maxFileSizeInBytes, ItemLong -- 10
+injectPredictedOrbitsAllowedSizes.maxPartSize, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3096 301 "%0gpsdriverqmiloc.c::3096 [GPSSEQDIA] XTRA_DATA_REQ_M2D " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3079 300 "%0gpsdriverqmiloc.c::3079 QCGPS:  QMIEventIndCb  received ODCPI 2 Start Request " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3068 299 "%0gpsdriverqmiloc.c::3068 QCGPS:  QMIEventIndCb  received ODCPI 2 STOP Request " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3057 298 "%0gpsdriverqmiloc.c::3057 QCGPS:  QMIEventIndCb  received QMI_LOC_EVENT_WIFI_REQ_IND_V02 with request type %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+eventIndPayload.pWifiReqEvent->requestType, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3056 297 "%0gpsdriverqmiloc.c::3056 [GPSSEQDIA] COARSE_POS_REQ_M2D requestType=%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+eventIndPayload.pWifiReqEvent->requestType, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3037 296 "%0gpsdriverqmiloc.c::3037 QCGPS:  QMIEventIndCb  received XTRA TIME Request " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3030 295 "%0gpsdriverqmiloc.c::3030 [GPSSEQDIA] XTRA_TIME_REQ_M2D " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3016 294 "%0gpsdriverqmiloc.c::3016 QCGPS:  QMIEventIndCb  received eQMI_LOC_FIX_SESSION_FINISHED_V02" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c3005 293 "%0gpsdriverqmiloc.c::3005 QCGPS:  QMIEventIndCb  received eQMI_LOC_FIX_SESSION_STARTED_V02" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c2993 292 "%0gpsdriverqmiloc.c::2993 QCGPS:  QMIEventIndCb  received eQMI_LOC_ENGINE_STATE_OFF_V02" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c2988 291 "%0gpsdriverqmiloc.c::2988 QCGPS:  QMIEventIndCb  received eQMI_LOC_ENGINE_STATE_ON_V02" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c2985 290 "%0gpsdriverqmiloc.c::2985 QCGPS:  QMIEventIndCb  received QMI_LOC_EVENT_ENGINE_STATE_IND_V02" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=QMIEventIndCb
+{
+}
+#typev gpsdriverqmiloc_c2977 289 "%0gpsdriverqmiloc.c::2977 QCGPS: QMIEventIndCb received ind %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QMIEventIndCb
+{
+eventIndId, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c3857 372 "%0gpsdriverqmiloc.c::3857 QCGPS: QMIRespIndCb received ind(QMI_LOC_INJECT_SRN_AP_DATA_IND_V02) %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSrnApDataInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3833 371 "%0gpsdriverqmiloc.c::3833 QCGPS: QMIRespIndCb received(QMI_LOC_GET_SUPPORTED_FEATURE_IND) ind %10!d! status %11!d! feature_len %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSupportedFeatureInd->status, ItemLong -- 11
+respIndPayload.pSupportedFeatureInd->feature_len, ItemLong -- 12
+}
+#typev gpsdriverqmiloc_c3821 370 "%0gpsdriverqmiloc.c::3821 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!	startTimeInUTC:%12!I64d! 	durationHours:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pGetPredictedOrbitsDataValidityInd->status, ItemLong -- 11
+respIndPayload.pGetPredictedOrbitsDataValidityInd->validityInfo.startTimeInUTC, ItemLongLong -- 12
+respIndPayload.pGetPredictedOrbitsDataValidityInd->validityInfo.durationHours, ItemLong -- 13
+}
+#typev gpsdriverqmiloc_c3809 369 "%0gpsdriverqmiloc.c::3809 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pDeleteGNSSServiceDataInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3799 368 "%0gpsdriverqmiloc.c::3799 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pReadFromBatchInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3786 367 "%0gpsdriverqmiloc.c::3786 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pGetBatchSizeInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3773 366 "%0gpsdriverqmiloc.c::3773 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pGetBatchSizeInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3760 365 "%0gpsdriverqmiloc.c::3760 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pGetBatchSizeInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3744 364 "%0gpsdriverqmiloc.c::3744 QCGPS: QMIRespIndCb GEOFENCE_ENGINE_CONFIG received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSetGeofenceEngineConfigInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3739 363 "%0gpsdriverqmiloc.c::3739 QCGPS: QMIRespIndCb received QMI_LOC_STOP_DBT_IND_V02 %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pDBTStopRespInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3729 362 "%0gpsdriverqmiloc.c::3729 QCGPS: QMIRespIndCb received QMI_LOC_START_DBT_IND_V02 %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pDBTStartRespInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3719 361 "%0gpsdriverqmiloc.c::3719 QCGPS: QMIRespIndCb received QMI_LOC_SET_XTRA_VERSION_CHECK_IND_V02 %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSetServerInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3707 360 "%0gpsdriverqmiloc.c::3707 QCGPS: QMIRespIndCb received ind for QMI_LOC_SET_PREMIUM_SERVICES_CONFIG  %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSetServerInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3697 359 "%0gpsdriverqmiloc.c::3697 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSetServerInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3685 358 "%0gpsdriverqmiloc.c::3685 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSetServerInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3673 357 "%0gpsdriverqmiloc.c::3673 QCGPS: QMIRespIndCb QMI_LOC_SET_SERVER_IND_V02 received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSetServerInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3660 356 "%0gpsdriverqmiloc.c::3660 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSetProtocolConfigParametersInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3648 355 "%0gpsdriverqmiloc.c::3648 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSetOperationModeInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3635 354 "%0gpsdriverqmiloc.c::3635 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSetOperationModeInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3623 353 "%0gpsdriverqmiloc.c::3623 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pGetEngineLockInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3605 352 "%0gpsdriverqmiloc.c::3605 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pDeleteAssistDataInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3587 351 "%0gpsdriverqmiloc.c::3587 QCGPS: QMIRespIndCb received QMI_LOC_INJECT_GSM_CELL_INFO_IND_V02 ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pInjectGSMCellInfoInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3577 350 "%0gpsdriverqmiloc.c::3577 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pNotifyWifiStatusInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3566 349 "%0gpsdriverqmiloc.c::3566 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSetXtraTSessionControlInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3539 348 "%0gpsdriverqmiloc.c::3539 QCGPS: Received ZPP response From modem  respIndId:%10!d!, status:%11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pGetBestAvailablePositionInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3488 347 "%0gpsdriverqmiloc.c::3488 QCGPS: Request ID: %10!d! TransactionId: %11!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+(int)g_dt_eventInd.dtEventInd.reqId, ItemLong -- 10
+respIndPayload.pGetBestAvailablePositionInd->transactionId, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3478 346 "%0gpsdriverqmiloc.c::3478 QCGPS: Received ZPP response From modem for DBT respIndId:%10!d!, status:%11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pGetBestAvailablePositionInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3456 345 "%0gpsdriverqmiloc.c::3456 QCGPS: QMIRespIndCb received ind %10!d! status %11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pInformLocationServerConnStatusInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3443 344 "%0gpsdriverqmiloc.c::3443 QCGPS: QMIRespIndCb received ind %10!d! status %11!d! partNum %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pInjectXtraDataInd->status, ItemLong -- 11
+respIndPayload.pInjectXtraDataInd->partNum, ItemLong -- 12
+}
+#typev gpsdriverqmiloc_c3429 343 "%0gpsdriverqmiloc.c::3429 QCGPS: QMIRespIndCb received ind %10!d! status %11!d! partNum %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pInjectPredictedOrbitsDataInd->status, ItemLong -- 11
+respIndPayload.pInjectPredictedOrbitsDataInd->partNum, ItemLong -- 12
+}
+#typev gpsdriverqmiloc_c3414 342 "%0gpsdriverqmiloc.c::3414 QMIRespIndCb QMIXtraPosRespIndEvent set" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+}
+#typev gpsdriverqmiloc_c3404 341 "%0gpsdriverqmiloc.c::3404 QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pInjectPositionInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3388 340 "%0gpsdriverqmiloc.c::3388 [GPSSEQDIA] XTRA_TIME_RESP_D2M " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+}
+#typev gpsdriverqmiloc_c3386 339 "%0gpsdriverqmiloc.c::3386 QCGPS: QMIRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pInjectUtcTimeInd->status, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c3382 338 "%0gpsdriverqmiloc.c::3382 QCGPS: --> QMIRespIndCb respIndId %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QMIRespIndCb
+{
+respIndId, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2160 192 "%0gpsdriverqmiloc.c::2160 injectGPSDriverDefaultIzatPremiumConf <---QMI_LOC_SET_PREMIUM_SERVICES_CONFIG_REQ_V02 returned ERROR " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=QcGnssGetLocSupportedFeature
+{
+}
+#typev gpsdriverqmiloc_c2155 191 "%0gpsdriverqmiloc.c::2155 injectGPSDriverDefaultIzatPremiumConf QMI_LOC_SET_PREMIUM_SERVICES_CONFIG_REQ_V02  SUCCESS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=QcGnssGetLocSupportedFeature
+{
+}
+#typev gpsdriverqmiloc_c2152 190 "%0sent status of QMI_LOC_GET_SUPPORTED_FEATURE_REQ_V02  qstatus: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=QcGnssGetLocSupportedFeature
+{
+qstatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2142 189 "%0QMI_LOC_GET_SUPPORTED_FEATUREs " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=QcGnssGetLocSupportedFeature
+{
+}
+#typev gpsdriverqmiloc_c186 14 "%0gpsdriverqmiloc.c::186 QCGNSS_Qmiloc:: WdfWaitLockAcquire() Failed " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=QmiEvtIndLock
+{
+}
+#typev gpsdriverqmiloc_c195 15 "%0gpsdriverqmiloc.c::195 QCGNSS_Qmiloc:: WdfWaitLockRelease() Failed " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=QmiEvtIndUnlock
+{
+}
+#typev gpsdriverqmiloc_c151 10 "%0gpsdriverqmiloc.c::151 QCGNSS_Qmiloc:: WdfWaitLockAcquire() Failed " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=QmiLock
+{
+}
+#typev gpsdriverqmiloc_c168 12 "%0gpsdriverqmiloc.c::168 QCGNSS_Qmiloc:: WdfWaitLockAcquire() Failed " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=QmiRespLock
+{
+}
+#typev gpsdriverqmiloc_c177 13 "%0gpsdriverqmiloc.c::177 QCGNSS_Qmiloc:: WdfWaitLockRelease() Failed " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=QmiRespUnlock
+{
+}
+#typev gpsdriverqmiloc_c160 11 "%0gpsdriverqmiloc.c::160 QCGNSS_Qmiloc:: WdfWaitLockRelease() Failed " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=QmiUnlock
+{
+}
+#typev gpsdriverqmiloc_c459 38 "%0gpsdriverqmiloc.c::459 QCGPS: <-- RemoveClient " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RemoveClient
+{
+}
+#typev gpsdriverqmiloc_c454 37 "%0gpsdriverqmiloc.c::454 QCGPS: RemoveClient No matching clients!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RemoveClient
+{
+}
+#typev gpsdriverqmiloc_c434 36 "%0gpsdriverqmiloc.c::434 QCGPS: ctr %10!d! RemoveClient FixSessionId %11!d! SessionType %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RemoveClient
+{
+ctr, ItemLong -- 10
+GpsDriverclient[ctr].gps_start_fix_param.FixSessionID, ItemLong -- 11
+GpsDriverclient[ctr].gps_start_fix_param.SessionType, ItemLong -- 12
+}
+#typev gpsdriverqmiloc_c420 35 "%0gpsdriverqmiloc.c::420 QCGPS: WdfRequestRetrieveInputBuffer failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=RemoveClient
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c407 34 "%0gpsdriverqmiloc.c::407 QCGPS:  RemoveClient out of array bounds for client count %10!d!. ERROR " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=RemoveClient
+{
+current_client_count, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c400 33 "%0gpsdriverqmiloc.c::400 QCGPS: --> RemoveClient " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RemoveClient
+{
+}
+#typev gpsdriverqmiloc_c4134 400 "%0gpsdriverqmiloc.c::4134 QCGPS: RemoveFileHandle <--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=RemoveFileHandle
+{
+}
+#typev gpsdriverqmiloc_c4129 399 "%0gpsdriverqmiloc.c::4129 QCGPS: LB session ongoing , STOPING it" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RemoveFileHandle
+{
+}
+#typev gpsdriverqmiloc_c4121 398 "%0gpsdriverqmiloc.c::4121 QCGPS: DBT session ongoing , STOPING it" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RemoveFileHandle
+{
+}
+#typev gpsdriverqmiloc_c4114 397 "%0gpsdriverqmiloc.c::4114 QCGPS: RemoveFileHandle g_file_object_connections_count:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=RemoveFileHandle
+{
+g_file_object_connections_count, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c4100 396 "%0gpsdriverqmiloc.c::4100 QCGPS: RemoveFileHandle ProcessGpsStopRequest failed %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RemoveFileHandle
+{
+status, ItemNTSTATUS -- 10
+}
+#typev gpsdriverqmiloc_c4095 395 "%0gpsdriverqmiloc.c::4095 QCGPS: RemoveFileHandle g_current_clientcount < 0 , Resetting client count to ZERO" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RemoveFileHandle
+{
+}
+#typev gpsdriverqmiloc_c4079 394 "%0gpsdriverqmiloc.c::4079 QCGPS: ctr %10!d! RemoveClient FixSessionId %11!d! SessionType %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RemoveFileHandle
+{
+ctr, ItemLong -- 10
+GpsDriverclient[ses_index].gps_start_fix_param.FixSessionID, ItemLong -- 11
+GpsDriverclient[ses_index].gps_start_fix_param.SessionType, ItemLong -- 12
+}
+#typev gpsdriverqmiloc_c4057 393 "%0gpsdriverqmiloc.c::4057 QCGPS: RemoveFileHandle Client State not active or in process of stop. " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RemoveFileHandle
+{
+}
+#typev gpsdriverqmiloc_c4052 392 "%0gpsdriverqmiloc.c::4052 QCGPS: RemoveFileHandle, Fix in Progress, Send STOP FIX" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RemoveFileHandle
+{
+}
+#typev gpsdriverqmiloc_c4049 391 "%0gpsdriverqmiloc.c::4049 QCGPS: RemoveFileHandle Found the FileObject %10!p! to remove" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RemoveFileHandle
+{
+FileObject, ItemPtr -- 10
+}
+#typev gpsdriverqmiloc_c4039 390 "%0gpsdriverqmiloc.c::4039 QCGPS: RemoveFileHandle file object count <1 " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=RemoveFileHandle
+{
+}
+#typev gpsdriverqmiloc_c4036 389 "%0gpsdriverqmiloc.c::4036 QCGPS: RemoveFileHandle --> FileObject %10!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=RemoveFileHandle
+{
+FileObject, ItemPtr -- 10
+}
+#typev gpsdriverqmiloc_c2242 200 "%0gpsdriverqmiloc.c::2242 QCGPS_SSR: RestoreFixSMAfterSSR - Session was already stopped!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RestoreFixSMAfterSSR
+{
+}
+#typev gpsdriverqmiloc_c2237 199 "%0gpsdriverqmiloc.c::2237 QCGPS_SSR: RestoreFixSMAfterSSR - Sending start session" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RestoreFixSMAfterSSR
+{
+}
+#typev gpsdriverqmiloc_c2231 198 "%0gpsdriverqmiloc.c::2231 QCGPS_SSR: RestoreFixSMAfterSSR  - SessionProgressPreShtudown %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RestoreFixSMAfterSSR
+{
+nClientStatePreShutdown, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c2226 197 "%0gpsdriverqmiloc.c::2226 QCGPS_SSR: RestoreFixSMAfterSSR" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=RestoreFixSMAfterSSR
+{
+}
+#typev gpsdriverqmiloc_c625 54 "%0gpsdriverqmiloc.c::625 QCGPS:  SendPositionErrToOS FixSessionID %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendPositionErrToOS
+{
+pGpsDriverClient->gps_start_fix_param.FixSessionID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c609 53 "%0gpsdriverqmiloc.c::609 QCGPS: SendPositionErrToOS BufLength %10!Iu! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionErrToOS
+{
+bufLength, ItemPtr -- 10
+}
+#typev gpsdriverqmiloc_c603 52 "%0gpsdriverqmiloc.c::603 QCGPS: WdfRequestRetrieveOutputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=SendPositionErrToOS
+{
+bufLength, ItemPtr -- 10
+sizeof(GNSS_EVENT), ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c597 51 "%0gpsdriverqmiloc.c::597 QCGPS: WdfRequestRetrieveOutputBuffer failed 0x%10!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=SendPositionErrToOS
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1122 104 "%0gpsdriverqmiloc.c::1122 QCGPS:  *****************************" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+}
+#typev gpsdriverqmiloc_c1121 103 "%0gpsdriverqmiloc.c::1121 QCGPS:  TECH MASK:%10!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+g_event_info_pos_copy.eventIndPosPayload.technologyMask, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1120 102 "%0gpsdriverqmiloc.c::1120 QCGPS:  TUNC:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+g_event_info_pos_copy.eventIndPosPayload.timeUnc, ItemDouble -- 10
+}
+#typev gpsdriverqmiloc_c1119 101 "%0gpsdriverqmiloc.c::1119 QCGPS:  HOR_UNC:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.AccuracyData.HorizontalAccuracy, ItemDouble -- 10
+}
+#typev gpsdriverqmiloc_c1118 100 "%0gpsdriverqmiloc.c::1118 QCGPS:  VERT_UNC:%10!u! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.AccuracyData.AltitudeAccuracy, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1117 99 "%0gpsdriverqmiloc.c::1117 QCGPS:  ALT:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+g_event_info_pos_copy.eventIndPosPayload.altitudeWrtMeanSeaLevel, ItemDouble -- 10
+}
+#typev gpsdriverqmiloc_c1116 98 "%0gpsdriverqmiloc.c::1116 QCGPS:  LONG:%10!d!.%11!08d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+ulTestInt, ItemLong -- 10
+ulTestDec, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c1110 97 "%0gpsdriverqmiloc.c::1110 QCGPS:  LAT:%10!d!.%11!08d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+ulTestInt, ItemLong -- 10
+ulTestDec, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c1104 96 "%0gpsdriverqmiloc.c::1104 QCGPS:  UTC:%10!u! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+(ULONG)g_event_info_pos_copy.eventIndPosPayload.timestampUtc, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1103 95 "%0gpsdriverqmiloc.c::1103 QCGPS:  Status:%10!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+g_event_info_pos_copy.eventIndPosPayload.sessionStatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1102 94 "%0gpsdriverqmiloc.c::1102 QCGPS:  GNSS_FIX:		" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+}
+#typev gpsdriverqmiloc_c1101 93 "%0gpsdriverqmiloc.c::1101 QCGPS:  ****************************" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+}
+#typev gpsdriverqmiloc_c1089 92 "%0gpsdriverqmiloc.c::1089 [GPSSEQDIA] POSITION_REPORT_D2A Sess_Type=%10!s! isFinalFix=%11!d! Lat=%12!c!%13!05d!.%14!08d! Lon=%15!c!%16!05d!.%17!08d! Alt=%18!s! HA=%19!d! HC=%20!d! SV_Count=%21!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendPositionToOS
+{
+(GNSS_FixSession_SingleShot == pGpsDriverClient->gps_start_fix_param.SessionType) ? 'SS' : 'CT', ItemString -- 10
+pGnssFixEvent->FixData.IsFinalFix, ItemLong -- 11
+sign, ItemChar -- 12
+(int)pGnssFixEvent->FixData.BasicData.Latitude, ItemLong -- 13
+abs((int)(1.0e8 * (pGnssFixEvent->FixData.BasicData.Latitude - (int)(pGnssFixEvent->FixData.BasicData.Latitude)))), ItemLong -- 14
+sign1, ItemChar -- 15
+(int)pGnssFixEvent->FixData.BasicData.Longitude, ItemLong -- 16
+abs((int)(1.0e8 * (pGnssFixEvent->FixData.BasicData.Longitude - (int)(pGnssFixEvent->FixData.BasicData.Longitude)))), ItemLong -- 17
+g_event_info_pos_copy.eventIndPosPayload.altitudeWrtMeanSeaLevel, ItemDouble -- 18
+pGnssFixEvent->FixData.AccuracyData.HorizontalAccuracy, ItemLong -- 19
+pGnssFixEvent->FixData.AccuracyData.HorizontalConfidence, ItemLong -- 20
+g_event_sv_info_copy.eventIndSvPayload.svList_len, ItemLong -- 21
+}
+#typev gpsdriverqmiloc_c1088 91 "%0gpsdriverqmiloc.c::1088 QCGPS:  fixLevel Of Details  %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.FixLevelOfDetails, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1086 90 "%0gpsdriverqmiloc.c::1086 QCGPS: gpsWeek: %10!d! gpsTimeOfWeekMs: %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendPositionToOS
+{
+g_event_info_pos_copy.eventIndPosPayload.gpsTime.gpsWeek, ItemLong -- 10
+g_event_info_pos_copy.eventIndPosPayload.gpsTime.gpsTimeOfWeekMs, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c1070 89 "%0gpsdriverqmiloc.c::1070 QCGPS: UsedInPositiong svID: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.SatelliteData.SatelliteArray[ctr].SatelliteId, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1043 88 "%0gpsdriverqmiloc.c::1043 QCGPS: Beidou svId %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+g_event_sv_info_copy.eventIndSvPayload.svList[ctr].gnssSvId, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1016 87 "%0gpsdriverqmiloc.c::1016 QCGPS: round SV Count to %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+nSvlistlength, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1010 86 "%0gpsdriverqmiloc.c::1010 QCGPS:  Send SV INFO %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+nSvlistlength, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c998 85 "%0gpsdriverqmiloc.c::998 QCGPS: aidingIndicatorMask %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+g_event_info_pos_copy.eventIndPosPayload.sensorDataUsage.aidingIndicatorMask, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c997 84 "%0gpsdriverqmiloc.c::997 QCGPS: usageMask %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+g_event_info_pos_copy.eventIndPosPayload.sensorDataUsage.usageMask, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c994 83 "%0gpsdriverqmiloc.c::994 QCGPS: sensorDataUsage_valid %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+g_event_info_pos_copy.eventIndPosPayload.sensorDataUsage_valid, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c986 82 "%0gpsdriverqmiloc.c::986 %10!d!#POSINF:%11!I64u!,%12!c!%13!05d!.%14!08d!,%15!c!%16!05d!.%17!08d!,%18!s!,%19!s!,%20!s!,%21!d!,%22!u!,%23!d!,%24!u!,%25!d!,%26!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendPositionToOS
+{
+posrpt_cnt++, ItemLong -- 10
+g_event_info_pos_copy.eventIndPosPayload.timestampUtc, ItemULongLong -- 11
+sign, ItemChar -- 12
+(int)pGnssFixEvent->FixData.BasicData.Latitude, ItemLong -- 13
+abs((int)(1.0e8 * (pGnssFixEvent->FixData.BasicData.Latitude - (int)(pGnssFixEvent->FixData.BasicData.Latitude)))), ItemLong -- 14
+sign1, ItemChar -- 15
+(int)pGnssFixEvent->FixData.BasicData.Longitude, ItemLong -- 16
+abs((int)(1.0e8 * (pGnssFixEvent->FixData.BasicData.Longitude - (int)(pGnssFixEvent->FixData.BasicData.Longitude)))), ItemLong -- 17
+g_event_info_pos_copy.eventIndPosPayload.altitudeWrtMeanSeaLevel, ItemDouble -- 18
+g_event_info_pos_copy.eventIndPosPayload.speedHorizontal, ItemDouble -- 19
+g_event_info_pos_copy.eventIndPosPayload.heading, ItemDouble -- 20
+g_event_info_pos_copy.eventIndPosPayload.horUncCircular_valid, ItemLong -- 21
+pGnssFixEvent->FixData.AccuracyData.HorizontalAccuracy, ItemLong -- 22
+g_event_info_pos_copy.eventIndPosPayload.horConfidence_valid, ItemLong -- 23
+pGnssFixEvent->FixData.AccuracyData.HorizontalConfidence, ItemLong -- 24
+g_event_info_pos_copy.eventIndPosPayload.vertConfidence_valid, ItemLong -- 25
+pGnssFixEvent->FixData.AccuracyData.AltitudeConfidence, ItemLong -- 26
+}
+#typev gpsdriverqmiloc_c963 81 "%0gpsdriverqmiloc.c::963 before conversion AltitudeAccuracy = %10!s!   mod_VerticalAccuracy := %11!s!  " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.AccuracyData.AltitudeConfidence, ItemDouble -- 10
+mod_VerticalAccuracy, ItemDouble -- 11
+}
+#typev gpsdriverqmiloc_c948 80 "%0gpsdriverqmiloc.c::948 QCGPS: SendPositionToOS Intermediate FIX SID: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.FixSessionID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c942 79 "%0gpsdriverqmiloc.c::942 QCGPS: SS Sending FINAL FIX for FixSessionId %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGpsDriverClient->gps_start_fix_param.FixSessionID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c937 78 "%0gpsdriverqmiloc.c::937 QCGPS: CT Sending FINAL FIX for FixSessionId %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGpsDriverClient->gps_start_fix_param.FixSessionID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c933 77 "%0gpsdriverqmiloc.c::933 QCGPS: SendPositionToOS FINAL FIX SID: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.FixSessionID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c925 76 "%0gpsdriverqmiloc.c::925 QCGPS: Position report using INJECTED_COARSE_POSITION SID: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.FixSessionID, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c907 75 "%0gpsdriverqmiloc.c::907 QCGPS: FixData.AccuracyData.HorizontalAccuracy %10!d! gps_start_fix_param.HorizontalAccuracy %11!d! technologyMask %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.AccuracyData.HorizontalAccuracy, ItemLong -- 10
+pGpsDriverClient->gps_start_fix_param.HorizontalAccuracy, ItemLong -- 11
+g_event_info_pos_copy.eventIndPosPayload.technologyMask, ItemLong -- 12
+}
+#typev gpsdriverqmiloc_c896 74 "%0gpsdriverqmiloc.c::896 before conversion HorizontalAccuracy = %10!s!   mod_HorizontalAccuracy := %11!s!  " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.AccuracyData.HorizontalAccuracy, ItemDouble -- 10
+mod_HorizontalAccuracy, ItemDouble -- 11
+}
+#typev gpsdriverqmiloc_c891 73 "%0gpsdriverqmiloc.c::891 Reported HorizontalConfidence %10!d!, Required HorizontalConfidence %11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.AccuracyData.HorizontalConfidence, ItemLong -- 10
+pGpsDriverClient->gps_start_fix_param.HorizontalConfidence, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c884 72 "%0gpsdriverqmiloc.c::884 Considering default HorizontalConfidence %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendPositionToOS
+{
+DEFAULT_POS_RPT_CONF, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c851 71 "%0gpsdriverqmiloc.c::851 QCGPS: modified HorizontalErrorMinorAxis %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.AccuracyData.HorizontalErrorMinorAxis, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c839 70 "%0gpsdriverqmiloc.c::839 QCGPS: modified HorizontalErrorMajorAxis %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.AccuracyData.HorizontalErrorMajorAxis, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c815 69 "%0gpsdriverqmiloc.c::815 QCGPS:  horUncCircular is 0m - converting elliptical to circular %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.AccuracyData.HorizontalAccuracy, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c814 68 "%0gpsdriverqmiloc.c::814 QCGPS:  horUncCircular is 0m - elliptical uncs major %10!s!, minor %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+g_event_info_pos_copy.eventIndPosPayload.horUncEllipseSemiMajor, ItemDouble -- 10
+g_event_info_pos_copy.eventIndPosPayload.horUncEllipseSemiMinor, ItemDouble -- 11
+}
+#typev gpsdriverqmiloc_c797 67 "%0gpsdriverqmiloc.c::797 QCGPS: Failed to get elipErrorScale for confidence %10!d! !!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+g_event_info_pos_copy.eventIndPosPayload.horConfidence, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c792 66 "%0gpsdriverqmiloc.c::792 QCGPS: horUncEllipseSemiMajor and horUncEllipseSemiMinor are present, calculate HA from RMS value %10!s! %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+fHorizontalAccuracy, ItemDouble -- 10
+fHorizontalAccuracy*1.73, ItemDouble -- 11
+}
+#typev gpsdriverqmiloc_c780 65 "%0gpsdriverqmiloc.c::780 QCGPS: reported HorizontalErrorMajorAxis %10!s!, HorizontalErrorMinorAxis %11!s! horConfidence %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+g_event_info_pos_copy.eventIndPosPayload.horUncEllipseSemiMajor, ItemDouble -- 10
+g_event_info_pos_copy.eventIndPosPayload.horUncEllipseSemiMinor, ItemDouble -- 11
+g_event_info_pos_copy.eventIndPosPayload.horConfidence, ItemLong -- 12
+}
+#typev gpsdriverqmiloc_c767 64 "%0gpsdriverqmiloc.c::767 QCGPS: Pos info Fixtime LowWord %10!ld! HighWord %11!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.FixTimeStamp.dwLowDateTime, ItemLong -- 10
+pGnssFixEvent->FixData.FixTimeStamp.dwHighDateTime, ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c766 63 "%0gpsdriverqmiloc.c::766 QCGPS: Pos info Altitude %10!s! Speed %11!s! Heading %12!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+pGnssFixEvent->FixData.BasicData.Altitude, ItemDouble -- 10
+pGnssFixEvent->FixData.BasicData.Speed, ItemDouble -- 11
+pGnssFixEvent->FixData.BasicData.Heading, ItemDouble -- 12
+}
+#typev gpsdriverqmiloc_c732 62 "%0gpsdriverqmiloc.c::732 QCGPS: Caching Longitude " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendPositionToOS
+{
+}
+#typev gpsdriverqmiloc_c729 61 "%0gpsdriverqmiloc.c::729 QCGPS: Caching Latitude!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendPositionToOS
+{
+}
+#typev gpsdriverqmiloc_c698 60 "%0gpsdriverqmiloc.c::698 QCGPS: SendPositionToOS  sessionStatus %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SendPositionToOS
+{
+g_event_info_pos_copy.eventIndPosPayload.sessionStatus, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c684 59 "%0gpsdriverqmiloc.c::684 QCGPS: SendPositionToOS  BufLength %10!Iu! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+bufLength, ItemPtr -- 10
+}
+#typev gpsdriverqmiloc_c681 58 "%0gpsdriverqmiloc.c::681 QCGPS: SV info enabled  " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+}
+#typev gpsdriverqmiloc_c677 57 "%0gpsdriverqmiloc.c::677 QCGPS: Accuracy info enabled  " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SendPositionToOS
+{
+}
+#typev gpsdriverqmiloc_c669 56 "%0gpsdriverqmiloc.c::669 QCGPS: WdfRequestRetrieveOutputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=SendPositionToOS
+{
+bufLength, ItemPtr -- 10
+sizeof(GNSS_EVENT), ItemLong -- 11
+}
+#typev gpsdriverqmiloc_c663 55 "%0gpsdriverqmiloc.c::663 QCGPS: WdfRequestRetrieveOutputBuffer failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=SendPositionToOS
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c4161 404 "%0gpsdriverqmiloc.c::4161 QCGPS: SetFileHandleForPositioning <--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SetFileHandleForPositioning
+{
+}
+#typev gpsdriverqmiloc_c4155 403 "%0gpsdriverqmiloc.c::4155 QCGPS: SetFileHandleForPositioning Found the FileObject to set for positioning" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=SetFileHandleForPositioning
+{
+}
+#typev gpsdriverqmiloc_c4146 402 "%0gpsdriverqmiloc.c::4146 QCGPS: SetFileHandleForPositioning file object count <1 " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=SetFileHandleForPositioning
+{
+}
+#typev gpsdriverqmiloc_c4142 401 "%0gpsdriverqmiloc.c::4142 QCGPS: SetFileHandleForPositioning -->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=SetFileHandleForPositioning
+{
+}
+#typev gpsdriverqmiloc_c4255 410 "%0gpsdriverqmiloc.c::4255 QCGPS: StopAllFixSessions status %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=StopAllFixSessions
+{
+status, ItemNTSTATUS -- 10
+}
+#typev gpsdriverqmiloc_c4222 409 "%0gpsdriverqmiloc.c::4222 QCGPS: StopAllFixSessions  - Fix Session Client Count  is <1 " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_WARNING FUNC=StopAllFixSessions
+{
+}
+#typev gpsdriverqmiloc_c4215 408 "%0gpsdriverqmiloc.c::4215 StopAllFixSessions  - No Sessions in progress ignore and exit " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_WARNING FUNC=StopAllFixSessions
+{
+}
+#typev gpsdriverqmiloc_c4206 407 "%0gpsdriverqmiloc.c::4206 QCGPS: StopAllFixSessions -->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=StopAllFixSessions
+{
+}
+#typev gpsdriverqmiloc_c4378 419 "%0gpsdriverqmiloc.c::4378 QCGPS:  TrackingTimerCallbackFunc  No STOP FIX sent because client state is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=TrackingTimerCallbackFunc
+{
+client_state, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c4372 418 "%0gpsdriverqmiloc.c::4372 QCGPS:  TrackingTimerCallbackFunc Failed to send Stop to Modem!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=TrackingTimerCallbackFunc
+{
+}
+#typev gpsdriverqmiloc_c4369 417 "%0gpsdriverqmiloc.c::4369 QCGPS:  TrackingTimerCallbackFunc changing client state to stopped" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=TrackingTimerCallbackFunc
+{
+}
+#typev gpsdriverqmiloc_c4365 416 "%0gpsdriverqmiloc.c::4365 QCGPS:  TrackingTimerCallbackFunc  Calling ProcessGpsStopRequest" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=TrackingTimerCallbackFunc
+{
+}
+#typev gpsdriverqmiloc_c4358 415 "%0gpsdriverqmiloc.c::4358 TrackingTimerCallbackFunc --> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=TrackingTimerCallbackFunc
+{
+}
+#typev gpsdriverqmiloc_c4317 413 "%0gpsdriverqmiloc.c::4317 TrackTimer_Start " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=Tracking_Timer_Start
+{
+}
+#typev gpsdriverqmiloc_c4342 414 "%0gpsdriverqmiloc.c::4342 TrackTimer_Stop " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=Tracking_Timer_Stop
+{
+}
+#typev gpsdriverqmiloc_c3953 380 "%0gpsdriverqmiloc.c::3953 QCGPS: GPS driver client::UpdateStateAfterStopAck" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=UpdateStateAfterStopAck
+{
+}
+#typev gpsdriverqmiloc_c321 29 "%0gpsdriverqmiloc.c::321 WaitForEngineStateOffEvent Timeout" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_WARNING FUNC=WaitForEngineStateOffEvent
+{
+}
+#typev gpsdriverqmiloc_c317 28 "%0gpsdriverqmiloc.c::317 WaitForEngineStateOffEvent Event Received " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitForEngineStateOffEvent
+{
+}
+#typev gpsdriverqmiloc_c310 27 "%0gpsdriverqmiloc.c::310 WaitForEngineStateOffEvent ..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitForEngineStateOffEvent
+{
+}
+#typev gpsdriverqmiloc_c2391 222 "%0gpsdriverqmiloc.c::2391 QMIInjectGSMCellInfoResponseIndEvent WAIT_TIMEOUT!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitForInjGSMCellInfoCmdDone
+{
+}
+#typev gpsdriverqmiloc_c2384 221 "%0gpsdriverqmiloc.c::2384 WaitForInjGSMCellInfoCmdDone Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=WaitForInjGSMCellInfoCmdDone
+{
+}
+#typev gpsdriverqmiloc_c2381 220 "%0gpsdriverqmiloc.c::2381 QMIInjectGSMCellInfoResponseIndEvent received" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitForInjGSMCellInfoCmdDone
+{
+}
+#typev gpsdriverqmiloc_c4185 406 "%0gpsdriverqmiloc.c::4185 QCGPS: WaitForSessionToEnd  - Fix Session Client Count  is < 1 " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_WARNING FUNC=WaitForSessionToEnd
+{
+}
+#typev gpsdriverqmiloc_c4179 405 "%0gpsdriverqmiloc.c::4179 QCGPS: WaitForSessionToEnd  - No Sessions in progress ignore and exit " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_WARNING FUNC=WaitForSessionToEnd
+{
+}
+#typev gpsdriverqmiloc_c2424 225 "%0gpsdriverqmiloc.c::2424 WaitForXtraVerCheckRespInd QMIXtraResponseIndEvent WAIT_TIMEOUT!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitForXtraVerCheckRespInd
+{
+}
+#typev gpsdriverqmiloc_c2417 224 "%0gpsdriverqmiloc.c::2417 WaitForXtraVerCheckRespInd status Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=WaitForXtraVerCheckRespInd
+{
+}
+#typev gpsdriverqmiloc_c2413 223 "%0gpsdriverqmiloc.c::2413 WaitForXtraVerCheckRespInd QMIXtraResponseIndEvent received" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitForXtraVerCheckRespInd
+{
+}
+#typev gpsdriverqmiloc_c4419 426 "%0gpsdriverqmiloc.c::4419 QCGPS: WaitforDeviceInitCommandDone FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitforDeviceInitCommandDone
+{
+}
+#typev gpsdriverqmiloc_c4415 425 "%0gpsdriverqmiloc.c::4415 QCGPS: WaitforDeviceInitCommandDone SUCCESS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=WaitforDeviceInitCommandDone
+{
+}
+#typev gpsdriverqmiloc_c4405 424 "%0gpsdriverqmiloc.c::4405 WaitforDeviceInitCommandDone DeviceInitEvent WAIT_TIMEOUT!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitforDeviceInitCommandDone
+{
+}
+#typev gpsdriverqmiloc_c4400 423 "%0gpsdriverqmiloc.c::4400 QCGPS: WaitforDeviceInitCommandDone Event FOR PREMIUM_SERVICES_CONFIG" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=WaitforDeviceInitCommandDone
+{
+}
+#typev gpsdriverqmiloc_c4398 422 "%0gpsdriverqmiloc.c::4398 QCGPS: WaitforDeviceInitCommandDone Event FOR GET_SUPPORTED_FEATURE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=WaitforDeviceInitCommandDone
+{
+}
+#typev gpsdriverqmiloc_c4394 421 "%0gpsdriverqmiloc.c::4394 WaitforDeviceInitCommandDone Event Received" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=WaitforDeviceInitCommandDone
+{
+}
+#typev gpsdriverqmiloc_c4388 420 "%0gpsdriverqmiloc.c::4388 --> WaitforDeviceInitCommandDone" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=WaitforDeviceInitCommandDone
+{
+}
+#typev gpsdriverqmiloc_c1779 162 "%0gpsdriverqmiloc.c::1779 QCGPS: read_delayed_stop_fix_timer_from_reg g_Enable5sectimer: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=read_delayed_stop_fix_timer_from_reg
+{
+g_Enable5sectimer, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1771 161 "%0gpsdriverqmiloc.c::1771 read_delayed_stop_fix_timer_from_reg: Conversion from UNICODE String to Int Failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=read_delayed_stop_fix_timer_from_reg
+{
+}
+#typev gpsdriverqmiloc_c1767 160 "%0gpsdriverqmiloc.c::1767 g_Enable5sectimer String = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=read_delayed_stop_fix_timer_from_reg
+{
+&readData, ItemPWString -- 10
+}
+#typev gpsdriverqmiloc_c1763 159 "%0gpsdriverqmiloc.c::1763 QCGPS: RegXtraVerCheck Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=read_delayed_stop_fix_timer_from_reg
+{
+}
+#typev gpsdriverqmiloc_c1754 158 "%0gpsdriverqmiloc.c::1754 QCGNSS_GF: read_delayed_stop_fix_timer_from_reg ExAllocatePoolWithTag failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=read_delayed_stop_fix_timer_from_reg
+{
+}
+#typev gpsdriverqmiloc_c1709 154 "%0gpsdriverqmiloc.c::1709 QCGPS: read_xtra_ver_check_from_reg g_xtra_ver_check Value: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=read_xtra_ver_check_from_reg
+{
+g_xtra_ver_check, ItemLong -- 10
+}
+#typev gpsdriverqmiloc_c1703 153 "%0gpsdriverqmiloc.c::1703 read_xtra_ver_check_from_reg: Conversion from UNICODE String to Int Failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=read_xtra_ver_check_from_reg
+{
+}
+#typev gpsdriverqmiloc_c1699 152 "%0gpsdriverqmiloc.c::1699 RegXtraVerCheck String = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=read_xtra_ver_check_from_reg
+{
+&readData, ItemPWString -- 10
+}
+#typev gpsdriverqmiloc_c1695 151 "%0gpsdriverqmiloc.c::1695 QCGPS: RegXtraVerCheck Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ERR FUNC=read_xtra_ver_check_from_reg
+{
+}
+#typev gpsdriverqmiloc_c1686 150 "%0gpsdriverqmiloc.c::1686 QCGNSS_GF: read_xtra_ver_check_from_reg ExAllocatePoolWithTag failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=read_xtra_ver_check_from_reg
+{
+}

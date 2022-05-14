@@ -1,0 +1,37 @@
+// PDB:  qcSensors850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+d2713d46-1d30-3f72-8014-7d9250b31ae0 qcSensors // SRC=Proximity.cpp MJ= MN=
+#typev Proximity_cpp49 10 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CProximity::CProximity
+{
+}
+#typev Proximity_cpp219 15 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=CProximity::HandleProximityIndication
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev Proximity_cpp209 14 "%0%10!s! Raising data event %11!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=CProximity::HandleProximityIndication
+{
+m_pwszFriendlyName, ItemWString -- 10
+PrxData, ItemLong -- 11
+}
+#typev Proximity_cpp185 13 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CProximity::HandleProximityIndication
+{
+}
+#typev Proximity_cpp236 18 "%0Invalid Proximity msg_id=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=CProximity::HandleSensorDataIndication
+{
+pb_event.msg_id(), ItemLong -- 10
+}
+#typev Proximity_cpp226 17 "%0DataType=%10!s!, msg_id=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CProximity::HandleSensorDataIndication
+{
+m_Datatype.c_str(), ItemString -- 10
+pb_event.msg_id(), ItemLong -- 11
+}
+#typev Proximity_cpp225 16 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CProximity::HandleSensorDataIndication
+{
+}
+#typev Proximity_cpp162 12 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=CProximity::InitPropertyValues
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev Proximity_cpp77 11 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=CProximity::InitPropertyValues
+{
+}

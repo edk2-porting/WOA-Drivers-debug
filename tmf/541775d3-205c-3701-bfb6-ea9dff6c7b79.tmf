@@ -1,0 +1,465 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+541775d3-205c-3701-bfb6-ea9dff6c7b79 WMRIL // SRC=WMRilReadPhoneBookEntries.cpp MJ= MN=
+#typev WMRilReadPhoneBookEntries_cpp667 48 "%0%!LEVEL! %!FUNC!:Phone Number is NULL or too long. length = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::CalculateRilAddressFromQmiData
+{
+Numlen, ItemLong -- 10
+}
+#typev WMRilReadPhoneBookEntries_cpp698 49 "%0%!LEVEL! %!FUNC!:PBM sent an INVALID CHARACTER in address = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::CalculateRilAddressFromQmiData
+{
+RilAdd.wszAddress, ItemWString -- 10
+}
+#typev WMRilReadPhoneBookEntries_cpp651 47 "%0%!LEVEL! %!FUNC!:DebugDump Address: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::CalculateRilAddressFromQmiData
+{
+WMRIL_LOG_XSTR(&RilAdd.wszAddress. MAXLENGTH_ADDRESS), ItemHEXDump -- 10
+}
+#typev WMRilReadPhoneBookEntries_cpp648 46 "%0%!LEVEL! %!FUNC!:Failed to convert the phone number into a wide string" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::CalculateRilAddressFromQmiData
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp768 52 "%0%!LEVEL! %!FUNC!:m_rilSname is Null" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::CreatePbEntryAndAddToList
+{
+}
+#typev WMRilReadPhoneBookEntries_cpp774 53 "%0%!LEVEL! %!FUNC!:DebugDump PBEntrySecondName: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::CreatePbEntryAndAddToList
+{
+WMRIL_LOG_XSTR(&PbEntry->wszSecondName. static_cast<DWORD>(SnameLen)* sizeof(TCHAR)), ItemHEXDump -- 10
+}
+#typev WMRilReadPhoneBookEntries_cpp758 51 "%0%!LEVEL! %!FUNC!:Invalid Phone number for RIL Index = %10!u!. Skip sending this record." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::CreatePbEntryAndAddToList
+{
+PbEntry->dwIndex, ItemLong -- 10
+}
+#typev WMRilReadPhoneBookEntries_cpp745 50 "%0%!LEVEL! %!FUNC!:DebugDump PBEntryText: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::CreatePbEntryAndAddToList
+{
+WMRIL_LOG_XSTR(&PbEntry->wszText. MAXLENGTH_PHONEBOOKTEXT), ItemHEXDump -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp126 12 "%0%!LEVEL! %!FUNC!:QMI_PBM_READ_RECORDS_REQ params: session_type =%10!s!(0x%11!08X!), PB_type =%12!u!, PBM StartIndex =%13!u!, PBM EndIndex =%14!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::Execute
+{
+Debug::QMIPBMSessionTypeToStr(ReadRecsReq.record_info.session_type), ItemWString -- 10
+ReadRecsReq.record_info.session_type, ItemLong -- 11
+ReadRecsReq.record_info.pb_type, ItemLong -- 12
+ReadRecsReq.record_info.record_start_id, ItemLong -- 13
+ReadRecsReq.record_info.record_end_id, ItemLong -- 14
+}
+#typev WMRilReadPhoneBookEntries_cpp111 11 "%0%!LEVEL! %!FUNC!:Range requested = %10!u!, exceeds MAX value = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::Execute
+{
+m_Params.dwEndIndex - m_Params.dwStartIndex + 1, ItemLong -- 10
+QMI_PBM_MAX_NUM_BASIC_RECORD_INSTANCE_V01, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp105 10 "%0%!LEVEL! %!FUNC!:INVALID Range in READ_RECORDS_REQ. StartIndex = %10!u!, EndIndex = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::Execute
+{
+m_Params.dwStartIndex, ItemLong -- 10
+m_Params.dwEndIndex, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp534 38 "%0%!LEVEL! %!FUNC!:PBM RecID = %10!u!, Additional Num count = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetAddNumList
+{
+dwPBMRecID, ItemLong -- 10
+static_cast<UINT>(m_AddNumList.size()), ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp524 37 "%0%!LEVEL! %!FUNC!:No Additional number tag ID" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetAddNumList
+{
+}
+#typev WMRilReadPhoneBookEntries_cpp511 36 "%0%!LEVEL! %!FUNC!:additional num at count = %10!u! invalid for the PBM recID = %11!u!. Skipping this" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetAddNumList
+{
+i+1, ItemLong -- 10
+dwPBMRecID, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp493 35 "%0%!LEVEL! %!FUNC!:Additional number present for this record" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetAddNumList
+{
+}
+#typev WMRilReadPhoneBookEntries_cpp540 39 "%0%!LEVEL! %!FUNC!:No Additional Number for this record PBM RecID = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetAddNumList
+{
+dwPBMRecID, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp609 44 "%0%!LEVEL! %!FUNC!:PBM RecID = %10!u!, Email count = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetEmailList
+{
+dwPBMRecID, ItemLong -- 10
+static_cast<UINT>(m_EmailList.size()), ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp595 43 "%0%!LEVEL! %!FUNC!:Email addresses present for this record" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetEmailList
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp616 45 "%0%!LEVEL! %!FUNC!:No Email Address found for this record PBM RecID = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetEmailList
+{
+dwPBMRecID, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp569 41 "%0%!LEVEL! %!FUNC!:PBM RecID = %10!u!, GrpID count = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetGrpIdList
+{
+dwPBMRecID, ItemLong -- 10
+m_GrpIdCount, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp559 40 "%0%!LEVEL! %!FUNC!:Group IDs present for this record" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetGrpIdList
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp575 42 "%0%!LEVEL! %!FUNC!:No Grp IDs found for this record PBM RecID = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetGrpIdList
+{
+dwPBMRecID, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp468 33 "%0%!LEVEL! %!FUNC!:Second name present for this record" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetSecondName
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp474 34 "%0%!LEVEL! %!FUNC!:No Second Name for this record PBM RecID = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::GetSecondName
+{
+dwPBMRecID, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp905 57 "%0%!LEVEL! %!FUNC!:ReadPhoneBookEntries input params: hUiccApp = 0x%10!08X!, StoreLoc = %11!s!(0x%12!08X!), StartIndex = %13!u!, EndIndex = %14!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::InitParams
+{
+m_Params.hUiccApp, ItemLong -- 10
+Debug::RILStoreLocToStr(m_Params.dwStoreLocation), ItemWString -- 11
+m_Params.dwStoreLocation, ItemLong -- 12
+m_Params.dwStartIndex, ItemLong -- 13
+m_Params.dwEndIndex, ItemLong -- 14
+}
+#typev WMRilReadPhoneBookEntries_cpp898 56 "%0%!LEVEL! %!FUNC!:invalid command size = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::InitParams
+{
+dwBufferLength, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp300 21 "%0%!LEVEL! %!FUNC!:Unexpected indication %10!s!(%11!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessExternalIndication
+{
+Debug::QMIIndToStr(static_cast<QmiServiceType>(serviceID). dwMessageID), ItemWString -- 10
+dwMessageID, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp309 22 "%0%!LEVEL! %!FUNC!:Unexpected QMI service %10!s!(%11!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessExternalIndication
+{
+static_cast<QmiServiceType>(serviceID), ItemEnum(QmiServiceType) -- 10
+serviceID, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp282 20 "%0%!LEVEL! %!FUNC!:Unexpected type = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessExternalIndication
+{
+typeid(*pIndId).name(), ItemString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp406 28 "%0%!LEVEL! %!FUNC!:INVALID PBM Index = %10!u! in the QMI_PBM_RECORD_READ_IND" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessRecordReadInd
+{
+PBMIndex, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp439 32 "%0%!LEVEL! %!FUNC!:Email Info TLV present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessRecordReadInd
+{
+}
+#typev WMRilReadPhoneBookEntries_cpp431 31 "%0%!LEVEL! %!FUNC!:Additional Number Info TLV present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessRecordReadInd
+{
+}
+#typev WMRilReadPhoneBookEntries_cpp422 30 "%0%!LEVEL! %!FUNC!:Group ID Info TLV present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessRecordReadInd
+{
+}
+#typev WMRilReadPhoneBookEntries_cpp414 29 "%0%!LEVEL! %!FUNC!:Second Name Info TLV present" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessRecordReadInd
+{
+}
+#typev WMRilReadPhoneBookEntries_cpp381 27 "%0%!LEVEL! %!FUNC!:Seq num in Ind = %10!u!, record_instances_len in Ind = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessRecordReadInd
+{
+recReadInd->basic_record_data.seq_num, ItemLong -- 10
+recReadInd->basic_record_data.record_instances_len, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp375 26 "%0%!LEVEL! %!FUNC!:INCORRECT Session type = %10!s!(0x%11!04X!) in the QMI_PBM_RECORD_READ_IND" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessRecordReadInd
+{
+Debug::QMIPBMSessionTypeToStr(recReadInd->basic_record_data.session_type), ItemWString -- 10
+recReadInd->basic_record_data.session_type, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp353 25 "%0%!LEVEL! %!FUNC!:INCORRECT PB Type = 0x%10!04X! in the QMI_PBM_RECORD_READ_IND" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessRecordReadInd
+{
+recReadInd->basic_record_data.pb_type, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp332 24 "%0%!LEVEL! %!FUNC!:Session_type = %10!s!(0x%11!04X!), Pb_type = 0x%12!04X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessRecordReadInd
+{
+Debug::QMIPBMSessionTypeToStr(recReadInd->basic_record_data.session_type), ItemWString -- 10
+recReadInd->basic_record_data.session_type, ItemLong -- 11
+recReadInd->basic_record_data.pb_type, ItemLong -- 12
+}
+#typev WMRilReadPhoneBookEntries_cpp326 23 "%0%!LEVEL! %!FUNC!:Received QMI_PBM_RECORD_READ_IND" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessRecordReadInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp245 19 "%0%!LEVEL! %!FUNC!:Invalid num of records = %10!u! returned in QMI_PBM_READ_RECORDS_RESP" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessResponse
+{
+pReadRecsResp->num_of_recs, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp237 18 "%0%!LEVEL! %!FUNC!:As all records are empty, sending a response now" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessResponse
+{
+}
+#typev WMRilReadPhoneBookEntries_cpp228 17 "%0%!LEVEL! %!FUNC!:num of records requested = %10!u!, num_of_records expected in Ind = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessResponse
+{
+m_Params.dwEndIndex - m_Params.dwStartIndex + 1, ItemLong -- 10
+pReadRecsResp->num_of_recs, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp219 16 "%0%!LEVEL! %!FUNC!:num_of_recs not valid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessResponse
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp198 15 "%0%!LEVEL! %!FUNC!:QMI_PBM_READ_RECORDS_RESP failure Result = %10!s!(0x%11!04X!), Error = %12!s!(0x%13!04X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessResponse
+{
+pReadRecsResp->resp.result, ItemEnum(qmi_result_type_v01) -- 10
+pReadRecsResp->resp.result, ItemLong -- 11
+pReadRecsResp->resp.error, ItemEnum(qmi_error_type_v01) -- 12
+pReadRecsResp->resp.error, ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp189 14 "%0%!LEVEL! %!FUNC!:Wrong QMI message ID %10!s!(0x%11!08X!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessResponse
+{
+Debug::QMIReqToStr(QMIUIMService. dwMsgID), ItemWString -- 10
+dwMsgID, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp182 13 "%0%!LEVEL! %!FUNC!:Wrong QMI service ID 0x%10!02X!.  Expecting QMIPBMService" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ProcessResponse
+{
+serviceID, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp850 55 "%0%!LEVEL! %!FUNC!:Insufficient memory allocated. Send E_FAIL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::SendResponse
+{
+}
+#typev WMRilReadPhoneBookEntries_cpp831 54 "%0%!LEVEL! %!FUNC!:Total List Size Invalid. Sending E_FAIL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::SendResponse
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp1080 71 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has invalid Email Size = %10!u! at count = %11!u! for PBM recID = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->email_info_array[j].email[i].email_address_len, ItemLong -- 10
+i + 1, ItemLong -- 11
+recReadInd->email_info_array[j].record_id, ItemLong -- 12
+}
+#typev WMRilReadPhoneBookEntries_cpp1071 70 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has invalid Num of Emails = %10!u! for PBM recID = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->email_info_array[j].email_len, ItemLong -- 10
+recReadInd->email_info_array[j].record_id, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp1060 69 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has invalid email Array len: %10!u!, Expected: %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->email_info_array_len, ItemLong -- 10
+m_NumRecsExpected, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp1051 68 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has invalid Grp_id_len = %10!u! for PBM recId = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->grp_id_info_array[j].grp_id_len, ItemLong -- 10
+recReadInd->grp_id_info_array[j].record_id, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilReadPhoneBookEntries_cpp1028 66 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has Invalid add Num length = %10!u! at count = %11!u! for PBM recID: %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->ad_num_info_array[j].ad_nums[i].ad_number_len, ItemLong -- 10
+i + 1, ItemLong -- 11
+recReadInd->ad_num_info_array[j].record_id, ItemLong -- 12
+}
+#typev WMRilReadPhoneBookEntries_cpp1019 65 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has invalid num of Add nums: %10!u! for the PBM recID: %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->ad_num_info_array[j].ad_nums_len, ItemLong -- 10
+recReadInd->ad_num_info_array[j].record_id, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp1039 67 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has invalid Grp ID Array length: %10!u!, Expected: %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->grp_id_info_array_len, ItemLong -- 10
+m_NumRecsExpected, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp1008 64 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has invalid Add Num Array length: %10!u!, Expected: %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->ad_num_info_array_len, ItemLong -- 10
+m_NumRecsExpected, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp1000 63 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has invalid Second Name length: %10!u! PBM recID = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->sname_info_array[j].sname_len, ItemLong -- 10
+recReadInd->sname_info_array[j].record_id, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp988 62 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has Invalid Second Name Array length: %10!u!, Expected: %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->sname_info_array_len, ItemLong -- 10
+m_NumRecsExpected, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp979 61 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has invalid num_len: %10!u! for PBM recId: %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->basic_record_data.record_instances[j].number_len, ItemLong -- 10
+recReadInd->basic_record_data.record_instances[j].record_id, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp972 60 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has invalid name_len: %10!u! for PBM recId: %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->basic_record_data.record_instances[j].name_len, ItemLong -- 10
+recReadInd->basic_record_data.record_instances[j].record_id, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp963 59 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has invalid record instance len: %10!u!, Expected: %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->basic_record_data.record_instances_len, ItemLong -- 10
+m_NumRecsExpected, ItemLong -- 11
+}
+#typev WMRilReadPhoneBookEntries_cpp957 58 "%0%!LEVEL! %!FUNC!:QMI_PBM_RECORD_READ_IND has invalid seq num: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_PHONEBOOK FUNC=WMRil::ReadPhonebookEntriesClass::ValidateQMIIndication
+{
+recReadInd->basic_record_data.seq_num, ItemLong -- 10
+}
+#enumv QmiServiceType
+{
+QMIDMSService,0x0
+QMINASService,0x1
+QMIWMSService,0x2
+QMIVoiceService,0x3
+QMICATService,0x4
+QMIUIMService,0x5
+QMIPBMService,0x6
+QMISARService,0x7
+QMIIMSSettingsService,0x8
+QMIIMSApplicationService,0x9
+QMIDSDService,0xA
+QMIDISService,0xB
+QMIPDCService,0xC
+}
+#enumv qmi_result_type_v01
+{
+QMI_RESULT_TYPE_MIN_ENUM_VAL_V01,0x80000001
+QMI_RESULT_SUCCESS_V01,0x0
+QMI_RESULT_FAILURE_V01,0x1
+QMI_RESULT_TYPE_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}
+#enumv qmi_error_type_v01
+{
+QMI_ERROR_TYPE_MIN_ENUM_VAL_V01,0x80000001
+QMI_ERR_NONE_V01,0x0
+QMI_ERR_MALFORMED_MSG_V01,0x1
+QMI_ERR_NO_MEMORY_V01,0x2
+QMI_ERR_INTERNAL_V01,0x3
+QMI_ERR_ABORTED_V01,0x4
+QMI_ERR_CLIENT_IDS_EXHAUSTED_V01,0x5
+QMI_ERR_UNABORTABLE_TRANSACTION_V01,0x6
+QMI_ERR_INVALID_CLIENT_ID_V01,0x7
+QMI_ERR_NO_THRESHOLDS_V01,0x8
+QMI_ERR_INVALID_HANDLE_V01,0x9
+QMI_ERR_INVALID_PROFILE_V01,0xA
+QMI_ERR_INVALID_PINID_V01,0xB
+QMI_ERR_INCORRECT_PIN_V01,0xC
+QMI_ERR_NO_NETWORK_FOUND_V01,0xD
+QMI_ERR_CALL_FAILED_V01,0xE
+QMI_ERR_OUT_OF_CALL_V01,0xF
+QMI_ERR_NOT_PROVISIONED_V01,0x10
+QMI_ERR_MISSING_ARG_V01,0x11
+QMI_ERR_ARG_TOO_LONG_V01,0x13
+QMI_ERR_INVALID_TX_ID_V01,0x16
+QMI_ERR_DEVICE_IN_USE_V01,0x17
+QMI_ERR_OP_NETWORK_UNSUPPORTED_V01,0x18
+QMI_ERR_OP_DEVICE_UNSUPPORTED_V01,0x19
+QMI_ERR_NO_EFFECT_V01,0x1A
+QMI_ERR_NO_FREE_PROFILE_V01,0x1B
+QMI_ERR_INVALID_PDP_TYPE_V01,0x1C
+QMI_ERR_INVALID_TECH_PREF_V01,0x1D
+QMI_ERR_INVALID_PROFILE_TYPE_V01,0x1E
+QMI_ERR_INVALID_SERVICE_TYPE_V01,0x1F
+QMI_ERR_INVALID_REGISTER_ACTION_V01,0x20
+QMI_ERR_INVALID_PS_ATTACH_ACTION_V01,0x21
+QMI_ERR_AUTHENTICATION_FAILED_V01,0x22
+QMI_ERR_PIN_BLOCKED_V01,0x23
+QMI_ERR_PIN_PERM_BLOCKED_V01,0x24
+QMI_ERR_SIM_NOT_INITIALIZED_V01,0x25
+QMI_ERR_MAX_QOS_REQUESTS_IN_USE_V01,0x26
+QMI_ERR_INCORRECT_FLOW_FILTER_V01,0x27
+QMI_ERR_NETWORK_QOS_UNAWARE_V01,0x28
+QMI_ERR_INVALID_ID_V01,0x29
+QMI_ERR_INVALID_QOS_ID_V01,0x29
+QMI_ERR_REQUESTED_NUM_UNSUPPORTED_V01,0x2A
+QMI_ERR_INTERFACE_NOT_FOUND_V01,0x2B
+QMI_ERR_FLOW_SUSPENDED_V01,0x2C
+QMI_ERR_INVALID_DATA_FORMAT_V01,0x2D
+QMI_ERR_GENERAL_V01,0x2E
+QMI_ERR_UNKNOWN_V01,0x2F
+QMI_ERR_INVALID_ARG_V01,0x30
+QMI_ERR_INVALID_INDEX_V01,0x31
+QMI_ERR_NO_ENTRY_V01,0x32
+QMI_ERR_DEVICE_STORAGE_FULL_V01,0x33
+QMI_ERR_DEVICE_NOT_READY_V01,0x34
+QMI_ERR_NETWORK_NOT_READY_V01,0x35
+QMI_ERR_CAUSE_CODE_V01,0x36
+QMI_ERR_MESSAGE_NOT_SENT_V01,0x37
+QMI_ERR_MESSAGE_DELIVERY_FAILURE_V01,0x38
+QMI_ERR_INVALID_MESSAGE_ID_V01,0x39
+QMI_ERR_ENCODING_V01,0x3A
+QMI_ERR_AUTHENTICATION_LOCK_V01,0x3B
+QMI_ERR_INVALID_TRANSITION_V01,0x3C
+QMI_ERR_NOT_A_MCAST_IFACE_V01,0x3D
+QMI_ERR_MAX_MCAST_REQUESTS_IN_USE_V01,0x3E
+QMI_ERR_INVALID_MCAST_HANDLE_V01,0x3F
+QMI_ERR_INVALID_IP_FAMILY_PREF_V01,0x40
+QMI_ERR_SESSION_INACTIVE_V01,0x41
+QMI_ERR_SESSION_INVALID_V01,0x42
+QMI_ERR_SESSION_OWNERSHIP_V01,0x43
+QMI_ERR_INSUFFICIENT_RESOURCES_V01,0x44
+QMI_ERR_DISABLED_V01,0x45
+QMI_ERR_INVALID_OPERATION_V01,0x46
+QMI_ERR_INVALID_QMI_CMD_V01,0x47
+QMI_ERR_TPDU_TYPE_V01,0x48
+QMI_ERR_SMSC_ADDR_V01,0x49
+QMI_ERR_INFO_UNAVAILABLE_V01,0x4A
+QMI_ERR_SEGMENT_TOO_LONG_V01,0x4B
+QMI_ERR_SEGMENT_ORDER_V01,0x4C
+QMI_ERR_BUNDLING_NOT_SUPPORTED_V01,0x4D
+QMI_ERR_OP_PARTIAL_FAILURE_V01,0x4E
+QMI_ERR_POLICY_MISMATCH_V01,0x4F
+QMI_ERR_SIM_FILE_NOT_FOUND_V01,0x50
+QMI_ERR_EXTENDED_INTERNAL_V01,0x51
+QMI_ERR_ACCESS_DENIED_V01,0x52
+QMI_ERR_HARDWARE_RESTRICTED_V01,0x53
+QMI_ERR_ACK_NOT_SENT_V01,0x54
+QMI_ERR_INJECT_TIMEOUT_V01,0x55
+QMI_ERR_INCOMPATIBLE_STATE_V01,0x5A
+QMI_ERR_FDN_RESTRICT_V01,0x5B
+QMI_ERR_SUPS_FAILURE_CAUSE_V01,0x5C
+QMI_ERR_NO_RADIO_V01,0x5D
+QMI_ERR_NOT_SUPPORTED_V01,0x5E
+QMI_ERR_NO_SUBSCRIPTION_V01,0x5F
+QMI_ERR_CARD_CALL_CONTROL_FAILED_V01,0x60
+QMI_ERR_NETWORK_ABORTED_V01,0x61
+QMI_ERR_MSG_BLOCKED_V01,0x62
+QMI_ERR_INVALID_SESSION_TYPE_V01,0x64
+QMI_ERR_INVALID_PB_TYPE_V01,0x65
+QMI_ERR_NO_SIM_V01,0x66
+QMI_ERR_PB_NOT_READY_V01,0x67
+QMI_ERR_PIN_RESTRICTION_V01,0x68
+QMI_ERR_PIN2_RESTRICTION_V01,0x69
+QMI_ERR_PUK_RESTRICTION_V01,0x6A
+QMI_ERR_PUK2_RESTRICTION_V01,0x6B
+QMI_ERR_PB_ACCESS_RESTRICTED_V01,0x6C
+QMI_ERR_PB_DELETE_IN_PROG_V01,0x6D
+QMI_ERR_PB_TEXT_TOO_LONG_V01,0x6E
+QMI_ERR_PB_NUMBER_TOO_LONG_V01,0x6F
+QMI_ERR_PB_HIDDEN_KEY_RESTRICTION_V01,0x70
+QMI_ERR_PB_NOT_AVAILABLE_V01,0x71
+QMI_ERR_DEVICE_MEMORY_ERROR_V01,0x72
+QMI_ERROR_TYPE_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}

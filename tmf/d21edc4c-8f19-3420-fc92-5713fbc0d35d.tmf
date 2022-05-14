@@ -1,0 +1,417 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+d21edc4c-8f19-3420-fc92-5713fbc0d35d WMRIL // SRC=WMRilIMSSettingsService.cpp MJ= MN=
+#typev WMRilIMSSettingsService_cpp520 41 "%0%!LEVEL! %!FUNC!:Failed to get ISIM hUiccApp" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_SMS FUNC=WMRil::IMSSettingsServiceClass::GetISIMhUiccApp
+{
+}
+#typev WMRilIMSSettingsService_cpp512 40 "%0%!LEVEL! %!FUNC!:Failed to get UIM service" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::GetISIMhUiccApp
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp536 42 "%0%!LEVEL! %!FUNC!:Failed to get IMS status" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::GetImsStatus
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp189 20 "%0%!LEVEL! %!FUNC!:Failed to send QMI_IMS_SETTINGS_CONFIG_IND_REG_REQ_V01, hr = %10!s!(0x%11!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::InitializeCommon
+{
+hr, ItemEnum(RILERRORCODES) -- 10
+hr, ItemLong -- 11
+}
+#typev WMRilIMSSettingsService_cpp162 19 "%0%!LEVEL! %!FUNC!:IMS active status on %10!s!(%11!u!) = %12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::InitializeCommon
+{
+Debug::QMISubscriptionIndexToStr(m_dwSubscriptionIdx), ItemWString -- 10
+m_dwSubscriptionIdx, ItemLong -- 11
+m_fIMSActive, ItemLong -- 12
+}
+#typev WMRilIMSSettingsService_cpp148 18 "%0%!LEVEL! %!FUNC!:IMS get active subscription for %10!s!(%11!u!) request success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::InitializeCommon
+{
+Debug::QMISubscriptionIndexToStr(m_dwSubscriptionIdx), ItemWString -- 10
+m_dwSubscriptionIdx, ItemLong -- 11
+}
+#typev WMRilIMSSettingsService_cpp140 17 "%0%!LEVEL! %!FUNC!:IMS get active subscription request for %10!s!(%11!u!) failed with error 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::InitializeCommon
+{
+Debug::QMISubscriptionIndexToStr(m_dwSubscriptionIdx), ItemWString -- 10
+m_dwSubscriptionIdx, ItemLong -- 11
+ImssActiveSubscriptionResp.resp.error, ItemLong -- 12
+}
+#typev WMRilIMSSettingsService_cpp133 16 "%0%!LEVEL! %!FUNC!:Failed to send QMI_IMS_GET_ACTIVE_SUBSCRIPTION_STATUS_REQ_V01, hr = %10!s!(0x%11!08X!) for %12!s!(%13!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::InitializeCommon
+{
+hr, ItemEnum(RILERRORCODES) -- 10
+hr, ItemLong -- 11
+Debug::QMISubscriptionIndexToStr(m_dwSubscriptionIdx), ItemWString -- 12
+m_dwSubscriptionIdx, ItemLong -- 13
+}
+#typev WMRilIMSSettingsService_cpp113 15 "%0%!LEVEL! %!FUNC!:Bind %10!s!(%11!u!) request success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::InitializeCommon
+{
+Debug::QMISubscriptionIndexToStr(m_dwSubscriptionIdx), ItemWString -- 10
+m_dwSubscriptionIdx, ItemLong -- 11
+}
+#typev WMRilIMSSettingsService_cpp105 14 "%0%!LEVEL! %!FUNC!:Bind %10!s!(%11!u!) request failed with error 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::InitializeCommon
+{
+Debug::QMISubscriptionIndexToStr(m_dwSubscriptionIdx), ItemWString -- 10
+m_dwSubscriptionIdx, ItemLong -- 11
+ImssBindSubscriptionResp.resp.error, ItemLong -- 12
+}
+#typev WMRilIMSSettingsService_cpp98 13 "%0%!LEVEL! %!FUNC!:Failed to send QMI_IMS_SET_BIND_SUBSCRIPTION_REQ_V01, hr = %10!s!(0x%11!08X!) for %12!s!(%13!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::InitializeCommon
+{
+hr, ItemEnum(RILERRORCODES) -- 10
+hr, ItemLong -- 11
+Debug::QMISubscriptionIndexToStr(m_dwSubscriptionIdx), ItemWString -- 12
+m_dwSubscriptionIdx, ItemLong -- 13
+}
+#typev WMRilIMSSettingsService_cpp69 12 "%0%!LEVEL! %!FUNC!:QMI IMS Settings Service client init failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::InitializeCommon
+{
+}
+#typev WMRilIMSSettingsService_cpp64 11 "%0%!LEVEL! %!FUNC!:QMI IMS Settings Service client init started" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::InitializeCommon
+{
+}
+#typev WMRilIMSSettingsService_cpp60 10 "%0%!LEVEL! %!FUNC!:Driver is not available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::InitializeCommon
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp656 63 "%0%!LEVEL! %!FUNC!:Per IMSA Blocked status indication, IMS is Unblocked on WIFI." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp652 62 "%0%!LEVEL! %!FUNC!:Per IMSA Blocked status indication, IMS is Blocked On WIFI, Blocked Reason is :%10!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+pIMSStatus->dwBlockReasonOnWifi, ItemLong -- 10
+}
+#typev WMRilIMSSettingsService_cpp644 61 "%0%!LEVEL! %!FUNC!:Per IMSA Blocked status indication, IMS is Unblocked on LTE." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp640 60 "%0%!LEVEL! %!FUNC!:Per IMSA Blocked status indication, IMS is Blocked On LTE, Blocked Reason is :%10!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+pIMSStatus->dwBlockReasonOnLTE, ItemLong -- 10
+}
+#typev WMRilIMSSettingsService_cpp633 59 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS dwIMSSystemType: %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+pIMSStatus->dwIMSSystemType, ItemEnum(RILIMSSYSTEMTYPE) -- 10
+}
+#typev WMRilIMSSettingsService_cpp628 58 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS: VT over IMS is not registered" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp624 57 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS: VT over IMS is registered" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp618 56 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS MO SMS format not applicable" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp614 55 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS: MO SMS format is 3gpp" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp610 54 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS: MO SMS format is 3gpp2" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp603 53 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS: SMS over IMS is not registered" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp599 52 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS: SMS over IMS is registered" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp594 51 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS: Voice over IMS is not registered" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp590 50 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS: Voice over IMS is registered" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp586 49 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS dwAvailableServices: 0x%10!08x!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+pIMSStatus->dwAvailableServices, ItemLong -- 10
+}
+#typev WMRilIMSSettingsService_cpp585 48 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS dwParams: 0x%10!08x!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+pIMSStatus->dwParams, ItemLong -- 10
+}
+#typev WMRilIMSSettingsService_cpp584 47 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS hUiccApp: 0x%10!08x!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+pIMSStatus->hUiccApp, ItemLong -- 10
+}
+#typev WMRilIMSSettingsService_cpp583 46 "%0%!LEVEL! %!FUNC!:RIL_NOTIFY_IMSSTATUS dwExecutor: %10!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+pIMSStatus->dwExecutor, ItemLong -- 10
+}
+#typev WMRilIMSSettingsService_cpp574 45 "%0%!LEVEL! %!FUNC!:Driver is not available" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp564 44 "%0%!LEVEL! %!FUNC!:Failed to get IMS status blob" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+#typev WMRilIMSSettingsService_cpp556 43 "%0%!LEVEL! %!FUNC!:Failed to get IMS settings service" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::LogAndBroadcastIMSStatusNotification
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp277 25 "%0%!LEVEL! %!FUNC!:IMS active status on %10!s!(%11!u!) = %12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessExternalIndication
+{
+Debug::QMISubscriptionIndexToStr(m_dwSubscriptionIdx), ItemWString -- 10
+m_dwSubscriptionIdx, ItemLong -- 11
+m_fIMSActive, ItemLong -- 12
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp280 23 "%0%!LEVEL! %!FUNC!:Unexpected dwMessageID: %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessExternalIndication
+{
+dwMessageID, ItemLong -- 10
+}
+#typev WMRilIMSSettingsService_cpp285 24 "%0%!LEVEL! %!FUNC!:Unexpected QMI service: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessExternalIndication
+{
+static_cast<QmiServiceType>(serviceID), ItemEnum(QmiServiceType) -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp261 22 "%0%!LEVEL! %!FUNC!:Unexpected dwSubscriptionIdx = (%10!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessExternalIndication
+{
+dwSubscriptionIdx, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp255 21 "%0%!LEVEL! %!FUNC!:Unexpected type = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessExternalIndication
+{
+typeid(*pIndId).name(), ItemString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp494 39 "%0%!LEVEL! %!FUNC!:Invalid RTT Data Length %10!u!:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessRTTRcvDataInd
+{
+pRTTRcvDataInd->rtt_data_len, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp488 38 "%0%!LEVEL! %!FUNC!:RTT Data Conversion Failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessRTTRcvDataInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp447 35 "%0%!LEVEL! %!FUNC!:RTT Optional Data Invalid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessRTTRcvDataInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp478 37 "%0%!LEVEL! %!FUNC!:Driver is not available" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessRTTRcvDataInd
+{
+}
+#typev WMRilIMSSettingsService_cpp467 36 "%0%!LEVEL! %!FUNC!:RTT Optional Data Details. RIL Call ID:%10!u!, RefNum:%11!u!, Total Msg Size:%12!u!, Current Msg Size:%13!u!, Highest Msg Size:%14!u! RTTData:%15!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessRTTRcvDataInd
+{
+RilRTTRcvData.dwID, ItemLong -- 10
+RilRTTRcvData.dwRTTRefNum, ItemLong -- 11
+RilRTTRcvData.dwTotalMsgSize, ItemLong -- 12
+RilRTTRcvData.dwCurrentMsgSeqNum, ItemLong -- 13
+RilRTTRcvData.dwHighestMsgSeqNum, ItemLong -- 14
+RilRTTRcvData.wszRTTData, ItemWString -- 15
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp432 34 "%0%!LEVEL! %!FUNC!:pRTTRcvDataInd is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessRTTRcvDataInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp425 33 "%0%!LEVEL! %!FUNC!:Not expected to receive RTT Data during voice call." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessRTTRcvDataInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp418 32 "%0%!LEVEL! %!FUNC!:GetCallInState returns pCall as NULL since no call is in conversation" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessRTTRcvDataInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp410 31 "%0%!LEVEL! %!FUNC!:Get CallService failed: HRESULT = %10!s!(0x%11!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessRTTRcvDataInd
+{
+hr, ItemEnum(RILERRORCODES) -- 10
+hr, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp359 30 "%0%!LEVEL! %!FUNC!:ims_domain_valid is not set to 1 in ims_settings_user_config_ind_msg_v01" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessUserConfigInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp333 27 "%0%!LEVEL! %!FUNC!:Failed to get the string length." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessUserConfigInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp343 28 "%0%!LEVEL! %!FUNC!:ConvertCharStrToTCharStr failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessUserConfigInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp351 29 "%0%!LEVEL! %!FUNC!:Driver is not available" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessUserConfigInd
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilIMSSettingsService_cpp319 26 "%0%!LEVEL! %!FUNC!:Failed to get member object" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_IMS FUNC=WMRil::IMSSettingsServiceClass::ProcessUserConfigInd
+{
+}
+#enumv RILERRORCODES
+{
+RIL_E_PHONEFAILURE,0x81000001
+RIL_E_NOCONNECTION,0x81000002
+RIL_E_LINKRESERVED,0x81000003
+RIL_E_OPNOTALLOWED,0x81000004
+RIL_E_OPNOTSUPPORTED,0x81000005
+RIL_E_UICCNOTINSERTED,0x81000006
+RIL_E_UICCFAILURE,0x81000007
+RIL_E_UICCBUSY,0x81000008
+RIL_E_UICCWRONG,0x81000009
+RIL_E_INCORRECTPASSWORD,0x8100000A
+RIL_E_MEMORYFULL,0x8100000B
+RIL_E_INVALIDINDEX,0x8100000C
+RIL_E_NOTFOUND,0x8100000D
+RIL_E_MEMORYFAILURE,0x8100000E
+RIL_E_TEXTSTRINGTOOLONG,0x8100000F
+RIL_E_INVALIDTEXTSTRING,0x81000010
+RIL_E_DIALSTRINGTOOLONG,0x81000011
+RIL_E_INVALIDDIALSTRING,0x81000012
+RIL_E_NONETWORKSVC,0x81000013
+RIL_E_NETWORKTIMEOUT,0x81000014
+RIL_E_EMERGENCYONLY,0x81000015
+RIL_E_TELEMATICIWUNSUPPORTED,0x81000016
+RIL_E_SMTYPE0UNSUPPORTED,0x81000017
+RIL_E_CANTREPLACEMSG,0x81000018
+RIL_E_PROTOCOLIDERROR,0x81000019
+RIL_E_DCSUNSUPPORTED,0x8100001A
+RIL_E_MSGCLASSUNSUPPORTED,0x8100001B
+RIL_E_DCSERROR,0x8100001C
+RIL_E_CMDCANTBEACTIONED,0x8100001D
+RIL_E_CMDUNSUPPORTED,0x8100001E
+RIL_E_CMDERROR,0x8100001F
+RIL_E_MSGBODYHEADERERROR,0x81000020
+RIL_E_SCBUSY,0x81000021
+RIL_E_NOSCSUBSCRIPTION,0x81000022
+RIL_E_SCSYSTEMFAILURE,0x81000023
+RIL_E_INVALIDADDRESS,0x81000024
+RIL_E_DESTINATIONBARRED,0x81000025
+RIL_E_REJECTEDDUPLICATE,0x81000026
+RIL_E_VPFUNSUPPORTED,0x81000027
+RIL_E_VPUNSUPPORTED,0x81000028
+RIL_E_UICCMSGSTORAGEFULL,0x81000029
+RIL_E_NOUICCMSGSTORAGE,0x8100002A
+RIL_E_UICCTOOLKITBUSY,0x8100002B
+RIL_E_UICCDOWNLOADERROR,0x8100002C
+RIL_E_MSGSVCRESERVED,0x8100002D
+RIL_E_INVALIDMSGPARAM,0x8100002E
+RIL_E_INVALIDSCADDRESS,0x8100002F
+RIL_E_UNASSIGNEDNUMBER,0x81000030
+RIL_E_MSGBARREDBYOPERATOR,0x81000031
+RIL_E_MSGCALLBARRED,0x81000032
+RIL_E_MSGXFERREJECTED,0x81000033
+RIL_E_DESTINATIONOUTOFSVC,0x81000034
+RIL_E_UNIDENTIFIEDSUBCRIBER,0x81000035
+RIL_E_SVCUNSUPPORTED,0x81000036
+RIL_E_UNKNOWNSUBSCRIBER,0x81000037
+RIL_E_NETWKOUTOFORDER,0x81000038
+RIL_E_NETWKTEMPFAILURE,0x81000039
+RIL_E_CONGESTION,0x8100003A
+RIL_E_RESOURCESUNAVAILABLE,0x8100003B
+RIL_E_SVCNOTSUBSCRIBED,0x8100003C
+RIL_E_SVCNOTIMPLEMENTED,0x8100003D
+RIL_E_INVALIDMSGREFERENCE,0x8100003E
+RIL_E_INVALIDMSG,0x8100003F
+RIL_E_INVALIDMANDATORYINFO,0x81000040
+RIL_E_MSGTYPEUNSUPPORTED,0x81000041
+RIL_E_ICOMPATIBLEMSG,0x81000042
+RIL_E_INFOELEMENTUNSUPPORTED,0x81000043
+RIL_E_PROTOCOLERROR,0x81000044
+RIL_E_NETWORKERROR,0x81000045
+RIL_E_MESSAGINGERROR,0x81000046
+RIL_E_NOTREADY,0x81000047
+RIL_E_TIMEDOUT,0x81000048
+RIL_E_CANCELLED,0x81000049
+RIL_E_NONOTIFYCALLBACK,0x8100004A
+RIL_E_OPFMTUNAVAILABLE,0x8100004B
+RIL_E_NORESPONSETODIAL,0x8100004C
+RIL_E_SECURITYFAILURE,0x8100004D
+RIL_E_RADIOFAILEDINIT,0x8100004E
+RIL_E_DRIVERINITFAILED,0x8100004F
+RIL_E_RADIONOTPRESENT,0x81000050
+RIL_E_RADIOOFF,0x81000051
+RIL_E_ILLEGALMS,0x81000052
+RIL_E_ILLEGALME,0x81000053
+RIL_E_GPRSSERVICENOTALLOWED,0x81000054
+RIL_E_PLMNNOTALLOWED,0x81000055
+RIL_E_LOCATIONAREANOTALLOWED,0x81000056
+RIL_E_ROAMINGNOTALLOWEDINTHISLOCATIONAREA,0x81000057
+RIL_E_SERVICEOPTIONNOTSUPPORTED,0x81000058
+RIL_E_REQUESTEDSERVICEOPTIONNOTSUBSCRIBED,0x81000059
+RIL_E_SERVICEOPTIONTEMPORARILYOUTOFORDER,0x8100005A
+RIL_E_PDPAUTHENTICATIONFAILURE,0x8100005B
+RIL_E_INVALIDMOBILECLASS,0x8100005C
+RIL_E_UNSPECIFIEDGPRSERROR,0x8100005D
+RIL_E_RADIOREBOOTED,0x8100005E
+RIL_E_INVALIDCONTEXTSTATE,0x8100005F
+RIL_E_MAXCONTEXTS,0x81000060
+RIL_E_SYNCHRONOUS_DATA_UNAVAILABLE,0x81000061
+RIL_E_FDNRESTRICT,0x81000062
+RIL_E_INVALIDASYNCCOMMANDRESPONSE,0x81000063
+RIL_E_INCOMPATIBLEPROXYDRIVER,0x81000064
+RIL_E_INVALIDDRIVERVERSION,0x81000065
+RIL_E_USIMCALLMODIFIED,0x81000066
+RIL_E_PASSWORDMISMATCH,0x81000067
+RIL_E_INVALIDCONTEXTACTIVATIONSTRING,0x81000068
+RIL_E_UICCAPPINACCESSIBLE,0x81000069
+RIL_E_UICCPINREQUIRED,0x8100006A
+RIL_E_UICCPUKREQUIRED,0x8100006B
+RIL_E_UICCPUKBLOCKED,0x8100006C
+RIL_E_EXECUTORNOTREADY,0x8100006D
+RIL_E_INVALIDUICCKEYREF,0x8100006E
+RIL_E_UICCINACTIVE,0x8100006F
+RIL_E_PERSOPUKREQUIRED,0x81000070
+RIL_E_PERSOPUKBLOCKED,0x81000071
+RIL_E_PERSOCHECKFAILED,0x81000072
+RIL_E_INVALIDUICCPATH,0x81000073
+RIL_E_IMSTEMPFAILURE,0x81000074
+RIL_E_UICCNOTREADY,0x81000075
+RIL_E_UICCPOWEROFF,0x81000076
+RIL_E_CALLISACTIVE,0x81000077
+RIL_E_USIMCALLBLOCKED,0x81000078
+RIL_E_UICCADMRESTRICTED,0x81000079
+RIL_E_DMSERVICENOTREADY,0x8100007A
+RIL_E_DMGETCONFIGFAILED,0x8100007B
+RIL_E_DMCOMMITFAILED,0x8100007C
+RIL_E_OTHEREXECUTORBUSY,0x8100007D
+RIL_E_IMSNOHANDOVERTARGETFOUND,0x8100007E
+RIL_E_VCCHANDOVERINPROGRESS,0x8100007F
+RIL_E_INVALIDREMOTEURI,0x81000080
+RIL_E_ECTNOTALLOWED,0x81000081
+RIL_E_ECTCALLINCONF,0x81000082
+RIL_E_ECTCALLNOTONHOLD,0x81000083
+RIL_E_ECTNOTSUBSCRIBED,0x81000084
+RIL_E_ECTUNAVAILABLE,0x81000085
+RIL_E_ECTINCOMPATIBLE,0x81000086
+RIL_E_ECTNOTSUPPORTED,0x81000087
+RIL_E_ECTSYSTEMERROR,0x81000088
+RIL_E_ECTNORESOURCE,0x81000089
+RIL_E_ECTCALLBARRED,0x8100008A
+RIL_E_ECTUNKNOWN,0x8100008B
+RIL_E_IMSCALLISACTIVE,0x8100008C
+}
+#enumv RILIMSSYSTEMTYPE
+{
+RIL_IMSSYSTEMTYPE_UNKNOWN,0x0
+RIL_IMSSYSTEMTYPE_WIFI,0x1
+RIL_IMSSYSTEMTYPE_LTE,0x2
+RIL_IMSSYSTEMTYPE_MAX,0x2
+}
+#enumv QmiServiceType
+{
+QMIDMSService,0x0
+QMINASService,0x1
+QMIWMSService,0x2
+QMIVoiceService,0x3
+QMICATService,0x4
+QMIUIMService,0x5
+QMIPBMService,0x6
+QMISARService,0x7
+QMIIMSSettingsService,0x8
+QMIIMSApplicationService,0x9
+QMIDSDService,0xA
+QMIDISService,0xB
+QMIPDCService,0xC
+}

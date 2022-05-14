@@ -1,0 +1,37 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+df83d932-0e11-31b1-7486-e9358666c3cc MBB // SRC=MPQMI.c MJ= MN=
+#typev MPQMI_c210 15 "%0MPQMI_FillPendingOID: OID (0x%10!p!, 0x%11!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_FillPendingOID
+{
+pOid->OidReference, ItemPtr -- 10
+pOid->Oid, ItemLong -- 11
+}
+#typev MPQMI_c206 14 "%0 MPQMI_FillPendingOID: filled SET Oid (0x%10!p!, 0x%11!x!) ST 0x%12!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_FillPendingOID
+{
+pOid->OidReference, ItemPtr -- 10
+pOid->Oid, ItemLong -- 11
+OIDStatus, ItemLong -- 12
+}
+#typev MPQMI_c196 13 "%0 MPQMI_FillPendingOID: filled QUERY Oid (0x%10!p!, 0x%11!x!) ST 0x%12!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_FillPendingOID
+{
+pOid->OidReference, ItemPtr -- 10
+pOid->Oid, ItemLong -- 11
+OIDStatus, ItemLong -- 12
+}
+#typev MPQMI_c156 12 "%0MPQMI_FillPendingOID: failure for OID 0x%10!x! status 0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_FillPendingOID
+{
+pOid->Oid, ItemLong -- 10
+OIDStatus, ItemLong -- 11
+}
+#typev MPQMI_c139 11 "%0MPQMI_FillPendingOID: OID (0x%10!p!, 0x%11!x!) ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_FillPendingOID
+{
+pOid->OidReference, ItemPtr -- 10
+pOid->Oid, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPQMI_c99 10 "%0<%10!s!|sub#%11!d!> MPQMI_FreeQMIRequestQueue: ERROR, MPQCCI_GetClientHandleForQmiType returned handle=NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_FreeQMIRequestQueue
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}

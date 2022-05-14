@@ -1,0 +1,58 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+f8987190-595e-3d4f-2036-9f284be0701d WMRIL // SRC=WMRilGetUICCLockState.cpp MJ= MN=
+#typev WMRilGetUICCLockState_cpp170 13 "%0%!LEVEL! %!FUNC!:GetUICCLockState resp:UICC Lock App =0x%10!04X!, UICC Lock KeyRef=0x%11!02X!, LockState=%12!s!(%13!u!), PinRetriesCount=%14!u!, PUKRetriesCount =%15!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetUICCLockStateClass::Execute
+{
+UiccLockState.rilUiccLock.hUiccApp, ItemLong -- 10
+UiccLockState.rilUiccLock.dwKeyRef, ItemLong -- 11
+UiccLockState.dwLockState, ItemEnum(RILUICCLOCKSTATELOCKSTATE) -- 12
+UiccLockState.dwLockState, ItemLong -- 13
+UiccLockState.dwVerifyAttemptsLeft, ItemLong -- 14
+UiccLockState.dwUnblockAttemptsLeft, ItemLong -- 15
+}
+#typev WMRilGetUICCLockState_cpp112 12 "%0%!LEVEL! %!FUNC!:Valid state Request for PIN type = %10!s!(0x%11!08X!) appType = %12!s!(0x%13!02X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::GetUICCLockStateClass::Execute
+{
+Debug::QMIUIMPINIDToStr(PINID), ItemWString -- 10
+PINID, ItemLong -- 11
+rilAppType, ItemEnum(RILUICCAPPTYPE) -- 12
+rilAppType, ItemLong -- 13
+}
+#typev WMRilGetUICCLockState_cpp107 11 "%0%!LEVEL! %!FUNC!:invalid KeyRef = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetUICCLockStateClass::Execute
+{
+m_Params.dwKeyRef, ItemLong -- 10
+}
+#typev WMRilGetUICCLockState_cpp95 10 "%0%!LEVEL! %!FUNC!:Invalid RIL app type = %10!s!(%11!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetUICCLockStateClass::Execute
+{
+rilAppType, ItemEnum(RILUICCAPPTYPE) -- 10
+rilAppType, ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilGetUICCLockState_cpp208 15 "%0%!LEVEL! %!FUNC!:GetUICCLockState input params: hUiccApp = 0x%10!04X!, dwKeyRef = 0x%11!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_PHONEBOOK FUNC=WMRil::GetUICCLockStateClass::InitParams
+{
+m_Params.hUiccApp, ItemLong -- 10
+m_Params.dwKeyRef, ItemLong -- 11
+}
+#typev WMRilGetUICCLockState_cpp201 14 "%0%!LEVEL! %!FUNC!:invalid command size = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::GetUICCLockStateClass::InitParams
+{
+dwBufferLength, ItemLong -- 10
+}
+#enumv RILUICCLOCKSTATELOCKSTATE
+{
+RIL_UICCLOCKSTATE_NONE,0x0
+RIL_UICCLOCKSTATE_VERIFIED,0x1
+RIL_UICCLOCKSTATE_ENABLED,0x2
+RIL_UICCLOCKSTATE_BLOCKED,0x4
+RIL_UICCLOCKSTATE_ALL,0x7
+}
+#enumv RILUICCAPPTYPE
+{
+RIL_UICCAPPTYPE_UNKNOWN,0x1
+RIL_UICCAPPTYPE_MF,0x2
+RIL_UICCAPPTYPE_MF_SIM,0x3
+RIL_UICCAPPTYPE_MF_RUIM,0x4
+RIL_UICCAPPTYPE_USIM,0x5
+RIL_UICCAPPTYPE_CSIM,0x6
+RIL_UICCAPPTYPE_ISIM,0x7
+RIL_UICCAPPTYPE_MAX,0x7
+}

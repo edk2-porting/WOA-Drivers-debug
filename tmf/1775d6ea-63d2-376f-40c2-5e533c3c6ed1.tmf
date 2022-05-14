@@ -1,0 +1,131 @@
+// PDB:  QcPmicApps850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+1775d6ea-63d2-376f-40c2-5e533c3c6ed1 PmicApps // SRC=PmicAppsABD.c MJ= MN=
+#typev PmicAppsAbd_c1022 37 "%0qcpmicapps_SelfHost: PmicAppsABD.c::%!FUNC!: PM_APPS_WriteNVTimeZoneVariable Failed in timer call back" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NVUpdateEvtTimerFunc
+{
+}
+#typev PmicAppsAbd_c1007 36 "%0PmicAppsABD.c::%!FUNC!: time_zone:%10!Iu!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=NVUpdateEvtTimerFunc
+{
+deviceContext->AbdDeviceContext.RTC_Info_variable.RTC_Info.TimeZone, ItemPtr -- 10
+}
+#typev PmicAppsAbd_c1006 35 "%0PmicAppsABD.c::%!FUNC!: valid:%10!Iu!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=NVUpdateEvtTimerFunc
+{
+deviceContext->AbdDeviceContext.RTC_Info_variable.RTC_Info.Valid, ItemPtr -- 10
+}
+#typev PmicAppsAbd_c1005 34 "%0PmicAppsABD.c::%!FUNC!: NV writing Offset:%10!Iu!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=NVUpdateEvtTimerFunc
+{
+deviceContext->AbdDeviceContext.RTC_Info_variable.RTC_Info.Offset, ItemPtr -- 10
+}
+#typev PmicAppsAbd_c537 22 "%0%!FUNC! --" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c535 21 "%0RTC_GET_ALARM_STATUS - AlarmStatus: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+rtc_get_alarm_status_out.alarm_status, ItemLong -- 10
+}
+#typev PmicAppsAbd_c530 20 "%0PmicAppsABD.c::%!FUNC!: IOCTL_PM_RTC_GET_ALARM_STATUS failed %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+status, ItemLong -- 10
+}
+// PDB:  QcPmicApps850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev PmicAppsAbd_c515 19 "%0RTC_GET_ALARM - AlarmTime: %10!Iu!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+rtc_get_alarm_out.alarm_time, ItemPtr -- 10
+}
+#typev PmicAppsAbd_c510 18 "%0PmicAppsABD.c::%!FUNC!: IOCTL_PM_RTC_GET_ALARM_TIME failed %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+status, ItemLong -- 10
+}
+// PDB:  QcPmicApps850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev PmicAppsAbd_c488 17 "%0RTC_GET_TIME - Time(h:m:s)= %10!Iu!:%11!Iu!:%12!Iu!, Date(m:d:y)= %13!Iu!:%14!Iu!:%15!Iu!, TimeZone: %16!d!, TimeValid: %17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+abd_rtc_time->hour, ItemPtr -- 10
+abd_rtc_time->minute, ItemPtr -- 11
+abd_rtc_time->second, ItemPtr -- 12
+abd_rtc_time->month, ItemPtr -- 13
+abd_rtc_time->day, ItemPtr -- 14
+abd_rtc_time->year, ItemPtr -- 15
+abd_rtc_time->time_zone, ItemLong -- 16
+abd_rtc_time->valid, ItemLong -- 17
+}
+#typev PmicAppsAbd_c481 16 "%0PMIC RTC ticks: %10!Iu!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+rtc_get_time_out.seconds, ItemPtr -- 10
+}
+#typev PmicAppsAbd_c477 15 "%0PmicAppsABD.c::%!FUNC!: Power was lost, saved offset is invalid" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c449 14 "%0qcpmicapps_SelfHost: PmicAppsABD.c::%!FUNC!: IOCTL_PM_RTC_GET_TIME Failed %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+status, ItemLong -- 10
+}
+// PDB:  QcPmicApps850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev PmicAppsAbd_c432 13 "%0qcpmicapps_SelfHost: PmicAppsABD.c::%!FUNC!: Invalid OutputBuffer size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c420 12 "%0%!FUNC! ++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c684 32 "%0%!FUNC! --" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Trace FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c677 31 "%0PmicAppsABD.c::%!FUNC!: IOCTL_PM_RTC_DISABLE_ALARM failed %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+status, ItemLong -- 10
+}
+// PDB:  QcPmicApps850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev PmicAppsAbd_c661 30 "%0%!FUNC!: RTC_DISABLE_ALARM" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c656 29 "%0PmicAppsABD.c::%!FUNC!: IOCTL_PM_RTC_ENABLE_ALARM failed %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+status, ItemLong -- 10
+}
+// PDB:  QcPmicApps850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev PmicAppsAbd_c639 28 "%0%!FUNC!: RTC_ENABLE_ALARM" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c634 27 "%0%!FUNC!: RtcAlarmSupport: %10!d!, AlarmTimer: %11!Iu!, AlarmClear: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+pDeviceContext->AbdDeviceContext.RtcAlarmSupport, ItemLong -- 10
+timerValue, ItemPtr -- 11
+clearWakeAlarm, ItemLong -- 12
+}
+#typev PmicAppsAbd_c607 26 "%0qcpmicapps_SelfHost: PmicAppsABD.c::%!FUNC!: IOCTL_PM_RTC_GET_TIME Failed %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+status, ItemLong -- 10
+}
+// PDB:  QcPmicApps850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev PmicAppsAbd_c590 25 "%0RTC_SET_TIME - Time(h:m:s)= %10!Iu!:%11!Iu!:%12!Iu!, Date(m:d:y)= %13!Iu!:%14!Iu!:%15!Iu!, TimeZone: %16!d!, TimeValid: %17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+abd_rtc_time->hour, ItemPtr -- 10
+abd_rtc_time->minute, ItemPtr -- 11
+abd_rtc_time->second, ItemPtr -- 12
+abd_rtc_time->month, ItemPtr -- 13
+abd_rtc_time->day, ItemPtr -- 14
+abd_rtc_time->year, ItemPtr -- 15
+abd_rtc_time->time_zone, ItemLong -- 16
+abd_rtc_time->valid, ItemLong -- 17
+}
+#typev PmicAppsAbd_c580 24 "%0qcpmicapps_SelfHost: PmicAppsABD.c::%!FUNC!: Invalid InputBuffer size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c576 23 "%0%!FUNC! ++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Trace FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+}
+// PDB:  QcPmicApps850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev PmicAppsAbd_c253 10 "%0PmicAppsABD.c::%!FUNC!: interface has been removed." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PmicAppsAbdInterfaceNotficationCallback
+{
+}
+// PDB:  QcPmicApps850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev PmicAppsIoctl_c64 33 "%0-PmicAppsABD.c::%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Trace FUNC=HandleIoCtlRequest
+{
+}

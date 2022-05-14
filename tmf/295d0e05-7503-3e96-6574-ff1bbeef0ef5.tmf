@@ -1,0 +1,70 @@
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+295d0e05-7503-3e96-6574-ff1bbeef0ef5 PEP // SRC=PEP_DCVS_Notifications.c MJ= MN=
+#typev PEP_DCVS_Notifications_c317 14 "%0 [Err ] PEP_DCVS_Notifications.c::%!FUNC!::317 :Invalid Feedback Counter Index = %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepFeedbackRead
+{
+feedBackRead->CounterIndex, ItemLong -- 10
+}
+#typev PEP_DCVS_Notifications_c195 12 "%0 [Info] PEP_DCVS_Notifications.c::%!FUNC! :PepPerfConstraints : CpuNum %10!d!, Freq %11!d! Mhz, Limit Reason %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfConstraints
+{
+cpuNum, ItemLong -- 10
+perfConstraints->GuaranteedPerformanceLimit, ItemLong -- 11
+perfConstraints->LimitReasons, ItemLong -- 12
+}
+#typev PEP_DCVS_Notifications_c187 11 "%0 [Info] PEP_DCVS_Notifications.c::%!FUNC! :PepPerfConstraints: CpuNum %10!d!, Freq %11!d! Mhz, Limit Reason: Hibernate" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfConstraints
+{
+cpuNum, ItemLong -- 10
+aDomain->clkTablePtr->perfFrequency[aDomain->props.cpu.hibernatePerfLevel], ItemLong -- 11
+}
+#typev PEP_DCVS_Notifications_c175 10 "%0 [Warn] PEP_DCVS_Notifications.c::%!FUNC! :Failed to get Lmh context " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfConstraints
+{
+}
+#typev PEP_DCVS_Notifications_c242 13 "%0 [Warn] PEP_DCVS_Notifications.c::%!FUNC! :CPU %10!d!: PCE DesiredPerformance of %11!d! MHz ignored" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfSet
+{
+cpuNum, ItemLong -- 10
+perfSetting->DesiredPerformance, ItemLong -- 11
+}
+#typev PEP_DCVS_Notifications_c823 24 "%0 [Err ] PEP_DCVS_Notifications.c::%!FUNC!::823 :BIG Core AVERAGE latency : %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfSetState
+{
+avgBigLatency, ItemLong -- 10
+}
+#typev PEP_DCVS_Notifications_c814 23 "%0 [Err ] PEP_DCVS_Notifications.c::%!FUNC!::814 :BIG Core New BEST latency : %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfSetState
+{
+bestBigLatency, ItemLong -- 10
+}
+#typev PEP_DCVS_Notifications_c811 22 "%0 [Err ] PEP_DCVS_Notifications.c::%!FUNC!::811 :BIG Core PepPerfSetState transition : %10!d! -> %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfSetState
+{
+bigPrevPerf, ItemLong -- 10
+requestedPerfLevel, ItemLong -- 11
+}
+#typev PEP_DCVS_Notifications_c804 21 "%0 [Err ] PEP_DCVS_Notifications.c::%!FUNC!::804 :BIG Core New WORST latency : %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfSetState
+{
+worstBigLatency, ItemLong -- 10
+}
+#typev PEP_DCVS_Notifications_c801 20 "%0 [Err ] PEP_DCVS_Notifications.c::%!FUNC!::801 :BIG Core PepPerfSetState transition : %10!d! -> %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfSetState
+{
+bigPrevPerf, ItemLong -- 10
+requestedPerfLevel, ItemLong -- 11
+}
+#typev PEP_DCVS_Notifications_c783 19 "%0 [Err ] PEP_DCVS_Notifications.c::%!FUNC!::783 :LITTLE Core AVERAGE latency : %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfSetState
+{
+avgLittleLatency, ItemLong -- 10
+}
+#typev PEP_DCVS_Notifications_c772 18 "%0 [Err ] PEP_DCVS_Notifications.c::%!FUNC!::772 :LITTLE Core New BEST latency : %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfSetState
+{
+bestLittleLatency, ItemLong -- 10
+}
+#typev PEP_DCVS_Notifications_c769 17 "%0 [Err ] PEP_DCVS_Notifications.c::%!FUNC!::769 :LITTLE Core PepPerfSetState transition : %10!d! -> %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfSetState
+{
+littlePrevPerf, ItemLong -- 10
+requestedPerfLevel, ItemLong -- 11
+}
+#typev PEP_DCVS_Notifications_c762 16 "%0 [Err ] PEP_DCVS_Notifications.c::%!FUNC!::762 :LITTLE Core New WORST latency : %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfSetState
+{
+worstLittleLatency, ItemLong -- 10
+}
+#typev PEP_DCVS_Notifications_c759 15 "%0 [Err ] PEP_DCVS_Notifications.c::%!FUNC!::759 :LITTLE Core PepPerfSetState transition : %10!d! -> %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=PepPerfSetState
+{
+littlePrevPerf, ItemLong -- 10
+requestedPerfLevel, ItemLong -- 11
+}

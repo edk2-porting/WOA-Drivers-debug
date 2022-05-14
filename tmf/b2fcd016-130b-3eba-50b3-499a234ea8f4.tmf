@@ -1,0 +1,58 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+b2fcd016-130b-3eba-50b3-499a234ea8f4 WMRIL // SRC=WMRilMssr.cpp MJ= MN=
+#typev WMRilMssr_cpp205 17 "%0%!LEVEL! %!FUNC!:Implied MSSR, QMI error = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::CheckForImpliedEvent
+{
+error, ItemLong -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilMssr_cpp136 13 "%0%!LEVEL! %!FUNC!:Failed to re-init services" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::ProcessEvent
+{
+}
+#typev WMRilMssr_cpp122 12 "%0%!LEVEL! %!FUNC!:Service failed to process MSSR event" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::ProcessEvent
+{
+}
+#typev WMRilMssr_cpp155 14 "%0%!LEVEL! %!FUNC!:MSSR recovery failed while in Recovery phase. Fatal error." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::ProcessEvent
+{
+}
+#typev WMRilMssr_cpp164 15 "%0%!LEVEL! %!FUNC!:MSSR event ignored, in state = %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::ProcessEvent
+{
+Debug::WMRilMssrStateToStr(GetState()), ItemWString -- 10
+}
+#typev WMRilMssr_cpp175 16 "%0%!LEVEL! %!FUNC!:Invalid state for MSSR processing: state = %10!s!(%11!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::ProcessEvent
+{
+Debug::WMRilMssrStateToStr(GetState()), ItemWString -- 10
+GetState(), ItemLong -- 11
+}
+#typev WMRilMssr_cpp100 11 "%0%!LEVEL! %!FUNC!:MSSR during shutdown (Radio is off). Ignoring the MSSR notification" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::ProcessEvent
+{
+}
+#typev WMRilMssr_cpp83 10 "%0%!LEVEL! %!FUNC!:MSSR processing event: current state = %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::ProcessEvent
+{
+Debug::WMRilMssrStateToStr(GetState()), ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilMssr_cpp267 20 "%0%!LEVEL! %!FUNC!:Failed to broadcast Cancel Event" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::ProcessFatalError
+{
+}
+#typev WMRilMssr_cpp257 19 "%0%!LEVEL! %!FUNC!:Driver is not available" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::ProcessFatalError
+{
+}
+#typev WMRilMssr_cpp248 18 "%0%!LEVEL! %!FUNC!:MSSR Fatal error occurred, current state %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::ProcessFatalError
+{
+Debug::WMRilMssrStateToStr(GetState()), ItemWString -- 10
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilMssr_cpp299 22 "%0%!LEVEL! %!FUNC!:MSSR old state = %10!s!, new state %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::SetState
+{
+Debug::WMRilMssrStateToStr(m_state), ItemWString -- 10
+Debug::WMRilMssrStateToStr(newState), ItemWString -- 11
+}
+#typev WMRilMssr_cpp292 21 "%0%!LEVEL! %!FUNC!:MSSR old state = %10!s!, new state %11!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ZONE_DRIVER FUNC=WMRil::MssrClass::SetState
+{
+Debug::WMRilMssrStateToStr(m_state), ItemWString -- 10
+Debug::WMRilMssrStateToStr(newState), ItemWString -- 11
+}

@@ -1,0 +1,149 @@
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+072fae0e-03c5-39b7-bda7-972195ec973d 10.4 // SRC=qmap_util.c MJ= MN=
+#typev ipa_drv_c1253 46 "%0QMAP::%!FUNC! WppRecorderLogCreate SUCCESS." //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=*pLogHandle FLAGS=IPA FUNC=IPAEvtDeviceAdd
+{
+}
+#typev ipa_drv_c1253 45 "%0WppRecorderLogCreate failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=IPAEvtDeviceAdd
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qmap_main_c987 40 "%0QMAP::%!FUNC! -- Num NBLs allocated = %10!d!, max = %11!d!, %12!s! %13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapConnect
+{
+bufIndex, ItemLong -- 10
+QMAP_RX_MAX_MUX_NBLS, ItemLong -- 11
+ntStatus, ItemNTSTATUS -- 12
+ntStatus, ItemLong -- 13
+}
+#typev qmap_main_c987 39 "%0QMAP::%!FUNC! - ERROR, pBuf memory allocation failed!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapConnect
+{
+}
+#typev qmap_main_c987 38 "%0QMAP::%!FUNC! - ERROR, SHead memory allocation failed!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapConnect
+{
+}
+#typev qmap_main_c987 37 "%0QMAP::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapConnect
+{
+}
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qmap_main_c1091 26 "%0QMAP::%!FUNC!: --" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapStateMonitor
+{
+}
+#typev qmap_main_c1091 25 "%0QMAP::%!FUNC! ++ %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapStateMonitor
+{
+pQmapIPAEvt->eIPAEvt, ItemLong -- 10
+}
+// PDB:  qcipa850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev qmap_util_c426 24 "%0QMAP::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapCleanUpPendingRxTxQueue
+{
+}
+#typev qmap_util_c386 23 "%0QMAP::%!FUNC!: FreeRxDescBuf = %10!u!, FreeRxReqInfo = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapCleanUpPendingRxTxQueue
+{
+ExQueryDepthSList(pDeviceContext->Qmap.FreeRxDescBufList), ItemLong -- 10
+ExQueryDepthSList(pDeviceContext->Qmap.FreeRxRequestListHead), ItemLong -- 11
+}
+#typev qmap_util_c348 22 "%0QMAP::%!FUNC!: Rx pending packets cleaned up" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapCleanUpPendingRxTxQueue
+{
+}
+#typev qmap_util_c344 21 "%0QMAP::%!FUNC! FC Reset Timer stopped" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapCleanUpPendingRxTxQueue
+{
+}
+#typev qmap_util_c335 20 "%0QMAP::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapCleanUpPendingRxTxQueue
+{
+}
+#typev qmap_util_c614 36 "%0QMAP::%!FUNC! -- Num buffers requested = %10!d!, allocated = %11!d!, %12!s! %13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxBufQueueInit
+{
+bufCount, ItemLong -- 10
+bufIndex, ItemLong -- 11
+ntStatus, ItemNTSTATUS -- 12
+ntStatus, ItemLong -- 13
+}
+#typev qmap_util_c544 31 "%0QMAP::%!FUNC!: ERROR, Va STATUS_NO_MEMORY." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxBufQueueInit
+{
+}
+#typev qmap_util_c567 32 "%0QMAP::%!FUNC!: ERROR, pReqInfo STATUS_NO_MEMORY." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxBufQueueInit
+{
+}
+#typev qmap_util_c576 33 "%0QMAP::%!FUNC!: ERROR, BamBuf STATUS_NO_MEMORY." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxBufQueueInit
+{
+}
+#typev qmap_util_c584 34 "%0QMAP::%!FUNC!: ERROR, pMdl STATUS_NO_MEMORY." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxBufQueueInit
+{
+}
+#typev qmap_util_c609 35 "%0QMAP::%!FUNC! NumFreeRxDescBufs = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxBufQueueInit
+{
+bufCount, ItemLong -- 10
+}
+#typev qmap_util_c535 30 "%0IPA::%10!s!:%11!d!: Allocated buffer of size %12!d! with VA = 0x%13!I64x! and DVA = 0x%14!I64x! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=QmapRxBufQueueInit
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+QMAP_RX_BUFFER_SIZE, ItemLong -- 12
+(UINT64)Va, ItemLongLongX -- 13
+bufferIOVA, ItemLongLongX -- 14
+}
+#typev qmap_util_c522 29 "%0QMAP::%!FUNC!: ERROR, SAllocHead STATUS_NO_MEMORY." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxBufQueueInit
+{
+}
+#typev qmap_util_c513 28 "%0QMAP::%!FUNC!: ERROR, SHead STATUS_NO_MEMORY." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapRxBufQueueInit
+{
+}
+#typev qmap_util_c507 27 "%0QMAP::%!FUNC! ++ bufCount = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRxBufQueueInit
+{
+bufCount, ItemLong -- 10
+}
+#typev qmap_util_c304 19 "%0QMAP::%!FUNC! -- %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapTxBufQueueInit
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_util_c284 17 "%0QMAP::%!FUNC! Error pListItem STATUS_NO_MEMORY for item at %10!d! position" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapTxBufQueueInit
+{
+i+1, ItemLong -- 10
+}
+#typev qmap_util_c295 18 "%0IPA::%10!s!:%11!d!: Tx buffer: size = %12!d!,  VA = 0x%13!I64x!, DVA = 0x%14!I64x!, PA = 0x%15!I64x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapTxBufQueueInit
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pDeviceContext->Qmap.txDeaggrMaxSize, ItemLong -- 12
+(UINT64)pListItem->Va, ItemLongLongX -- 13
+pListItem->Pa, ItemLongLongX -- 14
+(MmGetPhysicalAddress(pListItem->Va)).QuadPart, ItemLongLongX -- 15
+}
+#typev qmap_util_c272 16 "%0QMAP::%!FUNC! Error pQmapHdrBuf STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapTxBufQueueInit
+{
+}
+#typev qmap_util_c265 15 "%0IPA::%10!s!:%11!d!: Allocated buffer of size %12!d! with VA = 0x%13!I64x! and DVA = 0x%14!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=QmapTxBufQueueInit
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+BufCount * pDeviceContext->Qmap.txDeaggrMaxSize, ItemLong -- 12
+(UINT64)pQmapHdrBuf, ItemLongLongX -- 13
+bufferIOVA, ItemLongLongX -- 14
+}
+#typev qmap_util_c252 14 "%0QMAP::%!FUNC! Error SHead STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapTxBufQueueInit
+{
+}
+#typev qmap_util_c242 13 "%0QMAP::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapTxBufQueueInit
+{
+}
+#typev qmap_util_c683 41 "%0%!FUNC!: ERROR, inputKey or pOutValue NULL!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapUtilGetUlongRegistry
+{
+}
+#typev qmap_util_c709 44 "%0QMAP::%!FUNC! ERROR, registry entry for %10!s! is missing" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=IPA FUNC=QmapUtilGetUlongRegistry
+{
+inputKey, ItemWString -- 10
+}
+#typev qmap_util_c701 43 "%0QMAP::%!FUNC! ERROR, RtlUnicodeStringPrintf for %10!s! failed with status 0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapUtilGetUlongRegistry
+{
+inputKey, ItemWString -- 10
+status, ItemLong -- 11
+}
+#typev qmap_util_c694 42 "%0QMAP::%!FUNC! ERROR, WdfDriverOpenParametersRegistryKey for %10!s! failed with status 0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapUtilGetUlongRegistry
+{
+inputKey, ItemWString -- 10
+status, ItemLong -- 11
+}

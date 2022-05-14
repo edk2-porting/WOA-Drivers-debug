@@ -1,0 +1,60 @@
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+3a2482ff-112c-352b-813b-a453601ee766 10.4 // SRC=RevRmIoctl.c MJ= MN=
+#typev RevRmIoctl_c31 10 "%0<%!FUNC!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=IoCompletionCallback
+{
+}
+#typev RevRmIoctl_c206 21 "%0<%!FUNC!>: Failed = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmIoctl_OpenMBBDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevRmIoctl_c155 17 "%0<%!FUNC!>: phFileHandle/pFileObject = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmIoctl_OpenMBBDevice
+{
+}
+#typev RevRmIoctl_c198 20 "%0<%!FUNC!>: ObReferenceObjectByHandle Failed = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmIoctl_OpenMBBDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevRmIoctl_c187 19 "%0<%!FUNC!>: Successfully opened the MBB interface." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmIoctl_OpenMBBDevice
+{
+}
+#typev RevRmIoctl_c183 18 "%0<%!FUNC!>: ZwOpenFile Failed = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmIoctl_OpenMBBDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevRmIoctl_c139 16 "%0<%!FUNC!> <--. Status = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmIoctl_SendControlIOCTL
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevRmIoctl_c101 15 "%0<%!FUNC!> buffer(%10!p!) allocated of %11!u! bytes" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmIoctl_SendControlIOCTL
+{
+buffer, ItemPtr -- 10
+nInputBufferSize, ItemLong -- 11
+}
+#typev RevRmIoctl_c97 14 "%0<%!FUNC!> <--. STATUS_INSUFFICIENT_RESOURCES" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmIoctl_SendControlIOCTL
+{
+}
+#typev RevRmIoctl_c74 13 "%0<%!FUNC!> <--. STATUS_INSUFFICIENT_RESOURCES" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmIoctl_SendControlIOCTL
+{
+}
+#typev RevRmIoctl_c63 12 "%0<%!FUNC!> <--. STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmIoctl_SendControlIOCTL
+{
+}
+#typev RevRmIoctl_c59 11 "%0<%!FUNC!> -->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmIoctl_SendControlIOCTL
+{
+}
+#typev RevRmIoctl_c238 22 "%0<%!FUNC!>: CLEANUP = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmIoctl_SendIoctlToMBB
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevRmIoctl_c281 24 "%0<%!FUNC!>: Invalid Input/Output buffer size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_EvtIoDeviceControl
+{
+}
+#typev RevRmIoctl_c289 25 "%0<%!FUNC!>: RevRm_ProcessAudioForwardingIoctl Failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_EvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevRmIoctl_c273 23 "%0<%!FUNC!>: -->: Received control code: 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_EvtIoDeviceControl
+{
+IoControlCode, ItemLong -- 10
+}

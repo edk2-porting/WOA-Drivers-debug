@@ -1,0 +1,127 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+a2701c23-faea-3b06-e8c8-e0d0e55dd9eb MBB // SRC=MPEri.c MJ= MN=
+#typev MPEri_c135 15 "%0%!FUNC!: disabling ERI in pSubphone with SubID = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_Init
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPEri_c126 14 "%0%!FUNC! Error: RtlStringCbLengthW, %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_Init
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPEri_c92 13 "%0%!FUNC! ERIDataFileName = %10!s! and ERIDataFileName length in bytes = %11!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_Init
+{
+wcERIDataFileNameValue, ItemWString -- 10
+(ULONG)ERIDataFileNameLength, ItemLong -- 11
+}
+#typev MPEri_c89 12 "%0%!FUNC! Error: RtlStringCbLengthW %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_Init
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPEri_c142 16 "%0%!FUNC!: Resetting all the ERI structures for SubID = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_Init
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPEri_c65 11 "%0%!FUNC! ERIAlgorithm = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_Init
+{
+pSubPhoneInfo->ERIAlgorithm, ItemLong -- 10
+}
+#typev MPEri_c47 10 "%0<sub#%10!d!>MPERI_Init: ERROR, allocate pwcRegKeyName failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPERI_Init
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+}
+#typev MPEri_c204 18 "%0%!FUNC!: error reading Verizon ERI file %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadBinary
+{
+pERIDataFileName, ItemWString -- 10
+}
+#typev MPEri_c305 23 "%0%!FUNC!: ROAM_IND indicationId = %10!d!, icon_imageId = %11!d!, iconMode = %12!d!, callPromptId = %13!d!, alertId = %14!d!, charEncodingType = %15!d!, textLen = %16!d!, text = %17!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadBinary
+{
+pSubPhoneInfo->ERIData.roamIndTable[i]->indicationId, ItemLong -- 10
+pSubPhoneInfo->ERIData.roamIndTable[i]->icon_imageId, ItemLong -- 11
+pSubPhoneInfo->ERIData.roamIndTable[i]->iconMode, ItemLong -- 12
+pSubPhoneInfo->ERIData.roamIndTable[i]->callPromptId, ItemLong -- 13
+pSubPhoneInfo->ERIData.roamIndTable[i]->alertId, ItemLong -- 14
+pSubPhoneInfo->ERIData.roamIndTable[i]->charEncodingType, ItemLong -- 15
+pSubPhoneInfo->ERIData.roamIndTable[i]->textLen, ItemLong -- 16
+pSubPhoneInfo->ERIData.roamIndTable[i]->text, ItemWString -- 17
+}
+#typev MPEri_c226 22 "%0%!FUNC!: ERI type = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadBinary
+{
+pSubPhoneInfo->ERIData.eriType, ItemLong -- 10
+}
+#typev MPEri_c219 21 "%0%!FUNC!: num ERI entries = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadBinary
+{
+pSubPhoneInfo->ERIData.numEriEntries, ItemLong -- 10
+}
+#typev MPEri_c215 20 "%0%!FUNC!: version = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadBinary
+{
+pSubPhoneInfo->ERIData.version, ItemLong -- 10
+}
+#typev MPEri_c209 19 "%0%!FUNC!: Verizon ERI file %10!s! data copied to buffer, file size = %11!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadBinary
+{
+pERIDataFileName, ItemWString -- 10
+fileSize, ItemLong -- 11
+}
+#typev MPEri_c194 17 "%0%!FUNC!: error appending Verizon ERI binary file name 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadBinary
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPEri_c584 31 "%0%!FUNC!: error reading Sprint ERI International Roaming file %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadSprintIntRoaming
+{
+pERIDataFileName, ItemWString -- 10
+}
+#typev MPEri_c632 35 "%0%!FUNC!: total International Roaming ERIs found = %10!d!. Exiting function." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadSprintIntRoaming
+{
+pSubPhoneInfo->sprintIntlRoam.numEntries, ItemLong -- 10
+}
+#typev MPEri_c660 36 "%0%!FUNC!: Sprint ERI International Roaming data populated successfully." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadSprintIntRoaming
+{
+}
+#typev MPEri_c628 34 "%0%!FUNC!: Successfully allocated buffer for ERI Array and setting default values to 0." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadSprintIntRoaming
+{
+}
+#typev MPEri_c602 33 "%0%!FUNC!: total International Roaming ERIs = %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadSprintIntRoaming
+{
+pSubPhoneInfo->sprintIntlRoam.numEntries, ItemLong -- 10
+}
+#typev MPEri_c589 32 "%0%!FUNC!: Sprint ERI International Roaming file %10!s! data copied to buffer, file size = %11!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadSprintIntRoaming
+{
+pERIDataFileName, ItemWString -- 10
+fileSize, ItemLong -- 11
+}
+#typev MPEri_c574 30 "%0%!FUNC!: error appending Sprint Int Roaming file name 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadSprintIntRoaming
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPEri_c373 25 "%0%!FUNC!: error reading Sprint ERI file %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadText
+{
+pERIDataFileName, ItemWString -- 10
+}
+#typev MPEri_c479 29 "%0%!FUNC!: indicationId = %10!d!, iconMode = %11!d!, Network Name = %12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadText
+{
+pSubPhoneInfo->ERIData.roamIndTable[EriEntriesCounter]->indicationId, ItemLong -- 10
+pSubPhoneInfo->ERIData.roamIndTable[EriEntriesCounter]->iconMode, ItemLong -- 11
+pSubPhoneInfo->ERIData.roamIndTable[EriEntriesCounter]->text, ItemWString -- 12
+}
+#typev MPEri_c468 28 "%0%!FUNC!: Error: RtlStringCchLengthA %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadText
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev MPEri_c393 27 "%0%!FUNC!: num ERI entries = %10!d!, pSubPhoneInfo->ERIData.numEriEntries = %11!d! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadText
+{
+numEriEntries, ItemLong -- 10
+pSubPhoneInfo->ERIData.numEriEntries, ItemLong -- 11
+}
+#typev MPEri_c378 26 "%0%!FUNC!: Sprint ERI file %10!s! data copied to buffer, file size = %11!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadText
+{
+pERIDataFileName, ItemWString -- 10
+fileSize, ItemLong -- 11
+}
+#typev MPEri_c363 24 "%0%!FUNC!: error appending unicode ERI text file name 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPERI_ReadText
+{
+ntStatus, ItemLong -- 10
+}

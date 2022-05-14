@@ -1,0 +1,303 @@
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+78d41027-ac90-3270-5a1d-a94b1769f7ae 10.4 // SRC=MPQCCI.c MJ= MN=
+#typev MPMain_c517 19 "%0<%10!s! > <--MPQCCI_ReleaseQMIClients" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPHaltEx
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c517 18 "%0<%10!s! > -->MPQCCI_ReleaseQMIClients" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPHaltEx
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPMain_c1574 17 "%0<%10!s! ><--MPQCCI_Common_Init: QMI common already initialized Waiting for services to come up" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPMAIN_InitializeQMI
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPQCCI_c1017 36 "%0 <--MPQCCI_AllocateQMIRequest" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_AllocateQMIRequest
+{
+}
+#typev MPQCCI_c1007 35 "%0MPQCCI_AllocateQMIRequest: nRespLen is <=0 - is this expected?" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_AllocateQMIRequest
+{
+}
+#typev MPQCCI_c924 34 "%0 <--MPQCCI_AllocateQMIRequest: getting size for msgId returned error 0x%10!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_AllocateQMIRequest
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPQCCI_c912 12 "%0 <--MPQCCI_GetRequestInfo: 0x%10!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_AllocateQMIRequest
+{
+ntStatus, ItemLong -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPQCCI_c912 11 "%0 -->MPQCCI_GetRequestInfo: unsupported QMIType %10!u! " //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_AllocateQMIRequest
+{
+uQMIType, ItemLong -- 10
+}
+#typev MPQCCI_c912 10 "%0 -->MPQCCI_GetRequestInfo: QMIType %10!u! MsgId 0x%11!x!" //   MASK=MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_AllocateQMIRequest
+{
+uQMIType, ItemLong -- 10
+uMsgId, ItemLong -- 11
+}
+#typev MPQCCI_c909 33 "%0 -->MPQCCI_AllocateQMIRequest: QMIType 0x%10!x!, msgId 0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_AllocateQMIRequest
+{
+uQMIType, ItemLong -- 10
+uMsgId, ItemLong -- 11
+}
+#typev MPQCCI_c1260 51 "%0<%10!s! > <--MPQCCI_DecodeIndication: ERROR, qmi_client_message_decode failed, qmiErr=0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_DecodeIndication
+{
+pAdapter->PortName, ItemString -- 10
+qmiErr, ItemLong -- 11
+}
+#typev MPQCCI_c1243 50 "%0<%10!s! > <--MPQCCI_DecodeIndication: ERROR, handle=NULL" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_DecodeIndication
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQCCI_c1237 38 "%0<%10!s! > <--MPQCCI_GetClientHandleForQmiType: qmiType=0x%11!x!, handle=0x%12!p!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_DecodeIndication
+{
+pAdapter->PortName, ItemString -- 10
+qmiType, ItemLong -- 11
+handle, ItemPtr -- 12
+}
+#typev MPQCCI_c1235 49 "%0<%10!s! > -->MPQCCI_DecodeIndication: uQMIType=0x%11!x!, uMsgId=0x%12!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_DecodeIndication
+{
+pAdapter->PortName, ItemString -- 10
+uQMIType, ItemLong -- 11
+uMsgId, ItemLong -- 12
+}
+#typev MPQCCI_c1071 38 "%0<%10!s! > <--MPQCCI_GetClientHandleForQmiType: qmiType=0x%11!x!, handle=0x%12!p!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_GetClientHandleForQmiType
+{
+pAdapter->PortName, ItemString -- 10
+qmiType, ItemLong -- 11
+handle, ItemPtr -- 12
+}
+#typev MPQCCI_c1214 48 "%0<%10!s!|sub#%11!d!> <--MPQCCI_InitClientFromServiceObj: status = 0x%12!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_InitClientFromServiceObj
+{
+pAdapter->PortName, ItemString -- 10
+pClient->nSubscritionId, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev MPQCCI_c1205 47 "%0<%10!s! > <--MPQCCI_InitClientFromServiceObj: qmi_client_register_error_cb FAILED: err=0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_InitClientFromServiceObj
+{
+pAdapter->PortName, ItemString -- 10
+qmiErr, ItemLong -- 11
+}
+#typev MPQCCI_c1192 46 "%0<%10!s! > MPQCCI_InitClientFromServiceObj: qmi_client_init SUCCEEDED: handle=0x%11!p!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_InitClientFromServiceObj
+{
+pAdapter->PortName, ItemString -- 10
+pClient->handle, ItemPtr -- 11
+}
+#typev MPQCCI_c1186 45 "%0<%10!s! > <--MPQCCI_InitClientFromServiceObj: qmi_client_init FAILED: err=0x%11!x!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_InitClientFromServiceObj
+{
+pAdapter->PortName, ItemString -- 10
+qmiErr, ItemLong -- 11
+}
+#typev MPQCCI_c1172 44 "%0<%10!s! > <--MPQCCI_InitClientFromServiceObj: ERROR, allocate memory failed for pPayloadPerAdapter." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_InitClientFromServiceObj
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQCCI_c1158 43 "%0<%10!s! > <--MPQCCI_InitClientFromServiceObj: qmi_client_get_service_instance FAILED: err=0x%11!x!." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_InitClientFromServiceObj
+{
+pAdapter->PortName, ItemString -- 10
+qmiErr, ItemLong -- 11
+}
+#typev MPQCCI_c1138 42 "%0<%10!s! ><--MPQCCI_Common_Init: Timed out waiting for QMI type " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_InitClientFromServiceObj
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQCCI_c1117 41 "%0<%10!s! ><--MPQCCI_Common_Init: qmi_client_notifier_init failed for QMI type : %11!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_InitClientFromServiceObj
+{
+pAdapter->PortName, ItemString -- 10
+qmiErr, ItemLong -- 11
+}
+#typev MPQCCI_c1099 40 "%0<%10!s! > <--MPQCCI_InitClientFromServiceObj: NULL serviceObj." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_InitClientFromServiceObj
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQCCI_c1094 39 "%0<%10!s! > MPQCCI_InitClientFromServiceObj: received - serviceObj=0x%11!p! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_INFO FUNC=MPQCCI_InitClientFromServiceObj
+{
+pAdapter->PortName, ItemString -- 10
+*pServiceObj, ItemPtr -- 11
+}
+#typev MPQCCI_c1375 57 "%0<%10!s!> %!FUNC!: pAdapter->pClientIndCallBackIrp is NULL or pAdapter->pClientIndCallBackIrp->IoStatus.Status is not PENDING" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_ProcessEmbmsQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQCCI_c1346 56 "%0<%10!s! > MPQCCI_ProcessEmbmsQWDSIndication: indBufferOffset = 0x%11!x! pTmpCC = 0x%12!p! pTmpCC->clntCallbackCon.ind_buf = 0x%13!p! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_ProcessEmbmsQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+indBufferOffset, ItemLong -- 11
+pTmpCC, ItemPtr -- 12
+pTmpCC->clntCallbackCon.ind_buf, ItemPtr -- 13
+}
+#typev MPQCCI_c1337 55 "%0<%10!s! > MPQCCI_ProcessEmbmsQWDSIndication: ERROR, pTmpCC->clntCallbackCon.ind_buf is NULL." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_ProcessEmbmsQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQCCI_c1318 54 "%0<%10!s!> %!FUNC!: pTmpCC == NULL " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_ProcessEmbmsQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQCCI_c1294 53 "%0<%10!s!> %!FUNC!: completing the pAdapter->pClientIndCallBackIrp 0x%11!p! uMsgId = %12!d!  uBufLen = %13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_ProcessEmbmsQWDSIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pClientIndCallBackIrp, ItemPtr -- 11
+uMsgId, ItemLong -- 12
+uBufLen, ItemLong -- 13
+}
+#typev MPQCCI_c1282 52 "%0MPQCCI_ProcessEmbmsQWDSIndication - invalid argument pAdapter == NULL " //   FUNC=MPQCCI_ProcessEmbmsQWDSIndication
+{
+}
+#typev MPQCCI_c734 26 "%0<%10!s! > <--MPQCCI_QMIAsyncCb" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_QMIAsyncCb
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQCCI_c683 25 "%0<%10!s! > <--MPQCCI_QMIAsyncCb: handle != stored handle " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_QMIAsyncCb
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQCCI_c676 24 "%0<%10!s! > <--MPQCCI_QMIAsyncCb: ERROR, MPQCCI_GetClientHandleForQmiType returned handle=NULL" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_QMIAsyncCb
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQCCI_c669 23 "%0<%10!s! >-->MPQCCI_QMIAsyncCb - MsgId 0x%11!x! QMIType %12!d! resp IRQL %13!d!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_QMIAsyncCb
+{
+pAdapter->PortName, ItemString -- 10
+uMsgId, ItemLong -- 11
+pQMI->uQMIType, ItemLong -- 12
+KeGetCurrentIrql(), ItemLong -- 13
+}
+#typev MPQCCI_c532 20 "%0<%10!s! > <--MPQCCI_QMIIndication: ERROR, INVALID qmiType=0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_QMIIndication
+{
+pAdapter->PortName, ItemString -- 10
+qmiType, ItemLong -- 11
+}
+#typev MPQCCI_c546 22 "%0<%10!s! > <--MPQCCI_QMIIndication: NULL indication buffer" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_QMIIndication
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQCCI_c538 21 "%0<%10!s! > -->MPQCCI_QMIIndication: qmiType=0x%11!x!, msgId=0x%12!x!" //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_QMIIndication
+{
+pAdapter->PortName, ItemString -- 10
+qmiType, ItemLong -- 11
+uMsgId, ItemLong -- 12
+}
+#typev MPQCCI_c771 27 "%0 <--MPQCCI_SendQMIRequest: ERROR, pQMI/qmiClient is NULL!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_SendQMIRequest
+{
+}
+#typev MPQCCI_c779 28 "%0 <--MPQCCI_SendQMIRequest: ERROR, pHandle==NULL" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_SendQMIRequest
+{
+}
+#typev MPQCCI_c867 32 "%0<--MPQCCI_SendQMIRequest 0x%10!x!, %11!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_SendQMIRequest
+{
+ntStatus, ItemLong -- 10
+KeGetCurrentIrql(), ItemListByte(Low,APC,DPC) -- 11
+}
+#typev MPQCCI_c854 31 "%0MPQCCI_SendQMIRequest: qmi_client_send* failed with QMI err 0x%10!x! QMIType 0x%11!x! (bSync: %12!d!). %13!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_SendQMIRequest
+{
+qmiErr, ItemLong -- 10
+pQMI->uQMIType, ItemLong -- 11
+pQMI->bSyncMsg, ItemLong -- 12
+KeGetCurrentIrql(), ItemListByte(Low,APC,DPC) -- 13
+}
+#typev MPQCCI_c829 30 "%0MPQCCI_SendQMIRequest: qmi_client_send* failed with QMI err 0x%10!x! QMIType 0x%11!x! (bSync: %12!d!). %13!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQCCI_SendQMIRequest
+{
+qmiErr, ItemLong -- 10
+pQMI->uQMIType, ItemLong -- 11
+pQMI->bSyncMsg, ItemLong -- 12
+KeGetCurrentIrql(), ItemListByte(Low,APC,DPC) -- 13
+}
+#typev MPQCCI_c786 29 "%0 -->%!FUNC!: pQMI=0x%10!x!, QMIType=0x%11!x!, msgId=0x%12!x!, bSync=0x%13!x!. %14!s!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_SendQMIRequest
+{
+(UINT)pQMI, ItemLong -- 10
+pQMI->uQMIType, ItemLong -- 11
+pQMI->uMsgId, ItemLong -- 12
+pQMI->bSyncMsg, ItemLong -- 13
+KeGetCurrentIrql(), ItemListByte(Low,APC,DPC) -- 14
+}
+#typev MPQCCI_c1031 37 "%0 MPQCCI_SetMessageDelivery: bSync=%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQCCI_SetMessageDelivery
+{
+bSync, ItemLong -- 10
+}
+#typev MPQCCI_c289 15 "%0<%10!s!> %!FUNC!: - signaling mssr." //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=QcciErrorCallback
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQCCI_c277 14 "%0QcciErrorCallback: completing the pQmiErrorCallBackIrp  0x%10!p! user_handle 0x%11!p! " //   MASK=MP_DBG_MASK_CONTROL LEVEL=MP_DBG_LEVEL_DETAIL FUNC=QcciErrorCallback
+{
+pAdapter->pQmiErrorCallBackIrp, ItemPtr -- 10
+user_handle, ItemPtr -- 11
+}
+#typev MPQCCI_c266 13 "%0QcciErrorCallback - invalid argument pAdapter == NULL " //   FUNC=QcciErrorCallback
+{
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPQMI_c101 38 "%0<%10!s! > <--MPQCCI_GetClientHandleForQmiType: qmiType=0x%11!x!, handle=0x%12!p!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_FreeQMIRequestQueue
+{
+pAdapter->PortName, ItemString -- 10
+qmiType, ItemLong -- 11
+handle, ItemPtr -- 12
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWDSQmi_c2047 37 "%0 MPQCCI_SetMessageDelivery: bSync=%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ComposeWdsAbortReqSend
+{
+bSync, ItemLong -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWDSQmi_c2542 37 "%0 MPQCCI_SetMessageDelivery: bSync=%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_SendWdsBindMuxDataPortReq
+{
+bSync, ItemLong -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWDSQmi_c2484 37 "%0 MPQCCI_SetMessageDelivery: bSync=%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_SendWdsSetClientIpFamilyPrefSyncReq
+{
+bSync, ItemLong -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPWDSQmi_c2276 37 "%0 MPQCCI_SetMessageDelivery: bSync=%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_SendWdsStartNetworkInterfaceReq
+{
+bSync, ItemLong -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c691 37 "%0 MPQCCI_SetMessageDelivery: bSync=%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_InitDmsClient
+{
+bSync, ItemLong -- 10
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c149 51 "%0<%10!s! > <--MPQCCI_DecodeIndication: ERROR, qmi_client_message_decode failed, qmiErr=0x%11!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+qmiErr, ItemLong -- 11
+}
+#typev MPDMSQmi_c149 50 "%0<%10!s! > <--MPQCCI_DecodeIndication: ERROR, handle=NULL" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_ERROR FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDMSQmi_c149 38 "%0<%10!s! > <--MPQCCI_GetClientHandleForQmiType: qmiType=0x%11!x!, handle=0x%12!p!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+qmiType, ItemLong -- 11
+handle, ItemPtr -- 12
+}
+#typev MPDMSQmi_c149 49 "%0<%10!s! > -->MPQCCI_DecodeIndication: uQMIType=0x%11!x!, uMsgId=0x%12!x!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_ProcessDmsEventReportInd
+{
+pAdapter->PortName, ItemString -- 10
+uQMIType, ItemLong -- 11
+uMsgId, ItemLong -- 12
+}
+// PDB:  qclinklocal850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPDMSQmi_c410 37 "%0 MPQCCI_SetMessageDelivery: bSync=%10!d!" //   MASK=MP_DBG_MASK_CONTROL | MP_DBG_MASK_OID_QMI LEVEL=MP_DBG_LEVEL_DETAIL FUNC=MPQMI_SendDmsBindSubscriptionReq
+{
+bSync, ItemLong -- 10
+}

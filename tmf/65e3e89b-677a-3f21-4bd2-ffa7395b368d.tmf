@@ -1,0 +1,161 @@
+// PDB:  QcIMSDataDaemon.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+65e3e89b-677a-3f21-4bd2-ffa7395b368d um // SRC=qmi_csi_xport_ipc_um.c MJ= MN=
+#typev qmi_csi_xport_ipc_um_c195 14 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! WriteFile fail (%10!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=flush_tx_q
+{
+error, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c184 12 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! ResumeTx fail after pending (%10!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=flush_tx_q
+{
+error, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c189 13 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! ResumeTx success after pending." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=flush_tx_q
+{
+}
+#typev qmi_csi_xport_ipc_um_c168 11 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! WriteFile wrote 0 bytes" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=flush_tx_q
+{
+}
+#typev qmi_csi_xport_ipc_um_c142 10 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! flush_tx_q." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=flush_tx_q
+{
+}
+#typev qmi_csi_xport_ipc_um_c605 34 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IPC_EVENT_RESUME_TX event." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=handle_event
+{
+}
+#typev qmi_csi_xport_ipc_um_c618 35 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IPC_EVENT_REMOVE_CLIENT event, proc %10!d!, port %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=handle_event
+{
+dest->addr.processor_id, ItemLong -- 10
+dest->addr.port_id, ItemLong -- 11
+}
+#typev qmi_csi_xport_ipc_um_c624 36 "%0NULL dest returned from find_tx_q" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=handle_event
+{
+}
+#typev qmi_csi_xport_ipc_um_c595 33 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IOCTL_IPC_READ_OOB fail code: %10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=handle_event
+{
+error, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c587 32 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IOCTL_IPC_READ_OOB pending." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=handle_event
+{
+}
+#typev qmi_csi_xport_ipc_um_c580 31 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IOCTL_IPC_READ_OOB queued." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=handle_event
+{
+}
+#typev qmi_csi_xport_ipc_um_c574 30 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IOCTL_IPC_READ_OOB sync failed with error 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=handle_event
+{
+error, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c542 29 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! ReadFile output buffer length %10!d! invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=read_data_from_ipc_router
+{
+rxMsgSize, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c534 28 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! RX: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=read_data_from_ipc_router
+{
+log_xstr((uint8_t *)out->payload. rxMsgSize - sizeof(IPC_ADDRESS)), ItemHEXDump -- 10
+}
+#typev qmi_csi_xport_ipc_um_c531 27 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! RX: %10!s! txn: 0x%11!x! msg_id: 0x%12!x! len: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=read_data_from_ipc_router
+{
+qcsi_cntl_str(cntl_flag), ItemString -- 10
+txn_id, ItemLong -- 11
+msg_id, ItemLong -- 12
+msg_len, ItemLong -- 13
+}
+#typev qmi_csi_xport_ipc_um_c526 26 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! ReadFile success" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QMI FUNC=read_data_from_ipc_router
+{
+}
+#typev qmi_csi_xport_ipc_um_c519 25 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! ReadFile failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=read_data_from_ipc_router
+{
+GetLastError(), ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c505 24 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! ReadFile queued" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QMI FUNC=read_data_from_ipc_router
+{
+}
+#typev qmi_csi_xport_ipc_um_c499 23 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! ReadFile failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=read_data_from_ipc_router
+{
+error, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c483 22 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! MALLOC allocated zero bytes, bailing..." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=read_data_from_ipc_router
+{
+}
+#typev qmi_csi_xport_ipc_um_c476 21 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! bytes_to_be_read is 0, return." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=read_data_from_ipc_router
+{
+}
+#typev qmi_csi_xport_ipc_um_c424 18 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! DeviceIoControl for IOCTL_IPC_EVENT_PEEK sync failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=send_event_peek
+{
+error, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c458 20 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IOCTL_IPC_RX_PEEK sync success" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QMI FUNC=send_rx_peek
+{
+}
+#typev qmi_csi_xport_ipc_um_c452 19 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! DeviceIoControl for IOCTL_IPC_RX_PEEK sync failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=send_rx_peek
+{
+error, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c1017 53 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! Error closing the handle, error: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=xport_close
+{
+GetLastError(), ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c1001 52 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! Error closing the core" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=xport_close
+{
+}
+#typev qmi_csi_xport_ipc_um_c701 38 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! send_rx_peek fails." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=xport_open
+{
+}
+#typev qmi_csi_xport_ipc_um_c694 37 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! send_read_oob fails." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=xport_open
+{
+}
+#typev qmi_csi_xport_ipc_um_c669 17 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! Exiting create_ipc_handle" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QMI FUNC=xport_open
+{
+}
+#typev qmi_csi_xport_ipc_um_c669 16 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! CreateFileW to IPC failed. Error = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=xport_open
+{
+GetLastError(), ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c669 15 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! Entering create_ipc_handle" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QMI FUNC=xport_open
+{
+}
+#typev qmi_csi_xport_ipc_um_c765 42 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IOCTL_IPC_REG_SERVER fail code: %10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=xport_reg
+{
+error, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c757 41 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IOCTL_IPC_REG_SERVER pending." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=xport_reg
+{
+}
+#typev qmi_csi_xport_ipc_um_c750 40 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IOCTL_IPC_REG_SERVER queued." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=xport_reg
+{
+}
+#typev qmi_csi_xport_ipc_um_c744 39 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! DeviceIoControl for IOCTL_IPC_REG_SERVER sync failed with error 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=xport_reg
+{
+error, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c965 51 "%0QCCI UM: qmi_csi_xport_ipc_um.c::%!FUNC! WriteFile wrote 0 bytes, status 0x%10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=xport_send
+{
+lastError, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c924 50 "%0QCCI UM: qmi_csi_xport_ipc_um.c::%!FUNC! WriteFile wrote %10!d! bytes, status 0x%11!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=xport_send
+{
+bytesWritten, ItemLong -- 10
+lastError, ItemLong -- 11
+}
+#typev qmi_csi_xport_ipc_um_c917 49 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! WriteFile failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=xport_send
+{
+lastError, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c907 48 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! Waiting for TX to complete" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QMI FUNC=xport_send
+{
+}
+#typev qmi_csi_xport_ipc_um_c881 47 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! MALLOC returned null pointer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=xport_send
+{
+}
+#typev qmi_csi_xport_ipc_um_c837 46 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IOCTL_IPC_UNREG_SERVER fail code: %10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=xport_unreg
+{
+error, ItemLong -- 10
+}
+#typev qmi_csi_xport_ipc_um_c829 45 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IOCTL_IPC_UNREG_SERVER pending." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=xport_unreg
+{
+}
+#typev qmi_csi_xport_ipc_um_c822 44 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! IOCTL_IPC_UNREG_SERVER queued." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMI FUNC=xport_unreg
+{
+}
+#typev qmi_csi_xport_ipc_um_c816 43 "%0QCSI UM: qmi_csi_xport_ipc_um.c::%!FUNC! DeviceIoControl for IOCTL_IPC_UNREG_SERVER sync failed with error 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMI FUNC=xport_unreg
+{
+error, ItemLong -- 10
+}

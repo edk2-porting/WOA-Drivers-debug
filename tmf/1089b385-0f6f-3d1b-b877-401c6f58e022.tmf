@@ -1,0 +1,69 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+1089b385-0f6f-3d1b-b877-401c6f58e022 WMRIL // SRC=WMRilPIN.cpp MJ= MN=
+#typev WMRilPIN_cpp39 10 "%0%!LEVEL! %!FUNC!:Constructed %10!s!(%11!u!), %12!s!(%13!u!), PIN retries %14!u!, PUK retries %15!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::PINClass::PINClass
+{
+Debug::QMIUIMPINIDToStr(m_PINid), ItemWString -- 10
+m_PINid, ItemLong -- 11
+Debug::QMIUIMPINStateToStr(m_PINstate), ItemWString -- 12
+m_PINstate, ItemLong -- 13
+m_PINretries, ItemLong -- 14
+m_PUKretries, ItemLong -- 15
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPIN_cpp150 18 "%0%!LEVEL! %!FUNC!:pin's puk retry %10!u! is different from compared pin's puk retry %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::PINClass::ComparedStatesDuringMSSR
+{
+m_PUKretries, ItemLong -- 10
+pComparedPIN->GetPUKretries(), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPIN_cpp139 17 "%0%!LEVEL! %!FUNC!:pin's pin retry %10!u! is different from compared pin's pin retry %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::PINClass::ComparedStatesDuringMSSR
+{
+m_PINretries, ItemLong -- 10
+pComparedPIN->GetPINretries(), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPIN_cpp128 16 "%0%!LEVEL! %!FUNC!:pin's state %10!s!(%11!u!) is different from compared pin's state %12!s!(%13!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::PINClass::ComparedStatesDuringMSSR
+{
+Debug::QMIUIMPINStateToStr(m_PINstate), ItemWString -- 10
+m_PINstate, ItemLong -- 11
+Debug::QMIUIMPINStateToStr(ComparedPINstate), ItemWString -- 12
+ComparedPINstate, ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPIN_cpp121 15 "%0%!LEVEL! %!FUNC!:Fail to get PIN state of compared pin" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::PINClass::ComparedStatesDuringMSSR
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPIN_cpp111 14 "%0%!LEVEL! %!FUNC!:pin's pin id %10!s!(%11!u!) is different from compared pin's pin id %12!s!(%13!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::PINClass::ComparedStatesDuringMSSR
+{
+Debug::QMIUIMPINIDToStr(m_PINid), ItemWString -- 10
+m_PINid, ItemLong -- 11
+Debug::QMIUIMPINIDToStr(pComparedPIN->GetPINID()), ItemWString -- 12
+pComparedPIN->GetPINID(), ItemLong -- 13
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPIN_cpp104 13 "%0%!LEVEL! %!FUNC!:Compared PIN is not available" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::PINClass::ComparedStatesDuringMSSR
+{
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilPIN_cpp85 12 "%0%!LEVEL! %!FUNC!:Incorrect PIN state = %10!u! of PIN ID = %11!s!(%12!u!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_UIM FUNC=WMRil::PINClass::GetPINstate
+{
+pin_state, ItemLong -- 10
+Debug::QMIUIMPINIDToStr(m_PINid), ItemWString -- 11
+m_PINid, ItemLong -- 12
+}
+#typev WMRilPIN_cpp67 11 "%0%!LEVEL! %!FUNC!:%10!s!(%11!u!) is in %12!s!(%13!u!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ZONE_UIM FUNC=WMRil::PINClass::GetPINstate
+{
+Debug::QMIUIMPINIDToStr(m_PINid), ItemWString -- 10
+m_PINid, ItemLong -- 11
+Debug::QMIUIMPINStateToStr(m_PINstate), ItemWString -- 12
+m_PINstate, ItemLong -- 13
+}

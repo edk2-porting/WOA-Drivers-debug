@@ -1,0 +1,290 @@
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+5941f39c-ee1a-3272-0a6e-b6cefe6f7601 BattMngr // SRC=BattMngrTech_ParallelCharging_R2.c MJ= MN=
+#typev BattMngrPlat_SMChg_FGGge_R3_c5611 33 "%0%!FUNC!::Master Charger Configuration:: FCC = %10!d! mA, FV = %11!d!, mV, IUSB = %12!d! mA, IDC = %13!d! mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrPlat_SMChg_FGGge_R3_Configure_ParallelCharging
+{
+sFullChargeCurrent, ItemLong -- 10
+sFloatVoltage, ItemLong -- 11
+sIUSB, ItemLong -- 12
+sIDC, ItemLong -- 13
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5611 32 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrPlat_SMChg_FGGge_R3_Configure_ParallelCharging
+{
+}
+#typev BattMngrPlat_SMChg_FGGge_R3_c5611 31 "%0%!FUNC!::WARN::Feature is not enabled, Skip configuration" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrPlat_SMChg_FGGge_R3_Configure_ParallelCharging
+{
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrTech_ParallelCharging_R2_c737 38 "%0%!FUNC!::Slave Charger Configuration:: En = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Charger_Config_Slave
+{
+ChgEn, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c731 37 "%0%!FUNC!::ERROR::Slave Charger Configuration failed, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Charger_Config_Slave
+{
+status, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c716 36 "%0%!FUNC!::Slave Charger Configuration:: FCC = %10!d! mA, FV = %11!d!, mV, IUSB = %12!d! mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Charger_Config_Slave
+{
+sFullChargeCurrent, ItemLong -- 10
+sFloatVoltage, ItemLong -- 11
+sIUSB, ItemLong -- 12
+}
+#typev BattMngrTech_ParallelCharging_R2_c707 35 "%0%!FUNC!::ERROR::Slave Charger Configuration failed, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Charger_Config_Slave
+{
+status, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c694 34 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Charger_Config_Slave
+{
+}
+#typev BattMngrTech_ParallelCharging_R2_c878 46 "%0%!FUNC!::Change State: OldState = %10!d!, NewState = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Check_State_Change
+{
+sBattMngrTechParallelChargingContext.Status.StateMachine.prevState, ItemLong -- 10
+sBattMngrTechParallelChargingContext.Status.StateMachine.currState, ItemLong -- 11
+}
+#typev BattMngrTech_ParallelCharging_R2_c824 45 "%0%!FUNC!::Parallel Charging Ready = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Check_State_Change
+{
+bParallelChargingReady ? 1 : 0, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c798 44 "%0%!FUNC!::PMIC ICL result is = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Check_State_Change
+{
+aicl_result, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c787 42 "%0%!FUNC!::ERROR::Read VBUS Voltage failed, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Check_State_Change
+{
+status, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c795 43 "%0%!FUNC!::ERROR::Read PMI ICL status failed, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Check_State_Change
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrTech_ParallelCharging_R2_c777 41 "%0%!FUNC!::BM CurrentState = %10!d!, ChargerPath = %11!d!, ChargeCurrent = %12!d!,JEITAZone = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Check_State_Change
+{
+pDeviceContext->CurrentStateID, ItemLong -- 10
+pDeviceContext->PlatformData.ChgConfigData.ChargePath, ItemLong -- 11
+sBattMngrTechParallelChargingContext.Platform_Overall_FCC, ItemLong -- 12
+pDeviceContext->JeitaZoneInfo, ItemLong -- 13
+}
+#typev BattMngrTech_ParallelCharging_R2_c773 40 "%0%!FUNC!::HW Charging State = %10!d!, Slave Charger Suspend State = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Check_State_Change
+{
+(charging_status & CHGR_BATTERY_CHARGER_STATUS_MASK), ItemLong -- 10
+bSlaveChargerSuspend ? 1 : 0, ItemLong -- 11
+}
+#typev BattMngrTech_ParallelCharging_R2_c769 39 "%0%!FUNC!::ERROR::Querry HW info Failed, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Check_State_Change
+{
+status, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c234 12 "%0%!FUNC!::Value of %10!s! is %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_acpi FUNC=BattMngrTech_ParallelCharging_R2_ParseAndFill_AcpiData
+{
+currentArgNum, ItemEnum(BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_ENTRY_TYPE) -- 10
+currentArgument->Argument, ItemLong -- 11
+}
+#typev BattMngrTech_ParallelCharging_R2_c225 14 "%0%!FUNC!::ERROR::Invalid Input argument" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_acpi FUNC=BattMngrTech_ParallelCharging_R2_ParseAndFill_AcpiData
+{
+}
+#typev BattMngrTech_ParallelCharging_R2_c225 15 "%0%!FUNC!::Value of %10!s! is %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_acpi FUNC=BattMngrTech_ParallelCharging_R2_ParseAndFill_AcpiData
+{
+currentArgNum, ItemEnum(BATTMNGR_TECH_PARALLEL_CHARGING_R2_THERMAL_BALANCING_ACPI_ENTRY_TYPE) -- 10
+currentArgument->Argument, ItemLong -- 11
+}
+#typev BattMngrTech_ParallelCharging_R2_c241 13 "%0%!FUNC!::ERROR::Failed to parse acpi for ParallelCharging, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_acpi FUNC=BattMngrTech_ParallelCharging_R2_ParseAndFill_AcpiData
+{
+status, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c186 11 "%0qcbattmngr::ERROR::Incorrect number of acpi ParallelCharging entries,expected = %10!d!,received = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrTech_ParallelCharging_R2_ParseAndFill_AcpiData
+{
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_ARGS, ItemLong -- 10
+numberOfConfigItems, ItemLong -- 11
+}
+#typev BattMngrTech_ParallelCharging_R2_c177 10 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=BattMngrWPP_acpi FUNC=BattMngrTech_ParallelCharging_R2_ParseAndFill_AcpiData
+{
+}
+#typev BattMngrTech_ParallelCharging_R2_c1022 54 "%0%!FUNC!::ERROR::Querry Master Charger State failed, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_Mid2Mid
+{
+status, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c987 50 "%0%!FUNC!::ERROR::Read VBUS Voltage failed, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_Mid2Mid
+{
+status, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c1000 52 "%0%!FUNC!::Cap Slave Charger FCC = %10!d! mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_Mid2Mid
+{
+SlaveCharger_FCC_InMA, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c994 51 "%0%!FUNC!::ICL result = %10!d! mA, Vbus = %11!d! mV, Slave_FCCCap = %12!d! mA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_Mid2Mid
+{
+ICLResultInMA, ItemLong -- 10
+vbusVoltageInMV, ItemLong -- 11
+SlaveCharger_FCCCap_InMA, ItemLong -- 12
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrTech_ParallelCharging_R2_c980 49 "%0%!FUNC!::ERROR::Get Master Charger ICL status failed, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_Mid2Mid
+{
+status, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c966 48 "%0%!FUNC!::Distribute Power: Master = %10!d! perc Slave = %11!d! perc" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_Mid2Mid
+{
+100 - sBattMngrTechParallelChargingContext.Status.SlavePowerDistrCfg, ItemLong -- 10
+sBattMngrTechParallelChargingContext.Status.SlavePowerDistrCfg, ItemLong -- 11
+}
+#typev BattMngrTech_ParallelCharging_R2_c962 47 "%0%!FUNC!::ERROR::Invalid Parallel Charging State, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_Mid2Mid
+{
+status, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c1146 67 "%0%!FUNC!::Master Charger ICL = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_UsbIn2UsbIn
+{
+sBattMngrTechParallelChargingContext.MasterChg.IUSB, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c1140 66 "%0%!FUNC!::Slave Charger ICL = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_UsbIn2UsbIn
+{
+sBattMngrTechParallelChargingContext.SlaveChg.IUSB, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c1119 64 "%0%!FUNC!::ERROR::Read VBUS Voltage failed, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_UsbIn2UsbIn
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrTech_ParallelCharging_R2_c1105 63 "%0%!FUNC!::Slave Charger FCC = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_UsbIn2UsbIn
+{
+sBattMngrTechParallelChargingContext.SlaveChg.FullChargeCurrent, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c1090 61 "%0%!FUNC!::ERROR::Querry Master Charger State failed, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_UsbIn2UsbIn
+{
+status, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c1079 60 "%0%!FUNC!::Master Charger FCC = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_UsbIn2UsbIn
+{
+sBattMngrTechParallelChargingContext.MasterChg.FullChargeCurrent, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c1073 59 "%0%!FUNC!::Slave Charger FCC = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_UsbIn2UsbIn
+{
+sBattMngrTechParallelChargingContext.SlaveChg.FullChargeCurrent, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c1058 57 "%0%!FUNC!::Distribute Power: Master = %10!d! perc Slave = %11!d! perc" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_UsbIn2UsbIn
+{
+100 - sBattMngrTechParallelChargingContext.Status.SlavePowerDistrCfg, ItemLong -- 10
+sBattMngrTechParallelChargingContext.Status.SlavePowerDistrCfg, ItemLong -- 11
+}
+#typev BattMngrTech_ParallelCharging_R2_c1054 56 "%0%!FUNC!::ERROR::Invalid Parallel Charging State, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_PowerDistribution_UsbIn2UsbIn
+{
+status, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c1313 74 "%0%!FUNC!::Adjustment Limited to %10!d! perc" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Thermal_Manager
+{
+pParallelChargingConfigData->SlaveChargerMinPwrInPercent, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c1296 73 "%0%!FUNC!::Adjustment Limited to %10!d! perc" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Thermal_Manager
+{
+pParallelChargingConfigData->SlaveChargerMaxPwrInPercent, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c1267 72 "%0%!FUNC!::skip because both chargers are cool" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Thermal_Manager
+{
+}
+#typev BattMngrTech_ParallelCharging_R2_c1261 71 "%0%!FUNC!::Master DieTemp = %10!d! DegreeC, Slave DieTemp = %11!d! DegreeC, Master DieTemp Offset= %12!d!, Slave DieTemp Offset = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Thermal_Manager
+{
+MasterChgTempInDegreeC, ItemLong -- 10
+SlaveChgTempInDegreeC, ItemLong -- 11
+pDeviceContext->HWTempInfo.master_dietemp_offset, ItemLong -- 12
+pDeviceContext->HWTempInfo.slave_dietemp_offset, ItemLong -- 13
+}
+#typev BattMngrTech_ParallelCharging_R2_c1257 70 "%0%!FUNC!::ERROR::Reading Slave Charger Temperature failed, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Thermal_Manager
+{
+status, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c1245 69 "%0%!FUNC!::ERROR::Reading Master Charger Temperature failed, Error Code = 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Thermal_Manager
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrTech_ParallelCharging_R2_c1235 68 "%0%!FUNC!::skip because parallel charging is inactive" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_Thermal_Manager
+{
+}
+#typev BattMngrTech_ParallelCharging_R2_c444 26 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_SLAVE_CHARGER_MIN_PWR is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateConfigRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c436 25 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_SLAVE_CHARGER_MAX_PWR is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateConfigRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c428 24 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_SLAVE_CHARGER_HWID is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateConfigRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c420 23 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_SLAVE_CHARGER_MINIMUM_EFFICIENCY is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateConfigRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c412 22 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_SLAVE_CHARGER_CHARGE_CURRENT_DONE_THRESHOLD is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateConfigRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c404 21 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_SLAVE_CHARGER_FLOAT_VOLTAGE_HEADROOM is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateConfigRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c396 20 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_SLAVE_CHARGER_INIT_POWER_DISTR is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateConfigRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c388 19 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_THRESHOLD_CHARGE_CURRENT is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateConfigRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c380 18 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_THRESHOLD_INPUT_POWER is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateConfigRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c372 17 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_INPUT_POWER_DISTRIBUTE_CONFIG is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateConfigRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c364 16 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_FEATURE_ENABLE is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateConfigRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c521 30 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_THERMAL_BALANCING_STEP is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateThermalBalancingRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c513 29 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_THERMAL_BALANCING_MASTER_CHG_TEMP_MARGIN is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateThermalBalancingRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c505 28 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_THERMAL_BALANCING_MIN_WAIT_TIME is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateThermalBalancingRegistryData
+{
+regData, ItemLong -- 10
+}
+#typev BattMngrTech_ParallelCharging_R2_c497 27 "%0%!FUNC!::Registry for BATTMNGR_REGISTRY_PARALLELCHARGING_R2_THERMAL_BALANCING_TEMP_DIFF_THRESHOLD is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_ParallelCharging FUNC=BattMngrTech_ParallelCharging_R2_UpdateThermalBalancingRegistryData
+{
+regData, ItemLong -- 10
+}
+#enumv BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_ENTRY_TYPE
+{
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_FEATURE_ENABLE,0x0
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_INPUT_POWER_DISTRIBUTE_CONFIG,0x1
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_THRESHOLD_INPUT_POWER,0x2
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_THRESHOLD_CHARGE_CURRENT,0x3
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_SLAVE_CHARGER_INIT_POWER_DISTRIBUTION,0x4
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_SLAVE_CHARGER_FLOATVOLTAGE_HEADROOM,0x5
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_SLAVE_CHARGER_CHARGE_CURRENT_DONE_THRESHOLD,0x6
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_SLAVE_CHARGER_MINIMUM_EFFICIENCY,0x7
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_SLAVE_CHARGER_HW_ID,0x8
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_SLAVE_CHARGER_MAX_PWR,0x9
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_SLAVE_CHARGER_MIN_PWR,0xA
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_THERMAL_BALANCING_CONFIG,0xB
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_ACPI_ARGS,0xC
+}
+#enumv BATTMNGR_TECH_PARALLEL_CHARGING_R2_THERMAL_BALANCING_ACPI_ENTRY_TYPE
+{
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_THERMAL_BALANCING_ACPI_TEMP_DIFF_THRESHOLD,0x0
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_THERMAL_BALANCING_ACPI_STEP,0x1
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_THERMAL_BALANCING_ACPI_MIN_WAIT_TIME,0x2
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_THERMAL_BALANCING_ACPI_MASTER_CHG_TEMP_MARGIN,0x3
+BATTMNGR_TECH_PARALLEL_CHARGING_R2_THERMAL_BALANCING_ACPI_ARGS,0x4
+}

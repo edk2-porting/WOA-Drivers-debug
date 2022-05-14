@@ -1,0 +1,177 @@
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+ee639ef6-ae06-3992-ddf4-d514e4fe3d02 BattMngr // SRC=BattMngrStateMachineLevels.c MJ= MN=
+#typev BattMngrStateMachineLevels_c319 14 "%0BattMngrStateMachineLevel_Change_State::Change state to Error. ErrorMask = 0x0%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_Change_State
+{
+pDeviceContext->PlatformData.ErrorMask, ItemLong -- 10
+}
+#typev BattMngrStateMachineLevels_c314 13 "%0BattMngrStateMachineLevel_Change_State::Change state to %10!d! (%11!s!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_Change_State
+{
+NewState, ItemLong -- 10
+NewState, ItemEnum(BATTMNGR_STATE_ID_TYPE) -- 11
+}
+#typev BattMngrStateMachineLevels_c303 12 "%0BattMngrStateMachineLevel_Change_State::Cannot change state since current state is test" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_Change_State
+{
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrStateMachineLevels_c914 49 "%0BattMngrStateMachineLevel_CheckPowerStateChange::Power State Flag is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_CheckForBattThresholdsAndNotify
+{
+pDeviceContext->BattMngrData.ChgStatus.power_state, ItemLong -- 10
+}
+#typev BattMngrStateMachineLevels_c914 48 "%0BattMngrStateMachineLevel_CheckPowerStateChange::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_CheckForBattThresholdsAndNotify
+{
+}
+#typev BattMngrStateMachineLevels_c911 46 "%0BattMngrStateMachineLevel_CheckBatteryThresholds::Battery Thresholds are crossed,Capacity is %10!d!mWh,High Capacity is %11!d!mWh,Low Capacity is %12!d!mWh" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_CheckForBattThresholdsAndNotify
+{
+pDeviceContext->BattMngrData.ChgStatus.capacity, ItemLong -- 10
+pDeviceContext->BattMngrData.StatusNotifCrit.batt_notify_criteria.high_capacity, ItemLong -- 11
+pDeviceContext->BattMngrData.StatusNotifCrit.batt_notify_criteria.low_capacity, ItemLong -- 12
+}
+#typev BattMngrStateMachineLevels_c911 45 "%0BattMngrStateMachineLevel_CheckBatteryThresholds::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_CheckForBattThresholdsAndNotify
+{
+}
+#typev BattMngrStateMachineLevels_c908 44 "%0qcbattmngr::CRITICAL::LOW BATTERY,capacity is %10!d! mWh,default_alert1 is %11!d! mWh" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=BattMngrWPP_SelfHost FUNC=BattMngrStateMachineLevel_CheckForBattThresholdsAndNotify
+{
+pDeviceContext->BattMngrData.ChgStatus.capacity, ItemLong -- 10
+pDeviceContext->BattMngrData.BattInfo.batt_info.default_alert1, ItemLong -- 11
+}
+#typev BattMngrStateMachineLevels_c908 43 "%0BattMngrStateMachineLevel_CheckForLowBattery::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_CheckForBattThresholdsAndNotify
+{
+}
+#typev BattMngrStateMachineLevels_c906 41 "%0BattMngrStateMachineLevel_CheckForBattThresholdsAndNotify::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_CheckForBattThresholdsAndNotify
+{
+}
+#typev BattMngrStateMachineLevels_c836 38 "%0BattMngrStateMachineLevel_Generic_State_Periodic_Action::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_Generic_State_Periodic_Action
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrStateMachineLevels_c823 37 "%0BattMngrStateMachineLevel_Generic_State_Periodic_Action::CheckStateChange returned,currState=%10!d!,newState=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_Generic_State_Periodic_Action
+{
+pDeviceContext->CurrentStateID, ItemLong -- 10
+NextState, ItemLong -- 11
+}
+#typev BattMngrStateMachineLevels_c812 36 "%0BattMngrStateMachineLevel_Generic_State_Periodic_Action::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_Generic_State_Periodic_Action
+{
+}
+#typev BattMngrStateMachineLevels_c273 11 "%0BattMngrStateMachineLevel_Run_Current_State::Error::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_Run_Current_State
+{
+status, ItemLong -- 10
+}
+#typev BattMngrStateMachineLevels_c257 10 "%0BattMngrStateMachineLevel_Run_Current_State::Current state is %10!d!     (%11!s!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_Run_Current_State
+{
+CurrentState, ItemLong -- 10
+CurrentState, ItemEnum(BATTMNGR_STATE_ID_TYPE) -- 11
+}
+#typev BattMngrStateMachineLevels_c618 27 "%0BattMngrStateMachineLevel_State_Done_Init::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Done_Init
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrStateMachineLevels_c599 26 "%0BattMngrStateMachineLevel_State_Done_Init::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Done_Init
+{
+}
+#typev BattMngrStateMachineLevels_c459 19 "%0BattMngrStateMachineLevel_State_Entry::Error::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Entry
+{
+status, ItemLong -- 10
+}
+#typev BattMngrStateMachineLevels_c439 18 "%0BattMngrStateMachineLevel_State_Entry::Change state to test mode" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Entry
+{
+}
+#typev BattMngrStateMachineLevels_c431 17 "%0BattMngrStateMachineLevel_State_Entry::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Entry
+{
+}
+#typev BattMngrStateMachineLevels_c382 15 "%0BattMngrStateMachineLevel_State_Entry_Init::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Entry_Init
+{
+}
+#typev BattMngrStateMachineLevels_c788 35 "%0BattMngrStateMachineLevel_State_Error_Init::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Error_Init
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrStateMachineLevels_c764 34 "%0BattMngrStateMachineLevel_State_Error_Init::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Error_Init
+{
+}
+#typev BattMngrStateMachineLevels_c537 23 "%0BattMngrStateMachineLevel_State_Fast_Charge_Init::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Fast_Charge_Init
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrStateMachineLevels_c519 22 "%0BattMngrStateMachineLevel_State_Fast_Charge_Init::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Fast_Charge_Init
+{
+}
+#typev BattMngrStateMachineLevels_c498 21 "%0BattMngrStateMachineLevel_State_No_Charger_Init::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_No_Charger_Init
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrStateMachineLevels_c480 20 "%0BattMngrStateMachineLevel_State_No_Charger_Init::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_No_Charger_Init
+{
+}
+#typev BattMngrStateMachineLevels_c743 33 "%0BattMngrStateMachineLevel_State_Not_Charging_Thermal_Init::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Not_Charging_Thermal_Init
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrStateMachineLevels_c723 32 "%0BattMngrStateMachineLevel_State_Not_Charging_Thermal_Init::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Not_Charging_Thermal_Init
+{
+}
+#typev BattMngrStateMachineLevels_c659 29 "%0BattMngrStateMachineLevel_State_ReCharge_Init::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_ReCharge_Init
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrStateMachineLevels_c640 28 "%0BattMngrStateMachineLevel_State_ReCharge_Init::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_ReCharge_Init
+{
+}
+#typev BattMngrStateMachineLevels_c700 31 "%0BattMngrStateMachineLevel_State_TDone_Init::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_TDone_Init
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrStateMachineLevels_c681 30 "%0BattMngrStateMachineLevel_State_TDone_Init::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_TDone_Init
+{
+}
+#typev BattMngrStateMachineLevels_c881 40 "%0BattMngrStateMachineLevel_State_Test_Init::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Test_Init
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrStateMachineLevels_c858 39 "%0BattMngrStateMachineLevel_State_Test_Init::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_Test_Init
+{
+}
+#typev BattMngrStateMachineLevels_c577 25 "%0BattMngrStateMachineLevel_State_TopOff_Charge_Init::ERROR::Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_TopOff_Charge_Init
+{
+status, ItemLong -- 10
+}
+// PDB:  qcbattmngr850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev BattMngrStateMachineLevels_c559 24 "%0BattMngrStateMachineLevel_State_TopOff_Charge_Init::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=BattMngrWPP_statemachinelevel FUNC=BattMngrStateMachineLevel_State_TopOff_Charge_Init
+{
+}
+#enumv BATTMNGR_STATE_ID_TYPE
+{
+BATTMNGR_STATE_ID_ENTRY,0x0
+BATTMNGR_STATE_ID_NO_CHG,0x1
+BATTMNGR_STATE_ID_FAST,0x2
+BATTMNGR_STATE_ID_TOP_OFF,0x3
+BATTMNGR_STATE_ID_DONE,0x4
+BATTMNGR_STATE_ID_RECHARGE,0x5
+BATTMNGR_STATE_ID_TDONE,0x6
+BATTMNGR_STATE_ID_NOT_CHARGING_THERMAL,0x7
+BATTMNGR_STATE_ID_ERROR,0x8
+BATTMNGR_STATE_ID_TEST,0x9
+BATTMNGR_STATE_ID_MAX,0xA
+BATTMNGR_STATE_ID_INVALID,0xB
+BATTMNGR_STATE_ID_NA,0xC
+}

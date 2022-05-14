@@ -1,0 +1,596 @@
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+678309a8-82df-305d-0807-487c8cbf61ce 10.4 // SRC=com.c MJ= MN=
+#typev com_c1731 60 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=com_cleanup
+{
+}
+#typev com_c1698 59 "%0invalid file handle" //   FLAGS=ERROR FUNC=com_cleanup
+{
+}
+#typev com_c1692 58 "%0invalid parameter" //   FLAGS=ERROR FUNC=com_cleanup
+{
+}
+#typev com_c1688 57 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=com_cleanup
+{
+udx, ItemPtr -- 10
+file, ItemPtr -- 11
+}
+#typev com_c1771 65 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=com_close
+{
+}
+#typev com_c1757 63 "%0invalid file handle" //   FLAGS=ERROR FUNC=com_close
+{
+}
+#typev com_c1764 64 "%0total byte counts during open session: RX = %10!d!, TX = %11!d!, overruns = %12!d!" //   FLAGS=INFO FUNC=com_close
+{
+dev_ctxt->statistics.ReceivedCount, ItemLong -- 10
+dev_ctxt->statistics.TransmittedCount, ItemLong -- 11
+dev_ctxt->statistics.SerialOverrunErrorCount, ItemLong -- 12
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c1749 62 "%0invalid parameter" //   FLAGS=ERROR FUNC=com_close
+{
+}
+#typev com_c1745 61 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=com_close
+{
+udx, ItemPtr -- 10
+file, ItemPtr -- 11
+}
+#typev com_c1824 69 "%0-%!FUNC!(0x%10!X!)" //   FLAGS=FUNCTION FUNC=com_deinit
+{
+status, ItemLong -- 10
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c1807 68 "%0open file detected" //   FLAGS=WARNING FUNC=com_deinit
+{
+}
+#typev com_c1790 67 "%0invalid parameter" //   FLAGS=ERROR FUNC=com_deinit
+{
+}
+#typev com_c1786 66 "%0+%!FUNC!(0x%10!p!)" //   FLAGS=FUNCTION FUNC=com_deinit
+{
+udx, ItemPtr -- 10
+}
+#typev com_c1992 78 "%0-%!FUNC!(0x%10!X!)" //   FLAGS=FUNCTION FUNC=com_init
+{
+status, ItemLong -- 10
+}
+#typev com_c1985 77 "%0DalUart_Init() failed" //   FLAGS=ERROR FUNC=com_init
+{
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c1964 76 "%0UartClass property not found" //   FLAGS=ERROR FUNC=com_init
+{
+}
+#typev com_c1888 75 "%0error creating event spinlock" //   FLAGS=ERROR FUNC=com_init
+{
+}
+#typev com_c1879 74 "%0error creating tx spinlock" //   FLAGS=ERROR FUNC=com_init
+{
+}
+#typev com_c1870 73 "%0error creating rx spinlock" //   FLAGS=ERROR FUNC=com_init
+{
+}
+#typev com_c1861 72 "%0error creating open waitlock" //   FLAGS=ERROR FUNC=com_init
+{
+}
+#typev com_c1848 71 "%0error allocating device context" //   FLAGS=ERROR FUNC=com_init
+{
+}
+#typev com_c1842 70 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=com_init
+{
+udx, ItemPtr -- 10
+init_properties, ItemPtr -- 11
+}
+#typev com_c2298 137 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=com_ioctl
+{
+}
+#typev com_c2291 136 "%0completing ioctl request 0x%10!p! (info = 0x%11!08X!, status = 0x%12!08X!)" //   FLAGS=INFO FUNC=com_ioctl
+{
+request, ItemPtr -- 10
+actual_out, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev com_c2043 82 "%0invalid file handle" //   FLAGS=ERROR FUNC=com_ioctl
+{
+}
+#typev com_c2278 134 "%0IOCTL_SERIAL_POWER_ON" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2283 135 "%0unknown IOCTL code (0x%10!08X!)" //   FLAGS=ERROR FUNC=com_ioctl
+{
+code, ItemLong -- 10
+}
+#typev com_c2273 133 "%0IOCTL_SERIAL_POWER_025" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2259 131 "%0IOCTL_SERIAL_APPLY_DEFAULT_CONFIGURATION" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c2268 132 "%0IOCTL_SERIAL_POWER_OFF" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2255 130 "%0IOCTL_SERIAL_SET_FIFO_CONTROL" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c2252 28 "%0modem_control = 0x%10!08X!" //   FLAGS=INFO FUNC=com_ioctl
+{
+*modem_control, ItemLong -- 10
+}
+#typev com_c2250 129 "%0IOCTL_SERIAL_SET_MODEM_CONTROL" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2244 128 "%0IOCTL_SERIAL_GET_MODEM_CONTROL" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2240 127 "%0IOCTL_SERIAL_CLEAR_STATS" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2234 126 "%0IOCTL_SERIAL_GET_STATS" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2230 125 "%0IOCTL_SERIAL_SET_COMMCONFIG" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2226 124 "%0IOCTL_SERIAL_GET_COMMCONFIG" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2219 123 "%0IOCTL_SERIAL_CONFIG_SIZE" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2215 122 "%0IOCTL_SERIAL_LSRMST_INSERT" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2209 121 "%0IOCTL_SERIAL_GET_DTRRTS" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2203 120 "%0IOCTL_SERIAL_GET_PROPERTIES" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2199 119 "%0IOCTL_SERIAL_XOFF_COUNTER" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2193 118 "%0IOCTL_SERIAL_GET_COMMSTATUS" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2187 117 "%0IOCTL_SERIAL_GET_MODEMSTATUS" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2182 116 "%0IOCTL_SERIAL_SET_HANDFLOW" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2176 115 "%0IOCTL_SERIAL_GET_HANDFLOW" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2172 114 "%0XoffChar  = %10!d!" //   FLAGS=INFO FUNC=com_ioctl
+{
+((SERIAL_CHARS *)io_buf)->XoffChar, ItemLong -- 10
+}
+#typev com_c2171 113 "%0XonChar   = %10!d!" //   FLAGS=INFO FUNC=com_ioctl
+{
+((SERIAL_CHARS *)io_buf)->XonChar, ItemLong -- 10
+}
+#typev com_c2170 112 "%0EventChar = %10!d!" //   FLAGS=INFO FUNC=com_ioctl
+{
+((SERIAL_CHARS *)io_buf)->EventChar, ItemLong -- 10
+}
+#typev com_c2169 111 "%0BreakChar = %10!d!" //   FLAGS=INFO FUNC=com_ioctl
+{
+((SERIAL_CHARS *)io_buf)->BreakChar, ItemLong -- 10
+}
+#typev com_c2168 110 "%0ErrorChar = %10!d!" //   FLAGS=INFO FUNC=com_ioctl
+{
+((SERIAL_CHARS *)io_buf)->ErrorChar, ItemLong -- 10
+}
+#typev com_c2167 109 "%0EofChar   = %10!d!" //   FLAGS=INFO FUNC=com_ioctl
+{
+((SERIAL_CHARS *)io_buf)->EofChar, ItemLong -- 10
+}
+#typev com_c2165 108 "%0IOCTL_SERIAL_SET_CHARS" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2159 107 "%0IOCTL_SERIAL_GET_CHARS" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2153 106 "%0IOCTL_SERIAL_GET_LINE_CONTROL" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2147 105 "%0IOCTL_SERIAL_GET_BAUD_RATE" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2142 104 "%0IOCTL_SERIAL_PURGE" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2137 103 "%0IOCTL_SERIAL_WAIT_ON_MASK" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2134 30 "%0handle_ioctl_set_wait_mask: mask changed while wait was pending" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2134 29 "%0mask = 0x%10!08X!" //   FLAGS=INFO FUNC=com_ioctl
+{
+*new_mask, ItemLong -- 10
+}
+#typev com_c2132 102 "%0IOCTL_SERIAL_SET_WAIT_MASK" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2126 101 "%0IOCTL_SERIAL_GET_WAIT_MASK" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2122 100 "%0IOCTL_SERIAL_SET_XON" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2118 99 "%0IOCTL_SERIAL_SET_XOFF" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c2114 98 "%0IOCTL_SERIAL_CLR_RTS" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c2110 97 "%0IOCTL_SERIAL_SET_RTS" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2106 96 "%0IOCTL_SERIAL_RESET_DEVICE" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2102 95 "%0IOCTL_SERIAL_CLR_DTR" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2098 94 "%0IOCTL_SERIAL_SET_DTR" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2092 93 "%0IOCTL_SERIAL_GET_TIMEOUTS" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2083 92 "%0timeouts = (%10!d!,%11!d!,%12!d!,%13!d!,%14!d!)" //   FLAGS=INFO FUNC=com_ioctl
+{
+((SERIAL_TIMEOUTS *)io_buf)->ReadIntervalTimeout, ItemLong -- 10
+((SERIAL_TIMEOUTS *)io_buf)->ReadTotalTimeoutMultiplier, ItemLong -- 11
+((SERIAL_TIMEOUTS *)io_buf)->ReadTotalTimeoutConstant, ItemLong -- 12
+((SERIAL_TIMEOUTS *)io_buf)->WriteTotalTimeoutMultiplier, ItemLong -- 13
+((SERIAL_TIMEOUTS *)io_buf)->WriteTotalTimeoutConstant, ItemLong -- 14
+}
+#typev com_c2081 91 "%0IOCTL_SERIAL_SET_TIMEOUTS" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2077 90 "%0IOCTL_SERIAL_IMMEDIATE_CHAR" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c2072 89 "%0IOCTL_SERIAL_SET_BREAK_OFF" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c2067 88 "%0IOCTL_SERIAL_SET_BREAK_ON" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2062 87 "%0IOCTL_SERIAL_SET_LINE_CONTROL" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2059 86 "%0OutSize = %10!d!" //   FLAGS=INFO FUNC=com_ioctl
+{
+((SERIAL_QUEUE_SIZE *)io_buf)->OutSize, ItemLong -- 10
+}
+#typev com_c2058 85 "%0InSize  = %10!d!" //   FLAGS=INFO FUNC=com_ioctl
+{
+((SERIAL_QUEUE_SIZE *)io_buf)->InSize, ItemLong -- 10
+}
+#typev com_c2056 84 "%0IOCTL_SERIAL_SET_QUEUE_SIZE" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2051 83 "%0IOCTL_SERIAL_SET_BAUD_RATE" //   FLAGS=INFO FUNC=com_ioctl
+{
+}
+#typev com_c2036 81 "%0invalid parameter" //   FLAGS=ERROR FUNC=com_ioctl
+{
+}
+#typev com_c2030 80 "%0file = 0x%10!p!, code = 0x%11!08X!, io_buf = 0x%12!p!, len_in = %13!d!, len_out = %14!d!" //   FLAGS=INFO FUNC=com_ioctl
+{
+file, ItemPtr -- 10
+code, ItemLong -- 11
+io_buf, ItemPtr -- 12
+len_in, ItemLong -- 13
+len_out, ItemLong -- 14
+}
+#typev com_c2029 79 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=com_ioctl
+{
+udx, ItemPtr -- 10
+request, ItemPtr -- 11
+}
+#typev com_c2404 144 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=com_open
+{
+}
+#typev com_c2400 143 "%0completing create request 0x%10!p! (info = 0x%11!08X!, status = 0x%12!08X!)" //   FLAGS=INFO FUNC=com_open
+{
+request, ItemPtr -- 10
+0, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev com_c2390 142 "%0DalUart_Open() failed" //   FLAGS=ERROR FUNC=com_open
+{
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c2338 141 "%0ERROR: only one open handle is allowed" //   FLAGS=ERROR FUNC=com_open
+{
+}
+#typev com_c2331 140 "%0invalid file handle" //   FLAGS=ERROR FUNC=com_open
+{
+}
+#typev com_c2322 139 "%0invalid parameter" //   FLAGS=ERROR FUNC=com_open
+{
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c2317 138 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=com_open
+{
+udx, ItemPtr -- 10
+request, ItemPtr -- 11
+}
+#typev com_c2469 149 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=com_read
+{
+}
+#typev com_c2430 147 "%0invalid parameter" //   FLAGS=ERROR FUNC=com_read
+{
+}
+#typev com_c2437 148 "%0invalid file handle" //   FLAGS=ERROR FUNC=com_read
+{
+}
+#typev com_c2426 146 "%0file = 0x%10!p!, output_buffer = 0x%11!p!, count = %12!d!" //   FLAGS=INFO FUNC=com_read
+{
+file, ItemPtr -- 10
+output_buffer, ItemPtr -- 11
+count, ItemLong -- 12
+}
+#typev com_c2425 145 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=com_read
+{
+udx, ItemPtr -- 10
+request, ItemPtr -- 11
+}
+#typev com_c2546 155 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=com_write
+{
+}
+#typev com_c2497 48 "%0completing write request 0x%10!p! (info = 0x%11!08X!, status = 0x%12!08X!)" //   FLAGS=INFO FUNC=com_write
+{
+request, ItemPtr -- 10
+bytes_written, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev com_c2496 152 "%0invalid parameter" //   FLAGS=ERROR FUNC=com_write
+{
+}
+#typev com_c2503 153 "%0invalid file handle" //   FLAGS=ERROR FUNC=com_write
+{
+}
+#typev com_c2510 154 "%0cannot write to port when transmitting break" //   FLAGS=ERROR FUNC=com_write
+{
+}
+#typev com_c2491 151 "%0file = 0x%10!p!, input_buffer = 0x%11!p!, count = %12!d!" //   FLAGS=INFO FUNC=com_write
+{
+file, ItemPtr -- 10
+input_buffer, ItemPtr -- 11
+count, ItemLong -- 12
+}
+#typev com_c2490 150 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=com_write
+{
+udx, ItemPtr -- 10
+request, ItemPtr -- 11
+}
+#typev com_c180 10 "%0completing ioctl request 0x%10!p! (info = 0x%11!08X!, status = 0x%12!08X!)" //   FLAGS=INFO FUNC=complete_wait_on_mask
+{
+request, ItemPtr -- 10
+actual_out, ItemLong -- 11
+status, ItemLong -- 12
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c231 12 "%0MmMapIoSpaceEx() failed" //   FLAGS=ERROR FUNC=configure_crci_muxes
+{
+}
+#typev com_c227 11 "%0MmMapIoSpaceEx() failed" //   FLAGS=ERROR FUNC=configure_crci_muxes
+{
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c292 13 "%0MmMapIoSpaceEx() failed" //   FLAGS=ERROR FUNC=configure_fpga
+{
+}
+#typev com_c455 18 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=event_service_interrupt
+{
+}
+#typev com_c450 17 "%0event detected while wait was pending" //   FLAGS=INFO FUNC=event_service_interrupt
+{
+}
+#typev com_c426 16 "%0device not open" //   FLAGS=ERROR FUNC=event_service_interrupt
+{
+}
+#typev com_c422 15 "%0dal_events = 0x%10!08X! (%11!s!), win_evts = 0x%12!08X!" //   FLAGS=INFO FUNC=event_service_interrupt
+{
+dal_events, ItemLong -- 10
+str, ItemString -- 11
+win_evts, ItemLong -- 12
+}
+#typev com_c406 14 "%0+%!FUNC!(0x%10!p!, 0x%11!08X!)" //   FLAGS=FUNCTION FUNC=event_service_interrupt
+{
+context, ItemPtr -- 10
+dal_events, ItemLong -- 11
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c574 19 "%0purge flags = 0x%10!08X!" //   FLAGS=INFO FUNC=handle_ioctl_purge
+{
+*flags, ItemLong -- 10
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c641 20 "%0baud rate = %10!d!" //   FLAGS=INFO FUNC=handle_ioctl_set_baud_rate
+{
+baud_rate->BaudRate, ItemLong -- 10
+}
+#typev com_c675 24 "%0XoffLimit        = 0x%10!X!" //   FLAGS=INFO FUNC=handle_ioctl_set_handflow
+{
+handflow->XoffLimit, ItemLong -- 10
+}
+#typev com_c674 23 "%0XonLimit         = 0x%10!X!" //   FLAGS=INFO FUNC=handle_ioctl_set_handflow
+{
+handflow->XonLimit, ItemLong -- 10
+}
+#typev com_c673 22 "%0FlowReplace      = 0x%10!X!" //   FLAGS=INFO FUNC=handle_ioctl_set_handflow
+{
+handflow->FlowReplace, ItemLong -- 10
+}
+#typev com_c672 21 "%0ControlHandShake = 0x%10!X!" //   FLAGS=INFO FUNC=handle_ioctl_set_handflow
+{
+handflow->ControlHandShake, ItemLong -- 10
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c727 27 "%0word length = %10!d!" //   FLAGS=INFO FUNC=handle_ioctl_set_line_control
+{
+line_control->WordLength, ItemLong -- 10
+}
+#typev com_c726 26 "%0parity      = %10!d!" //   FLAGS=INFO FUNC=handle_ioctl_set_line_control
+{
+line_control->Parity, ItemLong -- 10
+}
+#typev com_c725 25 "%0stop bits   = %10!d!" //   FLAGS=INFO FUNC=handle_ioctl_set_line_control
+{
+line_control->StopBits, ItemLong -- 10
+}
+#typev com_c895 34 "%0WdfRequestForwardToIoQueue() failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=handle_ioctl_wait_on_mask
+{
+status, ItemLong -- 10
+}
+#typev com_c879 33 "%0handle_ioctl_wait_on_mask: event already set" //   FLAGS=INFO FUNC=handle_ioctl_wait_on_mask
+{
+}
+#typev com_c873 32 "%0handle_ioctl_wait_on_mask: nothing to wait on" //   FLAGS=ERROR FUNC=handle_ioctl_wait_on_mask
+{
+}
+#typev com_c867 31 "%0handle_ioctl_wait_on_mask: previous wait in progress" //   FLAGS=ERROR FUNC=handle_ioctl_wait_on_mask
+{
+}
+#typev com_c1027 37 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=rx_cancel_routine
+{
+}
+#typev com_c998 36 "%0+%!FUNC!(0x%10!p!)" //   FLAGS=FUNCTION FUNC=rx_cancel_routine
+{
+Request, ItemPtr -- 10
+}
+#typev com_c1045 38 "%0completing read request 0x%10!p! (info = 0x%11!08X!, status = 0x%12!08X!)" //   FLAGS=INFO FUNC=rx_complete
+{
+request, ItemPtr -- 10
+bytes_read, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev com_c1068 35 "%0read timeout is %10!d! milliseconds" //   FLAGS=INFO FUNC=rx_irp_pend
+{
+timeout, ItemLong -- 10
+}
+#typev com_c1164 40 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=rx_service_interrupt
+{
+}
+#typev com_c1162 18 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=rx_service_interrupt
+{
+}
+#typev com_c1162 17 "%0event detected while wait was pending" //   FLAGS=INFO FUNC=rx_service_interrupt
+{
+}
+#typev com_c1162 16 "%0device not open" //   FLAGS=ERROR FUNC=rx_service_interrupt
+{
+}
+#typev com_c1162 15 "%0dal_events = 0x%10!08X! (%11!s!), win_evts = 0x%12!08X!" //   FLAGS=INFO FUNC=rx_service_interrupt
+{
+dal_events, ItemLong -- 10
+str, ItemString -- 11
+win_evts, ItemLong -- 12
+}
+#typev com_c1162 14 "%0+%!FUNC!(0x%10!p!, 0x%11!08X!)" //   FLAGS=FUNCTION FUNC=rx_service_interrupt
+{
+context, ItemPtr -- 10
+dal_events, ItemLong -- 11
+}
+#typev com_c1137 39 "%0+%!FUNC!(0x%10!p!)" //   FLAGS=FUNCTION FUNC=rx_service_interrupt
+{
+dev_ctxt, ItemPtr -- 10
+}
+#typev com_c1213 43 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=rx_timeout_dpc
+{
+}
+#typev com_c1187 42 "%0+%!FUNC!(0x%10!p!, 0x%11!p!, 0x%12!p!, 0x%13!p!)" //   FLAGS=FUNCTION FUNC=rx_timeout_dpc
+{
+Dpc, ItemPtr -- 10
+DeferredContext, ItemPtr -- 11
+SystemArgument1, ItemPtr -- 12
+SystemArgument2, ItemPtr -- 13
+}
+#typev com_c1183 41 "%0rx_timeout_dpc: NULL dev_ctxt handle" //   FLAGS=ERROR FUNC=rx_timeout_dpc
+{
+}
+#typev com_c1239 44 "%0%10!d! byte(s) copied to user buffer (%11!d! total)" //   FLAGS=INFO FUNC=rx_transfer
+{
+bytes_read, ItemLong -- 10
+dev_ctxt->rx_bytes_read, ItemLong -- 11
+}
+#typev com_c1339 47 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=tx_cancel_routine
+{
+}
+#typev com_c1310 46 "%0+%!FUNC!(0x%10!p!)" //   FLAGS=FUNCTION FUNC=tx_cancel_routine
+{
+Request, ItemPtr -- 10
+}
+#typev com_c1354 48 "%0completing write request 0x%10!p! (info = 0x%11!08X!, status = 0x%12!08X!)" //   FLAGS=INFO FUNC=tx_complete
+{
+request, ItemPtr -- 10
+bytes_written, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev com_c1376 45 "%0write timeout is %10!d! milliseconds" //   FLAGS=INFO FUNC=tx_irp_pend
+{
+timeout, ItemLong -- 10
+}
+#typev com_c1485 50 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=tx_service_interrupt
+{
+}
+#typev com_c1445 49 "%0+%!FUNC!(0x%10!p!)" //   FLAGS=FUNCTION FUNC=tx_service_interrupt
+{
+dev_ctxt, ItemPtr -- 10
+}
+#typev com_c1534 53 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=tx_timeout_dpc
+{
+}
+#typev com_c1508 52 "%0+%!FUNC!(0x%10!p!, 0x%11!p!, 0x%12!p!, 0x%13!p!)" //   FLAGS=FUNCTION FUNC=tx_timeout_dpc
+{
+Dpc, ItemPtr -- 10
+DeferredContext, ItemPtr -- 11
+SystemArgument1, ItemPtr -- 12
+SystemArgument2, ItemPtr -- 13
+}
+#typev com_c1504 51 "%0tx_timeout_dpc: NULL dev_ctxt handle" //   FLAGS=ERROR FUNC=tx_timeout_dpc
+{
+}
+#typev com_c1591 55 "%0timeout waiting for TXEMT" //   FLAGS=ERROR FUNC=tx_transfer_pause
+{
+}
+// PDB:  qcuart850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev com_c1574 54 "%0timeout waiting for TXLEV" //   FLAGS=ERROR FUNC=tx_transfer_pause
+{
+}
+#typev com_c1668 56 "%0%10!d! byte(s) copied from user buffer (%11!d! total)" //   FLAGS=INFO FUNC=tx_transfer_start
+{
+bytes_written, ItemLong -- 10
+dev_ctxt->tx_bytes_written, ItemLong -- 11
+}

@@ -1,0 +1,71 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+7777cadb-876a-38dc-d0cd-ffeb21fbef6d MBB // SRC=MPAttAllAccess.c MJ= MN=
+#typev MPAttAllAccess_c172 15 "%0<%10!s!|sub#%11!d!> %!FUNC!: MSISDN not available and Plan purchased. Toggling LPM." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_ProcessCallEndReason
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPAttAllAccess_c167 12 "%0 %!FUNC!: currentState=%10!d! :: errorCode=0x%11!x!, nextState=%12!d! [State:%13!d!-PlanNotPurchased,%14!d!-PlanPurchased,%15!d!-PlanInUse]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_ProcessCallEndReason
+{
+currentState, ItemLong -- 10
+errorCode, ItemLong -- 11
+nextState, ItemLong -- 12
+AttAllAccessStatePlanNotPurchased, ItemLong -- 13
+AttAllAccessStatePlanPurchased, ItemLong -- 14
+AttAllAccessStatePlanInUse, ItemLong -- 15
+}
+#typev MPAttAllAccess_c163 14 "%0<%10!s!|sub#%11!d!> %!FUNC!: errorCode=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_ProcessCallEndReason
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+errorCode, ItemLong -- 12
+}
+#typev MPAttAllAccess_c148 13 "%0<%10!s!|sub#%11!d!> %!FUNC!: AttAllAccessState=0x%12!x!, callEndType=0x%13!x!, callEndReason=0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_ProcessCallEndReason
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAdapter->pSubPhoneInfo->AttAllAccessState, ItemLong -- 12
+callEndType, ItemLong -- 13
+callEndReason, ItemLong -- 14
+}
+#typev MPAttAllAccess_c206 23 "%0%!FUNC!: ErrorCodeSwitchApn = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_ReadFromRegistry
+{
+GlobalData.AttAllAccessContext.ErrorCodeSwitchApn, ItemLong -- 10
+}
+#typev MPAttAllAccess_c203 22 "%0%!FUNC!: ErrorCodePlanUsedExpiredUMTS = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_ReadFromRegistry
+{
+GlobalData.AttAllAccessContext.ErrorCodePlanUsedExpiredUMTS, ItemLong -- 10
+}
+#typev MPAttAllAccess_c200 21 "%0%!FUNC!: ErrorCodePlanUsedExpiredLTE = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_ReadFromRegistry
+{
+GlobalData.AttAllAccessContext.ErrorCodePlanUsedExpiredLTE, ItemLong -- 10
+}
+#typev MPAttAllAccess_c197 20 "%0%!FUNC!: ErrorCodePlanPurchasedUMTS = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_ReadFromRegistry
+{
+GlobalData.AttAllAccessContext.ErrorCodePlanPurchasedUMTS, ItemLong -- 10
+}
+#typev MPAttAllAccess_c194 19 "%0%!FUNC!: ErrorCodePlanPurchasedLTE = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_ReadFromRegistry
+{
+GlobalData.AttAllAccessContext.UseApnProfileIdx, ItemLong -- 10
+}
+#typev MPAttAllAccess_c191 18 "%0%!FUNC!: UseApnProfileIdx = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_ReadFromRegistry
+{
+GlobalData.AttAllAccessContext.UseApnProfileIdx, ItemLong -- 10
+}
+#typev MPAttAllAccess_c188 17 "%0%!FUNC!: PurchaseApnProfileIdx = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_ReadFromRegistry
+{
+GlobalData.AttAllAccessContext.PurchaseApnProfileIdx, ItemLong -- 10
+}
+#typev MPAttAllAccess_c183 16 "%0%!FUNC!: AttAllAccessEnabled = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_ReadFromRegistry
+{
+GlobalData.AttAllAccessContext.bEnabled, ItemLong -- 10
+}
+#typev MPAttAllAccess_c61 11 "%0 %!FUNC!: AttAllAccessState=0x%10!x!, current3gppProfileIndex=%11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPAAA_Update3gppProfileIndexForCurrentState
+{
+AttAllAccessState, ItemLong -- 10
+*pCurrent3gppProfileIndex, ItemLong -- 11
+}
+#typev MPAttAllAccess_c38 10 "%0 %!FUNC!: ERROR, NULL parameters." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPAAA_Update3gppProfileIndexForCurrentState
+{
+}

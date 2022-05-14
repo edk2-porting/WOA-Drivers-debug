@@ -1,0 +1,429 @@
+// PDB:  qcdx11arm32um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+52a43adf-6eb1-3331-23e3-dbd886f6bdc3 utils // SRC=dxcmdmgr.cpp MJ= MN=
+#typev dxcmdmgr_cpp2650 20 "%0Device:0x%10!p!, AddToBoundList VidMem 0x%11!p! GpuVirtAddr=0x%12!I64x! refCbId=%13!I64d! UsageFlags=0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle, ItemPtr -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+m_cbId, ItemLongLong -- 13
+pMemoryHandle->UsageFlags(m_type. m_cbId), ItemLong -- 14
+}
+#typev dxcmdmgr_cpp2620 19 "%0Device:0x%10!p! AddToBoundList Flushing CPU Cache hAllocation=0x%11!08x! handleFlags=0x%12!08x! Size = %13!I64d! CpuAddr = %14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pInfo->hAllocation, ItemLong -- 11
+handleFlags, ItemLong -- 12
+pInfo->allocationSize, ItemLongLong -- 13
+pInfo->pCpuAddr, ItemPtr -- 14
+}
+#typev dxcmdmgr_cpp2607 11 "%0Device:0x%10!p! UpdateTileModeSwitchList TileModeSwitch hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! hDxKmHandle=0x%13!I64x! tileModeSwitchCount=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle->AllocInfo()->hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+pMemoryHandle->AllocInfo()->hDxKmHandle, ItemLongLongX -- 13
+m_tileModeSwitchData.tileModeSwitchCount, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp2589 12 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp2554 18 "%0Device:0x%10!p!, AddToBoundList Alloc is in UnboundList(node=0x%11!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle->AllocInfo()->residencyListItem[DxUnboundList], ItemPtr -- 11
+}
+#typev dxcmdmgr_cpp2540 17 "%0Device:0x%10!p!, AddToBoundList Added alloc to PendingList" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp2169 13 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp2293 15 "%0Device=0x%10!p!: FLUSH: Skipping Flush!! (forceFlush=%11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+m_pDevice->Settings()->forceFlush, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp2081 14 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp333 10 "%0Device=0x%10!p!, Preemption disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Init
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp2490 16 "%0Device:0x%10!p!, MoveAllocsToUnboundList VidMem=0x%11!p! GpuVirtAddr=0x%12!p! AllocInfo=0x%13!p! RefCount(%14!d!), unboundRefNode=0x%15!p! residentRefNode=0x%16!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxCmdMgr::PerformPendingResidencyListOperations
+{
+this, ItemPtr -- 10
+pVidMem, ItemPtr -- 11
+reinterpret_cast<VOID*>(pVidMemAllocInfo->gpuVirtualAddress), ItemPtr -- 12
+pVidMemAllocInfo, ItemPtr -- 13
+pVidMem->GetRefCount(), ItemLong -- 14
+unboundRefNode, ItemPtr -- 15
+residentRefNode, ItemPtr -- 16
+}
+#typev dxcmdmgr_cpp3672 21 "%0Device:0x%10!p! NumPrimaries submitted=0x%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SubmitCommands
+{
+m_pDevice, ItemPtr -- 10
+m_numPrimaries, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp4407 23 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp4379 22 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxcmdmgr_cpp2650 20 "%0Device:0x%10!p!, AddToBoundList VidMem 0x%11!p! GpuVirtAddr=0x%12!I64x! refCbId=%13!I64d! UsageFlags=0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle, ItemPtr -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+m_cbId, ItemLongLong -- 13
+pMemoryHandle->UsageFlags(m_type. m_cbId), ItemLong -- 14
+}
+#typev dxcmdmgr_cpp2620 19 "%0Device:0x%10!p! AddToBoundList Flushing CPU Cache hAllocation=0x%11!08x! handleFlags=0x%12!08x! Size = %13!I64d! CpuAddr = %14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pInfo->hAllocation, ItemLong -- 11
+handleFlags, ItemLong -- 12
+pInfo->allocationSize, ItemLongLong -- 13
+pInfo->pCpuAddr, ItemPtr -- 14
+}
+#typev dxcmdmgr_cpp2607 11 "%0Device:0x%10!p! UpdateTileModeSwitchList TileModeSwitch hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! hDxKmHandle=0x%13!I64x! tileModeSwitchCount=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle->AllocInfo()->hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+pMemoryHandle->AllocInfo()->hDxKmHandle, ItemLongLongX -- 13
+m_tileModeSwitchData.tileModeSwitchCount, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp2589 12 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp2554 18 "%0Device:0x%10!p!, AddToBoundList Alloc is in UnboundList(node=0x%11!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle->AllocInfo()->residencyListItem[DxUnboundList], ItemPtr -- 11
+}
+#typev dxcmdmgr_cpp2540 17 "%0Device:0x%10!p!, AddToBoundList Added alloc to PendingList" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp2293 15 "%0Device=0x%10!p!: FLUSH: Skipping Flush!! (forceFlush=%11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+m_pDevice->Settings()->forceFlush, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp2169 13 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp2081 14 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp333 10 "%0Device=0x%10!p!, Preemption disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Init
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp2397 16 "%0Device:0x%10!p!, MoveAllocsToUnboundList VidMem=0x%11!p! GpuVirtAddr=0x%12!p! AllocInfo=0x%13!p! RefCount(%14!d!), unboundRefNode=0x%15!p! residentRefNode=0x%16!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxCmdMgr::MoveAllocsToUnboundList
+{
+this, ItemPtr -- 10
+pVidMem, ItemPtr -- 11
+reinterpret_cast<VOID*>(pVidMemAllocInfo->gpuVirtualAddress), ItemPtr -- 12
+pVidMemAllocInfo, ItemPtr -- 13
+pVidMem->GetRefCount(), ItemLong -- 14
+unboundRefNode, ItemPtr -- 15
+residentRefNode, ItemPtr -- 16
+}
+// PDB:  qcdx11arm64um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxcmdmgr_cpp3672 21 "%0Device:0x%10!p! NumPrimaries submitted=0x%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SubmitCommands
+{
+m_pDevice, ItemPtr -- 10
+m_numPrimaries, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp4407 23 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp4379 22 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxcmdmgr_cpp1819 13 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddIB1Handles
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp2650 20 "%0Device:0x%10!p!, AddToBoundList VidMem 0x%11!p! GpuVirtAddr=0x%12!I64x! refCbId=%13!I64d! UsageFlags=0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle, ItemPtr -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+m_cbId, ItemLongLong -- 13
+pMemoryHandle->UsageFlags(m_type. m_cbId), ItemLong -- 14
+}
+#typev dxcmdmgr_cpp2620 19 "%0Device:0x%10!p! AddToBoundList Flushing CPU Cache hAllocation=0x%11!08x! handleFlags=0x%12!08x! Size = %13!I64d! CpuAddr = %14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pInfo->hAllocation, ItemLong -- 11
+handleFlags, ItemLong -- 12
+pInfo->allocationSize, ItemLongLong -- 13
+pInfo->pCpuAddr, ItemPtr -- 14
+}
+#typev dxcmdmgr_cpp2607 11 "%0Device:0x%10!p! UpdateTileModeSwitchList TileModeSwitch hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! hDxKmHandle=0x%13!I64x! tileModeSwitchCount=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle->AllocInfo()->hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+pMemoryHandle->AllocInfo()->hDxKmHandle, ItemLongLongX -- 13
+m_tileModeSwitchData.tileModeSwitchCount, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp2589 12 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp2554 18 "%0Device:0x%10!p!, AddToBoundList Alloc is in UnboundList(node=0x%11!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle->AllocInfo()->residencyListItem[DxUnboundList], ItemPtr -- 11
+}
+#typev dxcmdmgr_cpp2540 17 "%0Device:0x%10!p!, AddToBoundList Added alloc to PendingList" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp2293 15 "%0Device=0x%10!p!: FLUSH: Skipping Flush!! (forceFlush=%11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+m_pDevice->Settings()->forceFlush, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp2169 13 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp2081 14 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp333 10 "%0Device=0x%10!p!, Preemption disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Init
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp2397 16 "%0Device:0x%10!p!, MoveAllocsToUnboundList VidMem=0x%11!p! GpuVirtAddr=0x%12!p! AllocInfo=0x%13!p! RefCount(%14!d!), unboundRefNode=0x%15!p! residentRefNode=0x%16!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxCmdMgr::MoveAllocsToUnboundList
+{
+this, ItemPtr -- 10
+pVidMem, ItemPtr -- 11
+reinterpret_cast<VOID*>(pVidMemAllocInfo->gpuVirtualAddress), ItemPtr -- 12
+pVidMemAllocInfo, ItemPtr -- 13
+pVidMem->GetRefCount(), ItemLong -- 14
+unboundRefNode, ItemPtr -- 15
+residentRefNode, ItemPtr -- 16
+}
+// PDB:  qcdx11chpeum850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxcmdmgr_cpp3672 21 "%0Device:0x%10!p! NumPrimaries submitted=0x%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SubmitCommands
+{
+m_pDevice, ItemPtr -- 10
+m_numPrimaries, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp4407 23 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp4379 22 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp1498 11 "%0Device:0x%10!p! UpdateTileModeSwitchList TileModeSwitch hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! hDxKmHandle=0x%13!I64x! tileModeSwitchCount=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::UpdateTileModeSwitchList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle->AllocInfo()->hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+pMemoryHandle->AllocInfo()->hDxKmHandle, ItemLongLongX -- 13
+m_tileModeSwitchData.tileModeSwitchCount, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp1540 12 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::UpdateWrittenPrimaryList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+// PDB:  qcdx11x86um850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev dxcmdmgr_cpp1819 13 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddIB1Handles
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp2650 20 "%0Device:0x%10!p!, AddToBoundList VidMem 0x%11!p! GpuVirtAddr=0x%12!I64x! refCbId=%13!I64d! UsageFlags=0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle, ItemPtr -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+m_cbId, ItemLongLong -- 13
+pMemoryHandle->UsageFlags(m_type. m_cbId), ItemLong -- 14
+}
+#typev dxcmdmgr_cpp2620 19 "%0Device:0x%10!p! AddToBoundList Flushing CPU Cache hAllocation=0x%11!08x! handleFlags=0x%12!08x! Size = %13!I64d! CpuAddr = %14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pInfo->hAllocation, ItemLong -- 11
+handleFlags, ItemLong -- 12
+pInfo->allocationSize, ItemLongLong -- 13
+pInfo->pCpuAddr, ItemPtr -- 14
+}
+#typev dxcmdmgr_cpp2607 11 "%0Device:0x%10!p! UpdateTileModeSwitchList TileModeSwitch hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! hDxKmHandle=0x%13!I64x! tileModeSwitchCount=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle->AllocInfo()->hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+pMemoryHandle->AllocInfo()->hDxKmHandle, ItemLongLongX -- 13
+m_tileModeSwitchData.tileModeSwitchCount, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp2589 12 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp2554 18 "%0Device:0x%10!p!, AddToBoundList Alloc is in UnboundList(node=0x%11!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle->AllocInfo()->residencyListItem[DxUnboundList], ItemPtr -- 11
+}
+#typev dxcmdmgr_cpp2540 17 "%0Device:0x%10!p!, AddToBoundList Added alloc to PendingList" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp2169 13 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp2293 15 "%0Device=0x%10!p!: FLUSH: Skipping Flush!! (forceFlush=%11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+m_pDevice->Settings()->forceFlush, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp2081 14 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp333 10 "%0Device=0x%10!p!, Preemption disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Init
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp2397 16 "%0Device:0x%10!p!, MoveAllocsToUnboundList VidMem=0x%11!p! GpuVirtAddr=0x%12!p! AllocInfo=0x%13!p! RefCount(%14!d!), unboundRefNode=0x%15!p! residentRefNode=0x%16!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxCmdMgr::MoveAllocsToUnboundList
+{
+this, ItemPtr -- 10
+pVidMem, ItemPtr -- 11
+reinterpret_cast<VOID*>(pVidMemAllocInfo->gpuVirtualAddress), ItemPtr -- 12
+pVidMemAllocInfo, ItemPtr -- 13
+pVidMem->GetRefCount(), ItemLong -- 14
+unboundRefNode, ItemPtr -- 15
+residentRefNode, ItemPtr -- 16
+}
+#typev dxcmdmgr_cpp2490 16 "%0Device:0x%10!p!, MoveAllocsToUnboundList VidMem=0x%11!p! GpuVirtAddr=0x%12!p! AllocInfo=0x%13!p! RefCount(%14!d!), unboundRefNode=0x%15!p! residentRefNode=0x%16!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=core FUNC=DxCmdMgr::PerformPendingResidencyListOperations
+{
+this, ItemPtr -- 10
+pVidMem, ItemPtr -- 11
+reinterpret_cast<VOID*>(pVidMemAllocInfo->gpuVirtualAddress), ItemPtr -- 12
+pVidMemAllocInfo, ItemPtr -- 13
+pVidMem->GetRefCount(), ItemLong -- 14
+unboundRefNode, ItemPtr -- 15
+residentRefNode, ItemPtr -- 16
+}
+#typev dxcmdmgr_cpp3672 21 "%0Device:0x%10!p! NumPrimaries submitted=0x%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SubmitCommands
+{
+m_pDevice, ItemPtr -- 10
+m_numPrimaries, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp4407 23 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp4379 22 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp1498 11 "%0Device:0x%10!p! UpdateTileModeSwitchList TileModeSwitch hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! hDxKmHandle=0x%13!I64x! tileModeSwitchCount=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::UpdateTileModeSwitchList
+{
+m_pDevice, ItemPtr -- 10
+pMemoryHandle->AllocInfo()->hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+pMemoryHandle->AllocInfo()->hDxKmHandle, ItemLongLongX -- 13
+m_tileModeSwitchData.tileModeSwitchCount, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp1540 12 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::UpdateWrittenPrimaryList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}

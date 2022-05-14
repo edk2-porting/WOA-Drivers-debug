@@ -1,0 +1,56 @@
+// PDB:  qcgpi850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+0e685e04-298a-39a7-9be4-7fa70e695713 qcgpi // SRC=GpiQueue.c MJ= MN=
+#typev GpiQueue_c199 23 "%0 [%!FUNC!]Getting GPI Device interface..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GPIEvtIoDeviceControl
+{
+}
+#typev GpiQueue_c215 24 "%0 [%!FUNC!]ERROR - Unknown IOCTL Code 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GPIEvtIoDeviceControl
+{
+IoControlCode, ItemLong -- 10
+}
+#typev GpiQueue_c191 22 "%0 [%!FUNC!]Queue 0x%10!p!, Request 0x%11!p! OutputBufferLength %12!d! InputBufferLength %13!d! IoControlCode %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GPIEvtIoDeviceControl
+{
+Queue, ItemPtr -- 10
+Request, ItemPtr -- 11
+(int)OutputBufferLength, ItemLong -- 12
+(int)InputBufferLength, ItemLong -- 13
+IoControlCode, ItemLong -- 14
+}
+#typev GpiQueue_c189 21 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GPIEvtIoDeviceControl
+{
+}
+#typev GpiQueue_c147 20 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GetIOCTLBuffers
+{
+}
+#typev GpiQueue_c122 17 "%0 [%!FUNC!]*** WdfRequestRetrieveBuffer outBuffer returned buffer of invalid size : %10!d! Expected : %11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GetIOCTLBuffers
+{
+(int)OutBufferSize, ItemLong -- 10
+(int)outBufferSize, ItemLong -- 11
+}
+#typev GpiQueue_c116 16 "%0 [%!FUNC!]*** WdfRequestRetrieveBuffer outBuffer failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GetIOCTLBuffers
+{
+status, ItemLong -- 10
+}
+#typev GpiQueue_c108 15 "%0 [%!FUNC!]OutputBufferLength: %10!d!, InputBufferLength: %11!d!, outBufferSize: %12!d!, inBufferSize: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GetIOCTLBuffers
+{
+(int)OutputBufferLength, ItemLong -- 10
+(int)InputBufferLength, ItemLong -- 11
+(int)outBufferSize, ItemLong -- 12
+(int)inBufferSize, ItemLong -- 13
+}
+#typev GpiQueue_c107 14 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GetIOCTLBuffers
+{
+}
+#typev GpiQueue_c90 13 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiQueueInitialize
+{
+}
+#typev GpiQueue_c88 12 "%0 [%!FUNC!]WdfIoQueueCreate completed successfully." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiQueueInitialize
+{
+}
+#typev GpiQueue_c84 11 "%0 [%!FUNC!]ERROR - WdfIoQueueCreatec failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiQueueInitialize
+{
+status, ItemNTSTATUS -- 10
+}
+#typev GpiQueue_c63 10 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiQueueInitialize
+{
+}

@@ -1,0 +1,181 @@
+// PDB:  qcpmic850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+ca532d14-9513-340b-6d1b-01ccff7885af src // SRC=PmicIrq.c MJ= MN=
+#typev PmicIrq_c354 16 "%0%!FUNC! Invalid Parameters, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_CLEAR_ACTIVE_INTERRUPTS
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c380 18 "%0%!FUNC! Clear IRQs failed, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_CLEAR_ACTIVE_INTERRUPTS
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c368 17 "%0%!FUNC! Pmic: %10!d!, Num Periph: %11!d!, slave_id: %12!d!, peripheral_address: 0x%13!04X!, pin_mask: 0x%14!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Irq FUNC=PM_IRQ_CLEAR_ACTIVE_INTERRUPTS
+{
+pIrqClear->pmic_number, ItemLong -- 10
+pIrqClear->peripheral_number, ItemLong -- 11
+slave_id, ItemLong -- 12
+peripheral_address, ItemLong -- 13
+pin_mask, ItemLong -- 14
+}
+#typev PmicIrq_c904 37 "%0%!FUNC! Invalid Parameters, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_DEBOUNCE_RT_STATUS_READ
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c919 38 "%0%!FUNC! Get Debounced IRQ RT Status failed, pmic_number: %10!d!, peripheral_address: 0x%11!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_DEBOUNCE_RT_STATUS_READ
+{
+pIrqGetRTStatus->pmic_number, ItemLong -- 10
+pIrqGetRTStatus->peripheral_address, ItemLong -- 11
+}
+#typev PmicIrq_c930 39 "%0%!FUNC! Pmic: %10!d!, Periph: 0x%11!X!, rt_status: 0x%12!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Irq FUNC=PM_IRQ_DEBOUNCE_RT_STATUS_READ
+{
+pIrqGetRTStatus->pmic_number, ItemLong -- 10
+pIrqGetRTStatus->peripheral_address, ItemLong -- 11
+rt_status, ItemLong -- 12
+}
+#typev PmicIrq_c686 28 "%0%!FUNC! Invalid Parameters, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_DISABLE_INTERRUPT
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c703 30 "%0%!FUNC! Disable IRQ failed, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_DISABLE_INTERRUPT
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c693 29 "%0%!FUNC! Pmic: %10!d!, slave_id: %11!d!, peripheral_address: 0x%12!04X!, pin_mask: 0x%13!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Irq FUNC=PM_IRQ_DISABLE_INTERRUPT
+{
+pIrqDisable->pmic_number, ItemLong -- 10
+slave_id, ItemLong -- 11
+peripheral_address, ItemLong -- 12
+pIrqDisable->pin_mask, ItemLong -- 13
+}
+#typev PmicIrq_c273 13 "%0%!FUNC! Invalid Parameters, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_ENABLE_INTERRUPT
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c292 15 "%0%!FUNC! Enable Interrupt failed, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_ENABLE_INTERRUPT
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c280 14 "%0%!FUNC! Pmic: %10!d!, slave_id: %11!d!, peripheral_address: 0x%12!04X!, pin: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Irq FUNC=PM_IRQ_ENABLE_INTERRUPT
+{
+pIrqConfig->pmic_number, ItemLong -- 10
+slave_id, ItemLong -- 11
+peripheral_address, ItemLong -- 12
+pIrqConfig->pin, ItemLong -- 13
+}
+#typev PmicIrq_c203 10 "%0%!FUNC! Invalid Parameters, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_GET_INTERRUPT_RT_STATUS
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c217 11 "%0%!FUNC! Get IRQ RT Status failed, pmic_number: %10!d!, peripheral_address: 0x%11!04X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_GET_INTERRUPT_RT_STATUS
+{
+pIrqGetRTStatus->pmic_number, ItemLong -- 10
+pIrqGetRTStatus->peripheral_address, ItemLong -- 11
+}
+#typev PmicIrq_c228 12 "%0%!FUNC! Pmic: %10!d!, Periph: 0x%11!X!, rt_status: 0x%12!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Irq FUNC=PM_IRQ_GET_INTERRUPT_RT_STATUS
+{
+pIrqGetRTStatus->pmic_number, ItemLong -- 10
+pIrqGetRTStatus->peripheral_address, ItemLong -- 11
+rt_status, ItemLong -- 12
+}
+#typev PmicIrq_c836 34 "%0%!FUNC! Invalid Parameters, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_GET_INTERRUPT_TRIGGER_TYPE
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c858 36 "%0%!FUNC! Get IRQ Trigger type failed, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_GET_INTERRUPT_TRIGGER_TYPE
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c845 35 "%0%!FUNC! Pmic: %10!d!, Peripheral: 0x%11!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Irq FUNC=PM_IRQ_GET_INTERRUPT_TRIGGER_TYPE
+{
+pIrqTriggerTypeQuery->pmic_number, ItemLong -- 10
+pIrqTriggerTypeQuery->peripheral_address, ItemLong -- 11
+}
+#typev PmicIrq_c1050 43 "%0%!FUNC! Invalid Parameters, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_INTERRUPT_SPECIFIC_QUERY
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c1070 44 "%0%!FUNC! Query Specific IRQ failed, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_INTERRUPT_SPECIFIC_QUERY
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c1076 45 "%0%!FUNC! Pmic: %10!d!, Periph: 0x%11!X!, Pin: %12!d!, query_status: 0x%13!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Irq FUNC=PM_IRQ_INTERRUPT_SPECIFIC_QUERY
+{
+pIrqSpecificQuery->pmic_number, ItemLong -- 10
+pIrqSpecificQuery->peripheral_address, ItemLong -- 11
+pIrqSpecificQuery->pin, ItemLong -- 12
+query_status, ItemLong -- 13
+}
+#typev PmicIrq_c447 19 "%0%!FUNC! Invalid Parameters, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_MASK_INTERRUPTS
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c475 21 "%0%!FUNC! Mask IRQs failed, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_MASK_INTERRUPTS
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c461 20 "%0%!FUNC! Pmic: %10!d!, Num Periph: %11!d!, slave_id: %12!d!, peripheral_address: 0x%13!04X!, pin_mask: 0x%14!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Irq FUNC=PM_IRQ_MASK_INTERRUPTS
+{
+pIrqMask->pmic_number, ItemLong -- 10
+pIrqMask->peripheral_number, ItemLong -- 11
+slave_id, ItemLong -- 12
+peripheral_address, ItemLong -- 13
+pin_mask, ItemLong -- 14
+}
+#typev PmicIrq_c978 40 "%0%!FUNC! Invalid Parameters, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_QUERY_ENABLED_INTERRUPTS
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c997 42 "%0%!FUNC! Query Enabled IRQs failed, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_QUERY_ENABLED_INTERRUPTS
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c982 41 "%0%!FUNC! Pmic: %10!d!, Periph: 0x%11!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Irq FUNC=PM_IRQ_QUERY_ENABLED_INTERRUPTS
+{
+pGetEnabledStatusIn->pmic_number, ItemLong -- 10
+pGetEnabledStatusIn->peripheral_address, ItemLong -- 11
+}
+#typev PmicIrq_c760 31 "%0%!FUNC! Invalid Parameters, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_RECONFIGURE_INTERRUPT
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c777 33 "%0%!FUNC! Reconfigure IRQ failed, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_RECONFIGURE_INTERRUPT
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c767 32 "%0%!FUNC! Pmic: %10!d!, slave_id: %11!d!, peripheral_address: 0x%12!04X!, pin: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Irq FUNC=PM_IRQ_RECONFIGURE_INTERRUPT
+{
+pIrqReconfigure->pmic_number, ItemLong -- 10
+slave_id, ItemLong -- 11
+peripheral_address, ItemLong -- 12
+pIrqReconfigure->pin, ItemLong -- 13
+}
+#typev PmicIrq_c612 25 "%0%!FUNC! Invalid Parameters, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_TRIGGER_INTERRUPT
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c629 27 "%0%!FUNC! Trigger IRQ failed, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_TRIGGER_INTERRUPT
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c619 26 "%0%!FUNC! Pmic: %10!d!, slave_id: %11!d!, peripheral_address: 0x%12!04X!, pin: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Irq FUNC=PM_IRQ_TRIGGER_INTERRUPT
+{
+pIrqTrigger->pmic_number, ItemLong -- 10
+slave_id, ItemLong -- 11
+peripheral_address, ItemLong -- 12
+pIrqTrigger->pin, ItemLong -- 13
+}
+#typev PmicIrq_c537 22 "%0%!FUNC! Invalid Parameters, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_UNMASK_INTERRUPT
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c555 24 "%0%!FUNC! UnMask IRQ failed, Error: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Irq FUNC=PM_IRQ_UNMASK_INTERRUPT
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicIrq_c544 23 "%0%!FUNC! Pmic: %10!d!, slave_id: %11!d!, peripheral_address: 0x%12!04X!, pin: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Irq FUNC=PM_IRQ_UNMASK_INTERRUPT
+{
+pIrqUnmask->pmic_number, ItemLong -- 10
+slave_id, ItemLong -- 11
+peripheral_address, ItemLong -- 12
+pIrqUnmask->pin, ItemLong -- 13
+}

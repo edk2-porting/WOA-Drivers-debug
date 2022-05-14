@@ -1,0 +1,161 @@
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+d677d532-1f62-32e9-5e05-1e7c582cd849 PEP // SRC=PEP_Main.c MJ= MN=
+#typev PEP_Main_c820 28 "%0 [Verb] PEP_Main.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepAbandonDevice
+{
+}
+#typev PEP_Main_c816 27 "%0 [Crit] PEP_Main.c::%!FUNC! :Abandon device %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepAbandonDevice
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_Main_c804 26 "%0 [Err ] PEP_Main.c::%!FUNC!::804 :Abandon device called for unowned PEP device" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepAbandonDevice
+{
+}
+#typev PEP_Main_c796 25 "%0 [Verb] PEP_Main.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepAbandonDevice
+{
+}
+#typev PEP_Main_c607 19 "%0 [Verb] PEP_Main.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepDeviceNotify
+{
+}
+#typev PEP_Main_c597 18 "%0 [Err ] PEP_Main.c::%!FUNC!::597 :DATA_COHERENCY_EXCEPTION Notification mismatch = (0x%10!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepDeviceNotify
+{
+Notification, ItemLong -- 10
+}
+#typev PEP_Main_c566 17 "%0 [Verb] PEP_Main.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepDeviceNotify
+{
+}
+#typev PEP_Main_c754 24 "%0 [Verb] PEP_Main.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepPrepareDevice
+{
+}
+#typev PEP_Main_c744 23 "%0 [Crit] PEP_Main.c::%!FUNC! :PREPARE DEVICE Action succeeded for: %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepPrepareDevice
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_Main_c710 22 "%0 [Err ] PEP_Main.c::%!FUNC!::710 :PEP: Device is not owned by SOC PEP" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepPrepareDevice
+{
+}
+#typev PEP_Main_c691 21 "%0 [Err ] PEP_Main.c::%!FUNC!::691 :ACPI Read out timer expired. Currect timeout set to: %10!I64d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepPrepareDevice
+{
+Timeout.QuadPart, ItemLongLong -- 10
+}
+#typev PEP_Main_c648 20 "%0 [Verb] PEP_Main.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepPrepareDevice
+{
+}
+#typev PEP_Main_c1026 36 "%0 [Verb] PEP_Main.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepRegisterDevice
+{
+}
+#typev PEP_Main_c1017 35 "%0 [Crit] PEP_Main.c::%!FUNC! :REGISTER DEVICE Action succeeded for: %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterDevice
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_Main_c989 34 "%0 [Err ] PEP_Main.c::%!FUNC!::989 :Idle count mismatch : Device rejected. %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterDevice
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_Main_c969 33 "%0 [Err ] PEP_Main.c::%!FUNC!::969 :fStateSet is NULL for Device: %10!s!, Component: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterDevice
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_Main_c919 32 "%0 [Err ] PEP_Main.c::%!FUNC!::919 :Cmp count mismatch : Device rejected. %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterDevice
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_Main_c890 31 "%0 [Info] PEP_Main.c::%!FUNC! :Device: (%10!s!))" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterDevice
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_Main_c880 30 "%0 [Err ] PEP_Main.c::%!FUNC!::880 :Register device: NULL failed in InSoc" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterDevice
+{
+}
+#typev PEP_Main_c872 29 "%0 [Verb] PEP_Main.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepRegisterDevice
+{
+}
+#typev PEP_Main_c1080 40 "%0 [Verb] PEP_Main.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepUnregisterDevice
+{
+}
+#typev PEP_Main_c1076 39 "%0 [Info] PEP_Main.c::%!FUNC! :Device: (%10!s!))" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepUnregisterDevice
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_Main_c1069 38 "%0 [Err ] PEP_Main.c::%!FUNC!::1069 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepUnregisterDevice
+{
+}
+#typev PEP_Main_c1062 37 "%0 [Verb] PEP_Main.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepUnregisterDevice
+{
+}
+#typev PEP_Main_c1200 45 "%0 [Verb] PEP_Main.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepWork
+{
+}
+#typev PEP_Main_c1157 44 "%0 [Info] PEP_Main.c::%!FUNC! :component: %10!d!(PepWorkForActionType: %11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepWork
+{
+PepWorkPayload.Component, ItemLong -- 10
+PepWorkPayload.PepWorkForActionType, ItemLong -- 11
+}
+#typev PEP_Main_c1136 43 "%0 [Err ] PEP_Main.c::%!FUNC!::1136 :gPepWorkPayloadHead is NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepWork
+{
+}
+#typev PEP_Main_c1124 42 "%0 [Err ] PEP_Main.c::%!FUNC!::1124 :PPepWork is NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepWork
+{
+}
+#typev PEP_Main_c1119 41 "%0 [Verb] PEP_Main.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepWork
+{
+}
+#typev PEP_Main_c256 10 "%0 [Err ] PEP_Main.c::%!FUNC!::256 :SetSDCardInserted error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=SetSDCardInserted
+{
+}
+#typev PEP_Main_c530 16 "%0 [Err ] PEP_Main.c::%!FUNC!::530 :One of the members under KernelInfo is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RegisterPep
+{
+}
+#typev PEP_Main_c487 15 "%0 [Err ] PEP_Main.c::%!FUNC!::487 :PoFxRegisterPluginEx failed for PEP with status = (0x%10!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RegisterPep
+{
+Status, ItemLong -- 10
+}
+#typev PEP_Main_c434 14 "%0 [Err ] PEP_Main.c::%!FUNC!::434 :Construct_Acpi failed with status = (0x%10!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RegisterPep
+{
+Status, ItemLong -- 10
+}
+#typev PEP_Main_c411 13 "%0 [Err ] PEP_Main.c::%!FUNC!::411 :Processor power management failed to initialize with status = (0x%10!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RegisterPep
+{
+Status, ItemLong -- 10
+}
+#typev PEP_Main_c385 12 "%0 [Err ] PEP_Main.c::%!FUNC!::385 :InitPepDependencies failed with status = (0x%10!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RegisterPep
+{
+Status, ItemLong -- 10
+}
+#typev PEP_Main_c315 11 "%0 [Verb] PEP_Main.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=RegisterPep
+{
+}
+#typev PEP_Main_c1460 53 "%0 [Info] PEP_Main.c::%!FUNC! :gPepWorkPayloadHead NOT Exists" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RequestPEPWorker
+{
+}
+#typev PEP_Main_c1454 52 "%0 [Info] PEP_Main.c::%!FUNC! :gPepWorkPayloadHead Exists" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RequestPEPWorker
+{
+}
+#typev PEP_Main_c1440 51 "%0 [Info] PEP_Main.c::%!FUNC! :(REQUESTPERFSTATE) - requesting PO to call CB_Work(Component: %10!d! )" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RequestPEPWorker
+{
+PepWorkPayload->SavedComponent.ReqPerfState.Component, ItemLong -- 10
+}
+#typev PEP_Main_c1426 50 "%0 [Info] PEP_Main.c::%!FUNC! :(PASSIVECALLBACK) - requesting PO to call CB_Work(PASSIVECALLBACK)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RequestPEPWorker
+{
+}
+#typev PEP_Main_c1416 49 "%0 [Info] PEP_Main.c::%!FUNC! :(NOTIFYIDLESTATE) - requesting PO to call CB_Work(Component:%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RequestPEPWorker
+{
+PepWorkPayload->SavedComponent.NotifyComponentIdleState.Component, ItemLong -- 10
+}
+#typev PEP_Main_c1403 48 "%0 [Info] PEP_Main.c::%!FUNC! :(REQUESTPOWERCONTROL) - requesting PO to call CB_Work(REQUESTPOWERCONTROL)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RequestPEPWorker
+{
+}
+#typev PEP_Main_c1391 47 "%0 [Info] PEP_Main.c::%!FUNC! :(DEVICEPOWERSTATE) - requesting PO to call CB_Work(RequestState:D%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RequestPEPWorker
+{
+PepWorkPayload->SavedComponent.DevToPower.PowerState - 1, ItemLong -- 10
+}
+#typev PEP_Main_c1369 46 "%0 [Err ] PEP_Main.c::%!FUNC!::1369 :Failed to allocate the memory for PepWorkPayload!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=RequestPEPWorker
+{
+}
+#typev PEP_Main_c1623 55 "%0 [Err ] PEP_Main.c::%!FUNC!::1623 :Failed to get Device List" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=SetInitialDeviceStates
+{
+}
+#typev PEP_Main_c1528 54 "%0 [Err ] PEP_Main.c::%!FUNC!::1528 :Failed to get System default list" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=SetSysDefaultACPIConfig
+{
+}

@@ -1,0 +1,284 @@
+// PDB:  qcremoteat850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+6b4b2c7e-fb59-3ac5-a1fb-27961d1dff16 remoteat // SRC=remoteatqmi.c MJ= MN=
+#typev remoteatqmi_c549 50 "%0remoteatqmi.c::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopHandleFwdInd
+{
+}
+#typev remoteatqmi_c545 49 "%0remoteatqmi.c::%!FUNC! completing %10!s! with No handler" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopHandleFwdInd
+{
+(const char *)msg->AtcopFwdData.at_name, ItemString -- 10
+}
+#typev remoteatqmi_c540 48 "%0remoteatqmi.c::%!FUNC! forwarded %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopHandleFwdInd
+{
+(const char *)msg->AtcopFwdData.at_name, ItemString -- 10
+}
+#typev remoteatqmi_c524 47 "%0remoteatqmi.c::%!FUNC! failed to get memory %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopHandleFwdInd
+{
+status, ItemLong -- 10
+}
+#typev remoteatqmi_c513 46 "%0remoteatqmi.c::%!FUNC! Read request unmark cancel failed.  ATCOP respond with Error." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopHandleFwdInd
+{
+}
+#typev remoteatqmi_c505 45 "%0remoteatqmi.c::%!FUNC! Read request cancelled.  ATCOP respond with No Handler" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopHandleFwdInd
+{
+}
+#typev remoteatqmi_c490 44 "%0remoteatqmi.c::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopHandleFwdInd
+{
+}
+#typev remoteatqmi_c449 41 "%0remoteatqmi.c::%!FUNC! Error Copying resp to resp buff" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopParseMessage
+{
+}
+#typev remoteatqmi_c324 33 "%0remoteatqmi.c::%!FUNC! at_name is "%10!s!"" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopParseMessage
+{
+(const char *)fwdind.at_name, ItemString -- 10
+}
+#typev remoteatqmi_c344 34 "%0remoteatqmi.c::%!FUNC! Token is "%10!s!"" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopParseMessage
+{
+(const char *)nested_value, ItemString -- 10
+}
+#typev remoteatqmi_c398 37 "%0remoteatqmi.c::%!FUNC! NULL value or incorrect length for QMI AT state TLV 0x19 (CMEC4): val 0x%10!p!, len %11!Id!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopParseMessage
+{
+(NULL == nested_value ? NULL : nested_value), ItemPtr -- 10
+nested_length, ItemPtr -- 11
+}
+#typev remoteatqmi_c369 35 "%0remoteatqmi.c::%!FUNC! NULL value or incorrect length for QMI AT state TLV 0x18 (CMEC): val 0x%10!p!, len %11!Id!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopParseMessage
+{
+(NULL == nested_value ? NULL : nested_value), ItemPtr -- 10
+nested_length, ItemPtr -- 11
+}
+#typev remoteatqmi_c418 39 "%0remoteatqmi.c::%!FUNC! Ignoring state type 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopParseMessage
+{
+nested_type, ItemLong -- 10
+}
+#typev remoteatqmi_c411 38 "%0remoteatqmi.c::%!FUNC! cmec_val1: %10!d!, cmec_val2: %11!d!, cmec_val3: %12!d!, cmec_val4 %13!d!, cmec_val4_is_valid: true" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopParseMessage
+{
+fwdind.cmec_val.cmec_val1, ItemLong -- 10
+fwdind.cmec_val.cmec_val2, ItemLong -- 11
+fwdind.cmec_val.cmec_val3, ItemLong -- 12
+fwdind.cmec_val.cmec_val4, ItemLong -- 13
+}
+#typev remoteatqmi_c388 36 "%0remoteatqmi.c::%!FUNC! cmec_val1: %10!d!, cmec_val2: %11!d!, cmec_val3: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopParseMessage
+{
+fwdind.cmec_val.cmec_val1, ItemLong -- 10
+fwdind.cmec_val.cmec_val2, ItemLong -- 11
+fwdind.cmec_val.cmec_val3, ItemLong -- 12
+}
+#typev remoteatqmi_c424 40 "%0remoteatqmi.c::%!FUNC! Unknown FWD IND TLV type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopParseMessage
+{
+type, ItemLong -- 10
+}
+#typev remoteatqmi_c464 42 "%0remoteatqmi.c::%!FUNC! Ignoring AT Abort Indication message" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopParseMessage
+{
+}
+#typev remoteatqmi_c468 43 "%0remoteatqmi.c::%!FUNC! Unknown IND message ID %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopParseMessage
+{
+msgid, ItemLong -- 10
+}
+#typev remoteatqmi_c299 32 "%0remoteatqmi.c::%!FUNC! modem down returning..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopParseMessage
+{
+}
+#typev remoteatqmi_c774 64 "%0remoteatqmi.c::%!FUNC! error response incorrect length resplen=%10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendCmdFwdList
+{
+respRecvSize, ItemLong -- 10
+}
+#typev remoteatqmi_c793 65 "%0remoteatqmi.c::%!FUNC!  --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendCmdFwdList
+{
+}
+#typev remoteatqmi_c768 63 "%0remoteatqmi.c::%!FUNC! error response received err=%10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendCmdFwdList
+{
+qmiErrorCode, ItemLong -- 10
+}
+#typev remoteatqmi_c752 62 "%0remoteatqmi.c::%!FUNC! qmi_client_send_raw_msg_sync failed with error %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendCmdFwdList
+{
+qmiErr, ItemLong -- 10
+}
+#typev remoteatqmi_c688 61 "%0remoteatqmi.c::%!FUNC! Memory create failed for AtFwdResp  failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendCmdFwdList
+{
+}
+#typev remoteatqmi_c679 60 "%0remoteatqmi.c::%!FUNC! Memory create failed for AtFwdReq  failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendCmdFwdList
+{
+}
+#typev remoteatqmi_c673 59 "%0remoteatqmi.c::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendCmdFwdList
+{
+}
+#typev remoteatqmi_c652 58 "%0remoteatqmi.c::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendFwdResp
+{
+}
+#typev remoteatqmi_c636 57 "%0remoteatqmi.c::%!FUNC! error response incorrect length resplen=%10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendFwdResp
+{
+respRecvSize, ItemLong -- 10
+}
+#typev remoteatqmi_c630 56 "%0remoteatqmi.c::%!FUNC! error response received err=%10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendFwdResp
+{
+qmiErrorCode, ItemLong -- 10
+}
+#typev remoteatqmi_c615 55 "%0remoteatqmi.c::%!FUNC! qmi_client_send_raw_msg_sync failed with error %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendFwdResp
+{
+qmiErr, ItemLong -- 10
+}
+#typev remoteatqmi_c592 54 "%0remoteatqmi.c::%!FUNC! Memory create failed for AtCmdResp rsp_ptr failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendFwdResp
+{
+}
+#typev remoteatqmi_c584 53 "%0remoteatqmi.c::%!FUNC! Memory create failed for AtCmdResp msg_ptr failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendFwdResp
+{
+}
+#typev remoteatqmi_c576 52 "%0remoteatqmi.c::%!FUNC! modem is down returning...." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendFwdResp
+{
+}
+#typev remoteatqmi_c572 51 "%0remoteatqmi.c::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiAtcopSendFwdResp
+{
+}
+#typev remoteatqmi_c894 76 "%0remoteatqmi.c::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorCb
+{
+}
+#typev remoteatqmi_c891 75 "%0remoteatqmi.c::%!FUNC! Scheduled Qmi Error WorkItem" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorCb
+{
+}
+#typev remoteatqmi_c882 74 "%0remoteatqmi.c::%!FUNC! GetQmiErrorWorkItemContext error = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorCb
+{
+status, ItemLong -- 10
+}
+#typev remoteatqmi_c874 73 "%0remoteatqmi.c::%!FUNC! Work item create failed err = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorCb
+{
+status, ItemLong -- 10
+}
+#typev remoteatqmi_c860 72 "%0remoteatqmi.c::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorCb
+{
+}
+#typev remoteatqmi_c837 71 "%0remoteatqmi.c::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorWorkItem
+{
+}
+#typev remoteatqmi_c828 69 "%0remoteatqmi.c::%!FUNC! Unknown not supported QMI error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorWorkItem
+{
+}
+#typev remoteatqmi_c833 70 "%0remoteatqmi.c::%!FUNC! modem ssr not handled successfully" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorWorkItem
+{
+}
+#typev remoteatqmi_c824 85 "%0remoteatqmi.c::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorWorkItem
+{
+}
+#typev remoteatqmi_c824 84 "%0remoteatqmi.c::%!FUNC! QmiOpenClient failed after SSR with status = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorWorkItem
+{
+status, ItemLong -- 10
+}
+#typev remoteatqmi_c824 83 "%0remoteatqmi.c::%!FUNC! qmi_client_release failed err = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorWorkItem
+{
+qmiErr, ItemLong -- 10
+}
+#typev remoteatqmi_c824 82 "%0remoteatqmi.c::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorWorkItem
+{
+}
+#typev remoteatqmi_c823 68 "%0remoteatqmi.c::%!FUNC! QMI_SERVICE_ERR" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorWorkItem
+{
+}
+#typev remoteatqmi_c817 67 "%0remoteatqmi.c::%!FUNC! pQmiErrorWorkItem is empty" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorWorkItem
+{
+}
+#typev remoteatqmi_c810 66 "%0remoteatqmi.c::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiErrorWorkItem
+{
+}
+#typev remoteatqmi_c247 31 "%0remoteatqmi.c::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiIndicationCb
+{
+}
+#typev remoteatqmi_c238 29 "%0remoteatqmi.c::%!FUNC! QMI Indication buffer length is zero" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiIndicationCb
+{
+}
+#typev remoteatqmi_c244 30 "%0remoteatqmi.c::%!FUNC! Scheduled Qmi Indication WorkItem" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiIndicationCb
+{
+}
+#typev remoteatqmi_c224 28 "%0remoteatqmi.c::%!FUNC! memory allocation failed for pQMIIndBuf" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiIndicationCb
+{
+}
+#typev remoteatqmi_c210 27 "%0remoteatqmi.c::%!FUNC! GetQmiIndicationWorkItemContext error = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiIndicationCb
+{
+status, ItemLong -- 10
+}
+#typev remoteatqmi_c202 26 "%0remoteatqmi.c::%!FUNC! Work item create failed err = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiIndicationCb
+{
+status, ItemLong -- 10
+}
+#typev remoteatqmi_c188 25 "%0remoteatqmi.c::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiIndicationCb
+{
+}
+#typev remoteatqmi_c162 24 "%0remoteatqmi.c::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiIndicationWorkItem
+{
+}
+#typev remoteatqmi_c148 23 "%0remoteatqmi.c::%!FUNC! Modem down - Droppping the forwarded AT command" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiIndicationWorkItem
+{
+}
+#typev remoteatqmi_c141 22 "%0remoteatqmi.c::%!FUNC! pQmiIndicationWorkItem is empty" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiIndicationWorkItem
+{
+}
+#typev remoteatqmi_c134 21 "%0remoteatqmi.c::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiIndicationWorkItem
+{
+}
+#typev remoteatqmi_c117 20 "%0remoteatqmi.c::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenAtcopService
+{
+}
+#typev remoteatqmi_c111 19 "%0remoteatqmi.c::%!FUNC! qmi_client_register_error_cb failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenAtcopService
+{
+}
+#typev remoteatqmi_c104 18 "%0remoteatqmi.c::%!FUNC! qmi_client_init Succeeded: QmiClientHandle=%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenAtcopService
+{
+&(pDeviceContext->QmiClientHandle), ItemPtr -- 10
+}
+#typev remoteatqmi_c100 17 "%0remoteatqmi.c::%!FUNC! qmi_client_init FAILED: err=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenAtcopService
+{
+qmiErr, ItemLong -- 10
+}
+#typev remoteatqmi_c90 16 "%0remoteatqmi.c::%!FUNC! qmi_client_get_service_instance failed err=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenAtcopService
+{
+qmiErr, ItemLong -- 10
+}
+#typev remoteatqmi_c74 15 "%0remoteatqmi.c::%!FUNC! qmi_client_notifier_init timed out" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenAtcopService
+{
+}
+#typev remoteatqmi_c62 14 "%0remoteatqmi.c::%!FUNC! qmi_client_notifier_init failed err=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenAtcopService
+{
+qmiErr, ItemLong -- 10
+}
+#typev remoteatqmi_c56 13 "%0remoteatqmi.c::%!FUNC! received QMI serviceObj=%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenAtcopService
+{
+&serviceObj, ItemPtr -- 10
+}
+#typev remoteatqmi_c46 11 "%0remoteatqmi.c::%!FUNC! QCCI init completed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenAtcopService
+{
+}
+#typev remoteatqmi_c42 10 "%0remoteatqmi.c::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenAtcopService
+{
+}
+#typev remoteatqmi_c959 81 "%0remoteatqmi.c::%!FUNC! QmiAtcopSendCmdFwdList failed with status = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenClient
+{
+status, ItemLong -- 10
+}
+#typev remoteatqmi_c952 80 "%0remoteatqmi.c::%!FUNC! QmiOpenAtcopService failed with status = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenClient
+{
+status, ItemLong -- 10
+}
+#typev remoteatqmi_c1059 90 "%0remoteatqmi.c::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenConfigureWorkItem
+{
+}
+#typev remoteatqmi_c1056 89 "%0remoteatqmi.c::%!FUNC! Scheduled Qmi Open WorkItem" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenConfigureWorkItem
+{
+}
+#typev remoteatqmi_c1048 88 "%0remoteatqmi.c::%!FUNC! GetQmiOpenWorkItemContext error = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenConfigureWorkItem
+{
+status, ItemLong -- 10
+}
+#typev remoteatqmi_c1040 87 "%0remoteatqmi.c::%!FUNC! Work item create failed err = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenConfigureWorkItem
+{
+status, ItemLong -- 10
+}
+#typev remoteatqmi_c1028 86 "%0remoteatqmi.c::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenConfigureWorkItem
+{
+}
+#typev remoteatqmi_c934 79 "%0remoteatqmi.c::%!FUNC! --" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenWorkItem
+{
+}
+#typev remoteatqmi_c929 78 "%0remoteatqmi.c::%!FUNC! QmiOpenClient failed with status = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenWorkItem
+{
+status, ItemLong -- 10
+}
+#typev remoteatqmi_c914 77 "%0remoteatqmi.c::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=REMOTEAT_WPP_TRACE FUNC=RmatQmiOpenWorkItem
+{
+}

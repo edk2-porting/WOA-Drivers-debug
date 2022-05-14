@@ -1,0 +1,712 @@
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+317a805a-4033-3069-f6c4-e562a13796bb MBB // SRC=MPUIMQmi.c MJ= MN=
+#typev MPQCCI_c359 27 "%0MPQCCI_GetUIMRequestInfo: Invalid parm: pnReqLen %10!p!, pnRespLen %11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQCCI_GetRequestInfo
+{
+pnReqLen, ItemPtr -- 10
+pnRespLen, ItemPtr -- 11
+}
+#typev MPQCCI_c359 28 "%0MPQCCI_GetUIMRequestInfo: 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQCCI_GetRequestInfo
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPQCCI_c359 26 "%0MPQCCI_GetUIMRequestInfo: MsgId 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQCCI_GetRequestInfo
+{
+uMsgId, ItemLong -- 10
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPUIMQmi_c159 10 "%0ConvertBcdToAscii: ERROR, recvd NULL arguments byteSeq=%10!p!, str=%11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ConvertBcdToAscii
+{
+byteSeq, ItemPtr -- 10
+str, ItemPtr -- 11
+}
+#typev MPUIMQmi_c199 13 "%0ConvertBcdToAscii: ERROR, extracted nibble value >= 0xA and != 0xF, nibble=0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ConvertBcdToAscii
+{
+lowNibble, ItemLong -- 10
+}
+#typev MPUIMQmi_c194 12 "%0ConvertBcdToAscii:  extracted lowNibble value=0xF, terminating the string." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ConvertBcdToAscii
+{
+}
+#typev MPUIMQmi_c216 15 "%0ConvertBcdToAscii: ERROR, extracted nibble value >= 0xA and != 0xF, nibble=0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ConvertBcdToAscii
+{
+highNibble, ItemLong -- 10
+}
+#typev MPUIMQmi_c211 14 "%0ConvertBcdToAscii:  extracted highNibble value=0xF, terminating the string." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ConvertBcdToAscii
+{
+}
+#typev MPUIMQmi_c164 11 "%0ConvertBcdToAscii: ERROR, recvd insufficient str memory strLen=%10!d!, (byteLen * 2 + 1)=%11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ConvertBcdToAscii
+{
+strLen, ItemLong -- 10
+(byteLen * 2 + 1), ItemLong -- 11
+}
+#typev MPUIMQmi_c544 31 "%0<sub#%10!d!> GetSessionType: session_type=%11!d! [RegisteredNetwork=%12!d!]." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=GetSessionType
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+session_type, ItemLong -- 11
+pSubPhoneInfo->RegisteredNetwork, ItemLong -- 12
+}
+#typev MPUIMQmi_c2462 136 "%0<sub#%10!d!> %!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_CleanUimClientContext
+{
+subId, ItemLong -- 10
+}
+#typev MPUIMQmi_c1155 58 "%0<%10!s!|sub#%11!d!>MPQMI_ComposeUimReq_AuthSIM_GSM_SEC." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeUimReq_AuthSIM_GSM_SEC
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1151 57 "%0<%10!s!|sub#%11!d!> MPQMI_ComposeUimReq_AuthSIM_GSM_SEC: AuthenticateReq exceeded number of rands." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ComposeUimReq_AuthSIM_GSM_SEC
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1109 56 "%0<%10!s!|sub#%11!d!>MPQMI_ComposeUimReq_AuthSIM_RUN_GSM_ALG." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ComposeUimReq_AuthSIM_RUN_GSM_ALG
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1105 55 "%0<%10!s!|sub#%11!d!> MPQMI_ComposeUimReq_AuthSIM_RUN_GSM_ALG: AuthenticateReq exceeded number of rands." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ComposeUimReq_AuthSIM_RUN_GSM_ALG
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c2431 135 "%0<%10!s!|sub#%11!d!>MPQMI_InitUimClient: status=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitUimClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPUIMQmi_c2429 50 "%0<%10!s!|sub#%11!d!>MPQMI_SendUimEventRegReq." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitUimClient
+{
+pAdapter->PortName, ItemString -- 10
+pClient->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPUIMQmi_c2429 49 "%0<%10!s!|sub#%11!d!>MPQMI_SendUimEventRegReq: request buffer is null." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitUimClient
+{
+pAdapter->PortName, ItemString -- 10
+pClient->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c2429 48 "%0<%10!s!|sub#%11!d!>MPQMI_SendUimEventRegReq: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitUimClient
+{
+pAdapter->PortName, ItemString -- 10
+pClient->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c2429 47 "%0<%10!s!|sub#%11!d!>MPQMI_SendUimEventRegReq ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitUimClient
+{
+pAdapter->PortName, ItemString -- 10
+pClient->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c2420 134 "%0<%10!s!|sub#%11!d!>MPQMI_InitUimClient: MPQCCI_InitClientFromServiceObj FAILED." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitUimClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c2409 133 "%0<%10!s!|sub#%11!d!> %!FUNC!: WdfWaitLockCreate FAILED, status=0x%12!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitUimClient
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPUIMQmi_c2389 132 "%0<%10!s!|sub#%11!d!> %!FUNC!: ExAllocatePoolWithTag FAILED" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_InitUimClient
+{
+pAdapter->PortName, ItemString -- 10
+subscriptionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c2380 131 "%0<sub#%10!d!> %!FUNC!:: HALTEX in progress." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_InitUimClient
+{
+subscriptionId, ItemLong -- 10
+}
+#typev MPUIMQmi_c503 30 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessInboundQUIMIndication." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c492 46 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimStatusChangeInd." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c492 45 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimStatusChangeInd: ERROR, MPQCCI_DecodeIndication returned unsuccessfule status!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c492 44 "%0<%10!s!|sub#%11!d!>%!FUNC!: ERROR, allocate pIndStruct failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c492 43 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimStatusChangeInd." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c486 29 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessInboundQUIMIndication: msgId 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMIndication
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+uMsgId, ItemLong -- 12
+}
+#typev MPUIMQmi_c469 86 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimEventRegResp ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c469 85 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimEventRegResp: Card Status indications registered successfully." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c469 84 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimEventRegResp ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c461 115 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimUnblockPinResp: pResp->resp.result = 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+}
+#typev MPUIMQmi_c461 114 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimUnblockPinResp." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c457 113 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimGetCardStatusResp." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c457 112 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimGetCardStatusResp: pResp->resp.result = 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+}
+#typev MPUIMQmi_c457 111 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimGetCardStatusResp: pResp->resp.result = 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+}
+#typev MPUIMQmi_c457 110 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimGetCardStatusResp." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessInboundQUIMResponse
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1872 101 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimAkaResp: retVal=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAkaResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+retVal, ItemLong -- 12
+}
+#typev MPUIMQmi_c1842 100 "%0 %10!2x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAkaResp
+{
+pResp->content[i], ItemLong -- 10
+}
+#typev MPUIMQmi_c1839 99 "%0. ik       = %10!2x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAkaResp
+{
+pResp->content[offset], ItemLong -- 10
+}
+#typev MPUIMQmi_c1828 98 "%0 %10!2x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAkaResp
+{
+pResp->content[i], ItemLong -- 10
+}
+#typev MPUIMQmi_c1825 97 "%0. ck       = %10!2x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAkaResp
+{
+pResp->content[offset], ItemLong -- 10
+}
+#typev MPUIMQmi_c1812 96 "%0 %10!2x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAkaResp
+{
+pResp->content[i], ItemLong -- 10
+}
+#typev MPUIMQmi_c1809 95 "%0. res       = %10!2x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAkaResp
+{
+pResp->content[offset], ItemLong -- 10
+}
+#typev MPUIMQmi_c1781 94 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimAkaResp: . content[0]= %12!2x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAkaResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->content[0], ItemLong -- 12
+}
+#typev MPUIMQmi_c2025 105 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimAkaResp: retVal=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAkapResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+retVal, ItemLong -- 12
+}
+#typev MPUIMQmi_c1975 104 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimAkapResp: ERROR during creation of IK' and CK'." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAkapResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1909 103 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimAkapResp: pResp->content[0]=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAkapResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->content[0], ItemLong -- 12
+}
+#typev MPUIMQmi_c1904 102 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimAkaResp: ERROR, CONTENT INVALID." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAkapResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c2065 107 "%0<%10!s!|sub#%11!d!>case WwanAuthSim: retVal=0x%12!x! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAuthenticateResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+retVal, ItemLong -- 12
+}
+#typev MPUIMQmi_c2077 108 "%0<%10!s!|sub#%11!d!>case WwanAuthAka: retval=0x%12!x! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAuthenticateResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+retVal, ItemLong -- 12
+}
+#typev MPUIMQmi_c2090 109 "%0<%10!s!|sub#%11!d!>case WwanAuthAkaPrime: retval=0x%12!x! ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAuthenticateResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+retVal, ItemLong -- 12
+}
+#typev MPUIMQmi_c2043 106 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimAuthenticateResp: result=%12!d!, content_valid=%13!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimAuthenticateResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->content_valid, ItemLong -- 13
+}
+#typev MPUIMQmi_c2237 120 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimReadTransparentResp." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimReadTransparentResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c2232 119 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimReadTransparentResp: ERROR, pResp->resp.result = 0x%12!x!, pResp->read_result_valid=0x%13!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimReadTransparentResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+pResp->read_result_valid, ItemLong -- 13
+}
+#typev MPUIMQmi_c2220 118 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimReadTransparentResp: ERROR, ConvertBcdToAscii failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimReadTransparentResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c2208 117 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimReadTransparentResp: ERROR, memory allocation failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimReadTransparentResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c2184 116 "%0<%10!s!|sub#%11!d!>MPQMI_ProcessUimReadTransparentResp: pResp->resp.result=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimReadTransparentResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pResp->resp.result, ItemLong -- 12
+}
+#typev MPUIMQmi_c1737 93 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimSimResp: WWAN_AUTH_SIM completed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimSimResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1696 92 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimSimResp: randNumber=%12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimSimResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAuthResponse->u.AuthSim.n, ItemLong -- 12
+}
+#typev MPUIMQmi_c1622 90 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimSim_GSMSecAlgoResp: ERROR, Malformed QMI Response Array Detected." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimSim_GSMSecAlgoResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1659 91 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimSim_GSMSecAlgoResp: ERROR, exceeded number of auth sim responses." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimSim_GSMSecAlgoResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1607 89 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimSim_GSMSecAlgoResp: randNumber=%12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimSim_GSMSecAlgoResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAuthResponse->u.AuthSim.n, ItemLong -- 12
+}
+#typev MPUIMQmi_c1589 88 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimSim_RunGSMAlgoResp: ERROR, exceeded number of auth sim responses." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimSim_RunGSMAlgoResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1548 87 "%0<%10!s!|sub#%11!d!> MPQMI_ProcessUimSim_RunGSMAlgoResp: randNumber=%12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ProcessUimSim_RunGSMAlgoResp
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAuthResponse->u.AuthSim.n, ItemLong -- 12
+}
+#typev MPUIMQmi_c2496 138 "%0MPQMI_ReleaseUimClient." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_ReleaseUimClient
+{
+}
+#typev MPUIMQmi_c2487 137 "%0MPQMI_ReleaseUimClient: error releasing client id : 0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_ReleaseUimClient
+{
+qmiErr, ItemLong -- 10
+}
+#typev MPUIMQmi_c1466 79 "%0<%10!s!|sub#%11!d!>MPQMI_SendUimGetCardStatusReq." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendUimGetCardStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+pClient->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPUIMQmi_c1458 78 "%0<%10!s!|sub#%11!d!>MPQMI_SendUimGetCardStatusReq: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_SendUimGetCardStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+pClient->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1453 77 "%0<%10!s!|sub#%11!d!>MPQMI_SendUimGetCardStatusReq ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendUimGetCardStatusReq
+{
+pAdapter->PortName, ItemString -- 10
+pClient->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1439 76 "%0<%10!s!|sub#%11!d!>MPQMI_SendDmsUIMUnblockPinReq." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendUimUnblockPinReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+// PDB:  qcmbb850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev MPUIMQmi_c1396 75 "%0<%10!s!|sub#%11!d!>MPQMI_SendUimUnblockPinReq: allocate QMI element failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQMI_SendUimUnblockPinReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1391 74 "%0<%10!s!|sub#%11!d!>MPQMI_SendUimUnblockPinReq ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQMI_SendUimUnblockPinReq
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c315 25 "%0MPUIMQMI_GetUimAppType: ERROR, received pSubPhoneInfo=NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUIMQMI_GetUimAppType
+{
+}
+#typev MPUIMQmi_c310 24 "%0MPUIMQMI_GetUimAppType: ERROR, received UimClient=NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUIMQMI_GetUimAppType
+{
+}
+#typev MPUIMQmi_c305 23 "%0MPUIMQMI_GetUimAppType: appType_3ggp=%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQMI_GetUimAppType
+{
+appType, ItemLong -- 10
+}
+#typev MPUIMQmi_c300 22 "%0MPUIMQMI_GetUimAppType: appType_3ggp2=%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQMI_GetUimAppType
+{
+appType, ItemLong -- 10
+}
+#typev MPUIMQmi_c283 21 "%0MPUIMQMI_GetUimCardState: ERROR, received pSubPhoneInfo=NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUIMQMI_GetUimCardState
+{
+}
+#typev MPUIMQmi_c278 20 "%0MPUIMQMI_GetUimCardState: ERROR, received UimClient=NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUIMQMI_GetUimCardState
+{
+}
+#typev MPUIMQmi_c273 19 "%0MPUIMQMI_GetUimCardState: cardState_3ggp=%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQMI_GetUimCardState
+{
+cardState, ItemLong -- 10
+}
+#typev MPUIMQmi_c268 18 "%0MPUIMQMI_GetUimCardState: cardState_3ggp2=%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQMI_GetUimCardState
+{
+cardState, ItemLong -- 10
+}
+#typev MPUIMQmi_c1177 60 "%0<%10!s!|sub#%11!d!>MPUIMQmiClient_Authenticate: ERROR, pOid or pAuthChallengeis or pAuthResponse is NULL !." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1232 63 "%0<%10!s!|sub#%11!d!>MPUIMQmiClient_Authenticate:  ERROR, INVALID appType=%12!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+appType, ItemLong -- 12
+}
+#typev MPUIMQmi_c1293 67 "%0<%10!s!|sub#%11!d!> MPUIMQmiClient_Authenticate:  WwanAuthAka, (sent to modem) Autn= %12!2x! %13!2x! %14!2x! %15!2x! %16!2x! %17!2x! %18!2x! %19!2x! %20!2x! %21!2x! %22!2x! %23!2x! %24!2x! %25!2x! %26!2x! %27!2x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pReq->authentication_data.data[18], ItemLong -- 12
+pReq->authentication_data.data[19], ItemLong -- 13
+pReq->authentication_data.data[20], ItemLong -- 14
+pReq->authentication_data.data[21], ItemLong -- 15
+pReq->authentication_data.data[22], ItemLong -- 16
+pReq->authentication_data.data[23], ItemLong -- 17
+pReq->authentication_data.data[24], ItemLong -- 18
+pReq->authentication_data.data[25], ItemLong -- 19
+pReq->authentication_data.data[26], ItemLong -- 20
+pReq->authentication_data.data[27], ItemLong -- 21
+pReq->authentication_data.data[28], ItemLong -- 22
+pReq->authentication_data.data[29], ItemLong -- 23
+pReq->authentication_data.data[30], ItemLong -- 24
+pReq->authentication_data.data[31], ItemLong -- 25
+pReq->authentication_data.data[32], ItemLong -- 26
+pReq->authentication_data.data[33], ItemLong -- 27
+}
+#typev MPUIMQmi_c1280 66 "%0<%10!s!|sub#%11!d!> MPUIMQmiClient_Authenticate:  WwanAuthAka, (sent to modem) Rand= %12!2x! %13!2x! %14!2x! %15!2x! %16!2x! %17!2x! %18!2x! %19!2x! %20!2x! %21!2x! %22!2x! %23!2x! %24!2x! %25!2x! %26!2x! %27!2x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pReq->authentication_data.data[1], ItemLong -- 12
+pReq->authentication_data.data[2], ItemLong -- 13
+pReq->authentication_data.data[3], ItemLong -- 14
+pReq->authentication_data.data[4], ItemLong -- 15
+pReq->authentication_data.data[5], ItemLong -- 16
+pReq->authentication_data.data[6], ItemLong -- 17
+pReq->authentication_data.data[7], ItemLong -- 18
+pReq->authentication_data.data[8], ItemLong -- 19
+pReq->authentication_data.data[9], ItemLong -- 20
+pReq->authentication_data.data[10], ItemLong -- 21
+pReq->authentication_data.data[11], ItemLong -- 22
+pReq->authentication_data.data[12], ItemLong -- 23
+pReq->authentication_data.data[13], ItemLong -- 24
+pReq->authentication_data.data[14], ItemLong -- 25
+pReq->authentication_data.data[15], ItemLong -- 26
+pReq->authentication_data.data[16], ItemLong -- 27
+}
+#typev MPUIMQmi_c1264 65 "%0<%10!s!|sub#%11!d!> MPUIMQmiClient_Authenticate:  WwanAuthAka, (recvd from OS) Autn= %12!2x! %13!2x! %14!2x! %15!2x! %16!2x! %17!2x! %18!2x! %19!2x! %20!2x! %21!2x! %22!2x! %23!2x! %24!2x! %25!2x! %26!2x! %27!2x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAuthChallenge->u.AuthAka.Autn[0], ItemLong -- 12
+pAuthChallenge->u.AuthAka.Autn[1], ItemLong -- 13
+pAuthChallenge->u.AuthAka.Autn[2], ItemLong -- 14
+pAuthChallenge->u.AuthAka.Autn[3], ItemLong -- 15
+pAuthChallenge->u.AuthAka.Autn[4], ItemLong -- 16
+pAuthChallenge->u.AuthAka.Autn[5], ItemLong -- 17
+pAuthChallenge->u.AuthAka.Autn[6], ItemLong -- 18
+pAuthChallenge->u.AuthAka.Autn[7], ItemLong -- 19
+pAuthChallenge->u.AuthAka.Autn[8], ItemLong -- 20
+pAuthChallenge->u.AuthAka.Autn[9], ItemLong -- 21
+pAuthChallenge->u.AuthAka.Autn[10], ItemLong -- 22
+pAuthChallenge->u.AuthAka.Autn[11], ItemLong -- 23
+pAuthChallenge->u.AuthAka.Autn[12], ItemLong -- 24
+pAuthChallenge->u.AuthAka.Autn[13], ItemLong -- 25
+pAuthChallenge->u.AuthAka.Autn[14], ItemLong -- 26
+pAuthChallenge->u.AuthAka.Autn[15], ItemLong -- 27
+}
+#typev MPUIMQmi_c1257 64 "%0<%10!s!|sub#%11!d!> MPUIMQmiClient_Authenticate:  WwanAuthAka, (recvd from OS) Rand= %12!2x! %13!2x! %14!2x! %15!2x! %16!2x! %17!2x! %18!2x! %19!2x! %20!2x! %21!2x! %22!2x! %23!2x! %24!2x! %25!2x! %26!2x! %27!2x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAuthChallenge->u.AuthAka.Rand[0], ItemLong -- 12
+pAuthChallenge->u.AuthAka.Rand[1], ItemLong -- 13
+pAuthChallenge->u.AuthAka.Rand[2], ItemLong -- 14
+pAuthChallenge->u.AuthAka.Rand[3], ItemLong -- 15
+pAuthChallenge->u.AuthAka.Rand[4], ItemLong -- 16
+pAuthChallenge->u.AuthAka.Rand[5], ItemLong -- 17
+pAuthChallenge->u.AuthAka.Rand[6], ItemLong -- 18
+pAuthChallenge->u.AuthAka.Rand[7], ItemLong -- 19
+pAuthChallenge->u.AuthAka.Rand[8], ItemLong -- 20
+pAuthChallenge->u.AuthAka.Rand[9], ItemLong -- 21
+pAuthChallenge->u.AuthAka.Rand[10], ItemLong -- 22
+pAuthChallenge->u.AuthAka.Rand[11], ItemLong -- 23
+pAuthChallenge->u.AuthAka.Rand[12], ItemLong -- 24
+pAuthChallenge->u.AuthAka.Rand[13], ItemLong -- 25
+pAuthChallenge->u.AuthAka.Rand[14], ItemLong -- 26
+pAuthChallenge->u.AuthAka.Rand[15], ItemLong -- 27
+}
+#typev MPUIMQmi_c1356 73 "%0<%10!s!|sub#%11!d!> MPUIMQmiClient_Authenticate:  WwanAuthAkap, (sent to modem) Autn= %12!2x! %13!2x! %14!2x! %15!2x! %16!2x! %17!2x! %18!2x! %19!2x! %20!2x! %21!2x! %22!2x! %23!2x! %24!2x! %25!2x! %26!2x! %27!2x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pReq->authentication_data.data[18], ItemLong -- 12
+pReq->authentication_data.data[19], ItemLong -- 13
+pReq->authentication_data.data[20], ItemLong -- 14
+pReq->authentication_data.data[21], ItemLong -- 15
+pReq->authentication_data.data[22], ItemLong -- 16
+pReq->authentication_data.data[23], ItemLong -- 17
+pReq->authentication_data.data[24], ItemLong -- 18
+pReq->authentication_data.data[25], ItemLong -- 19
+pReq->authentication_data.data[26], ItemLong -- 20
+pReq->authentication_data.data[27], ItemLong -- 21
+pReq->authentication_data.data[28], ItemLong -- 22
+pReq->authentication_data.data[29], ItemLong -- 23
+pReq->authentication_data.data[30], ItemLong -- 24
+pReq->authentication_data.data[31], ItemLong -- 25
+pReq->authentication_data.data[32], ItemLong -- 26
+pReq->authentication_data.data[33], ItemLong -- 27
+}
+#typev MPUIMQmi_c1343 72 "%0<%10!s!|sub#%11!d!> MPUIMQmiClient_Authenticate:  WwanAuthAkap, (sent to modem) Rand= %12!2x! %13!2x! %14!2x! %15!2x! %16!2x! %17!2x! %18!2x! %19!2x! %20!2x! %21!2x! %22!2x! %23!2x! %24!2x! %25!2x! %26!2x! %27!2x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pReq->authentication_data.data[1], ItemLong -- 12
+pReq->authentication_data.data[2], ItemLong -- 13
+pReq->authentication_data.data[3], ItemLong -- 14
+pReq->authentication_data.data[4], ItemLong -- 15
+pReq->authentication_data.data[5], ItemLong -- 16
+pReq->authentication_data.data[6], ItemLong -- 17
+pReq->authentication_data.data[7], ItemLong -- 18
+pReq->authentication_data.data[8], ItemLong -- 19
+pReq->authentication_data.data[9], ItemLong -- 20
+pReq->authentication_data.data[10], ItemLong -- 21
+pReq->authentication_data.data[11], ItemLong -- 22
+pReq->authentication_data.data[12], ItemLong -- 23
+pReq->authentication_data.data[13], ItemLong -- 24
+pReq->authentication_data.data[14], ItemLong -- 25
+pReq->authentication_data.data[15], ItemLong -- 26
+pReq->authentication_data.data[16], ItemLong -- 27
+}
+#typev MPUIMQmi_c1331 71 "%0<%10!s!|sub#%11!d!> %12!2x!           %13!c!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAuthChallenge->u.AuthAkap.NetworkName[i], ItemLong -- 12
+pAuthChallenge->u.AuthAkap.NetworkName[i], ItemChar -- 13
+}
+#typev MPUIMQmi_c1327 70 "%0<%10!s!|sub#%11!d!> MPUIMQmiClient_Authenticate:  WwanAuthAkap, (recvd from OS) NetworkNameLength= %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAuthChallenge->u.AuthAkap.NetworkNameLength, ItemLong -- 12
+}
+#typev MPUIMQmi_c1320 69 "%0<%10!s!|sub#%11!d!> MPUIMQmiClient_Authenticate:  WwanAuthAkap, (recvd from OS) Autn= %12!2x! %13!2x! %14!2x! %15!2x! %16!2x! %17!2x! %18!2x! %19!2x! %20!2x! %21!2x! %22!2x! %23!2x! %24!2x! %25!2x! %26!2x! %27!2x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAuthChallenge->u.AuthAkap.Autn[0], ItemLong -- 12
+pAuthChallenge->u.AuthAkap.Autn[1], ItemLong -- 13
+pAuthChallenge->u.AuthAkap.Autn[2], ItemLong -- 14
+pAuthChallenge->u.AuthAkap.Autn[3], ItemLong -- 15
+pAuthChallenge->u.AuthAkap.Autn[4], ItemLong -- 16
+pAuthChallenge->u.AuthAkap.Autn[5], ItemLong -- 17
+pAuthChallenge->u.AuthAkap.Autn[6], ItemLong -- 18
+pAuthChallenge->u.AuthAkap.Autn[7], ItemLong -- 19
+pAuthChallenge->u.AuthAkap.Autn[8], ItemLong -- 20
+pAuthChallenge->u.AuthAkap.Autn[9], ItemLong -- 21
+pAuthChallenge->u.AuthAkap.Autn[10], ItemLong -- 22
+pAuthChallenge->u.AuthAkap.Autn[11], ItemLong -- 23
+pAuthChallenge->u.AuthAkap.Autn[12], ItemLong -- 24
+pAuthChallenge->u.AuthAkap.Autn[13], ItemLong -- 25
+pAuthChallenge->u.AuthAkap.Autn[14], ItemLong -- 26
+pAuthChallenge->u.AuthAkap.Autn[15], ItemLong -- 27
+}
+#typev MPUIMQmi_c1313 68 "%0<%10!s!|sub#%11!d!> MPUIMQmiClient_Authenticate:  WwanAuthAkap, (recvd from OS) Rand= %12!2x! %13!2x! %14!2x! %15!2x! %16!2x! %17!2x! %18!2x! %19!2x! %20!2x! %21!2x! %22!2x! %23!2x! %24!2x! %25!2x! %26!2x! %27!2x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+pAuthChallenge->u.AuthAkap.Rand[0], ItemLong -- 12
+pAuthChallenge->u.AuthAkap.Rand[1], ItemLong -- 13
+pAuthChallenge->u.AuthAkap.Rand[2], ItemLong -- 14
+pAuthChallenge->u.AuthAkap.Rand[3], ItemLong -- 15
+pAuthChallenge->u.AuthAkap.Rand[4], ItemLong -- 16
+pAuthChallenge->u.AuthAkap.Rand[5], ItemLong -- 17
+pAuthChallenge->u.AuthAkap.Rand[6], ItemLong -- 18
+pAuthChallenge->u.AuthAkap.Rand[7], ItemLong -- 19
+pAuthChallenge->u.AuthAkap.Rand[8], ItemLong -- 20
+pAuthChallenge->u.AuthAkap.Rand[9], ItemLong -- 21
+pAuthChallenge->u.AuthAkap.Rand[10], ItemLong -- 22
+pAuthChallenge->u.AuthAkap.Rand[11], ItemLong -- 23
+pAuthChallenge->u.AuthAkap.Rand[12], ItemLong -- 24
+pAuthChallenge->u.AuthAkap.Rand[13], ItemLong -- 25
+pAuthChallenge->u.AuthAkap.Rand[14], ItemLong -- 26
+pAuthChallenge->u.AuthAkap.Rand[15], ItemLong -- 27
+}
+#typev MPUIMQmi_c1194 62 "%0<%10!s!|sub#%11!d!>MPUIMQmiClient_Authenticate:  ERROR, allocate pAuthData failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1185 61 "%0<%10!s!|sub#%11!d!>MPUIMQmiClient_Authenticate:  ERROR, allocate pQmiElement failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c1173 59 "%0<%10!s!|sub#%11!d!>MPUIMQmiClient_Authenticate ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPUIMQmiClient_Authenticate
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->pSubPhoneInfo->nSubscritionId, ItemLong -- 11
+}
+#typev MPUIMQmi_c593 33 "%0<sub#%10!d!> ParseUimCardStatus: cardState_3gpp=%11!d!, cardState_3gpp2=%12!d! [ERROR, nSubscritionId >=pUimCardStatus->card_info_len OR MAX_SUBSCRIPTIONS_SUPPORTED]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ParseUimCardStatus
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+cardState_3gpp, ItemLong -- 11
+cardState_3gpp2, ItemLong -- 12
+}
+#typev MPUIMQmi_c887 42 "%0<sub#%10!d!> ParseUimCardStatus: cardState_3gpp2=%11!d! [slotIndex=%12!d!, appIndex=%13!d!, app_type=%14!d!, app_state=%15!d!, card_state=%16!d!, bUpinForPin1=%17!d!, pin_state=%18!d!, perso_state=%19!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseUimCardStatus
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+cardState, ItemLong -- 11
+slotIndex, ItemLong -- 12
+appIndex, ItemLong -- 13
+pUimAppInfo->app_type, ItemLong -- 14
+pUimAppInfo->app_state, ItemLong -- 15
+pUimCardInfo->card_state, ItemLong -- 16
+bUpinForPin1, ItemLong -- 17
+pUimPinInfo->pin_state, ItemLong -- 18
+pUimAppInfo->perso_state, ItemLong -- 19
+}
+#typev MPUIMQmi_c882 41 "%0<sub#%10!d!> ParseUimCardStatus: cardState_3gpp=%11!d! [slotIndex=%12!d!, appIndex=%13!d!, app_type=%14!d!, app_state=%15!d!, card_state=%16!d!, bUpinForPin1=%17!d!, pin_state=%18!d!, perso_state=%19!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseUimCardStatus
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+cardState, ItemLong -- 11
+slotIndex, ItemLong -- 12
+appIndex, ItemLong -- 13
+pUimAppInfo->app_type, ItemLong -- 14
+pUimAppInfo->app_state, ItemLong -- 15
+pUimCardInfo->card_state, ItemLong -- 16
+bUpinForPin1, ItemLong -- 17
+pUimPinInfo->pin_state, ItemLong -- 18
+pUimAppInfo->perso_state, ItemLong -- 19
+}
+#typev MPUIMQmi_c713 40 "%0<sub#%10!d!> ParseUimCardStatus: cardState_3gpp2=%11!d! [slotIndex=%12!d!, card_state=%13!d!, error_code=%14!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseUimCardStatus
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+cardState, ItemLong -- 11
+slotIndex, ItemLong -- 12
+pUimCardInfo->card_state, ItemLong -- 13
+pUimCardInfo->error_code, ItemLong -- 14
+}
+#typev MPUIMQmi_c708 39 "%0<sub#%10!d!> ParseUimCardStatus: cardState_3ggp=%11!d! [slotIndex=%12!d!, card_state=%13!d!, error_code=%14!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseUimCardStatus
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+cardState, ItemLong -- 11
+slotIndex, ItemLong -- 12
+pUimCardInfo->card_state, ItemLong -- 13
+pUimCardInfo->error_code, ItemLong -- 14
+}
+#typev MPUIMQmi_c694 38 "%0<sub#%10!d!> ParseUimCardStatus: cardState_3gpp2=%11!d! [slotIndex=%12!d!, card_state=%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseUimCardStatus
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+cardState, ItemLong -- 11
+slotIndex, ItemLong -- 12
+pUimCardInfo->card_state, ItemLong -- 13
+}
+#typev MPUIMQmi_c689 37 "%0<sub#%10!d!> ParseUimCardStatus: cardState_3gpp=%11!d! [slotIndex=%12!d!, card_state=%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseUimCardStatus
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+cardState, ItemLong -- 11
+slotIndex, ItemLong -- 12
+pUimCardInfo->card_state, ItemLong -- 13
+}
+#typev MPUIMQmi_c677 36 "%0<sub#%10!d!> ParseUimCardStatus: Softswap happens: [slotIndex=%11!d!, pSubPhoneInfo->nSlotId=%12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseUimCardStatus
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+slotIndex, ItemLong -- 11
+pSubPhoneInfo->nSlotId, ItemLong -- 12
+}
+#typev MPUIMQmi_c664 35 "%0<sub#%10!d!> ParseUimCardStatus: cardState_3gpp2=%11!d! [index=0xFFFF, card_state=%12!d!, error_code=%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseUimCardStatus
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+cardState, ItemLong -- 11
+pUimCardInfo->card_state, ItemLong -- 12
+pUimCardInfo->error_code, ItemLong -- 13
+}
+#typev MPUIMQmi_c659 34 "%0<sub#%10!d!> ParseUimCardStatus: cardState_3ggp=%11!d! [index=0xFFFF, card_state=%12!d!, error_code=%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ParseUimCardStatus
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+cardState, ItemLong -- 11
+pUimCardInfo->card_state, ItemLong -- 12
+pUimCardInfo->error_code, ItemLong -- 13
+}
+#typev MPUIMQmi_c587 32 "%0<sub#%10!d!> ParseUimCardStatus: cardState_3gpp=%11!d!, cardState_3gpp2=%12!d! [ERROR, pUimCardStatus=NULL]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ParseUimCardStatus
+{
+pSubPhoneInfo->nSubscritionId, ItemLong -- 10
+cardState_3gpp, ItemLong -- 11
+cardState_3gpp2, ItemLong -- 12
+}

@@ -1,0 +1,227 @@
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+4d4c1ae6-ac7d-3ef4-6516-a4b5649d8429 PEP // SRC=PEP_Thermal_Restr.c MJ= MN=
+#typev PEP_Thermal_Restr_c455 24 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :APPS core rails (APCC) restricted to VFC by DMIN Vote for LTVR: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=EnableKraitVFC
+{
+aFlag, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c973 51 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::973 :InitLTVRCallbackObjects(): ExCreateCallback failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=InitLTVRCallbackObjects
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c559 30 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :Started VfcInitTimer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=InitalizeVfcInitTimer
+{
+}
+#typev PEP_Thermal_Restr_c555 29 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::555 :WdfTimerCreate failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=InitalizeVfcInitTimer
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c1058 56 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :LTVR Notified via callback for IOCTL_QUERY_LTVR_STATUS. LTVR Status:(0x%10!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=LtvrIoctlCbNotify
+{
+out.IsLtvrOn, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c1049 55 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::1049 :LTVR Callback notification failed. pLtvrCbObj is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=LtvrIoctlCbNotify
+{
+}
+#typev PEP_Thermal_Restr_c681 35 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :QMI interface opened successfully for 0x%10!x! in %11!d! attempts" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=QmiClientWorker
+{
+pQmiData->instance, ItemLong -- 10
+pQmiData->NumberOfAttempts, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c674 34 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :Cancelling pending attempts for 0x%10!x! as we are entering hibernate" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=QmiClientWorker
+{
+pQmiData->instance, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c664 33 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :Attempt %10!d! for 0x%11!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=QmiClientWorker
+{
+pQmiData->NumberOfAttempts, ItemLong -- 10
+pQmiData->instance, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c635 32 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::635 :QmiClientWorker: Interface for ID 0x%10!x! was not initialized " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=QmiClientWorker
+{
+client, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c624 31 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::624 :QmiClientWorker: SSR for QMI Instance ID 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=QmiClientWorker
+{
+client, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c933 50 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :Trigger master workItem again due to SSR of 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_HIBERNATE FUNC=QmiErrorCallback
+{
+gThermalSensorConfigurations.QmiTmdDev[pQmiDev->qmi_client_num].instance, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c925 49 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::925 :QMI instance 0x%10!x! QmiErrorCallback" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=QmiErrorCallback
+{
+pQmiDev->instance, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c1142 61 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::1142 :IOCTL_QUERY_LTVR_STATUS IOCTL processing failed due to invalid request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=QueryLtvrIoctlHandler
+{
+}
+#typev PEP_Thermal_Restr_c1129 60 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :IOCTL_QUERY_LTVR_STATUS:Return LTVR Status:(%10!x!) via IOCTL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=QueryLtvrIoctlHandler
+{
+out->IsLtvrOn, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c1116 59 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::1116 :WdfRequestRetrieveOutputBuffer failed Error=%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=QueryLtvrIoctlHandler
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c1097 58 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::1097 :IOCTL_QUERY_LTVR_STATUS IOCTL processing failed due to invalid request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=QueryLtvrIoctlHandler
+{
+}
+#typev PEP_Thermal_Restr_c1087 57 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::1087 :WdfRequestRetrieveInputBuffer failed Error=%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=QueryLtvrIoctlHandler
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c175 11 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::175 :WdfWaitLockCreate failed for gQmiCciLock with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=RegisterThermRestrictionInterfaces
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c167 10 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::167 :WdfWaitLockCreate failed for VoteStatusLock with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=RegisterThermRestrictionInterfaces
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c238 12 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :VFC Vote%10!d! completed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=SendVfcVotes
+{
+i, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c895 48 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :QMI Instance 0x%10!x! VFC Vote Completed CPUV_RESTRICTION_%11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=TalkToQmi
+{
+aDev->instance, ItemLong -- 10
+(aDev->level) ? 'ON' : 'OFF', ItemString -- 11
+}
+#typev PEP_Thermal_Restr_c888 47 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::888 :Instance 0x%10!x! QMI_TMD_GET_MITIGATION_DEVICE_LIST_REQ_V01 error %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=TalkToQmi
+{
+aDev->instance, ItemLong -- 10
+tmdResp.resp.error, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c877 46 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::877 :QMI Instance 0x%10!x! qmi_client_send_msg_sync %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=TalkToQmi
+{
+aDev->instance, ItemLong -- 10
+qmiRet, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c835 45 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::835 :QMI Instance 0x%10!x! qmi_client_register_error_cb Error %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=ThermalQmiInit
+{
+aDev->instance, ItemLong -- 10
+qmiRet, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c825 44 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::825 :QMI Instance 0x%10!x! mitigation dev not found" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=ThermalQmiInit
+{
+aDev->instance, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c816 43 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :QMI Instance 0x%10!x! found max_mitigation_level = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=ThermalQmiInit
+{
+aDev->instance, ItemLong -- 10
+devList->mitigation_device_list[i].max_mitigation_level, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c798 42 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::798 :0x%10!x! QMI_TMD_GET_MITIGATION_DEVICE_LIST_REQ_V01 error %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=ThermalQmiInit
+{
+aDev->instance, ItemLong -- 10
+devList->resp.error, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c788 41 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::788 :0x%10!x! qmi_client_send_msg_sync error %11!x! for get mitigaion list" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=ThermalQmiInit
+{
+aDev->instance, ItemLong -- 10
+qmiRet, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c772 40 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::772 :PEP: ThermalQmiInit - devList tempIrqData allocation failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=ThermalQmiInit
+{
+}
+#typev PEP_Thermal_Restr_c760 39 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::760 :QMI Instance 0x%10!x! init fail %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=ThermalQmiInit
+{
+aDev->instance, ItemLong -- 10
+qmiRet, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c744 38 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::744 :QMI Instance 0x%10!x! tmd_get_service_object_v01 failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=ThermalQmiInit
+{
+aDev->instance, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c731 37 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :QMI Instance 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=ThermalQmiInit
+{
+aDev->instance, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c728 36 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::728 :adev NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=ThermalQmiInit
+{
+}
+#typev PEP_Thermal_Restr_c264 13 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :VfcInitTimer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VfcInitTimer
+{
+}
+#typev PEP_Thermal_Restr_c423 23 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :PepAopSendMessage %10!s! Enable_LTVR 0x%11!x! status 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaAOP
+{
+strAOPMessage, ItemString -- 10
+aFlag, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev PEP_Thermal_Restr_c418 22 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::418 :PepAopSendMessage %10!s! failed status 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaAOP
+{
+strAOPMessage, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c1034 54 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :VoteViaCallBackObj: Notify LTVR Status:(0x%10!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaCallBackObj
+{
+out.IsLtvrOn, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c1025 53 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::1025 :VoteViaCallBackObj(): LTVR Notification failed. pLtvrCbObj is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaCallBackObj
+{
+}
+#typev PEP_Thermal_Restr_c1015 52 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::1015 :VoteViaCallBackObj(): LTVR Notification failed. aData is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaCallBackObj
+{
+}
+#typev PEP_Thermal_Restr_c389 21 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::389 :Rail %10!d! pm_send_msg for ResourceId %11!d! returned status %12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaPPP
+{
+rType, ItemLong -- 10
+pppVote->ResourceId, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev PEP_Thermal_Restr_c383 20 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :EBI (VDDA) pm_send_msg returned status %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaPPP
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c378 19 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :GFX pm_send_msg returned status %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaPPP
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c373 18 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :CX pm_send_msg returned status %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaPPP
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c368 17 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :MX pm_send_msg returned status %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaPPP
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Restr_c336 16 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :LDO ResourceId %10!d! Enable_LTVR (%11!d!) corner_volt_level_floor %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaPPP
+{
+pppVote->ResourceId, ItemLong -- 10
+aFlag, ItemLong -- 11
+pppVote->Setting.Ldo.corner_volt_level_floor, ItemLong -- 12
+}
+#typev PEP_Thermal_Restr_c323 15 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :SMPS ResourceId %10!d! Enable_LTVR (%11!d!) vote for corner_volt_level_floor %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaPPP
+{
+pppVote->ResourceId, ItemLong -- 10
+aFlag, ItemLong -- 11
+pppVote->Setting.Smps.corner_volt_level_floor, ItemLong -- 12
+}
+#typev PEP_Thermal_Restr_c319 14 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :SMPS ResourceId %10!d! Enable_LTVR (%11!d!) vote for corner_vfc_level %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaPPP
+{
+pppVote->ResourceId, ItemLong -- 10
+aFlag, ItemLong -- 11
+pppVote->Setting.Smps.corner_vfc_level, ItemLong -- 12
+}
+#typev PEP_Thermal_Restr_c517 28 "%0 [Info] PEP_Thermal_Restr.c::%!FUNC! :QMI client Enable_LTVR (%10!d!) vote for Rail (%11!d!): Enqueue SUCCESS!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaQMI
+{
+aFlag, ItemLong -- 10
+rType, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c505 27 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::505 :QMI client not supported for Rail: %10!d! Enable_LTVR %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaQMI
+{
+rType, ItemLong -- 10
+aFlag, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c498 26 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::498 :QMI client not ready for Rail: %10!d! Enable_LTVR %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaQMI
+{
+rType, ItemLong -- 10
+aFlag, ItemLong -- 11
+}
+#typev PEP_Thermal_Restr_c490 25 "%0 [Err ] PEP_Thermal_Restr.c::%!FUNC!::490 :QMI client Enable_LTVR (%10!d!) vote for Unknown Rail (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_RESTR FUNC=VoteViaQMI
+{
+aFlag, ItemLong -- 10
+rType, ItemLong -- 11
+}

@@ -1,0 +1,488 @@
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+02219b2d-383b-3830-31eb-694f22bebfd7 QcUsbFnSnps // SRC=QcUsbFnSnpsEvent.c MJ= MN=
+#typev QcUsbFnEvent_c661 112 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnCommonEventHandler
+{
+}
+#typev QcUsbFnEvent_c661 111 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnCommonEventHandler
+{
+}
+#typev QcUsbFnEvent_c647 110 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnCommonEventHandler
+{
+}
+#typev QcUsbFnEvent_c647 109 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnCommonEventHandler
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnSnpsEvent_c1271 62 "%0Cable State: %10!s! --> %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnChangeCableState
+{
+SnpsContext->CableState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 10
+NextState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 11
+}
+#typev QcUsbFnSnpsEvent_c1424 76 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_SNPS FUNC=QcUsbFnControllerSimulateAttach
+{
+}
+#typev QcUsbFnSnpsEvent_c1419 75 "%0Invalid cable state (%10!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_SNPS FUNC=QcUsbFnControllerSimulateAttach
+{
+snpsContext->CableState, ItemLong -- 10
+}
+#typev QcUsbFnSnpsEvent_c1406 74 "%0Cable State: %10!s! (ignoring attach ISR)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnControllerSimulateAttach
+{
+snpsContext->CableState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 10
+}
+#typev QcUsbFnSnpsEvent_c1399 73 "%0QcUsbFnSnpsEventHandleAttach failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnControllerSimulateAttach
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnSnpsEvent_c1385 72 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnControllerSimulateAttach
+{
+}
+#typev QcUsbFnSnpsEvent_c1382 71 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_SNPS FUNC=QcUsbFnControllerSimulateAttach
+{
+}
+#typev QcUsbFnSnpsEvent_c1526 85 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_SNPS FUNC=QcUsbFnControllerSimulateDetach
+{
+}
+#typev QcUsbFnSnpsEvent_c1521 84 "%0Invalid cable state (%10!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_SNPS FUNC=QcUsbFnControllerSimulateDetach
+{
+snpsContext->CableState, ItemLong -- 10
+}
+#typev QcUsbFnSnpsEvent_c1508 83 "%0Cable State: %10!s! (ignoring detach ISR)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnControllerSimulateDetach
+{
+snpsContext->CableState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 10
+}
+#typev QcUsbFnSnpsEvent_c1491 82 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnControllerSimulateDetach
+{
+}
+#typev QcUsbFnSnpsEvent_c1488 81 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_SNPS FUNC=QcUsbFnControllerSimulateDetach
+{
+}
+#typev QcUsbFnSnpsEvent_c1833 108 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnControllerStop
+{
+}
+#typev QcUsbFnSnpsEvent_c1817 62 "%0Cable State: %10!s! --> %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnControllerStop
+{
+SnpsContext->CableState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 10
+NextState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 11
+}
+#typev QcUsbFnSnpsEvent_c1822 62 "%0Cable State: %10!s! --> %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnControllerStop
+{
+SnpsContext->CableState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 10
+NextState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 11
+}
+#typev QcUsbFnSnpsEvent_c1827 107 "%0Invalid cable state (%10!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_SNPS FUNC=QcUsbFnControllerStop
+{
+snpsContext->CableState, ItemLong -- 10
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnSnpsEvent_c1803 106 "%0Controller already stopped" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_SNPS FUNC=QcUsbFnControllerStop
+{
+}
+#typev QcUsbFnSnpsEvent_c1774 103 "%0HALT bit not set after RUN_STOP cleared! Continuing anyway" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_SNPS FUNC=QcUsbFnControllerStop
+{
+}
+#typev QcUsbFnSnpsEvent_c1797 105 "%0QcUsbFnUtilWaitRegBit failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnControllerStop
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnSnpsEvent_c1784 104 "%0Controller stopped" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnControllerStop
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnSnpsEvent_c1764 102 "%0SNPS Disconnect event fired" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnControllerStop
+{
+}
+#typev QcUsbFnSnpsEvent_c1756 101 "%0Failed to receive controller disconnect event: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnControllerStop
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnSnpsEvent_c1738 100 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnControllerStop
+{
+}
+#typev QcUsbFnSnpsEvent_c1735 99 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnControllerStop
+{
+}
+#typev QcUsbFnSnpsEvent_c1115 57 "%0DPC not queued" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_EVENT FUNC=QcUsbFnEvtUsb30EE1IrqIsr
+{
+}
+#typev QcUsbFnSnpsEvent_c1093 56 "%0interrupt[0x%10!p!] message[0x%11!x!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_EVENT FUNC=QcUsbFnEvtUsb30EE1IrqIsr
+{
+(void*)Interrupt, ItemPtr -- 10
+MessageID, ItemLong -- 11
+}
+#typev QcUsbFnSnpsEvent_c1143 58 "%0interrupt[0x%10!p!] message[0x%11!x!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_EVENT FUNC=QcUsbFnEvtUsb30EE2IrqIsr
+{
+(void*)Interrupt, ItemPtr -- 10
+MessageID, ItemLong -- 11
+}
+#typev QcUsbFnSnpsEvent_c1063 55 "%0<--QcUsbFnEvtUsb30Ee2InterruptDisable" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsb30EExInterruptDisable
+{
+}
+#typev QcUsbFnSnpsEvent_c1057 54 "%0-->QcUsbFnEvtUsb30Ee2InterruptDisable - interrupt[0x%10!p!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsb30EExInterruptDisable
+{
+(void*)Interrupt, ItemPtr -- 10
+}
+#typev QcUsbFnSnpsEvent_c1053 53 "%0<--QcUsbFnEvtUsb30Ee1InterruptDisable" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsb30EExInterruptDisable
+{
+}
+#typev QcUsbFnSnpsEvent_c1047 52 "%0-->QcUsbFnEvtUsb30Ee1InterruptDisable - interrupt[0x%10!p!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsb30EExInterruptDisable
+{
+(void*)Interrupt, ItemPtr -- 10
+}
+#typev QcUsbFnSnpsEvent_c1019 51 "%0<--QcUsbFnEvtUsb30Ee2InterruptEnable" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsb30EExInterruptEnable
+{
+}
+#typev QcUsbFnSnpsEvent_c1015 50 "%0-->QcUsbFnEvtUsb30Ee2InterruptEnable - interrupt[0x%10!p!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsb30EExInterruptEnable
+{
+(void*)Interrupt, ItemPtr -- 10
+}
+#typev QcUsbFnSnpsEvent_c1011 49 "%0<--QcUsbFnEvtUsb30Ee1InterruptEnable" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsb30EExInterruptEnable
+{
+}
+#typev QcUsbFnSnpsEvent_c1007 48 "%0-->QcUsbFnEvtUsb30Ee1InterruptEnable - interrupt[0x%10!p!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsb30EExInterruptEnable
+{
+(void*)Interrupt, ItemPtr -- 10
+}
+#typev QcUsbFnSnpsEvent_c1196 60 "%0Unexpected Interrupt 0x%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_EVENT FUNC=QcUsbFnEvtUsb30EExIrqDpc
+{
+Interrupt, ItemPtr -- 10
+}
+#typev QcUsbFnSnpsEvent_c1184 59 "%0interrupt[0x%10!p!] device[0x%11!p!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_EVENT FUNC=QcUsbFnEvtUsb30EExIrqDpc
+{
+(void*)Interrupt, ItemPtr -- 10
+(void*)Object, ItemPtr -- 11
+}
+#typev QcUsbFnSnpsEvent_c1584 89 "%0Invalid cable state (%10!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsbAttachInterruptIsrPassive
+{
+snpsContext->CableState, ItemLong -- 10
+}
+#typev QcUsbFnSnpsEvent_c1571 88 "%0Cable State: %10!s! (ignoring attach ISR)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsbAttachInterruptIsrPassive
+{
+snpsContext->CableState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 10
+}
+#typev QcUsbFnSnpsEvent_c1564 87 "%0Failed to queue attach DPC" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsbAttachInterruptIsrPassive
+{
+}
+#typev QcUsbFnSnpsEvent_c1552 86 "%0-->QcUsbFnEvtUsbAttachInterruptIsrPassive - interrupt[0x%10!p!] message [0x%11!x!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsbAttachInterruptIsrPassive
+{
+(void*)Interrupt, ItemPtr -- 10
+MessageID, ItemLong -- 11
+}
+#typev QcUsbFnSnpsEvent_c1632 92 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnEvtUsbAttachInterruptWorkItem
+{
+}
+#typev QcUsbFnSnpsEvent_c1618 62 "%0Cable State: %10!s! --> %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsbAttachInterruptWorkItem
+{
+SnpsContext->CableState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 10
+NextState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 11
+}
+#typev QcUsbFnSnpsEvent_c1623 62 "%0Cable State: %10!s! --> %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsbAttachInterruptWorkItem
+{
+SnpsContext->CableState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 10
+NextState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 11
+}
+#typev QcUsbFnSnpsEvent_c1628 91 "%0Invalid cable state (%10!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsbAttachInterruptWorkItem
+{
+snpsContext->CableState, ItemLong -- 10
+}
+#typev QcUsbFnSnpsEvent_c1608 90 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnEvtUsbAttachInterruptWorkItem
+{
+}
+#typev QcUsbFnSnpsEvent_c1689 96 "%0Invalid cable state (%10!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsbDetachInterruptIsrPassive
+{
+snpsContext->CableState, ItemLong -- 10
+}
+#typev QcUsbFnSnpsEvent_c1676 95 "%0Cable State: %10!s! (ignoring detach ISR)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsbDetachInterruptIsrPassive
+{
+snpsContext->CableState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 10
+}
+#typev QcUsbFnSnpsEvent_c1669 94 "%0Failed to queue attach DPC" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsbDetachInterruptIsrPassive
+{
+}
+#typev QcUsbFnSnpsEvent_c1657 93 "%0-->QcUsbFnEvtUsbDetachInterruptIsrPassive - interrupt[0x%10!p!] message[0x%11!x!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsbDetachInterruptIsrPassive
+{
+(void*)Interrupt, ItemPtr -- 10
+MessageID, ItemLong -- 11
+}
+#typev QcUsbFnSnpsEvent_c1718 98 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnEvtUsbDetachInterruptWorkItem
+{
+}
+#typev QcUsbFnSnpsEvent_c1713 97 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnEvtUsbDetachInterruptWorkItem
+{
+}
+#typev QcUsbFnSnpsEvent_c1249 61 "%0-->interrupt[0x%10!p!] message[0x%11!x!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_SNPS FUNC=QcUsbFnEvtUsbPwrEvtInterruptIsrPassive
+{
+(void*)Interrupt, ItemPtr -- 10
+MessageID, ItemLong -- 11
+}
+#typev QcUsbFnSnpsEvent_c1311 66 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsControllerAttachHandler
+{
+}
+#typev QcUsbFnSnpsEvent_c1306 65 "%0QcUsbFnCommonEventHandler failed: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsControllerAttachHandler
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnSnpsEvent_c1298 64 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsControllerAttachHandler
+{
+}
+#typev QcUsbFnSnpsEvent_c1295 63 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsControllerAttachHandler
+{
+}
+#typev QcUsbFnSnpsEvent_c1471 80 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsControllerDetachHandler
+{
+}
+#typev QcUsbFnSnpsEvent_c1466 79 "%0QcUsbFnCommonEventHandler failed: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsControllerDetachHandler
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnSnpsEvent_c1451 78 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsControllerDetachHandler
+{
+}
+#typev QcUsbFnSnpsEvent_c1448 77 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsControllerDetachHandler
+{
+}
+#typev QcUsbFnSnpsEvent_c1366 70 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsControllerSimulateAttach
+{
+}
+#typev QcUsbFnSnpsEvent_c1351 62 "%0Cable State: %10!s! --> %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsControllerSimulateAttach
+{
+SnpsContext->CableState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 10
+NextState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 11
+}
+#typev QcUsbFnSnpsEvent_c1356 62 "%0Cable State: %10!s! --> %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsControllerSimulateAttach
+{
+SnpsContext->CableState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 10
+NextState, ItemEnum(_QCUSBFN_CABLE_STATE) -- 11
+}
+#typev QcUsbFnSnpsEvent_c1361 69 "%0Invalid cable state (%10!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsControllerSimulateAttach
+{
+snpsContext->CableState, ItemLong -- 10
+}
+#typev QcUsbFnSnpsEvent_c1339 68 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsControllerSimulateAttach
+{
+}
+#typev QcUsbFnSnpsEvent_c1336 67 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsControllerSimulateAttach
+{
+}
+#typev QcUsbFnSnpsEvent_c213 13 "%0Invalid Parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsEventCreateInterrupts
+{
+}
+#typev QcUsbFnSnpsEvent_c332 18 "%0Invalid interrupt configuration!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsEventCreateInterrupts
+{
+}
+#typev QcUsbFnSnpsEvent_c370 20 "%0Out of memory" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsEventCreateInterrupts
+{
+}
+#typev QcUsbFnSnpsEvent_c357 19 "%0WdfInterruptCreate failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsEventCreateInterrupts
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnSnpsEvent_c379 21 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsEventCreateInterrupts
+{
+}
+#typev QcUsbFnSnpsEvent_c291 17 "%0HS Phy IRQ found, but unexpected" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsEventCreateInterrupts
+{
+}
+#typev QcUsbFnSnpsEvent_c285 16 "%0WdfCommonBufferCreateWithConfig (USB30_EE2_IRQ) failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsEventCreateInterrupts
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnSnpsEvent_c254 15 "%0WdfCommonBufferCreateWithConfig (USB30_EE1_IRQ) failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsEventCreateInterrupts
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnSnpsEvent_c220 11 "%0chipId 0x%10!x!, DeviceIntrpIdx %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsEventCreateInterrupts
+{
+chipId, ItemLong -- 10
+DeviceIntrpIdx, ItemLong -- 11
+}
+#typev QcUsbFnSnpsEvent_c217 14 "%0Creating interrupt[0x%10!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsEventCreateInterrupts
+{
+Irq, ItemLong -- 10
+}
+#typev QcUsbFnSnpsEvent_c210 12 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsEventCreateInterrupts
+{
+}
+#typev QcUsbFnSnpsEvent_c181 11 "%0chipId 0x%10!x!, DeviceIntrpIdx %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsEventGetDeviceInterruptNumber
+{
+chipId, ItemLong -- 10
+DeviceIntrpIdx, ItemLong -- 11
+}
+#typev QcUsbFnSnpsEvent_c108 10 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsEventGetDeviceInterruptNumber
+{
+}
+#typev QcUsbFnSnpsEvent_c812 44 "%0invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsGetEventFromLocalBuffer
+{
+}
+#typev QcUsbFnSnpsEvent_c844 47 "%0BytesRead %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsGetEventFromLocalBuffer
+{
+BytesRead, ItemLong -- 10
+}
+#typev QcUsbFnSnpsEvent_c835 46 "%0Vendor Device Test LMP Received Event posted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsGetEventFromLocalBuffer
+{
+}
+#typev QcUsbFnSnpsEvent_c816 45 "%0EvtBuf->NextEvt 0x%10!p!, EvtBuf->Buf + EvtBuf->Size 0x%11!Ix!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsGetEventFromLocalBuffer
+{
+EvtBuf->NextEvt, ItemPtr -- 10
+(ULONG_PTR)EvtBuf->Buf + EvtBuf->Size, ItemPtr -- 11
+}
+#typev QcUsbFnSnpsEvent_c572 31 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsHandleConnectDone
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnSnpsEvent_c517 30 "%0The Detected Speed is %10!s! (0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsHandleConnectDone
+{
+speed, ItemEnum(_QCUSBFN_BUS_SPEED) -- 10
+speed, ItemLong -- 11
+}
+#typev QcUsbFnSnpsEvent_c502 29 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsHandleConnectDone
+{
+}
+#typev QcUsbFnSnpsEvent_c722 41 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsHandleDeviceEvent
+{
+}
+#typev QcUsbFnSnpsEvent_c715 39 "%0Event 0x%10!x! is not handled" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsHandleDeviceEvent
+{
+Event->Device.EventType, ItemLong -- 10
+}
+#typev QcUsbFnSnpsEvent_c720 40 "%0Event processing failed: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsHandleDeviceEvent
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnSnpsEvent_c680 38 "%0%10!s! : Info[0x%11!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsHandleDeviceEvent
+{
+devEvtType, ItemEnum(_DWC_EVT_DEV_EVT_TYPE) -- 10
+Event->Device.EventInfo, ItemLong -- 11
+}
+#typev QcUsbFnSnpsEvent_c674 37 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsHandleDeviceEvent
+{
+}
+#typev QcUsbFnSnpsEvent_c427 25 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsHandleEpEvent
+{
+}
+#typev QcUsbFnSnpsEvent_c419 24 "%0DbmHandleEpEvtFunc not available" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_CONFIG FUNC=QcUsbFnSnpsHandleEpEvent
+{
+}
+#typev QcUsbFnSnpsEvent_c411 23 "%0%10!s! : Param [0x%11!x!], Status [0x%12!x!], PhyEpNum [0x%13!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsHandleEpEvent
+{
+Event->Endpoint.EventType, ItemEnum(_DWC_EVT_EP_EVT_TYPE) -- 10
+Event->Endpoint.EventParam, ItemLong -- 11
+Event->Endpoint.EventStatus, ItemLong -- 12
+Event->Endpoint.PhysEPNum, ItemLong -- 13
+}
+#typev QcUsbFnSnpsEvent_c409 22 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsHandleEpEvent
+{
+}
+#typev QcUsbFnSnpsEvent_c787 43 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsHandleEvent
+{
+}
+// PDB:  QcUsbFnSs850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev QcUsbFnSnpsEvent_c751 42 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsHandleEvent
+{
+}
+#typev QcUsbFnSnpsEvent_c645 36 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsHandleLinkStateChange
+{
+}
+#typev QcUsbFnSnpsEvent_c642 35 "%0Ignoring link state change event" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsHandleLinkStateChange
+{
+}
+#typev QcUsbFnSnpsEvent_c638 34 "%0ERROR: Link state LS_RESUME generated without hibernation" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsHandleLinkStateChange
+{
+}
+#typev QcUsbFnSnpsEvent_c612 33 "%0LS: %10!s! (0x%11!x!) -> %12!s! (0x%13!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsHandleLinkStateChange
+{
+prevLnkSt, ItemEnum(_USB_LINK_STATE) -- 10
+prevLnkSt, ItemLong -- 11
+currLnkSt, ItemEnum(_USB_LINK_STATE) -- 12
+currLnkSt, ItemLong -- 13
+}
+#typev QcUsbFnSnpsEvent_c600 32 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsHandleLinkStateChange
+{
+}
+#typev QcUsbFnSnpsEvent_c469 28 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsHandleReset
+{
+}
+#typev QcUsbFnSnpsEvent_c460 27 "%0QcUsbFnCommonEventHandler failed: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SNPS FUNC=QcUsbFnSnpsHandleReset
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QcUsbFnSnpsEvent_c451 26 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbFnSnpsHandleReset
+{
+}
+#enumv _QCUSBFN_CABLE_STATE
+{
+QCUSBFN_CABLE_DETACHED,0x0
+QCUSBFN_CABLE_ATTACHING,0x1
+QCUSBFN_CABLE_ATTACHED,0x2
+QCUSBFN_CABLE_DETACHING,0x3
+QCUSBFN_CABLE_ATTACH_PENDING,0x4
+QCUSBFN_CABLE_DETACH_PENDING,0x5
+QCUSBFN_CABLE_STATE_UNKNOWN,0x6
+}
+#enumv _QCUSBFN_BUS_SPEED
+{
+QCUSBFN_BUS_SPEED_HIGH,0x0
+QCUSBFN_BUS_SPEED_FULL,0x1
+QCUSBFN_BUS_SPEED_LOW,0x2
+QCUSBFN_BUS_SPEED_FULL_48,0x3
+QCUSBFN_BUS_SPEED_SUPER,0x4
+QCUSBFN_BUS_SPEED_MIN,0x0
+QCUSBFN_BUS_SPEED_MAX,0x4
+}
+#enumv _DWC_EVT_DEV_EVT_TYPE
+{
+DWC_EVT_DEV_DISCONNECT_EVENT,0x0
+DWC_EVT_DEV_USB_RESET,0x1
+DWC_EVT_DEV_CONNECT_DONE,0x2
+DWC_EVT_DEV_USB_LINK_STATE_CHANGE,0x3
+DWC_EVT_DEV_RESUME_REMOTE_WAKE_UP,0x4
+DWC_EVT_DEV_HIBERNATION_REQUEST,0x5
+DWC_EVT_DEV_U3L2L1_SUSPEND,0x6
+DWC_EVT_DEV_START_OF_FRAME,0x7
+DWC_EVT_DEV_RSV0,0x8
+DWC_EVT_DEV_ERRATIC_ERROR,0x9
+DWC_EVT_DEV_CMD_COMPLETE,0xA
+DWC_EVT_DEV_EVENT_BUFFER_OVERFLOW,0xB
+DWC_EVT_DEV_VNDR_DEV_TST_LMP_RCVED,0xC
+DWC_EVT_DEV_MAX,0xD
+}
+#enumv _DWC_EVT_EP_EVT_TYPE
+{
+DWC_EVT_EP_RSV0,0x0
+DWC_EVT_EP_XFER_COMPLETE,0x1
+DWC_EVT_EP_XFER_IN_PROGRESS,0x2
+DWC_EVT_EP_XFER_NOT_READY,0x3
+DWC_EVT_EP_RSV1,0x4
+DWC_EVT_EP_RSV2,0x5
+DWC_EVT_EP_STREAM,0x6
+DWC_EVT_EP_EP_CMD_COMPLETE,0x7
+}
+#enumv _USB_LINK_STATE
+{
+LS_U0,0x0
+LS_U1,0x1
+LS_U2,0x2
+LS_U3,0x3
+LS_SS_DIS,0x4
+LS_RX_DET,0x5
+LS_SS_INACT,0x6
+LS_POLL,0x7
+LS_RECOV,0x8
+LS_HRESET,0x9
+LS_CMPLY,0xA
+LS_LPBK,0xB
+LS_RESUME_RESET,0xF
+LS_ON,0x0
+LS_SLEEP,0x2
+LS_SUSPEND,0x3
+LS_DIS,0x4
+LS_EARLY_SUSPEND,0x5
+LS_RESET,0xE
+LS_RESUME,0xF
+LS_DEFAULT_INIT,0x10
+}

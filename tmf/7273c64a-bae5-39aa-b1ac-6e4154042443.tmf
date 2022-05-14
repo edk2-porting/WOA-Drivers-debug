@@ -1,0 +1,238 @@
+// PDB:  ufnserialclass.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+7273c64a-bae5-39aa-b1ac-6e4154042443 src // SRC=queue.c MJ= MN=
+#typev queue_c820 65 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientReadCompletionRoutine
+{
+}
+#typev queue_c807 64 "%0Complete Request (%10!p!) from SentRequestCollection" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTL FUNC=UsbGxClientReadCompletionRoutine
+{
+Request, ItemPtr -- 10
+}
+#typev queue_c797 63 "%0Received Packet Data: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxClientReadCompletionRoutine
+{
+log_xstr(buffer. (UINT32)Params->IoStatus.Information), ItemHEXDump -- 10
+}
+#typev queue_c775 62 "%0++ Dev Name (%10!s!) Handle (0x%11!Ix!) Ifc (%12!d!) - Read Requests (0x%13!Ix!) Completes with status code %14!s!, Information %15!Id!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxClientReadCompletionRoutine
+{
+deviceContext->ClassInfo.InterfaceName, ItemWString -- 10
+(ULONG_PTR)deviceContext->Device, ItemPtr -- 11
+deviceContext->ClassInfo.HighSpeedClassInterface.InterfaceNumber, ItemLong -- 12
+(ULONG_PTR)Request, ItemPtr -- 13
+Params->IoStatus.Status, ItemNTSTATUS -- 14
+Params->IoStatus.Information, ItemPtr -- 15
+}
+#typev queue_c773 61 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientReadCompletionRoutine
+{
+}
+#typev queue_c753 60 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientWriteCompletionRoutine
+{
+}
+#typev queue_c740 59 "%0Complete Request (%10!p!) from SentRequestCollection" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTL FUNC=UsbGxClientWriteCompletionRoutine
+{
+Request, ItemPtr -- 10
+}
+#typev queue_c716 58 "%0++ Dev Name (%10!s!) Handle (0x%11!Ix!) Ifc (%12!d!) - Write Request (0x%13!Ix!) Completes with status code %14!s!, Information %15!Id!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxClientWriteCompletionRoutine
+{
+deviceContext->ClassInfo.InterfaceName, ItemWString -- 10
+(ULONG_PTR)deviceContext->Device, ItemPtr -- 11
+deviceContext->ClassInfo.HighSpeedClassInterface.InterfaceNumber, ItemLong -- 12
+(ULONG_PTR)Request, ItemPtr -- 13
+Params->IoStatus.Status, ItemNTSTATUS -- 14
+Params->IoStatus.Information, ItemPtr -- 15
+}
+#typev queue_c714 57 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxClientWriteCompletionRoutine
+{
+}
+#typev queue_c567 44 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoRead
+{
+}
+#typev queue_c571 45 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoRead
+{
+}
+#typev queue_c559 43 "%0ERROR - WdfRequestSend failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxEvtIoRead
+{
+status, ItemNTSTATUS -- 10
+}
+#typev queue_c545 42 "%0Error: unable to add READ request to  SentRequestCollection 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoRead
+{
+status, ItemLong -- 10
+}
+#typev queue_c537 41 "%0ADD Request (%10!p!) to SentRequestCollection" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoRead
+{
+Request, ItemPtr -- 10
+}
+#typev queue_c524 40 "%0ERROR - Unable to FormatRequestForInternalIoctl from client write request, status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxEvtIoRead
+{
+status, ItemLong -- 10
+}
+#typev queue_c505 39 "%0ERROR - Cannot find the pipe for transfer, status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TRANSFER FUNC=UsbGxEvtIoRead
+{
+status, ItemLong -- 10
+}
+// PDB:  ufnserialclass.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev queue_c490 38 "%0ERROR - Unable to get memory obj from client read request, status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TRANSFER FUNC=UsbGxEvtIoRead
+{
+status, ItemLong -- 10
+}
+#typev queue_c476 37 "%0:++ Dev Name (%10!s!) Handle (0x%11!Ix!) ifc (%12!d!): sends read req (0x%13!Ix!) w/ length %14!Id!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxEvtIoRead
+{
+pDeviceContext->ClassInfo.InterfaceName, ItemWString -- 10
+(ULONG_PTR)pDeviceContext->Device, ItemPtr -- 11
+pDeviceContext->ClassInfo.HighSpeedClassInterface.InterfaceNumber, ItemLong -- 12
+(ULONG_PTR)Request, ItemPtr -- 13
+Length, ItemPtr -- 14
+}
+#typev queue_c474 36 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoRead
+{
+}
+#typev queue_c110 13 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoStop
+{
+}
+#typev queue_c100 12 "%0Cancel Result %10!d!, ActionFlags 0x%11!x!: Cancel the request (0x%12!Ix!) in the queue (0x%13!Ix!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PNP FUNC=UsbGxEvtIoStop
+{
+result, ItemLong -- 10
+ActionFlags, ItemLong -- 11
+(ULONG_PTR)Request, ItemPtr -- 12
+(ULONG_PTR)Queue, ItemPtr -- 13
+}
+#typev queue_c92 11 "%0Cancel Request (%10!p!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoStop
+{
+Request, ItemPtr -- 10
+}
+#typev queue_c61 10 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoStop
+{
+}
+#typev queue_c689 55 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoWrite
+{
+}
+#typev queue_c694 56 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoWrite
+{
+}
+#typev queue_c681 54 "%0ERROR - WdfRequestSend failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TRANSFER FUNC=UsbGxEvtIoWrite
+{
+status, ItemNTSTATUS -- 10
+}
+#typev queue_c670 53 "%0ADD Request (%10!p!) to SentRequestCollection" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoWrite
+{
+Request, ItemPtr -- 10
+}
+#typev queue_c662 52 "%0Error: unable to add WRITE request to  SentRequestCollection 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTL FUNC=UsbGxEvtIoWrite
+{
+status, ItemLong -- 10
+}
+#typev queue_c649 51 "%0ERROR - Unable to FormatRequestForInternalIoctl from client write request, status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TRANSFER FUNC=UsbGxEvtIoWrite
+{
+status, ItemLong -- 10
+}
+#typev queue_c630 50 "%0ERROR - Cannot find the pipe for transfer, status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TRANSFER FUNC=UsbGxEvtIoWrite
+{
+status, ItemLong -- 10
+}
+// PDB:  ufnserialclass.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev queue_c624 49 "%0Write Packet Data: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxEvtIoWrite
+{
+log_xstr(buffer. (UINT32)buffSiz), ItemHEXDump -- 10
+}
+#typev queue_c613 48 "%0ERROR - Unable to get memory obj from client write request, status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxEvtIoWrite
+{
+status, ItemLong -- 10
+}
+#typev queue_c599 47 "%0:++ Dev Name (%10!s!) Handle (0x%11!Ix!) ifc (%12!d!) sends write req (0x%13!Ix!) w/ length %14!Id!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TRANSFER FUNC=UsbGxEvtIoWrite
+{
+pDeviceContext->ClassInfo.InterfaceName, ItemWString -- 10
+(ULONG_PTR)pDeviceContext->Device, ItemPtr -- 11
+pDeviceContext->ClassInfo.HighSpeedClassInterface.InterfaceNumber, ItemLong -- 12
+(ULONG_PTR)Request, ItemPtr -- 13
+Length, ItemPtr -- 14
+}
+#typev queue_c597 46 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxEvtIoWrite
+{
+}
+#typev queue_c448 35 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxQueueInitialize
+{
+}
+#typev queue_c441 34 "%0QmiRequestQueue - 0x%10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+deviceContext->QmiRequestQueue, ItemPtr -- 10
+}
+#typev queue_c434 33 "%0ERROR - WdfDeviceConfigureRequestDispatching (RmnetRequestQueue) failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+status, ItemLong -- 10
+}
+#typev queue_c412 32 "%0QmiResponseQueue - 0x%10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+deviceContext->QmiResponseQueue, ItemPtr -- 10
+}
+#typev queue_c405 31 "%0ERROR - WdfDeviceConfigureRequestDispatching (RmnetReponseQueue) failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+status, ItemLong -- 10
+}
+#typev queue_c383 30 "%0ControlLineStateQueue - 0x%10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+deviceContext->ControlLineStateQueue, ItemPtr -- 10
+}
+#typev queue_c375 29 "%0ERROR - WdfDeviceConfigureRequestDispatching (ClientIoctlQueue) failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+status, ItemLong -- 10
+}
+#typev queue_c351 28 "%0ERROR - WdfDeviceConfigureRequestDispatching (write) failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+status, ItemLong -- 10
+}
+#typev queue_c338 27 "%0WriteIoQueue - 0x%10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+deviceContext->WriteIoQueue, ItemPtr -- 10
+}
+#typev queue_c330 26 "%0ERROR - WdfIoQueueCreate (write) failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+status, ItemLong -- 10
+}
+#typev queue_c303 25 "%0ERROR - WdfDeviceConfigureRequestDispatching (read) failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+status, ItemLong -- 10
+}
+#typev queue_c290 24 "%0ReadIoQueue - 0x%10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+deviceContext->ReadIoQueue, ItemPtr -- 10
+}
+#typev queue_c282 23 "%0ERROR - WdfIoQueueCreate (read) failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+status, ItemLong -- 10
+}
+#typev queue_c257 22 "%0DefaultIoQueue - 0x%10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+deviceContext->ParallelIoQueue, ItemPtr -- 10
+}
+#typev queue_c249 21 "%0ERROR - WdfIoQueueCreate (parallel ioctl q) failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+status, ItemLong -- 10
+}
+#typev queue_c224 20 "%0DefaultIoQueue - 0x%10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+deviceContext->DefaultIoQueue, ItemPtr -- 10
+}
+#typev queue_c216 19 "%0ERROR - WdfIoQueueCreate (default) failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=UsbGxQueueInitialize
+{
+status, ItemLong -- 10
+}
+#typev queue_c193 18 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxQueueInitialize
+{
+}
+#typev queue_c158 17 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbfnEvtIoCanceledOnQueue
+{
+}
+#typev queue_c149 16 "%0Cancel the request (0x%10!Ix!) in the manual queues (0x%11!Ix!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_PNP FUNC=UsbfnEvtIoCanceledOnQueue
+{
+(ULONG_PTR)Request, ItemPtr -- 10
+(ULONG_PTR)Queue, ItemPtr -- 11
+}
+#typev queue_c128 15 "%0Attempt to Cancel the request (0x%10!Ix!) in the queues (0x%11!Ix!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_PNP FUNC=UsbfnEvtIoCanceledOnQueue
+{
+(ULONG_PTR)Request, ItemPtr -- 10
+(ULONG_PTR)Queue, ItemPtr -- 11
+}
+#typev queue_c126 14 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbfnEvtIoCanceledOnQueue
+{
+}

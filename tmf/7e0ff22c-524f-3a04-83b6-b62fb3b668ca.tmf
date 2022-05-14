@@ -1,0 +1,47 @@
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+7e0ff22c-524f-3a04-83b6-b62fb3b668ca driver // SRC=ClockAppsDCVS.c MJ= MN=
+#typev ClockWin_c1932 18 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to allocate %10!d! bytes to hold list of known NPA nodes." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=PepClockGetKnownNPAResourceNames
+{
+nSize, ItemLong -- 10
+}
+// PDB:  qcpep850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev ClockAppsDCVS_c598 17 "%0%10!s! (Freq: %11!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_NPANode
+{
+pResource->definition->name, ItemString -- 10
+pNewConfig->nFreqHz, ItemLong -- 11
+}
+#typev ClockAppsDCVS_c572 15 "%0DALSYS_LOGEVENT_ERROR: Unable to enable clock: %10!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_NPANode
+{
+aClocks[i].szName, ItemString -- 10
+}
+#typev ClockAppsDCVS_c590 16 "%0DALSYS_LOGEVENT_ERROR: Unable to configure clock: %10!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_NPANode
+{
+aClocks[0].szName, ItemString -- 10
+}
+#typev ClockAppsDCVS_c531 14 "%0DALSYS_LOGEVENT_ERROR: Unable to disable clock: %10!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_NPANode
+{
+aClocks[i].szName, ItemString -- 10
+}
+#typev ClockAppsDCVS_c506 13 "%0Client %10!s! changed resource %11!s! from %12!d! (required) to %13!d! (requested) while %14!d! (active)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_NPANode
+{
+pClient->name, ItemString -- 10
+pResource->definition->name, ItemString -- 11
+pResource->required_state, ItemLong -- 12
+pResource->request_state, ItemLong -- 13
+pResource->active_state, ItemLong -- 14
+}
+#typev ClockAppsDCVS_c411 11 "%0DALSYS_LOGEVENT_FATAL_ERROR: Invalid OSM configuration detected by Clock_SetCPUConfig." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SetCPUConfig
+{
+}
+#typev ClockAppsDCVS_c419 12 "%0Freq[/clk/cpu%10!d!] = %11!u! (Hz), proxy cpu%12!d!, aggregated = %13!u! (Hz)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SetCPUConfig
+{
+eCPU, ItemLong -- 10
+pPerfConfig->nFreqHz, ItemLong -- 11
+eCPUProxy, ItemLong -- 12
+nAggregatedFreqHz, ItemLong -- 13
+}
+#typev ClockAppsDCVS_c342 10 "%0DALSYS_LOGEVENT_FATAL_ERROR: Invalid configuration detected by Clock_SetCPUConfig." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SetCPUConfig
+{
+}

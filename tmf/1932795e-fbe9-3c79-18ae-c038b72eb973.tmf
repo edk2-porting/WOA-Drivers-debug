@@ -1,0 +1,37 @@
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+1932795e-fbe9-3c79-18ae-c038b72eb973 WMRIL // SRC=WMRilStringConversion.cpp MJ= MN=
+#typev WMRilStringConversion_cpp91 12 "%0%!LEVEL! %!FUNC!:String conversion failed. error = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::Util::ConvertCharStrToTCharStr
+{
+GetLastError(), ItemLong -- 10
+}
+#typev WMRilStringConversion_cpp71 11 "%0%!LEVEL! %!FUNC!:Insufficient destination buffer (%10!u! TCHARs) for converting %11!u! chars." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::Util::ConvertCharStrToTCharStr
+{
+static_cast<UINT>(CharsOfTCharStr), ItemLong -- 10
+static_cast<UINT>(CharsToConvert), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilStringConversion_cpp61 10 "%0%!LEVEL! %!FUNC!:Insufficient destination buffer (%10!u! TCHARs, including null-terminated TCHAR) for converting %11!u! chars." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::Util::ConvertCharStrToTCharStr
+{
+static_cast<UINT>(CharsOfTCharStr), ItemLong -- 10
+static_cast<UINT>(CharsToConvert), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilStringConversion_cpp170 15 "%0%!LEVEL! %!FUNC!:String conversion failed. error = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::Util::ConvertTCharStrToCharStr
+{
+GetLastError(), ItemLong -- 10
+}
+#typev WMRilStringConversion_cpp143 14 "%0%!LEVEL! %!FUNC!:Insufficient destination buffer (%10!u! chars) for converting %11!u! TCHARs." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::Util::ConvertTCharStrToCharStr
+{
+static_cast<UINT>(CharsOfCharStr), ItemLong -- 10
+static_cast<UINT>(TCharsToConvert), ItemLong -- 11
+}
+// PDB:  WMRil.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+#typev WMRilStringConversion_cpp133 13 "%0%!LEVEL! %!FUNC!:Insufficient destination buffer (%10!u! chars, including null-terminated char) for converting %11!u! TCHARs." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ZONE_DRIVER FUNC=WMRil::Util::ConvertTCharStrToCharStr
+{
+static_cast<UINT>(CharsOfCharStr), ItemLong -- 10
+static_cast<UINT>(TCharsToConvert), ItemLong -- 11
+}

@@ -1,0 +1,32 @@
+// PDB:  qcgnss.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+901e5998-bd83-3fcb-42c7-45db0c75b34e 10.4 // SRC=adposition.c MJ= MN=
+#typev adposition_c210 24 "%0adposition.c::210 QCGNSS_Adposition:: WdfWaitLockAcquire() Failed " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_ERR FUNC=GPSDriverAdPositionInit
+{
+}
+#typev adposition_c159 19 "%0adposition.c::159 QCGPS: InjectPosition " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=InjectPosition
+{
+}
+#typev adposition_c122 18 "%0adposition.c::122 QCGPS: InjectPosition  Hor Accu %10!d!, Conf %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=InjectPosition
+{
+pGnssInjectPosition->AccuracyData.HorizontalAccuracy, ItemLong -- 10
+pGnssInjectPosition->AccuracyData.HorizontalConfidence, ItemLong -- 11
+}
+#typev adposition_c105 17 "%0adposition.c::105 QCGPS: InjectPosition  Age %10!d!, lat %11!s!, long %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=InjectPosition
+{
+pGnssInjectPosition->Age, ItemLong -- 10
+pGnssInjectPosition->BasicData.Latitude, ItemDouble -- 11
+pGnssInjectPosition->BasicData.Longitude, ItemDouble -- 12
+}
+#typev adposition_c199 23 "%0adposition.c::199 QCGPS: WaitForCmdDone  FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitForCmdDone
+{
+}
+#typev adposition_c197 22 "%0adposition.c::197 QCGPS: WaitForCmdDone  SUCCESS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_MEDIUM FUNC=WaitForCmdDone
+{
+}
+#typev adposition_c188 21 "%0adposition.c::188 QMIXtraPosResponseIndEvent WAIT_TIMEOUT!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=WaitForCmdDone
+{
+}
+#typev adposition_c181 20 "%0adposition.c::181 WaitForCmdDone Event Received" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_LOW FUNC=WaitForCmdDone
+{
+}

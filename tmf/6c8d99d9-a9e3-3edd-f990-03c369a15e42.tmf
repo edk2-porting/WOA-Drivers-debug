@@ -1,0 +1,44 @@
+// PDB:  QcTftpKmdf850.pdb
+// PDB:  Last Updated :2020-09-09:19:38:55:000 (UTC) [tracepdb]
+6c8d99d9-a9e3-3edd-f990-03c369a15e42 kmdf // SRC=tftp_file.c MJ= MN=
+#typev tftp_file_c196 12 "%4!s! | tftp_file.c(196) ::Completed folder hierarchy creation." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=CreateFolderHierarchy
+{
+}
+#typev tftp_file_c158 10 "%4!s! | tftp_file.c(158) ::Processing folder hierarchy creation for %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=CreateFolderHierarchy
+{
+folderUnicodePath.Buffer, ItemWString -- 10
+}
+#typev tftp_file_c196 12 "%4!s! | tftp_file.c(196) ::Completed folder hierarchy creation." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=CreateFolderHierarchy$fin$0
+{
+}
+#typev tftp_file_c158 10 "%4!s! | tftp_file.c(158) ::Processing folder hierarchy creation for %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=CreateFolderHierarchy$fin$0
+{
+folderUnicodePath.Buffer, ItemWString -- 10
+}
+#typev tftp_file_c376 15 "%4!s! | tftp_file.c(376) ::ZwClose Handle = 0x%10!08x!%11!08x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=tftp_file_close
+{
+(UINT32)((ULONG_PTR)handle >> 32), ItemLong -- 10
+(UINT32)handle, ItemLong -- 11
+}
+#typev tftp_file_c264 14 "%4!s! | tftp_file.c(264) ::Folder hierarchy for requested write path does not exist. Creating folders." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=tftp_file_open
+{
+}
+#typev tftp_file_c258 13 "%4!s! | tftp_file.c(258) ::ZwCreateFile | Sanitized Path = %10!s! | Mode = %11!s! | Status = %12!s! | Handle = 0x%13!08x!%14!08x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=tftp_file_open
+{
+sanitizedPath, ItemString -- 10
+mode, ItemString -- 11
+status, ItemNTSTATUS -- 12
+(UINT32)((ULONG_PTR)*handle >> 32), ItemLong -- 13
+(UINT32)*handle, ItemLong -- 14
+}
+#typev tftp_file_c264 14 "%4!s! | tftp_file.c(264) ::Folder hierarchy for requested write path does not exist. Creating folders." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=tftp_file_open$fin$0
+{
+}
+#typev tftp_file_c258 13 "%4!s! | tftp_file.c(258) ::ZwCreateFile | Sanitized Path = %10!s! | Mode = %11!s! | Status = %12!s! | Handle = 0x%13!08x!%14!08x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCTFTP_KMDF FUNC=tftp_file_open$fin$0
+{
+sanitizedPath, ItemString -- 10
+mode, ItemString -- 11
+status, ItemNTSTATUS -- 12
+(UINT32)((ULONG_PTR)*handle >> 32), ItemLong -- 13
+(UINT32)*handle, ItemLong -- 14
+}
