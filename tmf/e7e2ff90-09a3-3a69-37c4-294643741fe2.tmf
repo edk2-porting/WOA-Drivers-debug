@@ -1,0 +1,503 @@
+// PDB:  qcpil850.pdb
+// PDB:  Last Updated :2020-09-15:03:47:00:391 (UTC) [tracepdb]
+e7e2ff90-09a3-3a69-37c4-294643741fe2 PIL-Rel // SRC=tree_api.c MJ= MN=
+#typev tree_api_c415 32 "%0Error: Unsupported Command 0x%10!08X! received." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ConfigureTreePassThroughParams
+{
+CommandId, ItemLong -- 10
+}
+#typev tree_api_c295 31 "%0Error: TrustZone processor ID not defined to set reloc image range." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ConfigureTreePassThroughParams
+{
+}
+#typev tree_api_c283 30 "%0Error: ImageInfo passed to ConfigureTreePassThroughParams function is not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ConfigureTreePassThroughParams
+{
+}
+#typev tree_api_c258 29 "%0Error: TrustZone processor ID not defined for XPU unlock." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ConfigureTreePassThroughParams
+{
+}
+#typev tree_api_c246 28 "%0Error: ImageInfo passed to ConfigureTreePassThroughParams function is not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ConfigureTreePassThroughParams
+{
+}
+#typev tree_api_c221 27 "%0Error: TrustZone authentication not possible, since the hash segment not loaded." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ConfigureTreePassThroughParams
+{
+}
+#typev tree_api_c215 26 "%0Error: TrustZone processor ID not defined for image authentication." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ConfigureTreePassThroughParams
+{
+}
+#typev tree_api_c203 25 "%0Error: ImageInfo passed to ConfigureTreePassThroughParams function is not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ConfigureTreePassThroughParams
+{
+}
+#typev tree_api_c177 24 "%0Error: TrustZone initialization not possible, since the hash segment not loaded." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ConfigureTreePassThroughParams
+{
+}
+#typev tree_api_c171 23 "%0Error: TrustZone processor ID not defined for TZ init." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ConfigureTreePassThroughParams
+{
+}
+#typev tree_api_c159 22 "%0Error: ImageInfo passed to ConfigureTreePassThroughParams function is not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ConfigureTreePassThroughParams
+{
+}
+#typev tree_api_c148 21 "%0Error: Input arguments passed to ConfigureTreePassThroughParams function are not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ConfigureTreePassThroughParams
+{
+}
+#typev tree_api_c43 10 "%0Warning: Input arguments passed to SetTreeInterface function are not valid." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SetTreeInterface
+{
+}
+#typev tree_api_c970 80 "%0Exit from TreeAuthAndResetSubsystem" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+}
+#typev tree_api_c957 79 "%0Error: TrEE syscall results (TZ_PIL_AUTH_RESET_ID) %10!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+scmResponse->status, ItemULongLong -- 10
+}
+#typev tree_api_c951 78 "%0Error: Tree ELF image authentication failed with status 0x%10!X! for image %11!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+status, ItemLong -- 10
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 11
+}
+#typev tree_api_c932 77 "%0Error: ELF image authentication failed with status 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+status, ItemLong -- 10
+}
+#typev tree_api_c926 76 "%0Error: Tree return value not available. ELF image authentication failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+}
+#typev tree_api_c920 75 "%0Error: Tree command is incomplete. ELF image authentication failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+}
+#typev tree_api_c915 74 "%0The ELF image was successfully authenticated and the subsystem released from reset, file: %10!s!, Trust Zone ID: %11!d!, GUID: %12!s!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+fileContext->ImageInfo.TzProcessorId, ItemLong -- 11
+&fileContext->ImageInfo.ImageGuid, ItemGuid -- 12
+}
+#typev tree_api_c874 73 "%0Attempting ELF image authentication for the ELF file: %10!s!, Trust Zone ID: %11!d!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+fileContext->ImageInfo.TzProcessorId, ItemLong -- 11
+}
+#typev tree_api_c868 72 "%0Error: The connection to the Tree driver has not yet been established." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+}
+#typev tree_api_c859 71 "%0Error: Unable to configure Tree parameters for image authentication." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+}
+#typev tree_api_c848 69 "%0WARNING: Hash segment need not be loaded in this build of the PIL driver, so no need to perform Tree authentication and reset." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+}
+#typev tree_api_c831 68 "%0Error: TreeAuthAndResetSubsystem: deviceContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+}
+#typev tree_api_c823 67 "%0Error: TreeAuthAndResetSubsystem: device is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+}
+#typev tree_api_c815 66 "%0Error: TreeAuthAndResetSubsystem: fileContext is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+}
+#typev tree_api_c807 65 "%0Error: Input argument passed to TreeAuthAndResetSubsystem function is not valid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+}
+#typev tree_api_c803 64 "%0Entered TreeAuthAndResetSubsystem" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeAuthAndResetSubsystem
+{
+}
+#typev tree_api_c556 42 "%0Warning: (PIL SetCryptoClock) Setting cryptoclock with ACPI override value!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INTERFACES FUNC=TreeDirectPerformUnlockXpu
+{
+}
+#typev tree_api_c548 41 "%0Successfully intiated call to unlock XPU protected memory for ELF image failed initialization: %10!s!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INTERFACES FUNC=TreeDirectPerformUnlockXpu
+{
+ImageInfo->AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev tree_api_c548 40 "%0Call to unlock XPU protected memory for ELF image %10!s! failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=TreeDirectPerformUnlockXpu
+{
+ImageInfo->AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev tree_api_c516 39 "%0Warning: (PIL SetCryptoClock) Setting cryptoclock with ACPI override value!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INTERFACES FUNC=TreeDirectPerformUnlockXpu
+{
+}
+#typev tree_api_c482 38 "%0The Tree driver Standard Interface pointer is null." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=TreeDirectPerformUnlockXpu
+{
+}
+#typev tree_api_c474 37 "%0The Tree driver Standard Interface is not yet enabled." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=TreeDirectPerformUnlockXpu
+{
+}
+#typev tree_api_c465 36 "%0Error: TreeDirectPerformUnlockXpu: deviceContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=TreeDirectPerformUnlockXpu
+{
+}
+#typev tree_api_c457 35 "%0Error: TreeDirectPerformUnlockXpu: device is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=TreeDirectPerformUnlockXpu
+{
+}
+#typev tree_api_c449 34 "%0Error: TreeDirectPerformUnlockXpu: ImageFileObject is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=TreeDirectPerformUnlockXpu
+{
+}
+#typev tree_api_c441 33 "%0Error: Input argument passed to TreeDirectPerformUnlockXpu function is not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=TreeDirectPerformUnlockXpu
+{
+}
+#typev tree_api_c1688 142 "%0TZ call TZ_DISABLE_MASTER_MPU failed. NTSTATUS 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=TreeDisableMasterMPU
+{
+status, ItemLong -- 10
+}
+#typev tree_api_c1682 141 "%0Error: Tree return value not available. Share request failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeDisableMasterMPU
+{
+}
+#typev tree_api_c1676 140 "%0Error: Tree command is incomplete. NTSTATUS 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeDisableMasterMPU
+{
+status, ItemLong -- 10
+}
+#typev tree_api_c1672 139 "%0TZ response is TREE_API_TZ_RESPONSE_COMMAND_COMPLETED" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_ELF FUNC=TreeDisableMasterMPU
+{
+}
+#typev tree_api_c1656 138 "%0IOCTL to TZ_DISABLE_MASTER_MPU successful" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_ELF FUNC=TreeDisableMasterMPU
+{
+}
+#typev tree_api_c1640 137 "%0Calling Tree via synchronous IOCTL to disable master MPU TZ_DISABLE_MASTER_MPU" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=TreeDisableMasterMPU
+{
+}
+#typev tree_api_c1617 136 "%0Connection to the SCM driver not available" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=TreeDisableMasterMPU
+{
+}
+#typev tree_api_c1607 135 "%0Invalid device context retrieved in TreeDisableMasterMPU function." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=TreeDisableMasterMPU
+{
+}
+#typev tree_api_c1599 134 "%0Invalid Parameters passed to TreeDisableMasterMPU function." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=TreeDisableMasterMPU
+{
+}
+#typev tree_api_c1595 133 "%0Entering TreeDisableMasterMPU" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=TreeDisableMasterMPU
+{
+}
+#typev tree_api_c778 63 "%0Exit from TreeForceAuthSubsystem" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeForceAuthSubsystem
+{
+}
+#typev tree_api_c770 62 "%0Forcing the authentication of the ELF image, without TZ or release from reset." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_ELF FUNC=TreeForceAuthSubsystem
+{
+}
+#typev tree_api_c765 61 "%0Error: TreeForceAuthSubsystem: fileContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeForceAuthSubsystem
+{
+}
+#typev tree_api_c757 60 "%0Error: Input argument passed to TreeForceAuthSubsystem function is not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeForceAuthSubsystem
+{
+}
+#typev tree_api_c753 59 "%0Entered TreeForceAuthSubsystem" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeForceAuthSubsystem
+{
+}
+#typev tree_api_c1413 119 "%0Exit from TreeGetPilRelocRange" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeGetPilRelocRange
+{
+}
+#typev tree_api_c1319 111 "%0Error: Input arguments passed to TreeGetPilRelocRange function are invalid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeGetPilRelocRange
+{
+}
+#typev tree_api_c1410 118 "%0Error: Request to get relocatable range failed with status 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeGetPilRelocRange
+{
+status, ItemLong -- 10
+}
+#typev tree_api_c1404 117 "%0Error: Tree return value not available. Request to get relocatable range failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeGetPilRelocRange
+{
+}
+#typev tree_api_c1398 116 "%0Error: Tree command is incomplete. Request to get relocatable range failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeGetPilRelocRange
+{
+}
+#typev tree_api_c1391 115 "%0The relocatable range was successfully returned" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_ELF FUNC=TreeGetPilRelocRange
+{
+}
+#typev tree_api_c1352 114 "%0Error: Unable to complete TreeGetPilRelocRange due to ConfigureTreePassThroughParams error." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeGetPilRelocRange
+{
+}
+#typev tree_api_c1341 113 "%0Error: The connection to the Tree driver has not yet been established." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeGetPilRelocRange
+{
+}
+#typev tree_api_c1327 112 "%0Error: TreeGetPilRelocRange: deviceContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeGetPilRelocRange
+{
+}
+#typev tree_api_c1315 110 "%0Entered TreeGetPilRelocRange" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeGetPilRelocRange
+{
+}
+#typev tree_api_c130 20 "%0Exit from TreeQueryPassThroughServiceInfo" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=TreeQueryPassThroughServiceInfo
+{
+}
+#typev tree_api_c125 19 "%0Error: Query Pass Through Service Information failed with status 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=TreeQueryPassThroughServiceInfo
+{
+status, ItemLong -- 10
+}
+#typev tree_api_c119 18 "%0Error: Query Pass Through Service Information failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=TreeQueryPassThroughServiceInfo
+{
+}
+#typev tree_api_c115 17 "%0PassThrough Service Minor Version:0x%10!08X!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=TreeQueryPassThroughServiceInfo
+{
+pServiceInfo->ServiceMinorVersion, ItemLong -- 10
+}
+#typev tree_api_c114 16 "%0PassThrough Service Major Version:0x%10!08X!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=TreeQueryPassThroughServiceInfo
+{
+pServiceInfo->ServiceMajorVersion, ItemLong -- 10
+}
+#typev tree_api_c113 15 "%0PassThrough Interface Version:0x%10!08X!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=TreeQueryPassThroughServiceInfo
+{
+pServiceInfo->InterfaceVersion, ItemLong -- 10
+}
+#typev tree_api_c112 14 "%0Querying Pass Through Service Information succeeded." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=TreeQueryPassThroughServiceInfo
+{
+}
+#typev tree_api_c90 13 "%0Error: PIL deviceContext extracted in TreeQueryPassThroughServiceInfo function is not valid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=TreeQueryPassThroughServiceInfo
+{
+}
+#typev tree_api_c82 12 "%0Error: Input arguments passed to TreeQueryPassThroughServiceInfo function are not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=TreeQueryPassThroughServiceInfo
+{
+}
+#typev tree_api_c78 11 "%0Entered TreeQueryPassThroughServiceInfo" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=TreeQueryPassThroughServiceInfo
+{
+}
+#typev tree_api_c736 58 "%0Exit from TreeSendImageMetaData" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+}
+#typev tree_api_c730 57 "%0Error: TrEE syscall results (TZ_PIL_INIT_ID) %10!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+scmResponse->status, ItemULongLong -- 10
+}
+#typev tree_api_c724 56 "%0Error: Tree initialization for ELF file authentication failed with status 0x%10!X! for image %11!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+status, ItemLong -- 10
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 11
+}
+#typev tree_api_c718 55 "%0Error: Tree return value not available. Tree initialization for authentication of the ELF image failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+}
+#typev tree_api_c712 54 "%0Error: Tree command is incomplete. Tree initialization for authentication of the ELF image failed, response: %10!I64u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+scmResponse->status, ItemULongLong -- 10
+}
+#typev tree_api_c708 53 "%0Tree initialization for authentication was successful with the ELF image hash segment, header, and program segments." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+}
+#typev tree_api_c668 52 "%0Attempting initialization of TZ for the ELF file: %10!s!, Trust Zone ID: %11!d!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+fileContext->ImageInfo.TzProcessorId, ItemLong -- 11
+}
+#typev tree_api_c662 51 "%0Error: The connection to the Tree driver has not yet been established." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+}
+#typev tree_api_c653 50 "%0Error: Unable to configure Tree parameters for TZ initialization." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+}
+#typev tree_api_c643 48 "%0WARNING: Hash segment need not be loaded in this build of the PIL driver,so no need to perform SCM initialization." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+}
+#typev tree_api_c626 47 "%0Error: TreeSendImageMetaData: deviceContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+}
+#typev tree_api_c618 46 "%0Error: TreeSendImageMetaData: device is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+}
+#typev tree_api_c610 45 "%0Error: TreeSendImageMetaData: fileContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+}
+#typev tree_api_c602 44 "%0Error: Input argument passed to TreeSendImageMetaData function is not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+}
+#typev tree_api_c598 43 "%0Entered TreeSendImageMetaData" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeSendImageMetaData
+{
+}
+#typev tree_api_c1928 159 "%0Exit from TreeSendModemAccessMemoryRegion" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+}
+#typev tree_api_c1728 144 "%0Error: Input argument passed to TreeSendModemAccessMemoryRegion function is not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+}
+#typev tree_api_c1910 158 "%0Error: TrEE syscall results (HYP_MEM_PROTECT_ASSIGN) NTSTATUS: 0x%10!X!, TZ response: %11!I64u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+status, ItemLong -- 10
+scmResponse->status, ItemULongLong -- 11
+}
+#typev tree_api_c1902 157 "%0Error: Tree return value not available. Modem access request failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+}
+#typev tree_api_c1896 156 "%0Error: Tree command is incomplete. Modem access request failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+}
+#typev tree_api_c1892 155 "%0The DDR memory was successfully configured for modem access." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+}
+#typev tree_api_c1864 154 "%0Calling Tree via synchronous IOCTL to configure memory for modem access" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+}
+#typev tree_api_c1834 153 "%0Virtual to Physical address conversion for srcVMListVirtAddr failed for virtual address: 0x%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+srcVMListVirtAddr, ItemPtr -- 10
+}
+#typev tree_api_c1823 152 "%0Allocation of contiguous memory for srcVMListVirtAddr failed. NTSTATUS: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+status, ItemLong -- 10
+}
+#typev tree_api_c1807 151 "%0Virtual to Physical address conversion for destvmListVirtAddr failed for virtual address: 0x%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+destvmListVirtAddr, ItemPtr -- 10
+}
+#typev tree_api_c1790 150 "%0Allocation of contiguous memory for destvmListVirtAddr failed. NTSTATUS: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+status, ItemLong -- 10
+}
+#typev tree_api_c1774 149 "%0Virtual to Physical address conversion for ipaListVirtAddr for virtual address: 0x%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+ipaListVirtAddr, ItemPtr -- 10
+}
+#typev tree_api_c1769 148 "%0Sending memory information to TZ, physical address: 0x%10!I64X!, length: 0x%11!I64x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+(UINT64)ipaListVirtAddr->IPAaddr, ItemLongLongXX -- 10
+ipaListVirtAddr->IPAsize, ItemLongLongX -- 11
+}
+#typev tree_api_c1762 147 "%0Allocation of contiguous memory for the ipaListVirtAddrfailed. NTSTATUS: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+status, ItemLong -- 10
+}
+#typev tree_api_c1746 146 "%0Error: The connection to the Tree driver has not yet been established." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+}
+#typev tree_api_c1736 145 "%0Error: TreeSendModemAccessMemoryRegion: deviceContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+}
+#typev tree_api_c1724 143 "%0Entered TreeSendModemAccessMemoryRegion" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeSendModemAccessMemoryRegion
+{
+}
+#typev tree_api_c1289 109 "%0Exit from TreeSetSubsysRelocRange" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+}
+#typev tree_api_c1283 108 "%0Error: TrEE syscall results (TZ_PIL_MEM_ID) %10!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+scmResponse->status, ItemULongLong -- 10
+}
+#typev tree_api_c1277 107 "%0Error: Request to define relocatable subsystem memory, TZ processor ID: %10!d! failed with status 0x%11!X! for image %12!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+tzProcessorId, ItemLong -- 10
+status, ItemLong -- 11
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 12
+}
+#typev tree_api_c1271 106 "%0Error: Tree return value not available. Request to define relocatable subsystem memory (TZ processor ID: %10!d!) failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+tzProcessorId, ItemLong -- 10
+}
+#typev tree_api_c1265 105 "%0Error: Tree command is incomplete. Request to define relocatable subsystem memory (TZ processor ID: %10!d!) failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+tzProcessorId, ItemLong -- 10
+}
+#typev tree_api_c1261 104 "%0The relocatable subsystem memory was successfully defined for TZ processor ID: %10!d!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+tzProcessorId, ItemLong -- 10
+}
+#typev tree_api_c1221 103 "%0Defining the address range for the relocatable ELF file: %10!s!, Trust Zone ID: %11!d!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+tzProcessorId, ItemLong -- 11
+}
+#typev tree_api_c1215 102 "%0Error: The connection to the Tree driver has not yet been established." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+}
+#typev tree_api_c1207 101 "%0Error: Unable to complete TreeSetSubsysRelocRange due to ConfigureTreePassThroughParams error." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+}
+#typev tree_api_c1197 100 "%0Error: Returning error as TreeSetSubsysRelocRange called on fixed ELF image." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+}
+#typev tree_api_c1181 99 "%0Error: TreeSetSubsysRelocRange: deviceContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+}
+#typev tree_api_c1173 98 "%0Error: TreeSetSubsysRelocRange: device is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+}
+#typev tree_api_c1165 97 "%0Error: TreeSetSubsysRelocRange: fileContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+}
+#typev tree_api_c1157 96 "%0Error: Input argument passed to TreeSetSubsysRelocRange function is not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+}
+#typev tree_api_c1153 95 "%0Entered TreeSetSubsysRelocRange" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeSetSubsysRelocRange
+{
+}
+#typev tree_api_c1573 132 "%0Exit from TreeUnlockMemoryRegion" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+}
+#typev tree_api_c1451 121 "%0Error: Input argument passed to TreeUnlockMemoryRegion function is not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+}
+#typev tree_api_c1566 131 "%0Error: TrEE syscall results (TZ_PIL_SHARE_MEMORY_ID) %10!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+scmResponse->status, ItemULongLong -- 10
+}
+#typev tree_api_c1560 130 "%0Error: Request to share subsystem memory failed with status 0x%10!X! for image %11!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+status, ItemLong -- 10
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 11
+}
+#typev tree_api_c1554 129 "%0Error: Tree return value not available. Share request failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+}
+#typev tree_api_c1548 128 "%0Error: Tree command is incomplete. Share request failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+}
+#typev tree_api_c1544 127 "%0The subsystem memory was successfully shared." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+}
+#typev tree_api_c1501 126 "%0Error: The connection to the Tree driver has not yet been established." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+}
+#typev tree_api_c1483 125 "%0Error: Unable to unlock memory due to ConfigureTreePassThroughParams error." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+}
+#typev tree_api_c1475 124 "%0Error: TreeUnlockMemoryRegion: deviceContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+}
+#typev tree_api_c1467 123 "%0Error: TreeUnlockMemoryRegion: device is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+}
+#typev tree_api_c1459 122 "%0Error: TreeUnlockMemoryRegion: fileContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+}
+#typev tree_api_c1447 120 "%0Entered TreeUnlockMemoryRegion" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeUnlockMemoryRegion
+{
+}
+#typev tree_api_c1122 94 "%0Exit from TreeUnlockSubsystemXpu" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+}
+#typev tree_api_c1115 93 "%0Error: TrEE syscall results (TZ_PIL_UNLOCK_XPU_ID) %10!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+scmResponse->status, ItemULongLong -- 10
+}
+#typev tree_api_c1109 92 "%0Error: Request to unlock subsystem memory, TZ processor ID: %10!d! failed with status 0x%11!X! for image %12!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+tzProcessorId, ItemLong -- 10
+status, ItemLong -- 11
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 12
+}
+#typev tree_api_c1103 91 "%0Error: Tree return value not available. Request to unlock subsystem memory (TZ processor ID: %10!d!) failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+tzProcessorId, ItemLong -- 10
+}
+#typev tree_api_c1097 90 "%0Error: Tree command is incomplete. Request to unlock subsystem memory (TZ processor ID: %10!d!) failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+tzProcessorId, ItemLong -- 10
+}
+#typev tree_api_c1092 89 "%0The subsystem memory region (TZ processor ID: %10!d!) was successfully unlocked." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+tzProcessorId, ItemLong -- 10
+}
+#typev tree_api_c1052 88 "%0Attempting to unlock XPU protected memory regions for the ELF file: %10!s!, Trust Zone ID: %11!d!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+tzProcessorId, ItemLong -- 11
+}
+#typev tree_api_c1046 87 "%0Error: The connection to the Tree driver has not yet been established." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+}
+#typev tree_api_c1037 86 "%0Error: Unable to perform XPU unlock for memory due to ConfigureTreePassThroughParams error." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+}
+#typev tree_api_c1024 85 "%0Error: TreeUnlockSubsystemXpu: deviceContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+}
+#typev tree_api_c1016 84 "%0Error: TreeUnlockSubsystemXpu: device is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+}
+#typev tree_api_c1008 83 "%0Error: TreeUnlockSubsystemXpu: fileContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+}
+#typev tree_api_c1000 82 "%0Error: Input argument passed to TreeUnlockSubsystemXpu function is not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+}
+#typev tree_api_c996 81 "%0Entered TreeUnlockSubsystemXpu" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ELF FUNC=TreeUnlockSubsystemXpu
+{
+}

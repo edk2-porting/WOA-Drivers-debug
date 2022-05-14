@@ -1,0 +1,146 @@
+// PDB:  qcpil850.pdb
+// PDB:  Last Updated :2020-09-15:03:47:00:391 (UTC) [tracepdb]
+4e8abf11-32c7-361c-4361-921c2a167e36 PIL-Rel // SRC=standard_interface.c MJ= MN=
+#typev standard_interface_c401 40 "%0Exit GetMemoryLayout." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+}
+#typev standard_interface_c341 35 "%0Error: Not enough runs provided by the caller, expected %10!d!, received %11!I64x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+PIL_QUALCOMM_IMAGE_NUM_MEMORY_RUNS, ItemLong -- 10
+MemoryDescriptor->NumberOfRuns, ItemLongLongX -- 11
+}
+#typev standard_interface_c398 39 "%0Returning a memory descriptor with %10!I64d! runs, and %11!I64d! total number of pages." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+MemoryDescriptor->NumberOfRuns, ItemLongLong -- 10
+MemoryDescriptor->TotalNumberOfPages, ItemLongLong -- 11
+}
+#typev standard_interface_c323 33 "%0Error: Failed to get virtual address for a loaded image GUID: %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+(PGUID)&imageInfo->ImageGuid, ItemGuid -- 10
+}
+#typev standard_interface_c297 32 "%0Error: The calculation of segment sizes failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+}
+#typev standard_interface_c290 31 "%0Error: Not enough runs provided by the caller, expected %10!d!, received %11!I64x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+PIL_QUALCOMM_IMAGE_NUM_MEMORY_RUNS, ItemLong -- 10
+MemoryDescriptor->NumberOfRuns, ItemLongLongX -- 11
+}
+#typev standard_interface_c270 29 "%0Error: Failed to retrieve virtual address for a non-relocated image with GUID: %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+(PGUID)&imageInfo->ImageGuid, ItemGuid -- 10
+}
+#typev standard_interface_c233 28 "%0Error: imageInfo from GetImageInfo is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+}
+#typev standard_interface_c389 38 "%0Error: Not enough runs provided by the caller, expected %10!d!, received %11!I64x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+PIL_QUALCOMM_IMAGE_NUM_MEMORY_RUNS, ItemLong -- 10
+MemoryDescriptor->NumberOfRuns, ItemLongLongX -- 11
+}
+#typev standard_interface_c371 36 "%0Error: Failure getting mapped virtual address for subsystem with GUID: %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+(PGUID)&imageMemory.ImageGuid, ItemGuid -- 10
+}
+#typev standard_interface_c218 27 "%0Warning: Image details not found in relocatable image list." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+}
+#typev standard_interface_c214 26 "%0Warning: Going with preallocated memory to find image details" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+}
+#typev standard_interface_c203 25 "%0Searching image info in PIL owned images list." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+}
+#typev standard_interface_c191 24 "%0Entered GetMemoryLayout." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=GetMemoryLayout
+{
+}
+#typev standard_interface_c472 47 "%0Exit QueryISImageProtected." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsImageTZLocked
+{
+}
+#typev standard_interface_c466 46 "%0Either Subsystem image not yet loaded by PIL (or) Subsystem not a loadable image by PIL" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsImageTZLocked
+{
+}
+#typev standard_interface_c465 45 "%0Subsystem information not found in PIL loaded images list, SS image was not protected by TZ" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsImageTZLocked
+{
+}
+#typev standard_interface_c452 44 "%0SS image was not yet protected by TZ, no need to unlock image for dump collection." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsImageTZLocked
+{
+}
+#typev standard_interface_c441 43 "%0SS image was protected by TZ, needs to unlock image before collecting dump." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsImageTZLocked
+{
+}
+#typev standard_interface_c431 42 "%0SS image found in PIL loaded images list, checking image protection info." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsImageTZLocked
+{
+}
+#typev standard_interface_c419 41 "%0Entered QueryISImageProtected." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsImageTZLocked
+{
+}
+#typev standard_interface_c174 23 "%0Exit QueryIsItSSImage." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsItSSImage
+{
+}
+#typev standard_interface_c170 22 "%0GUID does not belongs to one of SS image loaded by PIL" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INTERFACES FUNC=QueryIsItSSImage
+{
+}
+// PDB:  qcpil850.pdb
+// PDB:  Last Updated :2020-09-15:03:47:00:391 (UTC) [tracepdb]
+#typev standard_interface_c165 21 "%0GUID belongs to one of SS image loaded by PIL" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INTERFACES FUNC=QueryIsItSSImage
+{
+}
+// PDB:  qcpil850.pdb
+// PDB:  Last Updated :2020-09-15:03:47:00:391 (UTC) [tracepdb]
+#typev standard_interface_c153 20 "%0GUID belongs to one of SS image loaded by PIL" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INTERFACES FUNC=QueryIsItSSImage
+{
+}
+#typev standard_interface_c142 19 "%0Entered QueryIsItSSImage." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsItSSImage
+{
+}
+#typev standard_interface_c529 53 "%0Subsystem information not found in PIL loaded images list, debug policy state unknown" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsMsaDebugPolicyLoaded
+{
+}
+#typev standard_interface_c519 52 "%0QueryIsMsaDebugPolicyLoaded Debug policy was not loaded for this subsystem by PIL" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsMsaDebugPolicyLoaded
+{
+}
+#typev standard_interface_c511 51 "%0QueryIsMsaDebugPolicyLoaded Debug policy was loaded for this subsystem by PIL" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsMsaDebugPolicyLoaded
+{
+}
+#typev standard_interface_c503 50 "%0SS image found in PIL loaded images list, checking debug policy load info" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsMsaDebugPolicyLoaded
+{
+}
+#typev standard_interface_c492 49 "%0Error: WdfRequestRetrieveOutputBuffer for IOCTL_PIL_GET_DEBUG_POLICY_OVERRIDE_FLAG is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=QueryIsMsaDebugPolicyLoaded
+{
+}
+#typev standard_interface_c487 48 "%0Entered QueryIsMsaDebugPolicyLoaded." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=QueryIsMsaDebugPolicyLoaded
+{
+}
+#typev standard_interface_c129 18 "%0Exit SetMemoryProtection." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=SetMemoryProtection
+{
+}
+#typev standard_interface_c120 17 "%0Warning: Unable to locate the image info for the specified GUID: %10!s!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INTERFACES FUNC=SetMemoryProtection
+{
+(PGUID)SubsystemId, ItemGuid -- 10
+}
+#typev standard_interface_c110 16 "%0Warning: Memory protection has not been enabled for the specified GUID: %10!s!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INTERFACES FUNC=SetMemoryProtection
+{
+(PGUID)SubsystemId, ItemGuid -- 10
+}
+#typev standard_interface_c101 15 "%0Successfully unlocked memory region for TZ processor ID: %10!d!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INTERFACES FUNC=SetMemoryProtection
+{
+imageInfo->TzProcessorId, ItemLong -- 10
+}
+#typev standard_interface_c93 14 "%0Warning: Unable to unlock the memory region for TZ processor ID: %10!d!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INTERFACES FUNC=SetMemoryProtection
+{
+imageInfo->TzProcessorId, ItemLong -- 10
+}
+#typev standard_interface_c86 13 "%0Warning: Unable to unlock the memory region associated with the image: %10!s!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INTERFACES FUNC=SetMemoryProtection
+{
+imageInfo->AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev standard_interface_c63 12 "%0GetImageInfo returned NULL for image info struct" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=SetMemoryProtection
+{
+}
+#typev standard_interface_c52 11 "%0Warning: Enabling memory protection is not supported for memory region associated with the image." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INTERFACES FUNC=SetMemoryProtection
+{
+}
+#typev standard_interface_c40 10 "%0Entered SetMemoryProtection." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INTERFACES FUNC=SetMemoryProtection
+{
+}

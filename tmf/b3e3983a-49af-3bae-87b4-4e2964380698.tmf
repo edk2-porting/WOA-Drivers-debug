@@ -1,0 +1,263 @@
+// PDB:  qcpil850.pdb
+// PDB:  Last Updated :2020-09-15:03:47:00:391 (UTC) [tracepdb]
+b3e3983a-49af-3bae-87b4-4e2964380698 PIL-Rel // SRC=msa.c MJ= MN=
+#typev msa_c1247 81 "%0Warning: Hypervisor Protection is not enabled, modem meta data will not be mapped from carveout!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=MapModemMetaDataRegion
+{
+}
+#typev msa_c1242 80 "%0Updated image memory table, GUID (beginning partial): 0x%10!X!, reservation: 0x%11!X!, alignment: 0x%12!X!, address: 0x%13!X!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=MapModemMetaDataRegion
+{
+metaDataImageMem->ImageGuid.Data1, ItemLong -- 10
+metaDataImageMem->LengthInBytes, ItemLong -- 11
+metaDataImageMem->AlignmentSize, ItemLong -- 12
+metaDataImageMem->ImageLoadAddress, ItemLong -- 13
+}
+#typev msa_c1238 79 "%0Error: Unable to find meta data image memory information for modem meta data!, status = 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=MapModemMetaDataRegion
+{
+status, ItemLong -- 10
+}
+#typev msa_c1231 78 "%0MBA image memory details GUID (beginning partial): 0x%10!X!, reservation: 0x%11!X!, alignment: 0x%12!X!, address: 0x%13!X!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=MapModemMetaDataRegion
+{
+mbaImageMem->ImageGuid.Data1, ItemLong -- 10
+mbaImageMem->LengthInBytes, ItemLong -- 11
+mbaImageMem->AlignmentSize, ItemLong -- 12
+mbaImageMem->ImageLoadAddress, ItemLong -- 13
+}
+#typev msa_c1228 77 "%0Error: Unable to find MBA image memory information for MBA!, status = 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=MapModemMetaDataRegion
+{
+status, ItemLong -- 10
+}
+#typev msa_c1220 76 "%0Error: Insufficient memory to populate PIL Metadata info into image memory table" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=MapModemMetaDataRegion
+{
+}
+#typev msa_c1206 75 "%0Error: Unable to get the device context NTSTATUS 0x%10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=MapModemMetaDataRegion
+{
+status, ItemLong -- 10
+}
+#typev msa_c1197 74 "%0Error: Invalid parameter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=MapModemMetaDataRegion
+{
+}
+#typev msa_c167 12 "%0RMB register 0x%10!X! contains value 0x%11!X! " //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=PopulateRmbOperationError
+{
+reg, ItemLong -- 10
+s_PilMsaLoadRmbError.RmbRegisters[reg], ItemLong -- 11
+}
+#typev msa_c163 11 "%0Printing Values from RMB registers....." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=PopulateRmbOperationError
+{
+}
+#typev msa_c160 10 "%0Error: RMB register 0x%10!X! returned error 0x%11!X!  for command 0x%12!X! while authenticating Modem" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=PopulateRmbOperationError
+{
+s_PilMsaLoadRmbError.RmbOffset, ItemLong -- 10
+s_PilMsaLoadRmbError.Status, ItemLong -- 11
+s_PilMsaLoadRmbError.Data, ItemLong -- 12
+}
+#typev msa_c349 15 "%0WARNING: Transitioning to the MSA load state of PIL_MSA_LOAD_STATE_INIT from an unexpected state of: %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateInit
+{
+GetAnsiStringFromMsaState(deviceContext->CurrentMsaState), ItemString -- 10
+}
+#typev msa_c339 14 "%0Error: STATE_INIT parameter structure is invalid: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateInit
+{
+status, ItemLong -- 10
+}
+#typev msa_c741 43 "%0MBA Image successfully loaded. Authentication will be initiated by caller, file: %10!s!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev msa_c731 42 "%0Warning: Updating image info failed, file: %10!s!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev msa_c657 38 "%0Warning: Invalid values found for Load Address and Length Bytes entries." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ProcessLoadStateMba
+{
+}
+#typev msa_c671 39 "%0Error: Failed to configure the MBA memory region for modem access: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c722 41 "%0Warning: Saving image info failed, file: %10!s!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev msa_c633 37 "%0Error: Failed to configure the MBA memory region for modem access: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c619 36 "%0Error: Cannot find image memory for the subsystem (partial GUID): 0x%10!X! for configuring modem access" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=ProcessLoadStateMba
+{
+((fileContext->ImageInfo).ImageGuid).Data1, ItemLong -- 10
+}
+#typev msa_c588 34 "%0Error: The load of the MBA image failed: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c602 35 "%0Error: The load of the MBA image failed: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c573 33 "%0MSA Debug policy loaded successfully" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=ProcessLoadStateMba
+{
+}
+#typev msa_c566 32 "%0Error: LoadDebugPolicy failed 0x%10!0X!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c537 31 "%0Warning: Debug policy is invalid, cannot load MSA debug policy" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ProcessLoadStateMba
+{
+}
+#typev msa_c526 30 "%0Error: Debug policy validation function failed NTSTATUS 0x%10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c514 29 "%0Failed to retrieve debug policy from eMMC, InitDebugPolicyPil failed NTSTATUS 0x%10!0X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c502 28 "%0Error: Cannot find image memory for the subsystem (partial GUID): 0x%10!X! for configuring modem access" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=ProcessLoadStateMba
+{
+((fileContext->ImageInfo).ImageGuid).Data1, ItemLong -- 10
+}
+#typev msa_c471 27 "%0ReadDebugPolicyPartitionGuidsFromAcpi failed 0x%10!0X! STATUS_OBJECT_NAME_NOT_FOUND, debug policy not supported on this platform" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c458 26 "%0Error: Unable to copy the Elf Image File Name : 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c447 25 "%0Reload of the MBA image details occurred successfully. XPU unlock not performed." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+}
+#typev msa_c431 24 "%0Using RMB virtual base address of: 0x%10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+deviceContext->VirtualRmbBaseAddress, ItemPtr -- 10
+}
+#typev msa_c427 23 "%0Error: RMB base address not yet defined.  Aborting MBA load." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+}
+#typev msa_c420 22 "%0WARNING: Transitioning to the MSA load state of PIL_MSA_LOAD_STATE_INIT from an unexpected state of: %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+GetAnsiStringFromMsaState(deviceContext->CurrentMsaState), ItemString -- 10
+}
+#typev msa_c412 21 "%0Error: MSA parameter structure is invalid: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c404 20 "%0Info: Ignoring TreeDisableMasterMPU call" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+}
+#typev msa_c403 19 "%0Error: TreeDisableMasterMPU failed: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c393 18 "%0Error: Unable to retrieve file context structure from PilGetFileContext: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c385 17 "%0Error: Unable to retrieve device context structure from PilGetDeviceContext: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c377 16 "%0Error: Unable to retrieve device structure from WdfFileObjectGetDevice: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStateMba
+{
+status, ItemLong -- 10
+}
+#typev msa_c1017 63 "%0PMI Image successfully authenticated and saved, file: %10!s!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev msa_c1007 62 "%0Warning: Updating image info failed, file: %10!s!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev msa_c998 61 "%0Warning: Saving image info failed, file: %10!s!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev msa_c985 60 "%0Unloading of the hash segement succeeded with file object: 0x%10!p!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+fileContext, ItemPtr -- 10
+}
+#typev msa_c969 59 "%0Error: PMI image (%10!s!) failed authentication: 0x%11!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev msa_c924 56 "%0Error: The PMI meta data failed authentication: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+status, ItemLong -- 10
+}
+#typev msa_c885 53 "%0Total length of PMI code segments just loaded is: 0x%10!X!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+totalLengthInBytesOfPmi, ItemLong -- 10
+}
+#typev msa_c881 52 "%0Error: Unable to calculate the PMI segment geometry for the PMI just loaded." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+}
+#typev msa_c869 51 "%0Error: Failed to configure the MBA memory region for modem access: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+status, ItemLong -- 10
+}
+#typev msa_c839 49 "%0Error: Unable to copy the Elf Image File Name : 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+status, ItemLong -- 10
+}
+#typev msa_c851 50 "%0Error: The load of the PMI image failed: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+status, ItemLong -- 10
+}
+#typev msa_c825 48 "%0Reload of the PMI image info details occurred successfully. XPU unlock not performed." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+}
+#typev msa_c810 47 "%0Using RMB virtual base address of: %10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+deviceContext->VirtualRmbBaseAddress, ItemPtr -- 10
+}
+#typev msa_c806 46 "%0Error: RMB base address not yet defined.  Aborting MBA load." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+}
+#typev msa_c799 45 "%0WARNING: Transitioning to the MSA load state of PIL_MSA_LOAD_STATE_INIT from an unexpected state of: %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+GetAnsiStringFromMsaState(deviceContext->CurrentMsaState), ItemString -- 10
+}
+#typev msa_c791 44 "%0Error: MSA parameter structure is invalid: 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessLoadStatePmi
+{
+status, ItemLong -- 10
+}
+#typev msa_c1116 68 "%0Error: bufSize size mismatch" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=ProcessMsaLoadImageParms
+{
+}
+#typev msa_c1110 67 "%0Error: WdfRequestRetrieveInputBuffer for PIL_MSA_LOAD_IMAGE_IOCTL_STATE_INIT_PARMS failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessMsaLoadImageParms
+{
+status, ItemLong -- 10
+}
+#typev msa_c1139 70 "%0Error: bufSize size mismatch" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=ProcessMsaLoadImageParms
+{
+}
+#typev msa_c1133 69 "%0Error: WdfRequestRetrieveInputBuffer for PIL_MSA_LOAD_IMAGE_IOCTL_STATE_MBA_PARMS failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessMsaLoadImageParms
+{
+status, ItemLong -- 10
+}
+#typev msa_c1162 72 "%0Error: bufSize size mismatch" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=ProcessMsaLoadImageParms
+{
+}
+#typev msa_c1156 71 "%0Error: WdfRequestRetrieveInputBuffer for PIL_MSA_LOAD_IMAGE_IOCTL_STATE_MBA_PARMS failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessMsaLoadImageParms
+{
+status, ItemLong -- 10
+}
+#typev msa_c1173 73 "%0Error: Unrecognized MSA load state: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessMsaLoadImageParms
+{
+inCommonParms->StateId, ItemLong -- 10
+}
+#typev msa_c1081 66 "%0Error: bufSize size mismatch" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=ProcessMsaLoadImageParms
+{
+}
+#typev msa_c1075 65 "%0Error: WdfRequestRetrieveInputBuffer for PIL_MSA_LOAD_IMAGE_COMMON_PARMS failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessMsaLoadImageParms
+{
+status, ItemLong -- 10
+}
+#typev msa_c1067 64 "%0Error: Input buffer included in the request is zero bytes." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=ProcessMsaLoadImageParms
+{
+}
+#typev msa_c291 13 "%0Error: MBA returned error status 0x%10!X! for previous command" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=WriteRmbRegisterWaitStatus
+{
+statusValue, ItemLong -- 10
+}

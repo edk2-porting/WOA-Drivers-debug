@@ -1,0 +1,221 @@
+// PDB:  qcpil850.pdb
+// PDB:  Last Updated :2020-09-15:03:47:00:391 (UTC) [tracepdb]
+db5d1d3a-b9cd-3be2-5cce-54cdfbe4e1ff PIL-Rel // SRC=image_memory.c MJ= MN=
+#typev image_memory_c147 12 "%0Image memory table expanded for %10!d! entries." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=AddImageMemoryConfig
+{
+s_SizeImageMemoryTable, ItemLong -- 10
+}
+#typev image_memory_c136 11 "%0Expanded image memory table, GUID (beginning partial): 0x%10!X!, reservation: 0x%11!X!, alignment: 0x%12!X!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=AddImageMemoryConfig
+{
+newImageMemoryTable[s_SizeImageMemoryTable].ImageGuid.Data1, ItemLong -- 10
+newImageMemoryTable[s_SizeImageMemoryTable].LengthInBytes, ItemLong -- 11
+newImageMemoryTable[s_SizeImageMemoryTable].AlignmentSize, ItemLong -- 12
+}
+#typev image_memory_c113 10 "%0Error: Insufficient memory to allocate the image memory table: %10!Iu! bytes." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AddImageMemoryConfig
+{
+sizeof(PIL_IMAGE_MEMORY) * newSizeImageMemoryTable, ItemPtr -- 10
+}
+#typev image_memory_c1400 66 "%0Warning: The requested preallocated memory has already been allocated for subsystem (partial GUID): 0x%10!X!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=AllocateImageMemory
+{
+Guid->Data1, ItemLong -- 10
+}
+#typev image_memory_c1393 65 "%0Error: Unable to locate the preallocated memory for subsystem (partial GUID): 0x%10!X!, size in bytes: 0x%11!IX!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AllocateImageMemory
+{
+Guid->Data1, ItemLong -- 10
+ImageSize, ItemPtr -- 11
+}
+#typev image_memory_c1435 68 "%0Error: The requested preallocated memory has not yet been allocated for subsystem (partial GUID): 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=DeallocateImageMemory
+{
+Guid->Data1, ItemLong -- 10
+}
+#typev image_memory_c1428 67 "%0Error: Unable to locate the preallocated memory for subsystem (partial GUID): 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=DeallocateImageMemory
+{
+Guid->Data1, ItemLong -- 10
+}
+#typev image_memory_c726 46 "%0Warning: Unable to allocate required physically contiguous memory for GUID: 0x%10!x!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=EnumPreallocationRegions
+{
+s_ImageMemoryTable[imageMemoryIndex].ImageGuid.Data1, ItemLong -- 10
+}
+#typev image_memory_c935 56 "%0Warning: No image memory has been preallocated." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=GetImageMemory
+{
+}
+#typev image_memory_c979 58 "%0Warning: No image memory has been preallocated." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=GetImageMemoryFromGUID
+{
+}
+#typev image_memory_c1018 59 "%0Warning: No image memory has been preallocated." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=GetImageMemoryFromGUID_unsafe
+{
+}
+#typev image_memory_c1334 62 "%0Error: ScmPerformGetPilRelocRange failed with status 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c1360 64 "%0Error: MapModemMetaDataRegion failed with status 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c1347 63 "%0Error: Insufficient memory to populate PIL Metadata info into image memory table" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory
+{
+}
+#typev image_memory_c1329 61 "%0Successfully retrieved PIL images reloc range from TZ.PIL images reloc range falls between 0x%10!X! to 0x%11!X!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=InitImageMemory
+{
+LowestAcceptablePreallocationAddress.LowPart, ItemLong -- 10
+HighestAcceptablePreallocationAddress.LowPart, ItemLong -- 11
+}
+#typev image_memory_c836 51 "%0Warning: No image memory has been preallocated." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=IsPreallocated
+{
+}
+#typev image_memory_c877 54 "%0Error: Unrecognized image parameter %10!d! with GUID (begin partial): 0x%11!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=IsPreallocated
+{
+CheckLength, ItemLong -- 10
+Guid->Data1, ItemLong -- 11
+}
+#typev image_memory_c862 53 "%0Preallocated memory available for image with GUID (begin partial): 0x%10!X!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=IsPreallocated
+{
+Guid->Data1, ItemLong -- 10
+}
+#typev image_memory_c895 55 "%0Warning: No image memory has been reserved." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=IsReserved
+{
+}
+#typev image_memory_c698 45 "%0Error: Failed to close key hValueKey" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c678 43 "%0Error: Failed to close key hRootKey" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c420 23 "%0Warning: Unable to retrieve the size of the KFI: 0x%10!X!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c440 31 "%0Warning: Unable to retrieve the value key name for the defined subsystem." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c440 25 "%0Error: Image memory table already loaded." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c488 29 "%0Warning: Unable to retrieve the size of the value key name for the defined subsystem." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c499 30 "%0Warning: Unable to allocate memory for the value key name: %10!d! bytes." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+querySize, ItemLong -- 10
+}
+#typev image_memory_c531 32 "%0Warning: Unable to open the value key." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c601 38 "%0Warning: Unable to translate the Unicode Subsys name to Ansi string: 0x%10!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c643 42 "%0Updated image memory table, GUID (beginning partial): 0x%10!X!, reservation: 0x%11!X!, alignment: 0x%12!X!, address: 0x%13!X!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+imageMemoryEntry.ImageGuid.Data1, ItemLong -- 10
+imageMemoryEntry.LengthInBytes, ItemLong -- 11
+imageMemoryEntry.AlignmentSize, ItemLong -- 12
+imageMemoryEntry.ImageLoadAddress, ItemLong -- 13
+}
+#typev image_memory_c634 41 "%0Warning: No overridden flag set for Subsystem, going ahead with static values defined in registry for loading Subsystem." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c625 40 "%0Warning: Couldn't read Subsystem load address and length from ACPI, going ahead with static values defined in registry for loading Subsystem." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c609 39 "%0Warning: Unable to get Subsystem GUID from static structure for %10!s! Subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+subsysName.Buffer, ItemString -- 10
+}
+#typev image_memory_c559 35 "%0Warning: Unable to open the memory address value: %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+&valueMemoryAddress, ItemPWString -- 10
+}
+#typev image_memory_c550 34 "%0Warning: Unable to open the memory alignment value: %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+&valueMemoryAlignment, ItemPWString -- 10
+}
+#typev image_memory_c541 33 "%0Warning: Unable to open the memory reservation value: %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+&valueMemoryReservation, ItemPWString -- 10
+}
+#typev image_memory_c459 28 "%0Image memory table allocated for %10!d! entries." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+kfi->SubKeys, ItemLong -- 10
+}
+#typev image_memory_c452 27 "%0Warning: Insufficient memory to allocate the image memory table: %10!Iu! bytes." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+sizeof(PIL_IMAGE_MEMORY) * kfi->SubKeys, ItemPtr -- 10
+}
+#typev image_memory_c445 26 "%0Warning: No image memory subkeys were found.  No memory will be preallocated for relocatable subsystems." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c429 24 "%0Warning: Unable to retrieve the KFI: 0x%10!X!, query size: %11!d!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+status, ItemLong -- 10
+querySize, ItemLong -- 11
+}
+#typev image_memory_c412 22 "%0Warning: Unable to allocate memory for the KFI" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c383 21 "%0Warning: Unable to obtain wdm registry key from wdfkey." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c374 20 "%0Warning: Unable to open the %10!s! key under root: 0x%11!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+folderPath.Buffer, ItemWString -- 10
+status, ItemLong -- 11
+}
+#typev image_memory_c367 19 "%0Warning: Unable to open the root key containing image memory requirements: 0x%10!X!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c359 18 "%0Error: Failed to get device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c348 17 "%0Error: Invalid parameter LoadImageMemoryConfig" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c254 13 "%0Error: Invalid parameter." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=OverrideSubsysRegkeyDataWithACPIOverride
+{
+}
+#typev image_memory_c254 14 "%0Error: Failed to get device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=OverrideSubsysRegkeyDataWithACPIOverride
+{
+}
+#typev image_memory_c254 15 "%0Error: SubsysInfoACPI failed, current ACPI data is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=OverrideSubsysRegkeyDataWithACPIOverride
+{
+}
+#typev image_memory_c300 16 "%0Warning: Invalid values found for Load Address and Length Bytes entries." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=OverrideSubsysRegkeyDataWithACPIOverride
+{
+}
+#typev image_memory_c1307 60 "%0PartitionPilMemoryBlock : skipping PilReturnPhysicalMemoryToHlos for 845." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PartitionPilMemoryBlock
+{
+}
+#typev image_memory_c811 50 "%0Error: Unable to map %10!d! bytes of contiguous memory for subsystem (partial GUID): 0x%11!X!.at 0x%12!X! address" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PreallocationCallback
+{
+ImageMemory->LengthInBytes, ItemLong -- 10
+ImageMemory->ImageGuid.Data1, ItemLong -- 11
+PtrToUlong(physicalAddress), ItemLong -- 12
+}
+#typev image_memory_c806 49 "%0Successfully mapped %10!d! bytes of contiguous memory for subsystem (partial GUID): 0x%11!X!.at 0x%12!X! address" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PreallocationCallback
+{
+ImageMemory->LengthInBytes, ItemLong -- 10
+ImageMemory->ImageGuid.Data1, ItemLong -- 11
+PtrToUlong(physicalAddress), ItemLong -- 12
+}
+#typev image_memory_c785 48 "%0Error: Unable to allocate memory for subsystem (partial GUID): 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PreallocationCallback
+{
+ImageMemory->ImageGuid.Data1, ItemLong -- 10
+}
+#typev image_memory_c749 47 "%0Warning: Relocatable image with fixed override detected (partial GUID): 0x%10!X!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=PreallocationCallback
+{
+ImageMemory->ImageGuid.Data1, ItemLong -- 10
+}
+// PDB:  qcpil850.pdb
+// PDB:  Last Updated :2020-09-15:03:47:00:391 (UTC) [tracepdb]
+#typev standard_interface_c163 51 "%0Warning: No image memory has been preallocated." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=QueryIsItSSImage
+{
+}
+// PDB:  qcpil850.pdb
+// PDB:  Last Updated :2020-09-15:03:47:00:391 (UTC) [tracepdb]
+#typev standard_interface_c163 54 "%0Error: Unrecognized image parameter %10!d! with GUID (begin partial): 0x%11!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=QueryIsItSSImage
+{
+CheckLength, ItemLong -- 10
+Guid->Data1, ItemLong -- 11
+}
