@@ -1,0 +1,215 @@
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+a6b3c163-990d-37c2-314f-d5a40ea314c3 logging.wp63 // SRC=MPDeviceLogging.c MJ= MN=
+#typev MPDeviceLogging_c282 20 "%0%!FUNC!::Allocated timer object" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=AllocateDeviceLogTimerObjects
+{
+}
+#typev MPDeviceLogging_c278 19 "%0%!FUNC!::Failed to allocate Timer object." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=AllocateDeviceLogTimerObjects
+{
+}
+#typev MPDeviceLogging_c86 13 "%0%!FUNC!::NULL Handle pAdapter:%10!p! pQCDBHanle:%11!p! pQCDBFileObject:%12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=CallDrainImmediate
+{
+pAdapter, ItemPtr -- 10
+pAdapter->DeviceLogInfo.pQCDBHandle, ItemPtr -- 11
+pAdapter->DeviceLogInfo.pQCDBFileObject, ItemPtr -- 12
+}
+#typev MPDeviceLogging_c80 12 "%0%!FUNC!::pDeviceLogInfo : %10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=CallDrainImmediate
+{
+device_log_config, ItemPtr -- 10
+}
+#typev MPDeviceLogging_c70 11 "%0%!FUNC!::Drain Immediate : pHandle=%10!p! pFileObj=%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=CallDrainImmediate
+{
+pAdapter->DeviceLogInfo.pQCDBHandle, ItemPtr -- 10
+pAdapter->DeviceLogInfo.pQCDBFileObject, ItemPtr -- 11
+}
+#typev MPDeviceLogging_c63 10 "%0%!FUNC!::NULL pAdapter : %10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=CallDrainImmediate
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPDeviceLogging_c211 17 "%0%!FUNC!::DataCall Failure Event Timer Expired!! : %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DataCallFailureTimerExpiryCb
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPDeviceLogging_c890 57 "%0%!FUNC!::PsTerminateSystemThread completed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPLOG_CancelDeviceLogThread
+{
+}
+#typev MPDeviceLogging_c888 52 "%0%!FUNC!::<%10!s!> MP Cancelled timers " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_CancelDeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c832 56 "%0%!FUNC!::<%10!s!> Work cxl in pro" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPLOG_CancelDeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c820 55 "%0%!FUNC!::<%10!s!> Work Cxl: wrong IRQL" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPLOG_CancelDeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c812 54 "%0%!FUNC!::Cleaning-up of QCDB Handle failed pQCDBHanle: %10!p! pQCDBFileObject: %11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPLOG_CancelDeviceLogThread
+{
+pAdapter->DeviceLogInfo.pQCDBHandle, ItemPtr -- 10
+pAdapter->DeviceLogInfo.pQCDBFileObject, ItemPtr -- 11
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPDeviceLogging_c806 53 "%0%!FUNC!::Null Handle pAdapter : %10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPLOG_CancelDeviceLogThread
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPDeviceLogging_c464 30 "%0%!FUNC!::<%10!s!> Starting timer for Register State Event and timeout value: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+timerVal, ItemLong -- 11
+}
+#typev MPDeviceLogging_c480 32 "%0%!FUNC!::<%10!s!> Register State:%11!d! and n/w error:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->RegistrationState.RegistrationState.RegisterState, ItemLong -- 11
+pAdapter->DeviceLogInfo.RejectCause.RegisterStateNwError, ItemLong -- 12
+}
+#typev MPDeviceLogging_c474 31 "%0%!FUNC!::<%10!s!> Starting timer for Register State Event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c457 29 "%0%!FUNC!::Ready State not Initialized" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+}
+#typev MPDeviceLogging_c497 33 "%0%!FUNC!::Device is not registered" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+}
+#typev MPDeviceLogging_c505 34 "%0%!FUNC!::<%10!s!> Starting timer for Packet Service State Event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c518 36 "%0%!FUNC!::<%10!s!> Packet service state: %11!d! and n/w error: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->PacketServiceState.PacketService.PacketServiceState, ItemLong -- 11
+pAdapter->DeviceLogInfo.RejectCause.PacketServiceNwError, ItemLong -- 12
+}
+#typev MPDeviceLogging_c512 35 "%0%!FUNC!::<%10!s!> Starting timer for Packet State Event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c533 37 "%0%!FUNC!::<%10!s!> Starting timer for Ready State Event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c539 38 "%0%!FUNC!::<%10!s!> ready state : %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->ReadyInfo.ReadyInfo.ReadyState, ItemLong -- 11
+}
+#typev MPDeviceLogging_c559 40 "%0%!FUNC!::<%10!s!> Starting timer for Data Call Failure Event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c566 41 "%0%!FUNC!::<%10!s!> data call failure event: %11!d! and n/w error: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->ContextState.ContextState.ActivationState, ItemLong -- 11
+pAdapter->DeviceLogInfo.RejectCause.ConnectStateNwError, ItemLong -- 12
+}
+#typev MPDeviceLogging_c550 39 "%0%!FUNC!::<%10!s!> packet service state: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->PacketServiceState.PacketService.PacketServiceState, ItemLong -- 11
+}
+#typev MPDeviceLogging_c590 43 "%0%!FUNC!::<%10!s!> device Radio state: %11!d! and radio action : %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->DeviceRadioState, ItemLong -- 11
+pAdapter->DeviceLogInfo.RadioStateInfo.bRadioAction, ItemLong -- 12
+}
+#typev MPDeviceLogging_c584 42 "%0%!FUNC!::<%10!s!> Starting timer for Radio State Failure Event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c603 44 "%0%!FUNC!::Drain Immediate completed!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPDeviceLogging_c615 45 "%0%!FUNC!::<%10!s!> MPth: unexpected evt-0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPDeviceLogging_c428 28 "%0%!FUNC!::<%10!s!> Configured timeout value: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+timerVal, ItemLong -- 11
+}
+#typev MPDeviceLogging_c414 27 "%0%!FUNC!::<%10!s!> MPth: NO_MEM" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c394 26 "%0%!FUNC!::<%10!s!> MPth: Timer Object Allocation Failed" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c378 25 "%0%!FUNC!::<%10!s!> MPth: Timer Object Allocation Failed" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c362 24 "%0%!FUNC!::<%10!s!> MPth: Timer Object Allocation Failed" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c346 23 "%0%!FUNC!::<%10!s!> MPth: Timer Object Allocation Failed" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c330 22 "%0%!FUNC!::<%10!s!> MPth: Timer Object Allocation Failed" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c312 21 "%0%!FUNC!::<%10!s!> MPth: wrong IRQL" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c667 47 "%0%!FUNC!::<%10!s!> MPThread up/resumed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPLOG_StartDeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c692 48 "%0%!FUNC!::<%10!s!> MP th failure" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPLOG_StartDeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPDeviceLogging_c745 51 "%0%!FUNC!::<%10!s!> Device log thread handle=0x%11!p! thOb=0x%12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_StartDeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->DeviceLogInfo.pDeviceLogThreadHandle, ItemPtr -- 11
+pAdapter->DeviceLogInfo.pDeviceLogThread, ItemPtr -- 12
+}
+#typev MPDeviceLogging_c732 50 "%0%!FUNC!::<%10!s!> DeviceLog ZwClose failed - 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_StartDeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPDeviceLogging_c721 49 "%0%!FUNC!::<%10!s!> Work: ObReferenceObjectByHandle failed 0x%11!x!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPLOG_StartDeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPDeviceLogging_c657 46 "%0%!FUNC!::<%10!s!> - wrong IRQL::%11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPLOG_StartDeviceLogThread
+{
+pAdapter->PortName, ItemString -- 10
+KeGetCurrentIrql(), ItemLong -- 11
+}
+#typev MPDeviceLogging_c180 16 "%0%!FUNC!::PacketServiceStateEvent Timer Expired!! : %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=PacketServiceStateTimerExpiryCb
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPDeviceLogging_c242 18 "%0%!FUNC!::Radio State Failure Event Timer Expired!! : %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=RadioStateTimerExpiryCb
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPDeviceLogging_c149 15 "%0%!FUNC!::ReadyStateEvent Timer Expired!! : %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ReadyStateTimerExpiryCb
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPDeviceLogging_c118 14 "%0%!FUNC!::RegisterStateEvent Timer Expired!! : %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=RegisterStateTimerExpiryCb
+{
+pAdapter, ItemPtr -- 10
+}

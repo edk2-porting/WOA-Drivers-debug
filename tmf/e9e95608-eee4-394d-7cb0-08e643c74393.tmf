@@ -1,0 +1,257 @@
+// PDB:  qcpsautoreg7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+e9e95608-eee4-394d-7cb0-08e643c74393 latest // SRC=PARHttpOperation.c MJ= MN=
+#typev PARDSDQmi_c805 74 "%0%!FUNC!:: ERROR:: HttpMethod %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARDSD_HttpAPAsstIndication
+{
+pRequest->HttpMethod, ItemLong -- 10
+}
+#typev PARDSDQmi_c805 73 "%0%!FUNC!:: PARHttpOperationCancelPendingRequest executed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARDSD_HttpAPAsstIndication
+{
+}
+// PDB:  qcpsautoreg7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PARHttpOperation_c192 17 "%0%!FUNC!:: WinHttpQueryHeaders(httpRequest 0x%10!p!) (WINHTTP_QUERY_STATUS_CODE | WINHTTP_QUERY_FLAG_NUMBER) bResults %11!s! dwStatusCode %12!u!, error: %13!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpHeaderQuery
+{
+pHttpContext->httpRequest, ItemPtr -- 10
+bResults, ItemListLong(false,true) -- 11
+dwStatusCode, ItemLong -- 12
+GetLastError(), ItemLong -- 13
+}
+#typev PARHttpOperation_c177 16 "%0%!FUNC!:: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpHeaderQuery
+{
+(WCHAR*)lpOutBuffer, ItemWString -- 10
+}
+#typev PARHttpOperation_c176 15 "%0%!FUNC!:: nWinHttpQueryHeaders (WINHTTP_QUERY_RAW_HEADERS_CRLF | WINHTTP_QUERY_FLAG_REQUEST_HEADERS) content:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpHeaderQuery
+{
+}
+#typev PARHttpOperation_c165 14 "%0%!FUNC!:: ERROR:: Memory allocation failed for WinHttpQueryHeaders." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpHeaderQuery
+{
+}
+#typev PARHttpOperation_c156 13 "%0%!FUNC!:: WinHttpQueryHeaders(httpRequest 0x%10!p!) (WINHTTP_QUERY_RAW_HEADERS_CRLF | WINHTTP_QUERY_FLAG_REQUEST_HEADERS) bResults %11!s! dwSize %12!u!, error: %13!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpHeaderQuery
+{
+pHttpContext->httpRequest, ItemPtr -- 10
+bResults, ItemListLong(false,true) -- 11
+dwSize, ItemLong -- 12
+GetLastError(), ItemLong -- 13
+}
+#typev PARHttpOperation_c139 12 "%0%!FUNC!:: Exit." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationCancelPendingRequest
+{
+}
+#typev PARHttpOperation_c101 11 "%0%!FUNC!:: PARHTTPOPERATION_RESP notified." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationCancelPendingRequest
+{
+}
+#typev PARHttpOperation_c91 10 "%0%!FUNC!:: Entry." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationCancelPendingRequest
+{
+}
+#typev PARHttpOperation_c565 56 "%0%!FUNC!:: WinHttpSetStatusCallback setup." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationHttpRequestConfiguration
+{
+}
+#typev PARHttpOperation_c558 55 "%0%!FUNC!:: WinHttpSetOption(WINHTTP_OPTION_HTTP_VERSION) (Major (%10!d!)/ Minor (%11!d!))." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationHttpRequestConfiguration
+{
+httpversion.dwMajorVersion, ItemLong -- 10
+httpversion.dwMinorVersion, ItemLong -- 11
+}
+#typev PARHttpOperation_c555 54 "%0%!FUNC!:: ERROR:: WinHttpSetOption(WINHTTP_OPTION_HTTP_VERSION) failed with error %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationHttpRequestConfiguration
+{
+GetLastError(), ItemLong -- 10
+}
+#typev PARHttpOperation_c534 53 "%0%!FUNC!:: Default WinHttpQueryOption(WINHTTP_OPTION_HTTP_VERSION)(Major (%10!d!)/ Minor (%11!d!))." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationHttpRequestConfiguration
+{
+httpversion.dwMajorVersion, ItemLong -- 10
+httpversion.dwMinorVersion, ItemLong -- 11
+}
+#typev PARHttpOperation_c531 52 "%0%!FUNC!:: ERROR:: WinHttpQueryOption(WINHTTP_OPTION_HTTP_VERSION) failed with error %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationHttpRequestConfiguration
+{
+GetLastError(), ItemLong -- 10
+}
+#typev PARHttpOperation_c524 51 "%0%!FUNC!:: ERROR:: WinHttpSetOption(WINHTTP_OPTION_CONTEXT_VALUE) failed with error %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationHttpRequestConfiguration
+{
+GetLastError(), ItemLong -- 10
+}
+#typev PARHttpOperation_c584 57 "%0%!FUNC!:: ERROR:: INVALID_PARAMETER." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+}
+#typev PARHttpOperation_c693 71 "%0%!FUNC!:: WinHttpSendRequest succeeded. %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+hex_dump(pHttpRequest->pRequest. pHttpRequest->nRequest), ItemHEXDump -- 10
+}
+#typev PARHttpOperation_c687 70 "%0%!FUNC!:: ERROR:: WinHttpSendRequest failed with gle %10!u!. %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+GetLastError(), ItemLong -- 10
+hex_dump(pHttpRequest->pRequest. pHttpRequest->nRequest), ItemHEXDump -- 11
+}
+#typev PARHttpOperation_c671 69 "%0%!FUNC!:: ERROR:: malloc failed with gle %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+GetLastError(), ItemLong -- 10
+}
+#typev PARHttpOperation_c663 68 "%0%!FUNC!:: WinHttpAddRequestHeaders added 
+%10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+pHttpRequest->Headers, ItemWString -- 10
+}
+#typev PARHttpOperation_c658 67 "%0%!FUNC!:: ERROR:: WinHttpAddRequestHeaders failed with gle %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+GetLastError(), ItemLong -- 10
+}
+#typev PARHttpOperation_c649 66 "%0%!FUNC!:: WinHttpOpenRequest (httpRequest 0x%10!p!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+pHttpContext->httpRequest, ItemPtr -- 10
+}
+#typev PARHttpOperation_c644 65 "%0%!FUNC!:: ERROR:: WinHttpOpenRequest failed with gle %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+GetLastError(), ItemLong -- 10
+}
+#typev PARHttpOperation_c630 64 "%0%!FUNC!:: Enable WINHTTP_FLAG_SECURE for SSLVersion %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+pHttpRequest->SSLVersion, ItemLong -- 10
+}
+#typev PARHttpOperation_c624 63 "%0%!FUNC!:: WinHttpConnect (httpConnect 0x%10!p!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+pHttpContext->httpConnect, ItemPtr -- 10
+}
+#typev PARHttpOperation_c619 62 "%0%!FUNC!:: ERROR:: WinHttpConnect failed with gle %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+GetLastError(), ItemLong -- 10
+}
+#typev PARHttpOperation_c612 61 "%0Connecting to Server name: %10!s! Port number %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+pHttpRequest->ServerName, ItemWString -- 10
+pHttpRequest->ServerPort, ItemLong -- 11
+}
+#typev PARHttpOperation_c608 60 "%0%!FUNC!:: ERROR:: PARHttpOperationConfiguration failed." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+}
+#typev PARHttpOperation_c603 59 "%0%!FUNC!:: WinHttpOpen (httpSession 0x%10!p!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+pHttpContext->httpSession, ItemPtr -- 10
+}
+#typev PARHttpOperation_c598 58 "%0%!FUNC!:: ERROR:: WinHttpOpen failed with gle %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostHttpRequest
+{
+GetLastError(), ItemLong -- 10
+}
+#typev PARHttpOperation_c491 50 "%0%!FUNC!:: REQUEST_ERROR - error %10!u!, result %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+pAR->dwError, ItemLong -- 10
+(DWORD)pAR->dwResult, ItemLong -- 11
+}
+#typev PARHttpOperation_c479 49 "%0%!FUNC!:: ERROR:: WinHttpReceiveResponse return error %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+GetLastError(), ItemLong -- 10
+}
+#typev PARHttpOperation_c473 48 "%0%!FUNC!:: SENDREQUEST_COMPLETE (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+dwStatusInformationLength, ItemLong -- 10
+}
+#typev PARHttpOperation_c317 29 "%0%!FUNC!:: GETPROXYFORURL_COMPLETE (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+dwStatusInformationLength, ItemLong -- 10
+}
+#typev PARHttpOperation_c275 24 "%0%!FUNC!:: CLOSE_COMPLETE (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+dwStatusInformationLength, ItemLong -- 10
+}
+#typev PARHttpOperation_c282 25 "%0%!FUNC!:: SHUTDOWN_COMPLETE (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+dwStatusInformationLength, ItemLong -- 10
+}
+#typev PARHttpOperation_c395 39 "%0%!FUNC!:: WRITE_COMPLETE (%10!d!) bytes written." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+*(DWORD*)lpvStatusInformation, ItemLong -- 10
+}
+#typev PARHttpOperation_c328 30 "%0%!FUNC!:: REDIRECT to %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+(WCHAR *)lpvStatusInformation, ItemWString -- 10
+}
+#typev PARHttpOperation_c310 28 "%0%!FUNC!:: INTERMEDIATE_RESPONSE Status code : (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+*(DWORD*)lpvStatusInformation, ItemLong -- 10
+}
+#typev PARHttpOperation_c386 38 "%0%!FUNC!:: SECURE_FAILURE: (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+dwStatusInformationLength, ItemLong -- 10
+}
+#typev PARHttpOperation_c357 37 "%0%!FUNC!:: SECURE_FAILURE: The application experienced an internal error loading the SSL libraries." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+}
+#typev PARHttpOperation_c357 36 "%0%!FUNC!:: SECURE_FAILURE: CSSL certificate date that was received from the server is bad.The certificate is expired." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+}
+#typev PARHttpOperation_c357 35 "%0%!FUNC!:: SECURE_FAILURE: SSL certificate common name(host name field) is incorrect" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+}
+#typev PARHttpOperation_c357 34 "%0%!FUNC!:: SECURE_FAILURE: The function is unfamiliar with the Certificate Authority that generated the server's certificate." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+}
+#typev PARHttpOperation_c357 33 "%0%!FUNC!:: SECURE_FAILURE: SSL certificate was revoked." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+}
+#typev PARHttpOperation_c357 32 "%0%!FUNC!:: SECURE_FAILURE: SSL certificate is invalid." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+}
+#typev PARHttpOperation_c357 31 "%0%!FUNC!:: SECURE_FAILURE: Revocation check failed to verify whether a certificate has been revoked." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+}
+#typev PARHttpOperation_c448 45 "%0%!FUNC!:: ERROR:: WinHttpReadData failed %10!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+GetLastError(), ItemLong -- 10
+}
+#typev PARHttpOperation_c436 44 "%0%!FUNC!:: HEADERS_AVAILABLE (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+dwStatusInformationLength, ItemLong -- 10
+}
+#typev PARHttpOperation_c458 46 "%0%!FUNC!:: READ_COMPLETE %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+hex_dump(pHttpContext->pResponse. pHttpContext->nResponse), ItemHEXDump -- 10
+}
+#typev PARHttpOperation_c299 27 "%0%!FUNC!:: HANDLE_CLOSING : 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+*(HINTERNET*)lpvStatusInformation, ItemPtr -- 10
+}
+#typev PARHttpOperation_c403 40 "%0%!FUNC!:: RECEIVING_RESPONSE (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+dwStatusInformationLength, ItemLong -- 10
+}
+#typev PARHttpOperation_c429 43 "%0%!FUNC!:: RESPONSE_RECEIVED. (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+dwStatusInformationLength, ItemLong -- 10
+}
+#typev PARHttpOperation_c424 42 "%0%!FUNC!:: RESPONSE_RECEIVED. Number of bytes : (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+*(DWORD*)lpvStatusInformation, ItemLong -- 10
+}
+#typev PARHttpOperation_c262 22 "%0%!FUNC!:: CLOSING_CONNECTION (%10!d!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+dwStatusInformationLength, ItemLong -- 10
+}
+#typev PARHttpOperation_c268 23 "%0%!FUNC!:: CONNECTION_CLOSED (%10!d!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+dwStatusInformationLength, ItemLong -- 10
+}
+#typev PARHttpOperation_c290 26 "%0%!FUNC!:: HANDLE_CREATED : 0x%10!p!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+*(HINTERNET*)lpvStatusInformation, ItemPtr -- 10
+}
+#typev PARHttpOperation_c413 41 "%0%!FUNC!:: REQUEST_SENT Number of bytes sent : (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+*(DWORD*)lpvStatusInformation, ItemLong -- 10
+}
+#typev PARHttpOperation_c226 18 "%0%!FUNC!:: RESOLVING_NAME %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+(WCHAR*)lpvStatusInformation, ItemWString -- 10
+}
+#typev PARHttpOperation_c236 19 "%0%!FUNC!:: NAME_RESOLVED : %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+(WCHAR *)lpvStatusInformation, ItemWString -- 10
+}
+#typev PARHttpOperation_c254 21 "%0%!FUNC!:: CONNECTING_TO_SERVER (%10!s!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+(WCHAR *)lpvStatusInformation, ItemWString -- 10
+}
+#typev PARHttpOperation_c245 20 "%0%!FUNC!:: CONNECTED_TO_SERVER (%10!s!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+(WCHAR *)lpvStatusInformation, ItemWString -- 10
+}
+#typev PARHttpOperation_c467 47 "%0%!FUNC!:: SENDING_REQUEST (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARHttpOperationPostRequestStatusCallback
+{
+dwStatusInformationLength, ItemLong -- 10
+}

@@ -1,0 +1,267 @@
+// PDB:  qc5gnrcoexmgr7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+48294bb6-2d6d-3afa-e4d3-c0d1d533919e latest // SRC=NrCoexMgrIO.c MJ= MN=
+#typev NrCoexMgrIO_c59 14 "%0%!FUNC! Exit: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=CheckIfWlanInterfaceIsUpAndGetSymLink
+{
+configReturnStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c39 13 "%0%!FUNC! Interface is already up: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=CheckIfWlanInterfaceIsUpAndGetSymLink
+{
+DeviceInterfaceList, ItemWString -- 10
+}
+#typev NrCoexMgrIO_c39 11 "%0%!FUNC! ERROR: CM_Get_Device_Interface_List_Size failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=CheckIfWlanInterfaceIsUpAndGetSymLink
+{
+}
+#typev NrCoexMgrIO_c43 12 "%0%!FUNC! CM_Get_Device_Interface_List_Size success. DeviceInterfaceListLength %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=CheckIfWlanInterfaceIsUpAndGetSymLink
+{
+DeviceInterfaceListLength, ItemLong -- 10
+}
+#typev NrCoexMgrIO_c31 10 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=CheckIfWlanInterfaceIsUpAndGetSymLink
+{
+}
+#typev NrCoexMgrIO_c667 80 "%0%!FUNC! Exit :%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOCancelAysncIoctlRequest
+{
+bResult, ItemLong -- 10
+}
+#typev NrCoexMgrIO_c663 79 "%0%!FUNC! Cancelled IOCTL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOCancelAysncIoctlRequest
+{
+}
+#typev NrCoexMgrIO_c656 78 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOCancelAysncIoctlRequest
+{
+}
+#typev NrCoexMgrIO_c738 90 "%0%!FUNC! Exit: Wlan 5G band usage value : %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOGetWlanBandUsage
+{
+pNrCoexMgrContext->nr_status_context.wlan5GinUse, ItemLong -- 10
+}
+#typev NrCoexMgrIO_c733 89 "%0%!FUNC! Get the wlan 5G band usage asynchronously" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOGetWlanBandUsage
+{
+}
+#typev NrCoexMgrIO_c729 88 "%0%!FUNC! ERROR: Getting the wlan 5G band usage asynchronously failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOGetWlanBandUsage
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c720 87 "%0%!FUNC! Got the wlan 5G band usage synchronously" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOGetWlanBandUsage
+{
+}
+#typev NrCoexMgrIO_c716 86 "%0%!FUNC! ERROR: Get the wlan 5G band usage synchronously failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOGetWlanBandUsage
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c706 85 "%0%!FUNC! Looks like we are waiting for an indication from WLAN for any change in 5GHZ band usage" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOGetWlanBandUsage
+{
+}
+#typev NrCoexMgrIO_c702 84 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOGetWlanBandUsage
+{
+}
+#typev NrCoexMgrIO_c498 77 "%0%!FUNC! Exit %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c640 76 "%0%!FUNC! ERROR: IoTarget is closed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+}
+#typev NrCoexMgrIO_c624 75 "%0%!FUNC! ERROR: WdfRequestSend() success with the status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c614 74 "%0%!FUNC! ERROR: WdfRequestSend() failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+}
+#typev NrCoexMgrIO_c605 73 "%0%!FUNC! ERROR: WdfIoTargetFormatRequestForIoctl Failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c596 72 "%0%!FUNC! Allocated both Input/Output Memory Objects" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+}
+#typev NrCoexMgrIO_c591 71 "%0%!FUNC! ERROR: WdfMemoryCreatePreallocated Failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c580 70 "%0%!FUNC! ERROR: Input WdfMemoryCreate Failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c568 69 "%0%!FUNC! ERROR: WdfRequestCreate Failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c498 68 "%0%!FUNC! IO Target is already opened" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+}
+#typev NrCoexMgrIO_c554 67 "%0%!FUNC! NrCoexMgrIOTargetOpen %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c549 66 "%0%!FUNC! ERROR: NrCoexMgrIOTargetOpen %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c542 65 "%0%!FUNC! NrCoexMgrIOTargetCreate %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c537 64 "%0%!FUNC! ERROR: NrCoexMgrIOTargetCreate %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c498 63 "%0%!FUNC! ERROR: Wlan driver is Removed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+}
+#typev NrCoexMgrIO_c498 61 "%0%!FUNC! IOCTL_NRCOEX_MGR_REG_5GHZ_USE_NOTIFY Async IOCTL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+}
+#typev NrCoexMgrIO_c498 59 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendAsyncIoctl
+{
+}
+#typev NrCoexMgrIO_c418 52 "%0%!FUNC! Exit %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendSyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c295 51 "%0%!FUNC! IOCTL is pending with value %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendSyncIoctl
+{
+pIoctlContext->isAysncIoctlSent, ItemLong -- 10
+}
+#typev NrCoexMgrIO_c404 50 "%0%!FUNC! %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendSyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c400 49 "%0%!FUNC! ERROR : %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendSyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c295 48 "%0%!FUNC! IO Target already opened" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendSyncIoctl
+{
+}
+#typev NrCoexMgrIO_c361 47 "%0%!FUNC! NrCoexMgrIOTargetOpen %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendSyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c356 46 "%0%!FUNC! ERROR : NrCoexMgrIOTargetOpen %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendSyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c350 45 "%0%!FUNC! NrCoexMgrIOTargetCreate %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendSyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c345 44 "%0%!FUNC! ERROR : NrCoexMgrIOTargetCreate %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendSyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c295 43 "%0%!FUNC! ERROR : Wlan driver is Removed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendSyncIoctl
+{
+}
+#typev NrCoexMgrIO_c295 42 "%0%!FUNC! ERROR : Invalid IOCTL %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendSyncIoctl
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c295 41 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSendSyncIoctl
+{
+}
+#typev NrCoexMgrIO_c691 83 "%0%!FUNC! Setting wlan band usage with %10!d! success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSetWlanBandUsage
+{
+enable, ItemLong -- 10
+}
+#typev NrCoexMgrIO_c687 82 "%0%!FUNC! ERROR: Setting Wlan band usage with %10!d! failed with %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSetWlanBandUsage
+{
+enable, ItemLong -- 10
+ntStatus, ItemNTSTATUS -- 11
+}
+#typev NrCoexMgrIO_c681 81 "%0%!FUNC! NrCoexMgrIOCancelAysncIoctlRequest Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOSetWlanBandUsage
+{
+}
+#typev NrCoexMgrIO_c243 34 "%0%!FUNC! IO Target not opened and no need of closing the same" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOTargetClose
+{
+}
+#typev NrCoexMgrIO_c235 33 "%0%!FUNC! IO Target Closed. Wlan driver status : %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOTargetClose
+{
+pNrCoexMgrContext->nr_status_context.wlanDriverStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c228 32 "%0%!FUNC! Closing the IO target" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOTargetClose
+{
+}
+#typev NrCoexMgrIO_c79 17 "%0%!FUNC! Exit :%10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOTargetCreate
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c76 16 "%0%!FUNC! ERROR : WdfIoTargetCreate. %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOTargetCreate
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c67 15 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOTargetCreate
+{
+}
+#typev NrCoexMgrIO_c214 31 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOTargetOpen
+{
+}
+#typev NrCoexMgrIO_c189 28 "%0%!FUNC! ERROR : Failed to Open none of the Symlinks %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOTargetOpen
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c209 30 "%0%!FUNC! WdfWaitLockCreate %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOTargetOpen
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c203 29 "%0%!FUNC! ERROR : Failed to create lock for IOTarget. WdfWaitLockCreate status = %10!s! Bailing Out!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOTargetOpen
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c184 27 "%0%!FUNC! Successfully opened the target %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOTargetOpen
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c178 26 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrIOTargetOpen
+{
+}
+#typev NrCoexMgrIO_c112 25 "%0%!FUNC! Exit: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrOpenIOTargetBySymlink
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c160 24 "%0%!FUNC! WdfIoTargetOpen:%10!s! %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrOpenIOTargetBySymlink
+{
+WlanSymbolicLinkName[iterator], ItemWString -- 10
+ntStatus, ItemNTSTATUS -- 11
+}
+#typev NrCoexMgrIO_c155 23 "%0%!FUNC! ERROR : WdfIoTargetOpen. %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrOpenIOTargetBySymlink
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c133 22 "%0%!FUNC! WdfIoTargetOpen with OS supplied symlink %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrOpenIOTargetBySymlink
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c118 21 "%0%!FUNC! Retry with newly fetched symlink from OS or static symbolic names" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrOpenIOTargetBySymlink
+{
+}
+#typev NrCoexMgrIO_c115 20 "%0%!FUNC! WdfIoTargetOpen failed for OS supplied symlink %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrOpenIOTargetBySymlink
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c110 19 "%0%!FUNC! WdfIoTargetOpen with OS supplied symlink %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrOpenIOTargetBySymlink
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrIO_c92 18 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrOpenIOTargetBySymlink
+{
+}
+#typev NrCoexMgrIO_c480 58 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=WlanIOAsyncIoctlCompletionCB
+{
+}
+#typev NrCoexMgrIO_c446 55 "%0%!FUNC! Wlan driver is removed hence enabling n79 on modem" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=WlanIOAsyncIoctlCompletionCB
+{
+}
+#typev NrCoexMgrIO_c459 56 "%0NrCoexMgrIO.c::%!FUNC!: wlan has sent async notification with 5G band status" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=WlanIOAsyncIoctlCompletionCB
+{
+}
+#typev NrCoexMgrIO_c476 57 "%0%!FUNC! ERROR: Default failure case" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WlanIOAsyncIoctlCompletionCB
+{
+}
+#typev NrCoexMgrIO_c441 54 "%0%!FUNC! %10!s! and Wlan5GinUse :%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=WlanIOAsyncIoctlCompletionCB
+{
+ntStatus, ItemNTSTATUS -- 10
+pNrCoexMgrCtx->nr_status_context.wlan5GinUse, ItemLong -- 11
+}
+#typev NrCoexMgrIO_c431 53 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=WlanIOAsyncIoctlCompletionCB
+{
+}

@@ -1,0 +1,172 @@
+// PDB:  qcqdss7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+bd5b69a9-8a27-35e7-1b3a-359f58e416a0 kmdf // SRC=qdssNHLOS.c MJ= MN=
+#typev qdssNHLOS_c1457 45 "%0%!FUNC! Plugin %10!d!, sys: %11!d!, failed not enough memory" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=CallUlogPluginExtCmd
+{
+PluginID, ItemLong -- 10
+SubSystem, ItemLong -- 11
+}
+#typev qdssNHLOS_c1505 48 "%0%!FUNC! Plugin %10!d!, sys: %11!d!, resp failed from Subsystem" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=CallUlogPluginExtCmd
+{
+PluginID, ItemLong -- 10
+SubSystem, ItemLong -- 11
+}
+#typev qdssNHLOS_c1528 49 "%0%!FUNC!plugin id[%10!d!]  sys: %11!d! Resp unhandle result %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=CallUlogPluginExtCmd
+{
+PluginID, ItemLong -- 10
+SubSystem, ItemLong -- 11
+resp.result, ItemLong -- 12
+}
+#typev qdssNHLOS_c1493 47 "%0%!FUNC! Plugin %10!d!, sys: %11!d!, failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=CallUlogPluginExtCmd
+{
+PluginID, ItemLong -- 10
+SubSystem, ItemLong -- 11
+}
+#typev qdssNHLOS_c1480 46 "%0%!FUNC! for ss: %10!d! - %11!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=CallUlogPluginExtCmd
+{
+SubSystem, ItemLong -- 10
+(char *)pDiagMsg->msg_to_plugin, ItemString -- 11
+}
+#typev qdssNHLOS_c1554 50 "%0[*PowerDB] QdssGenerateNonHlosClockRunDown - Failed Applying Filter Entity for ss:%10!s!- QDSS_DIAG_ULOG_FILTER_ENTITY " //   IFRLOG=CustomlogHandle LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=ConfigUlogPluginExtNPA
+{
+Arg, ItemString -- 10
+}
+#typev qdssNHLOS_c359 11 "%0QDSS Diag Result on ss=%10!s! turnOn=%11!d! cmd=0x%12!04X! event=%13!u! result=[%14!s!]" //   IFRLOG=CustomlogHandle LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=PerformDiagTrxn
+{
+Arg, ItemString -- 10
+Arg, ItemLong -- 11
+Arg, ItemLong -- 12
+Arg, ItemLong -- 13
+Arg, ItemString -- 14
+}
+#typev qdssNHLOS_c221 12 "%0%!FUNC! 221: Memory Allocation failed for requestBuffer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DIAG FUNC=PerformDiagTrxn
+{
+}
+#typev qdssNHLOS_c259 14 "%0%!FUNC! 259: failed in memcpy_s, buffer size %10!Iu!, copy size %11!Iu!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=PerformDiagTrxn
+{
+bytes - QDSS_DIAG_HEADER_SIZE, ItemPtr -- 10
+sizeof(PowerDBScriptRpm), ItemPtr -- 11
+}
+#typev qdssNHLOS_c244 13 "%0%!FUNC! 244: failed in memcpy_s, buffer size %10!Iu!, copy size %11!Iu!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=PerformDiagTrxn
+{
+bytes - QDSS_DIAG_HEADER_SIZE, ItemPtr -- 10
+sizeof(PowerDBScriptNhlos), ItemPtr -- 11
+}
+#typev qdssNHLOS_c302 15 "%0%!FUNC! 302: invalid powerDBCmd 0x%10!02X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DIAG FUNC=PerformDiagTrxn
+{
+powerDBCmd, ItemLong -- 10
+}
+#typev qdssNHLOS_c1239 35 "%0GetQDSSTraceDumpPwerDB:Open IO failed, check QCDB configuration!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QDSSEvtWorkItemSubsystemAdspStateNotification
+{
+}
+#typev qdssNHLOS_c1226 34 "%0GetQDSSTraceDumpPwerDB create IO failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QDSSEvtWorkItemSubsystemAdspStateNotification
+{
+}
+#typev qdssNHLOS_c1213 33 "%0 QDSSEvtWorkItemSubsystemStateNotification failed to get context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QDSSEvtWorkItemSubsystemAdspStateNotification
+{
+}
+#typev qdssNHLOS_c1186 32 "%0GetQDSSTraceDumpPwerDB:Open IO failed, check QCDB configuration!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QDSSEvtWorkItemSubsystemModemStateNotification
+{
+}
+#typev qdssNHLOS_c1173 31 "%0GetQDSSTraceDumpPwerDB create IO failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QDSSEvtWorkItemSubsystemModemStateNotification
+{
+}
+#typev qdssNHLOS_c1160 30 "%0 QDSSEvtWorkItemSubsystemStateNotification failed to get context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QDSSEvtWorkItemSubsystemModemStateNotification
+{
+}
+#typev qdssNHLOS_c1345 41 "%0GetQDSSTraceDumpPwerDB:Open IO failed, check QCDB configuration!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QDSSEvtWorkItemSubsystemSensorStateNotification
+{
+}
+#typev qdssNHLOS_c1332 40 "%0GetQDSSTraceDumpPwerDB create IO failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QDSSEvtWorkItemSubsystemSensorStateNotification
+{
+}
+#typev qdssNHLOS_c1319 39 "%0 QDSSEvtWorkItemSubsystemStateNotification failed to get context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QDSSEvtWorkItemSubsystemSensorStateNotification
+{
+}
+#typev qdssNHLOS_c1291 38 "%0GetQDSSTraceDumpPwerDB:Open IO failed, check QCDB configuration!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QDSSEvtWorkItemSubsystemWcnssStateNotification
+{
+}
+#typev qdssNHLOS_c1278 37 "%0GetQDSSTraceDumpPwerDB create IO failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QDSSEvtWorkItemSubsystemWcnssStateNotification
+{
+}
+#typev qdssNHLOS_c1265 36 "%0 QDSSEvtWorkItemSubsystemStateNotification failed to get context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QDSSEvtWorkItemSubsystemWcnssStateNotification
+{
+}
+#typev qdssNHLOS_c503 21 "%0[*PowerDB] QdssGenerateNonHlosClockRunDown - Failed for ss:%10!s! QDSS_DIAG_POWERDB_COMMAND_RUN" //   IFRLOG=CustomlogHandle LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=QdssGenerateNonHlosClockRunDown
+{
+Arg, ItemString -- 10
+}
+#typev qdssNHLOS_c485 20 "%0[*PowerDB] QdssGenerateNonHlosClockRunDown - Failed for ss:%10!s! QDSS_DIAG_POWERDB_COMMAND_SCRIPT" //   IFRLOG=CustomlogHandle LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=QdssGenerateNonHlosClockRunDown
+{
+Arg, ItemString -- 10
+}
+#typev qdssNHLOS_c459 19 "%0[*PowerDB] QdssGenerateNonHlosClockRunDown - Failed for ss:%10!s! QDSS_DIAG_POWERDB_COMMAND_RESET" //   IFRLOG=CustomlogHandle LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=QdssGenerateNonHlosClockRunDown
+{
+Arg, ItemString -- 10
+}
+#typev qdssNHLOS_c440 18 "%0[*PowerDB] QdssGenerateNonHlosClockRunDown - Failed Setting Transport Type for ss:%10!s! QDSS_DIAG_POWERDB_ULOG_SWITCH_REQ" //   IFRLOG=CustomlogHandle LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=QdssGenerateNonHlosClockRunDown
+{
+Arg, ItemString -- 10
+}
+#typev qdssNHLOS_c423 17 "%0[*PowerDB] QdssGenerateNonHlosClockRunDown - Failed connect for ss:%10!s!- QDSS_DIAG_POWERDB_ULOG_SWITCH_REQ " //   IFRLOG=CustomlogHandle LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=QdssGenerateNonHlosClockRunDown
+{
+Arg, ItemString -- 10
+}
+#typev qdssNHLOS_c406 16 "%0[*PowerDB] QdssGenerateNonHlosClockRunDown - Failed Applying Filter Entity for ss:%10!s!- QDSS_DIAG_ULOG_FILTER_ENTITY " //   IFRLOG=CustomlogHandle LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=QdssGenerateNonHlosClockRunDown
+{
+Arg, ItemString -- 10
+}
+#typev qdssNHLOS_c555 24 "%0[Qdss] Unable to match expected Event Table Tag value for subsystem %10!s!: %11!s!" //   IFRLOG=CustomlogHandle LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=QuerySubsystemCrc
+{
+Arg, ItemString -- 10
+Arg, ItemString -- 11
+}
+#typev qdssNHLOS_c540 23 "%0[Qdss] Event Table Tag value for subsystem %10!s!: %11!s!" //   IFRLOG=CustomlogHandle LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=QuerySubsystemCrc
+{
+Arg, ItemString -- 10
+Arg, ItemString -- 11
+}
+#typev qdssNHLOS_c536 22 "%0[Qdss] Unable to query subsystem %10!s! for crc value, result: %11!02X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=QuerySubsystemCrc
+{
+ss_array[eSubSys], ItemString -- 10
+pExpectedResponsePkt->opResult, ItemLong -- 11
+}
+#typev qdssNHLOS_c95 10 "%0%!FUNC! : failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=SendDiagCmd
+{
+}
+#typev qdssNHLOS_c1679 54 "%0%!FUNC!  failed with start NPA Dump for subsystem %10!ld!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=StartUlogPluginExtNPA
+{
+SubSystem, ItemLong -- 10
+}
+#typev qdssNHLOS_c1670 53 "%0%!FUNC!  failed with enabled the qdss tracer output in subsystem %10!ld!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=StartUlogPluginExtNPA
+{
+SubSystem, ItemLong -- 10
+}
+#typev qdssNHLOS_c1621 52 "%0%!FUNC!  failed with start NPA Dump for subsystem %10!ld!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=StopUlogPluginExtNPA
+{
+SubSystem, ItemLong -- 10
+}
+#typev qdssNHLOS_c1613 51 "%0%!FUNC!  failed with start NPA Dump for subsystem %10!ld!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=StopUlogPluginExtNPA
+{
+SubSystem, ItemLong -- 10
+}
+#typev qdssNHLOS_c690 29 "%0QDSS MPSS bitmask is NULL, so swevt enablement is skipped " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=ToggleNonHLOSSubsystem
+{
+}
+#typev qdssNHLOS_c636 26 "%0QDSS RPM set swevt faild.Diag resp with cmd %10!d! received." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=ToggleNonHlosSubsystemsRpm
+{
+(UINT)ExpectBuf[0], ItemLong -- 10
+}
+#typev qdssNHLOS_c646 27 "%0QDSS RPM set swevt faild.Diag resp with cmd %10!d! received." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=ToggleNonHlosSubsystemsRpm
+{
+(UINT)ExpectBuf[0], ItemLong -- 10
+}
+#typev qdssNHLOS_c654 28 "%0QDSS RPM swevt unexpect Diag Command %10!d! received." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=ToggleNonHlosSubsystemsRpm
+{
+(UINT)ExpectBuf[0], ItemLong -- 10
+}
+#typev qdssNHLOS_c593 25 "%0Rpm Swevt Length is %10!d!, expected %11!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=ToggleNonHlosSubsystemsRpm
+{
+subsysConfig.ImageSwevtLength[imageNumber], ItemLong -- 10
+QDSS_RPM_SWEVT_GROUP_LENGTH*QDSS_RPM_SWEVT_GROUP_COUNT * 8, ItemLong -- 11
+}

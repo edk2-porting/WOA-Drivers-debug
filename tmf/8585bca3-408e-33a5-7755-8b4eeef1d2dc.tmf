@@ -1,0 +1,33 @@
+// PDB:  qcsmmu7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+8585bca3-408e-33a5-7755-8b4eeef1d2dc SMMU // SRC=SmmuReservationManagement.cpp MJ= MN=
+#typev SmmuReservationManagement_cpp471 14 "%0 SmmuReservationManagement.cpp::%!FUNC!::471 :pReservationMemoryPool->ReservedPages != 0" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmmuPtAlignedReservations
+{
+}
+#typev SmmuReservationManagement_cpp458 13 "%0 SmmuReservationManagement.cpp::%!FUNC!::458 :pReservationMemoryPool->ReservedPages + EndReservationPages > MAX_PAGES_L2TABLE" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmmuPtAlignedReservations
+{
+}
+#typev SmmuReservationManagement_cpp436 12 "%0 SmmuReservationManagement.cpp::%!FUNC!::436 :pReservationMemoryPool->ReservedPages + StartReservationPages > MAX_PAGES_L2TABLE" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmmuPtAlignedReservations
+{
+}
+#typev SmmuReservationManagement_cpp399 11 "%0 SmmuReservationManagement.cpp::%!FUNC!::399 :lnTableVirtMemory == NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmmuPtAlignedReservations
+{
+}
+#typev SmmuReservationManagement_cpp387 10 "%0 SmmuReservationManagement.cpp::%!FUNC!::387 :Memory allocation failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmmuPtAlignedReservations
+{
+result, ItemNTSTATUS -- 10
+}
+#typev SmmuReservationManagement_cpp941 16 "%0 SmmuReservationManagement.cpp::%!FUNC!::941 : SmmuPtAlignedReservations failed with status [0x%10!08x!] alignedReservations:[0x%11!I64x!], startBlock:[0x%12!I64x!], endblock:[0x%13!I64x!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmmuPtReserve
+{
+result, ItemLong -- 10
+alignedReservations, ItemLongLongX -- 11
+startBlock, ItemLongLongX -- 12
+endBlock, ItemLongLongX -- 13
+}
+#typev SmmuReservationManagement_cpp887 15 "%0 SmmuReservationManagement.cpp::%!FUNC!::887 : SmmuPtReserveInExistingLnDescriptors failed with status [0x%10!08x!] reservationsComplete:[0x%11!I64x!], startBlock:[0x%12!I64x!], endblock:[0x%13!I64x!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmmuPtReserve
+{
+result, ItemLong -- 10
+reservationsComplete, ItemLongLongX -- 11
+startBlock, ItemLongLongX -- 12
+endBlock, ItemLongLongX -- 13
+}

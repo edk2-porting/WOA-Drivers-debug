@@ -1,0 +1,520 @@
+// PDB:  qcpil.pdb
+// PDB:  Last Updated :2021-10-17:21:53:58:868 (UTC) [tracepdb]
+963613b5-8114-320f-1048-ef4312a722ce PIL-Rel // SRC=image_memory.c MJ= MN=
+#typev image_memory_c1714 86 "%0WdfCollectionAdd(wdfMemImageMemory) failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=AddEntryToPilRegionWithMemAttribCollection
+{
+status, ItemNTSTATUS -- 10
+}
+#typev image_memory_c1698 85 "%0WdfMemoryCreate(pImageMemoryEntryTemp) failed with %10!s! " //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=AddEntryToPilRegionWithMemAttribCollection
+{
+status, ItemNTSTATUS -- 10
+}
+#typev image_memory_c1683 84 "%0pilRegionsWithAttributesCollection is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AddEntryToPilRegionWithMemAttribCollection
+{
+}
+#typev image_memory_c1676 83 "%0pDeviceContext is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AddEntryToPilRegionWithMemAttribCollection
+{
+}
+#typev image_memory_c1668 82 "%0pImageMemoryEntry is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AddEntryToPilRegionWithMemAttribCollection
+{
+}
+#typev image_memory_c1661 81 "%0Device handle is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AddEntryToPilRegionWithMemAttribCollection
+{
+}
+#typev image_memory_c1714 86 "%0WdfCollectionAdd(wdfMemImageMemory) failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=AddEntryToPilRegionWithMemAttribCollection$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev image_memory_c1698 85 "%0WdfMemoryCreate(pImageMemoryEntryTemp) failed with %10!s! " //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=AddEntryToPilRegionWithMemAttribCollection$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev image_memory_c1683 84 "%0pilRegionsWithAttributesCollection is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AddEntryToPilRegionWithMemAttribCollection$fin$0
+{
+}
+#typev image_memory_c1676 83 "%0pDeviceContext is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AddEntryToPilRegionWithMemAttribCollection$fin$0
+{
+}
+#typev image_memory_c1668 82 "%0pImageMemoryEntry is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AddEntryToPilRegionWithMemAttribCollection$fin$0
+{
+}
+#typev image_memory_c1661 81 "%0Device handle is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AddEntryToPilRegionWithMemAttribCollection$fin$0
+{
+}
+#typev image_memory_c146 12 "%0Image memory table expanded for %10!d! entries." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=AddImageMemoryConfig
+{
+s_SizeImageMemoryTable, ItemLong -- 10
+}
+#typev image_memory_c135 11 "%0Expanded image memory table, GUID (beginning partial): 0x%10!X!, reservation: 0x%11!X!, alignment: 0x%12!X!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=AddImageMemoryConfig
+{
+newImageMemoryTable[s_SizeImageMemoryTable].ImageGuid.Data1, ItemLong -- 10
+newImageMemoryTable[s_SizeImageMemoryTable].LengthInBytes, ItemLong -- 11
+newImageMemoryTable[s_SizeImageMemoryTable].AlignmentSize, ItemLong -- 12
+}
+#typev image_memory_c112 10 "%0Error: Insufficient memory to allocate the image memory table: %10!Iu! bytes." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AddImageMemoryConfig
+{
+sizeof(PIL_IMAGE_MEMORY) * newSizeImageMemoryTable, ItemPtr -- 10
+}
+#typev image_memory_c1326 65 "%0Warning: The requested preallocated memory has already been allocated for subsystem (partial GUID): 0x%10!X!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=AllocateImageMemory
+{
+Guid->Data1, ItemLong -- 10
+}
+#typev image_memory_c1319 64 "%0Error: Unable to locate the preallocated memory for subsystem (partial GUID): 0x%10!X!, size in bytes: 0x%11!IX!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AllocateImageMemory
+{
+Guid->Data1, ItemLong -- 10
+ImageSize, ItemPtr -- 11
+}
+#typev image_memory_c1361 67 "%0Error: The requested preallocated memory has not yet been allocated for subsystem (partial GUID): 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=DeallocateImageMemory
+{
+Guid->Data1, ItemLong -- 10
+}
+#typev image_memory_c1354 66 "%0Error: Unable to locate the preallocated memory for subsystem (partial GUID): 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=DeallocateImageMemory
+{
+Guid->Data1, ItemLong -- 10
+}
+#typev image_memory_c619 40 "%0Warning: Unable to allocate required physically contiguous memory for GUID: 0x%10!x!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=EnumPreallocationRegions
+{
+s_ImageMemoryTable[imageMemoryIndex].ImageGuid.Data1, ItemLong -- 10
+}
+#typev image_memory_c828 50 "%0Warning: No image memory has been preallocated." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=GetImageMemory
+{
+}
+#typev image_memory_c872 52 "%0Warning: No image memory has been preallocated." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=GetImageMemoryFromGUID
+{
+}
+#typev image_memory_c1241 59 "%0Error: ScmPerformGetPilRelocRange failed with status 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c1280 63 "%0Error: PartitionPilMemoryBlock failed with status 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c1272 62 "%0Error: Insufficient memory to populate PIL Metadata info into image memory table" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory
+{
+}
+#typev image_memory_c1261 61 "%0Error: No image memory information available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory
+{
+}
+#typev image_memory_c1252 60 "%0ModifyPilFreeMemoryBlock failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory
+{
+status, ItemNTSTATUS -- 10
+}
+#typev image_memory_c1236 58 "%0Successfully retrieved PIL images reloc range from TZ.PIL images reloc range falls between 0x%10!X! to 0x%11!X!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=InitImageMemory
+{
+LowestAcceptablePreallocationAddress.LowPart, ItemLong -- 10
+HighestAcceptablePreallocationAddress.LowPart, ItemLong -- 11
+}
+#typev image_memory_c1241 59 "%0Error: ScmPerformGetPilRelocRange failed with status 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory$fin$0
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c1280 63 "%0Error: PartitionPilMemoryBlock failed with status 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory$fin$0
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c1272 62 "%0Error: Insufficient memory to populate PIL Metadata info into image memory table" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory$fin$0
+{
+}
+#typev image_memory_c1261 61 "%0Error: No image memory information available." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory$fin$0
+{
+}
+#typev image_memory_c1252 60 "%0ModifyPilFreeMemoryBlock failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageMemory$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev image_memory_c1236 58 "%0Successfully retrieved PIL images reloc range from TZ.PIL images reloc range falls between 0x%10!X! to 0x%11!X!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=InitImageMemory$fin$0
+{
+LowestAcceptablePreallocationAddress.LowPart, ItemLong -- 10
+HighestAcceptablePreallocationAddress.LowPart, ItemLong -- 11
+}
+#typev image_memory_c729 45 "%0Warning: No image memory has been preallocated." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=IsPreallocated
+{
+}
+#typev image_memory_c770 48 "%0Error: Unrecognized image parameter %10!d! with GUID (begin partial): 0x%11!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=IsPreallocated
+{
+CheckLength, ItemLong -- 10
+Guid->Data1, ItemLong -- 11
+}
+#typev image_memory_c755 47 "%0Preallocated memory available for image with GUID (begin partial): 0x%10!X!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=IsPreallocated
+{
+Guid->Data1, ItemLong -- 10
+}
+#typev image_memory_c788 49 "%0Warning: No image memory has been reserved." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=IsReserved
+{
+}
+#typev image_memory_c535 35 "%0Image memory table is already loaded." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c576 39 "%0DMF_Registry_AllSubKeysFromHandleEnumerate failed during enumeration of SubsystemLoad subkeys " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c562 38 "%0Image memory table allocated for %10!d! entries." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+subKeyCount, ItemLong -- 10
+}
+#typev image_memory_c553 37 "%0Insufficient memory to allocate the image memory table: %10!Iu! bytes." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+sizeof(PIL_IMAGE_MEMORY) * subKeyCount, ItemPtr -- 10
+}
+#typev image_memory_c542 36 "%0No image memory subkeys were found. No memory will be preallocated for relocatable subsystems." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c523 34 "%0 DMF_Registry_AllSubKeysFromHandleEnumerate failed for SubsystemLoad subkeys!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c509 33 "%0Unable to open the SubsystemLoad key under root " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c496 32 "%0Unable to open the root key containing image memory requirements: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c485 31 "%0Failed to get device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c477 30 "%0Invalid parameter LoadImageMemoryConfig" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig
+{
+}
+#typev image_memory_c535 35 "%0Image memory table is already loaded." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig$fin$0
+{
+}
+#typev image_memory_c576 39 "%0DMF_Registry_AllSubKeysFromHandleEnumerate failed during enumeration of SubsystemLoad subkeys " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig$fin$0
+{
+}
+#typev image_memory_c562 38 "%0Image memory table allocated for %10!d! entries." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig$fin$0
+{
+subKeyCount, ItemLong -- 10
+}
+#typev image_memory_c553 37 "%0Insufficient memory to allocate the image memory table: %10!Iu! bytes." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig$fin$0
+{
+sizeof(PIL_IMAGE_MEMORY) * subKeyCount, ItemPtr -- 10
+}
+#typev image_memory_c542 36 "%0No image memory subkeys were found. No memory will be preallocated for relocatable subsystems." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig$fin$0
+{
+}
+#typev image_memory_c523 34 "%0 DMF_Registry_AllSubKeysFromHandleEnumerate failed for SubsystemLoad subkeys!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig$fin$0
+{
+}
+#typev image_memory_c509 33 "%0Unable to open the SubsystemLoad key under root " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig$fin$0
+{
+}
+#typev image_memory_c496 32 "%0Unable to open the root key containing image memory requirements: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig$fin$0
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c485 31 "%0Failed to get device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig$fin$0
+{
+}
+#typev image_memory_c477 30 "%0Invalid parameter LoadImageMemoryConfig" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=LoadImageMemoryConfig$fin$0
+{
+}
+#typev image_memory_c1532 76 "%0Invalid MemoryAttribute value(0x%10!X!) for GUID (beginning partial): 0x%11!X!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+pImageMemoryEntry->MemoryAttribute, ItemLong -- 10
+pImageMemoryEntry->ImageGuid.Data1, ItemLong -- 11
+}
+#typev image_memory_c1617 80 "%0Successfully excluded PIL-Region for GUID (beginning partial): 0x%10!X! at base address: 0x%11!I64X! of length: 0x%12!I64X! from the PGCM" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+pImageMemoryEntry->ImageGuid.Data1, ItemLong -- 10
+pImageMemoryEntry->ImageLoadAddress, ItemLongLongXX -- 11
+pImageMemoryEntry->LengthInBytes, ItemLongLongXX -- 12
+}
+#typev image_memory_c1612 79 "%0Successfully returned memory for GUID (beginning partial): 0x%10!X! at base address: 0x%11!I64X! of length: 0x%12!I64X! to HLOS" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+pImageMemoryEntry->ImageGuid.Data1, ItemLong -- 10
+pImageMemoryEntry->ImageLoadAddress, ItemLongLongXX -- 11
+pImageMemoryEntry->LengthInBytes, ItemLongLongXX -- 12
+}
+#typev image_memory_c1606 78 "%0MmAddPhysicalMemory for %10!s! failed with %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+&pImageMemoryEntry->ImageGuid, ItemGuid -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev image_memory_c1591 77 "%0MemoryAttribute is configured to reserved value for GUID (beginning partial): 0x%10!X!, excluded PIL-region from the PGCM!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+pImageMemoryEntry->ImageGuid.Data1, ItemLong -- 10
+}
+#typev image_memory_c1524 75 "%0LengthInBytes is invalid at idx :%10!d! of pilRegionsWithAttributesCollection!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+idx, ItemLong -- 10
+}
+#typev image_memory_c1517 74 "%0ImageLoadAddress is invalid at idx :%10!d! of pilRegionsWithAttributesCollection!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+idx, ItemLong -- 10
+}
+#typev image_memory_c1510 73 "%0pImageMemoryEntry is invalid at idx: %10!d!, proceeding to next entry." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+idx, ItemLong -- 10
+}
+#typev image_memory_c1503 72 "%0wdfMemImageEntry is invalid at idx: %10!d!, proceeding to next entry." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+idx, ItemLong -- 10
+}
+#typev image_memory_c1492 71 "%0No entries found in pilRegionsWithAttributesCollection collection!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+}
+#typev image_memory_c1481 70 "%0pilRegionsWithAttributesCollection is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+}
+#typev image_memory_c1474 69 "%0pDeviceContext is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+}
+#typev image_memory_c1466 68 "%0Device handle is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock
+{
+}
+#typev image_memory_c1532 76 "%0Invalid MemoryAttribute value(0x%10!X!) for GUID (beginning partial): 0x%11!X!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+pImageMemoryEntry->MemoryAttribute, ItemLong -- 10
+pImageMemoryEntry->ImageGuid.Data1, ItemLong -- 11
+}
+#typev image_memory_c1617 80 "%0Successfully excluded PIL-Region for GUID (beginning partial): 0x%10!X! at base address: 0x%11!I64X! of length: 0x%12!I64X! from the PGCM" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+pImageMemoryEntry->ImageGuid.Data1, ItemLong -- 10
+pImageMemoryEntry->ImageLoadAddress, ItemLongLongXX -- 11
+pImageMemoryEntry->LengthInBytes, ItemLongLongXX -- 12
+}
+#typev image_memory_c1612 79 "%0Successfully returned memory for GUID (beginning partial): 0x%10!X! at base address: 0x%11!I64X! of length: 0x%12!I64X! to HLOS" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+pImageMemoryEntry->ImageGuid.Data1, ItemLong -- 10
+pImageMemoryEntry->ImageLoadAddress, ItemLongLongXX -- 11
+pImageMemoryEntry->LengthInBytes, ItemLongLongXX -- 12
+}
+#typev image_memory_c1606 78 "%0MmAddPhysicalMemory for %10!s! failed with %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+&pImageMemoryEntry->ImageGuid, ItemGuid -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev image_memory_c1591 77 "%0MemoryAttribute is configured to reserved value for GUID (beginning partial): 0x%10!X!, excluded PIL-region from the PGCM!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+pImageMemoryEntry->ImageGuid.Data1, ItemLong -- 10
+}
+#typev image_memory_c1524 75 "%0LengthInBytes is invalid at idx :%10!d! of pilRegionsWithAttributesCollection!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+idx, ItemLong -- 10
+}
+#typev image_memory_c1517 74 "%0ImageLoadAddress is invalid at idx :%10!d! of pilRegionsWithAttributesCollection!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+idx, ItemLong -- 10
+}
+#typev image_memory_c1510 73 "%0pImageMemoryEntry is invalid at idx: %10!d!, proceeding to next entry." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+idx, ItemLong -- 10
+}
+#typev image_memory_c1503 72 "%0wdfMemImageEntry is invalid at idx: %10!d!, proceeding to next entry." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+idx, ItemLong -- 10
+}
+#typev image_memory_c1492 71 "%0No entries found in pilRegionsWithAttributesCollection collection!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+}
+#typev image_memory_c1481 70 "%0pilRegionsWithAttributesCollection is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+}
+#typev image_memory_c1474 69 "%0pDeviceContext is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+}
+#typev image_memory_c1466 68 "%0Device handle is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ModifyPilFreeMemoryBlock$fin$0
+{
+}
+#typev image_memory_c1203 57 "%0Error: PilReturnPhysicalMemoryToHlos failed with status 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PartitionPilMemoryBlock
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c1196 56 "%0PIL is configured to not return the unused carve out memory back to HLOS." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PartitionPilMemoryBlock
+{
+}
+#typev image_memory_c1203 57 "%0Error: PilReturnPhysicalMemoryToHlos failed with status 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PartitionPilMemoryBlock$fin$0
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c1196 56 "%0PIL is configured to not return the unused carve out memory back to HLOS." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PartitionPilMemoryBlock$fin$0
+{
+}
+#typev image_memory_c1131 55 "%0PilReturnPhysicalMemoryToHlos: Total: 0x%10!I64X! bytes returned to HLOS." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PilReturnPhysicalMemoryToHlos
+{
+totalMemoryReturned.QuadPart, ItemLongLongXX -- 10
+}
+#typev image_memory_c1114 54 "%0Error: MmAddPhysicalMemory failed to return memory to HLOS, returned with status 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilReturnPhysicalMemoryToHlos
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c1108 53 "%0PilReturnPhysicalMemoryToHlos: Returning 0x%10!I64X! bytes at base address: 0x%11!I64X! to HLOS" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PilReturnPhysicalMemoryToHlos
+{
+tempEntry->RangeEntry.NumberOfBytes.QuadPart, ItemLongLongXX -- 10
+tempEntry->RangeEntry.BaseAddress.QuadPart, ItemLongLongXX -- 11
+}
+#typev image_memory_c1131 55 "%0PilReturnPhysicalMemoryToHlos: Total: 0x%10!I64X! bytes returned to HLOS." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PilReturnPhysicalMemoryToHlos$fin$0
+{
+totalMemoryReturned.QuadPart, ItemLongLongXX -- 10
+}
+#typev image_memory_c1114 54 "%0Error: MmAddPhysicalMemory failed to return memory to HLOS, returned with status 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PilReturnPhysicalMemoryToHlos$fin$0
+{
+status, ItemLong -- 10
+}
+#typev image_memory_c1108 53 "%0PilReturnPhysicalMemoryToHlos: Returning 0x%10!I64X! bytes at base address: 0x%11!I64X! to HLOS" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PilReturnPhysicalMemoryToHlos$fin$0
+{
+tempEntry->RangeEntry.NumberOfBytes.QuadPart, ItemLongLongXX -- 10
+tempEntry->RangeEntry.BaseAddress.QuadPart, ItemLongLongXX -- 11
+}
+#typev image_memory_c704 44 "%0Error: Unable to map %10!d! bytes of contiguous memory for subsystem (partial GUID): 0x%11!X!.at 0x%12!X! address" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PreallocationCallback
+{
+ImageMemory->LengthInBytes, ItemLong -- 10
+ImageMemory->ImageGuid.Data1, ItemLong -- 11
+PtrToUlong(physicalAddress), ItemLong -- 12
+}
+#typev image_memory_c699 43 "%0Successfully mapped %10!d! bytes of contiguous memory for subsystem (partial GUID): 0x%11!X!.at 0x%12!X! address" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=PreallocationCallback
+{
+ImageMemory->LengthInBytes, ItemLong -- 10
+ImageMemory->ImageGuid.Data1, ItemLong -- 11
+PtrToUlong(physicalAddress), ItemLong -- 12
+}
+#typev image_memory_c678 42 "%0Error: Unable to allocate memory for subsystem (partial GUID): 0x%10!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PreallocationCallback
+{
+ImageMemory->ImageGuid.Data1, ItemLong -- 10
+}
+#typev image_memory_c642 41 "%0Warning: Relocatable image with fixed override detected (partial GUID): 0x%10!X!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=PreallocationCallback
+{
+ImageMemory->ImageGuid.Data1, ItemLong -- 10
+}
+#typev image_memory_c257 13 "%0Error: pSubKeyCount is NULL " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyCountEnumerationCallback
+{
+}
+#typev image_memory_c444 29 "%0Updated image memory table, GUID (beginning partial): 0x%10!X!, reservation: 0x%11!X!, alignment: 0x%12!X!, address: 0x%13!X!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+imageMemoryEntry.ImageGuid.Data1, ItemLong -- 10
+imageMemoryEntry.LengthInBytes, ItemLong -- 11
+imageMemoryEntry.AlignmentSize, ItemLong -- 12
+imageMemoryEntry.ImageLoadAddress, ItemLong -- 13
+}
+#typev image_memory_c433 28 "%0AddEntryToPilRegionWithMemAttribCollection failed with %10!s! for %11!s! subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+status, ItemNTSTATUS -- 10
+subsysName.Buffer, ItemString -- 11
+}
+#typev image_memory_c418 27 "%0Unable to get Subsystem GUID from static structure for %10!s! subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+subsysName.Buffer, ItemString -- 10
+}
+#typev image_memory_c404 26 "%0MemoryAttribute configured as 0x%10!X! for %11!s! subsystem" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+memoryAttribute, ItemLong -- 10
+subsysName.Buffer, ItemString -- 11
+}
+#typev image_memory_c399 25 "%0Unable to open the MemoryAttribute reg-key for %10!s! subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+subsysName.Buffer, ItemString -- 10
+}
+#typev image_memory_c389 24 "%0MemoryAddress configured as 0x%10!X! for %11!s! subsystem" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+memoryAddress, ItemLong -- 10
+subsysName.Buffer, ItemString -- 11
+}
+#typev image_memory_c384 23 "%0Unable to open the memory address value: MemoryAddress for %10!s! subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+subsysName.Buffer, ItemString -- 10
+}
+#typev image_memory_c374 22 "%0MemoryAlignment configured as 0x%10!X! for %11!s! subsystem" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+memoryAlignment, ItemLong -- 10
+subsysName.Buffer, ItemString -- 11
+}
+#typev image_memory_c368 21 "%0Unable to open the memory alignment value: MemoryAlignment for %10!s! subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+subsysName.Buffer, ItemString -- 10
+}
+#typev image_memory_c358 20 "%0MemoryReservation configured as 0x%10!X! for %11!s! subsystem" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+memoryReservation, ItemLong -- 10
+subsysName.Buffer, ItemString -- 11
+}
+#typev image_memory_c354 19 "%0Unable to open the memory reservation value: MemoryReservation for %10!s! subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+subsysName.Buffer, ItemString -- 10
+}
+#typev image_memory_c340 18 "%0RtlUnicodeStringToAnsiString(guidSubkeyString) failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev image_memory_c328 17 "%0RtlUnicodeStringInit failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev image_memory_c320 16 "%0PIL device context is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+}
+#typev image_memory_c311 15 "%0Device handle is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+}
+#typev image_memory_c302 14 "%0DMF device context is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback
+{
+}
+#typev image_memory_c444 29 "%0Updated image memory table, GUID (beginning partial): 0x%10!X!, reservation: 0x%11!X!, alignment: 0x%12!X!, address: 0x%13!X!" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+imageMemoryEntry.ImageGuid.Data1, ItemLong -- 10
+imageMemoryEntry.LengthInBytes, ItemLong -- 11
+imageMemoryEntry.AlignmentSize, ItemLong -- 12
+imageMemoryEntry.ImageLoadAddress, ItemLong -- 13
+}
+#typev image_memory_c433 28 "%0AddEntryToPilRegionWithMemAttribCollection failed with %10!s! for %11!s! subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+status, ItemNTSTATUS -- 10
+subsysName.Buffer, ItemString -- 11
+}
+#typev image_memory_c418 27 "%0Unable to get Subsystem GUID from static structure for %10!s! subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+subsysName.Buffer, ItemString -- 10
+}
+#typev image_memory_c404 26 "%0MemoryAttribute configured as 0x%10!X! for %11!s! subsystem" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+memoryAttribute, ItemLong -- 10
+subsysName.Buffer, ItemString -- 11
+}
+#typev image_memory_c399 25 "%0Unable to open the MemoryAttribute reg-key for %10!s! subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+subsysName.Buffer, ItemString -- 10
+}
+#typev image_memory_c389 24 "%0MemoryAddress configured as 0x%10!X! for %11!s! subsystem" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+memoryAddress, ItemLong -- 10
+subsysName.Buffer, ItemString -- 11
+}
+#typev image_memory_c384 23 "%0Unable to open the memory address value: MemoryAddress for %10!s! subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+subsysName.Buffer, ItemString -- 10
+}
+#typev image_memory_c374 22 "%0MemoryAlignment configured as 0x%10!X! for %11!s! subsystem" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+memoryAlignment, ItemLong -- 10
+subsysName.Buffer, ItemString -- 11
+}
+#typev image_memory_c368 21 "%0Unable to open the memory alignment value: MemoryAlignment for %10!s! subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+subsysName.Buffer, ItemString -- 10
+}
+#typev image_memory_c358 20 "%0MemoryReservation configured as 0x%10!X! for %11!s! subsystem" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+memoryReservation, ItemLong -- 10
+subsysName.Buffer, ItemString -- 11
+}
+#typev image_memory_c354 19 "%0Unable to open the memory reservation value: MemoryReservation for %10!s! subsystem" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+subsysName.Buffer, ItemString -- 10
+}
+#typev image_memory_c340 18 "%0RtlUnicodeStringToAnsiString(guidSubkeyString) failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev image_memory_c328 17 "%0RtlUnicodeStringInit failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev image_memory_c320 16 "%0PIL device context is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+}
+#typev image_memory_c311 15 "%0Device handle is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+}
+#typev image_memory_c302 14 "%0DMF device context is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=SubsystemLoadSubkeyReadEnumerationCallback$fin$0
+{
+}

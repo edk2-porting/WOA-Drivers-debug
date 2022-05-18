@@ -1,0 +1,3085 @@
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+8522c4da-3879-3956-4d0c-612da6a817f9 10.7 // SRC=MPCID.c MJ= MN=
+#typev MPCID_c14807 667 "%0%!FUNC!:: Subscribed for CID %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=Add_SingleSubscribeDeviceService_To_Chain
+{
+pCidData[i], ItemLong -- 10
+}
+#typev MPCID_c14784 666 "%0%!FUNC!::  Subscribed for all CIDs %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=Add_SingleSubscribeDeviceService_To_Chain
+{
+pEventList->subscribed_svc_id, ItemLong -- 10
+}
+#typev MPCID_c14748 665 "%0%!FUNC!::  for service %10!d! .  " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=Add_SingleSubscribeDeviceService_To_Chain
+{
+pEventList->subscribed_svc_id, ItemLong -- 10
+}
+#typev MPCID_c5987 241 "%0%!FUNC!:: -->AddWOLPattern. Memory Allocation failed for size %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=GetQBIPacketFilterData_AddWOLPattern
+{
+buf_size, ItemLong -- 10
+}
+#typev MPCID_c5967 240 "%0%!FUNC!:: -->AddWOLPattern. No Patterns to Add " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=GetQBIPacketFilterData_AddWOLPattern
+{
+}
+#typev MPCID_c6069 242 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_AddWOLPatterns
+{
+}
+#typev MPCID_c2201 71 "%0%!FUNC!::<%10!s!> : Response structure > 0 but Request function (0x%11!x!) is) NULL!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_AllocateQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pQMIElement->pRespFunc, ItemLong -- 11
+}
+#typev MPCID_c2192 70 "%0%!FUNC!::<%10!s!> : Request structure > 0 but Request function (0x%11!x!) or buffer (0x%12!x!) NULL!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_AllocateQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pQMIElement->pReqFunc, ItemLong -- 11
+(UINT)pQMIElement->pReqBuf, ItemLong -- 12
+}
+#typev MPCID_c2142 69 "%0%!FUNC!::<%10!s!> : getting size for msgId returned error 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_AllocateQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c2131 59 "%0%!FUNC!::<%10!s!> : unsupported QbiSvcType %11!u! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_AllocateQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+QbiSvcType, ItemLong -- 11
+}
+#typev MPCID_c2131 25 "%0%!FUNC!::<%10!s!> : 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_AllocateQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c2539 90 "%0%!FUNC!::: pAdapter (0x%10!x!) or QMI (0x%11!x!) is NULL (msgId 0x%12!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_AsyncCb
+{
+(UINT)pAdapter, ItemLong -- 10
+(UINT)pQMI, ItemLong -- 11
+uMsgId, ItemLong -- 12
+}
+#typev MPCID_c2674 95 "%0%!FUNC!::OID Processed ..status:%10!s! with transpErr:%11!d!, nStatus:%12!s!, length:%13!d! for cid: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_AsyncCb
+{
+L'SUCCESS', ItemWString -- 10
+transpErr, ItemLong -- 11
+NTstatusToStr(nStatus), ItemString -- 12
+uRespBufLen, ItemLong -- 13
+processedCID, ItemLong -- 14
+}
+#typev MPCID_c2643 93 "%0%!FUNC!::Adding workitem to WorkList for svc_id:%10!d!, cid:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_AsyncCb
+{
+pQMI->uQBISvcType, ItemLong -- 10
+pQMI->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c2659 94 "%0%!FUNC!::OID FAILED ..status:%10!s! with transpErr:%11!d!, nStatus:%12!s! for cid: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_AsyncCb
+{
+L'FAILED', ItemWString -- 10
+transpErr, ItemLong -- 11
+NTstatusToStr(nStatus), ItemString -- 12
+processedCID, ItemLong -- 13
+}
+#typev MPCID_c2603 92 "%0%!FUNC!::<%10!s!> : Memory allocation FAILED during response to srvId:%11!d!, cid:%12!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_AsyncCb
+{
+pAdapter->PortName, ItemString -- 10
+pQMI->uQBISvcType, ItemLong -- 11
+pQMI->uQBICID, ItemLong -- 12
+}
+#typev MPCID_c2549 91 "%0%!FUNC!::<%10!s!>: Response Buffer (%11!d!) size exceeding expected response size (%12!d!)..Not processing" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPQBI_AsyncCb
+{
+pAdapter->PortName, ItemString -- 10
+uRespBufLen, ItemLong -- 11
+SIZEOF_OID_RESPONSE, ItemLong -- 12
+}
+#typev MPCID_c2531 89 "%0%!FUNC!::: callback is NULL (msgId 0x%10!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_AsyncCb
+{
+uMsgId, ItemLong -- 10
+}
+#typev MPCID_c14871 668 "%0%!FUNC!:: returned 0 size.  " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Build_SubscribeDeviceServiceEventRequest
+{
+}
+#typev MPCID_c2304 77 "%0%!FUNC!::<%10!s!> : Request structure > 0 but Request function (0x%11!x!) or buffer (0x%12!x!) NULL qmitype 0x%13!x! msgid 0x%14!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_ComposeQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pQMIElement->pReqFunc, ItemLong -- 11
+(UINT)pQMIElement->pReqBuf, ItemLong -- 12
+pQMIElement->uQMIType, ItemLong -- 13
+pQMIElement->uMsgId, ItemLong -- 14
+}
+#typev MPCID_c2288 76 "%0%!FUNC!::<%10!s!> : Allocate QMIElement failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_ComposeQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c2279 75 "%0%!FUNC!::<%10!s!> : QMI is not initialized!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_ComposeQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c2256 73 "%0%!FUNC!::<%10!s!> : QbiSvcType:%11!d!, CID:%12!d!, CmdType:%13!s!, bSync:%14!d!, bSendImm:%15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ComposeQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+QbiSvcType, ItemLong -- 11
+QbiCID, ItemLong -- 12
+(0 == QbiCmdType) ? L'QUERY' : L'SET', ItemWString -- 13
+bSync, ItemLong -- 14
+bSendImmediately, ItemLong -- 15
+}
+#typev MPCID_c4154 152 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_AkaAuthRequest
+{
+}
+#typev MPCID_c4244 154 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_AkaPAuthRequest
+{
+}
+#typev MPCID_c5632 224 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_BaseStationsInfoRequest
+{
+}
+#typev MPCID_c5649 225 "%0%!FUNC!::<%10!s!> .. CID Request: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_BaseStationsInfoRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c4680 171 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_DeviceServiceCommandRequest
+{
+}
+#typev MPCID_c4722 174 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_DeviceServiceCommandRequest
+{
+}
+#typev MPCID_c4786 175 "%0%!FUNC!::<%10!s!> OID back to free" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_DeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c4703 173 "%0%!FUNC!::<%10!s!> OID back to free" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_DeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c4697 172 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_DeviceServiceCommandRequest
+{
+}
+#typev MPCID_c4668 170 "%0%!FUNC!:: - could not create memory..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_DeviceServiceCommandRequest
+{
+}
+#typev MPCID_c4084 148 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_IPConfiguration
+{
+}
+#typev MPCID_c4105 150 "%0%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_IPConfiguration
+{
+}
+#typev MPCID_c4092 149 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_IPConfiguration
+{
+}
+#typev MPCID_c5315 202 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+}
+#typev MPCID_c5363 204 "%0%!FUNC!::..Invalid IP Type" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+}
+#typev MPCID_c5370 205 "%0%!FUNC!::..Invalid Source Type" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+}
+#typev MPCID_c5377 206 "%0%!FUNC!::..Invalid Roaming Type" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+}
+#typev MPCID_c5384 207 "%0%!FUNC!::..Invalid Compression Type" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+}
+#typev MPCID_c5391 208 "%0%!FUNC!::..Invalid AuthType Type" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+}
+#typev MPCID_c5462 213 "%0%!FUNC!::<%10!s!> .. CID Request: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5452 212 "%0%!FUNC!:: CID Payload: access_string: %10!s! username: %11!s! password: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+(LPCWSTR)((PBYTE)pLteAttachContext + pLteAttachContext->access_string.offset), ItemWString -- 10
+(LPCWSTR)((PBYTE)pLteAttachContext + pLteAttachContext->username.offset), ItemWString -- 11
+(LPCWSTR)((PBYTE)pLteAttachContext + pLteAttachContext->password.offset), ItemWString -- 12
+}
+#typev MPCID_c5447 211 "%0%!FUNC!:: CID Payload: index: %10!d! ip_type: %11!d! roaming: %12!d! source: %13!d! compression: %14!d! auth_protocol: %15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+i, ItemLong -- 10
+pLteAttachContext->ip_type, ItemLong -- 11
+pLteAttachContext->roaming, ItemLong -- 12
+pLteAttachContext->source, ItemLong -- 13
+pLteAttachContext->compression, ItemLong -- 14
+pLteAttachContext->auth_protocol, ItemLong -- 15
+}
+#typev MPCID_c5441 210 "%0%!FUNC!:: OID Payload: AccessString: %10!s! Username: %11!s! Password: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+pOidReq->SetLteAttachContext.SetContextArray[i].basicInfo.AccessString, ItemWString -- 10
+pOidReq->SetLteAttachContext.SetContextArray[i].basicInfo.UserName, ItemWString -- 11
+pOidReq->SetLteAttachContext.SetContextArray[i].basicInfo.Password, ItemWString -- 12
+}
+#typev MPCID_c5436 209 "%0%!FUNC!:: OID Payload: index: %10!d! IPType: %11!d! Roaming: %12!d! Source: %13!d! Compression: %14!d! AuthType: %15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+i, ItemLong -- 10
+pOidReq->SetLteAttachContext.SetContextArray[i].IPType, ItemLong -- 11
+pOidReq->SetLteAttachContext.SetContextArray[i].Roaming, ItemLong -- 12
+pOidReq->SetLteAttachContext.SetContextArray[i].Source, ItemLong -- 13
+pOidReq->SetLteAttachContext.SetContextArray[i].basicInfo.Compression, ItemLong -- 14
+pOidReq->SetLteAttachContext.SetContextArray[i].basicInfo.AuthType, ItemLong -- 15
+}
+#typev MPCID_c5343 203 "%0%!FUNC!::..Invalid Operation" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_LTEAttachConfigRequest
+{
+}
+#typev MPCID_c3409 104 "%0%!FUNC!:: ..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_OidConnectRequest
+{
+}
+#typev MPCID_c3515 113 "%0%!FUNC!::: sesssion id:%10!d!, act cmd:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_OidConnectRequest
+{
+pReq->session_id, ItemLong -- 10
+pReq->activation_cmd, ItemLong -- 11
+}
+#typev MPCID_c3509 112 "%0%!FUNC!::: sesssion id:%10!d!, act cmd:%11!d!, auth proto:%12!d!, ip type:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_Compose_OidConnectRequest
+{
+pReq->session_id, ItemLong -- 10
+pReq->activation_cmd, ItemLong -- 11
+pReq->auth_protocol, ItemLong -- 12
+pReq->ip_type, ItemLong -- 13
+}
+#typev MPCID_c3506 111 "%0%!FUNC!::: sesssion id:%10!d!, act cmd:%11!d!, auth proto:%12!d!, ip type:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_OidConnectRequest
+{
+pReq->session_id, ItemLong -- 10
+pReq->activation_cmd, ItemLong -- 11
+pReq->auth_protocol, ItemLong -- 12
+pReq->ip_type, ItemLong -- 13
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPCID_c3476 110 "%0%!FUNC!::: sesssion id:%10!d!, Access string is NULL " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_OidConnectRequest
+{
+pReq->session_id, ItemLong -- 10
+}
+#typev MPCID_c3471 109 "%0%!FUNC!::: sesssion id:%10!d!, Access string:%11!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_OidConnectRequest
+{
+pReq->session_id, ItemLong -- 10
+pSetContext->SetContextState.AccessString, ItemWString -- 11
+}
+#typev MPCID_c3439 108 "%0%!FUNC!::: sesssion id:%10!d!, act cmd:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_Compose_OidConnectRequest
+{
+pReq->session_id, ItemLong -- 10
+pReq->activation_cmd, ItemLong -- 11
+}
+#typev MPCID_c3437 107 "%0%!FUNC!::: sesssion id:%10!d!, act cmd:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_OidConnectRequest
+{
+pReq->session_id, ItemLong -- 10
+pReq->activation_cmd, ItemLong -- 11
+}
+#typev MPCID_c3435 106 "%0%!FUNC!:: Disconnect Call before process OID_WWAN_DELETE_MAC SessioId: %10!d! PortNum %11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_OidConnectRequest
+{
+pReq->session_id, ItemLong -- 10
+pMacInfo->uNdisPortNumber, ItemLong -- 11
+}
+#typev MPCID_c3417 105 "%0%!FUNC!:: ..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_OidConnectRequest
+{
+}
+#typev MPCID_c5597 221 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PCORequest
+{
+}
+#typev MPCID_c5611 223 "%0%!FUNC!::<%10!s!> .. CID Request: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_PCORequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5606 222 "%0%!FUNC!:: Empty PCO request composed since Request doesn't need any info" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_PCORequest
+{
+}
+#typev MPCID_c3613 120 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PINServiceRequest
+{
+}
+#typev MPCID_c3655 122 "%0%!FUNC!::..pin type %10!d!, pin op:%11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PINServiceRequest
+{
+pReq->pin_type, ItemLong -- 10
+pReq->pin_op, ItemLong -- 11
+}
+#typev MPCID_c3621 121 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PINServiceRequest
+{
+}
+#typev MPCID_c3677 123 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PIN_EX_ServiceRequest
+{
+}
+#typev MPCID_c3766 130 "%0%!FUNC!::..Invalid OID type operation " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PIN_EX_ServiceRequest
+{
+}
+#typev MPCID_c3761 129 "%0%!FUNC!::..Invalid CID/OID req buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PIN_EX_ServiceRequest
+{
+}
+#typev MPCID_c3726 126 "%0%!FUNC!::..Invalid pin length in req buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PIN_EX_ServiceRequest
+{
+}
+#typev MPCID_c3740 127 "%0%!FUNC!::..Invalid pin length in req buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PIN_EX_ServiceRequest
+{
+}
+#typev MPCID_c3750 128 "%0%!FUNC!::..Invalid app id length in req buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PIN_EX_ServiceRequest
+{
+}
+#typev MPCID_c3706 125 "%0%!FUNC!::..Invalid CID/OID req buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PIN_EX_ServiceRequest
+{
+}
+#typev MPCID_c3695 124 "%0%!FUNC!::..Invalid app id length in req buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PIN_EX_ServiceRequest
+{
+}
+#typev MPCID_c3567 116 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PacketServiceRequest
+{
+}
+#typev MPCID_c3587 119 "%0%!FUNC!::..Set to : %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_Compose_PacketServiceRequest
+{
+(pReq->action == WwanPacketServiceActionAttach) ? L'Attach' : L'Detach', ItemWString -- 10
+}
+#typev MPCID_c3584 118 "%0%!FUNC!::..Set to : %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PacketServiceRequest
+{
+(pReq->action == WwanPacketServiceActionAttach) ? L'Attach' : L'Detach', ItemWString -- 10
+}
+#typev MPCID_c3575 117 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PacketServiceRequest
+{
+}
+#typev MPCID_c4311 155 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PreferredProviderRequest
+{
+}
+#typev MPCID_c4387 158 "%0%!FUNC!:: status:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_PreferredProviderRequest
+{
+pPrefProviderContext->uStatus, ItemLong -- 10
+}
+#typev MPCID_c4319 156 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_PreferredProviderRequest
+{
+}
+#typev MPCID_c4415 159 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_ProvisionedContextRequest
+{
+}
+#typev MPCID_c4433 161 "%0%!FUNC!::..Invalid contextType %10!d! received" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_ProvisionedContextRequest
+{
+pSetProvContext->ProvisionedContext.ContextType, ItemLong -- 10
+}
+#typev MPCID_c4423 160 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_ProvisionedContextRequest
+{
+}
+#typev MPCID_c5207 195 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+}
+#typev MPCID_c5223 197 "%0%!FUNC!::.. Invalid contextType %10!d! received" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+pOidReq->ProvisionedContext.basicInfo.ContextType, ItemLong -- 10
+}
+#typev MPCID_c5295 201 "%0%!FUNC!::<%10!s!> .. CID Request: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5290 200 "%0%!FUNC!::..AccessString:%10!s!, UserName:%11!s!, Password:%12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+pOidReq->ProvisionedContext.basicInfo.AccessString, ItemWString -- 10
+pOidReq->ProvisionedContext.basicInfo.UserName, ItemWString -- 11
+pOidReq->ProvisionedContext.basicInfo.Password, ItemWString -- 12
+}
+#typev MPCID_c5286 199 "%0%!FUNC!::.. Source:%10!d!, ContextType: %11!d!, Compression:%12!d!, AuthType:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+pOidReq->ProvisionedContext.Source, ItemLong -- 10
+pOidReq->ProvisionedContext.basicInfo.ContextType, ItemLong -- 11
+pOidReq->ProvisionedContext.basicInfo.Compression, ItemLong -- 12
+pOidReq->ProvisionedContext.basicInfo.AuthType, ItemLong -- 13
+}
+#typev MPCID_c5282 198 "%0%!FUNC!::.. Operation: %10!d!, IPType: %11!d!, Enable: %12!d!, Roaming: %13!d!, MediaType:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+pOidReq->ProvisionedContext.Operation, ItemLong -- 10
+pOidReq->ProvisionedContext.IPType, ItemLong -- 11
+pOidReq->ProvisionedContext.Enable, ItemLong -- 12
+pOidReq->ProvisionedContext.Roaming, ItemLong -- 13
+pOidReq->ProvisionedContext.MediaType, ItemLong -- 14
+}
+#typev MPCID_c5215 196 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_ProvisionedContextV2Request
+{
+}
+#typev MPCID_c4125 151 "%0%!FUNC!::..Set Radio: State %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_RadioState
+{
+pReq->radio_state ? L'ON' : L'OFF', ItemWString -- 10
+}
+#typev MPCID_c562 18 "%0%!FUNC!::: RadioState value from registry: %10!s!, status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_RadioStateForModemPowerUp
+{
+pReq->radio_state ? L'ON' : L'OFF', ItemWString -- 10
+nStatus, ItemLong -- 11
+}
+#typev MPCID_c3792 131 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_RegisterStateRequest
+{
+}
+#typev MPCID_c3828 135 "%0%!FUNC!::..register_action %10!d!, pReq->data_class:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_RegisterStateRequest
+{
+pReq->register_action, ItemLong -- 10
+pReq->data_class, ItemLong -- 11
+}
+#typev MPCID_c3823 134 "%0%!FUNC!::..Pin:%10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_Compose_RegisterStateRequest
+{
+pRegStatus->SetRegisterState.ProviderId, ItemWString -- 10
+}
+#typev MPCID_c3820 133 "%0%!FUNC!::..Pin:%10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_RegisterStateRequest
+{
+pRegStatus->SetRegisterState.ProviderId, ItemWString -- 10
+}
+#typev MPCID_c3800 132 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_RegisterStateRequest
+{
+}
+#typev MPCID_c3855 136 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SMSConfigRequest
+{
+}
+#typev MPCID_c3863 137 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SMSConfigRequest
+{
+}
+#typev MPCID_c3904 138 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SMSDeleteRequest
+{
+}
+#typev MPCID_c3920 140 "%0%!FUNC!::..message index:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SMSDeleteRequest
+{
+pReq->message_index, ItemLong -- 10
+}
+#typev MPCID_c3912 139 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SMSDeleteRequest
+{
+}
+#typev MPCID_c4036 145 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SMSReadRequest
+{
+}
+#typev MPCID_c4061 147 "%0%!FUNC!::..Flag:%10!d!, message index:%11!d! and Format:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SMSReadRequest
+{
+pReq->flag, ItemLong -- 10
+pReq->message_index, ItemLong -- 11
+pReq->format, ItemLong -- 12
+}
+#typev MPCID_c4044 146 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SMSReadRequest
+{
+}
+#typev MPCID_c3948 141 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SMSSendRequest
+{
+}
+#typev MPCID_c4008 144 "%0%!FUNC!::.. PDUString size : %10!d! 
+ PDUString : %11!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SMSSendRequest
+{
+(int)strlen(pSmsSend->SmsSend.u.Pdu.PduData), ItemLong -- 10
+pSmsSend->SmsSend.u.Pdu.PduData, ItemString -- 11
+}
+#typev MPCID_c3994 143 "%0%!FUNC!::.. PDUString size : %10!d! 
+ PDUString : %11!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SMSSendRequest
+{
+(int)strlen(PDUString), ItemLong -- 10
+PDUString, ItemString -- 11
+}
+#typev MPCID_c3956 142 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SMSSendRequest
+{
+}
+#typev MPCID_c5670 226 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SarConfigRequest
+{
+}
+#typev MPCID_c5728 230 "%0%!FUNC!::<%10!s!> .. CID Request: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SarConfigRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5715 229 "%0%!FUNC!:: CID Payload: Index:%10!d! antenna_index:%11!d! backoff_index:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SarConfigRequest
+{
+i, ItemLong -- 10
+pSarCfgState->antenna_index, ItemLong -- 11
+pSarCfgState->backoff_index, ItemLong -- 12
+}
+#typev MPCID_c5711 228 "%0%!FUNC!:: OID Payload: Index:%10!d! SarAntennaIndex:%11!d! SarBackoffIndex:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SarConfigRequest
+{
+i, ItemLong -- 10
+pSarCfgIndices->SarAntennaIndex, ItemLong -- 11
+pSarCfgIndices->SarBackoffIndex, ItemLong -- 12
+}
+#typev MPCID_c5688 227 "%0%!FUNC!:: SarMode:%10!d! SarBackoffStatus:%11!d! ElementCount:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SarConfigRequest
+{
+pOidReq->SetSarConfig.SarMode, ItemLong -- 10
+pOidReq->SetSarConfig.SarBackoffStatus, ItemLong -- 11
+pOidReq->SetSarConfig.SarConfigIndexListHeader.ElementCount, ItemLong -- 12
+}
+#typev MPCID_c5749 231 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SarTransmissionStatusRequest
+{
+}
+#typev MPCID_c5769 233 "%0%!FUNC!::<%10!s!> .. CID Request: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SarTransmissionStatusRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5762 232 "%0%!FUNC!:: ChannelNotification:%10!d! HysteresisTimer: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SarTransmissionStatusRequest
+{
+pOidReq->SetTransmissionStatus.ChannelNotification, ItemLong -- 10
+pOidReq->SetTransmissionStatus.HysteresisTimer, ItemLong -- 11
+}
+#typev MPCID_c14438 652 "%0%!FUNC!::..Unhandled Power State %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SetNetworkIdleHint
+{
+pReq->network_idle_hint_state, ItemLong -- 10
+}
+#typev MPCID_c14443 653 "%0%!FUNC!::..NWIdleHint %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SetNetworkIdleHint
+{
+pReq->network_idle_hint_state ? L'Enabled' : L'Disabled', ItemWString -- 10
+}
+#typev MPCID_c4567 165 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SignalStateRequest
+{
+}
+#typev MPCID_c4596 167 "%0%!FUNC!::..rssi interval:%10!d!, thresold:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SignalStateRequest
+{
+pReq->rssi_interval, ItemLong -- 10
+pReq->rssi_threshold, ItemLong -- 11
+}
+#typev MPCID_c4575 166 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SignalStateRequest
+{
+}
+#typev MPCID_c4195 153 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SimAuthRequest
+{
+}
+#typev MPCID_c5553 218 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SlotInfoStatusRequest
+{
+}
+#typev MPCID_c5571 220 "%0%!FUNC!::<%10!s!> .. CID Request: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SlotInfoStatusRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5565 219 "%0%!FUNC!:: SlotIndex:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SlotInfoStatusRequest
+{
+pCidReq->slot_index, ItemLong -- 10
+}
+#typev MPCID_c14984 671 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SubscribeDeviceServiceEventsRequest
+{
+}
+#typev MPCID_c15033 674 "%0%!FUNC!::..No memory size %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SubscribeDeviceServiceEventsRequest
+{
+listSize, ItemLong -- 10
+}
+#typev MPCID_c15095 675 "%0%!FUNC!:: Total Element count:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SubscribeDeviceServiceEventsRequest
+{
+defaultSubscribedEventCount + appSubscribedEventCount, ItemLong -- 10
+}
+#typev MPCID_c15020 673 "%0%!FUNC!::..PowerState: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SubscribeDeviceServiceEventsRequest
+{
+powerState, ItemLong -- 10
+}
+#typev MPCID_c14996 672 "%0%!FUNC!::..Num GUIDs: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SubscribeDeviceServiceEventsRequest
+{
+appSubscribedEventCount, ItemLong -- 10
+}
+#typev MPCID_c5485 214 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_SysSlotMappingsRequest
+{
+}
+#typev MPCID_c5532 217 "%0%!FUNC!::<%10!s!> .. CID Request: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SysSlotMappingsRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pReqBuf. pQmiElement->nReqLen), ItemHEXDump -- 11
+}
+#typev MPCID_c5520 216 "%0%!FUNC!:: index: %10!d!, OID Slot Map: %11!d!, CID Slot Map: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SysSlotMappingsRequest
+{
+i, ItemLong -- 10
+*pOidSlotMapList, ItemLong -- 11
+*pCidSlotMapList, ItemLong -- 12
+}
+#typev MPCID_c5500 215 "%0%!FUNC!:: ElementCount: %10!d!, map_count: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_SysSlotMappingsRequest
+{
+pOidReq->SetDeviceSlotMappingInfo.SlotMapListHeader.ElementCount, ItemLong -- 10
+pCidReq->map_count, ItemLong -- 11
+}
+#typev MPCID_c4517 162 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_USSDRequest
+{
+}
+#typev MPCID_c4545 164 "%0%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_USSDRequest
+{
+}
+#typev MPCID_c4525 163 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_USSDRequest
+{
+}
+#typev MPCID_c5108 193 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccAccessBinaryRequest
+{
+}
+#typev MPCID_c5157 194 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccAccessRecordRequest
+{
+}
+#typev MPCID_c4897 181 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccApduRequest
+{
+}
+#typev MPCID_c4919 183 "%0%!FUNC!::<%10!s!> Command: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccApduRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOidReq->SetUiccApdu.Command. pOidReq->SetUiccApdu.CommandLength), ItemHEXDump -- 11
+}
+#typev MPCID_c4915 182 "%0%!FUNC!:: Channel: %10!d!, SecureMessaging: %11!d!, Type: %12!d!, CommandLength: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccApduRequest
+{
+pOidReq->SetUiccApdu.Channel, ItemLong -- 10
+pOidReq->SetUiccApdu.SecureMessaging, ItemLong -- 11
+pOidReq->SetUiccApdu.Type, ItemLong -- 12
+pOidReq->SetUiccApdu.CommandLength, ItemLong -- 13
+}
+#typev MPCID_c4861 179 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccCloseChannelRequest
+{
+}
+#typev MPCID_c4875 180 "%0%!FUNC!:: Channel: %10!d!, ChannelGroup: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccCloseChannelRequest
+{
+pOidReq->SetUiccCloseChannel.Channel, ItemLong -- 10
+pOidReq->SetUiccCloseChannel.ChannelGroup, ItemLong -- 11
+}
+#typev MPCID_c5055 191 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccFileStatusRequest
+{
+}
+#typev MPCID_c5087 192 "%0%!FUNC!::..Invalid CID/OID req buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccFileStatusRequest
+{
+}
+#typev MPCID_c4813 176 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccOpenChannelRequest
+{
+}
+#typev MPCID_c4835 178 "%0%!FUNC!::<%10!s!> .. AppId: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccOpenChannelRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOidReq->SetUiccOpenChannel.AppId. pOidReq->SetUiccOpenChannel.AppIdLength), ItemHEXDump -- 11
+}
+#typev MPCID_c4831 177 "%0%!FUNC!:: AppIdLength: %10!d!, SelectP2Arg: %11!d!, ChannelGroup: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccOpenChannelRequest
+{
+pOidReq->SetUiccOpenChannel.AppIdLength, ItemLong -- 10
+pOidReq->SetUiccOpenChannel.SelectP2Arg, ItemLong -- 11
+pOidReq->SetUiccOpenChannel.ChannelGroup, ItemLong -- 12
+}
+#typev MPCID_c5022 189 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccResetRequest
+{
+}
+#typev MPCID_c5033 190 "%0%!FUNC!:: PassThroughAction:%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccResetRequest
+{
+pOidReq->SetUiccReset.PassThroughAction, ItemLong -- 10
+}
+#typev MPCID_c4953 184 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccTerminalCapRequest
+{
+}
+#typev MPCID_c4998 188 "%0%!FUNC!::<%10!s!> CID TLV: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccTerminalCapRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pCidTlv. CidTlvOffset - sizeof(qbi_svc_msuicc_terminal_capability_s_req_s) +  				pCidReq->element_count * sizeof(qbi_mbim_offset_size_pair_s)), ItemHEXDump -- 11
+}
+#typev MPCID_c4996 187 "%0%!FUNC!:: CID element_count: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccTerminalCapRequest
+{
+pOidReq->CapabilityListHeader.ElementCount, ItemLong -- 10
+}
+#typev MPCID_c4993 186 "%0%!FUNC!::<%10!s!> OID TLV: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccTerminalCapRequest
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOidTlv. OidTlvOffset - sizeof(NDIS_WWAN_SET_UICC_TERMINAL_CAPABILITY)), ItemHEXDump -- 11
+}
+#typev MPCID_c4991 185 "%0%!FUNC!:: OID ElementCount: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_UiccTerminalCapRequest
+{
+pOidReq->CapabilityListHeader.ElementCount, ItemLong -- 10
+}
+#typev MPCID_c4619 168 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_VisibleProviderRequest
+{
+}
+#typev MPCID_c4636 169 "%0%!FUNC!:: action:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_VisibleProviderRequest
+{
+pVisibleProvider->VisibleProviders.Action, ItemLong -- 10
+}
+#typev MPCID_c14478 655 "%0%!FUNC!:: ..Unhandled Power State %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_WOLPacketFilterList
+{
+powerState, ItemLong -- 10
+}
+#typev MPCID_c14483 656 "%0%!FUNC!:: ..Completed with  %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Compose_WOLPacketFilterList
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPCID_c14469 243 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_WOLPacketFilterList
+{
+}
+#typev MPCID_c14469 244 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_WOLPacketFilterList
+{
+}
+#typev MPCID_c14463 654 "%0%!FUNC!:: ..Power State %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Compose_WOLPacketFilterList
+{
+powerState, ItemLong -- 10
+}
+#typev MPCID_c825 28 "%0%!FUNC!::<%10!s!> <--: Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetAuthRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c876 29 "%0%!FUNC!::<%10!s!>: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetAuthRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c820 27 "%0%!FUNC!::<%10!s!> -->: QbiCID 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetAuthRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c816 26 "%0%!FUNC!::-->: Invalid parm: pAdapter NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetAuthRequestInfo
+{
+}
+#typev MPCID_c1549 48 "%0%!FUNC!::<%10!s!> : Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetBCExtRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c1543 47 "%0%!FUNC!::<%10!s!> : Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetBCExtRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c1651 49 "%0%!FUNC!::<%10!s!> : 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetBCExtRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c1538 46 "%0%!FUNC!::<%10!s!> : QbiCID 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetBCExtRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c1534 45 "%0%!FUNC!::: Invalid parm: pAdapter NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetBCExtRequestInfo
+{
+}
+#typev MPCID_c999 34 "%0%!FUNC!::: Invalid parm: pAdapter NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetBCRequestInfo
+{
+}
+#typev MPCID_c930 32 "%0%!FUNC!::<%10!s!> : Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetDevSpecificRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c956 33 "%0%!FUNC!::<%10!s!> : 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetDevSpecificRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c925 31 "%0%!FUNC!::<%10!s!> : QbiCID 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetDevSpecificRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c921 30 "%0%!FUNC!::: Invalid parm: pAdapter NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetDevSpecificRequestInfo
+{
+}
+#typev MPCID_c1400 43 "%0%!FUNC!::<%10!s!>: Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetMSUICCRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c1491 44 "%0%!FUNC!::<%10!s!> : 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetMSUICCRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c1395 42 "%0%!FUNC!::<%10!s!>: QbiCID 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetMSUICCRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c1391 41 "%0%!FUNC!::: Invalid parm: pAdapter NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetMSUICCRequestInfo
+{
+}
+#typev MPCID_c14954 670 "%0%!FUNC!::..Srv Id: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetQBISrvIdFromGUID
+{
+svc_id, ItemLong -- 10
+}
+#typev MPCID_c14941 669 "%0%!FUNC!::..GUID[%10!d!] is 0x %11!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetQBISrvIdFromGUID
+{
+i, ItemLong -- 10
+guid_byte_arr[i], ItemLong -- 11
+}
+#typev MPCID_c1703 52 "%0%!FUNC!::<%10!s!> : Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetSARRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c1744 53 "%0%!FUNC!::<%10!s!> : 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetSARRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c1698 51 "%0%!FUNC!::<%10!s!>: QbiCID 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetSARRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c1695 50 "%0%!FUNC!::: Invalid parm: pAdapter NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetSARRequestInfo
+{
+}
+#typev MPCID_c1322 39 "%0%!FUNC!::<%10!s!> : Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetUSSDRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c1348 40 "%0%!FUNC!::<%10!s!> : 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetUSSDRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c1317 38 "%0%!FUNC!::<%10!s!> : QbiCID 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetUSSDRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c1313 37 "%0%!FUNC!::: Invalid parm: pAdapter NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetUSSDRequestInfo
+{
+}
+#typev MPCID_c1797 56 "%0%!FUNC!::<%10!s!> : Invalid parm: pnReqLen 0x%11!x!, pnRespLen 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetVoiceExtRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pnReqLen, ItemLong -- 11
+(UINT)pnRespLen, ItemLong -- 12
+}
+#typev MPCID_c1821 57 "%0%!FUNC!::<%10!s!> : 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetVoiceExtRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c1792 55 "%0%!FUNC!::<%10!s!>: QbiCID 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_GetVoiceExtRequestInfo
+{
+pAdapter->PortName, ItemString -- 10
+QbiCID, ItemLong -- 11
+}
+#typev MPCID_c1789 54 "%0%!FUNC!::: Invalid parm: pAdapter NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_GetVoiceExtRequestInfo
+{
+}
+#typev MPCID_c2700 97 "%0%!FUNC!::<%10!s!> : pOid is NULL and bSendImm is False - nothing to do with request!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_HandleDevSpecificCommand
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c2711 98 "%0%!FUNC!::<%10!s!> : Allocate QMIElement failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_HandleDevSpecificCommand
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c2694 96 "%0%!FUNC!::<%10!s!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleDevSpecificCommand
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c641 23 "%0%!FUNC!::QBI Request for Modem Power Up could not be composed" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_HandleModemPowerUp
+{
+}
+#typev MPCID_c640 22 "%0%!FUNC!::QBI Request for Modem Power Up could not be composed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleModemPowerUp
+{
+}
+#typev MPCID_c634 21 "%0%!FUNC!::Modem Power Up Request request sent successfully" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_HandleModemPowerUp
+{
+}
+#typev MPCID_c633 20 "%0%!FUNC!::Modem Power Up Request request sent successfully" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleModemPowerUp
+{
+}
+#typev MPCID_c597 19 "%0%!FUNC!::Modem power up successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_HandleModemPowerUpResponse
+{
+}
+#typev MPCID_c14520 658 "%0%!FUNC!:: Unsupported Packet Type %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Handle_OID_Add_WOL_PATTERN
+{
+pFilterInfo->WoLPacketType, ItemLong -- 10
+}
+#typev MPCID_c14600 239 "%0%!FUNC!:: Patternata[%10!d!] is %11!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Handle_OID_Add_WOL_PATTERN
+{
+index, ItemLong -- 10
+pattern->WoLBitMapPattern.PatternData[index], ItemLong -- 11
+}
+#typev MPCID_c14600 238 "%0%!FUNC!::  PatternSize %10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Handle_OID_Add_WOL_PATTERN
+{
+pattern->WoLBitMapPattern.PatternSize, ItemLong -- 10
+}
+#typev MPCID_c14600 237 "%0%!FUNC!::  MaskData[%10!d!] is %11!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Handle_OID_Add_WOL_PATTERN
+{
+index, ItemLong -- 10
+pattern->WoLBitMapPattern.MaskData[index], ItemLong -- 11
+}
+#typev MPCID_c14600 236 "%0%!FUNC!:: MaskSize %10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Handle_OID_Add_WOL_PATTERN
+{
+pattern->WoLBitMapPattern.MaskSize, ItemLong -- 10
+}
+#typev MPCID_c14600 235 "%0%!FUNC!:: PatternId %10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Handle_OID_Add_WOL_PATTERN
+{
+pattern->PatternId, ItemLong -- 10
+}
+#typev MPCID_c14600 234 "%0%!FUNC!:: Friendly Name %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Handle_OID_Add_WOL_PATTERN
+{
+pattern->FriendlyName.String, ItemWString -- 10
+}
+#typev MPCID_c14534 659 "%0%!FUNC!::  Updating Pattern %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Handle_OID_Add_WOL_PATTERN
+{
+pFilterInfo->PatternId, ItemLong -- 10
+}
+#typev MPCID_c14508 657 "%0%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Handle_OID_Add_WOL_PATTERN
+{
+}
+#typev MPCID_c14658 661 "%0%!FUNC!:: Deleting Pattern %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Handle_OID_Remove_WOL_PATTERN
+{
+patternId, ItemLong -- 10
+}
+#typev MPCID_c14647 660 "%0%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Handle_OID_Remove_WOL_PATTERN
+{
+}
+#typev MPCID_c12192 577 "%0%!FUNC!:: sending NDIS_WWAN_CONTEXT_STATE " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationConnect
+{
+}
+#typev MPCID_c12169 576 "%0%!FUNC!::...uNwError: %10!u!, ConnectionId: %11!u!, ActivationState: %12!d!, VoiceCallState: %13!d!, IPType: %14!d! for cid: QBI_SVC_BC_MBIM_CID_CONNECT" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationConnect
+{
+wwanContextState.ContextState.uNwError, ItemLong -- 10
+wwanContextState.ContextState.ConnectionId, ItemLong -- 11
+wwanContextState.ContextState.ActivationState, ItemLong -- 12
+wwanContextState.ContextState.VoiceCallState, ItemLong -- 13
+wwanContextState.ContextState.IPType, ItemLong -- 14
+}
+#typev MPCID_c12152 575 "%0%!FUNC!::..DEACTIVATED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationConnect
+{
+}
+#typev MPCID_c12143 574 "%0%!FUNC!::..activation status:ACTIVATED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationConnect
+{
+}
+#typev MPCID_c12130 573 "%0%!FUNC!::...Assigned IP %10!d!, activation status: %11!d! for cid: QBI_SVC_BC_MBIM_CID_CONNECT" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationConnect
+{
+cid_Resp->ip_type, ItemLong -- 10
+cid_Resp->activation_state, ItemLong -- 11
+}
+#typev MPCID_c12112 572 "%0%!FUNC!::Invalid CID response " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_IndicationConnect
+{
+}
+#typev MPCID_c12098 571 "%0%!FUNC!::<%10!s!> invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_CONNECT..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationConnect
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c13681 629 "%0%!FUNC!:: sending NDIS_STATUS_WWAN_LTE_ATTACH_CONFIG " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationLteAttachConfig
+{
+}
+#typev MPCID_c13665 628 "%0%!FUNC!::<%10!s!> .. AccessString: %11!s! UserName: %12!s! Password: %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationLteAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+OidInd.LteAttachContext.LteContextArray[i].basicInfo.AccessString, ItemWString -- 11
+OidInd.LteAttachContext.LteContextArray[i].basicInfo.UserName, ItemWString -- 12
+OidInd.LteAttachContext.LteContextArray[i].basicInfo.Password, ItemWString -- 13
+}
+#typev MPCID_c13657 627 "%0%!FUNC!::<%10!s!> ..IPType: %11!d! Roaming: %12!d! Source: %13!d! Compression: %14!d! AuthType: %15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationLteAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+OidInd.LteAttachContext.LteContextArray[i].IPType, ItemLong -- 11
+OidInd.LteAttachContext.LteContextArray[i].Roaming, ItemLong -- 12
+OidInd.LteAttachContext.LteContextArray[i].Source, ItemLong -- 13
+OidInd.LteAttachContext.LteContextArray[i].basicInfo.Compression, ItemLong -- 14
+OidInd.LteAttachContext.LteContextArray[i].basicInfo.AuthType, ItemLong -- 15
+}
+#typev MPCID_c13620 626 "%0%!FUNC!::<%10!s!> .. CID Indication: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationLteAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pCIDInd. uBufLen), ItemHEXDump -- 11
+}
+#typev MPCID_c13614 625 "%0%!FUNC!::<%10!s!> invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_EXT_MBIM_CID_MS_LTE_ATTACH_CONFIG..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationLteAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c13753 634 "%0%!FUNC!::<%10!s!> ... Processed NDIS_STATUS_WWAN_LTE_ATTACH_STATUS " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationLteAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c13739 633 "%0%!FUNC!::<%10!s!> .. AccessString: %11!s! UserName: %12!s! Password: %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationLteAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+OidInd.LteAttachStatus.basicInfo.AccessString, ItemWString -- 11
+OidInd.LteAttachStatus.basicInfo.UserName, ItemWString -- 12
+OidInd.LteAttachStatus.basicInfo.Password, ItemWString -- 13
+}
+#typev MPCID_c13734 632 "%0%!FUNC!::<%10!s!> ..LteAttachState: %11!d! IPType: %12!d! Compression: %13!d! AuthType: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationLteAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+OidInd.LteAttachStatus.LteAttachState, ItemLong -- 11
+OidInd.LteAttachStatus.IPType, ItemLong -- 12
+OidInd.LteAttachStatus.basicInfo.Compression, ItemLong -- 13
+OidInd.LteAttachStatus.basicInfo.AuthType, ItemLong -- 14
+}
+#typev MPCID_c13708 631 "%0%!FUNC!::<%10!s!> .. CID Indication: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationLteAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pBuf. uBufLen), ItemHEXDump -- 11
+}
+#typev MPCID_c13701 630 "%0%!FUNC!::<%10!s!>  invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_EXT_MBIM_CID_MS_LTE_ATTACH_STATUS..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationLteAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c13914 646 "%0%!FUNC!:: sending NDIS_STATUS_WWAN_NITZ_INFO on portnumber : %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationNitzInfo
+{
+PortNumber, ItemLong -- 10
+}
+#typev MPCID_c13892 645 "%0%!FUNC!::<%10!s!> .. raw buffer size : %11!d!, and Raw buffer data: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationNitzInfo
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+log_xstr(pBuf. uBufLen), ItemHEXDump -- 12
+}
+#typev MPCID_c13888 644 "%0%!FUNC!::<%10!s!> Invlaid buffer for cid: QBI_SVC_BC_EXT_MBIM_CID_MS_NITZ..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationNitzInfo
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c13881 643 "%0%!FUNC!::<%10!s!> invlaid input buffer length : %11!d! for cid: QBI_SVC_BC_EXT_MBIM_CID_MS_NITZ..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationNitzInfo
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c13865 642 "%0%!FUNC!:: sending NDIS_STATUS_WWAN_PCO_STATUS on portnumber : %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationPCO
+{
+PortNumber, ItemLong -- 10
+}
+#typev MPCID_c13853 641 "%0%!FUNC!::<%10!s!> .. ,and  pPcoData: %11!s!  and PcoInfo.PcoValue.PcoData: %12!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationPCO
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pPcoData. pCIDInd->pco_data_size), ItemHEXDump -- 11
+log_xstr(PcoInfo.PcoValue.PcoData. PcoInfo.PcoValue.Size), ItemHEXDump -- 12
+}
+#typev MPCID_c13849 640 "%0%!FUNC!::<%10!s!> .. PCO value type: %11!d!, status : %12!d! ,pCIDInd->pco_data_type: %13!d!, pCIDInd->pco_data_size : %14!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationPCO
+{
+pAdapter->PortName, ItemString -- 10
+PcoInfo.PcoValue.Type, ItemLong -- 11
+PcoInfo.uStatus, ItemLong -- 12
+pCIDInd->pco_data_type, ItemLong -- 13
+pCIDInd->pco_data_size, ItemLong -- 14
+}
+#typev MPCID_c13827 639 "%0%!FUNC!::<%10!s!> .. raw buffer size : %11!d!, and Raw buffer data: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationPCO
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+log_xstr(pBuf. uBufLen), ItemHEXDump -- 12
+}
+#typev MPCID_c13821 638 "%0%!FUNC!::<%10!s!> invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_EXT_MBIM_CID_MS_PCO_STATUS..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationPCO
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c13073 604 "%0%!FUNC!::..Forcing Registration State to Home " //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPQBI_IndicationPacketServiceState
+{
+}
+#typev MPCID_c13058 603 "%0%!FUNC!:: sending NDIS_STATUS_WWAN_PACKET_SERVICE.." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationPacketServiceState
+{
+}
+#typev MPCID_c13035 602 "%0%!FUNC!::<%10!s!>  PacketServiceState:%11!d!, AvailDataClass:0x%12!x!, CurrentDataClass:0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationPacketServiceState
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->PacketServiceState.PacketService.PacketServiceState, ItemLong -- 11
+pAdapter->PacketServiceState.PacketService.AvailableDataClass, ItemLong -- 12
+pAdapter->PacketServiceState.PacketService.CurrentDataClass, ItemLong -- 13
+}
+#typev MPCID_c13005 601 "%0%!FUNC!::Invalid pkt_svc_resp response " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_IndicationPacketServiceState
+{
+}
+#typev MPCID_c12991 600 "%0%!FUNC!::<%10!s!> ..invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_PACKET_SERVICE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationPacketServiceState
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12985 599 "%0%!FUNC!::NULL pAdapter : %10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_IndicationPacketServiceState
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPCID_c13589 624 "%0%!FUNC!:: sending NDIS_STATUS_WWAN_PROVISIONED_CONTEXTS " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationProvisionedContextV2
+{
+}
+#typev MPCID_c13576 623 "%0%!FUNC!::..IPType: %10!d!, Enable: %11!d!, Roaming:%12!d!, MediaType:%13!d!, Source:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationProvisionedContextV2
+{
+pWwanContext->IPType, ItemLong -- 10
+pWwanContext->Enable, ItemLong -- 11
+pWwanContext->Roaming, ItemLong -- 12
+pWwanContext->MediaType, ItemLong -- 13
+pWwanContext->Source, ItemLong -- 14
+}
+#typev MPCID_c13572 622 "%0%!FUNC!::..AccessString:%10!s!, UserName:%11!s!, Password:%12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationProvisionedContextV2
+{
+pWwanContext->basicInfo.AccessString, ItemWString -- 10
+pWwanContext->basicInfo.UserName, ItemWString -- 11
+pWwanContext->basicInfo.Password, ItemWString -- 12
+}
+#typev MPCID_c13567 621 "%0%!FUNC!::..ContextType: %10!d!, ContextId: %11!d!, Compression:%12!d!, AuthType:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationProvisionedContextV2
+{
+pWwanContext->basicInfo.ContextType, ItemLong -- 10
+pWwanContext->basicInfo.ContextId, ItemLong -- 11
+pWwanContext->basicInfo.Compression, ItemLong -- 12
+pWwanContext->basicInfo.AuthType, ItemLong -- 13
+}
+#typev MPCID_c13545 620 "%0%!FUNC!::Invalid UUID " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationProvisionedContextV2
+{
+}
+#typev MPCID_c13505 619 "%0%!FUNC!::<%10!s!> ..invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_PROVISIONED_CONTEXTS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationProvisionedContextV2
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12626 586 "%0%!FUNC!:: sending NDIS_STATUS_WWAN_PROVISIONED_CONTEXTS " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationProvisionedContexts
+{
+}
+#typev MPCID_c12600 585 "%0%!FUNC!::Invalid UUID " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationProvisionedContexts
+{
+}
+#typev MPCID_c12557 584 "%0%!FUNC!::<%10!s!> ..invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_PROVISIONED_CONTEXTS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationProvisionedContexts
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12793 590 "%0%!FUNC!:: sending NDIS_STATUS_WWAN_SIGNAL_STATE, HW Radio State:%10!d!, SW Radio State:%11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationRadioState
+{
+wwan_radio_state.RadioState.HwRadioState, ItemLong -- 10
+wwan_radio_state.RadioState.SwRadioState, ItemLong -- 11
+}
+#typev MPCID_c12746 589 "%0%!FUNC!::<%10!s!> ..invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_RADIO_STATE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationRadioState
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12459 582 "%0%!FUNC!::<%10!s!> ..No Memory of size :%11!d!... " //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPQBI_IndicationReadyInfo
+{
+pAdapter->PortName, ItemString -- 10
+readyInfoSize, ItemLong -- 11
+}
+#typev MPCID_c12529 583 "%0%!FUNC!::<%10!s!> ..SUCCESS. ReadyState:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationReadyInfo
+{
+pAdapter->PortName, ItemString -- 10
+pWwanReadyInfo->ReadyInfo.ReadyState, ItemLong -- 11
+}
+#typev MPCID_c12437 581 "%0%!FUNC!::<%10!s!> ..invlaid input buffer length..: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationReadyInfo
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c12963 598 "%0%!FUNC!:: sending NDIS_STATUS_WWAN_PACKET_SERVICE.." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationRegisterState
+{
+}
+#typev MPCID_c12947 597 "%0%!FUNC!:: sending NDIS_STATUS_WWAN_REGISTER_STATE " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationRegisterState
+{
+}
+#typev MPCID_c12924 596 "%0%!FUNC!::..uNwError:%10!d!, RegisterState:%11!d!, RegisterMode:%12!d!, RoamingText:%13!s!, ProviderId:%14!s!, ProviderName:%15!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationRegisterState
+{
+wwanRegState.RegistrationState.uNwError, ItemLong -- 10
+wwanRegState.RegistrationState.RegisterState, ItemLong -- 11
+wwanRegState.RegistrationState.RegisterMode, ItemLong -- 12
+wwanRegState.RegistrationState.RoamingText, ItemWString -- 13
+wwanRegState.RegistrationState.ProviderId, ItemWString -- 14
+wwanRegState.RegistrationState.ProviderName, ItemWString -- 15
+}
+#typev MPCID_c12909 595 "%0%!FUNC!::<%10!s!> <--MPQBI_IndicationPacketServiceState. PacketServiceState:%11!d!, AvailDataClass:0x%12!x!, CurrentDataClass:0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationRegisterState
+{
+pAdapter->PortName, ItemString -- 10
+wwanPacketServiceState.PacketService.PacketServiceState, ItemLong -- 11
+wwanPacketServiceState.PacketService.AvailableDataClass, ItemLong -- 12
+wwanPacketServiceState.PacketService.CurrentDataClass, ItemLong -- 13
+}
+#typev MPCID_c12862 594 "%0%!FUNC!::MBB: roam indicator icon supression is disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationRegisterState
+{
+}
+#typev MPCID_c12850 593 "%0%!FUNC!::MBB: roam indicator icon supression enabled. Changing register state to home" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationRegisterState
+{
+}
+#typev MPCID_c12832 592 "%0%!FUNC!::Invalid reg_state_resp response " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_IndicationRegisterState
+{
+}
+#typev MPCID_c12816 591 "%0%!FUNC!::<%10!s!> ..invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_REGISTER_STATE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationRegisterState
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c13225 610 "%0%!FUNC!::<%10!s!> ..SMS format:%11!s!, Msg Index:%12!d!, SC Address: %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSMSConfig
+{
+pAdapter->PortName, ItemString -- 10
+(wWanSmsConfig.SmsConfiguration.SmsFormat == WwanSmsFormatPdu) ? L'PDU' : L'CDMA', ItemWString -- 11
+wWanSmsConfig.SmsConfiguration.ulMaxMessageIndex, ItemLong -- 12
+wWanSmsConfig.SmsConfiguration.ScAddress, ItemString -- 13
+}
+#typev MPCID_c13220 609 "%0%!FUNC!:: sending NDIS_WWAN_SMS_CONFIGURATION " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSMSConfig
+{
+}
+#typev MPCID_c13195 608 "%0%!FUNC!:: ..Failed to convert Unicode to Ansi String" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_IndicationSMSConfig
+{
+}
+#typev MPCID_c13171 607 "%0%!FUNC!::<%10!s!> ..invlaid input buffer length..:%11!d! for cid: QBI_SVC_SMS_MBIM_CID_SMS_CONFIGURATION" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSMSConfig
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c13357 612 "%0%!FUNC!:: sending NDIS_WWAN_SMS_RECEIVE " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSMSRead
+{
+}
+#typev MPCID_c13252 611 "%0%!FUNC!::<%10!s!> ..invlaid input buffer length..:%11!d! for cid: QBI_SVC_SMS_MBIM_CID_SMS_READ" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSMSRead
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c13423 615 "%0%!FUNC!:: sending NDIS_WWAN_SMS_SEND_STATUS " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSMSStatus
+{
+}
+#typev MPCID_c13408 614 "%0%!FUNC!::<%10!s!> .. uFlag:%11!d!, Msg Index:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSMSStatus
+{
+pAdapter->PortName, ItemString -- 10
+wWanSmsStatus.SmsStatus.uFlag, ItemLong -- 11
+wWanSmsStatus.SmsStatus.MessageIndex, ItemLong -- 12
+}
+#typev MPCID_c13377 613 "%0%!FUNC!::<%10!s!> ..invlaid input buffer length..:%11!d! for cid: QBI_SVC_SMS_MBIM_CID_SMS_STATUS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSMSStatus
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c13479 618 "%0%!FUNC!:: sending NDIS_WWAN_SAR_TRANSMISSION_STATUS_INFO " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSarTransmissionStatus
+{
+}
+#typev MPCID_c13464 617 "%0%!FUNC!::<%10!s!> .. ChannelNotification:%11!d!, TransmissionStatus:%12!d!, , HysteresisTimer:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSarTransmissionStatus
+{
+pAdapter->PortName, ItemString -- 10
+WwanSarTransmissionStatus.TransmissionStatus.ChannelNotification, ItemLong -- 11
+WwanSarTransmissionStatus.TransmissionStatus.TransmissionStatus, ItemLong -- 12
+WwanSarTransmissionStatus.TransmissionStatus.HysteresisTimer, ItemLong -- 13
+}
+#typev MPCID_c13442 616 "%0%!FUNC!::<%10!s!> ..invalid input buffer length..:%11!d! for cid: QBI_SVC_MSSAR_MBIM_CID_MS_TRANSMISSION_STATUS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSarTransmissionStatus
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c13148 606 "%0%!FUNC!:: sending NDIS_STATUS_WWAN_SIGNAL_STATE " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSignalState
+{
+}
+#typev MPCID_c13107 605 "%0%!FUNC!::<%10!s!> ..invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_SIGNAL_STATE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSignalState
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c13804 637 "%0%!FUNC!:: sending NDIS_STATUS_WWAN_SLOT_INFO " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSlotInfo
+{
+}
+#typev MPCID_c13792 636 "%0%!FUNC!::... uStatus %10!d!, SlotIndex: %11!d!, State: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSlotInfo
+{
+SlotInfo.uStatus, ItemLong -- 10
+SlotInfo.SlotInfo.SlotIndex, ItemLong -- 11
+SlotInfo.SlotInfo.State, ItemLong -- 12
+}
+#typev MPCID_c13771 635 "%0%!FUNC!::<%10!s!> invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_EXT_MBIM_CID_MS_SLOT_INFO_STATUS..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_IndicationSlotInfo
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c15129 676 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_PopulateDeviceLogCIDResp
+{
+}
+#typev MPCID_c15250 684 "%0%!FUNC!:: command ID: %10!d! is not device log CID" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_PopulateDeviceLogCIDResp
+{
+CmdData->CommandID, ItemLong -- 10
+}
+#typev MPCID_c15191 680 "%0%!FUNC!:: pTempResp is NULL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_PopulateDeviceLogCIDResp
+{
+}
+#typev MPCID_c15241 683 "%0%!FUNC!:: device log status:%10!d!,log error type:%11!d!, log info type:%12!d! and command ID: %13!d! and timeout: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_PopulateDeviceLogCIDResp
+{
+pTempResp->device_log_status, ItemLong -- 10
+pTempResp->log_error_type, ItemLong -- 11
+pTempResp->log_info_type, ItemLong -- 12
+CmdData->CommandID, ItemLong -- 13
+pAdapter->DeviceLogInfo.timeout, ItemLong -- 14
+}
+#typev MPCID_c15234 682 "%0%!FUNC!::  qcdb Info:%10!d! and device log thread:%11!d!  failed scenario" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_PopulateDeviceLogCIDResp
+{
+pTempResp->qcdbInfovalid, ItemLong -- 10
+pAdapter->DeviceLogInfo.bDevicelogThread, ItemLong -- 11
+}
+#typev MPCID_c15224 681 "%0%!FUNC!:: Logging session not started and either qcdb Info:%10!d! is not present or device log thread:%11!d! already started" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_PopulateDeviceLogCIDResp
+{
+pTempResp->qcdbInfovalid, ItemLong -- 10
+pAdapter->DeviceLogInfo.bDevicelogThread, ItemLong -- 11
+}
+#typev MPCID_c15168 679 "%0%!FUNC!:: QCDB info not present and info valid is : %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_PopulateDeviceLogCIDResp
+{
+pTempBuf->qcdbInfovalid, ItemLong -- 10
+}
+#typev MPCID_c15159 678 "%0%!FUNC!:: file handle : %10!p! and file object : %11!p! and pTempBuf->QCDBINFO.cmdType: %12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_PopulateDeviceLogCIDResp
+{
+pAdapter->DeviceLogInfo.pQCDBHandle, ItemPtr -- 10
+pAdapter->DeviceLogInfo.pQCDBFileObject, ItemPtr -- 11
+pTempBuf->qcdbinfo.cmdType, ItemLong -- 12
+}
+#typev MPCID_c15141 677 "%0%!FUNC!::..QMBE GUID found " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_PopulateDeviceLogCIDResp
+{
+}
+#typev MPCID_c512 17 "%0%!FUNC!:: year: %10!d!, month: %11!d!, day: %12!d!, hour: %13!d!, minute: %14!d!, second: %15!d!,TimeZoneOffsetMinutes :%16!d!, DaylightSavingTimeOffsetMinutes:%17!d!, dataclasses: %18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_PrepareNitzInfo
+{
+pWwanNitzInfo->NitzInfo.Year, ItemLong -- 10
+pWwanNitzInfo->NitzInfo.Month, ItemLong -- 11
+pWwanNitzInfo->NitzInfo.Day, ItemLong -- 12
+pWwanNitzInfo->NitzInfo.Hour, ItemLong -- 13
+pWwanNitzInfo->NitzInfo.Minute, ItemLong -- 14
+pWwanNitzInfo->NitzInfo.Second, ItemLong -- 15
+pWwanNitzInfo->NitzInfo.TimeZoneOffsetMinutes, ItemLong -- 16
+pWwanNitzInfo->NitzInfo.DaylightSavingTimeOffsetMinutes, ItemLong -- 17
+pWwanNitzInfo->NitzInfo.DataClasses, ItemLong -- 18
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPCID_c12254 579 "%0%!FUNC!:: - Memory allocation failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_ProcessIPConfigurationInfo
+{
+}
+#typev MPCID_c12234 578 "%0%!FUNC!:: - Invalid response buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_ProcessIPConfigurationInfo
+{
+}
+#typev MPCID_c11995 564 "%0%!FUNC!:: invalid input buffer for cid:%10!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundBCExtIndication
+{
+BCExtCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c12006 566 "%0%!FUNC!::<%10!s!> invlaid CID:%11!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundBCExtIndication
+{
+pAdapter->PortName, ItemString -- 10
+BCExtCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c12000 565 "%0%!FUNC!::<%10!s!> QBI cid: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundBCExtIndication
+{
+pAdapter->PortName, ItemString -- 10
+BCExtCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c11521 542 "%0%!FUNC!:: invalid input buffer for cid:%10!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundBCIndication
+{
+BCCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c11540 544 "%0%!FUNC!::<%10!s!> invlaid CID:%11!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundBCIndication
+{
+pAdapter->PortName, ItemString -- 10
+BCCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c11581 580 "%0%!FUNC!::<%10!s!> invlaid input buffer length..: %11!d! for cid: QBI_SVC_BC_MBIM_CID_IP_CONFIGURATION_INFO..FAILED" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundBCIndication
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+}
+#typev MPCID_c11530 543 "%0%!FUNC!::<%10!s!>  QBI cid: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundBCIndication
+{
+pAdapter->PortName, ItemString -- 10
+BCCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c11880 559 "%0%!FUNC!:: invlaid input buffer for cid:%10!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundEXTQMUXIndication
+{
+QMUXExtCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c11897 560 "%0%!FUNC!::<%10!s!> ..No Memory of size :%11!d!... " //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundEXTQMUXIndication
+{
+pAdapter->PortName, ItemString -- 10
+IndicationSize, ItemLong -- 11
+}
+#typev MPCID_c11972 563 "%0%!FUNC!:: sending NDIS_STATUS_WWAN_DEVICE_SERVICE_EVENT " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundEXTQMUXIndication
+{
+}
+#typev MPCID_c11948 562 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundEXTQMUXIndication
+{
+}
+#typev MPCID_c11914 561 "%0%!FUNC!::<%10!s!> ..QBI returned invalid GUID " //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundEXTQMUXIndication
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c11734 551 "%0%!FUNC!:: invlaid input buffer for cid:%10!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundMssarIndication
+{
+MSSARCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c11753 553 "%0%!FUNC!::<%10!s!> invlaid CID:%11!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundMssarIndication
+{
+pAdapter->PortName, ItemString -- 10
+MSSARCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c11743 552 "%0%!FUNC!::<%10!s!> QBI cid: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundMssarIndication
+{
+pAdapter->PortName, ItemString -- 10
+MSSARCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c11669 548 "%0%!FUNC!:: invlaid input buffer for cid:%10!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundPBIndication
+{
+PBCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c11688 550 "%0%!FUNC!::<%10!s!> invlaid CID:%11!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundPBIndication
+{
+pAdapter->PortName, ItemString -- 10
+PBCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c11678 549 "%0%!FUNC!::<%10!s!>  QBI cid: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundPBIndication
+{
+pAdapter->PortName, ItemString -- 10
+PBCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c11603 545 "%0%!FUNC!:: invlaid input buffer for cid:%10!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundSMSIndication
+{
+BCCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c11622 547 "%0%!FUNC!::<%10!s!>  invlaid CID:%11!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundSMSIndication
+{
+pAdapter->PortName, ItemString -- 10
+BCCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c11612 546 "%0%!FUNC!::<%10!s!> QBI cid: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundSMSIndication
+{
+pAdapter->PortName, ItemString -- 10
+SMSCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c11791 554 "%0%!FUNC!:: invlaid input buffer for cid:%10!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundUSSDIndication
+{
+USSDCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c11810 556 "%0%!FUNC!::<%10!s!> invlaid CID:%11!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundUSSDIndication
+{
+pAdapter->PortName, ItemString -- 10
+USSDCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c11857 558 "%0%!FUNC!:: sending NDIS_WWAN_SMS_SEND_STATUS " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundUSSDIndication
+{
+}
+#typev MPCID_c11822 557 "%0%!FUNC!::<%10!s!> ..invlaid input buffer length..:%11!d! for cid:%12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundUSSDIndication
+{
+pAdapter->PortName, ItemString -- 10
+uBufLen, ItemLong -- 11
+USSDCidToStr(cid), ItemString -- 12
+}
+#typev MPCID_c11800 555 "%0%!FUNC!::<%10!s!> QBI cid: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundUSSDIndication
+{
+pAdapter->PortName, ItemString -- 10
+USSDCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c12052 567 "%0%!FUNC!:: invalid input buffer for cid:%10!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundVoiceExtIndication
+{
+VoiceExtCidToStr(cid), ItemString -- 10
+}
+#typev MPCID_c12063 569 "%0%!FUNC!::<%10!s!> invlaid CID:%11!s!..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundVoiceExtIndication
+{
+pAdapter->PortName, ItemString -- 10
+VoiceExtCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c12078 570 "%0%!FUNC!:: CID %10!d! is not defined..FAILED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundVoiceExtIndication
+{
+cid, ItemLong -- 10
+}
+#typev MPCID_c12057 568 "%0%!FUNC!::<%10!s!> QBI cid: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_ProcessInboundVoiceExtIndication
+{
+pAdapter->PortName, ItemString -- 10
+VoiceExtCidToStr(cid), ItemString -- 11
+}
+#typev MPCID_c2505 88 "%0%!FUNC!::<%10!s!> : Svc ID %11!d! (%12!s!), CID:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_QMIIndication
+{
+pAdapter->PortName, ItemString -- 10
+uSvcMsgId, ItemLong -- 11
+SvcToStr(uSvcMsgId), ItemString -- 12
+cid, ItemLong -- 13
+}
+#typev MPCID_c2502 87 "%0%!FUNC!::<%10!s!> : Svc ID %11!d! (%12!s!), CID:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMIIndication
+{
+pAdapter->PortName, ItemString -- 10
+uSvcMsgId, ItemLong -- 11
+SvcToStr(uSvcMsgId), ItemString -- 12
+cid, ItemLong -- 13
+}
+#typev MPCID_c2486 86 "%0%!FUNC!::AOAC.wakeReason = NdisWakeReasonWwanUSSDReceive" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMIIndication
+{
+}
+#typev MPCID_c2481 85 "%0%!FUNC!::AOAC.wakeReason = NdisWakeReasonWwanSMSReceive" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMIIndication
+{
+}
+#typev MPCID_c2472 84 "%0%!FUNC!::AOAC.wakeReason = NdisWakeReasonMediaDisconnect" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMIIndication
+{
+}
+#typev MPCID_c2466 83 "%0%!FUNC!::AOAC.wakeReason = NdisWakeReasonMediaConnect" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMIIndication
+{
+}
+#typev MPCID_c2453 82 "%0%!FUNC!::AOAC.wakeReason = NdisWakeReasonWwanRegisterState" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMIIndication
+{
+}
+#typev MPCID_c2429 81 "%0%!FUNC!::<%10!s!> : Svc ID %11!d! (%12!s!)..Memory allocation FAILED..." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_QMIIndication
+{
+pAdapter->PortName, ItemString -- 10
+uSvcMsgId, ItemLong -- 11
+SvcToStr(uSvcMsgId), ItemString -- 12
+}
+#typev MPCID_c2408 80 "%0%!FUNC!::<%10!s!> : Svc ID %11!d! (%12!s!)..Memory allocation FAILED..." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_QMIIndication
+{
+pAdapter->PortName, ItemString -- 10
+uSvcMsgId, ItemLong -- 11
+SvcToStr(uSvcMsgId), ItemString -- 12
+}
+#typev MPCID_c2392 79 "%0%!FUNC!::<%10!s!> : Svc ID %11!d! (%12!s!)Memory allocation FAILED..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_QMIIndication
+{
+pAdapter->PortName, ItemString -- 10
+uSvcMsgId, ItemLong -- 11
+SvcToStr(uSvcMsgId), ItemString -- 12
+}
+#typev MPCID_c7943 327 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_AkaAuthRequest
+{
+}
+#typev MPCID_c7996 329 "%0%!FUNC!::<%10!s!> .. OID Response Status: 0x%11!08x!, Response Length: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_AkaAuthRequest
+{
+pAdapter->PortName, ItemString -- 10
+pOID->OIDStatus, ItemLong -- 11
+pOID->nOidRespLen, ItemLong -- 12
+}
+#typev MPCID_c7954 328 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_AkaAuthRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8006 330 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_AkaAuthRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10672 473 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+}
+#typev MPCID_c10793 498 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10782 497 "%0%!FUNC!::<%10!s!> .. Response length : %11!d! OID Response: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pOID->nOidRespLen, ItemLong -- 11
+log_xstr(pOIDResp. pOID->nOidRespLen), ItemHEXDump -- 12
+}
+#typev MPCID_c10775 496 "%0%!FUNC!::<%10!s!> ..dataBufferSize:%11!u! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+dataBufferSize, ItemLong -- 11
+}
+#typev MPCID_c10766 495 "%0%!FUNC!::<%10!s!> ..pCIDResp->cdma_mrl.size:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->cdma_mrl.size, ItemLong -- 11
+}
+#typev MPCID_c10762 494 "%0%!FUNC!::<%10!s!> ..pCIDResp->cdma_mrl.offset:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->cdma_mrl.offset, ItemLong -- 11
+}
+#typev MPCID_c10758 493 "%0%!FUNC!::<%10!s!> ..pCIDResp->lte_mrl.size:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->lte_mrl.size, ItemLong -- 11
+}
+#typev MPCID_c10754 492 "%0%!FUNC!::<%10!s!> ..pCIDResp->lte_mrl.offset:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->lte_mrl.offset, ItemLong -- 11
+}
+#typev MPCID_c10750 491 "%0%!FUNC!::<%10!s!> ..pCIDResp->tdscdma_mrl.size:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->tdscdma_mrl.size, ItemLong -- 11
+}
+#typev MPCID_c10746 490 "%0%!FUNC!::<%10!s!> ..pCIDResp->tdscdma_mrl.offset:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->tdscdma_mrl.offset, ItemLong -- 11
+}
+#typev MPCID_c10742 489 "%0%!FUNC!::<%10!s!> ..pCIDResp->umts_mrl.size:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->umts_mrl.size, ItemLong -- 11
+}
+#typev MPCID_c10738 488 "%0%!FUNC!::<%10!s!> ..pCIDResp->umts_mrl.offset:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->umts_mrl.offset, ItemLong -- 11
+}
+#typev MPCID_c10734 487 "%0%!FUNC!::<%10!s!> ..pCIDResp->gsm_nmr.size:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->gsm_nmr.size, ItemLong -- 11
+}
+#typev MPCID_c10730 486 "%0%!FUNC!::<%10!s!> ..pCIDResp->gsm_nmr.offset:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->gsm_nmr.offset, ItemLong -- 11
+}
+#typev MPCID_c10726 485 "%0%!FUNC!::<%10!s!> ..pCIDResp->lte_serving_cell.size:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->lte_serving_cell.size, ItemLong -- 11
+}
+#typev MPCID_c10722 484 "%0%!FUNC!::<%10!s!> ..pCIDResp->lte_serving_cell.offset:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->lte_serving_cell.offset, ItemLong -- 11
+}
+#typev MPCID_c10718 483 "%0%!FUNC!::<%10!s!> ..pCIDResp->tdscdma_serving_cell.size:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->tdscdma_serving_cell.size, ItemLong -- 11
+}
+#typev MPCID_c10714 482 "%0%!FUNC!::<%10!s!> ..pCIDResp->tdscdma_serving_cell.offset:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->tdscdma_serving_cell.offset, ItemLong -- 11
+}
+#typev MPCID_c10710 481 "%0%!FUNC!::<%10!s!> ..pCIDResp->umts_serving_cell.size:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->umts_serving_cell.size, ItemLong -- 11
+}
+#typev MPCID_c10706 480 "%0%!FUNC!::<%10!s!> ..pCIDResp->umts_serving_cell.offset:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->umts_serving_cell.offset, ItemLong -- 11
+}
+#typev MPCID_c10702 479 "%0%!FUNC!::<%10!s!> ..pCIDResp->gsm_serving_cell.size:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->gsm_serving_cell.size, ItemLong -- 11
+}
+#typev MPCID_c10698 478 "%0%!FUNC!::<%10!s!> ..pCIDResp->gsm_serving_cell.offset:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->gsm_serving_cell.offset, ItemLong -- 11
+}
+#typev MPCID_c10694 477 "%0%!FUNC!::<%10!s!> ..pCIDResp->system_type:%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->system_type, ItemLong -- 11
+}
+#typev MPCID_c10690 476 "%0%!FUNC!::<%10!s!> ..pQmiElement->nStatus:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->nStatus, ItemLong -- 11
+}
+#typev MPCID_c10685 475 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10681 474 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_BaseStationsInfo
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7421 307 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_DevCapRequest
+{
+}
+#typev MPCID_c7570 311 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DevCapRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7553 310 "%0%!FUNC!::<%10!s!> ..DevID:%11!s!, FWInfo:%12!s!, DevModel:%13!s!, Mfg:%14!s! Maxsessions %15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DevCapRequest
+{
+pAdapter->PortName, ItemString -- 10
+pNdisDeviceCaps->DeviceCaps.DeviceId, ItemWString -- 11
+pNdisDeviceCaps->DeviceCaps.FirmwareInfo, ItemWString -- 12
+pNdisDeviceCaps->DeviceCaps.Model, ItemWString -- 13
+pNdisDeviceCaps->DeviceCaps.Manufacturer, ItemWString -- 14
+pNdisDeviceCaps->DeviceCaps.MaxActivatedContexts, ItemLong -- 15
+}
+#typev MPCID_c7483 309 "%0%!FUNC!::<%10!s!>  CellularClass is %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DevCapRequest
+{
+pAdapter->PortName, ItemString -- 10
+cid_Resp->cellular_class, ItemLong -- 11
+}
+#typev MPCID_c7432 308 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DevCapRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10289 445 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceCapsEx
+{
+}
+#typev MPCID_c10444 455 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10435 454 "%0%!FUNC!::<%10!s!> .. OID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOIDResp. pOID->nOidRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10430 453 "%0%!FUNC!::<%10!s!> .. DeviceId: %11!s!, Manufacturer: %12!s!, Model: %13!s!, FirmwareInfo: %14!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->DeviceCaps.DeviceId, ItemWString -- 11
+pOIDResp->DeviceCaps.Manufacturer, ItemWString -- 12
+pOIDResp->DeviceCaps.Model, ItemWString -- 13
+pOIDResp->DeviceCaps.FirmwareInfo, ItemWString -- 14
+}
+#typev MPCID_c10425 452 "%0%!FUNC!::<%10!s!> .. ExecutorIndex: %11!d!, WwanOptionalServiceCaps: %12!d!, CustomDataClass: %13!s!, WwanAuthAlgoCaps: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->DeviceCaps.ExecutorIndex, ItemLong -- 11
+pOIDResp->DeviceCaps.WwanOptionalServiceCaps, ItemLong -- 12
+pOIDResp->DeviceCaps.CustomDataClass, ItemWString -- 13
+pOIDResp->DeviceCaps.WwanAuthAlgoCaps, ItemLong -- 14
+}
+#typev MPCID_c10420 451 "%0%!FUNC!::<%10!s!> .. WwanDataClass: 0x%11!08x!, WwanSmsCaps: %12!d!, WwanControlCaps: %13!d!, MaxActivatedContexts: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->DeviceCaps.WwanDataClass, ItemLong -- 11
+pOIDResp->DeviceCaps.WwanSmsCaps, ItemLong -- 12
+pOIDResp->DeviceCaps.WwanControlCaps, ItemLong -- 13
+pOIDResp->DeviceCaps.MaxActivatedContexts, ItemLong -- 14
+}
+#typev MPCID_c10415 450 "%0%!FUNC!::<%10!s!> .. WwanDeviceType: %11!d!, WwanCellularClass: %12!d!, WwanVoiceClass: %13!d!, WwanSimClass: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->DeviceCaps.WwanDeviceType, ItemLong -- 11
+pOIDResp->DeviceCaps.WwanCellularClass, ItemLong -- 12
+pOIDResp->DeviceCaps.WwanVoiceClass, ItemLong -- 13
+pOIDResp->DeviceCaps.WwanSimClass, ItemLong -- 14
+}
+#typev MPCID_c10392 449 "%0%!FUNC!::<%10!s!> pCIDResp->hw_info.size %11!u!, pCIDResp->hw_info.offset %12!u! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->hw_info.size, ItemLong -- 11
+pCIDResp->hw_info.offset, ItemLong -- 12
+}
+#typev MPCID_c10381 448 "%0%!FUNC!::<%10!s!> pCIDResp->device_id.size %11!u!, pCIDResp->device_id.offset %12!u! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pCIDResp->device_id.size, ItemLong -- 11
+pCIDResp->device_id.offset, ItemLong -- 12
+}
+#typev MPCID_c10303 447 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10298 446 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceCapsEx
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9409 384 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceServiceCommandRequest
+{
+}
+#typev MPCID_c9482 387 "%0%!FUNC!::<%10!s!>..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9467 386 "%0%!FUNC!::<%10!s!>: Device Service response exceeds max OID resp length %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+SIZEOF_OID_RESPONSE, ItemLong -- 11
+}
+#typev MPCID_c9420 385 "%0%!FUNC!::<%10!s!> ..SUCCESS with Svc:%11!d!, CID:%12!d!, RespLen:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_DeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBISvcType, ItemLong -- 11
+pQmiElement->uQBICID, ItemLong -- 12
+pQmiElement->nRespLen, ItemLong -- 13
+}
+#typev MPCID_c7599 312 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_EmergencyModeRequest
+{
+}
+#typev MPCID_c7629 314 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_EmergencyModeRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7617 313 "%0%!FUNC!::<%10!s!> ..EmergencyMode:%11!d! with CID:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_EmergencyModeRequest
+{
+pAdapter->PortName, ItemString -- 10
+wwanReadyInfo->ReadyInfo.EmergencyMode, ItemLong -- 11
+pQmiElement->uQBICID, ItemLong -- 12
+}
+#typev MPCID_c9184 377 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_EnumDeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9109 376 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_EnumDeviceServiceCommandRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9216 378 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_EnumDeviceServicesRequest
+{
+}
+#typev MPCID_c9289 380 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_EnumDeviceServicesRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9234 379 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_EnumDeviceServicesRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6355 260 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_HomeProviderRequest
+{
+}
+#typev MPCID_c6408 263 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_HomeProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6394 262 "%0%!FUNC!::<%10!s!>  SUCCESS. ProviderId:%11!s!,               ProviderName:%12!s! , DataClass:%13!d! for CID:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_HomeProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pNdisHomeProvider->Provider.ProviderId, ItemWString -- 11
+pNdisHomeProvider->Provider.ProviderName, ItemWString -- 12
+pNdisHomeProvider->Provider.WwanDataClass, ItemLong -- 13
+pQmiElement->uQBICID, ItemLong -- 14
+}
+#typev MPCID_c6366 261 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_HomeProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7833 323 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_IPConfiguration
+{
+}
+#typev MPCID_c10047 427 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachConfig
+{
+}
+#typev MPCID_c10126 433 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10112 432 "%0%!FUNC!::<%10!s!> .. AccessString: %11!s! UserName: %12!s! Password: %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->LteAttachContext.LteContextArray[i].basicInfo.AccessString, ItemWString -- 11
+pOIDResp->LteAttachContext.LteContextArray[i].basicInfo.UserName, ItemWString -- 12
+pOIDResp->LteAttachContext.LteContextArray[i].basicInfo.Password, ItemWString -- 13
+}
+#typev MPCID_c10104 431 "%0%!FUNC!::<%10!s!> ..IPType: %11!d! Roaming: %12!d! Source: %13!d! Compression: %14!d! AuthType: %15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->LteAttachContext.LteContextArray[i].IPType, ItemLong -- 11
+pOIDResp->LteAttachContext.LteContextArray[i].Roaming, ItemLong -- 12
+pOIDResp->LteAttachContext.LteContextArray[i].Source, ItemLong -- 13
+pOIDResp->LteAttachContext.LteContextArray[i].basicInfo.Compression, ItemLong -- 14
+pOIDResp->LteAttachContext.LteContextArray[i].basicInfo.AuthType, ItemLong -- 15
+}
+#typev MPCID_c10071 430 "%0%!FUNC!::.. Insufficient Buffer Element Count: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachConfig
+{
+pCIDResp->element_count, ItemLong -- 10
+}
+#typev MPCID_c10063 429 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10058 428 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachConfig
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10148 434 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachStatus
+{
+}
+#typev MPCID_c10203 439 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10193 438 "%0%!FUNC!::<%10!s!> .. AccessString: %11!s! UserName: %12!s! Password: %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->LteAttachStatus.basicInfo.AccessString, ItemWString -- 11
+pOIDResp->LteAttachStatus.basicInfo.UserName, ItemWString -- 12
+pOIDResp->LteAttachStatus.basicInfo.Password, ItemWString -- 13
+}
+#typev MPCID_c10188 437 "%0%!FUNC!::<%10!s!> ..LteAttachState: %11!d! IPType: %12!d! Compression: %13!d! AuthType: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->LteAttachStatus.LteAttachState, ItemLong -- 11
+pOIDResp->LteAttachStatus.IPType, ItemLong -- 12
+pOIDResp->LteAttachStatus.basicInfo.Compression, ItemLong -- 13
+pOIDResp->LteAttachStatus.basicInfo.AuthType, ItemLong -- 14
+}
+#typev MPCID_c10161 436 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10156 435 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_LTEAttachStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c11298 532 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_NitzInfo
+{
+}
+#typev MPCID_c11324 535 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_NitzInfo
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c11309 534 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_NitzInfo
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c11306 533 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_NitzInfo
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6161 245 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+}
+#typev MPCID_c6312 259 "%0%!FUNC!::<%10!s!> SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6304 258 "%0%!FUNC!::<%10!s!> Data call is up on port %11!d!. Sending success response to OID_WWAN_CONNECT(activate)." //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pOID->OidReqCopy.PortNumber, ItemLong -- 11
+}
+#typev MPCID_c6301 257 "%0%!FUNC!::<%10!s!> Data call is up on port %11!d!. Sending success response to OID_WWAN_CONNECT(activate)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pOID->OidReqCopy.PortNumber, ItemLong -- 11
+}
+#typev MPCID_c6296 256 "%0%!FUNC!::<%10!s!> sending MPQBI_ComposeQBIRequest for CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pNewQMIElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6266 255 "%0%!FUNC!::..IP Addr Assignement Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+}
+#typev MPCID_c6261 254 "%0%!FUNC!::..Req IP %10!d! Assigned IP %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+pSetContext->SetContextState.IPType, ItemLong -- 10
+cid_Resp->ip_type, ItemLong -- 11
+}
+#typev MPCID_c6253 253 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6250 252 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6244 251 "%0%!FUNC!::<%10!s!> ..FAILURE with CID:%11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6241 250 "%0%!FUNC!::<%10!s!> ..FAILURE with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6207 249 "%0%!FUNC!::..uNwError:%10!d!, ConnectionId:%11!d!, ActivationState:%12!d!, VoiceCallState:%13!d! IPType:%14!d! for CID:%15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+wwanContextState->ContextState.uNwError, ItemLong -- 10
+wwanContextState->ContextState.ConnectionId, ItemLong -- 11
+wwanContextState->ContextState.ActivationState, ItemLong -- 12
+wwanContextState->ContextState.VoiceCallState, ItemLong -- 13
+wwanContextState->ContextState.IPType, ItemLong -- 14
+pQmiElement->uQBICID, ItemLong -- 15
+}
+#typev MPCID_c6201 248 "%0%!FUNC!::..uNwError:%10!d!, ConnectionId:%11!d!, ActivationState:%12!d!, VoiceCallState:%13!d! IPType:%14!d! for CID:%15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+wwanContextState->ContextState.uNwError, ItemLong -- 10
+wwanContextState->ContextState.ConnectionId, ItemLong -- 11
+wwanContextState->ContextState.ActivationState, ItemLong -- 12
+wwanContextState->ContextState.VoiceCallState, ItemLong -- 13
+wwanContextState->ContextState.IPType, ItemLong -- 14
+pQmiElement->uQBICID, ItemLong -- 15
+}
+#typev MPCID_c6183 247 "%0%!FUNC!::<%10!s!> Port teardown Status: %11!s! for SessionId %12!d!, PortnumReset: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemNTSTATUS -- 11
+cid_Resp->session_id, ItemLong -- 12
+MPOID_GetPortNumberFromSessionID(cid_Resp->session_id), ItemLong -- 13
+}
+#typev MPCID_c6171 246 "%0%!FUNC!::<%10!s!> ..received NULL response from QMI for CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_OidConnectRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10605 467 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_PCO
+{
+}
+#typev MPCID_c10650 472 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PCO
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10641 471 "%0%!FUNC!::<%10!s!> ..  and pOIDResp->PcoValue.PcoData: %11!s! , and pco data: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PCO
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOIDResp->PcoValue.PcoData. pOIDResp->PcoValue.Size), ItemHEXDump -- 11
+log_xstr(pPcoData. pOIDResp->PcoValue.Size), ItemHEXDump -- 12
+}
+#typev MPCID_c10637 470 "%0%!FUNC!::<%10!s!> .. PCO value type: %11!d!, and status : %12!d!, PCO value size: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PCO
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->PcoValue.Type, ItemLong -- 11
+pOIDResp->uStatus, ItemLong -- 12
+pOIDResp->PcoValue.Size, ItemLong -- 13
+}
+#typev MPCID_c10619 469 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PCO
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10614 468 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PCO
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7054 293 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_PINServiceListRequest
+{
+}
+#typev MPCID_c7142 295 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PINServiceListRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7072 294 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PINServiceListRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6823 279 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_PINServiceRequest
+{
+}
+#typev MPCID_c6943 287 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PINServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6931 286 "%0%!FUNC!::Wrong PIN - Operation Change :%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_PINServiceRequest
+{
+pAdapter->WRONG_SIM_PIN_INFO.TotalRetries.ChangeCount, ItemLong -- 10
+}
+#typev MPCID_c6926 285 "%0%!FUNC!::Wrong PIN - Operation Disable :%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_PINServiceRequest
+{
+pAdapter->WRONG_SIM_PIN_INFO.TotalRetries.DisableCount, ItemLong -- 10
+}
+#typev MPCID_c6917 284 "%0%!FUNC!::Alloc_WrongSimPinInfo Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_PINServiceRequest
+{
+}
+#typev MPCID_c6884 283 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_PINServiceRequest
+{
+}
+#typev MPCID_c6867 282 "%0%!FUNC!::<%10!s!> ..PIN state is PinEnter for type:%11!d!, Attempt Left:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PINServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+wwanPinInfo->PinInfo.PinType, ItemLong -- 11
+wwanPinInfo->PinInfo.AttemptsRemaining, ItemLong -- 12
+}
+#typev MPCID_c6852 281 "%0%!FUNC!::<%10!s!> ..PIN state is %11!d! for type:%12!d!, Attempt Left:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PINServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+cid_Resp->pin_state, ItemLong -- 11
+cid_Resp->pin_type, ItemLong -- 12
+cid_Resp->retries_left, ItemLong -- 13
+}
+#typev MPCID_c6840 280 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PINServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6970 288 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_PIN_EX_Service
+{
+}
+#typev MPCID_c7028 292 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PIN_EX_Service
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7013 291 "%0%!FUNC!::<%10!s!> ..PIN state is PinEnter for type:%11!d!, Attempt Left:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PIN_EX_Service
+{
+pAdapter->PortName, ItemString -- 10
+pOidResp->PinInfo.PinType, ItemLong -- 11
+pOidResp->PinInfo.AttemptsRemaining, ItemLong -- 12
+}
+#typev MPCID_c6998 290 "%0%!FUNC!::<%10!s!> ..PIN state is %11!d! for type:%12!d!, Attempt Left:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PIN_EX_Service
+{
+pAdapter->PortName, ItemString -- 10
+pCidResp->pin_state, ItemLong -- 11
+pCidResp->pin_type, ItemLong -- 12
+pCidResp->retries_left, ItemLong -- 13
+}
+#typev MPCID_c6986 289 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PIN_EX_Service
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6673 272 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_PacketServiceRequest
+{
+}
+#typev MPCID_c6789 278 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PacketServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6771 277 "%0%!FUNC!::<%10!s!> sending MPQBI_ComposeQBIRequest for CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PacketServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+pNewQMIElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6746 276 "%0%!FUNC!::<%10!s!>  SUCCESS. PacketServiceState:%11!d!, AvailDataClass:%12!d!, CurrentDataClass:%13!d! for CID:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_Response_PacketServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->PacketServiceState.PacketService.PacketServiceState, ItemLong -- 11
+pAdapter->PacketServiceState.PacketService.AvailableDataClass, ItemLong -- 12
+pAdapter->PacketServiceState.PacketService.CurrentDataClass, ItemLong -- 13
+pQmiElement->uQBICID, ItemLong -- 14
+}
+#typev MPCID_c6738 275 "%0%!FUNC!::<%10!s!>  SUCCESS. PacketServiceState:%11!d!, AvailDataClass:%12!d!, CurrentDataClass:%13!d! for CID:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PacketServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->PacketServiceState.PacketService.PacketServiceState, ItemLong -- 11
+pAdapter->PacketServiceState.PacketService.AvailableDataClass, ItemLong -- 12
+pAdapter->PacketServiceState.PacketService.CurrentDataClass, ItemLong -- 13
+pQmiElement->uQBICID, ItemLong -- 14
+}
+#typev MPCID_c6705 274 "%0%!FUNC!::Invalid CID response " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_PacketServiceRequest
+{
+}
+#typev MPCID_c6684 273 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PacketServiceRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6442 264 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_PreferredProviderRequest
+{
+}
+#typev MPCID_c6529 267 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PreferredProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6508 266 "%0%!FUNC!::<%10!s!> ProviderId:%11!s!,                           ProviderName:%12!s!, DataClass:0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PreferredProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pWwanProvider2->Provider.ProviderId, ItemWString -- 11
+pWwanProvider2->Provider.ProviderName, ItemWString -- 12
+pWwanProvider2->Provider.WwanDataClass, ItemLong -- 13
+}
+#typev MPCID_c6461 265 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!. element count:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_PreferredProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+element_count, ItemLong -- 12
+}
+#typev MPCID_c8231 339 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+}
+#typev MPCID_c8373 345 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8264 341 "%0%!FUNC!::<%10!s!> ..UNSUCCESSFUL with CID %11!d! as memeory of size %12!d! bytes could not be allocated for the response:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+tempBufferSize, ItemLong -- 12
+}
+#typev MPCID_c8346 344 "%0%!FUNC!::..AccessString:%10!s!, UserName:%11!s!, Password:%12!s! for CID:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+pWwanContext->AccessString, ItemWString -- 10
+pWwanContext->UserName, ItemWString -- 11
+pWwanContext->Password, ItemWString -- 12
+pQmiElement->uQBICID, ItemLong -- 13
+}
+#typev MPCID_c8332 343 "%0%!FUNC!::contextType is %10!d! :" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+pWwanContext->ContextType, ItemLong -- 10
+}
+#typev MPCID_c8328 342 "%0%!FUNC!::Invalid UUID " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+}
+#typev MPCID_c8242 340 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9877 417 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextV2
+{
+}
+#typev MPCID_c10022 426 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9903 420 "%0%!FUNC!::<%10!s!> ..UNSUCCESSFUL with CID %11!d! as memeory of size %12!d! bytes could not be allocated for the response:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+tempBufferSize, ItemLong -- 12
+}
+#typev MPCID_c10000 425 "%0%!FUNC!::..IPType: %10!d!, Enable: %11!d!, Roaming:%12!d!, MediaType:%13!d!, Source:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pWwanContext->IPType, ItemLong -- 10
+pWwanContext->Enable, ItemLong -- 11
+pWwanContext->Roaming, ItemLong -- 12
+pWwanContext->MediaType, ItemLong -- 13
+pWwanContext->Source, ItemLong -- 14
+}
+#typev MPCID_c9996 424 "%0%!FUNC!::..AccessString:%10!s!, UserName:%11!s!, Password:%12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pWwanContext->basicInfo.AccessString, ItemWString -- 10
+pWwanContext->basicInfo.UserName, ItemWString -- 11
+pWwanContext->basicInfo.Password, ItemWString -- 12
+}
+#typev MPCID_c9991 423 "%0%!FUNC!::..contextType: %10!d!, ContextId: %11!d!, Compression:%12!d!, AuthType:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pWwanContext->basicInfo.ContextType, ItemLong -- 10
+pWwanContext->basicInfo.ContextId, ItemLong -- 11
+pWwanContext->basicInfo.Compression, ItemLong -- 12
+pWwanContext->basicInfo.AuthType, ItemLong -- 13
+}
+#typev MPCID_c9969 422 "%0%!FUNC!::Invalid UUID " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextV2
+{
+}
+#typev MPCID_c9944 421 "%0%!FUNC!::..uStatus: %10!d!, ElementType: %11!d!, ElementCount:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pOidResp->uStatus, ItemLong -- 10
+pOidResp->ContextListHeader.ElementType, ItemLong -- 11
+pOidResp->ContextListHeader.ElementCount, ItemLong -- 12
+}
+#typev MPCID_c9890 419 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9885 418 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_ProvisionedContextV2
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7913 326 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_RadioState
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7897 325 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!, HW Radio State:%12!d!, SW Radio State:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_RadioState
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+pNdisRadioState->RadioState.HwRadioState, ItemLong -- 12
+pNdisRadioState->RadioState.SwRadioState, ItemLong -- 13
+}
+#typev MPCID_c7888 324 "%0%!FUNC!::MBB: Writing RadioState value to Regsitry FAILED with error 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_RadioState
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPCID_c7660 315 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_RegisterStateRequest
+{
+}
+#typev MPCID_c7802 322 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_RegisterStateRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7788 321 "%0%!FUNC!::<%10!s!> PktSrvRequest SUCCESS. PacketServiceState:%11!d!, AvailDataClass:0x%12!x!, CurrentDataClass:0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_Response_RegisterStateRequest
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->PacketServiceState.PacketService.PacketServiceState, ItemLong -- 11
+pAdapter->PacketServiceState.PacketService.AvailableDataClass, ItemLong -- 12
+pAdapter->PacketServiceState.PacketService.CurrentDataClass, ItemLong -- 13
+}
+#typev MPCID_c7766 320 "%0%!FUNC!::..uNwError:%10!d!, RegisterState:%11!d!, RegisterMode:%12!d!, ProviderId:%13!s!, RoamingText:%14!s!, Name:%15!s! for CID:%16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_Response_RegisterStateRequest
+{
+wwanRegState->RegistrationState.uNwError, ItemLong -- 10
+wwanRegState->RegistrationState.RegisterState, ItemLong -- 11
+wwanRegState->RegistrationState.RegisterMode, ItemLong -- 12
+wwanRegState->RegistrationState.ProviderId, ItemWString -- 13
+wwanRegState->RegistrationState.RoamingText, ItemWString -- 14
+wwanRegState->RegistrationState.ProviderName, ItemWString -- 15
+pQmiElement->uQBICID, ItemLong -- 16
+}
+#typev MPCID_c7757 319 "%0%!FUNC!::..uNwError:%10!d!, RegisterState:%11!d!, RegisterMode:%12!d!, ProviderId:%13!s!, RoamingText:%14!s!, Name:%15!s! for CID:%16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_RegisterStateRequest
+{
+wwanRegState->RegistrationState.uNwError, ItemLong -- 10
+wwanRegState->RegistrationState.RegisterState, ItemLong -- 11
+wwanRegState->RegistrationState.RegisterMode, ItemLong -- 12
+wwanRegState->RegistrationState.ProviderId, ItemWString -- 13
+wwanRegState->RegistrationState.RoamingText, ItemWString -- 14
+wwanRegState->RegistrationState.ProviderName, ItemWString -- 15
+pQmiElement->uQBICID, ItemLong -- 16
+}
+#typev MPCID_c7712 318 "%0%!FUNC!::MBB: roam indicator icon supression is disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_RegisterStateRequest
+{
+}
+#typev MPCID_c7700 317 "%0%!FUNC!::MBB: roam indicator icon supression enabled. Changing register state to home" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_RegisterStateRequest
+{
+}
+#typev MPCID_c7671 316 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_RegisterStateRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8493 350 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSConfigRequest
+{
+}
+#typev MPCID_c8580 355 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSConfigRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8564 354 "%0%!FUNC!::<%10!s!>..SMS format:%11!s!, Msg Index:%12!d!, SC Address: %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSConfigRequest
+{
+pAdapter->PortName, ItemString -- 10
+(sms_config->SmsConfiguration.SmsFormat == WwanSmsFormatPdu) ? L'PDU' : L'CDMA', ItemWString -- 11
+sms_config->SmsConfiguration.ulMaxMessageIndex, ItemLong -- 12
+sms_config->SmsConfiguration.ScAddress, ItemString -- 13
+}
+#typev MPCID_c8549 353 "%0%!FUNC!::..Failed to convert Unicode to Ansi String" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSConfigRequest
+{
+}
+#typev MPCID_c8521 352 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSConfigRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8510 351 "%0%!FUNC!::..QMI response buffer is NULL " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSConfigRequest
+{
+}
+#typev MPCID_c8680 359 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSReadRequest
+{
+}
+#typev MPCID_c8826 363 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSReadRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8807 362 "%0%!FUNC!::..Msg size:%10!d!, status%11!d! and Msg Index:%12!d! for CID:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSReadRequest
+{
+pSmsPduRecord->Size, ItemLong -- 10
+pSmsPduRecord->MsgStatus, ItemLong -- 11
+pSmsPduRecord->MessageIndex, ItemLong -- 12
+pQmiElement->uQBICID, ItemLong -- 13
+}
+#typev MPCID_c8799 361 "%0%!FUNC!::..PDUString size :%10!d!, 
+ PDUString : %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSReadRequest
+{
+(int) strlen(pSmsPduRecord->PduData), ItemLong -- 10
+pSmsPduRecord->PduData, ItemString -- 11
+}
+#typev MPCID_c8691 360 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSReadRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8854 364 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSSendRequest
+{
+}
+#typev MPCID_c8915 368 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSSendRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8887 367 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSSendRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8877 366 "%0%!FUNC!::..QMI response buffer is NULL " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSSendRequest
+{
+}
+#typev MPCID_c8865 365 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSSendRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8944 369 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSStatusRequest
+{
+}
+#typev MPCID_c8997 372 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSStatusRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8984 371 "%0%!FUNC!::<%10!s!> .. uFlag:%11!d!, Msg Index:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSStatusRequest
+{
+pAdapter->PortName, ItemString -- 10
+sms_status->SmsStatus.uFlag, ItemLong -- 11
+sms_status->SmsStatus.MessageIndex, ItemLong -- 12
+}
+#typev MPCID_c8955 370 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SMSStatusRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10820 499 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SarConfig
+{
+}
+#typev MPCID_c10878 504 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SarConfig
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10866 503 "%0%!FUNC!::<%10!s!> .. SarAntennaIndex: %11!d! SarBackoffIndex: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SarConfig
+{
+pAdapter->PortName, ItemString -- 10
+pSarCfgIndices->SarAntennaIndex, ItemLong -- 11
+pSarCfgIndices->SarBackoffIndex, ItemLong -- 12
+}
+#typev MPCID_c10849 502 "%0%!FUNC!::<%10!s!> uStatus: %11!d! SarMode: %12!d! SarBackoffStatus: %13!d! SarWifiIntegration: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SarConfig
+{
+pAdapter->PortName, ItemString -- 10
+pOidResp->uStatus, ItemLong -- 11
+pOidResp->SarConfig.SarMode, ItemLong -- 12
+pOidResp->SarConfig.SarBackoffStatus, ItemLong -- 13
+pOidResp->SarConfig.SarWifiIntegration, ItemLong -- 14
+}
+#typev MPCID_c10834 501 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SarConfig
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10829 500 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SarConfig
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10902 505 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SarTransmissionStatus
+{
+}
+#typev MPCID_c10940 509 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SarTransmissionStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10930 508 "%0%!FUNC!::<%10!s!> uStatus: %11!d! ChannelNotification: %12!d! TransmissionStatus: %13!d! HysteresisTimer: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SarTransmissionStatus
+{
+pAdapter->PortName, ItemString -- 10
+pOidResp->uStatus, ItemLong -- 11
+pOidResp->TransmissionStatus.ChannelNotification, ItemLong -- 12
+pOidResp->TransmissionStatus.TransmissionStatus, ItemLong -- 13
+pOidResp->TransmissionStatus.HysteresisTimer, ItemLong -- 14
+}
+#typev MPCID_c10916 507 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SarTransmissionStatus
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10911 506 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SarTransmissionStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c14686 662 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SetNetworkIdleHint
+{
+}
+#typev MPCID_c14702 664 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SetNetworkIdleHint
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c14693 663 "%0%!FUNC!::<%10!s!>..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SetNetworkIdleHint
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8402 346 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SignalStateRequest
+{
+}
+#typev MPCID_c8463 349 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SignalStateRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8449 348 "%0%!FUNC!::..rssi interval:%10!d!, thresold:%11!d!, rssi:%12!d!, Error Rate:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SignalStateRequest
+{
+signal_state->SignalState.RssiInterval, ItemLong -- 10
+signal_state->SignalState.RssiThreshold, ItemLong -- 11
+signal_state->SignalState.Rssi, ItemLong -- 12
+signal_state->SignalState.ErrorRate, ItemLong -- 13
+}
+#typev MPCID_c8413 347 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SignalStateRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8035 331 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SimAuthRequest
+{
+}
+#typev MPCID_c8096 333 "%0%!FUNC!::<%10!s!> .. OID Response Status: 0x%11!08x!, Response Length: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SimAuthRequest
+{
+pAdapter->PortName, ItemString -- 10
+pOID->OIDStatus, ItemLong -- 11
+pOID->nOidRespLen, ItemLong -- 12
+}
+#typev MPCID_c8046 332 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SimAuthRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c8106 334 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SimAuthRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10545 462 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SlotInfoStatus
+{
+}
+#typev MPCID_c10582 466 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SlotInfoStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10572 465 "%0%!FUNC!::<%10!s!> .. SlotIndex: %11!d!, State: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SlotInfoStatus
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->SlotInfo.SlotIndex, ItemLong -- 11
+pOIDResp->SlotInfo.State, ItemLong -- 12
+}
+#typev MPCID_c10559 464 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SlotInfoStatus
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10554 463 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SlotInfoStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7191 296 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SubReadyRequest
+{
+}
+#typev MPCID_c7390 306 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c7368 305 "%0%!FUNC!::<%10!s!> ..ReadyState:%11!d!, SubID:%12!s!, SimICCId:%13!s!, Phone Cnt:%14!d! with CID:%15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+wwanReadyInfo->ReadyInfo.ReadyState, ItemLong -- 11
+wwanReadyInfo->ReadyInfo.SubscriberId, ItemWString -- 12
+wwanReadyInfo->ReadyInfo.SimIccId, ItemWString -- 13
+wwanReadyInfo->ReadyInfo.TNListHeader.ElementCount, ItemLong -- 14
+pQmiElement->uQBICID, ItemLong -- 15
+}
+#typev MPCID_c7356 304 "%0%!FUNC!::<%10!s!> .. Copy %11!s! into pAdapter" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+wwanReadyInfo->ReadyInfo.SimIccId, ItemWString -- 11
+}
+#typev MPCID_c7343 303 "%0%!FUNC!::<%10!s!>  MPQBI_ComposeSilentWrongPinVerify returned error :0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPCID_c7303 302 "%0%!FUNC!::<%10!s!>  MPQBI_ComposeSilentPinVerify returned error :0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c7291 301 "%0%!FUNC!::<%10!s!> .. Silent verify -- PinLength: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->SIM_PIN_INFO.EncryptPinLength, ItemLong -- 11
+}
+#typev MPCID_c7270 300 "%0%!FUNC!::<%10!s!> .. Compose Request for Ready Info" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c7260 299 "%0%!FUNC!::<%10!s!>.. SimIccID equal" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c7251 298 "%0%!FUNC!::<%10!s!>.. pAdapter->SimIccId: %11!s! .. CidResponse->SimIccId: %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SubReadyRequest
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->SIM_PIN_INFO.SimIccID, ItemWString -- 11
+wwanReadyInfo->ReadyInfo.SimIccId, ItemWString -- 12
+}
+#typev MPCID_c7242 297 "%0%!FUNC!::.. ReadyState -- DeviceLocked " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SubReadyRequest
+{
+}
+#typev MPCID_c9317 381 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SubscribeDeviceServiceEventsRequest
+{
+}
+#typev MPCID_c9356 383 "%0%!FUNC!::<%10!s!> sending MPQBI_ComposeQBIRequest for CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SubscribeDeviceServiceEventsRequest
+{
+pAdapter->PortName, ItemString -- 10
+pNewQMIElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9326 382 "%0%!FUNC!:: for OID %10!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SubscribeDeviceServiceEventsRequest
+{
+MPOidToNameStr(pOID->Oid), ItemString -- 10
+}
+#typev MPCID_c10226 440 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_SysCaps
+{
+}
+#typev MPCID_c10266 444 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SysCaps
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10255 443 "%0%!FUNC!::<%10!s!> .. NumberOfExecutors: %11!d!, NumberOfSlots: %12!d!, Concurrency: %13!d!, ModemID: %14!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SysCaps
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->SysCapsInfo.NumberOfExecutors, ItemLong -- 11
+pOIDResp->SysCapsInfo.NumberOfSlots, ItemLong -- 12
+pOIDResp->SysCapsInfo.Concurrency, ItemLong -- 13
+pOIDResp->SysCapsInfo.ModemID, ItemULongLong -- 14
+}
+#typev MPCID_c10240 442 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SysCaps
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10235 441 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SysCaps
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10468 456 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SysSlotMappings
+{
+}
+#typev MPCID_c10522 461 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SysSlotMappings
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10510 460 "%0%!FUNC!::<%10!s!> .. Index: %11!d!, OID Slot Map: %12!d!, CID Slot Map: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SysSlotMappings
+{
+pAdapter->PortName, ItemString -- 10
+i, ItemLong -- 11
+*pOidSlotMapList, ItemLong -- 12
+*pCidSlotMapList, ItemLong -- 13
+}
+#typev MPCID_c10496 459 "%0%!FUNC!::<%10!s!> .. ElementCount: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SysSlotMappings
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->DeviceSlotMappingInfo.SlotMapListHeader.ElementCount, ItemLong -- 11
+}
+#typev MPCID_c10485 458 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SysSlotMappings
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10480 457 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_SysSlotMappings
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9027 373 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_USSDRequest
+{
+}
+#typev MPCID_c9074 375 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_USSDRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9038 374 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_USSDRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c11246 528 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAccessBinaryRecord
+{
+}
+#typev MPCID_c11271 531 "%0%!FUNC!::<%10!s!> uStatus: %11!d! data size: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAccessBinaryRecord
+{
+pAdapter->PortName, ItemString -- 10
+pOidResp->uStatus, ItemLong -- 11
+pCidResp->record_data.size, ItemLong -- 12
+}
+#typev MPCID_c11256 530 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAccessBinaryRecord
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c11250 529 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d! status:%12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAccessBinaryRecord
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+pQmiElement->nStatus, ItemNTSTATUS -- 12
+}
+#typev MPCID_c9714 406 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccApdu
+{
+}
+#typev MPCID_c9767 411 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccApdu
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9757 410 "%0%!FUNC!::<%10!s!> .. ResponseLength: %11!d!, Response: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccApdu
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->UiccApduInfo.ResponseLength, ItemLong -- 11
+log_xstr(pOIDResp->UiccApduInfo.Response. pOIDResp->UiccApduInfo.ResponseLength), ItemHEXDump -- 12
+}
+#typev MPCID_c9752 409 "%0%!FUNC!::<%10!s!> ..Status SW1: %11!d!, SW2: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccApdu
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->UiccApduInfo.Status[0], ItemLong -- 11
+pOIDResp->UiccApduInfo.Status[1], ItemLong -- 12
+}
+#typev MPCID_c9727 408 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccApdu
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9722 407 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccApdu
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c11026 515 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAppList
+{
+}
+#typev MPCID_c11082 519 "%0%!FUNC!::<%10!s!> ..memcpy_s AppId FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAppList
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c11092 520 "%0%!FUNC!::<%10!s!> ..memcpy_s AppName FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAppList
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c11105 521 "%0%!FUNC!::<%10!s!> ..memcpy_s NumPins FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAppList
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c11115 522 "%0%!FUNC!::<%10!s!> ..memcpy_s app_info FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAppList
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c11047 518 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAppList
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c11043 517 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAppList
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c11037 516 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAppList
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9506 388 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAtr
+{
+}
+#typev MPCID_c9553 393 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAtr
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9544 392 "%0%!FUNC!::<%10!s!> .. Atr: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAtr
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOIDResp->AtrInfo.Atr. pOIDResp->AtrInfo.AtrLength), ItemHEXDump -- 11
+}
+#typev MPCID_c9540 391 "%0%!FUNC!::<%10!s!> .. AtrLength: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAtr
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->AtrInfo.AtrLength, ItemLong -- 11
+}
+#typev MPCID_c9519 390 "%0%!FUNC!::<%10!s!>.. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAtr
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9514 389 "%0%!FUNC!::<%10!s!>..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccAtr
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9656 401 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccCloseChannel
+{
+}
+#typev MPCID_c9692 405 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccCloseChannel
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9682 404 "%0%!FUNC!::<%10!s!> ..Status SW1: %11!d!, SW2: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccCloseChannel
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->UiccCloseChannelInfo.Status[0], ItemLong -- 11
+pOIDResp->UiccCloseChannelInfo.Status[1], ItemLong -- 12
+}
+#typev MPCID_c9669 403 "%0%!FUNC!::<%10!s!>.. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccCloseChannel
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9664 402 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccCloseChannel
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c11153 523 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccFileStatus
+{
+}
+#typev MPCID_c11216 527 "%0%!FUNC!::<%10!s!> ..memcpy_s failure" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccFileStatus
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c11194 526 "%0%!FUNC!::<%10!s!> ..version:%11!d!, sw1:%12!d!, sw2:%13!d!, file accessibility:%14!d!, file type:%15!d!, file structure:%16!d!, item count:%17!d!, size:%18!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccFileStatus
+{
+pAdapter->PortName, ItemString -- 10
+pCidResp->version, ItemLong -- 11
+pCidResp->sw1, ItemLong -- 12
+pCidResp->sw2, ItemLong -- 13
+pCidResp->fileAccessibility, ItemLong -- 14
+pCidResp->fileType, ItemLong -- 15
+pCidResp->fileStructure, ItemLong -- 16
+pCidResp->itemCount, ItemLong -- 17
+pCidResp->size, ItemLong -- 18
+}
+#typev MPCID_c11182 525 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccFileStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c11173 524 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccFileStatus
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9575 394 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccOpenChannel
+{
+}
+#typev MPCID_c9634 400 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccOpenChannel
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9624 399 "%0%!FUNC!::<%10!s!> .. Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccOpenChannel
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pOIDResp->UiccOpenChannelInfo.Response.                      pOIDResp->UiccOpenChannelInfo.ResponseLength), ItemHEXDump -- 11
+}
+#typev MPCID_c9619 398 "%0%!FUNC!::<%10!s!> .. Channel: %11!d!, ResponseLength: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccOpenChannel
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->UiccOpenChannelInfo.Channel, ItemLong -- 11
+pOIDResp->UiccOpenChannelInfo.ResponseLength, ItemLong -- 12
+}
+#typev MPCID_c9614 397 "%0%!FUNC!::<%10!s!> ..Status SW1: %11!d!, SW2: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccOpenChannel
+{
+pAdapter->PortName, ItemString -- 10
+pOIDResp->UiccOpenChannelInfo.Status[0], ItemLong -- 11
+pOIDResp->UiccOpenChannelInfo.Status[1], ItemLong -- 12
+}
+#typev MPCID_c9588 396 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccOpenChannel
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9583 395 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccOpenChannel
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10964 510 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccReset
+{
+}
+#typev MPCID_c10999 514 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccReset
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c10990 513 "%0%!FUNC!::<%10!s!> uStatus: %11!d! PassThroughStatus: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccReset
+{
+pAdapter->PortName, ItemString -- 10
+pOidResp->uStatus, ItemLong -- 11
+pOidResp->UiccResetInfo.PassThroughStatus, ItemLong -- 12
+}
+#typev MPCID_c10978 512 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccReset
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c10973 511 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccReset
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9795 412 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccTerminalCap
+{
+}
+#typev MPCID_c9849 416 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccTerminalCap
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c9841 415 "%0%!FUNC!:: ElementCount: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccTerminalCap
+{
+pOIDResp->CapabilityListHeader.ElementCount, ItemLong -- 10
+}
+#typev MPCID_c9808 414 "%0%!FUNC!::<%10!s!> .. CID Response: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccTerminalCap
+{
+pAdapter->PortName, ItemString -- 10
+log_xstr(pQmiElement->pRespBuf. pQmiElement->nRespLen), ItemHEXDump -- 11
+}
+#typev MPCID_c9803 413 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_UiccTerminalCap
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6561 268 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_VisibleProviderRequest
+{
+}
+#typev MPCID_c6647 271 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_VisibleProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c6627 270 "%0%!FUNC!::<%10!s!> ProviderId:%11!s!,                           ProviderName:%12!s!, DataClass:%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_VisibleProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pWwanProvider2->Provider.ProviderId, ItemWString -- 11
+pWwanProvider2->Provider.ProviderName, ItemWString -- 12
+pWwanProvider2->Provider.WwanDataClass, ItemLong -- 13
+}
+#typev MPCID_c6581 269 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!, Element count:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_VisibleProviderRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+element_count, ItemLong -- 12
+}
+#typev MPCID_c14359 647 "%0%!FUNC!::..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_Response_WOLPacketFilterList
+{
+}
+#typev MPCID_c14404 651 "%0%!FUNC!::<%10!s!>  sending MPQBI_ComposeQBIRequest for CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_WOLPacketFilterList
+{
+pAdapter->PortName, ItemString -- 10
+pNewQMIElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c14381 650 "%0%!FUNC!::<%10!s!> Data call is not up and SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_Response_WOLPacketFilterList
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c14376 649 "%0%!FUNC!::<%10!s!> ..FAILED with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_WOLPacketFilterList
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c14366 648 "%0%!FUNC!::<%10!s!> ..SUCCESS with CID:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_Response_WOLPacketFilterList
+{
+pAdapter->PortName, ItemString -- 10
+pQmiElement->uQBICID, ItemLong -- 11
+}
+#typev MPCID_c2081 67 "%0%!FUNC!::<%10!s!>  success 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_SendQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPCID_c2073 66 "%0%!FUNC!::<%10!s!> : Failed with status:0x%11!x! for SvcID:%12!d! CID:%13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_SendQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+pQMI->uQBISvcType, ItemLong -- 12
+pQMI->uQBICID, ItemLong -- 13
+}
+#typev MPCID_c2047 65 "%0%!FUNC!::<%10!s!> : QMIType %11!d!, SvcType %12!d!, CID %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQBI_SendQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQMI->uQBICmdType, ItemLong -- 11
+pQMI->uQBISvcType, ItemLong -- 12
+pQMI->uQBICID, ItemLong -- 13
+}
+#typev MPCID_c2044 64 "%0%!FUNC!::<%10!s!> : QMIType %11!d!, SvcType %12!d!, CID %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_SendQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQMI->uQBICmdType, ItemLong -- 11
+pQMI->uQBISvcType, ItemLong -- 12
+pQMI->uQBICID, ItemLong -- 13
+}
+#typev MPCID_c2038 63 "%0%!FUNC!::<%10!s!> : QMIType %11!d!, SvcType %12!d!, CID %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_SendQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+pQMI->uQBICmdType, ItemLong -- 11
+pQMI->uQBISvcType, ItemLong -- 12
+pQMI->uQBICID, ItemLong -- 13
+}
+#typev MPCID_c2033 62 "%0%!FUNC!::<%10!s!> : pQMI is NULL!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_SendQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c2029 61 "%0%!FUNC!::<%10!s!> 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQBI_SendQBIRequest
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pQMI, ItemLong -- 11
+}
+#typev MPCID_c445 16 "%0%!FUNC!::..Invalid UUID or Context Type " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQBI_UuidToWwanContextType
+{
+}
+#typev MPCID_c15287 685 "%0%!FUNC!::pNdisWwanDevInd memory allocation failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPWORK_DeviceLogAvailableEvent
+{
+}
+#typev MPCID_c15306 686 "%0%!FUNC!::pTempResp is NULL " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPWORK_DeviceLogAvailableEvent
+{
+}
+#typev MPCID_c15320 688 "%0%!FUNC!::Sending NDIS_STATUS_WWAN_DEVICE_SERVICE_EVENT on portnumber : 0 " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPWORK_DeviceLogAvailableEvent
+{
+}
+#typev MPCID_c15309 687 "%0%!FUNC!::Sending  device log error type: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPWORK_DeviceLogAvailableEvent
+{
+pTempResp->log_error_type, ItemLong -- 10
+}
+#typev MPCID_c3385 103 "%0%!FUNC!::<%10!s!> : status 0x%11!x! and QbiCID: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=OIDToCID
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+QbiCID, ItemLong -- 12
+}
+#typev MPCID_c3374 102 "%0%!FUNC!::<%10!s!> : Memory Allocation Failed for pQMIElement 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=OIDToCID
+{
+pAdapter->PortName, ItemString -- 10
+(UINT)pQMIElement, ItemLong -- 11
+}
+#typev MPCID_c2781 101 "%0%!FUNC!::<%10!s!> ..MSSR triggered...returing with ERROR!!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=OIDToCID
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c2774 100 "%0%!FUNC!::<%10!s!> : Oid %11!s!(0x%12!x!), pOid 0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=OIDToCID
+{
+pAdapter->PortName, ItemString -- 10
+MPOidToNameStr(pOid->Oid), ItemString -- 11
+pOid->Oid, ItemLong -- 12
+(UINT)pOid, ItemLong -- 13
+}
+#typev MPCID_c2771 99 "%0%!FUNC!::<%10!s!> : Oid %11!s!(0x%12!x!), pOid 0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=OIDToCID
+{
+pAdapter->PortName, ItemString -- 10
+MPOidToNameStr(pOid->Oid), ItemString -- 11
+pOid->Oid, ItemLong -- 12
+(UINT)pOid, ItemLong -- 13
+}
+#typev MPCID_c11420 540 "%0%!FUNC!::<%10!s!> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=ProcessMultipleCID
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c11383 538 "%0%!FUNC!::<%10!s!> ..This element (0x%11!08x!) is already processed..Ignore it!!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessMultipleCID
+{
+pAdapter->PortName, ItemString -- 10
+(INT)currQMIElement, ItemLong -- 11
+}
+#typev MPCID_c11401 539 "%0%!FUNC!::<%10!s!> <--ProcessOidRequest: MPQCCI_SendQMIRequest failed, OID back to free" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ProcessMultipleCID
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPCID_c330 14 "%0%!FUNC!::-->Unsupported/unknown device service ID %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=QBIBuildCmdRequest
+{
+pQMI->uQBISvcType, ItemLong -- 10
+}
+#typev MPCID_c194 10 "%0%!FUNC!::-->..Invalid Buffer " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=QBISendCommand
+{
+}
+#typev MPCID_c224 13 "%0%!FUNC!::--> - msg msg_type:%10!d!, msg_len:%11!d!, Svc_type:%12!d!, cid:%13!d!, cmd_type: %14!s!, infobuf_len:%15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=QBISendCommand
+{
+req->hdr.msg_type, ItemLong -- 10
+req->hdr.msg_len, ItemLong -- 11
+pQBIElement->uQBISvcType, ItemLong -- 12
+req->cid, ItemLong -- 13
+(0 == req->cmd_type) ? L'QUERY' : L'SET', ItemWString -- 14
+req->infobuf_len, ItemLong -- 15
+}
+#typev MPCID_c220 12 "%0%!FUNC!::--> - msg msg_type:%10!d!, msg_len:%11!d!, Svc_type:%12!d!, cid:%13!d!, cmd_type: %14!s!, infobuf_len:%15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=QBISendCommand
+{
+req->hdr.msg_type, ItemLong -- 10
+req->hdr.msg_len, ItemLong -- 11
+pQBIElement->uQBISvcType, ItemLong -- 12
+req->cid, ItemLong -- 13
+(0 == req->cmd_type) ? L'QUERY' : L'SET', ItemWString -- 14
+req->infobuf_len, ItemLong -- 15
+}
+#typev MPCID_c204 11 "%0%!FUNC!::--> - could not create memory..FAILED" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=QBISendCommand
+{
+}

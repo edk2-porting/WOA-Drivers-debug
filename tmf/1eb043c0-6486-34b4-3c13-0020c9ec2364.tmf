@@ -1,0 +1,44 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+1eb043c0-6486-34b4-3c13-0020c9ec2364 src // SRC=dsResourceManager.c MJ= MN=
+#typev dsMain_c1141 10 "%0ResourceManager: Resource manager initialization completed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=dsMain_LoadPanelDriver
+{
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dsResourceManager_c1160 16 "%0ResourceMananger:  Display: %10!d! Allocated layer mixer: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=AllocateLayerMixers
+{
+psClient->eDisplayId, ItemLong -- 10
+pMixerResource->eLayerMixerId, ItemLong -- 11
+}
+#typev dsResourceManager_c1207 17 "%0ResourceMananger:  Display: %10!d! released layer mixer: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=ReleaseLayerMixers
+{
+psClient->eDisplayId, ItemLong -- 10
+pMixerResource->eLayerMixerId, ItemLong -- 11
+}
+#typev dsResourceManager_c226 11 "%0ResourceManager: Allocated client for display: %10!d! Remaining Clients: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=dsResourceManager_AllocateDisplay
+{
+eDisplayId, ItemLong -- 10
+psManager->uTotalDisplaysAvailable, ItemLong -- 11
+}
+#typev dsResourceManager_c410 13 "%0ResourceManager: Allocated bandwidth: %10!d! kHz for client of display: %11!d! total remaining bandwidth: %12!d! kHz" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=dsResourceManager_AllocateResources
+{
+(uint32)(uBandwidthRequested / 1000), ItemLong -- 10
+eDisplayId, ItemLong -- 11
+(uint32)(psManager->uTotalBandwidthAvailable / 1000), ItemLong -- 12
+}
+#typev dsResourceManager_c547 15 "%0ResourceManager: Display: %10!d! Available Bandwidth : %11!d! kHz" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=dsResourceManager_AvailableBandwidth
+{
+eDisplayID, ItemLong -- 10
+(uint32)(uBandwidth / 1000), ItemLong -- 11
+}
+#typev dsResourceManager_c296 12 "%0ResourceManager: Released resources and client for display: %10!d! remaining clients: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=dsResourceManager_ReleaseDisplay
+{
+eDisplayId, ItemLong -- 10
+psManager->uTotalDisplaysAvailable, ItemLong -- 11
+}
+#typev dsResourceManager_c479 14 "%0ResourceManager: Releasing the resources for display: %10!d! total remaining bandwidth: %11!d! kHz" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=dsResourceManager_ReleaseResources
+{
+eDisplayId, ItemLong -- 10
+(uint32)(psManager->uTotalBandwidthAvailable / 1000), ItemLong -- 11
+}

@@ -1,0 +1,76 @@
+// PDB:  qcslimbus7180.pdb
+// PDB:  Last Updated :2021-10-17:21:55:09:341 (UTC) [tracepdb]
+9fd095e9-2ac8-3d91-6b07-11608f1e8d7b kmdf // SRC=Queue.c MJ= MN=
+#typev Queue_c348 26 "%0[DevId: 0x%10!x!][Queue.c 348] %!FUNC!::%!FUNC!:--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBusEvtIoDeviceControl
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev Queue_c345 25 "%0[DevId: 0x%10!x!][Queue.c 345] %!FUNC!::%!FUNC!:completing the IO request with status 0x%11!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBusEvtIoDeviceControl
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev Queue_c338 24 "%0[DevId: 0x%10!x!][Queue.c 338] %!FUNC!::%!FUNC!:Aborting IOCTL due to surprise removal" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBusEvtIoDeviceControl
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev Queue_c304 21 "%0[DevId: 0x%10!x!][Queue.c 304] %!FUNC!::%!FUNC!:SlimBus_DeviceOpen failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusEvtIoDeviceControl
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev Queue_c300 20 "%0[DevId: 0x%10!x!][Queue.c 300] %!FUNC!::%!FUNC!:handling IOCTL_SLIMBUS_FORCE_ACTIVE" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBusEvtIoDeviceControl
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev Queue_c318 22 "%0[DevId: 0x%10!x!][Queue.c 318] %!FUNC!::%!FUNC!:handling IOCTL_SLIMBUS_ALLOW_IDLE" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBusEvtIoDeviceControl
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev Queue_c326 23 "%0[DevId: 0x%10!x!][Queue.c 326] %!FUNC!::%!FUNC!:unhandled IOCTL!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBusEvtIoDeviceControl
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev Queue_c276 19 "%0[DevId: 0x%10!x!][Queue.c 276] %!FUNC!::%!FUNC!:request came without calling WdfRequestTypeCreate" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBusEvtIoDeviceControl
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev Queue_c261 18 "%0%!FUNC! Queue 0x%10!p!, Request 0x%11!p! OutputBufferLength %12!d! InputBufferLength %13!d! IoControlCode 0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=SlimBusEvtIoDeviceControl
+{
+Queue, ItemPtr -- 10
+Request, ItemPtr -- 11
+(int) OutputBufferLength, ItemLong -- 12
+(int) InputBufferLength, ItemLong -- 13
+IoControlCode, ItemLong -- 14
+}
+#typev Queue_c260 17 "%0[DevId: 0x%10!x!][Queue.c 260] %!FUNC!::%!FUNC!++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBusEvtIoDeviceControl
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev Queue_c116 13 "%0[DevId: 0x%10!x!][Queue.c 116] %!FUNC!::%!FUNC!: request not cancelable during EvtIoStop: wdfrequest 0x%11!8p!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBusEvtIoStop
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+Request, ItemPtr -- 11
+}
+#typev Queue_c105 12 "%0[DevId: 0x%10!x!][Queue.c 105] %!FUNC!::%!FUNC! cannot cancel request during EvtIoStop since the request is likely being processed by the worker thread" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBusEvtIoStop
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev Queue_c100 11 "%0[DevId: 0x%10!x!][Queue.c 100] %!FUNC!::%!FUNC!: WdfRequestUnmarkCancelable failed with status 0x%11!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusEvtIoStop
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev Queue_c81 10 "%0[DevId: 0x%10!x!][Queue.c 81] %!FUNC!::%!FUNC!: ActionFlags=0x%11!08X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBusEvtIoStop
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+ActionFlags, ItemLong -- 11
+}
+#typev Queue_c213 16 "%0[DevId: 0x%10!x!][Queue.c 213] %!FUNC!::%!FUNC!:WdfIoQueueCreate failed 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusQueueInitialize
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev Queue_c204 15 "%0[DevId: 0x%10!x!][Queue.c 204] %!FUNC!::%!FUNC!: calling WdfIoQueueCreate" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBusQueueInitialize
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}

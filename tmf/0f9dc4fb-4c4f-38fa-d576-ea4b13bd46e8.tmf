@@ -1,0 +1,111 @@
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+0f9dc4fb-4c4f-38fa-d576-ea4b13bd46e8 latest // SRC=qcgpiointerrupt.c MJ= MN=
+#typev qcgpiointerrupt_c585 27 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_INTERRUPT FUNC=QcGpioClearActiveInterrupts
+{
+}
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qcgpiointerrupt_c529 26 "%0 [%!FUNC!] -->" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_INTERRUPT FUNC=QcGpioClearActiveInterrupts
+{
+}
+#typev qcgpiointerrupt_c286 18 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_INTERRUPT FUNC=QcGpioDisableInterrupt
+{
+}
+#typev qcgpiointerrupt_c277 17 "%0Error: [QcGpioDisableInterrupt] received an invalid Pin which is neither TLMM Pin or PDC Wake up capable GPIO Pin:%10!d!:%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_INTERRUPT FUNC=QcGpioDisableInterrupt
+{
+ActualPinNumber, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qcgpiointerrupt_c232 16 "%0Error: [QcGpioDisableInterrupt] received an invalid Pin:%10!d!:%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_INTERRUPT FUNC=QcGpioDisableInterrupt
+{
+ActualPinNumber, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev qcgpiointerrupt_c213 15 "%0 [%!FUNC!] -->" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_INTERRUPT FUNC=QcGpioDisableInterrupt
+{
+}
+#typev qcgpiointerrupt_c167 14 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_INTERRUPT FUNC=QcGpioEnableInterrupt
+{
+}
+#typev qcgpiointerrupt_c159 13 "%0Error: [QcGpioEnableInterrupt] received an invalid Pin which is neither TLMM Pin or PDC Wake up capable GPIO Pin:%10!d!:%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_INTERRUPT FUNC=QcGpioEnableInterrupt
+{
+ActualPinNumber, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev qcgpiointerrupt_c132 12 "%0Error: [QcGpioEnableInterrupt] Invalid PDC GPIO: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=QcGpioEnableInterrupt
+{
+ActualPinNumber, ItemLong -- 10
+}
+#typev qcgpiointerrupt_c106 11 "%0Error: [QcGpioEnableInterrupt] received an invalid Pin:%10!d!:%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_INTERRUPT FUNC=QcGpioEnableInterrupt
+{
+ActualPinNumber, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev qcgpiointerrupt_c86 10 "%0 [%!FUNC!] -->" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_INTERRUPT FUNC=QcGpioEnableInterrupt
+{
+}
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qcgpiointerrupt_c706 30 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_INTERRUPT FUNC=QcGpioMaskInterrupts
+{
+}
+#typev qcgpiointerrupt_c692 29 "%0Error: [QcGpioMaskInterrupts] received an invalid Pin which is neither TLMM Pin or PDC Wake up capable GPIO Pin:%10!d!:%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_INTERRUPT FUNC=QcGpioMaskInterrupts
+{
+ActualPinNumber, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev qcgpiointerrupt_c640 28 "%0 [%!FUNC!] -->" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_INTERRUPT FUNC=QcGpioMaskInterrupts
+{
+}
+#typev qcgpiointerrupt_c432 22 "%0Error: [QcGpioQueryActiveInterrupts] Invalid PDC GPIO: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=QcGpioQueryActiveInterrupts
+{
+ActualPinNumber, ItemLong -- 10
+}
+#typev qcgpiointerrupt_c459 24 "%0Info: [QcGpioQueryActiveInterrupts] ActualPinNumber:%10!u!, ActiveMask: %11!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION COMPNAME=TRACE_PDC_GPIO FUNC=QcGpioQueryActiveInterrupts
+{
+ActualPinNumber, ItemLong -- 10
+QueryActiveParameters->ActiveMask, ItemULongLong -- 11
+}
+#typev qcgpiointerrupt_c447 23 "%0Error: [QcGpioQueryActiveInterrupts] pdcGpioDisableInterrupt failed for GPIO Pin:%10!d!:%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_INTERRUPT FUNC=QcGpioQueryActiveInterrupts
+{
+ActualPinNumber, ItemLong -- 10
+((pdcStatus == PDC_SUCCESS)? STATUS_SUCCESS : STATUS_UNSUCCESSFUL), ItemNTSTATUS -- 11
+}
+#typev qcgpiointerrupt_c473 25 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_INTERRUPT FUNC=QcGpioQueryActiveInterrupts
+{
+}
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qcgpiointerrupt_c388 21 "%0Error: [QcGpioQueryActiveInterrupts] pdcGpioDisableInterrupt failed for GPIO Pin:%10!d!:%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_INTERRUPT FUNC=QcGpioQueryActiveInterrupts
+{
+ActualPinNumber, ItemLong -- 10
+((pdcStatus == PDC_SUCCESS)? STATUS_SUCCESS : STATUS_UNSUCCESSFUL), ItemNTSTATUS -- 11
+}
+#typev qcgpiointerrupt_c366 20 "%0Info: [QcGpioQueryActiveInterrupts] BankID:%10!u!, EnabledMask: %11!I64u!" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_INTERRUPT FUNC=QcGpioQueryActiveInterrupts
+{
+QueryActiveParameters->BankId, ItemLong -- 10
+QueryActiveParameters->EnabledMask, ItemULongLong -- 11
+}
+#typev qcgpiointerrupt_c348 19 "%0 [%!FUNC!] -->" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_INTERRUPT FUNC=QcGpioQueryActiveInterrupts
+{
+}
+#typev qcgpiointerrupt_c852 34 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_INTERRUPT FUNC=QcGpioUnmaskInterrupt
+{
+}
+#typev qcgpiointerrupt_c845 33 "%0Error: [QcGpioUnmaskInterrupt] received an invalid Pin which is neither TLMM Pin or PDC Wake up capable GPIO Pin:%10!d!:%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_INTERRUPT FUNC=QcGpioUnmaskInterrupt
+{
+ActualPinNumber, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev qcgpiointerrupt_c813 32 "%0Error: [QcGpioUnmaskInterrupt] Invalid PDC GPIO: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=QcGpioUnmaskInterrupt
+{
+ActualPinNumber, ItemLong -- 10
+}
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qcgpiointerrupt_c763 31 "%0 [%!FUNC!] -->" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_INTERRUPT FUNC=QcGpioUnmaskInterrupt
+{
+}

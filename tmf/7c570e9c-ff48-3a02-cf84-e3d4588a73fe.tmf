@@ -1,0 +1,77 @@
+// PDB:  qcccidbridge7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:30:818 (UTC) [tracepdb]
+7c570e9c-ff48-3a02-cf84-e3d4588a73fe CCID // SRC=CcidBrgCmdHandler.c MJ= MN=
+#typev CcidBrgCmdHandler_c189 13 "%0%!FUNC!::E:Invalid Request/Response Buffer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgCmdHandler
+{
+}
+// PDB:  qcccidbridge7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:30:818 (UTC) [tracepdb]
+#typev CcidBrgCmdHandler_c239 15 "%0%!FUNC!::W:Command 0x%10!02x! not supported" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgCmdHandler
+{
+pCmdHdr->MessageType, ItemLong -- 10
+}
+#typev CcidBrgCmdHandler_c202 14 "%0%!FUNC!::E:Slot %10!d! not supported" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgCmdHandler
+{
+pCmdHdr->Slot, ItemLong -- 10
+}
+#typev CcidBrgCmdHandler_c196 11 "%0%!FUNC!::I:Processing Command: %10!s! (0x%11!02x!), Length: %12!d!, Slot: %13!d!, SeqNum: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgCmdHandler
+{
+pCmd->MessageType, ItemEnum(_CCID_BRG_COMMAND_TYPE) -- 10
+pCmd->MessageType, ItemLong -- 11
+pCmd->Length, ItemLong -- 12
+pCmd->Slot, ItemLong -- 13
+pCmd->SeqNum, ItemLong -- 14
+}
+#typev CcidBrgCmdHandler_c134 10 "%0%!FUNC!::E:Invalid Command" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgGetResponseMsgType
+{
+}
+// PDB:  qcccidbridge7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:30:818 (UTC) [tracepdb]
+#typev CcidBrgCmdHandler_c289 17 "%0%!FUNC!::I:XferBlock::C: BlockWaitTime: 0x%10!02x!, LevelParameter: 0x%11!04x!, APDU: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgHandleXfrBlockCmd
+{
+pCmd->BlockWaitTime, ItemLong -- 10
+pCmd->LevelParameter, ItemLong -- 11
+CCID_LOG_XSTR(pCmd->DataBuffer. pCmd->Header.Length), ItemHEXDump -- 12
+}
+#typev CcidBrgCmdHandler_c268 16 "%0%!FUNC!::I:Datablock::R: Databuffer: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgPrepareDataBlock
+{
+CCID_LOG_XSTR(pRspBuf->Data. (UINT32)pRspBuf->Size), ItemHEXDump -- 10
+}
+#typev CcidBrgCmdHandler_c157 12 "%0%!FUNC!::I:Sending Response: %10!s! (0x%11!02x!), Length: %12!d!, Slot: %13!d!, SeqNum: %14!d!, Status: %15!d!, Error: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgPrintRspHdr
+{
+pRsp->BulkXferHdr.MessageType, ItemEnum(_CCID_BRG_RESPONSE_TYPE) -- 10
+pRsp->BulkXferHdr.MessageType, ItemLong -- 11
+pRsp->BulkXferHdr.Length, ItemLong -- 12
+pRsp->BulkXferHdr.Slot, ItemLong -- 13
+pRsp->BulkXferHdr.SeqNum, ItemLong -- 14
+pRsp->Status, ItemLong -- 15
+pRsp->Error, ItemLong -- 16
+}
+#typev CcidBrgCmdHandler_c353 18 "%0%!FUNC!::I:Sending default response." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgSendDefaultResponse
+{
+}
+#enumv _CCID_BRG_COMMAND_TYPE
+{
+CCID_BRG_COMMAND_TYPE_SET_PARAMETERS,0x61
+CCID_BRG_COMMAND_TYPE_ICC_POWER_ON,0x62
+CCID_BRG_COMMAND_TYPE_ICC_POWER_OFF,0x63
+CCID_BRG_COMMAND_TYPE_GET_SLOT_STATUS,0x65
+CCID_BRG_COMMAND_TYPE_SECURE,0x69
+CCID_BRG_COMMAND_TYPE_T0_APDU,0x6A
+CCID_BRG_COMMAND_TYPE_ESCAPE,0x6B
+CCID_BRG_COMMAND_TYPE_GET_PARAMETERS,0x6C
+CCID_BRG_COMMAND_TYPE_RESET_PARAMETERS,0x6D
+CCID_BRG_COMMAND_TYPE_ICC_CLOCK,0x6E
+CCID_BRG_COMMAND_TYPE_XFR_BLOCK,0x6F
+CCID_BRG_COMMAND_TYPE_MECHANICAL,0x71
+CCID_BRG_COMMAND_TYPE_ABORT,0x72
+CCID_BRG_COMMAND_TYPE_SET_DATA_RATE_AND_CLOCK_FREQUENCY,0x73
+}
+#enumv _CCID_BRG_RESPONSE_TYPE
+{
+CCID_BRG_RESPONSE_TYPE_DATA_BLOCK,0x80
+CCID_BRG_RESPONSE_TYPE_SLOT_STATUS,0x81
+CCID_BRG_RESPONSE_TYPE_PARAMETERS,0x82
+CCID_BRG_RESPONSE_TYPE_ESCAPE,0x83
+CCID_BRG_RESPONSE_TYPE_DATA_RATE_AND_CLOCK_FREQUENCY,0x84
+}

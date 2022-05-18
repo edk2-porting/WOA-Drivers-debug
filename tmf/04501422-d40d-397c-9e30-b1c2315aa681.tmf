@@ -1,0 +1,579 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+04501422-d40d-397c-9e30-b1c2315aa681 src // SRC=dp_dpcd.c MJ= MN=
+#typev dp_dpcd_c381 10 "%0DP%10!d!: DPCD_REV 0x%11!x! unsupported, snapping to the closest version." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ParseSinkDPCDCap
+{
+eDisplayID, ItemLong -- 10
+psDPCDCapRawData->uDPCDRevision, ItemLong -- 11
+}
+#typev dp_dpcd_c3887 75 "%0DP%10!d!: DP_ReadDeviceOUI() : DP_Host_AuxRead Failed, eStatus=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadDeviceOUI
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_dpcd_c4086 78 "%0DP%10!d!: 702h (EDP Backlight Adjustment Cap) - Raw: 0x%11!x!,                            Pin level set: 0x%12!x!, Aux level set: 0x%13!x!, Level bit depth: 0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkBrightnessCap
+{
+eDisplayId, ItemLong -- 10
+pRawData[1], ItemLong -- 11
+DPHOST_GETFLAG(pRawData[1]. DP_BACKLIGHT_CAP_BRIGHTNESS_PWM_PIN), ItemLong -- 12
+DPHOST_GETFLAG(pRawData[1]. DP_BACKLIGHT_CAP_BRIGHTNESS_AUX_SET), ItemLong -- 13
+DPHOST_GETFLAG(pRawData[1]. DP_BACKLIGHT_CAP_BRIGHTNESS_BYTE_COUNT), ItemLong -- 14
+}
+#typev dp_dpcd_c4086 77 "%0DP%10!d!: 701h (EDP General Cap) - Raw: 0x%11!x!,                            Brightness Adjust: 0x%12!x!, Pin enable: 0x%13!x!, Aux enable: 0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkBrightnessCap
+{
+eDisplayId, ItemLong -- 10
+pRawData[0], ItemLong -- 11
+DPHOST_GETFLAG(pRawData[0]. DP_GENERAL_CAP_TCON_BACKLIGHT_ADJUST), ItemLong -- 12
+DPHOST_GETFLAG(pRawData[0]. DP_GENERAL_CAP_BACKLIGHT_PIN_ENABLE), ItemLong -- 13
+DPHOST_GETFLAG(pRawData[0]. DP_GENERAL_CAP_BACKLIGHT_AUX_ENABLE), ItemLong -- 14
+}
+#typev dp_dpcd_c3785 73 "%0DP%10!d!: Sink CRC status (240h-245h): 0x%11!x!%12!x!,0x%13!x!%14!x!,0x%15!x!%16!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkCRC
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+uRawData[1], ItemLong -- 11
+uRawData[0], ItemLong -- 12
+uRawData[3], ItemLong -- 13
+uRawData[2], ItemLong -- 14
+uRawData[5], ItemLong -- 15
+uRawData[4], ItemLong -- 16
+}
+#typev dp_dpcd_c3778 72 "%0DP%10!d!: Read @ 0x%11!x! Failed: Bytes Read(0x%12!x!) is not expected." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkCRC
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+DPCD_PSR_CRC_START_ADDRESS, ItemLong -- 11
+sReadPacket.uBytesRead, ItemLong -- 12
+}
+#typev dp_dpcd_c3770 71 "%0DP%10!d!: Read @ 0x%11!x! Failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkCRC
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+DPCD_PSR_CRC_START_ADDRESS, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c1221 14 "%0DP%10!d!: DFP%11!d! - Port Type %12!d!, Max BPC %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkDFPCap
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+uDFPIndex, ItemLong -- 11
+pDeviceCtx->sSinkDPCDCap.sDFPCap.sDFPDetail[uDFPIndex].eDFPType, ItemLong -- 12
+pDeviceCtx->sSinkDPCDCap.sDFPCap.sDFPDetail[uDFPIndex].uMaxBpc, ItemLong -- 13
+}
+#typev dp_dpcd_c1483 15 "%0DP%10!d!: DPCD Caps - ver 1.%11!d!, max lanes: %12!d!, max rate: %13!d!Mhz, ClkRecovery interval: %14!d!us, ChanEq interval: %15!d!us, MST capable: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkDPCDCap
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+psDPCDSinkCap->eDPCDMajorRev-1, ItemLong -- 11
+psDPCDSinkCap->uMaxLaneCount, ItemLong -- 12
+psDPCDSinkCap->uMaxLinkRateInKhz/1000, ItemLong -- 13
+psDPCDSinkCap->uCRTrainingIntervalInUs, ItemLong -- 14
+psDPCDSinkCap->uCETrainingIntervalInUs, ItemLong -- 15
+psDPCDSinkCap->bMSTCapable, ItemLong -- 16
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_dpcd_c1613 21 "%0DP%10!d!: LTTPR%11!d!: lane status (ex:F0030h-F0034h):0x%12!x!,0x%13!x!,0x%14!x!,0x%15!x!,0x%16!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkDPCDStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eLTTPRRepeaterID, ItemLong -- 11
+sDPCDLTTPRStatusRawData.uLaneStatus0_1, ItemLong -- 12
+sDPCDLTTPRStatusRawData.uLaneStatus2_3, ItemLong -- 13
+sDPCDLTTPRStatusRawData.uLaneAlignStatusUpdated, ItemLong -- 14
+sDPCDLTTPRStatusRawData.uAdjustRequestLane0_1, ItemLong -- 15
+sDPCDLTTPRStatusRawData.uAdjustRequestLane2_3, ItemLong -- 16
+}
+#typev dp_dpcd_c1600 20 "%0DP%10!d!: Read address:0x%11!x! failed: Bytes Read(0x%12!x!) is not expected." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkDPCDStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+sReadPacket.uBytesRead, ItemLong -- 12
+}
+#typev dp_dpcd_c1592 19 "%0DP%10!d!: Read address:0x%11!x! failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkDPCDStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c1564 18 "%0DP%10!d!: Sink lane status (202h-207h):0x%11!x!,0x%12!x!,0x%13!x!,0x%14!x!,0x%15!x!,0x%16!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkDPCDStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+sDPCDSinkStatusRawData.uLaneStatus0_1, ItemLong -- 11
+sDPCDSinkStatusRawData.uLaneStatus2_3, ItemLong -- 12
+sDPCDSinkStatusRawData.uLaneAlignStatusUpdated, ItemLong -- 13
+sDPCDSinkStatusRawData.uSinkStatus, ItemLong -- 14
+sDPCDSinkStatusRawData.uAdjustRequestLane0_1, ItemLong -- 15
+sDPCDSinkStatusRawData.uAdjustRequestLane2_3, ItemLong -- 16
+}
+#typev dp_dpcd_c1548 17 "%0DP%10!d!: Read address:0x%11!x! failed: Bytes Read(0x%12!x!) is not expected." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkDPCDStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+DPCD_LINK_STATUS_START_ADDRESS, ItemLong -- 11
+sReadPacket.uBytesRead, ItemLong -- 12
+}
+#typev dp_dpcd_c1540 16 "%0DP%10!d!: Read address:0x%11!x! failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkDPCDStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+DPCD_LINK_STATUS_START_ADDRESS, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c3075 59 "%0DP%10!d!: DSC caps 3: silce_supported %11!d!, max_slice_width: %12!d!, max_bpp: %13!d! bpp_increment: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkDSCCap
+{
+eDisplayID, ItemLong -- 10
+pSinkDSCCap->uSliceSupported, ItemLong -- 11
+pSinkDSCCap->uMaxSliceWidth, ItemLong -- 12
+pSinkDSCCap->uMaxBitsPerPixel, ItemLong -- 13
+pSinkDSCCap->uBitsPerPixelIncrement, ItemLong -- 14
+}
+#typev dp_dpcd_c3075 58 "%0DP%10!d!: DSC caps 2: color_format %11!d!, color_depth: %12!d!, peak_throughput_0: %13!d!, peak_throughput_1: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkDSCCap
+{
+eDisplayID, ItemLong -- 10
+pSinkDSCCap->uColorFormatCap, ItemLong -- 11
+pSinkDSCCap->uColorDepthCap, ItemLong -- 12
+pSinkDSCCap->uPeakThroughputMode0, ItemLong -- 13
+pSinkDSCCap->uPeakThroughputMode1, ItemLong -- 14
+}
+#typev dp_dpcd_c3075 57 "%0DP%10!d!: DSC caps 1:  supported %11!d!, version: %12!d!.%13!d!, blk_size: %14!d! buf_depth: %15!d! block_prediction: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkDSCCap
+{
+eDisplayID, ItemLong -- 10
+pSinkDSCCap->bSupported, ItemLong -- 11
+pSinkDSCCap->uMajor, ItemLong -- 12
+pSinkDSCCap->uMinor, ItemLong -- 13
+pSinkDSCCap->uRCBufferSize, ItemLong -- 14
+pSinkDSCCap->uLineBufBitDepth, ItemLong -- 15
+pSinkDSCCap->bBlockPrediction, ItemLong -- 16
+}
+#typev dp_dpcd_c3067 60 "%0DP%10!d!: DSC caps raw data [0x%11!x! %12!x! %13!x! %14!x! %15!x! %16!x! %17!x! %18!x! %19!x! %20!x! %21!x! %22!x! %23!x! %24!x! %25!x! %26!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkDSCCap
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uRawData[0], ItemLong -- 11
+uRawData[1], ItemLong -- 12
+uRawData[2], ItemLong -- 13
+uRawData[3], ItemLong -- 14
+uRawData[4], ItemLong -- 15
+uRawData[5], ItemLong -- 16
+uRawData[6], ItemLong -- 17
+uRawData[7], ItemLong -- 18
+uRawData[8], ItemLong -- 19
+uRawData[9], ItemLong -- 20
+uRawData[10], ItemLong -- 21
+uRawData[11], ItemLong -- 22
+uRawData[12], ItemLong -- 23
+uRawData[13], ItemLong -- 24
+uRawData[14], ItemLong -- 25
+uRawData[15], ItemLong -- 26
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_dpcd_c904 12 "%0DP%10!d!: DPCD Exclusive Extended Caps (5 bytes from 2210h to 2214h): {0x%11!x!, 0x%12!x!, 0x%13!x!, 0x%14!x!, 0x%15!x!}" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkExclusiveExtendedCaps
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+uData[0], ItemLong -- 11
+uData[1], ItemLong -- 12
+uData[2], ItemLong -- 13
+uData[3], ItemLong -- 14
+uData[4], ItemLong -- 15
+}
+#typev dp_dpcd_c3375 64 "%0DP%10!d!: FEC caps: capable: %11!d!, uncorrected: %12!d!, corrected: %13!d!, bit_error: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkFECCap
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->sFECCaps.bCapable, ItemLong -- 11
+pStreamCtx->sFECCaps.bUncorrectedBlockErrorCountCapable, ItemLong -- 12
+pStreamCtx->sFECCaps.bCorrectedBlockErrorCountCapable, ItemLong -- 13
+pStreamCtx->sFECCaps.bBitErrorCountCapable, ItemLong -- 14
+}
+#typev dp_dpcd_c3370 63 "%0DP%10!d!: FEC caps raw_data [%11!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkFECCap
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uRawData[0], ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_dpcd_c3600 67 "%0DP%10!d!: Sink FEC ready status: ready=%11!d! [Raw Data:0x%12!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkFECEnable
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+uReadyStatus, ItemLong -- 11
+uRawData[0], ItemLong -- 12
+}
+#typev dp_dpcd_c3453 65 "%0DP%10!d!: Sink FEC status: decode_enable=%11!d!, decode_disable: %12!d! error_valid: %13!d! error_count: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkFECStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+(uRawData[0] & 0x1), ItemLong -- 11
+((uRawData[0] >> 1) & 0x1), ItemLong -- 12
+((uRawData[2] >> 7) & 0x1), ItemLong -- 13
+(((uRawData[2] & 0x7F) << 8 ) | uRawData[1]), ItemLong -- 14
+}
+#typev dp_dpcd_c4576 79 "%0DP%10!d!: LTTPR caps: version: %11!d!.%12!d!, count: %13!d!, max rate: %14!d!, max lanes: %15!d!, repeater mdoe: 0x%16!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkLTTPRCap
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+pDeviceCtx->sLTTPRCaps.uMajor, ItemLong -- 11
+pDeviceCtx->sLTTPRCaps.uMinor, ItemLong -- 12
+pDeviceCtx->sLTTPRCaps.uRepeaterCount, ItemLong -- 13
+pDeviceCtx->sLTTPRCaps.uMaxLinkRate, ItemLong -- 14
+pDeviceCtx->sLTTPRCaps.uMaxLaneCount, ItemLong -- 15
+pDeviceCtx->sLTTPRCaps.uRepeaterMode, ItemLong -- 16
+}
+#typev dp_dpcd_c4670 80 "%0DP%10!d!: LTTPR device identifier string: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkLTTPRRepeaterOUI
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+(char*)(pDeviceCtx->sLTTPRDeviceInfo.aDeviceString), ItemString -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_dpcd_c1002 13 "%0DP%10!d!: DPCD PSR caps: ver %11!d!, link_training_on_exit: %12!d!, setup_time: %13!d! Us" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkPSRCap
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+uPSRVersion, ItemLong -- 11
+pDeviceCtx->sSinkDPCDCap.sPSRCap.eLinkTrainingonExit, ItemLong -- 12
+pDeviceCtx->sSinkDPCDCap.sPSRCap.uSetupTimeUs, ItemLong -- 13
+}
+#typev dp_dpcd_c3715 70 "%0DP%10!d!: Sink PSR status (2006h-200Ah):0x%11!x!,0x%12!x!,0x%13!x!,0x%14!x!,0x%15!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkPSRStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+uRawData[0], ItemLong -- 11
+uRawData[1], ItemLong -- 12
+uRawData[2], ItemLong -- 13
+uRawData[3], ItemLong -- 14
+uRawData[4], ItemLong -- 15
+}
+#typev dp_dpcd_c3708 69 "%0DP%10!d!: Read @ 0x%11!x! Failed: Bytes Read(0x%12!x!) is not expected." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkPSRStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+DPCD_PSR_ERROR_START_ADDRESS, ItemLong -- 11
+sReadPacket.uBytesRead, ItemLong -- 12
+}
+#typev dp_dpcd_c3700 68 "%0DP%10!d!: Read @ 0x%11!x! Failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkPSRStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+DPCD_PSR_ERROR_START_ADDRESS, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c5195 83 "%0DP%10!d!: Remote DPCD Caps - ver 1.%11!d!, max lanes: %12!d!, max rate: %13!d!Mhz, ClkRecovery interval: %14!d!us, ChanEq interval: %15!d!us, MST capable: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkRemoteDPCDCap
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+psDPCDSinkCap->eDPCDMajorRev-1, ItemLong -- 11
+psDPCDSinkCap->uMaxLaneCount, ItemLong -- 12
+psDPCDSinkCap->uMaxLinkRateInKhz/1000, ItemLong -- 13
+psDPCDSinkCap->uCRTrainingIntervalInUs, ItemLong -- 14
+psDPCDSinkCap->uCETrainingIntervalInUs, ItemLong -- 15
+psDPCDSinkCap->bMSTCapable, ItemLong -- 16
+}
+#typev dp_dpcd_c2665 53 "%0DP%10!d!: Sink Status - branchDevice:%11!d!, portType:%12!d!, connectedSinks:%13!d!, uFlags:0x%14!x!, linkLost:%15!d!, sinkIRQVector:0x%16!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+(pDeviceCtx->sSinkDPCDCap.eDPCDCap & DP_DPCD_CAP_DWN_STRM_PORT_PRESENT) ? 1 : 0, ItemLong -- 11
+pDeviceCtx->sSinkDPCDCap.eDwnStreamPortType, ItemLong -- 12
+pDeviceCtx->uSinkCount, ItemLong -- 13
+pDeviceCtx->uFlags, ItemLong -- 14
+pDeviceCtx->bLinkLost, ItemLong -- 15
+pDeviceCtx->uDeviceServiceIRQVector, ItemLong -- 16
+}
+#typev dp_dpcd_c2645 52 "%0DP%10!d!: No Downstream Port changed and link has been setup" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dpcd_c2633 51 "%0DP%10!d!: IRQ HPD IN detected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dpcd_c2627 50 "%0DP%10!d!: Branch device HPD but no sink attached downstream" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dpcd_c2569 49 "%0DP%10!d!: DP_ReadSinkStatus: Read address(0x%11!x!) Failed, eStatus=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c845 11 "%0DP%10!d!: DPCD Supported link rates(DPCD 10h to 1Fh) = {0x%11!x!, 0x%12!x!, 0x%13!x!, 0x%14!x!, 0x%15!x!, 0x%16!x!, 0x%17!x!, 0x%18!x!}" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkSupportedRates
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+uData[0], ItemLong -- 11
+uData[1], ItemLong -- 12
+uData[2], ItemLong -- 13
+uData[3], ItemLong -- 14
+uData[4], ItemLong -- 15
+uData[5], ItemLong -- 16
+uData[6], ItemLong -- 17
+uData[7], ItemLong -- 18
+}
+#typev dp_dpcd_c2740 56 "%0DP%10!d!: Sink lane symbol status (210h-217h): Lane0:0x%11!x!, Lane1:0x%12!x!, Lane2:0x%13!x!, Lane3:0x%14!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceDP FUNC=DP_ReadSinkSymbolStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+sSymbolStatusRead.uErrorCountLane0, ItemLong -- 11
+sSymbolStatusRead.uErrorCountLane1, ItemLong -- 12
+sSymbolStatusRead.uErrorCountLane2, ItemLong -- 13
+sSymbolStatusRead.uErrorCountLane3, ItemLong -- 14
+}
+#typev dp_dpcd_c2729 55 "%0DP%10!d!: LTTPR%11!d!: lane symbol status (ex F0035h-F003Ch): Lane0:0x%12!x!, Lane1:0x%13!x!, Lane2:0x%14!x!, Lane3:0x%15!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceDP FUNC=DP_ReadSinkSymbolStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eLTTPRRepeaterID, ItemLong -- 11
+sSymbolStatusRead.uErrorCountLane0, ItemLong -- 12
+sSymbolStatusRead.uErrorCountLane1, ItemLong -- 13
+sSymbolStatusRead.uErrorCountLane2, ItemLong -- 14
+sSymbolStatusRead.uErrorCountLane3, ItemLong -- 15
+}
+#typev dp_dpcd_c2721 54 "%0DP%10!d!: Reading sink symbol status at address(0x%11!x!) Failed, eStatus=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkSymbolStatus
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c4927 81 "%0DP%10!d!: Test request timings caps raw data [0x%11!x! %12!x! %13!x! %14!x! %15!x! %16!x! %17!x! %18!x! %19!x! %20!x! %21!x! %22!x! %23!x! %24!x! %25!x! %26!x! %27!x! %28!x! %29!x!], eStatus = %30!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkTestTimingsRaw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDPCDSinkTestTimingsRawData->uTestHTotal0, ItemLong -- 11
+pDPCDSinkTestTimingsRawData->uTestHTotal1, ItemLong -- 12
+pDPCDSinkTestTimingsRawData->uTestVTotal0, ItemLong -- 13
+pDPCDSinkTestTimingsRawData->uTestVTotal1, ItemLong -- 14
+pDPCDSinkTestTimingsRawData->uTestHStart0, ItemLong -- 15
+pDPCDSinkTestTimingsRawData->uTestHStart1, ItemLong -- 16
+pDPCDSinkTestTimingsRawData->uTestVStart0, ItemLong -- 17
+pDPCDSinkTestTimingsRawData->uTestVStart1, ItemLong -- 18
+pDPCDSinkTestTimingsRawData->uTestHSync0, ItemLong -- 19
+pDPCDSinkTestTimingsRawData->uTestHSync1, ItemLong -- 20
+pDPCDSinkTestTimingsRawData->uTestVSync0, ItemLong -- 21
+pDPCDSinkTestTimingsRawData->uTestVSync1, ItemLong -- 22
+pDPCDSinkTestTimingsRawData->uTestHWidth0, ItemLong -- 23
+pDPCDSinkTestTimingsRawData->uTestHWidth1, ItemLong -- 24
+pDPCDSinkTestTimingsRawData->uTestVHeight0, ItemLong -- 25
+pDPCDSinkTestTimingsRawData->uTestVHeight1, ItemLong -- 26
+pDPCDSinkTestTimingsRawData->uTestMisc0, ItemLong -- 27
+pDPCDSinkTestTimingsRawData->uTestMisc1, ItemLong -- 28
+pDPCDSinkTestTimingsRawData->uTestRefreshRateNum, ItemLong -- 29
+eStatus, ItemLong -- 30
+}
+#typev dp_dpcd_c2160 29 "%0DP%10!d!: Test Link Settings Rate=%11!d! Lane#=%12!d! PreEmphasis=0x%13!x!  Swing=0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestLinkSetting
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->uLinkRateInKhz, ItemLong -- 11
+pDeviceCtx->uNumLanes, ItemLong -- 12
+pDeviceCtx->uPreEmphasisLevel, ItemLong -- 13
+pDeviceCtx->uVoltageSwingLevel, ItemLong -- 14
+}
+#typev dp_dpcd_c2151 28 "%0DP%10!d!: DP_ReadTestRequest: Read address:0x%11!x! Failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestLinkSetting
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c2133 27 "%0DP%10!d!: DP_ReadTestLinkSetting: Read address:0x%11!x! Failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestLinkSetting
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c2091 26 "%0DP%10!d!: DP_ReadTestRequest: Read address(0x%11!x!) Failed. eStatus=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestLinkSetting
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c2348 39 "%0DP%10!d!: DP_ReadTestRequest: DP_ParseSinkTestTimings failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dpcd_c2346 82 "%0DP%10!d!: DP_ParseSinkTestTimings: test timings %11!d!x%12!d! @ %13!d!Hz requested, HTotal = %14!d!, VTotal =%15!d!, HSync = %16!d!, VSync = %17!d!,                            Hpolarity = %18!d!, VPolarity =%19!d!, Hstart = %20!d!, VStart = %21!d!, valid = %22!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->sTestRequestInfo.sTestTimings.uHWidth, ItemLong -- 11
+pStreamCtx->sTestRequestInfo.sTestTimings.uVHeight, ItemLong -- 12
+pStreamCtx->sTestRequestInfo.sTestTimings.uRefreshRate, ItemLong -- 13
+pStreamCtx->sTestRequestInfo.sTestTimings.uHTotal, ItemLong -- 14
+pStreamCtx->sTestRequestInfo.sTestTimings.uVTotal, ItemLong -- 15
+pStreamCtx->sTestRequestInfo.sTestTimings.uHSync, ItemLong -- 16
+pStreamCtx->sTestRequestInfo.sTestTimings.uVSync, ItemLong -- 17
+pStreamCtx->sTestRequestInfo.sTestTimings.bHSyncPolarity, ItemLong -- 18
+pStreamCtx->sTestRequestInfo.sTestTimings.bVSyncPolarity, ItemLong -- 19
+pStreamCtx->sTestRequestInfo.sTestTimings.uHStart, ItemLong -- 20
+pStreamCtx->sTestRequestInfo.sTestTimings.uVStart, ItemLong -- 21
+pStreamCtx->sTestRequestInfo.sTestTimings.bIsValid, ItemLong -- 22
+}
+#typev dp_dpcd_c2344 38 "%0DP%10!d!: DP_ReadTestRequest: DP_ReadSinkTestTimingsRaw failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dpcd_c2331 37 "%0DP%10!d!: DP_ReadTestRequest: test patttern %11!d! requested, Raw data = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->sTestRequestInfo.eTestPatternId, ItemLong -- 11
+uRegValue, ItemLong -- 12
+}
+#typev dp_dpcd_c2304 36 "%0DP%10!d!: DP_ReadTestRequest: %11!d! bpp bit depth format change requested, Raw data = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->uBitDepth, ItemLong -- 11
+uRegValue, ItemLong -- 12
+}
+#typev dp_dpcd_c2395 42 "%0DP%10!d!: Test Request (Phy Pattern) = 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->ePhyTestPattern, ItemLong -- 11
+}
+#typev dp_dpcd_c2390 41 "%0DP%10!d!: DP_ReadTestRequest: DP_ReadTestLinkSetting Failed, eStatus=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_dpcd_c2385 40 "%0DP%10!d!: DP_ReadTestRequest: Read address(0x%11!x!) Failed, eStatus=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c2402 43 "%0DP%10!d!: Test Request = 0x%11!x! not handled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->ePendingTestRequest, ItemLong -- 11
+}
+#typev dp_dpcd_c2242 35 "%0DP%10!d!: Test Request = 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->ePendingTestRequest, ItemLong -- 11
+}
+#typev dp_dpcd_c2237 34 "%0DP%10!d!: DP_ReadTestRequest: Read address(0x%11!x!) Failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c2228 33 "%0DP%10!d!: Test IRQ detected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dpcd_c2221 32 "%0DP%10!d!: DP_ReadTestRequest: Read address(0x%11!x!) Failed, eStatus=0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+sReadPacket.uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c2202 31 "%0DP%10!d!: Sink is plugged out" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dpcd_c2198 30 "%0DP%10!d!: DP_ReadTestRequest: DP_ReadSinkStatus failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadTestRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dpcd_c4024 76 "%0DP%10!d!: DP_WriteDeviceOUI() : DP_Host_AuxWrite Failed, eStatus=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_WriteDeviceOUI
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_dpcd_c1982 23 "%0DP%10!d!: SSC Enabled, eStatus= 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_WriteSinkDPCDDownSpreadEnabled
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_dpcd_c1755 22 "%0DP%10!d!: DP_WriteSinkDPCDLink Setting Link Rate=%11!d!, Lane Number=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_WriteSinkDPCDLink
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->uLinkRateInKhz, ItemLong -- 11
+pDeviceCtx->uNumLanes, ItemLong -- 12
+}
+#typev dp_dpcd_c2042 25 "%0DP%10!d!: Set Sink Power - state:%11!d!, status:0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_WriteSinkDPCDPower
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+ePowerState, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c2030 24 "%0DP%10!d!: Set Tunneled Sink Power - state:%11!d!, status:0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_WriteSinkDPCDPower
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+ePowerState, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dpcd_c3517 66 "%0DP%10!d!: Failed to configure FEC on sink. Status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_WriteSinkFECConfig
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_dpcd_c2525 48 "%0DP%10!d!: DP_WriteTestResponse: Aux write to DEVICE_SERVICE_IRQ_VECTOR failed, eStatus=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_WriteTestResponse
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_dpcd_c2506 47 "%0DP%10!d!: DP_WriteTestResponse: Aux write to TEST_RESPONSE failed, eStatus=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_WriteTestResponse
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_dpcd_c2484 46 "%0DP%10!d!: DP_WriteTestResponse: Aux write to TEST_EDID_CHECKSUM failed, eStatus=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_WriteTestResponse
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_dpcd_c2471 45 "%0DP%10!d!: DP_WriteTestResponse: Aux write to TEST_EDID_CHECKSUM_WRITE failed, eStatus=0x%11!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_WriteTestResponse
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_dpcd_c2450 44 "%0DP%10!d!: DP_WriteTestResponse: Test response for test request = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_WriteTestResponse
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->ePendingTestRequest, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c2428 74 "%0DP%10!d!: DP_WriteGUID() : DP_Host_AuxWrite Failed, eStatus=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_UpdateTargetGUID
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_c905 59 "%0DP%10!d!: DSC caps 3: silce_supported %11!d!, max_slice_width: %12!d!, max_bpp: %13!d! bpp_increment: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ReadDSCCaps
+{
+eDisplayID, ItemLong -- 10
+pSinkDSCCap->uSliceSupported, ItemLong -- 11
+pSinkDSCCap->uMaxSliceWidth, ItemLong -- 12
+pSinkDSCCap->uMaxBitsPerPixel, ItemLong -- 13
+pSinkDSCCap->uBitsPerPixelIncrement, ItemLong -- 14
+}
+#typev dp_mst_c905 58 "%0DP%10!d!: DSC caps 2: color_format %11!d!, color_depth: %12!d!, peak_throughput_0: %13!d!, peak_throughput_1: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ReadDSCCaps
+{
+eDisplayID, ItemLong -- 10
+pSinkDSCCap->uColorFormatCap, ItemLong -- 11
+pSinkDSCCap->uColorDepthCap, ItemLong -- 12
+pSinkDSCCap->uPeakThroughputMode0, ItemLong -- 13
+pSinkDSCCap->uPeakThroughputMode1, ItemLong -- 14
+}
+#typev dp_mst_c905 57 "%0DP%10!d!: DSC caps 1:  supported %11!d!, version: %12!d!.%13!d!, blk_size: %14!d! buf_depth: %15!d! block_prediction: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ReadDSCCaps
+{
+eDisplayID, ItemLong -- 10
+pSinkDSCCap->bSupported, ItemLong -- 11
+pSinkDSCCap->uMajor, ItemLong -- 12
+pSinkDSCCap->uMinor, ItemLong -- 13
+pSinkDSCCap->uRCBufferSize, ItemLong -- 14
+pSinkDSCCap->uLineBufBitDepth, ItemLong -- 15
+pSinkDSCCap->bBlockPrediction, ItemLong -- 16
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_c888 59 "%0DP%10!d!: DSC caps 3: silce_supported %11!d!, max_slice_width: %12!d!, max_bpp: %13!d! bpp_increment: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ReadDSCCaps
+{
+eDisplayID, ItemLong -- 10
+pSinkDSCCap->uSliceSupported, ItemLong -- 11
+pSinkDSCCap->uMaxSliceWidth, ItemLong -- 12
+pSinkDSCCap->uMaxBitsPerPixel, ItemLong -- 13
+pSinkDSCCap->uBitsPerPixelIncrement, ItemLong -- 14
+}
+#typev dp_mst_c888 58 "%0DP%10!d!: DSC caps 2: color_format %11!d!, color_depth: %12!d!, peak_throughput_0: %13!d!, peak_throughput_1: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ReadDSCCaps
+{
+eDisplayID, ItemLong -- 10
+pSinkDSCCap->uColorFormatCap, ItemLong -- 11
+pSinkDSCCap->uColorDepthCap, ItemLong -- 12
+pSinkDSCCap->uPeakThroughputMode0, ItemLong -- 13
+pSinkDSCCap->uPeakThroughputMode1, ItemLong -- 14
+}
+#typev dp_mst_c888 57 "%0DP%10!d!: DSC caps 1:  supported %11!d!, version: %12!d!.%13!d!, blk_size: %14!d! buf_depth: %15!d! block_prediction: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ReadDSCCaps
+{
+eDisplayID, ItemLong -- 10
+pSinkDSCCap->bSupported, ItemLong -- 11
+pSinkDSCCap->uMajor, ItemLong -- 12
+pSinkDSCCap->uMinor, ItemLong -- 13
+pSinkDSCCap->uRCBufferSize, ItemLong -- 14
+pSinkDSCCap->uLineBufBitDepth, ItemLong -- 15
+pSinkDSCCap->bBlockPrediction, ItemLong -- 16
+}

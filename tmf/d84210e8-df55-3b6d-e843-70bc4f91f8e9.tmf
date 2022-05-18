@@ -1,0 +1,102 @@
+// PDB:  qcspi7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:30:958 (UTC) [tracepdb]
+d84210e8-df55-3b6d-e843-70bc4f91f8e9 10.7 // SRC=qcWdfSpiGpi.c MJ= MN=
+#typev qcWdfSpiGpi_c305 28 "%0--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnEvtProgramDma
+{
+}
+#typev qcWdfSpiGpi_c250 27 "%0++: Transaction 0x%10!p!, Device 0x%11!p!, Context 0x%12!p!, Direction %13!d!, SgList %14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnEvtProgramDma
+{
+Transaction, ItemPtr -- 10
+Device, ItemPtr -- 11
+Context, ItemPtr -- 12
+Direction, ItemLong -- 13
+SgList, ItemPtr -- 14
+}
+#typev qcWdfSpiGpi_c410 35 "%0WdfDmaTransactionExecute (ReadTransaction) failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiBuildDmaTransactions
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpiGpi_c401 34 "%0WdfDmaTransactionInitialize (ReadTransaction) failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiBuildDmaTransactions
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpiGpi_c429 36 "%0-- %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=PbcGpiBuildDmaTransactions
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpiGpi_c386 33 "%0WdfDmaTransactionCreate (ReadTransaction) failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiBuildDmaTransactions
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpiGpi_c360 32 "%0WdfDmaTransactionExecute (WriteTranscation) failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiBuildDmaTransactions
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpiGpi_c350 31 "%0WdfDmaTransactionInitialize (WriteTranscation) failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiBuildDmaTransactions
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpiGpi_c335 30 "%0WdfDmaTransactionCreate (WriteTranscation) failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiBuildDmaTransactions
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpiGpi_c320 29 "%0++ %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=PbcGpiBuildDmaTransactions
+{
+Device, ItemPtr -- 10
+}
+#typev qcWdfSpiGpi_c46 12 "%0--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=PbcGpiGetDmaEnabler
+{
+}
+#typev qcWdfSpiGpi_c41 11 "%0WdfDmaEnablerCreate (DmaEnabler) failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiGetDmaEnabler
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpiGpi_c18 10 "%0++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=PbcGpiGetDmaEnabler
+{
+}
+#typev qcWdfSpiGpi_c75 15 "%0--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=PbcGpiIOGetInterface
+{
+}
+#typev qcWdfSpiGpi_c71 14 "%0WdfIoTargetQueryForInterface failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiIOGetInterface
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpiGpi_c59 13 "%0++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=PbcGpiIOGetInterface
+{
+}
+#typev qcWdfSpiGpi_c233 26 "%0--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=PbcGpiInterfaceClose
+{
+}
+#typev qcWdfSpiGpi_c228 25 "%0++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=PbcGpiInterfaceClose
+{
+}
+#typev qcWdfSpiGpi_c219 24 "%0--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=PbcGpiInterfaceInit
+{
+}
+#typev qcWdfSpiGpi_c195 23 "%0Failed to obtain GPI interfaces %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiInterfaceInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpiGpi_c187 22 "%0++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=PbcGpiInterfaceInit
+{
+}
+#typev qcWdfSpiGpi_c172 21 "%0--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=PbcGpiInterfaceOpen
+{
+}
+#typev qcWdfSpiGpi_c155 20 "%0Failed to create GSI spinlock %10!p! - %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiInterfaceOpen
+{
+pDevice, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev qcWdfSpiGpi_c126 19 "%0Gsi WdfIoTargetOpen failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiInterfaceOpen
+{
+}
+#typev qcWdfSpiGpi_c110 18 "%0Gpi WdfIoTargetCreate failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiInterfaceOpen
+{
+}
+#typev qcWdfSpiGpi_c95 17 "%0pDevice->Gpi.GpiInitialized == TRUE" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=PbcGpiInterfaceOpen
+{
+}
+#typev qcWdfSpiGpi_c91 16 "%0++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=PbcGpiInterfaceOpen
+{
+}

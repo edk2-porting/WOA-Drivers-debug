@@ -1,0 +1,49 @@
+// PDB:  qcdiagrouter7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:26:048 (UTC) [tracepdb]
+9c3ad4c2-c7d1-3743-27a7-d3fbda48b30b QCDiagRouter // SRC=DiagRouterUtils.c MJ= MN=
+#typev DiagRouterUtils_c217 20 "%0%!FUNC!:WdfMemoryCreate(Temp HDLC Enc) failed with status 0x%10!08X! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Utils FUNC=DiagRouterCreateTempEncodeMem
+{
+Status, ItemLong -- 10
+}
+#typev DiagRouterUtils_c208 19 "%0%!FUNC!: TempMemSize is 0 " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Utils FUNC=DiagRouterCreateTempEncodeMem
+{
+}
+#typev DiagRouterUtils_c68 10 "%0%!FUNC!:Initial validity check failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Utils FUNC=DiagRouterEncodePeriphData
+{
+}
+#typev DiagRouterUtils_c154 17 "%0%!FUNC!:Encode memory size %10!u!, data size %11!u!, some logical error!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Utils FUNC=DiagRouterEncodePeriphData
+{
+(UINT32)EncodeMemSize, ItemLong -- 10
+(UINT32)(pIPCReadCtxt->MemoryOffset.BufferLength), ItemLong -- 11
+}
+#typev DiagRouterUtils_c162 18 "%0%!FUNC!:DiagRouterCreateTempEncodeMem failed, status %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Utils FUNC=DiagRouterEncodePeriphData
+{
+Status, ItemLong -- 10
+}
+#typev DiagRouterUtils_c126 14 "%0%!FUNC!:Encode memory size %10!u!, data size %11!u!, some logical error!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Utils FUNC=DiagRouterEncodePeriphData
+{
+(UINT32)EncodeMemSize, ItemLong -- 10
+(UINT32)(pIPCReadCtxt->MemoryOffset.BufferLength), ItemLong -- 11
+}
+#typev DiagRouterUtils_c134 15 "%0%!FUNC!:DiagRouterCreateTempEncodeMem failed, status %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Utils FUNC=DiagRouterEncodePeriphData
+{
+Status, ItemLong -- 10
+}
+#typev DiagRouterUtils_c148 16 "%0%!FUNC!: HDLC encode might not fit, creating temp memory" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Utils FUNC=DiagRouterEncodePeriphData
+{
+}
+#typev DiagRouterUtils_c120 13 "%0%!FUNC!:HDLC encode tried and did not fit, state = %10!d!, dest = %11!p!, datalength = %12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Utils FUNC=DiagRouterEncodePeriphData
+{
+send_desc.state, ItemLong -- 10
+hdlc_dest.dest, ItemPtr -- 11
+(UINT32)(pIPCReadCtxt->MemoryOffset.BufferLength), ItemLong -- 12
+}
+#typev DiagRouterUtils_c97 12 "%0%!FUNC!:Wrong packet end character %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Utils FUNC=DiagRouterEncodePeriphData
+{
+*packet_end, ItemLong -- 10
+}
+#typev DiagRouterUtils_c89 11 "%0%!FUNC!:Packet Integrity compromised, Start = %10!d!, length = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Utils FUNC=DiagRouterEncodePeriphData
+{
+pdata_hdr->Start, ItemLong -- 10
+pdata_hdr->Length, ItemLong -- 11
+}

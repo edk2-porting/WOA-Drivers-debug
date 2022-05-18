@@ -1,0 +1,515 @@
+// PDB:  qcdx11arm32um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+ac74e613-7b90-3984-eccd-5b72fc1fb27d utils // SRC=dxvideomem.cpp MJ= MN=
+#typev dxresource_cpp2378 19 "%0Device:0x%10!p!, ThisVidMem=0x%11!p! ThisAllocInfo=0x%12!p! ThatVidMem=0x%13!p! ThatAllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxResource::SwapAllocations
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+pOtherVidMem, ItemPtr -- 13
+pOtherVidMem->m_pAllocInfo, ItemPtr -- 14
+}
+// PDB:  qcdx11arm32um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxvideomem_cpp94 11 "%0Device:0x%10!p! Managed Alloc Destroy VidMem:0x%11!p!  hAlloc=0x%12!x! GpuVirtAddr=0x%13!I64x! AllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Create
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo->hAllocation, ItemLong -- 12
+m_pAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+m_pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp788 11 "%0Device:0x%10!p! Managed Alloc Destroy VidMem:0x%11!p!  hAlloc=0x%12!x! GpuVirtAddr=0x%13!I64x! AllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Destroy
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo->hAllocation, ItemLong -- 12
+m_pAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+m_pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp1031 12 "%0Device:0x%10!p! Non-managed Alloc Destroy VidMem:0x%11!p! hAlloc=0x%12!x! GpuVirtAddr=0x%13!I64x! AllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::DestroyHandle
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+pAllocInfo->hAllocation, ItemLong -- 12
+pAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp852 20 "%0Device:0x%10!p!, MapGpuVirtualAddress Map fail error: 0x%11!x! Addr:0x%12!p!VidMem=0x%13!p! Size:0x%14!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::FinalizeAlloc
+{
+m_pDevice, ItemPtr -- 10
+result, ItemLong -- 11
+reinterpret_cast<VOID*>(mapGpuVirtualAddr.VirtualAddress), ItemPtr -- 12
+this, ItemPtr -- 13
+(mapGpuVirtualAddr.SizeInPages * PageSize), ItemLongLongX -- 14
+}
+#typev dxvideomem_cpp1639 17 "%0Device:0x%10!p!, LockedVidMem=0x%11!p! LockFlags=0x%12!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Lock
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+pLockData->lockFlags.value, ItemLong -- 12
+}
+#typev dxvideomem_cpp1526 16 "%0Lock Failed Device:0x%10!p!, VidMem=0x%11!p! AllocInfo=0x%12!p! hAllocation=0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Lock
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+(m_pAllocInfo->hAllocation), ItemLong -- 13
+}
+#typev dxvideomem_cpp238 11 "%0Device:0x%10!p! Managed Alloc Destroy VidMem:0x%11!p!  hAlloc=0x%12!x! GpuVirtAddr=0x%13!I64x! AllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Open
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo->hAllocation, ItemLong -- 12
+m_pAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+m_pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp236 10 "%0VidMem allocation failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::Open
+{
+}
+#typev dxvideomem_cpp1177 13 "%0Device:0x%10!p! PruneRenamingBusyList, AllocInfo = 0x%11!p! VidMem=0x%12!p! RefCount=%13!d!BoundPendingList=0x%14!p! BoundResidentList=0x%15!p! UnboundList=0x%16!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::PruneRenamingInfoBusyList
+{
+m_pDevice, ItemPtr -- 10
+pBusyAllocInfo, ItemPtr -- 11
+pBusyAllocInfo->pVideoMem, ItemPtr -- 12
+pBusyAllocInfo->pVideoMem->GetRefCount(), ItemLong -- 13
+pBusyAllocInfo->residencyListItem[DxBoundPendingList], ItemPtr -- 14
+pBusyAllocInfo->residencyListItem[DxBoundResidentList], ItemPtr -- 15
+pBusyAllocInfo->residencyListItem[DxUnboundList], ItemPtr -- 16
+}
+#typev dxvideomem_cpp1326 14 "%0Renaming Limit of %10!d! hit for DxVideoMem = 0x%11!p!, blocking lock ahead. " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=utils FUNC=DxVideoMem::RenameAllocation
+{
+m_renamingInfo.maxAllocs, ItemLong -- 10
+this, ItemPtr -- 11
+}
+#typev dxvideomem_cpp1495 15 "%0VA Reservation Failed Device:0x%10!p!, VidMem=0x%11!p! AllocInfo=0x%12!p! hAllocation=0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::ReserveVA
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+(m_pAllocInfo->hAllocation), ItemLong -- 13
+}
+#typev dxvideomem_cpp2183 18 "%0Device:0x%10!p! Lock WaitForSyncObjFromCpu, VidMem=0x%11!p! hAllocation=0x%12!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::VerifyAllocAvailability
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo->hAllocation, ItemLong -- 12
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxresource_cpp2378 19 "%0Device:0x%10!p!, ThisVidMem=0x%11!p! ThisAllocInfo=0x%12!p! ThatVidMem=0x%13!p! ThatAllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxResource::SwapAllocations
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+pOtherVidMem, ItemPtr -- 13
+pOtherVidMem->m_pAllocInfo, ItemPtr -- 14
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxvideomem_cpp788 11 "%0Device:0x%10!p! Managed Alloc Destroy VidMem:0x%11!p!  hAlloc=0x%12!x! GpuVirtAddr=0x%13!I64x! AllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Destroy
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo->hAllocation, ItemLong -- 12
+m_pAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+m_pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp1031 12 "%0Device:0x%10!p! Non-managed Alloc Destroy VidMem:0x%11!p! hAlloc=0x%12!x! GpuVirtAddr=0x%13!I64x! AllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::DestroyHandle
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+pAllocInfo->hAllocation, ItemLong -- 12
+pAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp852 20 "%0Device:0x%10!p!, MapGpuVirtualAddress Map fail error: 0x%11!x! Addr:0x%12!p!VidMem=0x%13!p! Size:0x%14!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::FinalizeAlloc
+{
+m_pDevice, ItemPtr -- 10
+result, ItemLong -- 11
+reinterpret_cast<VOID*>(mapGpuVirtualAddr.VirtualAddress), ItemPtr -- 12
+this, ItemPtr -- 13
+(mapGpuVirtualAddr.SizeInPages * PageSize), ItemLongLongX -- 14
+}
+#typev dxvideomem_cpp3006 21 "%0Device:0x%10!p!, FreeGpuVirtualAddress Addr:0x%11!p! Size:0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::FreeGpuVirtualAddress
+{
+m_pDevice, ItemPtr -- 10
+reinterpret_cast<VOID*>(freeGpuVirtAddr.BaseAddress), ItemPtr -- 11
+(freeGpuVirtAddr.Size), ItemLongLongX -- 12
+}
+#typev dxvideomem_cpp1639 17 "%0Device:0x%10!p!, LockedVidMem=0x%11!p! LockFlags=0x%12!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Lock
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+pLockData->lockFlags.value, ItemLong -- 12
+}
+#typev dxvideomem_cpp1526 16 "%0Lock Failed Device:0x%10!p!, VidMem=0x%11!p! AllocInfo=0x%12!p! hAllocation=0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Lock
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+(m_pAllocInfo->hAllocation), ItemLong -- 13
+}
+#typev dxvideomem_cpp2976 20 "%0Device:0x%10!p!, MapGpuVirtualAddress Map fail error: 0x%11!x! Addr:0x%12!p!VidMem=0x%13!p! Size:0x%14!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::MapGpuVirtualAddress
+{
+m_pDevice, ItemPtr -- 10
+result, ItemLong -- 11
+reinterpret_cast<VOID*>(mapGpuVirtualAddr.VirtualAddress), ItemPtr -- 12
+this, ItemPtr -- 13
+(mapGpuVirtualAddr.SizeInPages * PageSize), ItemLongLongX -- 14
+}
+#typev dxvideomem_cpp236 10 "%0VidMem allocation failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::Open
+{
+}
+#typev dxvideomem_cpp1177 13 "%0Device:0x%10!p! PruneRenamingBusyList, AllocInfo = 0x%11!p! VidMem=0x%12!p! RefCount=%13!d!BoundPendingList=0x%14!p! BoundResidentList=0x%15!p! UnboundList=0x%16!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::PruneRenamingInfoBusyList
+{
+m_pDevice, ItemPtr -- 10
+pBusyAllocInfo, ItemPtr -- 11
+pBusyAllocInfo->pVideoMem, ItemPtr -- 12
+pBusyAllocInfo->pVideoMem->GetRefCount(), ItemLong -- 13
+pBusyAllocInfo->residencyListItem[DxBoundPendingList], ItemPtr -- 14
+pBusyAllocInfo->residencyListItem[DxBoundResidentList], ItemPtr -- 15
+pBusyAllocInfo->residencyListItem[DxUnboundList], ItemPtr -- 16
+}
+#typev dxvideomem_cpp1326 14 "%0Renaming Limit of %10!d! hit for DxVideoMem = 0x%11!p!, blocking lock ahead. " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=utils FUNC=DxVideoMem::RenameAllocation
+{
+m_renamingInfo.maxAllocs, ItemLong -- 10
+this, ItemPtr -- 11
+}
+#typev dxvideomem_cpp1495 15 "%0VA Reservation Failed Device:0x%10!p!, VidMem=0x%11!p! AllocInfo=0x%12!p! hAllocation=0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::ReserveVA
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+(m_pAllocInfo->hAllocation), ItemLong -- 13
+}
+#typev dxvideomem_cpp2874 19 "%0Device:0x%10!p!, ThisVidMem=0x%11!p! ThisAllocInfo=0x%12!p! ThatVidMem=0x%13!p! ThatAllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::SwapAllocations
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+pOtherVidMem, ItemPtr -- 13
+pOtherVidMem->m_pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp2183 18 "%0Device:0x%10!p! Lock WaitForSyncObjFromCpu, VidMem=0x%11!p! hAllocation=0x%12!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::VerifyAllocAvailability
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo->hAllocation, ItemLong -- 12
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxresource_cpp2378 19 "%0Device:0x%10!p!, ThisVidMem=0x%11!p! ThisAllocInfo=0x%12!p! ThatVidMem=0x%13!p! ThatAllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxResource::SwapAllocations
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+pOtherVidMem, ItemPtr -- 13
+pOtherVidMem->m_pAllocInfo, ItemPtr -- 14
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxvideomem_cpp788 11 "%0Device:0x%10!p! Managed Alloc Destroy VidMem:0x%11!p!  hAlloc=0x%12!x! GpuVirtAddr=0x%13!I64x! AllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Destroy
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo->hAllocation, ItemLong -- 12
+m_pAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+m_pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp1031 12 "%0Device:0x%10!p! Non-managed Alloc Destroy VidMem:0x%11!p! hAlloc=0x%12!x! GpuVirtAddr=0x%13!I64x! AllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::DestroyHandle
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+pAllocInfo->hAllocation, ItemLong -- 12
+pAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp852 20 "%0Device:0x%10!p!, MapGpuVirtualAddress Map fail error: 0x%11!x! Addr:0x%12!p!VidMem=0x%13!p! Size:0x%14!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::FinalizeAlloc
+{
+m_pDevice, ItemPtr -- 10
+result, ItemLong -- 11
+reinterpret_cast<VOID*>(mapGpuVirtualAddr.VirtualAddress), ItemPtr -- 12
+this, ItemPtr -- 13
+(mapGpuVirtualAddr.SizeInPages * PageSize), ItemLongLongX -- 14
+}
+#typev dxvideomem_cpp3006 21 "%0Device:0x%10!p!, FreeGpuVirtualAddress Addr:0x%11!p! Size:0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::FreeGpuVirtualAddress
+{
+m_pDevice, ItemPtr -- 10
+reinterpret_cast<VOID*>(freeGpuVirtAddr.BaseAddress), ItemPtr -- 11
+(freeGpuVirtAddr.Size), ItemLongLongX -- 12
+}
+#typev dxvideomem_cpp1639 17 "%0Device:0x%10!p!, LockedVidMem=0x%11!p! LockFlags=0x%12!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Lock
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+pLockData->lockFlags.value, ItemLong -- 12
+}
+#typev dxvideomem_cpp1526 16 "%0Lock Failed Device:0x%10!p!, VidMem=0x%11!p! AllocInfo=0x%12!p! hAllocation=0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Lock
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+(m_pAllocInfo->hAllocation), ItemLong -- 13
+}
+#typev dxvideomem_cpp2976 20 "%0Device:0x%10!p!, MapGpuVirtualAddress Map fail error: 0x%11!x! Addr:0x%12!p!VidMem=0x%13!p! Size:0x%14!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::MapGpuVirtualAddress
+{
+m_pDevice, ItemPtr -- 10
+result, ItemLong -- 11
+reinterpret_cast<VOID*>(mapGpuVirtualAddr.VirtualAddress), ItemPtr -- 12
+this, ItemPtr -- 13
+(mapGpuVirtualAddr.SizeInPages * PageSize), ItemLongLongX -- 14
+}
+#typev dxvideomem_cpp236 10 "%0VidMem allocation failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::Open
+{
+}
+#typev dxvideomem_cpp1177 13 "%0Device:0x%10!p! PruneRenamingBusyList, AllocInfo = 0x%11!p! VidMem=0x%12!p! RefCount=%13!d!BoundPendingList=0x%14!p! BoundResidentList=0x%15!p! UnboundList=0x%16!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::PruneRenamingInfoBusyList
+{
+m_pDevice, ItemPtr -- 10
+pBusyAllocInfo, ItemPtr -- 11
+pBusyAllocInfo->pVideoMem, ItemPtr -- 12
+pBusyAllocInfo->pVideoMem->GetRefCount(), ItemLong -- 13
+pBusyAllocInfo->residencyListItem[DxBoundPendingList], ItemPtr -- 14
+pBusyAllocInfo->residencyListItem[DxBoundResidentList], ItemPtr -- 15
+pBusyAllocInfo->residencyListItem[DxUnboundList], ItemPtr -- 16
+}
+#typev dxvideomem_cpp1326 14 "%0Renaming Limit of %10!d! hit for DxVideoMem = 0x%11!p!, blocking lock ahead. " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=utils FUNC=DxVideoMem::RenameAllocation
+{
+m_renamingInfo.maxAllocs, ItemLong -- 10
+this, ItemPtr -- 11
+}
+#typev dxvideomem_cpp1495 15 "%0VA Reservation Failed Device:0x%10!p!, VidMem=0x%11!p! AllocInfo=0x%12!p! hAllocation=0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::ReserveVA
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+(m_pAllocInfo->hAllocation), ItemLong -- 13
+}
+#typev dxvideomem_cpp2874 19 "%0Device:0x%10!p!, ThisVidMem=0x%11!p! ThisAllocInfo=0x%12!p! ThatVidMem=0x%13!p! ThatAllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::SwapAllocations
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+pOtherVidMem, ItemPtr -- 13
+pOtherVidMem->m_pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp2183 18 "%0Device:0x%10!p! Lock WaitForSyncObjFromCpu, VidMem=0x%11!p! hAllocation=0x%12!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::VerifyAllocAvailability
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo->hAllocation, ItemLong -- 12
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxresource_cpp2378 19 "%0Device:0x%10!p!, ThisVidMem=0x%11!p! ThisAllocInfo=0x%12!p! ThatVidMem=0x%13!p! ThatAllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxResource::SwapAllocations
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+pOtherVidMem, ItemPtr -- 13
+pOtherVidMem->m_pAllocInfo, ItemPtr -- 14
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxvideomem_cpp788 11 "%0Device:0x%10!p! Managed Alloc Destroy VidMem:0x%11!p!  hAlloc=0x%12!x! GpuVirtAddr=0x%13!I64x! AllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Destroy
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo->hAllocation, ItemLong -- 12
+m_pAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+m_pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp1031 12 "%0Device:0x%10!p! Non-managed Alloc Destroy VidMem:0x%11!p! hAlloc=0x%12!x! GpuVirtAddr=0x%13!I64x! AllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::DestroyHandle
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+pAllocInfo->hAllocation, ItemLong -- 12
+pAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp852 20 "%0Device:0x%10!p!, MapGpuVirtualAddress Map fail error: 0x%11!x! Addr:0x%12!p!VidMem=0x%13!p! Size:0x%14!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::FinalizeAlloc
+{
+m_pDevice, ItemPtr -- 10
+result, ItemLong -- 11
+reinterpret_cast<VOID*>(mapGpuVirtualAddr.VirtualAddress), ItemPtr -- 12
+this, ItemPtr -- 13
+(mapGpuVirtualAddr.SizeInPages * PageSize), ItemLongLongX -- 14
+}
+#typev dxvideomem_cpp3006 21 "%0Device:0x%10!p!, FreeGpuVirtualAddress Addr:0x%11!p! Size:0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::FreeGpuVirtualAddress
+{
+m_pDevice, ItemPtr -- 10
+reinterpret_cast<VOID*>(freeGpuVirtAddr.BaseAddress), ItemPtr -- 11
+(freeGpuVirtAddr.Size), ItemLongLongX -- 12
+}
+#typev dxvideomem_cpp1639 17 "%0Device:0x%10!p!, LockedVidMem=0x%11!p! LockFlags=0x%12!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Lock
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+pLockData->lockFlags.value, ItemLong -- 12
+}
+#typev dxvideomem_cpp1526 16 "%0Lock Failed Device:0x%10!p!, VidMem=0x%11!p! AllocInfo=0x%12!p! hAllocation=0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Lock
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+(m_pAllocInfo->hAllocation), ItemLong -- 13
+}
+#typev dxvideomem_cpp2976 20 "%0Device:0x%10!p!, MapGpuVirtualAddress Map fail error: 0x%11!x! Addr:0x%12!p!VidMem=0x%13!p! Size:0x%14!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::MapGpuVirtualAddress
+{
+m_pDevice, ItemPtr -- 10
+result, ItemLong -- 11
+reinterpret_cast<VOID*>(mapGpuVirtualAddr.VirtualAddress), ItemPtr -- 12
+this, ItemPtr -- 13
+(mapGpuVirtualAddr.SizeInPages * PageSize), ItemLongLongX -- 14
+}
+#typev dxvideomem_cpp236 10 "%0VidMem allocation failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::Open
+{
+}
+#typev dxvideomem_cpp1177 13 "%0Device:0x%10!p! PruneRenamingBusyList, AllocInfo = 0x%11!p! VidMem=0x%12!p! RefCount=%13!d!BoundPendingList=0x%14!p! BoundResidentList=0x%15!p! UnboundList=0x%16!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::PruneRenamingInfoBusyList
+{
+m_pDevice, ItemPtr -- 10
+pBusyAllocInfo, ItemPtr -- 11
+pBusyAllocInfo->pVideoMem, ItemPtr -- 12
+pBusyAllocInfo->pVideoMem->GetRefCount(), ItemLong -- 13
+pBusyAllocInfo->residencyListItem[DxBoundPendingList], ItemPtr -- 14
+pBusyAllocInfo->residencyListItem[DxBoundResidentList], ItemPtr -- 15
+pBusyAllocInfo->residencyListItem[DxUnboundList], ItemPtr -- 16
+}
+#typev dxvideomem_cpp1326 14 "%0Renaming Limit of %10!d! hit for DxVideoMem = 0x%11!p!, blocking lock ahead. " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=utils FUNC=DxVideoMem::RenameAllocation
+{
+m_renamingInfo.maxAllocs, ItemLong -- 10
+this, ItemPtr -- 11
+}
+#typev dxvideomem_cpp1495 15 "%0VA Reservation Failed Device:0x%10!p!, VidMem=0x%11!p! AllocInfo=0x%12!p! hAllocation=0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::ReserveVA
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+(m_pAllocInfo->hAllocation), ItemLong -- 13
+}
+#typev dxvideomem_cpp2874 19 "%0Device:0x%10!p!, ThisVidMem=0x%11!p! ThisAllocInfo=0x%12!p! ThatVidMem=0x%13!p! ThatAllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::SwapAllocations
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+pOtherVidMem, ItemPtr -- 13
+pOtherVidMem->m_pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp2183 18 "%0Device:0x%10!p! Lock WaitForSyncObjFromCpu, VidMem=0x%11!p! hAllocation=0x%12!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::VerifyAllocAvailability
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo->hAllocation, ItemLong -- 12
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxresource_cpp2378 19 "%0Device:0x%10!p!, ThisVidMem=0x%11!p! ThisAllocInfo=0x%12!p! ThatVidMem=0x%13!p! ThatAllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxResource::SwapAllocations
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+pOtherVidMem, ItemPtr -- 13
+pOtherVidMem->m_pAllocInfo, ItemPtr -- 14
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxvideomem_cpp788 11 "%0Device:0x%10!p! Managed Alloc Destroy VidMem:0x%11!p!  hAlloc=0x%12!x! GpuVirtAddr=0x%13!I64x! AllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Destroy
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo->hAllocation, ItemLong -- 12
+m_pAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+m_pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp1031 12 "%0Device:0x%10!p! Non-managed Alloc Destroy VidMem:0x%11!p! hAlloc=0x%12!x! GpuVirtAddr=0x%13!I64x! AllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::DestroyHandle
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+pAllocInfo->hAllocation, ItemLong -- 12
+pAllocInfo->gpuVirtualAddress, ItemLongLongX -- 13
+pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp852 20 "%0Device:0x%10!p!, MapGpuVirtualAddress Map fail error: 0x%11!x! Addr:0x%12!p!VidMem=0x%13!p! Size:0x%14!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::FinalizeAlloc
+{
+m_pDevice, ItemPtr -- 10
+result, ItemLong -- 11
+reinterpret_cast<VOID*>(mapGpuVirtualAddr.VirtualAddress), ItemPtr -- 12
+this, ItemPtr -- 13
+(mapGpuVirtualAddr.SizeInPages * PageSize), ItemLongLongX -- 14
+}
+#typev dxvideomem_cpp3006 21 "%0Device:0x%10!p!, FreeGpuVirtualAddress Addr:0x%11!p! Size:0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::FreeGpuVirtualAddress
+{
+m_pDevice, ItemPtr -- 10
+reinterpret_cast<VOID*>(freeGpuVirtAddr.BaseAddress), ItemPtr -- 11
+(freeGpuVirtAddr.Size), ItemLongLongX -- 12
+}
+#typev dxvideomem_cpp1639 17 "%0Device:0x%10!p!, LockedVidMem=0x%11!p! LockFlags=0x%12!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Lock
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+pLockData->lockFlags.value, ItemLong -- 12
+}
+#typev dxvideomem_cpp1526 16 "%0Lock Failed Device:0x%10!p!, VidMem=0x%11!p! AllocInfo=0x%12!p! hAllocation=0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::Lock
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+(m_pAllocInfo->hAllocation), ItemLong -- 13
+}
+#typev dxvideomem_cpp2976 20 "%0Device:0x%10!p!, MapGpuVirtualAddress Map fail error: 0x%11!x! Addr:0x%12!p!VidMem=0x%13!p! Size:0x%14!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::MapGpuVirtualAddress
+{
+m_pDevice, ItemPtr -- 10
+result, ItemLong -- 11
+reinterpret_cast<VOID*>(mapGpuVirtualAddr.VirtualAddress), ItemPtr -- 12
+this, ItemPtr -- 13
+(mapGpuVirtualAddr.SizeInPages * PageSize), ItemLongLongX -- 14
+}
+#typev dxvideomem_cpp236 10 "%0VidMem allocation failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=utils FUNC=DxVideoMem::Open
+{
+}
+#typev dxvideomem_cpp1177 13 "%0Device:0x%10!p! PruneRenamingBusyList, AllocInfo = 0x%11!p! VidMem=0x%12!p! RefCount=%13!d!BoundPendingList=0x%14!p! BoundResidentList=0x%15!p! UnboundList=0x%16!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::PruneRenamingInfoBusyList
+{
+m_pDevice, ItemPtr -- 10
+pBusyAllocInfo, ItemPtr -- 11
+pBusyAllocInfo->pVideoMem, ItemPtr -- 12
+pBusyAllocInfo->pVideoMem->GetRefCount(), ItemLong -- 13
+pBusyAllocInfo->residencyListItem[DxBoundPendingList], ItemPtr -- 14
+pBusyAllocInfo->residencyListItem[DxBoundResidentList], ItemPtr -- 15
+pBusyAllocInfo->residencyListItem[DxUnboundList], ItemPtr -- 16
+}
+#typev dxvideomem_cpp1326 14 "%0Renaming Limit of %10!d! hit for DxVideoMem = 0x%11!p!, blocking lock ahead. " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=utils FUNC=DxVideoMem::RenameAllocation
+{
+m_renamingInfo.maxAllocs, ItemLong -- 10
+this, ItemPtr -- 11
+}
+#typev dxvideomem_cpp1286 13 "%0Device:0x%10!p! PruneRenamingBusyList, AllocInfo = 0x%11!p! VidMem=0x%12!p! RefCount=%13!d!BoundPendingList=0x%14!p! BoundResidentList=0x%15!p! UnboundList=0x%16!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::RenameAllocation
+{
+m_pDevice, ItemPtr -- 10
+pBusyAllocInfo, ItemPtr -- 11
+pBusyAllocInfo->pVideoMem, ItemPtr -- 12
+pBusyAllocInfo->pVideoMem->GetRefCount(), ItemLong -- 13
+pBusyAllocInfo->residencyListItem[DxBoundPendingList], ItemPtr -- 14
+pBusyAllocInfo->residencyListItem[DxBoundResidentList], ItemPtr -- 15
+pBusyAllocInfo->residencyListItem[DxUnboundList], ItemPtr -- 16
+}
+#typev dxvideomem_cpp1495 15 "%0VA Reservation Failed Device:0x%10!p!, VidMem=0x%11!p! AllocInfo=0x%12!p! hAllocation=0x%13!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::ReserveVA
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+(m_pAllocInfo->hAllocation), ItemLong -- 13
+}
+#typev dxvideomem_cpp2874 19 "%0Device:0x%10!p!, ThisVidMem=0x%11!p! ThisAllocInfo=0x%12!p! ThatVidMem=0x%13!p! ThatAllocInfo=0x%14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::SwapAllocations
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo, ItemPtr -- 12
+pOtherVidMem, ItemPtr -- 13
+pOtherVidMem->m_pAllocInfo, ItemPtr -- 14
+}
+#typev dxvideomem_cpp2183 18 "%0Device:0x%10!p! Lock WaitForSyncObjFromCpu, VidMem=0x%11!p! hAllocation=0x%12!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxVideoMem::VerifyAllocAvailability
+{
+m_pDevice, ItemPtr -- 10
+this, ItemPtr -- 11
+m_pAllocInfo->hAllocation, ItemLong -- 12
+}

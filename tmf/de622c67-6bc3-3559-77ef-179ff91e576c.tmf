@@ -1,0 +1,262 @@
+// PDB:  qcuart7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+de622c67-6bc3-3559-77ef-179ff91e576c latest // SRC=entry.c MJ= MN=
+#typev entry_c1214 71 "%0-%!FUNC!(0x%10!X!)" //   FLAGS=FUNCTION FUNC=DriverEntry
+{
+status, ItemLong -- 10
+}
+#typev entry_c1205 70 "%0registry path = "%10!s!"" //   FLAGS=INFO FUNC=DriverEntry
+{
+RegistryPath->Buffer, ItemWString -- 10
+}
+#typev entry_c1204 69 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=DriverEntry
+{
+DriverObject, ItemPtr -- 10
+RegistryPath, ItemPtr -- 11
+}
+// PDB:  qcuart7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev entry_c916 53 "%0Device resume from hibernation" //   FLAGS=INFO FUNC=OnD0Entry
+{
+}
+#typev entry_c905 52 "%0+%!FUNC!(0x%10!p!, 0x%11!d!)" //   FLAGS=FUNCTION FUNC=OnD0Entry
+{
+FxDevice, ItemPtr -- 10
+PreviousState, ItemLong -- 11
+}
+// PDB:  qcuart7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev entry_c946 55 "%0Device going to hibernation" //   FLAGS=INFO FUNC=OnD0Exit
+{
+}
+#typev entry_c939 54 "%0+%!FUNC!(0x%10!p!, 0x%11!d!)" //   FLAGS=FUNCTION FUNC=OnD0Exit
+{
+FxDevice, ItemPtr -- 10
+TargetState, ItemLong -- 11
+}
+#typev entry_c181 10 "%0WdfIoQueueCreate() failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=create_queues
+{
+status, ItemLong -- 10
+}
+#typev entry_c184 11 "%0WdfDeviceConfigureRequestDispatching() failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=create_queues
+{
+status, ItemLong -- 10
+}
+#typev entry_c334 16 "%0-%!FUNC!(0x%10!X!)" //   FLAGS=FUNCTION FUNC=device_add
+{
+status, ItemLong -- 10
+}
+#typev entry_c326 15 "%0%!FLAGS!: RuntimeResourceEnumeration is failed - ?%10!s!" //   FLAGS=ERROR FUNC=device_add
+{
+status, ItemNTSTATUS -- 10
+}
+#typev entry_c252 14 "%0WdfDeviceCreate() failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=device_add
+{
+status, ItemLong -- 10
+}
+#typev entry_c209 12 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=device_add
+{
+Driver, ItemPtr -- 10
+DeviceInit, ItemPtr -- 11
+}
+#typev entry_c359 18 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=device_remove
+{
+}
+#typev entry_c355 17 "%0+%!FUNC!(0x%10!p!)" //   FLAGS=FUNCTION FUNC=device_remove
+{
+Device, ItemPtr -- 10
+}
+#typev entry_c391 20 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=driver_unload
+{
+}
+#typev entry_c390 19 "%0+%!FUNC!(0x%10!p!)" //   FLAGS=FUNCTION FUNC=driver_unload
+{
+Driver, ItemPtr -- 10
+}
+#typev entry_c412 22 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=evt_file_cleanup
+{
+}
+#typev entry_c408 21 "%0+%!FUNC!(0x%10!p!)" //   FLAGS=FUNCTION FUNC=evt_file_cleanup
+{
+FileObject, ItemPtr -- 10
+}
+#typev entry_c432 24 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=evt_file_close
+{
+}
+#typev entry_c428 23 "%0+%!FUNC!(0x%10!p!)" //   FLAGS=FUNCTION FUNC=evt_file_close
+{
+FileObject, ItemPtr -- 10
+}
+#typev entry_c451 26 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=evt_file_create
+{
+}
+#typev entry_c447 25 "%0+%!FUNC!(0x%10!p!, 0x%11!p!, 0x%12!p!)" //   FLAGS=FUNCTION FUNC=evt_file_create
+{
+Device, ItemPtr -- 10
+Request, ItemPtr -- 11
+FileObject, ItemPtr -- 12
+}
+#typev entry_c473 28 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=evt_io_device_control
+{
+}
+#typev entry_c468 27 "%0+%!FUNC!(0x%10!p!, 0x%11!p!, 0x%12!IX!, 0x%13!IX!, 0x%14!08X!)" //   FLAGS=FUNCTION FUNC=evt_io_device_control
+{
+Queue, ItemPtr -- 10
+Request, ItemPtr -- 11
+OutputBufferLength, ItemPtr -- 12
+InputBufferLength, ItemPtr -- 13
+IoControlCode, ItemLong -- 14
+}
+#typev entry_c493 30 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=evt_io_read
+{
+}
+#typev entry_c489 29 "%0+%!FUNC!(0x%10!p!, 0x%11!p!, 0x%12!IX!)" //   FLAGS=FUNCTION FUNC=evt_io_read
+{
+Queue, ItemPtr -- 10
+Request, ItemPtr -- 11
+Length, ItemPtr -- 12
+}
+#typev entry_c513 32 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=evt_io_write
+{
+}
+#typev entry_c509 31 "%0+%!FUNC!(0x%10!p!, 0x%11!p!, 0x%12!IX!)" //   FLAGS=FUNCTION FUNC=evt_io_write
+{
+Queue, ItemPtr -- 10
+Request, ItemPtr -- 11
+Length, ItemPtr -- 12
+}
+#typev entry_c582 39 "%0IoSetDeviceInterfaceState() failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=expose_port
+{
+status, ItemLong -- 10
+}
+#typev entry_c570 38 "%0IoCreateSymbolicLink() failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=expose_port
+{
+status, ItemLong -- 10
+}
+#typev entry_c564 37 "%0DOS device name = "%10!s!"" //   FLAGS=INFO FUNC=expose_port
+{
+udx->dos_device_name.Buffer, ItemWString -- 10
+}
+#typev entry_c555 36 "%0UART interface name = "%10!s!"" //   FLAGS=INFO FUNC=expose_port
+{
+port_name, ItemWString -- 10
+}
+#typev entry_c551 35 "%0_itow_s() failed (%10!d!)" //   FLAGS=ERROR FUNC=expose_port
+{
+err, ItemLong -- 10
+}
+#typev entry_c545 34 "%0UART interface name = "%10!s!"" //   FLAGS=INFO FUNC=expose_port
+{
+udx->interface_name.Buffer, ItemWString -- 10
+}
+#typev entry_c541 33 "%0IoRegisterDeviceInterface() failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=expose_port
+{
+status, ItemLong -- 10
+}
+#typev entry_c673 46 "%0                         (Flags = 0x%10!X!, ShareDisposition = 0x%11!X!)" //   FLAGS=INFO FUNC=get_acpi_resources
+{
+resource->Flags, ItemLong -- 10
+resource->ShareDisposition, ItemLong -- 11
+}
+#typev entry_c670 45 "%0Interrupt resource found (Level = %10!d!, Vector = %11!d!, Affinity = 0x%12!IX!)" //   FLAGS=INFO FUNC=get_acpi_resources
+{
+resource->u.Interrupt.Level, ItemLong -- 10
+resource->u.Interrupt.Vector, ItemLong -- 11
+resource->u.Interrupt.Affinity, ItemPtr -- 12
+}
+#typev entry_c662 44 "%0Memory resource found (Start = 0x%10!08X!, Length = 0x%11!08X!)" //   FLAGS=INFO FUNC=get_acpi_resources
+{
+resource->u.Memory.Start.LowPart, ItemLong -- 10
+resource->u.Memory.Length, ItemLong -- 11
+}
+#typev entry_c704 47 "%0unexpected resource type (%10!d!)" //   FLAGS=INFO FUNC=get_acpi_resources
+{
+resource->Type, ItemLong -- 10
+}
+#typev entry_c639 42 "%0                         (Flags = 0x%10!X!, ShareDisposition = 0x%11!X!)" //   FLAGS=INFO FUNC=get_acpi_resources
+{
+resource->Flags, ItemLong -- 10
+resource->ShareDisposition, ItemLong -- 11
+}
+#typev entry_c636 41 "%0Interrupt resource found (Level = %10!d!, Vector = %11!d!, Affinity = 0x%12!IX!)" //   FLAGS=INFO FUNC=get_acpi_resources
+{
+resource->u.Interrupt.Level, ItemLong -- 10
+resource->u.Interrupt.Vector, ItemLong -- 11
+resource->u.Interrupt.Affinity, ItemPtr -- 12
+}
+#typev entry_c632 40 "%0Memory resource found (Start = 0x%10!08X!, Length = 0x%11!08X!)" //   FLAGS=INFO FUNC=get_acpi_resources
+{
+resource->u.Memory.Start.LowPart, ItemLong -- 10
+resource->u.Memory.Length, ItemLong -- 11
+}
+#typev entry_c650 43 "%0unexpected resource type (%10!d!)" //   FLAGS=INFO FUNC=get_acpi_resources
+{
+resource->Type, ItemLong -- 10
+}
+#typev entry_c746 49 "%0invalid ACPI property (name->Type = %10!d!)" //   FLAGS=ERROR FUNC=get_device_instance
+{
+name->Type, ItemLong -- 10
+}
+#typev entry_c737 48 "%0ACPI output buffer is invalid (Signature = 0x%10!08X!)" //   FLAGS=ERROR FUNC=get_device_instance
+{
+acpi_buffer->Signature, ItemLong -- 10
+}
+#typev entry_c886 51 "%0-%!FUNC!(0x%10!X!)" //   FLAGS=FUNCTION FUNC=prepare_hardware
+{
+status, ItemLong -- 10
+}
+#typev entry_c829 50 "%0+%!FUNC!(0x%10!p!, 0x%11!p!, 0x%12!p!)" //   FLAGS=FUNCTION FUNC=prepare_hardware
+{
+Device, ItemPtr -- 10
+Resources, ItemPtr -- 11
+ResourcesTranslated, ItemPtr -- 12
+}
+#typev entry_c1000 58 "%0IOCTL_ACPI_EVAL_METHOD failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=query_acpi_method
+{
+status, ItemLong -- 10
+}
+#typev entry_c990 57 "%0ExAllocatePool2() failed" //   FLAGS=ERROR FUNC=query_acpi_method
+{
+}
+#typev entry_c975 56 "%0ExAllocatePool2() failed" //   FLAGS=ERROR FUNC=query_acpi_method
+{
+}
+#typev entry_c1126 64 "%0%!FLAGS!: RtlUnicodeStringCopy failed with status %10!s!" //   FLAGS=ERROR FUNC=query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev entry_c1138 66 "%0%!FLAGS!: RtlUnicodeStringCat failed with status %10!s!" //   FLAGS=ERROR FUNC=query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev entry_c1156 68 "%0%!FLAGS!: WdfRegistryQueryValue failed with status %10!s!" //   FLAGS=ERROR FUNC=query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev entry_c1149 67 "%0%!FLAGS!: WdfRegistryOpenKey failed with status %10!s!" //   FLAGS=ERROR FUNC=query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev entry_c1132 65 "%0%!FLAGS!: RtlIntegerToUnicodeString failed with status %10!s!" //   FLAGS=ERROR FUNC=query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev entry_c1120 63 "%0%!FLAGS!: WdfDeviceOpenRegistryKey failed with status %10!s!" //   FLAGS=ERROR FUNC=query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev entry_c1029 60 "%0-%!FUNC!(0x%10!X!)" //   FLAGS=FUNCTION FUNC=release_hardware
+{
+status, ItemLong -- 10
+}
+#typev entry_c1023 59 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=release_hardware
+{
+Device, ItemPtr -- 10
+ResourcesTranslated, ItemPtr -- 11
+}
+#typev entry_c1067 62 "%0IoCallDriver(IOCTL_ACPI_EVAL_METHOD) returned STATUS_PENDING... waiting" //   FLAGS=INFO FUNC=send_ioctl_irp
+{
+}
+#typev entry_c1059 61 "%0IoBuildDeviceIoControlRequest() failed" //   FLAGS=ERROR FUNC=send_ioctl_irp
+{
+}

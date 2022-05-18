@@ -1,0 +1,91 @@
+// PDB:  qcspi7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:30:958 (UTC) [tracepdb]
+ef1e2ee9-f8d2-35c9-2143-5e73d3c615c7 10.7 // SRC=spi_gpi.c MJ= MN=
+#typev spi_gpi_c67 10 "%0Input core index %10!d! is not in the range" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=core_index_to_gpi_se_index
+{
+core_index, ItemLong -- 10
+}
+#typev spi_gpi_c287 19 "%0io_ctxt = 0x%10!p!, t_ctxt = 0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_callback
+{
+io_ctxt, ItemPtr -- 10
+t_ctxt, ItemPtr -- 11
+}
+#typev spi_gpi_c267 18 "%0client_ctxt_head  (0x%10!p!) = temp->next (0x%11!p!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PERF FUNC=spi_gpi_callback
+{
+h_ctxt->client_ctxt_head, ItemPtr -- 10
+temp->next, ItemPtr -- 11
+}
+#typev spi_gpi_c246 17 "%0t_ctxt is null" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_callback
+{
+}
+#typev spi_gpi_c228 16 "%0io_ctxt = 0x%10!p!, t_ctxt = 0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_callback
+{
+io_ctxt, ItemPtr -- 10
+t_ctxt, ItemPtr -- 11
+}
+#typev spi_gpi_c222 15 "%0chan type is not supported, %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_callback
+{
+result->chan, ItemLong -- 10
+}
+#typev spi_gpi_c196 14 "%0not supported" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_callback
+{
+}
+#typev spi_gpi_c156 13 "%0Both Channels are Running now so complete Request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=spi_gpi_callback
+{
+}
+#typev spi_gpi_c102 12 "%0chan %10!d!: type %11!d!: code %12!d!: status 0x%13!08x!:length %14!d!: tre_idx %15!d!: dword_0 0x%16!08x!: dword_1 0x%17!08x!: user_data 0x%18!08p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=spi_gpi_callback
+{
+result->chan, ItemLong -- 10
+result->type, ItemLong -- 11
+result->code, ItemLong -- 12
+result->status, ItemLong -- 13
+result->length, ItemLong -- 14
+result->tre_idx, ItemLong -- 15
+result->dword_0, ItemLong -- 16
+result->dword_1, ItemLong -- 17
+result->user_data, ItemPtr -- 18
+}
+#typev spi_gpi_c96 11 "%0recving gpi_callback (perf_cnt = %10!I64d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PERF FUNC=spi_gpi_callback
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev spi_gpi_c1079 30 "%0 %10!d! channel cannot be stopped" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_cancel
+{
+GPI_INBOUND_CHAN, ItemLong -- 10
+}
+#typev spi_gpi_c1056 29 "%0 %10!d! channel cannot be stopped" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_cancel
+{
+GPI_OUTBOUND_CHAN, ItemLong -- 10
+}
+#typev spi_gpi_c801 27 "%0%10!08x! %11!08x! %12!08x! %13!08x!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=INFO FUNC=spi_gpi_dump_tres
+{
+tre_list->dword_0, ItemLong -- 10
+tre_list->dword_1, ItemLong -- 11
+tre_list->dword_2, ItemLong -- 12
+tre_list->ctrl, ItemLong -- 13
+}
+#typev spi_gpi_c397 26 "%0unable to alloc rx_elements" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_init
+{
+}
+#typev spi_gpi_c385 25 "%0spi_plat_virt_to_phys failed for rx_tre_base" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_init
+{
+}
+#typev spi_gpi_c375 24 "%0unable to alloc rx_tre" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_init
+{
+}
+#typev spi_gpi_c364 23 "%0unable to alloc tx_elements" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_init
+{
+}
+#typev spi_gpi_c352 22 "%0spi_plat_virt_to_phys failed for tx_tre_base" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_init
+{
+}
+#typev spi_gpi_c342 21 "%0unable to alloc tx_tre" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_init
+{
+}
+#typev spi_gpi_c305 20 "%0unable to allocate GPI context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=spi_gpi_init
+{
+}
+#typev spi_gpi_c1020 28 "%0issuing GpiProcessTre (perf_cnt = %10!I64d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PERF FUNC=spi_gpi_queue_transfer
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}

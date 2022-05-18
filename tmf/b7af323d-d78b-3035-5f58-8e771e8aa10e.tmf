@@ -1,0 +1,1096 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+b7af323d-d78b-3035-5f58-8e771e8aa10e PEP // SRC=PEP_ResourceMgmt.c MJ= MN=
+#typev PEP_ResourceMgmt_c1689 92 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, BusRequestType is %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustABusArbResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TBUSBW->BusRequestType, ItemLong -- 12
+}
+#typev PEP_ResourceMgmt_c1662 91 "%0Device Name: %10!s!, Component ID: 0x%11!x!, TBUSBW is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustABusArbResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1658 90 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1658 :Device Name: %10!s!, Component ID: 0x%11!x!, TBUSBW is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustABusArbResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c934 42 "%0Device Name: %10!s!, Component ID: %11!x!, CLKRGM Resource configuration failed 0x%12!x!! Name : %13!s!  Action: %14!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAClkRgmResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+Status, ItemLong -- 12
+TClockNode->ClockName, ItemString -- 13
+ClockActionTypeEnum2Str[ResolveCLKRGMActionEnumtoString(TClockNode->Action)], ItemString -- 14
+}
+#typev PEP_ResourceMgmt_c928 41 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::928 :Device Name: %10!s!, Component ID: %11!x!, CLKRGM Resource configuration failed 0x%12!x!! Name : %13!s!  Action: %14!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAClkRgmResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+Status, ItemLong -- 12
+TClockNode->ClockName, ItemString -- 13
+ClockActionTypeEnum2Str[ResolveCLKRGMActionEnumtoString(TClockNode->Action)], ItemString -- 14
+}
+#typev PEP_ResourceMgmt_c910 40 "%0Device Name: %10!s!, Component ID: %11!x!, Invalid CLK action! Name : %12!s!  Action: %13!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAClkRgmResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TClockNode->ClockName, ItemString -- 12
+ClockActionTypeEnum2Str[ResolveCLKRGMActionEnumtoString(TClockNode->Action)], ItemString -- 13
+}
+#typev PEP_ResourceMgmt_c904 39 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::904 :Device Name: %10!s!, Component ID: %11!x!, Invalid CLK action! Name : %12!s!  Action: %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAClkRgmResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TClockNode->ClockName, ItemString -- 12
+ClockActionTypeEnum2Str[ResolveCLKRGMActionEnumtoString(TClockNode->Action)], ItemString -- 13
+}
+#typev PEP_ResourceMgmt_c865 38 "%0Device Name: %10!s!, Component ID: %11!x!,Invalid CLK action! Name : %12!s!  Action: %13!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAClkRgmResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TClockNode->ClockName, ItemString -- 12
+ClockActionTypeEnum2Str[ResolveCLKRGMActionEnumtoString(TClockNode->Action)], ItemString -- 13
+}
+#typev PEP_ResourceMgmt_c859 37 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::859 :Device Name: %10!s!, Component ID: %11!x!, Invalid CLK action! Name : %12!s!  Action: %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAClkRgmResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TClockNode->ClockName, ItemString -- 12
+ClockActionTypeEnum2Str[ResolveCLKRGMActionEnumtoString(TClockNode->Action)], ItemString -- 13
+}
+#typev PEP_ResourceMgmt_c731 36 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, Component ID: %11!x!, Clock Name: %12!s!, Clock action is %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAClkRgmResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TClockNode->ClockName, ItemString -- 12
+ClockActionTypeEnum2Str[ResolveCLKRGMActionEnumtoString(TClockNode->Action)], ItemString -- 13
+}
+#typev PEP_ResourceMgmt_c672 35 "%0Device Name: %10!s!, Component ID: %11!x!, TClockNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAClkRgmResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c668 34 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::668 :Device Name: %10!s!, Component ID: %11!x!, TClockNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAClkRgmResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c661 33 "%0 devListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAClkRgmResource
+{
+}
+#typev PEP_ResourceMgmt_c660 32 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::660 : devListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAClkRgmResource
+{
+}
+#typev PEP_ResourceMgmt_c1833 100 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1833 :Delay loop completed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustADelayResource
+{
+}
+#typev PEP_ResourceMgmt_c1830 99 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1830 :Completed KeStallExecutionProcessor" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustADelayResource
+{
+}
+#typev PEP_ResourceMgmt_c1825 98 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1825 :Executing KeStallExecutionProcessor" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustADelayResource
+{
+}
+#typev PEP_ResourceMgmt_c1813 97 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1813 :Device Name: %10!s!, Delay time in millisec: %11!d!, D0TimeStamp: %12!I64d!, D3TimeStamp: %13!I64d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustADelayResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+pDelayNode->DelayInMilliSecs, ItemLong -- 11
+devListNode->D0TimeStamp, ItemLongLong -- 12
+devListNode->D3TimeStamp, ItemLongLong -- 13
+}
+#typev PEP_ResourceMgmt_c1788 96 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, Delay time in millisec: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustADelayResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+pDelayNode->DelayInMilliSecs, ItemLong -- 12
+}
+#typev PEP_ResourceMgmt_c1783 95 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :pDelayNode is NULL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustADelayResource
+{
+}
+#typev PEP_ResourceMgmt_c1771 94 "%0Device Name: %10!s!, Component ID: 0x%11!x!, pDelayNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustADelayResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1767 93 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1767 :Device Name: %10!s!, Component ID: 0x%11!x!, pDelayNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustADelayResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2132 116 "%0Device Name: %10!s!, Component ID: 0x%11!x!, EXECUTE_FUNCTION Resource adjustment failed!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAExecuteFunctionResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2128 115 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2128 :Device Name: %10!s!, Component ID: 0x%11!x!, EXECUTE_FUNCTION Resource adjustment failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAExecuteFunctionResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2103 114 "%0Device Name: %10!s!, Component ID: 0x%11!x!, TExecuteFunctionNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAExecuteFunctionResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2099 113 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2099 :Device Name: %10!s!, Component ID: 0x%11!x!, TExecuteFunctionNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAExecuteFunctionResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2071 112 "%0Device Name: %10!s!, Component ID: 0x%11!x!, PowerDomainName: %12!s!, TFootswitchNode action is %13!s! Invalid FOOTSWITCH action" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAFootswitchResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TFootswitchNode->PowerDomainName, ItemString -- 12
+PowerDomainActionTypeEnum2Str[TFootswitchNode->Action], ItemString -- 13
+}
+#typev PEP_ResourceMgmt_c2065 111 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2065 :Device Name: %10!s!, Component ID: 0x%11!x!, PowerDomainName: %12!s!, TFootswitchNode action is %13!s! Invalid FOOTSWITCH action" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAFootswitchResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TFootswitchNode->PowerDomainName, ItemString -- 12
+PowerDomainActionTypeEnum2Str[TFootswitchNode->Action], ItemString -- 13
+}
+#typev PEP_ResourceMgmt_c2056 110 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2056 :Device Name: %10!s!, Component ID: %11!x!, PowerDomainName: %12!s!, TFootswitchNode action is %13!s!                          This is supported only for Suppressible resource package. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAFootswitchResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TFootswitchNode->PowerDomainName, ItemString -- 12
+PowerDomainActionTypeEnum2Str[TFootswitchNode->Action], ItemString -- 13
+}
+#typev PEP_ResourceMgmt_c2030 109 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, PowerDomainName: %12!s!, TFootswitchNode action is %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAFootswitchResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TFootswitchNode->PowerDomainName, ItemString -- 12
+PowerDomainActionTypeEnum2Str[TFootswitchNode->Action], ItemString -- 13
+}
+#typev PEP_ResourceMgmt_c2013 108 "%0Device Name: %10!s!, Component ID: 0x%11!x!, TFootswitchNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAFootswitchResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2009 107 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2009 :Device Name: %10!s!, Component ID: 0x%11!x!, TFootswitchNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAFootswitchResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2377 134 "%0 Device Name: %10!s!, Component ID: %11!x!, requestIdx = %12!u!, PSTATE_ADJUST, deviceId: %13!x!, Component Idx: %14!x!, stateSet %15!u!, state %16!u!" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateAdjustResource
+{
+devListNode ? (&(devListNode->InstancePathAnsi)) : &emptyString, ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0, ItemLong -- 11
+i, ItemLong -- 12
+devListNode ? devListNode->deviceId : 0, ItemLong -- 13
+PCompListNode ? PCompListNode->CompIndex : 0, ItemLong -- 14
+pstateAdjRes->requests[i].stateSet, ItemLong -- 15
+pstateAdjRes->requests[i].state, ItemLong -- 16
+}
+#typev PEP_ResourceMgmt_c2368 133 "%0 [Crit] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, Component ID: %11!x!, requestIdx = %12!u!, PSTATE_ADJUST, deviceId: %13!x!, Component Idx: %14!x!, stateSet %15!u!, state %16!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateAdjustResource
+{
+devListNode ? (&(devListNode->InstancePathAnsi)) : &emptyString, ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0, ItemLong -- 11
+i, ItemLong -- 12
+devListNode ? devListNode->deviceId : 0, ItemLong -- 13
+PCompListNode ? PCompListNode->CompIndex : 0, ItemLong -- 14
+pstateAdjRes->requests[i].stateSet, ItemLong -- 15
+pstateAdjRes->requests[i].state, ItemLong -- 16
+}
+#typev PEP_ResourceMgmt_c2349 132 "%0Device Name: %10!s!, Component ID: 0x%11!x!, PSTATE_ADJUST from a D-state is not supported on Multi-Component devices" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateAdjustResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2345 131 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2345 :Device Name: %10!s!, Component ID: 0x%11!x!, PSTATE_ADJUST from a D-state is not supported on Multi-Component devices" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateAdjustResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2325 130 "%0Device Name: %10!s!, Component ID: 0x%11!x!, pstateAdjRes is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateAdjustResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2321 129 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2321 :Device Name: %10!s!, Component ID: 0x%11!x!, pstateAdjRes is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateAdjustResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2292 128 "%0 Device Name: %10!s!, Component ID: %11!x!, requestIdx = %12!u!, PSTATE_RESTORE, deviceId: %13!x!, Component Idx: %14!x!" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateRestoreResource
+{
+devListNode ? (&(devListNode->InstancePathAnsi)) : &emptyString, ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0, ItemLong -- 11
+0, ItemLong -- 12
+devListNode ? devListNode->deviceId : 0, ItemLong -- 13
+PCompListNode ? PCompListNode->CompIndex : 0, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c2285 127 "%0 [Crit] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, Component ID: %11!x!, requestIdx = %12!u!, PSTATE_RESTORE, deviceId: %13!x!, Component Idx: %14!x!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateRestoreResource
+{
+devListNode ? (&(devListNode->InstancePathAnsi)) : &emptyString, ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0, ItemLong -- 11
+0, ItemLong -- 12
+devListNode ? devListNode->deviceId : 0, ItemLong -- 13
+PCompListNode ? PCompListNode->CompIndex : 0, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c2278 126 "%0Device Name: %10!s!, Component ID: %11!x!, PSTATE_ADJUST from a D-state is not supported on Multi-Component devices" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateRestoreResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2274 125 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2274 :Device Name: %10!s!, Component ID: %11!x!, PSTATE_ADJUST from a D-state is not supported on Multi-Component devices" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateRestoreResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2244 124 "%0Device Name: %10!s!, Component ID: 0x%11!x!, PTempResourceNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateRestoreResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2240 123 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2240 :Device Name: %10!s!, Component ID: 0x%11!x!, PTempResourceNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateRestoreResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2211 122 "%0 Device Name: %10!s!, Component ID: %11!x!, requestIdx = %12!u!, PSTATE_SAVE, deviceId: %13!x!, Component Idx: %14!x!, State: %15!s!" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateSaveResource
+{
+devListNode ? (&(devListNode->InstancePathAnsi)) : &emptyString, ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0, ItemLong -- 11
+0, ItemLong -- 12
+devListNode ? devListNode->deviceId : 0, ItemLong -- 13
+PCompListNode ? PCompListNode->CompIndex : 0, ItemLong -- 14
+PCompListNode ? (&(PCompListNode->P_State->StateTypeAnsi)) : &emptyString, ItemPString -- 15
+}
+#typev PEP_ResourceMgmt_c2203 121 "%0 [Crit] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, Component ID: %11!x!, requestIdx = %12!u!, PSTATE_SAVE, deviceId: %13!x!, Component Idx: %14!x!, State: %15!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateSaveResource
+{
+devListNode ? (&(devListNode->InstancePathAnsi)) : &emptyString, ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0, ItemLong -- 11
+0, ItemLong -- 12
+devListNode ? devListNode->deviceId : 0, ItemLong -- 13
+PCompListNode ? PCompListNode->CompIndex : 0, ItemLong -- 14
+PCompListNode ? (&(PCompListNode->P_State->StateTypeAnsi)) : &emptyString, ItemPString -- 15
+}
+#typev PEP_ResourceMgmt_c2194 120 "%0Device Name: %10!s!, Component ID: 0x%11!x!, PSTATE_ADJUST from a D-state is not supported on Multi-Component devices" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateSaveResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2190 119 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2190 :Device Name: %10!s!, Component ID: 0x%11!x!, PSTATE_ADJUST from a D-state is not supported on Multi-Component devices" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateSaveResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2160 118 "%0Device Name: %10!s!, Component ID: 0x%11!x!, PTempResourceNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateSaveResource
+{
+devListNode ? (&(devListNode->InstancePathAnsi)) : &emptyString, ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2156 117 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2156 :Device Name: %10!s!, Component ID: 0x%11!x!, PTempResourceNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPStateSaveResource
+{
+devListNode ? (&(devListNode->InstancePathAnsi)) : &emptyString, ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1881 103 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, PCIE HW DRC CMD : UNKNOWN_CMD" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPcieHwDrvResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1874 102 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, PCIE HW DRC CMD : PCIE_PLIM_ENABLE_DISABLE_CMD" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPcieHwDrvResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1863 101 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, PCIE HW DRC CMD : PCIE_FORCE_WAKE_CMD" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPcieHwDrvResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1027 48 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, RESOURCE PMICGPIO 2 configured!!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicGpioResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1017 47 "%0Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! PMICGPIO Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicGpioResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicGpioNode->PmicGpioIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicGpioNode->PmicGpioIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicGpioNode->PmicGpioIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c1010 46 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1010 :Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! PMICGPIO Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicGpioResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicGpioNode->PmicGpioIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicGpioNode->PmicGpioIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicGpioNode->PmicGpioIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c992 45 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicGpioResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicGpioNode->PmicGpioIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicGpioNode->PmicGpioIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicGpioNode->PmicGpioIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+}
+#typev PEP_ResourceMgmt_c971 44 "%0Device Name: %10!s!, Component ID: 0x%11!x!, PmicGpioNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicGpioResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c967 43 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::967 :Device Name: %10!s!, Component ID: 0x%11!x!, PmicGpioNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicGpioResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c575 26 "%0Device Name: %10!s!, Component ID: %11!d!, Pmic_%12!d!_Gpio: %13!d!, GpioAction is %14!d! invalid" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicGpioV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicGpioV2Node->pin_cfg.pmic_num, ItemLong -- 12
+PmicGpioV2Node->pin_cfg.gpio_id, ItemLong -- 13
+PmicGpioV2Node->Action, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c568 25 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::568 :Device Name: %10!s!, Component ID: %11!d!, Pmic_%12!d!_Gpio: %13!d!, GpioAction is %14!d! invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicGpioV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicGpioV2Node->pin_cfg.pmic_num, ItemLong -- 12
+PmicGpioV2Node->pin_cfg.gpio_id, ItemLong -- 13
+PmicGpioV2Node->Action, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c551 24 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!d!, Pmic_%12!d!_Gpio: %13!d!, GpioAction is %14!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicGpioV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicGpioV2Node->pin_cfg.pmic_num, ItemLong -- 12
+PmicGpioV2Node->pin_cfg.gpio_id, ItemLong -- 13
+GpioActionTypeEnum2Str[PmicGpioV2Node->Action], ItemString -- 14
+}
+#typev PEP_ResourceMgmt_c544 23 "%0Device Name: %10!s!, Component ID: 0x%11!x!, PmicGpioV2Node is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicGpioV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c540 22 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::540 :Device Name: %10!s!, Component ID: 0x%11!x!, PmicGpioV2Node is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicGpioV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1324 71 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, RESOURCE PMICIBBLAB 2 configured!!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicIbbLabResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1314 70 "%0Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! PMICIBBLAB Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicIbbLabResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicIbbLabNode->PmicIbbLabIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicIbbLabNode->PmicIbbLabIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicIbbLabNode->PmicIbbLabIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c1307 69 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1307 :Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! PMICIBBLAB Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicIbbLabResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicIbbLabNode->PmicIbbLabIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicIbbLabNode->PmicIbbLabIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicIbbLabNode->PmicIbbLabIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c1290 68 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicIbbLabResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicIbbLabNode->PmicIbbLabIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicIbbLabNode->PmicIbbLabIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicIbbLabNode->PmicIbbLabIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+}
+#typev PEP_ResourceMgmt_c1269 67 "%0Device Name: %10!s!, Component ID: %11!x!, PmicIbbLabNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicIbbLabResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1265 66 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1265 :Device Name: %10!s!, Component ID: %11!x!, PmicIbbLabNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicIbbLabResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1488 83 "%0 [Verb] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, RESOURCE PMICLPG 2 !!!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicLpgResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1478 82 "%0Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! PMICLPG Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicLpgResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicLpgNode->PmicLpgIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicLpgNode->PmicLpgIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicLpgNode->PmicLpgIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c1471 81 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1471 :Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! PMICLPG Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicLpgResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicLpgNode->PmicLpgIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicLpgNode->PmicLpgIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicLpgNode->PmicLpgIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c1454 80 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicLpgResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicLpgNode->PmicLpgIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicLpgNode->PmicLpgIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicLpgNode->PmicLpgIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+}
+#typev PEP_ResourceMgmt_c1433 79 "%0Device Name: %10!s!, Component ID: 0x%11!x!, PmicLpgNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicLpgResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1429 78 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1429 :Device Name: %10!s!, Component ID: 0x%11!x!, PmicLpgNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicLpgResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1107 54 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, RESOURCE PMICMPP 2 configured!!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicMppResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1097 53 "%0Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! PMICPPP Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicMppResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicMppNode->PmicMppIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicMppNode->PmicMppIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicMppNode->PmicMppIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c1090 52 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1090 :Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! PMICPPP Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicMppResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicMppNode->PmicMppIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicMppNode->PmicMppIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicMppNode->PmicMppIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c1073 51 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicMppResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicMppNode->PmicMppIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicMppNode->PmicMppIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicMppNode->PmicMppIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+}
+#typev PEP_ResourceMgmt_c1053 50 "%0Device Name: %10!s!, Component ID: %11!x!, PmicMppNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicMppResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1049 49 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1049 :Device Name: %10!s!, Component ID: %11!x!, PmicMppNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicMppResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1407 77 "%0 [Verb] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, RESOURCE PMICUBOTG 2 !!!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicUsbOtgResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1396 76 "%0Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! PMICUBOTG Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicUsbOtgResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicUsbOtgNode->PmicUsbOtgIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicUsbOtgNode->PmicUsbOtgIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicUsbOtgNode->PmicUsbOtgIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c1389 75 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1389 :Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! PMICUBOTG Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicUsbOtgResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicUsbOtgNode->PmicUsbOtgIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicUsbOtgNode->PmicUsbOtgIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicUsbOtgNode->PmicUsbOtgIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c1372 74 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicUsbOtgResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicUsbOtgNode->PmicUsbOtgIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicUsbOtgNode->PmicUsbOtgIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicUsbOtgNode->PmicUsbOtgIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+}
+#typev PEP_ResourceMgmt_c1351 73 "%0Device Name: %10!s!, Component ID: %11!x!, PmicUsbOtgNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicUsbOtgResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1347 72 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1347 :Device Name: %10!s!, Component ID: %11!x!, PmicUsbOtgNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicUsbOtgResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1601 89 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, PmicVreg action is %12!d!, ResourceId: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicVregVoteResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+CurrentResourceSettings.Type, ItemLong -- 12
+ResourceId, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c1582 88 "%0Device Name: %10!s!, Component ID: %11!x!, ResourceId: %12!d! PMICVREGVOTE, DISCRETE_VREGVOTE, or PMICDIVCLK Resourceconfiguration failed 0x%13!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicVregVoteResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicVregVote->vregVote.ResourceId, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c1576 87 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1576 :Device Name: %10!s!, Component ID: %11!x!, ResourceId: %12!d! PMICVREGVOTE, DISCRETE_VREGVOTE, or PMICDIVCLK Resourceconfiguration failed 0x%13!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicVregVoteResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicVregVote->vregVote.ResourceId, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c1544 86 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, ResourceId: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicVregVoteResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicVregVote->vregVote.ResourceId, ItemLong -- 12
+}
+#typev PEP_ResourceMgmt_c1514 85 "%0Device Name: %10!s!, Component ID: 0x%11!x!, PmicVregVote is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicVregVoteResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1510 84 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1510 :Device Name: %10!s!, Component ID: 0x%11!x!, PmicVregVote is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicVregVoteResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1189 60 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, RESOURCE PMICWLED 2 configured !!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicWledResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1178 59 "%0Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! PMICWLED Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicWledResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicWledNode->PmicWledIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicWledNode->PmicWledIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicWledNode->PmicWledIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c1171 58 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1171 :Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! PMICWLED Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicWledResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicWledNode->PmicWledIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicWledNode->PmicWledIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicWledNode->PmicWledIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c1154 57 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, PmicIoctlValue: %12!d!, PmicIoctlInPutBufferize: %13!I64d!, PmicIoctlOutPutBufferize: %14!I64d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicWledResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicWledNode->PmicWledIoctlAndSizeValue.PmicIoctlValue, ItemLong -- 12
+PmicWledNode->PmicWledIoctlAndSizeValue.PmicIoctlInPutBufferize, ItemLongLong -- 13
+PmicWledNode->PmicWledIoctlAndSizeValue.PmicIoctlOutPutBufferize, ItemLongLong -- 14
+}
+#typev PEP_ResourceMgmt_c1133 56 "%0Device Name: %10!s!, Component ID: %11!x!, PmicWledNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicWledResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1129 55 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1129 :Device Name: %10!s!, Component ID: %11!x!, PmicWledNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicWledResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1247 65 "%0Device Name: %10!s!, Component ID: %11!d!, PmicNum: %12!d!, GpioAction is %13!d! invalid" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicWledV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicWledV2Node->wled_cfg.PmicWledInPutBuffer.pmicnum, ItemLong -- 12
+PmicWledV2Node->wled_cfg.PmicWledInPutBuffer.module_enable, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c1241 64 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1241 :Device Name: %10!s!, Component ID: %11!d!, PmicNum: %12!d!, GpioAction is %13!d! invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicWledV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicWledV2Node->wled_cfg.PmicWledInPutBuffer.pmicnum, ItemLong -- 12
+PmicWledV2Node->wled_cfg.PmicWledInPutBuffer.module_enable, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c1225 63 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!d!, PmicNum: %12!d!, GpioAction is %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicWledV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+PmicWledV2Node->wled_cfg.PmicWledInPutBuffer.pmicnum, ItemLong -- 12
+ActionTypeEnum2Str[PmicWledV2Node->Action], ItemString -- 13
+}
+#typev PEP_ResourceMgmt_c1218 62 "%0Device Name: %10!s!, Component ID: 0x%11!x!, PmicWledV2Node is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicWledV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1214 61 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1214 :Device Name: %10!s!, Component ID: 0x%11!x!, PmicWledV2Node is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAPmicWledV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1921 106 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, Resource name: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustARequiredResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+(char *)pNpaRequiredResource->ResourceName, ItemString -- 12
+}
+#typev PEP_ResourceMgmt_c1901 105 "%0Device Name: %10!s!, Component ID: 0x%11!x!, pNpaRequiredResource is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustARequiredResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c1897 104 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::1897 :Device Name: %10!s!, Component ID: 0x%11!x!, pNpaRequiredResource is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustARequiredResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2685 143 "%0Invalid resource type (%10!s!) for device: %11!s!, Component Id: 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAResource
+{
+((PTempResourceNode->type >= 0)                         && (PTempResourceNode->type < NUM_RESOURCE_TYPES)) ?                        ResourceTypeEnum2Str[PTempResourceNode->type] : 'INVALID', ItemString -- 10
+&(devListNode->InstancePathAnsi), ItemPString -- 11
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 12
+}
+#typev PEP_ResourceMgmt_c2678 142 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2678 :Invalid resource type (%10!s!) for device: %11!s!, Component Id: 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAResource
+{
+((PTempResourceNode->type >= 0)                             && (PTempResourceNode->type < NUM_RESOURCE_TYPES)) ?                            ResourceTypeEnum2Str[PTempResourceNode->type] : 'INVALID', ItemString -- 10
+&(devListNode->InstancePathAnsi), ItemPString -- 11
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 12
+}
+#typev PEP_ResourceMgmt_c2497 141 "%0Resource %10!s! - request received for device: %11!s!, Component Id: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAResource
+{
+ResourceTypeEnum2Str[PTempResourceNode->type], ItemString -- 10
+&(devListNode->InstancePathAnsi), ItemPString -- 11
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 12
+}
+#typev PEP_ResourceMgmt_c2492 140 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Resource %10!s! - request received for device: %11!s!, Component Id: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAResource
+{
+ResourceTypeEnum2Str[PTempResourceNode->type], ItemString -- 10
+&(devListNode->InstancePathAnsi), ItemPString -- 11
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 12
+}
+#typev PEP_ResourceMgmt_c2469 139 "%0PTempResourceNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAResource
+{
+}
+#typev PEP_ResourceMgmt_c2467 138 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2467 :PTempResourceNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustAResource
+{
+}
+#typev PEP_ResourceMgmt_c2425 137 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, RPMH_COMMIT Resource" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustARpmhCommitResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2418 136 "%0Device Name: %10!s!, Component ID: 0x%11!x!, pRpmhCommitNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustARpmhCommitResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2414 135 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2414 :Device Name: %10!s!, Component ID: 0x%11!x!, pRpmhCommitNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustARpmhCommitResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c452 16 "%0Device Name: %10!s!, Component ID: %11!x!, PinNumber: %12!d!, FunctionSelect: %13!d!, Direction: %14!d!, PullValue: %15!d!, DriveStrength: %16!d!, GPIOState: %17!d!, EnableLPM: %18!d! LPIGpio: %19!d! TLMMGPIO Resource configuration failed 0x%20!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmGpioResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TTLMMNode->PinNumber, ItemLong -- 12
+TTLMMNode->FunctionSelect, ItemLong -- 13
+TTLMMNode->Direction, ItemLong -- 14
+TTLMMNode->PullValue, ItemLong -- 15
+TTLMMNode->DriveStrength, ItemLong -- 16
+TTLMMNode->GPIOState, ItemLong -- 17
+TTLMMNode->EnableLPM, ItemLong -- 18
+TTLMMNode->LPIGpio, ItemLong -- 19
+Status, ItemLong -- 20
+}
+#typev PEP_ResourceMgmt_c440 15 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::440 :Device Name: %10!s!, Component ID: %11!x!, PinNumber: %12!d!, FunctionSelect: %13!d!, Direction: %14!d!, PullValue: %15!d!, DriveStrength: %16!d!, GPIOState: %17!d!, EnableLPM: %18!d! LPIGpio: %19!d! TLMMGPIO Resource configuration failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmGpioResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TTLMMNode->PinNumber, ItemLong -- 12
+TTLMMNode->FunctionSelect, ItemLong -- 13
+TTLMMNode->Direction, ItemLong -- 14
+TTLMMNode->PullValue, ItemLong -- 15
+TTLMMNode->DriveStrength, ItemLong -- 16
+TTLMMNode->GPIOState, ItemLong -- 17
+TTLMMNode->EnableLPM, ItemLong -- 18
+TTLMMNode->LPIGpio, ItemLong -- 19
+}
+#typev PEP_ResourceMgmt_c406 14 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, PinNumber: %12!d!, FunctionSelect: %13!d!, Direction: %14!d!, PullValue: %15!d!, DriveStrength: %16!d!, GPIOState: %17!d!, EnableLPM: %18!d!, LPIGpio: %19!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmGpioResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TTLMMNode->PinNumber, ItemLong -- 12
+TTLMMNode->FunctionSelect, ItemLong -- 13
+TTLMMNode->Direction, ItemLong -- 14
+TTLMMNode->PullValue, ItemLong -- 15
+TTLMMNode->DriveStrength, ItemLong -- 16
+TTLMMNode->GPIOState, ItemLong -- 17
+TTLMMNode->EnableLPM, ItemLong -- 18
+TTLMMNode->LPIGpio, ItemLong -- 19
+}
+#typev PEP_ResourceMgmt_c385 13 "%0Device Name: %10!s!, Component ID: %11!x!, TTLMMNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmGpioResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c381 12 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::381 :Device Name: %10!s!, Component ID: %11!x!, TTLMMNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmGpioResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c519 21 "%0Device Name: %10!s!, Component ID: %11!d!, Gpio pin_num: %12!d!, GpioAction is %13!d! invalid" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmGpioV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TlmmGpioV2Node->pin_cfg.PinNumber, ItemLong -- 12
+TlmmGpioV2Node->Action, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c513 20 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::513 :Device Name: %10!s!, Component ID: %11!d!, Gpio pin_num: %12!d!, GpioAction is %13!d! invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmGpioV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TlmmGpioV2Node->pin_cfg.PinNumber, ItemLong -- 12
+TlmmGpioV2Node->Action, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c496 19 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!d!, Gpio pin_num: %12!d!, GpioAction is %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmGpioV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TlmmGpioV2Node->pin_cfg.PinNumber, ItemLong -- 12
+GpioActionTypeEnum2Str[TlmmGpioV2Node->Action], ItemString -- 13
+}
+#typev PEP_ResourceMgmt_c489 18 "%0Device Name: %10!s!, Component ID: 0x%11!x!, TlmmGpioV2Node is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmGpioV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c485 17 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::485 :Device Name: %10!s!, Component ID: 0x%11!x!, TlmmGpioV2Node is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmGpioV2Resource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c633 31 "%0Device Name: %10!s!, Component ID: %11!x!, Offset: %12!d!, BitMask: %13!d!, ValueToWrite: %14!d! TLMMPORT Resource configuration failed 0x%15!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmPortResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TTLMMPortNode->Offset, ItemLong -- 12
+TTLMMPortNode->BitMask, ItemLong -- 13
+TTLMMPortNode->ValueToWrite, ItemLong -- 14
+Status, ItemLong -- 15
+}
+#typev PEP_ResourceMgmt_c626 30 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::626 :Device Name: %10!s!, Component ID: %11!x!, Offset: %12!d!, BitMask: %13!d!, ValueToWrite: %14!d! TLMMPORT Resource configuration failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmPortResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TTLMMPortNode->Offset, ItemLong -- 12
+TTLMMPortNode->BitMask, ItemLong -- 13
+TTLMMPortNode->ValueToWrite, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c614 29 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Device Name: %10!s!, Component ID: %11!x!, Offset: %12!d!, BitMask: %13!d!, ValueToWrite: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmPortResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+TTLMMPortNode->Offset, ItemLong -- 12
+TTLMMPortNode->BitMask, ItemLong -- 13
+TTLMMPortNode->ValueToWrite, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c597 28 "%0Device Name: %10!s!, Component ID: %11!x!, TTLMMPortNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmPortResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c593 27 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::593 :Device Name: %10!s!, Component ID: %11!x!, TTLMMPortNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=AdjustATlmmPortResource
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+PCompListNode ? PCompListNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c3545 192 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :status = %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=CollectMMCoreClocksRundown
+{
+status, ItemLong -- 10
+}
+#typev PEP_ResourceMgmt_c2899 153 "%0Couldn't find the NPA resource: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=FindNpaResource
+{
+string, ItemString -- 10
+}
+#typev PEP_ResourceMgmt_c2897 152 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2897 :Couldn't find the NPA resource: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=FindNpaResource
+{
+string, ItemString -- 10
+}
+#typev PEP_ResourceMgmt_c2880 151 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! :Finding NPA Resource: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=FindNpaResource
+{
+Handle->resource_name, ItemString -- 10
+}
+#typev PEP_ResourceMgmt_c2873 150 "%0Invalid parameters for String or Length" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=FindNpaResource
+{
+}
+#typev PEP_ResourceMgmt_c2871 149 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2871 :Invalid parameters for String or Length" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=FindNpaResource
+{
+}
+#typev PEP_ResourceMgmt_c260 11 "%0 PepMarkDebuggerClock - no TClockNode for device: %10!s!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PepMarkDebuggerClock
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_ResourceMgmt_c257 10 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::257 : PepMarkDebuggerClock - no TClockNode for device: %10!s!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PepMarkDebuggerClock
+{
+&(devListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_ResourceMgmt_c3037 164 "%0 [Verb] PEP_ResourceMgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=SetAbandonDeviceStates
+{
+}
+#typev PEP_ResourceMgmt_c3027 163 "%0 Device Name: %10!s!, stateSetIdx = %11!u!, requesting abandon %12!s!%13!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetAbandonDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+0, ItemLong -- 11
+&(PTempDevListNode->D_State->StateTypeAnsi), ItemPString -- 12
+desiredDState - 1, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c3021 162 "%0 [Crit] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, stateSetIdx = %11!u!, requesting abandon %12!s!%13!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetAbandonDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+0, ItemLong -- 11
+&(PTempDevListNode->D_State->StateTypeAnsi), ItemPString -- 12
+desiredDState - 1, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c2995 161 "%0 Device Name: %10!s!, Component IDX = %11!u!, stateSetIdx = %12!u!, requesting abandon %13!s!%14!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetAbandonDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+i, ItemLong -- 12
+&(PTempCompListNode->P_State->StateTypeAnsi), ItemPString -- 13
+desiredPState, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c2988 160 "%0 [Crit] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, Component IDX = %11!u!, stateSetIdx = %12!u!, requesting abandon %13!s!%14!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetAbandonDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+i, ItemLong -- 12
+&(PTempCompListNode->P_State->StateTypeAnsi), ItemPString -- 13
+desiredPState, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c2967 159 "%0 Device Name: %10!s!, Component IDX = %11!u!, stateSetIdx = %12!u!, requesting abandon %13!s!%14!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetAbandonDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+0, ItemLong -- 12
+&(PTempCompListNode->F_State->StateTypeAnsi), ItemPString -- 13
+desiredFState, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c2960 158 "%0 [Crit] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, Component IDX = %11!u!, stateSetIdx = %12!u!, requesting abandon %13!s!%14!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetAbandonDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+0, ItemLong -- 12
+&(PTempCompListNode->F_State->StateTypeAnsi), ItemPString -- 13
+desiredFState, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c2945 157 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! : Device name: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetAbandonDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_ResourceMgmt_c2938 156 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetAbandonDeviceStates
+{
+}
+#typev PEP_ResourceMgmt_c2937 155 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2937 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetAbandonDeviceStates
+{
+}
+#typev PEP_ResourceMgmt_c2931 154 "%0 [Verb] PEP_ResourceMgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=SetAbandonDeviceStates
+{
+}
+#typev PEP_ResourceMgmt_c2860 148 "%0 [Verb] PEP_ResourceMgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=SetDefaultResourceStates
+{
+}
+#typev PEP_ResourceMgmt_c2749 147 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! : Device name: %10!s!,currentAction: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetDefaultResourceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+currentAction, ItemLong -- 11
+}
+#typev PEP_ResourceMgmt_c2742 146 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetDefaultResourceStates
+{
+}
+#typev PEP_ResourceMgmt_c2741 145 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::2741 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetDefaultResourceStates
+{
+}
+#typev PEP_ResourceMgmt_c2731 144 "%0 [Verb] PEP_ResourceMgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=SetDefaultResourceStates
+{
+}
+#typev PEP_ResourceMgmt_c3317 186 "%0 [Verb] PEP_ResourceMgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=SetPreloadDeviceStates
+{
+}
+#typev PEP_ResourceMgmt_c3301 185 "%0 Device Name: %10!s!, Component IDX = %11!u!, stateSetIdx = %12!u!, requesting preload %13!s!%14!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPreloadDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+i, ItemLong -- 12
+&(PTempCompListNode->P_State->StateTypeAnsi), ItemPString -- 13
+desiredPState, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c3294 184 "%0 [Crit] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, Component IDX = %11!u!, stateSetIdx = %12!u!, requesting preload %13!s!%14!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPreloadDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+i, ItemLong -- 12
+&(PTempCompListNode->P_State->StateTypeAnsi), ItemPString -- 13
+desiredPState, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c3272 183 "%0 Device Name: %10!s!, Component IDX = %11!u!, stateSetIdx = %12!u!, requesting preload %13!s!%14!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPreloadDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+0, ItemLong -- 12
+&(PTempCompListNode->F_State->StateTypeAnsi), ItemPString -- 13
+desiredFState, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c3265 182 "%0 [Crit] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, Component IDX = %11!u!, stateSetIdx = %12!u!, requesting preload %13!s!%14!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPreloadDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+0, ItemLong -- 12
+&(PTempCompListNode->F_State->StateTypeAnsi), ItemPString -- 13
+desiredFState, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c3252 181 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! : Device name: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPreloadDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_ResourceMgmt_c3245 180 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPreloadDeviceStates
+{
+}
+#typev PEP_ResourceMgmt_c3244 179 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::3244 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPreloadDeviceStates
+{
+}
+#typev PEP_ResourceMgmt_c3232 178 "%0 Device Name: %10!s!, stateSetIdx = %11!u!, requesting preload %12!s!%13!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPreloadDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+0, ItemLong -- 11
+&(PTempDevListNode->D_State->StateTypeAnsi), ItemPString -- 12
+desiredDState - 1, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c3226 177 "%0 [Crit] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, stateSetIdx = %11!u!, requesting preload %12!s!%13!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPreloadDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+0, ItemLong -- 11
+&(PTempDevListNode->D_State->StateTypeAnsi), ItemPString -- 12
+desiredDState - 1, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c3212 176 "%0 [Verb] PEP_ResourceMgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=SetPreloadDeviceStates
+{
+}
+#typev PEP_ResourceMgmt_c3176 175 "%0 [Verb] PEP_ResourceMgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=SetPrepareDeviceStates
+{
+}
+#typev PEP_ResourceMgmt_c3166 174 "%0 Device Name: %10!s!, stateSetIdx = %11!u!, requesting prepare %12!s!%13!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPrepareDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+0, ItemLong -- 11
+&(PTempDevListNode->D_State->StateTypeAnsi), ItemPString -- 12
+desiredDState - 1, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c3160 173 "%0 [Crit] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, stateSetIdx = %11!u!, requesting prepare %12!s!%13!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPrepareDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+0, ItemLong -- 11
+&(PTempDevListNode->D_State->StateTypeAnsi), ItemPString -- 12
+desiredDState - 1, ItemLong -- 13
+}
+#typev PEP_ResourceMgmt_c3135 172 "%0 Device Name: %10!s!, Component IDX = %11!u!, stateSetIdx = %12!u!, requesting prepare %13!s!%14!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPrepareDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+i, ItemLong -- 12
+&(PTempCompListNode->P_State->StateTypeAnsi), ItemPString -- 13
+desiredPState, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c3128 171 "%0 [Crit] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, Component IDX = %11!u!, stateSetIdx = %12!u!, requesting prepare %13!s!%14!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPrepareDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+i, ItemLong -- 12
+&(PTempCompListNode->P_State->StateTypeAnsi), ItemPString -- 13
+desiredPState, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c3107 170 "%0 Device Name: %10!s!, Component IDX = %11!u!, stateSetIdx = %12!u!, requesting prepare %13!s!%14!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPrepareDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+0, ItemLong -- 12
+&(PTempCompListNode->F_State->StateTypeAnsi), ItemPString -- 13
+desiredFState, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c3100 169 "%0 [Crit] PEP_ResourceMgmt.c::%!FUNC! : Device Name: %10!s!, Component IDX = %11!u!, stateSetIdx = %12!u!, requesting prepare %13!s!%14!u! state" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPrepareDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+0, ItemLong -- 12
+&(PTempCompListNode->F_State->StateTypeAnsi), ItemPString -- 13
+desiredFState, ItemLong -- 14
+}
+#typev PEP_ResourceMgmt_c3086 168 "%0 [Info] PEP_ResourceMgmt.c::%!FUNC! : Device name: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPrepareDeviceStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_ResourceMgmt_c3079 167 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPrepareDeviceStates
+{
+}
+#typev PEP_ResourceMgmt_c3078 166 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::3078 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=SetPrepareDeviceStates
+{
+}
+#typev PEP_ResourceMgmt_c3072 165 "%0 [Verb] PEP_ResourceMgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=SetPrepareDeviceStates
+{
+}
+#typev PEP_ResourceMgmt_c3433 191 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::3433 :One or more clocks under MMCoreClocksToLog is not valid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetMMCoreClockListToLog
+{
+}
+#typev PEP_ResourceMgmt_c3406 190 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::3406 :Failed to allocate memory for MMCoreClocksToLog" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetMMCoreClockListToLog
+{
+}
+#typev PEP_ResourceMgmt_c3387 189 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::3387 :Failed to query Resource list registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetMMCoreClockListToLog
+{
+}
+#typev PEP_ResourceMgmt_c3373 188 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::3373 :Failed WdfCollectionCreate" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetMMCoreClockListToLog
+{
+}
+#typev PEP_ResourceMgmt_c3361 187 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::3361 :Failed to open PEP HW registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetMMCoreClockListToLog
+{
+}
+#typev PEP_ResourceMgmt_c3433 191 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::3433 :One or more clocks under MMCoreClocksToLog is not valid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetMMCoreClockListToLog$fin$0
+{
+}
+#typev PEP_ResourceMgmt_c3406 190 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::3406 :Failed to allocate memory for MMCoreClocksToLog" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetMMCoreClockListToLog$fin$0
+{
+}
+#typev PEP_ResourceMgmt_c3387 189 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::3387 :Failed to query Resource list registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetMMCoreClockListToLog$fin$0
+{
+}
+#typev PEP_ResourceMgmt_c3373 188 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::3373 :Failed WdfCollectionCreate" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetMMCoreClockListToLog$fin$0
+{
+}
+#typev PEP_ResourceMgmt_c3361 187 "%0 [Err ] PEP_ResourceMgmt.c::%!FUNC!::3361 :Failed to open PEP HW registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetMMCoreClockListToLog$fin$0
+{
+}

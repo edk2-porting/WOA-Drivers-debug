@@ -1,0 +1,438 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+ffd83d33-8bf4-3d4b-ec7d-76e7e7669911 Framework // SRC=PppFramework.c MJ= MN=
+#typev PppFramework_c2759 99 "%0%!FUNC!  CheckAndDeletePppParentResourceVote Status = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndDeletePppParentResourceVote
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PppFramework_c2742 98 "%0%!FUNC!  CheckAndDeletePppParentResourceVote entry not found: Chid ResourceId = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndDeletePppParentResourceVote
+{
+pChildResourceVote->ResourceId, ItemLong -- 10
+}
+#typev PppFramework_c2733 97 "%0%!FUNC!  CheckAndDeletePppParentResourceVote entry found: Chid ResourceId = %10!d!, Parent ResourceId = %11!d!, Index:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndDeletePppParentResourceVote
+{
+pChildResourceVote->ResourceId, ItemLong -- 10
+g_pPppResourceParentChildInfoList[Index].pParentResource->PppResourceId, ItemLong -- 11
+Index, ItemLong -- 12
+}
+#typev PppFramework_c2716 96 "%0%!FUNC!  failed ResourceId = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndDeletePppParentResourceVote
+{
+pChildResourceVote->ResourceId, ItemLong -- 10
+}
+#typev PppFramework_c2678 95 "%0%!FUNC!  CheckAndVotePppParentResource Voted En:%10!d! with voltage = %11!d!, Status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndVotePppParentResource
+{
+pChildResourceVote->Setting.Ldo.software_enable, ItemLong -- 10
+Voltage, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev PppFramework_c2670 94 "%0%!FUNC!  CheckAndVotePppParentResource Resource type %10!d! parent not supported" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndVotePppParentResource
+{
+ParentVote.Type, ItemLong -- 10
+}
+#typev PppFramework_c2628 93 "%0%!FUNC!  Buck Vset voltage is %10!d! uV" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndVotePppParentResource
+{
+Voltage, ItemLong -- 10
+}
+#typev PppFramework_c2622 92 "%0%!FUNC!  Voltage:%10!d! uV is greater than buck max voltage %11!d! uV" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndVotePppParentResource
+{
+Voltage, ItemLong -- 10
+g_pPppResourceParentChildInfoList[Index].MaxVoltage, ItemLong -- 11
+}
+#typev PppFramework_c2616 91 "%0%!FUNC!  Voltage:%10!d! uV is Less than buck min voltage %11!d! uV" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndVotePppParentResource
+{
+Voltage, ItemLong -- 10
+g_pPppResourceParentChildInfoList[Index].MinVoltage, ItemLong -- 11
+}
+#typev PppFramework_c2606 90 "%0%!FUNC!  LDO voltage is 0" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndVotePppParentResource
+{
+}
+#typev PppFramework_c2586 89 "%0%!FUNC!  CheckAndVotePppParentResource entry not found: Chid ResourceId = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndVotePppParentResource
+{
+pChildResourceVote->ResourceId, ItemLong -- 10
+}
+#typev PppFramework_c2577 88 "%0%!FUNC!  CheckAndVotePppParentResource entry found: Chid ResourceId = %10!d!, Parent ResourceId = %11!d!, Index:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndVotePppParentResource
+{
+pChildResourceVote->ResourceId, ItemLong -- 10
+g_pPppResourceParentChildInfoList[Index].pParentResource->PppResourceId, ItemLong -- 11
+Index, ItemLong -- 12
+}
+#typev PppFramework_c2553 87 "%0%!FUNC!  failed ResourceId = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=CheckAndVotePppParentResource
+{
+pChildResourceVote->ResourceId, ItemLong -- 10
+}
+#typev PppFramework_c536 15 "%0PppFramework.c::-%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=DeinitializePppFramework
+{
+}
+#typev PppFramework_c420 14 "%0PppFramework.c::+%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=DeinitializePppFramework
+{
+}
+#typev PppFramework_c2502 86 "%0%!FUNC! ResourceId = %10!d!, ResourceType = %11!d!, VoteSetType = %12!d!, DrvId = %13!d! failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=DeletePppResourceVote
+{
+pResourceVote->ResourceId, ItemLong -- 10
+pResourceVote->Type, ItemLong -- 11
+pResourceVote->SetType, ItemLong -- 12
+(UINT32)pResourceVote->DrvId, ItemLong -- 13
+}
+#typev PppFramework_c2485 85 "%0%!FUNC!::Info:: Resource ID %10!d! setType:%11!d! List count %12!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=DeletePppResourceVote
+{
+ResourceIndex, ItemLong -- 10
+SetType, ItemLong -- 11
+pResourceListInfo->pClientResourceVoteList->Count, ItemULongLong -- 12
+}
+#typev PppFramework_c2477 84 "%0%!FUNC!::ERROR::g_pListOfResourceVoteLists NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=DeletePppResourceVote
+{
+}
+#typev PppFramework_c2467 83 "%0%!FUNC!::ERROR:: VoterId not found in the ClientResourceVoteList" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=DeletePppResourceVote
+{
+}
+#typev PppFramework_c2429 82 "%0%!FUNC! ResourceId = %10!d!, ResourceType = %11!d!, VoteSetType = %12!d!, DrvId = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=DeletePppResourceVote
+{
+pResourceVote->ResourceId, ItemLong -- 10
+pResourceVote->Type, ItemLong -- 11
+pResourceVote->SetType, ItemLong -- 12
+(UINT32)pResourceVote->DrvId, ItemLong -- 13
+}
+#typev PppFramework_c1520 48 "%0%!FUNC! ResourceId = %10!d!, InterfaceType = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=GetInterfacePtrForResourceId
+{
+ResourceId, ItemLong -- 10
+InterfaceType, ItemLong -- 11
+}
+#typev PppFramework_c884 34 "%0PppFramework.c::-%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=GetPppResourceSettings
+{
+}
+#typev PppFramework_c854 31 "%0%!FUNC!::ERROR::InitializeService failed, ResourceId = %10!d!, ResourceType = %11!d!, Status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=GetPppResourceSettings
+{
+pResourceVote->ResourceId, ItemLong -- 10
+pResourceVote->Type, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev PppFramework_c877 33 "%0%!FUNC!::ERROR::InitializeService failed, ResourceId = %10!d!, ResourceType = %11!d!, Status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=GetPppResourceSettings
+{
+pResourceVote->ResourceId, ItemLong -- 10
+pResourceVote->Type, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev PppFramework_c869 32 "%0%!FUNC!::ERROR::InitializeService failed, ResourceId = %10!d!, ResourceType = %11!d!, Status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=GetPppResourceSettings
+{
+pResourceVote->ResourceId, ItemLong -- 10
+pResourceVote->Type, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev PppFramework_c845 30 "%0%!FUNC!::ERROR::InitializeService failed, parameter 1 is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=GetPppResourceSettings
+{
+}
+#typev PppFramework_c839 29 "%0PppFramework.c::+%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=GetPppResourceSettings
+{
+}
+#typev PppFramework_c1606 52 "%0PppFramework.c::-%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=GetSettingsInterfacePtrForResourceId
+{
+}
+#typev PppFramework_c1595 51 "%0%!FUNC! ResourceId = %10!d!, InterfaceType = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=GetSettingsInterfacePtrForResourceId
+{
+ResourceId, ItemLong -- 10
+InterfaceType, ItemLong -- 11
+}
+#typev PppFramework_c1568 50 "%0%!FUNC! ResourceId = %10!d!, InterfaceType = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=GetSettingsInterfacePtrForResourceId
+{
+ResourceId, ItemLong -- 10
+InterfaceType, ItemLong -- 11
+}
+#typev PppFramework_c1558 49 "%0PppFramework.c::+%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=GetSettingsInterfacePtrForResourceId
+{
+}
+#typev PppFramework_c658 19 "%0%!FUNC!::ERROR::SetupResourceService failed, InterfaceType = %10!d!, Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=InitializeFrameworkInterfaces
+{
+InterfaceType, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c669 20 "%0%!FUNC!::ERROR::SetupResourceService failed, Service Interface NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=InitializeFrameworkInterfaces
+{
+}
+#typev PppFramework_c686 21 "%0%!FUNC!::ERROR::SetupResourceService failed, InterfaceType = %10!d!, Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=InitializeFrameworkInterfaces
+{
+pServiceInterface->Type, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c695 22 "%0%!FUNC!::ERROR::Initialize failed, InterfaceType = %10!d!, Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=InitializeFrameworkInterfaces
+{
+pServiceInterface->Type, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c644 18 "%0%!FUNC! ResourceId: %10!d!, ResourceName = %11!s!, InterfaceType = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=InitializeFrameworkInterfaces
+{
+g_PmResourceInfoList[ResourceIndex]->PppResourceId, ItemLong -- 10
+g_PmResourceInfoList[ResourceIndex]->ResourceName, ItemString -- 11
+InterfaceType, ItemLong -- 12
+}
+#typev PppFramework_c814 28 "%0PppFramework.c::-%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=InitializeFrameworkServices
+{
+}
+#typev PppFramework_c771 24 "%0%!FUNC!::ERROR::SetupResourceService failed, ResourceType = %10!d!, Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=InitializeFrameworkServices
+{
+SetupResourceServicesInfo->ResourceType, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c783 25 "%0%!FUNC!::ERROR::Minimum Interface services are not implemented, Status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=InitializeFrameworkServices
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PppFramework_c797 26 "%0%!FUNC!::ERROR::Minimum Interface services are not implemented, ResourceType = %10!d!, Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=InitializeFrameworkServices
+{
+pResourceService->ResourceType, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c806 27 "%0%!FUNC!::ERROR::InitializeService failed, ResourceType = %10!d!, Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=InitializeFrameworkServices
+{
+pResourceService->ResourceType, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c732 23 "%0PppFramework.c::+%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=InitializeFrameworkServices
+{
+}
+#typev PppFramework_c396 13 "%0PppFramework.c::-%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=InitializePppFramework
+{
+}
+#typev PppFramework_c303 12 "%0%!FUNC! Parent child info not provided Status = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=InitializePppFramework
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PppFramework_c293 11 "%0%!FUNC! Parent child info Parsing Error Status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=InitializePppFramework
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PppFramework_c201 10 "%0PppFramework.c::+%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=InitializePppFramework
+{
+}
+#typev PppFramework_c2194 79 "%0PppFramework.c::-%!FUNC!: Error: multi-level parent-child relationship not supported. Child %10!d! Parent %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+PppResourceId, ItemLong -- 10
+g_pPppResourceParentChildInfoList[ListIndex].pParentResource->PppResourceId, ItemLong -- 11
+}
+#typev PppFramework_c2187 78 "%0PppFramework.c::-%!FUNC!: Error: Duplicate entries at %10!d! and %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+Index, ItemLong -- 10
+ListIndex, ItemLong -- 11
+}
+#typev PppFramework_c2043 68 "%0PppFramework.c::-%!FUNC!: Error : Strings are expected." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+}
+#typev PppFramework_c2068 69 "%0PppFramework.c::-%!FUNC!: Error : PPP Resource Id: %10!d! is invalid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+PppResourceId, ItemLong -- 10
+}
+#typev PppFramework_c2109 72 "%0PppFramework.c::-%!FUNC!: Error : Integers are expected." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+}
+#typev PppFramework_c2139 75 "%0PppFramework.c::-%!FUNC!: Error : Max voltage is zero." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+}
+#typev PppFramework_c2122 73 "%0PppFramework.c::-%!FUNC!: Error : Min voltage is zero." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+}
+#typev PppFramework_c2201 80 "%0PppFramework.c::-%!FUNC!: Compared %10!d! and %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+Index, ItemLong -- 10
+ListIndex, ItemLong -- 11
+}
+#typev PppFramework_c2097 71 "%0%!FUNC!:: Parent PPP Resource Id: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+PppResourceId, ItemLong -- 10
+}
+#typev PppFramework_c2087 70 "%0%!FUNC!:: Child PPP Resource Id: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+PppResourceId, ItemLong -- 10
+}
+#typev PppFramework_c2159 77 "%0%!FUNC!:: Child LDO Headroom: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+g_pPppResourceParentChildInfoList[ListIndex].Headroom, ItemLong -- 10
+}
+#typev PppFramework_c2149 76 "%0%!FUNC!:: Parent buck Max Voltage: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+g_pPppResourceParentChildInfoList[ListIndex].MaxVoltage, ItemLong -- 10
+}
+#typev PppFramework_c2132 74 "%0%!FUNC!:: Parent buck Min Voltage: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+g_pPppResourceParentChildInfoList[ListIndex].MinVoltage, ItemLong -- 10
+}
+#typev PppFramework_c2000 67 "%0PppFramework.c::-%!FUNC!: Info : Zero entries are provided." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppResourceParentChildInfoPackage
+{
+}
+#typev PppFramework_c1711 55 "%0PppFramework.c::-%!FUNC!::Error - Invalid PppResourceId: %10!d!, Status: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppSupportedResourcesPackage
+{
+PppResourceId, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c1735 56 "%0%!FUNC! PppResourceId :%10!d!, ResourceName = %11!s!, ResourceType = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppSupportedResourcesPackage
+{
+PppResourceId, ItemLong -- 10
+g_PmResourceInfoList[PppResourceId]->ResourceName, ItemString -- 11
+g_PmResourceInfoList[PppResourceId]->Type, ItemLong -- 12
+}
+#typev PppFramework_c1729 81 "%0%!FUNC!  failed ResourceId = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=ParseAndUpdatePppSupportedResourcesPackage
+{
+PppResourceId, ItemLong -- 10
+}
+#typev PppFramework_c1955 66 "%0PppFramework.c::-%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=ParsePppSupportedResourcesPackage
+{
+}
+#typev PppFramework_c1893 65 "%0PppFramework.c::+%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=ParsePppSupportedResourcesPackage
+{
+}
+#typev PppFramework_c596 17 "%0PppFramework.c::-%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=ReinitializePppFramework
+{
+}
+#typev PppFramework_c555 16 "%0PppFramework.c::+%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PPP_TRACE_FUNCTION_ENTRY_EXIT FUNC=ReinitializePppFramework
+{
+}
+#typev PppFramework_c1823 60 "%0%!FUNC!::ERROR::ValidatePppResourceId failed, ResourceId = %10!d!, status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SetResourceInterfaceSetType
+{
+ResourceId, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c1840 62 "%0%!FUNC!::ERROR::GetRpmhResourceIdFromPppId failed, ResourceId = %10!d!, status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SetResourceInterfaceSetType
+{
+ResourceId, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c1848 63 "%0%!FUNC!::ERROR::GetControlType failed, RpmhResourceId = %10!s!, status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SetResourceInterfaceSetType
+{
+RpmhResourceId, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c1862 64 "%0%!FUNC!  RPMh aux_data = %10!d!, SetInterfaceType = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=SetResourceInterfaceSetType
+{
+aux_data, ItemLong -- 10
+InterfaceType, ItemLong -- 11
+}
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PppFramework_c1832 61 "%0%!FUNC!  Non-RPMh Resource, SetInterfaceType = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=SetResourceInterfaceSetType
+{
+InterfaceType, ItemLong -- 10
+}
+#typev PppFramework_c1830 57 "%0%!FUNC!  Invalid param, ResourceId = %10!d!, status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SetResourceInterfaceSetType
+{
+ResourceId, ItemLong -- 10
+STATUS_INVALID_PARAMETER, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c1830 58 "%0%!FUNC!  GetPppResourceInformation, ResourceId = %10!d!, status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SetResourceInterfaceSetType
+{
+ResourceId, ItemLong -- 10
+STATUS_INVALID_PARAMETER, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c1817 59 "%0%!FUNC!>> ResourceId: %10!d!, ResourceName = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=SetResourceInterfaceSetType
+{
+ResourceId, ItemLong -- 10
+g_PmResourceInfoList[resourceIndex]->ResourceName, ItemString -- 11
+}
+#typev PppFramework_c1171 38 "%0%!FUNC!::ERROR::g_pListOfResourceVoteLists NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SetResourceVote
+{
+}
+#typev PppFramework_c1200 40 "%0%!FUNC!::ERROR::ValidateResourceRelativeVote failed, Status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SetResourceVote
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PppFramework_c1190 39 "%0%!FUNC! pIsVoteComparableToPreviousVote: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=SetResourceVote
+{
+*pIsVoteComparableToPreviousVote, ItemLong -- 10
+}
+#typev PppFramework_c1239 41 "%0%!FUNC!::ERROR, Status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SetResourceVote
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PppFramework_c1481 47 "%0%!FUNC! Invalid InterfaceType = %10!d!, Status = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=ValidateInterfaceType
+{
+InterfaceType, ItemLong -- 10
+Status, ItemLong -- 11
+}
+#typev PppFramework_c1307 42 "%0%!FUNC! Invalid ResourceId = %10!d!, Status = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=ValidatePppResourceId
+{
+ResourceId, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev PppFramework_c1443 46 "%0%!FUNC! Invalid ResourceType = %10!d!, Status = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=ValidateResourceType
+{
+ResourceType, ItemLong -- 10
+Status, ItemLong -- 11
+}
+#typev PppFramework_c1396 45 "%0%!FUNC! Invalid VoteSetType = %10!d!, Status = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=ValidateVoteSetType
+{
+VoteSetType, ItemLong -- 10
+Status, ItemLong -- 11
+}
+#typev PppFramework_c1057 37 "%0%!FUNC!::ERROR::Parent buck disable vote failed, Child resource ID:%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=VoteForPppResource
+{
+AggregatedResourceVote.ResourceId, ItemLong -- 10
+}
+#typev PppFramework_c1040 36 "%0%!FUNC!::ERROR::Parent buck enable vote failed, Child resource ID:%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=VoteForPppResource
+{
+AggregatedResourceVote.ResourceId, ItemLong -- 10
+}
+#typev PppFramework_c921 35 "%0%!FUNC! ResourceId = %10!d!, ResourceType = %11!d!, VoteSetType = %12!d!, DrvId = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=VoteForPppResource
+{
+pResourceVote->ResourceId, ItemLong -- 10
+pResourceVote->Type, ItemLong -- 11
+pResourceVote->SetType, ItemLong -- 12
+(UINT32)pResourceVote->DrvId, ItemLong -- 13
+}
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev Ppp_c392 86 "%0%!FUNC! ResourceId = %10!d!, ResourceType = %11!d!, VoteSetType = %12!d!, DrvId = %13!d! failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SendPppRequest
+{
+pResourceVote->ResourceId, ItemLong -- 10
+pResourceVote->Type, ItemLong -- 11
+pResourceVote->SetType, ItemLong -- 12
+(UINT32)pResourceVote->DrvId, ItemLong -- 13
+}
+#typev Ppp_c392 85 "%0%!FUNC!::Info:: Resource ID %10!d! setType:%11!d! List count %12!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=SendPppRequest
+{
+ResourceIndex, ItemLong -- 10
+SetType, ItemLong -- 11
+pResourceListInfo->pClientResourceVoteList->Count, ItemULongLong -- 12
+}
+#typev Ppp_c392 84 "%0%!FUNC!::ERROR::g_pListOfResourceVoteLists NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SendPppRequest
+{
+}
+#typev Ppp_c392 83 "%0%!FUNC!::ERROR:: VoterId not found in the ClientResourceVoteList" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SendPppRequest
+{
+}
+#typev Ppp_c392 82 "%0%!FUNC! ResourceId = %10!d!, ResourceType = %11!d!, VoteSetType = %12!d!, DrvId = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=SendPppRequest
+{
+pResourceVote->ResourceId, ItemLong -- 10
+pResourceVote->Type, ItemLong -- 11
+pResourceVote->SetType, ItemLong -- 12
+(UINT32)pResourceVote->DrvId, ItemLong -- 13
+}
+#typev Ppp_c387 86 "%0%!FUNC! ResourceId = %10!d!, ResourceType = %11!d!, VoteSetType = %12!d!, DrvId = %13!d! failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SendPppRequest
+{
+pResourceVote->ResourceId, ItemLong -- 10
+pResourceVote->Type, ItemLong -- 11
+pResourceVote->SetType, ItemLong -- 12
+(UINT32)pResourceVote->DrvId, ItemLong -- 13
+}
+#typev Ppp_c387 85 "%0%!FUNC!::Info:: Resource ID %10!d! setType:%11!d! List count %12!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=SendPppRequest
+{
+ResourceIndex, ItemLong -- 10
+SetType, ItemLong -- 11
+pResourceListInfo->pClientResourceVoteList->Count, ItemULongLong -- 12
+}
+#typev Ppp_c387 84 "%0%!FUNC!::ERROR::g_pListOfResourceVoteLists NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SendPppRequest
+{
+}
+#typev Ppp_c387 83 "%0%!FUNC!::ERROR:: VoterId not found in the ClientResourceVoteList" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PPP_TRACE_FRAMEWORK FUNC=SendPppRequest
+{
+}
+#typev Ppp_c387 82 "%0%!FUNC! ResourceId = %10!d!, ResourceType = %11!d!, VoteSetType = %12!d!, DrvId = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=SendPppRequest
+{
+pResourceVote->ResourceId, ItemLong -- 10
+pResourceVote->Type, ItemLong -- 11
+pResourceVote->SetType, ItemLong -- 12
+(UINT32)pResourceVote->DrvId, ItemLong -- 13
+}
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PppPmicInterface_c903 54 "%0%!FUNC! Invalid number_of_pmics = %10!d!, Status = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PPP_TRACE_FRAMEWORK FUNC=PmicHardwareInterfaceReadyNotficationCallback
+{
+pPmicInfo->number_of_pmics, ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}

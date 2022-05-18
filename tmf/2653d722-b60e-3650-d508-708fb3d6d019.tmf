@@ -1,0 +1,128 @@
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+2653d722-b60e-3650-d508-708fb3d6d019 Framework // SRC=npa_graph.c MJ= MN=
+#typev npa_c463 19 "%0	node dependency (handle: 0x%10!p!) (node: "%11!s!") (dependency: "%12!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_reinit
+{
+definition, ItemPtr -- 10
+definition->name, ItemString -- 11
+definition->dependencies[count].name, ItemString -- 12
+}
+#typev npa_c463 18 "%0npa_define_node (handle: 0x%10!p!) (node: "%11!s!") (resource count: %12!d!) (dependency count: %13!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_reinit
+{
+definition, ItemPtr -- 10
+definition->name, ItemString -- 11
+definition->resource_count, ItemLong -- 12
+definition->dependency_count, ItemLong -- 13
+}
+#typev npa_c455 19 "%0	node dependency (handle: 0x%10!p!) (node: "%11!s!") (dependency: "%12!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_reinit
+{
+definition, ItemPtr -- 10
+definition->name, ItemString -- 11
+definition->dependencies[count].name, ItemString -- 12
+}
+#typev npa_c455 18 "%0npa_define_node (handle: 0x%10!p!) (node: "%11!s!") (resource count: %12!d!) (dependency count: %13!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_reinit
+{
+definition, ItemPtr -- 10
+definition->name, ItemString -- 11
+definition->resource_count, ItemLong -- 12
+definition->dependency_count, ItemLong -- 13
+}
+#typev npa_c452 19 "%0	node dependency (handle: 0x%10!p!) (node: "%11!s!") (dependency: "%12!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_reinit
+{
+definition, ItemPtr -- 10
+definition->name, ItemString -- 11
+definition->dependencies[count].name, ItemString -- 12
+}
+#typev npa_c452 18 "%0npa_define_node (handle: 0x%10!p!) (node: "%11!s!") (resource count: %12!d!) (dependency count: %13!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_reinit
+{
+definition, ItemPtr -- 10
+definition->name, ItemString -- 11
+definition->resource_count, ItemLong -- 12
+definition->dependency_count, ItemLong -- 13
+}
+#typev npa_graph_c1099 15 "%0	end npa_create_node (handle: 0x%10!p!) (node: "%11!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_create_node
+{
+definition, ItemPtr -- 10
+definition->name, ItemString -- 11
+}
+#typev npa_graph_c1055 14 "%0	created resource (resource: "%10!s!") (handle: 0x%11!p!) (initial state: %12!d!) (active state: %13!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_create_node
+{
+resource_def->name, ItemString -- 10
+resource, ItemPtr -- 11
+resource->request_state, ItemLong -- 12
+resource->active_state, ItemLong -- 13
+}
+#typev npa_graph_c978 13 "%0npa_create_node (handle: 0x%10!p!) (node: "%11!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_create_node
+{
+definition, ItemPtr -- 10
+definition->name, ItemString -- 11
+}
+#typev npa_graph_c1839 10 "%0	FAILED resource "%10!s!" already exists.Defined by node %11!s!" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_define_marker
+{
+name, ItemString -- 10
+placeholder_link->resource->node->name, ItemString -- 11
+}
+#typev npa_graph_c1836 29 "%0npa_define_marker (marker: "%10!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_define_marker
+{
+marker_name, ItemString -- 10
+}
+#typev npa_graph_c1325 19 "%0	node dependency (handle: 0x%10!p!) (node: "%11!s!") (dependency: "%12!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_define_node_cb
+{
+definition, ItemPtr -- 10
+definition->name, ItemString -- 11
+definition->dependencies[count].name, ItemString -- 12
+}
+#typev npa_graph_c1302 18 "%0npa_define_node (handle: 0x%10!p!) (node: "%11!s!") (resource count: %12!d!) (dependency count: %13!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_define_node_cb
+{
+definition, ItemPtr -- 10
+definition->name, ItemString -- 11
+definition->resource_count, ItemLong -- 12
+definition->dependency_count, ItemLong -- 13
+}
+#typev npa_graph_c1187 16 "%0	node waiting on resource (handle: 0x%10!p!) (node: "%11!s!") (resource: "%12!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_define_node_continuation
+{
+node, ItemPtr -- 10
+node->name, ItemString -- 11
+node->dependencies[continuation->data.node.dependency].name, ItemString -- 12
+}
+#typev npa_graph_c817 12 "%0	FAILED resource %10!s! already defined" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_define_resource
+{
+definition->name, ItemString -- 10
+}
+#typev npa_graph_c797 11 "%0	define resource (resource: "%10!s!") (units: "%11!s!")(initial state: %12!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_define_resource
+{
+definition->name, ItemString -- 10
+definition->units, ItemString -- 11
+init_state, ItemLong -- 12
+}
+#typev npa_graph_c687 10 "%0	FAILED resource "%10!s!" already exists.Defined by node %11!s!" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_link_resource
+{
+name, ItemString -- 10
+placeholder_link->resource->node->name, ItemString -- 11
+}
+#typev npa_graph_c1941 32 "%0  npa_resources_available waiting on resource (resource: "%10!s!") (callback: 0x%11!p!) (context: 0x%12!p!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_resources_available_continuation
+{
+resource, ItemString -- 10
+continuation->callback.callback, ItemPtr -- 11
+continuation->callback.context, ItemPtr -- 12
+}
+#typev npa_graph_c1924 31 "%0  npa_resources_available complete (callback: 0x%10!p!) (context: 0x%11!p!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_resources_available_continuation
+{
+continuation->callback.callback, ItemPtr -- 10
+continuation->callback.context, ItemPtr -- 11
+}
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+#typev PepAop_NpaNode_c79 19 "%0	node dependency (handle: 0x%10!p!) (node: "%11!s!") (dependency: "%12!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=QDSSClkNodeInit
+{
+definition, ItemPtr -- 10
+definition->name, ItemString -- 11
+definition->dependencies[count].name, ItemString -- 12
+}
+#typev PepAop_NpaNode_c79 18 "%0npa_define_node (handle: 0x%10!p!) (node: "%11!s!") (resource count: %12!d!) (dependency count: %13!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=QDSSClkNodeInit
+{
+definition, ItemPtr -- 10
+definition->name, ItemString -- 11
+definition->resource_count, ItemLong -- 12
+definition->dependency_count, ItemLong -- 13
+}

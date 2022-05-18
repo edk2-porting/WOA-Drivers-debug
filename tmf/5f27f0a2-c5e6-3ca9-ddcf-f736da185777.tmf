@@ -1,0 +1,267 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+5f27f0a2-c5e6-3ca9-ddcf-f736da185777 PEP // SRC=ThermalChannelManager.c MJ= MN=
+#typev ThermalChannelManager_c116 13 "%0PepWorkitemCreate failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=Adc_ChannelManager_Preinit
+{
+status, ItemLong -- 10
+}
+#typev ThermalChannelManager_c114 12 "%0 [Err ] ThermalChannelManager.c::%!FUNC!::114 :PepWorkitemCreate failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=Adc_ChannelManager_Preinit
+{
+status, ItemLong -- 10
+}
+#typev ThermalChannelManager_c94 11 "%0WdfWaitLockCreate failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=Adc_ChannelManager_Preinit
+{
+status, ItemLong -- 10
+}
+#typev ThermalChannelManager_c92 10 "%0 [Err ] ThermalChannelManager.c::%!FUNC!::92 :WdfWaitLockCreate failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=Adc_ChannelManager_Preinit
+{
+status, ItemLong -- 10
+}
+#typev ThermalChannelManager_c936 55 "%0ADC channel_%10!d! temperature %11!d! Notify DevMgr" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ChannelMgrNotificationWorker
+{
+WiData->ChannelNum, ItemLong -- 10
+WiData->Temperature, ItemLong -- 11
+}
+#typev ThermalChannelManager_c933 54 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! temperature %11!d! Notify DevMgr" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgrNotificationWorker
+{
+WiData->ChannelNum, ItemLong -- 10
+WiData->Temperature, ItemLong -- 11
+}
+#typev ThermalChannelManager_c912 53 "%0ADC Channel_%10!d! %11!s!_Threshold_%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ChannelMgrNotificationWorker
+{
+idx, ItemLong -- 10
+(tType) ? 'High' : 'Low', ItemString -- 11
+ChThreshold.Threshold[tType], ItemLong -- 12
+}
+#typev ThermalChannelManager_c909 52 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC Channel_%10!d! %11!s!_Threshold_%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgrNotificationWorker
+{
+idx, ItemLong -- 10
+(tType) ? 'High' : 'Low', ItemString -- 11
+ChThreshold.Threshold[tType], ItemLong -- 12
+}
+#typev ThermalChannelManager_c897 51 "%0ChannelExit signal set for ADC Channel_%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ChannelMgrNotificationWorker
+{
+WiData->ChannelNum, ItemLong -- 10
+}
+#typev ThermalChannelManager_c895 50 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ChannelExit signal set for ADC Channel_%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgrNotificationWorker
+{
+WiData->ChannelNum, ItemLong -- 10
+}
+#typev ThermalChannelManager_c880 49 "%0ADC channel_%10!d! %11!s! %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ChannelMgrNotificationWorker
+{
+WiData->ChannelNum, ItemLong -- 10
+ThresholdtypeEnum2Str[tType], ItemString -- 11
+ChannelStatusEnum2Str[channel->status[tType]], ItemString -- 12
+}
+#typev ThermalChannelManager_c877 48 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! %11!s! %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgrNotificationWorker
+{
+WiData->ChannelNum, ItemLong -- 10
+ThresholdtypeEnum2Str[tType], ItemString -- 11
+ChannelStatusEnum2Str[channel->status[tType]], ItemString -- 12
+}
+#typev ThermalChannelManager_c870 47 "%0ADC channel_%10!d! %11!s! %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ChannelMgrNotificationWorker
+{
+WiData->ChannelNum, ItemLong -- 10
+ThresholdtypeEnum2Str[tType], ItemString -- 11
+ChannelStatusEnum2Str[channel->status[tType]], ItemString -- 12
+}
+#typev ThermalChannelManager_c867 46 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! %11!s! %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgrNotificationWorker
+{
+WiData->ChannelNum, ItemLong -- 10
+ThresholdtypeEnum2Str[tType], ItemString -- 11
+ChannelStatusEnum2Str[channel->status[tType]], ItemString -- 12
+}
+#typev ThermalChannelManager_c857 45 "%0ADC channel_%10!d! %11!s! %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ChannelMgrNotificationWorker
+{
+WiData->ChannelNum, ItemLong -- 10
+ThresholdtypeEnum2Str[tType], ItemString -- 11
+ChannelStatusEnum2Str[channel->status[tType]], ItemString -- 12
+}
+#typev ThermalChannelManager_c854 44 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! %11!s! %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgrNotificationWorker
+{
+WiData->ChannelNum, ItemLong -- 10
+ThresholdtypeEnum2Str[tType], ItemString -- 11
+ChannelStatusEnum2Str[channel->status[tType]], ItemString -- 12
+}
+#typev ThermalChannelManager_c637 37 "%0ADC channel_%10!d! clear threshold flag %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=EvaluateAndHandleThresholdAction
+{
+chNum, ItemLong -- 10
+clear_flag, ItemLong -- 11
+}
+#typev ThermalChannelManager_c635 36 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! clear threshold flag %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=EvaluateAndHandleThresholdAction
+{
+chNum, ItemLong -- 10
+clear_flag, ItemLong -- 11
+}
+#typev ThermalChannelManager_c626 35 "%0ChannelExit signal SET for ADC Channel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=EvaluateAndHandleThresholdAction
+{
+chNum, ItemLong -- 10
+}
+#typev ThermalChannelManager_c624 34 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ChannelExit signal SET for ADC Channel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=EvaluateAndHandleThresholdAction
+{
+chNum, ItemLong -- 10
+}
+#typev ThermalChannelManager_c616 33 "%0ChannelExit signal RE-SET for ADC Channel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=EvaluateAndHandleThresholdAction
+{
+chNum, ItemLong -- 10
+}
+#typev ThermalChannelManager_c614 32 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ChannelExit signal RE-SET for ADC Channel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=EvaluateAndHandleThresholdAction
+{
+chNum, ItemLong -- 10
+}
+#typev ThermalChannelManager_c607 31 "%0ADC channel_%10!d! set threshold %11!d! %12!d! flag %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=EvaluateAndHandleThresholdAction
+{
+chNum, ItemLong -- 10
+Evaluated_Threshold.Threshold[LOW], ItemLong -- 11
+Evaluated_Threshold.Threshold[HIGH], ItemLong -- 12
+set_flag, ItemLong -- 13
+}
+#typev ThermalChannelManager_c603 30 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! set threshold %11!d! %12!d! flag %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=EvaluateAndHandleThresholdAction
+{
+chNum, ItemLong -- 10
+Evaluated_Threshold.Threshold[LOW], ItemLong -- 11
+Evaluated_Threshold.Threshold[HIGH], ItemLong -- 12
+set_flag, ItemLong -- 13
+}
+#typev ThermalChannelManager_c567 29 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! list has same threshold, %11!s! ch_status %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=Evaluate_Thresholds
+{
+idx, ItemLong -- 10
+(i == HIGH) ? 'HIGH' : 'LOW', ItemString -- 11
+ChannelStatusEnum2Str[channel->status[i]], ItemString -- 12
+}
+#typev ThermalChannelManager_c552 28 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! list does not have same threshold, %11!s! ch_status %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=Evaluate_Thresholds
+{
+idx, ItemLong -- 10
+(i == HIGH) ? 'HIGH' : 'LOW', ItemString -- 11
+ChannelStatusEnum2Str[channel->status[i]], ItemString -- 12
+}
+#typev ThermalChannelManager_c531 27 "%0ADC channel_%10!d! new High_threshold %11!d! ch_status %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=Evaluate_Thresholds
+{
+idx, ItemLong -- 10
+thresholds[HIGH], ItemLong -- 11
+ChannelStatusEnum2Str[channel->status[HIGH]], ItemString -- 12
+}
+#typev ThermalChannelManager_c528 26 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! new High_threshold %11!d! ch_status %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=Evaluate_Thresholds
+{
+idx, ItemLong -- 10
+thresholds[HIGH], ItemLong -- 11
+ChannelStatusEnum2Str[channel->status[HIGH]], ItemString -- 12
+}
+#typev ThermalChannelManager_c519 25 "%0ADC channel_%10!d! new Low_threshold %11!d! ch_status %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=Evaluate_Thresholds
+{
+idx, ItemLong -- 10
+thresholds[LOW], ItemLong -- 11
+ChannelStatusEnum2Str[channel->status[LOW]], ItemString -- 12
+}
+#typev ThermalChannelManager_c516 24 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! new Low_threshold %11!d! ch_status %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=Evaluate_Thresholds
+{
+idx, ItemLong -- 10
+thresholds[LOW], ItemLong -- 11
+ChannelStatusEnum2Str[channel->status[LOW]], ItemString -- 12
+}
+#typev ThermalChannelManager_c496 23 "%0ADC channel_%10!d! no valid threshold found or IoStop %11!s!, ch_status {%12!s! %13!s!}" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=Evaluate_Thresholds
+{
+idx, ItemLong -- 10
+(channel->IoStop) ? 'Set' : 'NotSet', ItemString -- 11
+ChannelStatusEnum2Str[channel->status[LOW]], ItemString -- 12
+ChannelStatusEnum2Str[channel->status[HIGH]], ItemString -- 13
+}
+#typev ThermalChannelManager_c491 22 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! no valid threshold found or IoStop %11!s!, ch_status {%12!s! %13!s!}" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=Evaluate_Thresholds
+{
+idx, ItemLong -- 10
+(channel->IoStop) ? 'Set' : 'NotSet', ItemString -- 11
+ChannelStatusEnum2Str[channel->status[LOW]], ItemString -- 12
+ChannelStatusEnum2Str[channel->status[HIGH]], ItemString -- 13
+}
+#typev ThermalChannelManager_c479 21 "%0ADC channel_%10!d! threshold found { %11!d! %12!d! }" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=Evaluate_Thresholds
+{
+idx, ItemLong -- 10
+thresholds[LOW], ItemLong -- 11
+thresholds[HIGH], ItemLong -- 12
+}
+#typev ThermalChannelManager_c476 20 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! threshold found { %11!d! %12!d! }" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=Evaluate_Thresholds
+{
+idx, ItemLong -- 10
+thresholds[LOW], ItemLong -- 11
+thresholds[HIGH], ItemLong -- 12
+}
+#typev ThermalChannelManager_c694 39 "%0ADC channel_%10!d! threshold { %11!d! %12!d! } added" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ChannelMgr_AddThresholds
+{
+idx, ItemLong -- 10
+aThreshold->Threshold[LOW], ItemLong -- 11
+aThreshold->Threshold[HIGH], ItemLong -- 12
+}
+#typev ThermalChannelManager_c691 38 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! threshold { %11!d! %12!d! } added" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgr_AddThresholds
+{
+idx, ItemLong -- 10
+aThreshold->Threshold[LOW], ItemLong -- 11
+aThreshold->Threshold[HIGH], ItemLong -- 12
+}
+#typev ThermalChannelManager_c1003 61 "%0Exit ADC Channel_%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ChannelMgr_PrepareChannelHibernate
+{
+aChannel->ChNum, ItemLong -- 10
+}
+#typev ThermalChannelManager_c1001 60 "%0 [Info] ThermalChannelManager.c::%!FUNC! :Exit ADC Channel_%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgr_PrepareChannelHibernate
+{
+aChannel->ChNum, ItemLong -- 10
+}
+#typev ThermalChannelManager_c985 59 "%0ChannelExit signal RE-SET for ADC Channel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ChannelMgr_PrepareChannelHibernate
+{
+i, ItemLong -- 10
+}
+#typev ThermalChannelManager_c983 58 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ChannelExit signal RE-SET for ADC Channel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgr_PrepareChannelHibernate
+{
+i, ItemLong -- 10
+}
+#typev ThermalChannelManager_c972 57 "%0Enter ADC Channel_%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ChannelMgr_PrepareChannelHibernate
+{
+aChannel->ChNum, ItemLong -- 10
+}
+#typev ThermalChannelManager_c970 56 "%0 [Info] ThermalChannelManager.c::%!FUNC! :Enter ADC Channel_%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgr_PrepareChannelHibernate
+{
+aChannel->ChNum, ItemLong -- 10
+}
+#typev ThermalChannelManager_c333 19 "%0ADC Channel_%10!d! NOT initialized" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgr_ReadTemperature
+{
+idx, ItemLong -- 10
+}
+#typev ThermalChannelManager_c332 18 "%0 [Err ] ThermalChannelManager.c::%!FUNC!::332 :ADC Channel_%10!d! NOT initialized" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgr_ReadTemperature
+{
+idx, ItemLong -- 10
+}
+#typev ThermalChannelManager_c769 43 "%0ADC channel_%10!d! threshold { %11!d! %12!d! } not found in list" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ChannelMgr_RemoveThresholds
+{
+idx, ItemLong -- 10
+aThreshold->Threshold[LOW], ItemLong -- 11
+aThreshold->Threshold[HIGH], ItemLong -- 12
+}
+#typev ThermalChannelManager_c766 42 "%0 [Err ] ThermalChannelManager.c::%!FUNC!::766 :ADC channel_%10!d! threshold { %11!d! %12!d! } not found in list" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgr_RemoveThresholds
+{
+idx, ItemLong -- 10
+aThreshold->Threshold[LOW], ItemLong -- 11
+aThreshold->Threshold[HIGH], ItemLong -- 12
+}
+#typev ThermalChannelManager_c757 41 "%0ADC channel_%10!d! threshold { %11!d! %12!d! } removed" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ChannelMgr_RemoveThresholds
+{
+idx, ItemLong -- 10
+aThreshold->Threshold[LOW], ItemLong -- 11
+aThreshold->Threshold[HIGH], ItemLong -- 12
+}
+#typev ThermalChannelManager_c754 40 "%0 [Info] ThermalChannelManager.c::%!FUNC! :ADC channel_%10!d! threshold { %11!d! %12!d! } removed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=ChannelMgr_RemoveThresholds
+{
+idx, ItemLong -- 10
+aThreshold->Threshold[LOW], ItemLong -- 11
+aThreshold->Threshold[HIGH], ItemLong -- 12
+}
+#typev ThermalChannelManager_c197 17 "%0Malloc failed" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=InitializeChannelMgr
+{
+}
+#typev ThermalChannelManager_c195 16 "%0 [Err ] ThermalChannelManager.c::%!FUNC!::195 :Malloc failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=InitializeChannelMgr
+{
+}
+#typev ThermalChannelManager_c179 15 "%0Malloc failed" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmChMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=InitializeChannelMgr
+{
+}
+#typev ThermalChannelManager_c177 14 "%0 [Err ] ThermalChannelManager.c::%!FUNC!::177 :Malloc failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_CHLMGR FUNC=InitializeChannelMgr
+{
+}

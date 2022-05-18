@@ -1,0 +1,40 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+bf1bd93d-f92d-3dc5-1029-77a5a89c94e0 build // SRC=ClockVoltage.c MJ= MN=
+#typev ClockVoltage_c212 12 "%0Not enough space to aggregate voltage request." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_GetCornerRefCount
+{
+}
+#typev ClockVoltage_c596 17 "%0Unable to determine default boot voltage for %10!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_InitVoltage
+{
+pRail->szName, ItemString -- 10
+}
+#typev ClockVoltage_c154 11 "%0Client %10!s! changed resource %11!s! from %12!d! (required) to %13!d! (requested) while %14!d! (active)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_UpdateVoltageRequests
+{
+pVRegConfig->NPAHandle->name, ItemString -- 10
+pVRegConfig->NPAHandle->resource->definition->name, ItemString -- 11
+pVRegConfig->NPAHandle->resource->required_state, ItemLong -- 12
+pVRegConfig->NPAHandle->resource->request_state, ItemLong -- 13
+pVRegConfig->NPAHandle->resource->active_state, ItemLong -- 14
+}
+#typev ClockVoltage_c126 10 "%0Voltage request greater than boot default before %10!s! is available (0x%11!x! > 0x%12!x!)." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_UpdateVoltageRequests
+{
+pRail->szName, ItemString -- 10
+eMinLevel, ItemLong -- 11
+pRail->eBootCorner, ItemLong -- 12
+}
+#typev ClockVoltage_c422 14 "%0Client %10!s! changed resource %11!s! from %12!d! (required) to %13!d! (requested) while %14!d! (active)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_VoltageNodeReadyCallback
+{
+pRail->VRegConfigSuppressible.NPAHandle->name, ItemString -- 10
+pRail->VRegConfigSuppressible.NPAHandle->resource->definition->name, ItemString -- 11
+pRail->VRegConfigSuppressible.NPAHandle->resource->required_state, ItemLong -- 12
+pRail->VRegConfigSuppressible.NPAHandle->resource->request_state, ItemLong -- 13
+pRail->VRegConfigSuppressible.NPAHandle->resource->active_state, ItemLong -- 14
+}
+#typev ClockVoltage_c390 13 "%0Client %10!s! changed resource %11!s! from %12!d! (required) to %13!d! (requested) while %14!d! (active)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_VoltageNodeReadyCallback
+{
+pRail->VRegConfig.NPAHandle->name, ItemString -- 10
+pRail->VRegConfig.NPAHandle->resource->definition->name, ItemString -- 11
+pRail->VRegConfig.NPAHandle->resource->required_state, ItemLong -- 12
+pRail->VRegConfig.NPAHandle->resource->request_state, ItemLong -- 13
+pRail->VRegConfig.NPAHandle->resource->active_state, ItemLong -- 14
+}

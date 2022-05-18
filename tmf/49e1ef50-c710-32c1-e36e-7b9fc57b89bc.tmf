@@ -1,0 +1,401 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+49e1ef50-c710-32c1-e36e-7b9fc57b89bc PEP // SRC=Idle_Residency.c MJ= MN=
+#typev Idle_Residency_c1719 70 "%0 [Verb] :exit <- 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleAccumulateSocStatsOnCSExit
+{
+}
+#typev Idle_Residency_c1705 69 "%0 [Verb] :enter -> 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleAccumulateSocStatsOnCSExit
+{
+}
+#typev Idle_Residency_c1338 60 "%0 [Verb] :ss_id %10!d! ssactivetime %11!I64u! ssactive %12!d!  	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleCompareSSIdleTimeAndHWDrips
+{
+i, ItemLong -- 10
+ssactivetime, ItemULongLong -- 11
+ULONG((ssactivetime / Session) * 100), ItemLong -- 12
+}
+#typev Idle_Residency_c1320 59 "%0 [Verb] :%10!s! Session %11!I64u! Residency %12!I64u! SwDrips %13!I64u!  	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleCompareSSIdleTimeAndHWDrips
+{
+(IsDripsExit) ? 'SWDripsExit' : 'CS_Exit', ItemString -- 10
+Session, ItemULongLong -- 11
+HWResidency, ItemULongLong -- 12
+SwDrips, ItemULongLong -- 13
+}
+#typev Idle_Residency_c1271 58 "%0Bugcheck for all subsystems" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleCompareSwAndHwDrips
+{
+}
+#typev Idle_Residency_c1264 57 "%0Caught SS: (%10!s!) blocking DRIPS!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleCompareSwAndHwDrips
+{
+&ctxt->SocSubsystemInfo[i].Name, ItemPWString -- 10
+}
+#typev Idle_Residency_c1252 56 "%0 [Verb] :ssactivetime[%10!d!] %11!I64u! SwDrips %12!I64u! Divergence %13!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleCompareSwAndHwDrips
+{
+i, ItemLong -- 10
+ssactivetime, ItemULongLong -- 11
+SwDrips, ItemULongLong -- 12
+Divergence, ItemULongLong -- 13
+}
+#typev Idle_Residency_c1246 55 "%0 [Verb] :ssactivetime[%10!d!] %11!I64u!, blocked HWdrips completely in this session 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleCompareSwAndHwDrips
+{
+i, ItemLong -- 10
+ssactivetime, ItemULongLong -- 11
+}
+#typev Idle_Residency_c1238 54 "%0SS: (%10!s!) blockingtime: %11!I64u! (%12!I64u! %%)" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleCompareSwAndHwDrips
+{
+&ctxt->SocSubsystemInfo[i].Name, ItemPWString -- 10
+ssactivetime, ItemULongLong -- 11
+(ssactivetime) * 100 / SwDrips, ItemULongLong -- 12
+}
+#typev Idle_Residency_c1230 53 "%0SWdrips: %10!I64u! HWdrips: %11!I64u! (%12!I64u! %% of swdrips) Min Divergence in %% set: %13!I64u! Initial time set (in mins): %14!I64u!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleCompareSwAndHwDrips
+{
+SwDrips, ItemULongLong -- 10
+HWResidency, ItemULongLong -- 11
+(HWResidency) * 100 / SwDrips, ItemULongLong -- 12
+gDripsAndSubsystemStatsDebug.DripsDivergence, ItemULongLong -- 13
+gDripsAndSubsystemStatsDebug.TimeinMin, ItemULongLong -- 14
+}
+#typev Idle_Residency_c1209 52 "%0 [Verb] :SWDrips %10!I64u! HwDrips %11!I64u! cs_entry_curr_time_diff %12!I64u! Divergence %13!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleCompareSwAndHwDrips
+{
+SwDrips, ItemULongLong -- 10
+HWResidency, ItemULongLong -- 11
+Cs_start_curr_time_diff, ItemULongLong -- 12
+Divergence, ItemULongLong -- 13
+}
+#typev Idle_Residency_c1188 51 "%0 [Verb] :CS session not started, cs session state %10!d! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleCompareSwAndHwDrips
+{
+ctxt->CSSessionState, ItemLong -- 10
+}
+#typev Idle_Residency_c1976 86 "%0IdleWdfSmemTargetDevice is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleGlinkInterfacePostOpenTasks
+{
+}
+#typev Idle_Residency_c1975 85 "%0 [Err ] Idle_Residency.c::%!FUNC!::1975 :IdleWdfSmemTargetDevice is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleGlinkInterfacePostOpenTasks
+{
+}
+#typev Idle_Residency_c1967 84 "%0Subsystem stats initialization failed with status: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleGlinkInterfacePostOpenTasks
+{
+status, ItemLong -- 10
+}
+#typev Idle_Residency_c1965 83 "%0 [Err ] Idle_Residency.c::%!FUNC!::1965 :Subsystem stats initialization failed with status: %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleGlinkInterfacePostOpenTasks
+{
+status, ItemLong -- 10
+}
+#typev Idle_Residency_c1912 82 "%0WdfIoTargetQueryForInterface() failed with status: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleGlinkInterfacePostOpenTasks
+{
+status, ItemLong -- 10
+}
+#typev Idle_Residency_c1910 81 "%0 [Err ] Idle_Residency.c::%!FUNC!::1910 :WdfIoTargetQueryForInterface() failed with status: %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleGlinkInterfacePostOpenTasks
+{
+status, ItemLong -- 10
+}
+#typev Idle_Residency_c1894 80 "%0Enter ->" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleGlinkInterfacePostOpenTasks
+{
+}
+#typev Idle_Residency_c1893 79 "%0 [Info] Idle_Residency.c::%!FUNC! :Enter ->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleGlinkInterfacePostOpenTasks
+{
+}
+#typev Idle_Residency_c1976 86 "%0IdleWdfSmemTargetDevice is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=`IdleGlinkInterfacePostOpenTasks'::`1'::fin$0
+{
+}
+#typev Idle_Residency_c1975 85 "%0 [Err ] Idle_Residency.c::%!FUNC!::1975 :IdleWdfSmemTargetDevice is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=`IdleGlinkInterfacePostOpenTasks'::`1'::fin$0
+{
+}
+#typev Idle_Residency_c1967 84 "%0Subsystem stats initialization failed with status: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=`IdleGlinkInterfacePostOpenTasks'::`1'::fin$0
+{
+status, ItemLong -- 10
+}
+#typev Idle_Residency_c1965 83 "%0 [Err ] Idle_Residency.c::%!FUNC!::1965 :Subsystem stats initialization failed with status: %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=`IdleGlinkInterfacePostOpenTasks'::`1'::fin$0
+{
+status, ItemLong -- 10
+}
+#typev Idle_Residency_c1912 82 "%0WdfIoTargetQueryForInterface() failed with status: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=`IdleGlinkInterfacePostOpenTasks'::`1'::fin$0
+{
+status, ItemLong -- 10
+}
+#typev Idle_Residency_c1910 81 "%0 [Err ] Idle_Residency.c::%!FUNC!::1910 :WdfIoTargetQueryForInterface() failed with status: %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=`IdleGlinkInterfacePostOpenTasks'::`1'::fin$0
+{
+status, ItemLong -- 10
+}
+#typev Idle_Residency_c1894 80 "%0Enter ->" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=`IdleGlinkInterfacePostOpenTasks'::`1'::fin$0
+{
+}
+#typev Idle_Residency_c1893 79 "%0 [Info] Idle_Residency.c::%!FUNC! :Enter ->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=`IdleGlinkInterfacePostOpenTasks'::`1'::fin$0
+{
+}
+#typev Idle_Residency_c2007 90 "%0Exit <- islandModeCount: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleGlinkInterfacePreCloseTasks
+{
+ctxt->islandModeCount, ItemLong -- 10
+}
+#typev Idle_Residency_c2005 89 "%0 [Info] Idle_Residency.c::%!FUNC! :Exit <- islandModeCount: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleGlinkInterfacePreCloseTasks
+{
+ctxt->islandModeCount, ItemLong -- 10
+}
+#typev Idle_Residency_c1993 88 "%0Enter ->" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleGlinkInterfacePreCloseTasks
+{
+}
+#typev Idle_Residency_c1992 87 "%0 [Info] Idle_Residency.c::%!FUNC! :Enter ->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleGlinkInterfacePreCloseTasks
+{
+}
+#typev Idle_Residency_c2007 90 "%0Exit <- islandModeCount: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=`IdleGlinkInterfacePreCloseTasks'::`1'::fin$0
+{
+ctxt->islandModeCount, ItemLong -- 10
+}
+#typev Idle_Residency_c2005 89 "%0 [Info] Idle_Residency.c::%!FUNC! :Exit <- islandModeCount: %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=`IdleGlinkInterfacePreCloseTasks'::`1'::fin$0
+{
+ctxt->islandModeCount, ItemLong -- 10
+}
+#typev Idle_Residency_c1993 88 "%0Enter ->" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=`IdleGlinkInterfacePreCloseTasks'::`1'::fin$0
+{
+}
+#typev Idle_Residency_c1992 87 "%0 [Info] Idle_Residency.c::%!FUNC! :Enter ->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=`IdleGlinkInterfacePreCloseTasks'::`1'::fin$0
+{
+}
+#typev Idle_Residency_c905 32 "%0 [Verb] :exit <- 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalAccumulateSWDripsSubsystemStats
+{
+}
+#typev Idle_Residency_c899 31 "%0 [Info] :Drips-Exit Subsystem [%10!d!], LastEnteredDRIPSAt: %11!I64u! LastExitedDRIPSAt: %12!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalAccumulateSWDripsSubsystemStats
+{
+i, ItemLong -- 10
+ctxt->LastEnteredDRIPSAt, ItemULongLong -- 11
+ctxt->LastExitedDRIPSAt, ItemULongLong -- 12
+}
+#typev Idle_Residency_c891 30 "%0 [Info] :Drips-Exit Subsystem [%10!d!], Wakeup Count: %11!d!, Blocked Duration: %12!I64u!                   Accumulated Wakeup Count: %13!I64u!, Accumulated Blocked Duration: %14!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalAccumulateSWDripsSubsystemStats
+{
+i, ItemLong -- 10
+ctxt->SocSubsystemInfo[i].LastAccumulatedUpdate_SWDRIPS.WakeupCount, ItemLong -- 11
+ctxt->SocSubsystemInfo[i].LastAccumulatedUpdate_SWDRIPS.BlockedDuration, ItemULongLong -- 12
+ctxt->SocSubsystemInfo[i].AccumulatedStats_SWDRIPS.WakeupCount, ItemULongLong -- 13
+ctxt->SocSubsystemInfo[i].AccumulatedStats_SWDRIPS.BlockedDuration, ItemULongLong -- 14
+}
+#typev Idle_Residency_c868 29 "%0 [Verb] :enter -> 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalAccumulateSWDripsSubsystemStats
+{
+}
+#typev Idle_Residency_c1408 64 "%0 [Verb] :exit <- 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalAccumulateSubsystemStats
+{
+}
+#typev Idle_Residency_c1403 63 "%0 [Info] :CS-exit Subsystem [%10!d!], LastEnteredDRIPSAt: %11!I64u! LastEnteredDRIPSAt: %12!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalAccumulateSubsystemStats
+{
+i, ItemLong -- 10
+ctxt->LastEnteredCSAt, ItemULongLong -- 11
+ctxt->LastExitedCSAt, ItemULongLong -- 12
+}
+#typev Idle_Residency_c1395 62 "%0 [Info] :CS-exit Subsystem [%10!d!], Last Wakeup Count: %11!d!, Blocked Duration: %12!I64u!                                Accumulated Wakeup Count: %13!d!, Accumulated Blocked Duration: %14!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalAccumulateSubsystemStats
+{
+i, ItemLong -- 10
+ctxt->SocSubsystemInfo[i].LastAccumulatedUpdate_CS.WakeupCount, ItemLong -- 11
+ctxt->SocSubsystemInfo[i].LastAccumulatedUpdate_CS.BlockedDuration, ItemULongLong -- 12
+ctxt->SocSubsystemInfo[i].AccumulatedStats_CS.WakeupCount, ItemLong -- 13
+ctxt->SocSubsystemInfo[i].AccumulatedStats_CS.BlockedDuration, ItemULongLong -- 14
+}
+#typev Idle_Residency_c1368 61 "%0 [Verb] :enter -> 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalAccumulateSubsystemStats
+{
+}
+#typev Idle_Residency_c260 13 "%0 [Verb] :exit <- IdleInternalCalculateBlockedTime 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalCalculateBlockedTime
+{
+}
+#typev Idle_Residency_c256 12 "%0 [Err ] Idle_Residency.c::%!FUNC!::256 :PEP bug check Active SessionTimeStampError" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalCalculateBlockedTime
+{
+}
+#typev Idle_Residency_c244 11 "%0 [Err ] Idle_Residency.c::%!FUNC!::244 :PEP bug check SessionTimeStampError" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalCalculateBlockedTime
+{
+}
+#typev Idle_Residency_c169 10 "%0 [Verb] :enter -> 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalCalculateBlockedTime
+{
+}
+#typev Idle_Residency_c657 19 "%0 [Err ] Idle_Residency.c::%!FUNC!::657 :gpIslandModeStats memory allocation failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalInitializeResidencyData
+{
+}
+#typev Idle_Residency_c585 18 "%0 [Info] :Subsystem count for master stats: %10!d! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalInitializeResidencyData
+{
+subSystemCount, ItemLong -- 10
+}
+#typev Idle_Residency_c700 20 "%0 [Err ] Idle_Residency.c::%!FUNC!::700 :IdleInternalInitializeSubsystemData: ctxt->SocSubsystemInfo is not initialized" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalInitializeSubsystemData
+{
+}
+#typev Idle_Residency_c461 17 "%0 [Info] :IdleInternalQueryHardwareResidency: Drips State ID: %10!u!, Transition Count %11!I64u!, Residency: %12!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQueryHardwareResidency
+{
+ctxt->DripsStateId, ItemLong -- 10
+states->States[ctxt->DripsStateId].TransitionCount, ItemULongLong -- 11
+states->States[ctxt->DripsStateId].Residency, ItemULongLong -- 12
+}
+#typev Idle_Residency_c1515 66 "%0 [Info] :EnableSubsystemStatsInSWDRIPS: %10!u!. Blocked Duration: %11!I64u!. 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQuerySocSubsystemBlockingTime
+{
+EnableSubsystemStatsInSWDRIPS, ItemLong -- 10
+queryAccounting->BlockingTime, ItemULongLong -- 11
+}
+#typev Idle_Residency_c1501 65 "%0Smem Region mapping failure for subsystem %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQuerySocSubsystemBlockingTime
+{
+sub->Name.Buffer, ItemWString -- 10
+}
+#typev Idle_Residency_c1638 68 "%0Smem Region mapping failure for subsystem %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQuerySocSubsystemMetadata
+{
+sub->Name.Buffer, ItemWString -- 10
+}
+#typev Idle_Residency_c1596 67 "%0Smem Region mapping failure for subsystem %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalQuerySocSubsystemMetadata
+{
+sub->Name.Buffer, ItemWString -- 10
+}
+#typev Idle_Residency_c418 16 "%0 [Info] :IdleInternalReadResidencyStats: Transition Count: %10!I64u!, Residency: %11!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalReadResidencyStats
+{
+res.TransitionCount, ItemULongLong -- 10
+res.Residency, ItemULongLong -- 11
+}
+#typev Idle_Residency_c943 35 "%0 [Info] :Subsystem [%10!d!], Wakeup Count: %11!d!, LastEnteredDripsAt: %12!I64u!                                   LastExitedDripsAt: %13!I64u!, Sleep Duration: %14!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSnapshotOnDRIPSEntry
+{
+i, ItemLong -- 10
+ctxt->SocSubsystemInfo[i].LastEnterSnapshot_SWDRIPS.WakeupCount, ItemLong -- 11
+ctxt->SocSubsystemInfo[i].LastEnterSnapshot_SWDRIPS.LastEnteredAt, ItemULongLong -- 12
+ctxt->SocSubsystemInfo[i].LastEnterSnapshot_SWDRIPS.LastExitedAt, ItemULongLong -- 13
+ctxt->SocSubsystemInfo[i].LastEnterSnapshot_SWDRIPS.SleepDuration, ItemULongLong -- 14
+}
+#typev Idle_Residency_c938 34 "%0 [Err ] Idle_Residency.c::%!FUNC!::938 :Subsystem Stats does not match ss %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSnapshotOnDRIPSEntry
+{
+i, ItemLong -- 10
+}
+#typev Idle_Residency_c918 33 "%0 [Verb] :iterate through subsystem: %10!d! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSnapshotOnDRIPSEntry
+{
+i, ItemLong -- 10
+}
+#typev Idle_Residency_c1002 39 "%0 [Verb] :exit <- 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSnapshotOnDRIPSExit
+{
+}
+#typev Idle_Residency_c991 38 "%0 [Info] :Subsystem [%10!d!], Wakeup Count: %11!d!, LastEnteredDripsAt: %12!I64u!                                            LastExitedDripsAt: %13!I64u!, Sleep Duration: %14!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSnapshotOnDRIPSExit
+{
+i, ItemLong -- 10
+ctxt->SocSubsystemInfo[i].LastExitSnapshot_SWDRIPS.WakeupCount, ItemLong -- 11
+ctxt->SocSubsystemInfo[i].LastExitSnapshot_SWDRIPS.LastEnteredAt, ItemULongLong -- 12
+ctxt->SocSubsystemInfo[i].LastExitSnapshot_SWDRIPS.LastExitedAt, ItemULongLong -- 13
+ctxt->SocSubsystemInfo[i].LastExitSnapshot_SWDRIPS.SleepDuration, ItemULongLong -- 14
+}
+#typev Idle_Residency_c986 37 "%0 [Err ] Idle_Residency.c::%!FUNC!::986 :Subsystem Stats does not match ss %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSnapshotOnDRIPSExit
+{
+i, ItemLong -- 10
+}
+#typev Idle_Residency_c962 36 "%0 [Verb] :iterate through subsystem: %10!d! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSnapshotOnDRIPSExit
+{
+i, ItemLong -- 10
+}
+#typev Idle_Residency_c1081 44 "%0 [Verb] :exit <- 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSocSnapshotOnCSEntry
+{
+}
+#typev Idle_Residency_c1071 43 "%0 [Info] :Subsystem [%10!d!], Wakeup Count: %11!d!, LastEnteredCSAt: %12!I64u!                                          LastExitedCSAt: %13!I64u!, Sleep Duration: %14!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSocSnapshotOnCSEntry
+{
+i, ItemLong -- 10
+ctxt->SocSubsystemInfo[i].LastEnterSnapshot.WakeupCount, ItemLong -- 11
+ctxt->SocSubsystemInfo[i].LastEnterSnapshot.LastEnteredAt, ItemULongLong -- 12
+ctxt->SocSubsystemInfo[i].LastEnterSnapshot.LastExitedAt, ItemULongLong -- 13
+ctxt->SocSubsystemInfo[i].LastEnterSnapshot.SleepDuration, ItemULongLong -- 14
+}
+#typev Idle_Residency_c1061 42 "%0 [Err ] Idle_Residency.c::%!FUNC!::1061 :Subsystem Stats does not match" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSocSnapshotOnCSEntry
+{
+}
+#typev Idle_Residency_c1031 41 "%0 [Verb] :iterate through subsystem: %10!d! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSocSnapshotOnCSEntry
+{
+i, ItemLong -- 10
+}
+#typev Idle_Residency_c1010 40 "%0 [Verb] :enter -> 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSocSnapshotOnCSEntry
+{
+}
+#typev Idle_Residency_c1169 50 "%0 [Crit] Idle_Residency.c::%!FUNC! :exit <-" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSocSnapshotOnCSExit
+{
+}
+#typev Idle_Residency_c1165 49 "%0 [Err ] Idle_Residency.c::%!FUNC!::1165 :Ctxt is invalid Ctxt: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSocSnapshotOnCSExit
+{
+(int)ctxt, ItemLong -- 10
+}
+#typev Idle_Residency_c1136 48 "%0 [Info] :Subsystem [%10!d!], Wakeup Count: %11!d!, LastEnteredCSAt: %12!I64u!                                          LastExitedCSAt: %13!I64u!, Sleep Duration: %14!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSocSnapshotOnCSExit
+{
+i, ItemLong -- 10
+ctxt->SocSubsystemInfo[i].LastExitSnapshot.WakeupCount, ItemLong -- 11
+ctxt->SocSubsystemInfo[i].LastExitSnapshot.LastEnteredAt, ItemULongLong -- 12
+ctxt->SocSubsystemInfo[i].LastExitSnapshot.LastExitedAt, ItemULongLong -- 13
+ctxt->SocSubsystemInfo[i].LastExitSnapshot.SleepDuration, ItemULongLong -- 14
+}
+#typev Idle_Residency_c1125 47 "%0 [Err ] Idle_Residency.c::%!FUNC!::1125 :Subsystem Stats does not match" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSocSnapshotOnCSExit
+{
+}
+#typev Idle_Residency_c1096 46 "%0 [Verb] :iterate through subsystem: %10!d! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSocSnapshotOnCSExit
+{
+i, ItemLong -- 10
+}
+#typev Idle_Residency_c1088 45 "%0 [Verb] :enter -> 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSocSnapshotOnCSExit
+{
+}
+#typev Idle_Residency_c859 28 "%0 [Verb] :exit <- 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSubsystemSnapshot
+{
+}
+#typev Idle_Residency_c855 27 "%0 [Err ] Idle_Residency.c::%!FUNC!::855 :subsystem pointer ss invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSubsystemSnapshot
+{
+}
+#typev Idle_Residency_c843 26 "%0 [Err ] Idle_Residency.c::%!FUNC!::843 :PEP bug check Subsys SessionTimeStampError" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSubsystemSnapshot
+{
+}
+#typev Idle_Residency_c837 25 "%0 [Verb] :stats matched try no: %10!d! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSubsystemSnapshot
+{
+i, ItemLong -- 10
+}
+#typev Idle_Residency_c825 24 "%0 [Err ] Idle_Residency.c::%!FUNC!::825 :subsystem stats version=(%10!u!)is not supported" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_IDLE_CONSTRAINTS FUNC=IdleInternalTakeSubsystemSnapshot
+{
+ss->sys_sleep_version, ItemLong -- 10
+}
+#typev Idle_Residency_c820 23 "%0 [Verb] :try no: %10!d! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSubsystemSnapshot
+{
+i, ItemLong -- 10
+}
+#typev Idle_Residency_c810 22 "%0 [Verb] :enter -> 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalTakeSubsystemSnapshot
+{
+}
+#typev Idle_Residency_c795 21 "%0 [Info] :IdleInternalReadResidencyStats: index: %10!u!, Transition Count: %11!I64u!, Residency: %12!I64u! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=IdleInternalUpdateHardwareResidency
+{
+i, ItemLong -- 10
+ctxt->LastHwResidency.States[i].TransitionCount, ItemULongLong -- 11
+ctxt->LastHwResidency.States[i].Residency, ItemULongLong -- 12
+}
+#typev Idle_Residency_c2120 93 "%0 [Err ] :InitializeAOPAddress Failed for lpmmon due to invalid address or already mapped 	[Idle_Residency.c::%!FUNC!::2120]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=InitializeAOPAddress
+{
+}
+#typev Idle_Residency_c2111 92 "%0 [Err ] :InitializeAOPAddress Failed to Map AOP MSG RAM 2 for lpmmon  	[Idle_Residency.c::%!FUNC!::2111]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=InitializeAOPAddress
+{
+}
+#typev Idle_Residency_c2095 91 "%0 [Err ] :InitializeAOPAddress Failed to Map AOP MSG RAM 2 for lpmmon: %10!x! 	[Idle_Residency.c::%!FUNC!::2095]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=InitializeAOPAddress
+{
+status, ItemLong -- 10
+}
+#typev Idle_Residency_c345 15 "%0 [Err ] Idle_Residency.c::%!FUNC!::345 :EnableAOPDebugStats: Memory allocation failure!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=InitializeAOPLpmMonitor
+{
+}
+#typev Idle_Residency_c333 14 "%0 [Err ] Idle_Residency.c::%!FUNC!::333 :EnableAOPDebugStats: Input validation failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=InitializeAOPLpmMonitor
+{
+}
+#typev Idle_Residency_c1862 78 "%0 [Crit] Idle_Residency.c::%!FUNC! :exit <-" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepDpmQuerySocSubsystemBlockingTime
+{
+}
+#typev Idle_Residency_c1859 77 "%0 [Info] :retVal is %10!d! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepDpmQuerySocSubsystemBlockingTime
+{
+retVal, ItemLong -- 10
+}
+#typev Idle_Residency_c1848 76 "%0 [Err ] Idle_Residency.c::%!FUNC!::1848 :either Ctxt is NULL or invalid platformstateindex passed inctxt: %10!d!, queryBlockTime->PlatformIdleStateIndex: %11!d!, ctxt->DripsStateId: %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepDpmQuerySocSubsystemBlockingTime
+{
+(int)ctxt, ItemLong -- 10
+queryBlockTime->PlatformIdleStateIndex, ItemLong -- 11
+ctxt->DripsStateId, ItemLong -- 12
+}
+#typev Idle_Residency_c1839 75 "%0 [Crit] Idle_Residency.c::%!FUNC! :subsystem index is not zero, sub->SubsystemIndex: %10!d!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepDpmQuerySocSubsystemBlockingTime
+{
+sub->SubsystemIndex, ItemLong -- 10
+}
+#typev Idle_Residency_c1830 74 "%0 [Crit] Idle_Residency.c::%!FUNC! :subsystem index IS zero, so accumulate stats, sub->SubsystemIndex: %10!d!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepDpmQuerySocSubsystemBlockingTime
+{
+sub->SubsystemIndex, ItemLong -- 10
+}
+#typev Idle_Residency_c1816 73 "%0 [Info] :Ctxt is valid and platformstateindex is validctxt: %10!d!, queryBlockTime->PlatformIdleStateIndex: %11!d!, ctxt->DripsStateId: %12!d!, sub->SubsystemIndex: %13!d! 	[Idle_Residency.c::%!FUNC!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepDpmQuerySocSubsystemBlockingTime
+{
+(int)ctxt, ItemLong -- 10
+queryBlockTime->PlatformIdleStateIndex, ItemLong -- 11
+ctxt->DripsStateId, ItemLong -- 12
+sub->SubsystemIndex, ItemLong -- 13
+}
+#typev Idle_Residency_c1797 72 "%0 [Crit] Idle_Residency.c::%!FUNC! :enter ->" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepDpmQuerySocSubsystemBlockingTime
+{
+}
+#typev Idle_Residency_c1781 71 "%0 [Err ] Idle_Residency.c::%!FUNC!::1781 :SocSubsystemAccountingResetError" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_IDLE_FLAG_COMMON FUNC=PepDpmResetSocSubsystemAccounting
+{
+}

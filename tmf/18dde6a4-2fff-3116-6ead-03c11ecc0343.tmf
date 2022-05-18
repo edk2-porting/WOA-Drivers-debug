@@ -1,0 +1,23 @@
+// PDB:  qcmbbnetadapterfilter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+18dde6a4-2fff-3116-6ead-03c11ecc0343 NetAdapterFilter // SRC=QnetFilterQueue.c MJ= MN=
+#typev QnetFilterDevice_c202 10 "%0%!FUNC!::E:WdfIoQueueCreate failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFilterCreateDevice
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+// PDB:  qcmbbnetadapterfilter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QnetFilterQueue_c61 11 "%0%!FUNC!::I:Queue 0x%10!p!, Request 0x%11!p! OutputBufferLength %12!d! InputBufferLength %13!d! IoControlCode %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterEvtIoDeviceControl
+{
+wdfQueue, ItemPtr -- 10
+wdfRequest, ItemPtr -- 11
+(int) OutputBufferLength, ItemLong -- 12
+(int) InputBufferLength, ItemLong -- 13
+ulIoControlCode, ItemLong -- 14
+}
+#typev QnetFilterQueue_c75 12 "%0%!FUNC!::I:Queue 0x%10!p!, Request 0x%11!p! ActionFlags %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterEvtIoStop
+{
+wdfQueue, ItemPtr -- 10
+wdfRequest, ItemPtr -- 11
+ulActionFlags, ItemLong -- 12
+}

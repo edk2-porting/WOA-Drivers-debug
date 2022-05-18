@@ -1,0 +1,504 @@
+// PDB:  qcpmicglink7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+25556dc5-32fb-3f19-03a1-1d6c8a83a021 PmicGlink // SRC=PmicGlinkPlatform.c MJ= MN=
+#typev PmicGlinkPlatform_c130 12 "%0%!FUNC!:: Updated GlinkChannelConnected = %10!d!, GlinkChannelRestart = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGLinkRegisterLinkStateCb
+{
+pDeviceContext->GlinkChannelConnected, ItemLong -- 10
+pDeviceContext->GlinkChannelRestart, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c107 11 "%0%!FUNC!:: Event link_state = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGLinkRegisterLinkStateCb
+{
+link_info->link_state, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c101 10 "%0%!FUNC!::ERROR: Invalid pDeviceContext" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGLinkRegisterLinkStateCb
+{
+}
+#typev PmicGlinkPlatform_c785 37 "%0qcpmicglink::ERROR: glinkTestNotifyRxIntentCb: Private Info passed is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkNotifyRxIntentCb
+{
+}
+#typev PmicGlinkPlatform_c756 36 "%0qcpmicglink::ERROR: glinkTestNotifyRxIntentReqCb: Queue_Rx_Intent failed with error: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkNotifyRxIntentReqCb
+{
+glinkRetCode, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c744 35 "%0qcpmicglink::ERROR: glinkTestNotifyRxIntentReqCb: Private Info passed is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkNotifyRxIntentReqCb
+{
+}
+#typev PmicGlinkPlatform_c2177 79 "%0%!FUNC!::Set State = %10!d! Failed, status=0x%11!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkPlatformSetState_Request_Write_WorkItem
+{
+sState, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c2173 78 "%0%!FUNC!::Set State = %10!d! Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkPlatformSetState_Request_Write_WorkItem
+{
+sState, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c608 74 "%0%!FUNC!::Enumerate ACPI Method for Link State Update Failed, status=0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkRegisterInterfaceWorkItem
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c608 75 "%0%!FUNC!::Enumerate ACPI Method for Link State Update Successful but Method return Error=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkRegisterInterfaceWorkItem
+{
+argument->Data[0], ItemLong -- 10
+}
+// PDB:  qcpmicglink7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PmicGlinkPlatform_c600 27 "%0%!FUNC!:: GlinkChannelConnected = %10!d!, GlinkChannelRestart = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGlinkRegisterInterfaceWorkItem
+{
+pDeviceContext->GlinkChannelConnected, ItemLong -- 10
+pDeviceContext->GlinkChannelRestart, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c711 33 "%0qcpmicglink::ERROR: PmicGlinkStateNotificationCb: Invalid Event" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkStateNotificationCb
+{
+}
+#typev PmicGlinkPlatform_c715 34 "%0%!FUNC!:: Updated GlinkChannelConnected = %10!d!, GlinkChannelRestart = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGlinkStateNotificationCb
+{
+pDeviceContext->GlinkChannelConnected, ItemLong -- 10
+pDeviceContext->GlinkChannelRestart, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c698 32 "%0%!FUNC!:: Event: GLINK_REMOTE_DISCONNECTED." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkStateNotificationCb
+{
+}
+#typev PmicGlinkPlatform_c686 31 "%0%!FUNC!:: Event: GLINK_LOCAL_DISCONNECTED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkStateNotificationCb
+{
+}
+#typev PmicGlinkPlatform_c682 30 "%0%!FUNC!::ERROR: pGlinkChannelInfoObj is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkStateNotificationCb
+{
+}
+#typev PmicGlinkPlatform_c655 29 "%0%!FUNC!:: Event: GLINK_CONNECTED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkStateNotificationCb
+{
+}
+#typev PmicGlinkPlatform_c645 28 "%0%!FUNC!::ERROR: Private Info passed is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkStateNotificationCb
+{
+}
+#typev PmicGlinkPlatform_c583 26 "%0PmicGlinkTxNotificationCb:: glinkTestTxNotificationCb: sent PMIC_GLINK_TX_NOTIFICATION_EVENT" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkTxNotificationCb
+{
+}
+#typev PmicGlinkPlatform_c578 25 "%0qcpmicglink::ERROR: glinkTestTxNotificationCb: Private Info passed is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkTxNotificationCb
+{
+}
+#typev PmicGlinkPlatform_c313 19 "%0qcpmicglink::ERROR::WdfMemoryCreate for pmicglink received massages is failed status = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGlink_CopyRxData
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c1054 45 "%0%!FUNC!::Interface (GUID_ABD_DEVINTERFACE) arrived" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_Interface_Add
+{
+}
+#typev PmicGlinkPlatform_c1049 44 "%0%!FUNC!::Interface ABD WdfIoTargetOpen failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c1040 43 "%0%!FUNC!::Interface ABD WdfIoTargetCreate failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c1021 42 "%0%!FUNC!::Interface (GLINK_DEVICE_INTERFACE_GUID) arrived" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_Interface_Add
+{
+}
+#typev PmicGlinkPlatform_c1016 41 "%0%!FUNC!::Interface GLINK WdfIoTargetOpen failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c1007 40 "%0%!FUNC!::Interface GLINK WdfIoTargetCreate failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_Interface_Add
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c901 39 "%0%!FUNC!::Interface GLINK GLinkOpen failed, glinkRetCode =%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_OpenGlinkChannel
+{
+glinkRetCode, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c866 38 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGlink_OpenGlinkChannel
+{
+}
+// PDB:  qcpmicglink7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PmicGlinkPlatform_c409 21 "%0%!FUNC!::WARN::Invalid Notification receiver for UCSI = %10!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_ProcessNotification
+{
+notification_receiver, ItemLong -- 10
+}
+// PDB:  qcpmicglink7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PmicGlinkPlatform_c363 20 "%0%!FUNC!::ERROR: Invalid pDeviceContext" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_ProcessNotification
+{
+}
+#typev PmicGlinkPlatform_c240 18 "%0%!FUNC!::ERROR: GLinkRegisterLinkStateCb register failed, Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGlink_RegisterLinkStateCb
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c223 17 "%0qcpmicglink::ERROR: query DDI interface (GLINK_API_INTERFACE_GUID) failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGlink_RegisterLinkStateCb
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c196 16 "%0%!FUNC!++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGlink_RegisterLinkStateCb
+{
+}
+#typev PmicGlinkPlatform_c192 15 "%0%!FUNC!::ERROR: Invalid pDeviceContext" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGlink_RegisterLinkStateCb
+{
+}
+#typev PmicGlinkPlatform_c1592 59 "%0PmicGlink_RetrieveRxData:: Custom Alt Mode Set State Req" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_RetrieveRxData
+{
+}
+#typev PmicGlinkPlatform_c1528 58 "%0PmicRxNotificationCb:: got generic test info." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_RetrieveRxData
+{
+}
+#typev PmicGlinkPlatform_c1486 57 "%0PmicRxNotificationCb:: got battery info." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_RetrieveRxData
+{
+}
+#typev PmicGlinkPlatform_c1421 56 "%0PmicGlink_RetrieveRxData:: rate = %10!d!, voltage = %11!d!, power_state = %12!d!, capacity = %13!d!, batt_temp = %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_RetrieveRxData
+{
+pDeviceContext->BattMngrData.ChgStatus.rate, ItemLong -- 10
+pDeviceContext->BattMngrData.ChgStatus.voltage, ItemLong -- 11
+pDeviceContext->BattMngrData.ChgStatus.power_state, ItemLong -- 12
+pDeviceContext->BattMngrData.ChgStatus.capacity, ItemLong -- 13
+pDeviceContext->BattMngrData.BattInfo.batt_temperature, ItemLong -- 14
+}
+#typev PmicGlinkPlatform_c2049 69 "%0PmicGlink_SendData: Error ::: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SetState
+{
+}
+#typev PmicGlinkPlatform_c2049 68 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received after PMIC_GLINK_TX_NOTIFICATION." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SetState
+{
+}
+#typev PmicGlinkPlatform_c2049 67 "%0PmicGlink_SendData Error :: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SetState
+{
+}
+#typev PmicGlinkPlatform_c2049 65 "%0PmicGlink_SendData:: PMIC_GLINK_TX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SetState
+{
+}
+#typev PmicGlinkPlatform_c2049 66 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SetState
+{
+}
+#typev PmicGlinkPlatform_c2049 64 "%0PmicGlink_SendData:: glinkTx called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SetState
+{
+}
+#typev PmicGlinkPlatform_c2049 62 "%0PmicGlink_SendData:: opCode = %10!d!, waitForRx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SetState
+{
+opCode, ItemLong -- 10
+waitForRx, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c2047 76 "%0calling glink to Set State to %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_ioimpl FUNC=PmicGlink_SetState
+{
+setStateReqMsg.state, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c1857 69 "%0PmicGlink_SendData: Error ::: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1857 68 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received after PMIC_GLINK_TX_NOTIFICATION." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1857 67 "%0PmicGlink_SendData Error :: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1857 65 "%0PmicGlink_SendData:: PMIC_GLINK_TX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1857 66 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1857 64 "%0PmicGlink_SendData:: glinkTx called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1857 62 "%0PmicGlink_SendData:: opCode = %10!d!, waitForRx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+opCode, ItemLong -- 10
+waitForRx, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c1901 69 "%0PmicGlink_SendData: Error ::: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1901 68 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received after PMIC_GLINK_TX_NOTIFICATION." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1901 67 "%0PmicGlink_SendData Error :: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1901 65 "%0PmicGlink_SendData:: PMIC_GLINK_TX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1901 66 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1901 64 "%0PmicGlink_SendData:: glinkTx called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1901 62 "%0PmicGlink_SendData:: opCode = %10!d!, waitForRx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+opCode, ItemLong -- 10
+waitForRx, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c1900 73 "%0PmicGlink notifying ChargerFw about SoC shutdown" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_ioimpl FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1848 69 "%0PmicGlink_SendData: Error ::: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1848 68 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received after PMIC_GLINK_TX_NOTIFICATION." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1848 67 "%0PmicGlink_SendData Error :: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1848 65 "%0PmicGlink_SendData:: PMIC_GLINK_TX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1848 66 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1848 64 "%0PmicGlink_SendData:: glinkTx called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1848 62 "%0PmicGlink_SendData:: opCode = %10!d!, waitForRx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+opCode, ItemLong -- 10
+waitForRx, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c1836 69 "%0PmicGlink_SendData: Error ::: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1836 68 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received after PMIC_GLINK_TX_NOTIFICATION." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1836 67 "%0PmicGlink_SendData Error :: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1836 65 "%0PmicGlink_SendData:: PMIC_GLINK_TX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1836 66 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1836 64 "%0PmicGlink_SendData:: glinkTx called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1836 62 "%0PmicGlink_SendData:: opCode = %10!d!, waitForRx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+opCode, ItemLong -- 10
+waitForRx, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c1835 72 "%0calling glink to Set charge rate to %10!d! percent." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_ioimpl FUNC=PmicGlink_SyncSendReceive
+{
+setChgRateReqMsg.charge_rate, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c1890 69 "%0PmicGlink_SendData: Error ::: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1890 68 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received after PMIC_GLINK_TX_NOTIFICATION." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1890 67 "%0PmicGlink_SendData Error :: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1890 65 "%0PmicGlink_SendData:: PMIC_GLINK_TX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1890 66 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1890 64 "%0PmicGlink_SendData:: glinkTx called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1890 62 "%0PmicGlink_SendData:: opCode = %10!d!, waitForRx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+opCode, ItemLong -- 10
+waitForRx, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c1823 69 "%0PmicGlink_SendData: Error ::: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1823 68 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received after PMIC_GLINK_TX_NOTIFICATION." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1823 67 "%0PmicGlink_SendData Error :: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1823 65 "%0PmicGlink_SendData:: PMIC_GLINK_TX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1823 66 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1823 64 "%0PmicGlink_SendData:: glinkTx called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1823 62 "%0PmicGlink_SendData:: opCode = %10!d!, waitForRx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+opCode, ItemLong -- 10
+waitForRx, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c1822 71 "%0calling glink to Set operation mode to %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_ioimpl FUNC=PmicGlink_SyncSendReceive
+{
+setOpModeReqMsg.operational_mode, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c1868 69 "%0PmicGlink_SendData: Error ::: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1868 68 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received after PMIC_GLINK_TX_NOTIFICATION." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1868 67 "%0PmicGlink_SendData Error :: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1868 65 "%0PmicGlink_SendData:: PMIC_GLINK_TX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1868 66 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1868 64 "%0PmicGlink_SendData:: glinkTx called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1868 62 "%0PmicGlink_SendData:: opCode = %10!d!, waitForRx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+opCode, ItemLong -- 10
+waitForRx, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c1812 69 "%0PmicGlink_SendData: Error ::: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1812 68 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received after PMIC_GLINK_TX_NOTIFICATION." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1812 67 "%0PmicGlink_SendData Error :: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1812 65 "%0PmicGlink_SendData:: PMIC_GLINK_TX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1812 66 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1812 64 "%0PmicGlink_SendData:: glinkTx called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1812 62 "%0PmicGlink_SendData:: opCode = %10!d!, waitForRx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+opCode, ItemLong -- 10
+waitForRx, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c1801 69 "%0PmicGlink_SendData: Error ::: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1801 68 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received after PMIC_GLINK_TX_NOTIFICATION." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1801 67 "%0PmicGlink_SendData Error :: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1801 65 "%0PmicGlink_SendData:: PMIC_GLINK_TX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1801 66 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1801 64 "%0PmicGlink_SendData:: glinkTx called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1801 62 "%0PmicGlink_SendData:: opCode = %10!d!, waitForRx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+opCode, ItemLong -- 10
+waitForRx, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c1793 70 "%0set new Notification criteria high_capacity = %10!d!, low_capacity = %11!d!, power_state = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_ioimpl FUNC=PmicGlink_SyncSendReceive
+{
+setStatusNotif->batt_notify_criteria.high_capacity, ItemLong -- 10
+setStatusNotif->batt_notify_criteria.low_capacity, ItemLong -- 11
+setStatusNotif->batt_notify_criteria.power_state, ItemLong -- 12
+}
+#typev PmicGlinkPlatform_c1780 69 "%0PmicGlink_SendData: Error ::: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1780 68 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received after PMIC_GLINK_TX_NOTIFICATION." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1780 67 "%0PmicGlink_SendData Error :: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1780 65 "%0PmicGlink_SendData:: PMIC_GLINK_TX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1780 66 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1780 64 "%0PmicGlink_SendData:: glinkTx called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1780 62 "%0PmicGlink_SendData:: opCode = %10!d!, waitForRx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+opCode, ItemLong -- 10
+waitForRx, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c1770 69 "%0PmicGlink_SendData: Error ::: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1770 68 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received after PMIC_GLINK_TX_NOTIFICATION." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1770 67 "%0PmicGlink_SendData Error :: TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1770 65 "%0PmicGlink_SendData:: PMIC_GLINK_TX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1770 66 "%0PmicGlink_SendData:: PMIC_GLINK_RX_NOTIFICATION received." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1770 64 "%0PmicGlink_SendData:: glinkTx called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+}
+#typev PmicGlinkPlatform_c1770 62 "%0PmicGlink_SendData:: opCode = %10!d!, waitForRx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlink_SyncSendReceive
+{
+opCode, ItemLong -- 10
+waitForRx, ItemLong -- 11
+}
+#typev PmicGlinkPlatform_c498 24 "%0PmicRxNotificationCb:: PmicRxNotificationCb: RxDone called." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicRxNotificationCb
+{
+}
+#typev PmicGlinkPlatform_c493 23 "%0PmicRxNotificationCb:: PmicRxNotificationCb: info Object NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicRxNotificationCb
+{
+}
+#typev PmicGlinkPlatform_c476 22 "%0qcpmicglink::ERROR: glinkTestRxNotificationCb: Private Info passed is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicRxNotificationCb
+{
+}
+#typev PmicGlinkPlatformUsbc_c241 77 "%0%!FUNC!:: WorkItemCreate Failed, status=0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkPlatformUsbc_AcpiNotificationHandler
+{
+status, ItemLong -- 10
+}
+// PDB:  qcpmicglink7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PmicGlinkDevice_c1055 47 "%0%!FUNC!::Interface (GUID_ABD_DEVINTERFACE) removed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=InterfaceNotficationCallback
+{
+}
+#typev PmicGlinkDevice_c1055 46 "%0%!FUNC!::Interface (GLINK_DEVICE_INTERFACE_GUID) removed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=InterfaceNotficationCallback
+{
+}
+// PDB:  qcpmicglink7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PmicGlinkDevice_c964 14 "%0%!FUNC!:: GlinkChannelConnected = %10!d!, GlinkChannelRestart = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_SelfHost FUNC=OnD0Exit
+{
+pDeviceContext->GlinkChannelConnected, ItemLong -- 10
+pDeviceContext->GlinkChannelRestart, ItemLong -- 11
+}
+// PDB:  qcpmicglink7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PmicGlinkDevice_c1139 53 "%0qcpmicglink::ERROR: Unregistering interface (GUID_ABD_DEVINTERFACE) for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGlinkDevice_RegisterForPnPNotifications
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkDevice_c1139 52 "%0qcpmicglink::ERROR: Unregistering interface (GUID_DEVINTERFACE_PMIC_CHARGER) for charger and gauge failed,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGlinkDevice_RegisterForPnPNotifications
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkDevice_c1139 51 "%0%!FUNC!++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkDevice_RegisterForPnPNotifications
+{
+}
+// PDB:  qcpmicglink7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PmicGlinkDevice_c1114 50 "%0qcpmicglink::ERROR::Registering for ABD_DEVICE_INTERFACE_GUID interface failed for Glink driver,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGlinkDevice_RegisterForPnPNotifications
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkDevice_c1114 49 "%0qcpmicglink::ERROR::Registering for GLINK_DEVICE_INTERFACE_GUID interface failed for Glink driver,Error Code =%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_SelfHost FUNC=PmicGlinkDevice_RegisterForPnPNotifications
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkDevice_c1114 48 "%0%!FUNC!++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkDevice_RegisterForPnPNotifications
+{
+}

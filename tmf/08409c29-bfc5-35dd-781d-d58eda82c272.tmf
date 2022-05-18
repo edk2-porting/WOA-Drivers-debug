@@ -1,0 +1,133 @@
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+08409c29-bfc5-35dd-781d-d58eda82c272 latest // SRC=pdc_driver.c MJ= MN=
+#typev qcgpiodevice_c433 39 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_DEVICEINIT FUNC=QcGpioPrepareController
+{
+}
+#typev qcgpiodevice_c433 38 "%0 [%!FUNC!] -->" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_DEVICEINIT FUNC=QcGpioPrepareController
+{
+}
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qcgpiodevice_c267 37 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_DEVICEINIT FUNC=QcGpioPrepareController
+{
+}
+#typev qcgpiodevice_c267 35 "%0 [%!FUNC!] -->" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_DEVICEINIT FUNC=QcGpioPrepareController
+{
+}
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qcgpiodevice_c507 41 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_DEVICEINIT FUNC=QcGpioReleaseController
+{
+}
+#typev qcgpiodevice_c507 40 "%0 [%!FUNC!] -->" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_DEVICEINIT FUNC=QcGpioReleaseController
+{
+}
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qcgpiointerrupt_c573 19 "%0Info: [pdcGpioClearActiveInterrupt] ActualPinNumber:%10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION COMPNAME=TRACE_PDC_GPIO FUNC=QcGpioClearActiveInterrupts
+{
+(ULONG)ActualPinNumber, ItemLong -- 10
+}
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qcgpiointerrupt_c269 19 "%0Info: [pdcGpioClearActiveInterrupt] ActualPinNumber:%10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION COMPNAME=TRACE_PDC_GPIO FUNC=QcGpioDisableInterrupt
+{
+(ULONG)ActualPinNumber, ItemLong -- 10
+}
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qcgpiointerrupt_c937 18 "%0Info: [pdcGpioGenerateInterrupt] Stubbed function called for GpioNumber:%10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION COMPNAME=TRACE_PDC_GPIO FUNC=QcGpioFakeTriggerInterrupt
+{
+(ULONG)gpioNumber, ItemLong -- 10
+}
+// PDB:  qcgpio.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev pdc_driver_c635 32 "%0Error: [AddPdcGpioInterrupt] MmMapIoSpaceEx failed!" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=AddPdcGpioInterrupt
+{
+}
+#typev pdc_driver_c652 34 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_DEVICEINIT FUNC=AddPdcGpioInterrupt
+{
+}
+#typev pdc_driver_c646 33 "%0Info: [AddPdcGpioInterrupt] TlmmGpioNumber:%10!u!, PDCVirtualGpioNumber:%11!u!, PDCInterrupt:%12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION COMPNAME=TRACE_PDC_GPIO FUNC=AddPdcGpioInterrupt
+{
+(PdcGpioContext)->TlmmGpioNumber, ItemLong -- 10
+(PdcGpioContext)->PDCVirtualGpioNumber, ItemLong -- 11
+(PdcGpioContext)->PDCInterrupt, ItemLong -- 12
+}
+#typev pdc_driver_c609 31 "%0Error: [AddPdcGpioInterrupt] PDCGPIO context not found!" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=AddPdcGpioInterrupt
+{
+}
+#typev pdc_driver_c600 30 "%0 [%!FUNC!] -->" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_DEVICEINIT FUNC=AddPdcGpioInterrupt
+{
+}
+#typev pdc_driver_c207 12 "%0Info: [pdcCpuGicClearPendInterrupt] PDCVirtualGpioNumber:%10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_PDC_GPIO FUNC=pdcCpuGicClearPendInterrupt
+{
+GpioPinContext->PDCVirtualGpioNumber, ItemLong -- 10
+}
+#typev pdc_driver_c178 11 "%0Info: [pdcCpuGicEnableInterrupt] isEnable:%10!d!, PDCVirtualGpioNumber:%11!u!" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_PDC_GPIO FUNC=pdcCpuGicEnableInterrupt
+{
+enable, ItemLong -- 10
+GpioPinContext->PDCVirtualGpioNumber, ItemLong -- 11
+}
+#typev pdc_driver_c90 10 "%0Info: [pdcCpuGicReadStatus] PDCVirtualGpioNumber:%10!u! value_enable:0x%11!X! value_pending:0x%12!X! value_active:0x%13!X!" //   LEVEL=TRACE_LEVEL_VERBOSE COMPNAME=TRACE_PDC_GPIO FUNC=pdcCpuGicReadStatus
+{
+GpioPinContext->PDCVirtualGpioNumber, ItemLong -- 10
+value_enable, ItemLong -- 11
+value_pending, ItemLong -- 12
+value_active, ItemLong -- 13
+}
+#typev pdc_driver_c495 22 "%0Error: [pdcGpioConfigAndEnableInterrupt] trigger type:%10!d!" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=pdcGpioConfigAndEnableInterrupt
+{
+trig_cfg.trig_type, ItemLong -- 10
+}
+#typev pdc_driver_c484 21 "%0Info: [pdcGpioConfigAndEnableInterrupt] BankId:%10!u!, PinNumber:%11!u!, InterruptMode:%12!u!, Polarity:%13!u!, TLMM Pin:%14!u!" //   LEVEL=TRACE_LEVEL_INFORMATION COMPNAME=TRACE_PDC_GPIO FUNC=pdcGpioConfigAndEnableInterrupt
+{
+EnableParameters->BankId, ItemLong -- 10
+EnableParameters->PinNumber, ItemLong -- 11
+EnableParameters->InterruptMode, ItemLong -- 12
+EnableParameters->Polarity, ItemLong -- 13
+context->TlmmGpioNumber, ItemLong -- 14
+}
+#typev pdc_driver_c474 20 "%0Error: [pdcGpioConfigAndEnableInterrupt] Invalid PDC GPIO: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=pdcGpioConfigAndEnableInterrupt
+{
+ActualPinNumber, ItemLong -- 10
+}
+#typev pdc_driver_c547 26 "%0Info: [pdcGpioDisableInterrupt] TLMM Pin:%10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION COMPNAME=TRACE_PDC_GPIO FUNC=pdcGpioDisableInterrupt
+{
+context->TlmmGpioNumber, ItemLong -- 10
+}
+#typev pdc_driver_c540 25 "%0Error: [pdcGpioDisableInterrupt] Invalid PDC GPIO: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=pdcGpioDisableInterrupt
+{
+ActualPinNumber, ItemLong -- 10
+}
+#typev pdc_driver_c524 24 "%0Info: [pdcGpioEnableInterrupt] TLMM Pin:%10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION COMPNAME=TRACE_PDC_GPIO FUNC=pdcGpioEnableInterrupt
+{
+context->TlmmGpioNumber, ItemLong -- 10
+}
+#typev pdc_driver_c517 23 "%0Error: [pdcGpioEnableInterrupt] Invalid PDC GPIO: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=pdcGpioEnableInterrupt
+{
+ActualPinNumber, ItemLong -- 10
+}
+#typev pdc_driver_c584 29 "%0Error: [pdcGpioReConfigureInterrupt] trigger type:%10!d!)" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=pdcGpioReConfigureInterrupt
+{
+trig_cfg.trig_type, ItemLong -- 10
+}
+#typev pdc_driver_c573 28 "%0Info: [pdcGpioReConfigureInterrupt] BankId:%10!u!, PinNumber:%11!u!, InterruptMode:%12!u!, Polarity:%13!u!, TLMM Pin:%14!u!" //   LEVEL=TRACE_LEVEL_INFORMATION COMPNAME=TRACE_PDC_GPIO FUNC=pdcGpioReConfigureInterrupt
+{
+ReconfigureParameters->BankId, ItemLong -- 10
+ReconfigureParameters->PinNumber, ItemLong -- 11
+ReconfigureParameters->InterruptMode, ItemLong -- 12
+ReconfigureParameters->Polarity, ItemLong -- 13
+context->TlmmGpioNumber, ItemLong -- 14
+}
+#typev pdc_driver_c564 27 "%0Error: [pdcGpioReConfigureInterrupt] Invalid PDC GPIO: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=pdcGpioReConfigureInterrupt
+{
+ActualPinNumber, ItemLong -- 10
+}
+#typev pdc_driver_c314 16 "%0Error: [pdcGpio_disable] Invalid disable parameter" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=pdcGpio_disable
+{
+}
+#typev pdc_driver_c287 15 "%0Error: [pdcGpio_enable] Invalid enable parameter" //   LEVEL=TRACE_LEVEL_ERROR COMPNAME=TRACE_PDC_GPIO FUNC=pdcGpio_enable
+{
+}

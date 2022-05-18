@@ -1,0 +1,31 @@
+// PDB:  qcpmic7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:39:448 (UTC) [tracepdb]
+76249ebc-2ce7-3191-c118-bffa4c891eec src // SRC=PmicPon.c MJ= MN=
+#typev PmicPon_c91 11 "%0%!FUNC!::ERROR:Pon library is not initialized correctly. pmic_number=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Pon FUNC=HandlePmicPonRequest
+{
+pmic_number, ItemLong -- 10
+}
+#typev PmicPon_c113 18 "%0%!FUNC!::--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=HandlePmicPonRequest
+{
+}
+#typev PmicPon_c103 16 "%0%!FUNC!::IOCTL_PM_PON_CONFIG_PON_TRIGGER_EN completed with Status=%10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Pon FUNC=HandlePmicPonRequest
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PmicPon_c97 15 "%0%!FUNC!::IOCTL_PM_PON_CONFIG_PON_TRIGGER_EN not supported for pmic_number=%10!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Pon FUNC=HandlePmicPonRequest
+{
+pmic_number, ItemLong -- 10
+}
+#typev PmicPon_c84 14 "%0%!FUNC!::ERROR::InputBuffer = NULL for IOCTL_PM_PON_CONFIG_PON_TRIGGER_EN" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Pon FUNC=HandlePmicPonRequest
+{
+}
+#typev PmicPon_c109 17 "%0%!FUNC!::IOCTL not supported, IOCTL number=%10!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Pon FUNC=HandlePmicPonRequest
+{
+FUNCTION_CODE(IoControlCode), ItemLong -- 10
+}
+#typev PmicPon_c72 13 "%0%!FUNC!::ERROR::BytesReturned = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Pon FUNC=HandlePmicPonRequest
+{
+}
+#typev PmicPon_c63 12 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=HandlePmicPonRequest
+{
+}

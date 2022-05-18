@@ -1,0 +1,271 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+315e8e6c-56aa-3d8e-8019-98ceff1a1501 PEP // SRC=Acpi_DeviceData.c MJ= MN=
+#typev Acpi_DeviceData_c153 10 "%0Crashdump Resource parsing error, State Type: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=CrashdumpExceptionsData::ParseErrorData
+{
+StateType, ItemString -- 10
+}
+#typev Acpi_DeviceData_c1336 33 "%0ProcessStateAugmentationNode failed for P-STATE for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessComponentNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1320 32 "%0ProcessStateAugmentationNode failed for F-STATE for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessComponentNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1295 31 "%0ProcessStateNode failed in DISCOVERABLE PSTATE for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessComponentNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1267 30 "%0ProcessStateSetNode failed in PSTATE SET for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessComponentNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1244 29 "%0ProcessStateNode failed in PSTATE for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessComponentNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1221 28 "%0ProcessComponentNode failed for DeviceNode=%10!s!, CompIndex=%11!d!, Can only have PStates or PStateSets or Discoverable PStates in same device!!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessComponentNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+component->ComponentIndex, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1190 27 "%0ProcessResourceNode failed in FSTATE for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessComponentNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1167 26 "%0ProcessCrashdumpExceptions failed for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessComponentNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1139 25 "%0Memory allocation failed for DeviceNode=%10!s!, CompIndex=%11!d!!!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessComponentNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+component->ComponentIndex, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1130 24 "%0devNode or component pointer is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessComponentNode
+{
+}
+#typev Acpi_DeviceData_c1600 46 "%0ProcessResourceNode failed for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessCrashdumpExceptions
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1567 45 "%0ProcessCrashdumpExceptions failed since stateObj is NULL for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessCrashdumpExceptions
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1534 44 "%0RtlUnicodeToUTF8N failed for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessCrashdumpExceptions
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1509 43 "%0AddState failed for device: %10!s!, stateNode is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessCrashdumpExceptions
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev Acpi_DeviceData_c1493 42 "%0ProcessCrashdumpExceptions failed for device: %10!s!, state pointer is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessCrashdumpExceptions
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev Acpi_DeviceData_c1479 41 "%0ProcessCrashdumpExceptions failed since devNode is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessCrashdumpExceptions
+{
+}
+#typev Acpi_DeviceData_c1094 23 "%0Follwing Device (%10!s!) re-enumerated resources through PEP DDI post driver update, so deleting Abandon (%11!s!) client read from ACPI " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=ProcessDeviceNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+&(TempNodeToDelete->InstancePathAnsi), ItemPString -- 11
+}
+#typev Acpi_DeviceData_c1091 22 "%0 [Info] Acpi_DeviceData.c::%!FUNC! :Follwing Device (%10!s!) re-enumerated resources through PEP DDI post driver update, so deleting Abandon (%11!s!) client read from ACPI " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessDeviceNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+&(TempNodeToDelete->InstancePathAnsi), ItemPString -- 11
+}
+#typev Acpi_DeviceData_c1057 21 "%0Follwing Device (%10!s!) enumerated resources through PEP DDI, so deleting PRELOAD (%11!s!) client read from ACPI " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=ProcessDeviceNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+&(TempNodeToDelete->InstancePathAnsi), ItemPString -- 11
+}
+#typev Acpi_DeviceData_c1054 20 "%0 [Info] Acpi_DeviceData.c::%!FUNC! :Follwing Device (%10!s!) enumerated resources through PEP DDI, so deleting PRELOAD (%11!s!) client read from ACPI" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessDeviceNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+&(TempNodeToDelete->InstancePathAnsi), ItemPString -- 11
+}
+#typev Acpi_DeviceData_c1008 19 "%0Idle Constraint failed for device: %10!s!, Component ID: %11!d!, State type: %12!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessDeviceNode
+{
+resourceParseResult->deviceName, ItemString -- 10
+(INT)resourceParseResult->componentID, ItemLong -- 11
+resourceParseResult->stateType, ItemString -- 12
+}
+#typev Acpi_DeviceData_c942 18 "%0ProcessStateAugmentationNode for D-State failed for device: %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessDeviceNode
+{
+device->Name, ItemString -- 10
+}
+#typev Acpi_DeviceData_c912 17 "%0ProcessStateNode failed for D-state for device: %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessDeviceNode
+{
+device->Name, ItemString -- 10
+}
+#typev Acpi_DeviceData_c884 16 "%0Follwing Device : (%10!s!) is enumerating D-states in more than one Component using RTE V2 interface" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessDeviceNode
+{
+device->Name, ItemString -- 10
+}
+#typev Acpi_DeviceData_c855 15 "%0ProcessCrashdumpExceptions failed for D-state for device: %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessDeviceNode
+{
+device->Name, ItemString -- 10
+}
+#typev Acpi_DeviceData_c822 14 "%0ProcessComponentNode failed for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessDeviceNode
+{
+device->Name, ItemString -- 10
+c->data->ComponentIndex, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c793 13 "%0Memory allocation failed for device: %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessDeviceNode
+{
+device->Name, ItemString -- 10
+}
+#typev Acpi_DeviceData_c758 12 "%0device argument is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessDeviceNode
+{
+}
+#typev Acpi_DeviceData_c745 11 "%0outList is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessDeviceNode
+{
+}
+#typev Acpi_DeviceData_c2266 64 "%0AddResource failed in ProcessResourceNode for device: %10!s!, Component ID: 0x%11!x!, type: %12!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessResourceNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+type, ItemLong -- 12
+}
+#typev Acpi_DeviceData_c2249 63 "%0ProcessResourceNode failed since hdr is NULL for device: %10!s!, Component ID: 0x%11!x!, type: %12!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessResourceNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+type, ItemLong -- 12
+}
+#typev Acpi_DeviceData_c2234 62 "%0ProcessResourceNode failed since no matching type for device: %10!s!, Component ID: 0x%11!x!, type: %12!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessResourceNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+type, ItemLong -- 12
+}
+#typev Acpi_DeviceData_c2071 61 "%0GetNpaClientHandle failed in ProcessResourceNode for device: %10!s!, client is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessResourceNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev Acpi_DeviceData_c1967 60 "%0ProcessResourceNode failed for device: %10!s!, compNode is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessResourceNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev Acpi_DeviceData_c1879 59 "%0ProcessStateAugmentationNode failed for stateType: %10!d!, augmentation->Type: %11!d! : the augmentation is NOT targeting an already added state, augmentation->StateIndex: %12!d!, stateObj->setArray[forSetIndex].stateArrayLen: %13!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateAugmentationNode
+{
+stateObj->stateType, ItemLong -- 10
+augmentation->Type, ItemLong -- 11
+augmentation->StateIndex, ItemLong -- 12
+stateObj->setArray[forSetIndex].stateArrayLen, ItemLong -- 13
+}
+#typev Acpi_DeviceData_c1862 58 "%0ProcessStateAugmentationNode failed for stateType: %10!d!, augmentation->Type: %11!d! : Invalid set Index: %12!d!, Max set Array len: %13!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateAugmentationNode
+{
+stateObj->stateType, ItemLong -- 10
+augmentation->Type, ItemLong -- 11
+forSetIndex, ItemLong -- 12
+stateObj->setArrayLen, ItemLong -- 13
+}
+#typev Acpi_DeviceData_c1846 57 "%0ProcessStateAugmentationNode failed for stateType: %10!d! since augmentation is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateAugmentationNode
+{
+stateObj->stateType, ItemLong -- 10
+}
+#typev Acpi_DeviceData_c1832 56 "%0ProcessStateAugmentationNode failed since stateObj->setArray is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateAugmentationNode
+{
+}
+#typev Acpi_DeviceData_c1818 55 "%0ProcessStateAugmentationNode failed since stateObj is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateAugmentationNode
+{
+}
+#typev Acpi_DeviceData_c1787 54 "%0ProcessResourceNode failed for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1752 53 "%0No matching stateType found for Device: %10!s!, Component ID: 0x%11!x!, State Type: %12!d!!!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+stateType, ItemLong -- 12
+}
+#typev Acpi_DeviceData_c1727 52 "%0ProcessCrashdumpExceptions failed for device: %10!s!, compNode pointer is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev Acpi_DeviceData_c1710 51 "%0ProcessCrashdumpExceptions failed for device: %10!s!, compNode pointer is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev Acpi_DeviceData_c1693 50 "%0ProcessResourceNode failed for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1666 49 "%0AddState failed for for Device: %10!s!, Component ID: 0x%11!x!, State Type: %12!d!!!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+stateType, ItemLong -- 12
+}
+#typev Acpi_DeviceData_c1649 48 "%0ProcessStateNode failed for device: %10!s!, state pointer is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev Acpi_DeviceData_c1635 47 "%0ProcessStateNode failed since devNode is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateNode
+{
+}
+#typev Acpi_DeviceData_c1453 40 "%0ProcessStateAugmentationNode failed for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateSetNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1436 39 "%0ProcessResourceNode failed for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateSetNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c1415 38 "%0AddStateSet failed for device: %10!s!, Component ID: %11!d!, SetIndex: %12!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateSetNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+stateSet->SetIndex, ItemLong -- 12
+}
+#typev Acpi_DeviceData_c1401 37 "%0AllocateStateObject failed for device: %10!s!, Component ID: %11!d!, stateType: %12!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateSetNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+stateType, ItemLong -- 12
+}
+#typev Acpi_DeviceData_c1387 36 "%0ProcessStateSetNode failed for device: %10!s!, Component ID: %11!d!, Invalid stateType: %12!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateSetNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+stateType, ItemLong -- 12
+}
+#typev Acpi_DeviceData_c1378 35 "%0ProcessStateSetNode failed for device: %10!s!, compNode pointer is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateSetNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev Acpi_DeviceData_c1367 34 "%0ProcessStateSetNode failed since stateSet is NULL for device: %10!s!, Component ID: %11!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ProcessStateSetNode
+{
+&(devNode->InstancePathAnsi), ItemPString -- 10
+compNode ? compNode->CompIndex : 0xfff, ItemLong -- 11
+}
+#typev Acpi_DeviceData_c2343 65 "%0Resource parsing error for device: %10!s!, Component ID: %11!d!, State type: %12!s!, State Set index: %13!d!, State Index: %14!d!, Resource Type: %15!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepResParseIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseDeviceInfo
+{
+resourceParseResult->deviceName, ItemString -- 10
+resourceParseResult->componentID, ItemLong -- 11
+resourceParseResult->stateType, ItemString -- 12
+resourceParseResult->stateSetIndex, ItemLong -- 13
+resourceParseResult->stateIndex, ItemLong -- 14
+resourceParseResult->resourceType, ItemString -- 15
+}

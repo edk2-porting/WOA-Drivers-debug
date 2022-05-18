@@ -1,0 +1,22 @@
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+922baaaf-fba1-308d-5be9-6d804a6f3600 10.7 // SRC=RevIP.c MJ= MN=
+#typev RevIP_c106 10 "%0<%!FUNC!>:: Invalid Packet." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevIP_ExtractRAFromICMPv6Packet
+{
+}
+#typev RevIP_c186 14 "%0<%!FUNC!>:: ERROR: Option count (%10!d!) exceeded than 3. Skipping packet parsing." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevIP_ExtractRAFromICMPv6Packet
+{
+nOptionCount, ItemLong -- 10
+}
+#typev RevIP_c135 13 "%0<%!FUNC!>:: ERROR: Invalid RA Option (0x%10!x!/%11!d!). Skipping packet parsing." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevIP_ExtractRAFromICMPv6Packet
+{
+pIPv6ICMPOptions->Type, ItemLong -- 10
+pIPv6ICMPOptions->Type, ItemLong -- 11
+}
+#typev RevIP_c121 12 "%0<%!FUNC!>:: RA Packet Size = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevIP_ExtractRAFromICMPv6Packet
+{
+nbICMPv6PacketSize, ItemLong -- 10
+}
+#typev RevIP_c115 11 "%0<%!FUNC!>:: Not a valid RA packet." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevIP_ExtractRAFromICMPv6Packet
+{
+}

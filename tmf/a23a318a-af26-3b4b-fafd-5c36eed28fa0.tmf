@@ -1,0 +1,64 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+a23a318a-af26-3b4b-fafd-5c36eed28fa0 src // SRC=dp_dsc.c MJ= MN=
+#typev dp_dsc_c455 18 "%0DP%10!d!: DSC calculated params - DSC Hblank=%11!s!, DTO num=%12!d!, DTO den=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_DSC_CalculateParameters
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDSCInfo->dDSCHBlankPeriod, ItemDouble -- 11
+pDSCInfo->uDSCDTONumerator, ItemLong -- 12
+pDSCInfo->uDSCDTODenominator, ItemLong -- 13
+}
+#typev dp_dsc_c449 17 "%0DP%10!d!: DSC calculated params - DSC overhead ratio=%11!s!, Input BPP=%12!d!, Output BPP=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_DSC_CalculateParameters
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDSCInfo->fDSCOverheadRatio, ItemDouble -- 11
+uBPP, ItemLong -- 12
+pDSCInfo->uOutputBitsPerPixel, ItemLong -- 13
+}
+#typev dp_dsc_c442 16 "%0DP%10!d!: DSC calculated params - Comp ratio=%11!s!, DSC width=%12!d!, DSC pclk=%13!d!, DSC pixels per line=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_DSC_CalculateParameters
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDSCInfo->fCompressionRatio, ItemDouble -- 11
+pDSCInfo->uDSCWidth, ItemLong -- 12
+pDSCInfo->uDSCPixelClkInKhz * 1000, ItemLong -- 13
+pDSCInfo->uDSCPixelsPerLine, ItemLong -- 14
+}
+#typev dp_dsc_c393 15 "%0DP%10!d!: Failed to calculate slice dimensions" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_DSC_CalculateParameters
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dsc_c172 10 "%0DP%10!d!: Enable DSC on sink, status:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_DSC_ConfigureSink
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_dsc_c569 20 "%0DP%10!d!: Configure DSC on Tx, enable=%11!d!, status:0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_DSC_ConfigureSource
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+bEnable, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_dsc_c274 13 "%0DP%10!d!: Failed to read DSC capabilities" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_DSC_QueryInfo
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dsc_c506 19 "%0DP%10!d!: Disabling FEC since DSC is disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_FEC_CalculateParameters
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dsc_c222 12 "%0DP%10!d!: FEC enabled on sink" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_FEC_ConfigureSink
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dsc_c209 11 "%0DP%10!d!: Failed to configure FEC on sink, disabling DSC and FEC" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_FEC_ConfigureSink
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dsc_c337 14 "%0DP%10!d!: Failed to Read Sink FEC capabilities" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_FEC_QueryInfo
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_dsc_c804 21 "%0DP%10!d!: DPMST_IsCommonDecompressionNode failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=IsDSCConfigurationRequired
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}

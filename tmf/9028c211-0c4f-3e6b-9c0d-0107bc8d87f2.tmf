@@ -1,0 +1,130 @@
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+9028c211-0c4f-3e6b-9c0d-0107bc8d87f2 10.7 // SRC=MPQuery.c MJ= MN=
+#typev MPQuery_c688 34 "%0%!FUNC!::<%10!s!> <--- Status = %11!s! for QueryOID: %12!s! (0x%13!x!) IRQL %14!u! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+Status, ItemNTSTATUS -- 11
+MPOidToNameStr(Oid), ItemString -- 12
+Oid, ItemLong -- 13
+KeGetCurrentIrql(), ItemLong -- 14
+}
+#typev MPQuery_c577 29 "%0%!FUNC!::<%10!s!> MPQueryInformation: OID_TCP_OFFLOAD_CURRENT_CONFIG: Query received " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c587 30 "%0%!FUNC!::<%10!s!>  OID_TCP_OFFLOAD_HARDWARE_CAPABILITIES: Query received " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c192 13 "%0%!FUNC!::<%10!s!> OID_PNP_CAPABILITIES: all Unspecified (len %11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+InformationBufferLength, ItemLong -- 11
+}
+#typev MPQuery_c181 12 "%0%!FUNC!::<%10!s!> OID_PNP_CAPABILITIES: NIL BUF" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c169 11 "%0%!FUNC!::<%10!s!> OID_PNP_CAPABILITIES: BUF SHORT %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+InformationBufferLength, ItemLong -- 11
+}
+#typev MPQuery_c385 22 "%0%!FUNC!::<%10!s!> OID_PNP_QUERY_POWER: NIL BUF" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c351 21 "%0%!FUNC!::<%10!s!> ToPowerDown: ConnStat: DISCONNECT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c303 15 "%0%!FUNC!::<%10!s!> OID_PNP_QUERY_POWER: UNSPECIFIED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c310 16 "%0%!FUNC!::<%10!s!> OID_PNP_QUERY_POWER: D0" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c317 17 "%0%!FUNC!::<%10!s!> OID_PNP_QUERY_POWER: D1" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c324 18 "%0%!FUNC!::<%10!s!> OID_PNP_QUERY_POWER: D2" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c331 19 "%0%!FUNC!::<%10!s!> OID_PNP_QUERY_POWER: D3" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c338 20 "%0%!FUNC!::<%10!s!> OID_PNP_QUERY_POWER: UNKNOWN %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+pwrState, ItemLong -- 11
+}
+#typev MPQuery_c286 14 "%0%!FUNC!::<%10!s!> OID_PNP_QUERY_POWER: BUF SHORT %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+InformationBufferLength, ItemLong -- 11
+}
+#typev MPQuery_c646 33 "%0%!FUNC!::<%10!s!> QMI failure (%11!u!B) or no connect, OID_GEN_LINK_SPEED=0" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+ulInfoLen, ItemLong -- 11
+}
+#typev MPQuery_c615 32 "%0%!FUNC!::<%10!s!> OID_GEN_LINK_SPEED: cached max rx %11!u! tx %12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->ulServingSystemRxRate, ItemLong -- 11
+pAdapter->ulServingSystemTxRate, ItemLong -- 12
+}
+#typev MPQuery_c556 28 "%0%!FUNC!::<%10!s!> NDIS_STATISTICS_INFO: BUF SHORT %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+InformationBufferLength, ItemLong -- 11
+}
+#typev MPQuery_c464 24 "%0%!FUNC!::<%10!s!> GoodTransmits: %11!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+ulInfo64, ItemULongLong -- 11
+}
+#typev MPQuery_c487 25 "%0%!FUNC!::<%10!s!> GoodReceives: %11!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+ulInfo64, ItemULongLong -- 11
+}
+#typev MPQuery_c597 31 "%0%!FUNC!::<%10!s!>  OID_TCP_RSC_STATISTICS: Query received " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPQuery_c512 27 "%0%!FUNC!::<%10!s!> RCV_ERROR: %11!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+ulInfo64, ItemULongLong -- 11
+}
+#typev MPQuery_c499 26 "%0%!FUNC!::<%10!s!> XMIT_ERROR: %11!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+ulInfo64, ItemULongLong -- 11
+}
+#typev MPQuery_c440 23 "%0%!FUNC!::<%10!s!> OID_GEN_MEDIA_CONNECT_STATUS: %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+ulInfo, ItemLong -- 11
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPQuery_c71 10 "%0%!FUNC!::<%10!s!> ---> %11!u!/%12!u! <S%13!u!, R%14!u!> QueryOID: %15!s! (0x%16!x!) IRQL %17!u! PortNumber %18!u! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPQueryInformation
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->nBusyOID, ItemLong -- 11
+pAdapter->nBusyTx, ItemLong -- 12
+pAdapter->ulMaxBusySends, ItemLong -- 13
+pAdapter->ulMaxBusyRecvs, ItemLong -- 14
+MPOidToNameStr(Oid), ItemString -- 15
+Oid, ItemLong -- 16
+KeGetCurrentIrql(), ItemLong -- 17
+oidRequest->PortNumber, ItemLong -- 18
+}

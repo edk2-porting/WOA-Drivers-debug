@@ -1,0 +1,38 @@
+// PDB:  qcdxkm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:02:688 (UTC) [tracepdb]
+a990b24d-6dc3-3edf-3a71-9e637d081fe7 src // SRC=edpbridgedriver.c MJ= MN=
+#typev edpbridgedriver_c474 12 "%0DSI-eDP Bridge : Num of Lanes cmd = %10!x! %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDSI FUNC=ConfigureEDPLink
+{
+sCmd.uRegAddress, ItemLong -- 10
+sCmd.uValue, ItemLong -- 11
+}
+#typev edpbridgedriver_c450 11 "%0DSI-eDP Bridge: Data Rate cmd = %10!x! %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDSI FUNC=ConfigureEDPLink
+{
+sCmd.uRegAddress, ItemLong -- 10
+sCmd.uValue, ItemLong -- 11
+}
+#typev edpbridgedriver_c417 10 "%0DSI-eDP Bridge: DPCD 00h = 0x%10!x!, 01h = 0x%11!x!, 02h = 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDSI FUNC=ConfigureEDPLink
+{
+uValue[0], ItemLong -- 10
+uValue[1], ItemLong -- 11
+uValue[2], ItemLong -- 12
+}
+#typev edpbridgedriver_c631 13 "%0DSI-eDP bridge CSR [%10!02x! %11!02x! %12!02x! %13!02x! %14!02x! %15!02x! %16!02x! %17!02x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDSI FUNC=Debug_PrintControlRegisters
+{
+pDataBuf[0], ItemLong -- 10
+pDataBuf[1], ItemLong -- 11
+pDataBuf[2], ItemLong -- 12
+pDataBuf[3], ItemLong -- 13
+pDataBuf[4], ItemLong -- 14
+pDataBuf[5], ItemLong -- 15
+pDataBuf[6], ItemLong -- 16
+pDataBuf[7], ItemLong -- 17
+}
+#typev edpbridgedriver_c856 15 "%0DSI-eDP Bridge : LinkTranining sucessfully complete after %10!d! ms" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDSI FUNC=LinkTraining
+{
+uCurrentTime, ItemLong -- 10
+}
+#typev edpbridgedriver_c852 14 "%0DSI-eDP Bridge : LinkTranining failed after trying for %10!d! ms" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDSI FUNC=LinkTraining
+{
+uCurrentTime, ItemLong -- 10
+}

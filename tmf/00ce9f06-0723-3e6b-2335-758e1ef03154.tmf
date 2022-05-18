@@ -1,0 +1,162 @@
+// PDB:  qcpsautoreg7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+00ce9f06-0723-3e6b-2335-758e1ef03154 latest // SRC=PARUtils.c MJ= MN=
+#typev PARUtils_c319 34 "%0%10!s! :: ASCII Dump(%11!u! bytes):: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_DumpByteBufferInASCII
+{
+szFunctionName, ItemString -- 10
+(UINT32)len, ItemLong -- 11
+pBuffer, ItemString -- 12
+}
+#typev PARUtils_c306 33 "%0%!FUNC!:: ERROR:: Memory allocation failed for pBuffer!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_DumpByteBufferInASCII
+{
+}
+#typev PARUtils_c276 32 "%0%10!s! :: Hex Dump(%11!u! bytes):: 0x%12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_DumpByteBufferInHex
+{
+szFunctionName, ItemString -- 10
+(UINT32)len, ItemLong -- 11
+pBuffer, ItemString -- 12
+}
+#typev PARUtils_c157 26 "%0%!FUNC!::Exit. Operation Success!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_GetDriverVersionString
+{
+}
+#typev PARUtils_c157 24 "%0%!FUNC!:: Driver Version string: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_GetDriverVersionString
+{
+*ppDriverVersionString, ItemString -- 10
+}
+#typev PARUtils_c184 25 "%0%!FUNC!:: ERROR:: Exit. Operation failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetDriverVersionString
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c171 23 "%0%!FUNC!:: ERROR:: StringCbPrintfA failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetDriverVersionString
+{
+hRes, ItemHRESULT -- 10
+}
+#typev PARUtils_c157 22 "%0%!FUNC!:: ERROR:: Malloc failed for ppDriverVersionString!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetDriverVersionString
+{
+}
+#typev PARUtils_c157 21 "%0%!FUNC!:: ERROR:: pMemoryBuffer NULL!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetDriverVersionString
+{
+}
+#typev PARUtils_c149 20 "%0%!FUNC!:: ERROR:: WdfDeviceAllocAndQueryPropertyEx failed/ %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetDriverVersionString
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c134 18 "%0%!FUNC!:: Entry!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_GetDriverVersionString
+{
+}
+#typev PARUtils_c703 66 "%0Exit. %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_GetOSBuildNumberString
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c703 65 "%0%!FUNC!:: OS Version formatted string: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_GetOSBuildNumberString
+{
+*ppOSBuildNumber, ItemString -- 10
+}
+#typev PARUtils_c734 64 "%0%!FUNC!:: ERROR:: StringCbPrintfA operation failed! status=%10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetOSBuildNumberString
+{
+hRes, ItemHRESULT -- 10
+}
+#typev PARUtils_c722 63 "%0%!FUNC!:: ERROR:: PARUtils_ReadStringFromRegistry %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetOSBuildNumberString
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c713 62 "%0%!FUNC!:: ERROR:: PARUtils_ReadStringFromRegistry %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetOSBuildNumberString
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c702 61 "%0%!FUNC!:: ERROR::Memory Allocation failed! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetOSBuildNumberString
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c691 60 "%0%!FUNC!:: Entry." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_GetOSBuildNumberString
+{
+}
+#typev PARUtils_c61 12 "%0%!FUNC! ERROR: Memory Allocation failed for pmibRow" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetWlanMACAddressString
+{
+}
+#typev PARUtils_c70 13 "%0%!FUNC! ERROR: GetIfEntry2 returned error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetWlanMACAddressString
+{
+}
+#typev PARUtils_c51 16 "%0%!FUNC! WLAN MAC ID: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_GetWlanMACAddressString
+{
+*ppWlanMACAddrString, ItemString -- 10
+}
+#typev PARUtils_c91 15 "%0%!FUNC!:: string generation failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetWlanMACAddressString
+{
+hRes, ItemHRESULT -- 10
+}
+#typev PARUtils_c80 14 "%0%!FUNC! ERROR: Memory Allocation failed for ppWlanMACAddrString" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetWlanMACAddressString
+{
+}
+#typev PARUtils_c51 17 "%0%!FUNC!:: Exit. %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_GetWlanMACAddressString
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c50 11 "%0%!FUNC!:: ERROR: GetIfTable2 failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_GetWlanMACAddressString
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c40 10 "%0%!FUNC!:: Invalid input parameters!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_GetWlanMACAddressString
+{
+}
+#typev PARUtils_c668 59 "%0%!FUNC!:: Success!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_ParseURL
+{
+}
+#typev PARUtils_c665 58 "%0%!FUNC!:: Failed!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_ParseURL
+{
+}
+#typev PARUtils_c576 53 "%0%!FUNC!:: Invalid URL. More than 1 ':' character found!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_ParseURL
+{
+}
+#typev PARUtils_c621 54 "%0%!FUNC!:: Invalid URL. Port number does not contain digits" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_ParseURL
+{
+}
+#typev PARUtils_c637 56 "%0%!FUNC!:: string printed!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_ParseURL
+{
+}
+#typev PARUtils_c576 52 "%0%!FUNC!:: No HTTP/HTTPS prefix found!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_ParseURL
+{
+}
+#typev PARUtils_c573 51 "%0%!FUNC!:: Input url: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_ParseURL
+{
+inputURL, ItemString -- 10
+}
+#typev PARUtils_c352 35 "%0%!FUNC!:: ERROR:: Invalid Paramerters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_ReadValueFromRegistry
+{
+}
+#typev PARUtils_c369 50 "%0%!FUNC!:: ERROR:: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_ReadValueFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c517 48 "%0%!FUNC!:: ERROR:: WdfRegistryQueryValue %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_ReadValueFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c441 41 "%0%!FUNC!:: ERROR:: WdfStringGetUnicodeString failed! Unicode string length = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_ReadValueFromRegistry
+{
+pUcstrValueData->Length, ItemLong -- 10
+}
+#typev PARUtils_c432 40 "%0%!FUNC!:: ERROR:: WdfRegistryQueryString failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_ReadValueFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c424 39 "%0%!FUNC!:: ERROR:: WdfStringCreate %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_ReadValueFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c524 49 "%0%!FUNC!:: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PARUtils_ReadValueFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c511 47 "%0%!FUNC!:: ERROR:: Unsupported ValueType! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_ReadValueFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c384 37 "%0%!FUNC!:: ERROR:: WdfRegistryOpenKey %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_ReadValueFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PARUtils_c369 36 "%0%!FUNC!:: ERROR:: WdfDeviceOpenRegistryKey %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARUtils_ReadValueFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}

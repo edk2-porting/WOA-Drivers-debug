@@ -1,0 +1,30 @@
+// PDB:  qcdxkm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:02:688 (UTC) [tracepdb]
+5fd3f6bd-a885-3a5e-f6e3-946b0637fe04 gfxLib // SRC=gfxlibDcvs.cpp MJ= MN=
+#typev gfxlibDcvs_cpp2199 13 "%0(BusAlgClampedFreqCommand: %10!d!) (GpuAlgClampedFreqCommand: %11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GpuDcvsAlgorithmOutput FUNC=ExecuteGenericModelDCVS
+{
+pBusControl->pPstateLevels[pBusControl->algorithmPstate], ItemLong -- 10
+pGpuControl->pPstateLevels[pGpuControl->algorithmPstate], ItemLong -- 11
+}
+#typev gfxlibDcvs_cpp2163 12 "%0(BusAlgFreqTarget: %10!d!) (BusAlgFreqFilter: %11!d!) (BusAlgFreqCommand: %12!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GpuDcvsAlgorithmOutput FUNC=ExecuteGenericModelDCVS
+{
+pBusControl->currentTargetValue, ItemLong -- 10
+(UINT32)pBusControl->currentFilterValue, ItemLong -- 11
+pBusControl->pPstateLevels[pBusControl->algorithmPstate], ItemLong -- 12
+}
+#typev gfxlibDcvs_cpp2139 11 "%0(GpuAlgFreqTarget: %10!d!) (GpuAlgFreqFilter: %11!d!) (GpuAlgFreqCommand: %12!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GpuDcvsAlgorithmOutput FUNC=ExecuteGenericModelDCVS
+{
+(UINT32)pGpuControl->currentTargetValue, ItemLong -- 10
+(UINT32)pGpuControl->currentFilterValue, ItemLong -- 11
+pGpuControl->pPstateLevels[pGpuControl->algorithmPstate], ItemLong -- 12
+}
+#typev gfxlibDcvs_cpp2082 10 "%0(GpuBusyTime: %10!d!) (GpuSampleTime: %11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GpuDcvsAlgorithmOutput FUNC=ExecuteGenericModelDCVS
+{
+gpuBusyTime, ItemLong -- 10
+sampleTime, ItemLong -- 11
+}
+#typev gfxlibDcvs_cpp2213 14 "%0(GpuFreqGbpm: %10!d!) (GpuBwGbpm: %11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GpuDcvsAlgorithmOutput FUNC=ExecuteGenericModelDCVS
+{
+pGpuControl->pPstateLevels[gbpmGpuClockPstate], ItemLong -- 10
+pBusControl->pPstateLevels[gbpmGpuBwPstate], ItemLong -- 11
+}

@@ -1,0 +1,101 @@
+// PDB:  qcpmic7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:39:448 (UTC) [tracepdb]
+5baa224b-c627-3f2a-bb20-5267c6b61804 src // SRC=PmicLcDevice.c MJ= MN=
+#typev PmicLcDevice_c409 34 "%0%!FUNC!::--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=OnLcD0Entry
+{
+}
+#typev PmicLcDevice_c402 33 "%0%!FUNC!::  WdfDeviceStopIdle failed, Error = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=OnLcD0Entry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PmicLcDevice_c391 32 "%0%!FUNC!::  pm_i2c_write failed, Error = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=OnLcD0Entry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PmicLcDevice_c381 31 "%0%!FUNC!::  pm_io_enable failed, Error = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=OnLcD0Entry
+{
+Status, ItemLong -- 10
+}
+#typev PmicLcDevice_c368 30 "%0%!FUNC!::  pm_i2c_init failed, Error = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=OnLcD0Entry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PmicLcDevice_c361 29 "%0%!FUNC!::  pm_io_init failed, Error = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=OnLcD0Entry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PmicLcDevice_c354 28 "%0%!FUNC!::  PreviousState: %10!d!, Current DeviceState = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Trace FUNC=OnLcD0Entry
+{
+PreviousState, ItemLong -- 10
+pDeviceContext->DeviceState, ItemLong -- 11
+}
+#typev PmicLcDevice_c350 27 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=OnLcD0Entry
+{
+}
+#typev PmicLcDevice_c452 39 "%0%!FUNC!::--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=OnLcD0Exit
+{
+}
+// PDB:  qcpmic7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:39:448 (UTC) [tracepdb]
+#typev PmicLcDevice_c436 36 "%0%!FUNC!::  Current DeviceState = %10!d!, TargetState: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Trace FUNC=OnLcD0Exit
+{
+pDeviceContext->DeviceState, ItemLong -- 10
+TargetState, ItemLong -- 11
+}
+#typev PmicLcDevice_c434 35 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=OnLcD0Exit
+{
+}
+#typev PmicLcDevice_c274 22 "%0%!FUNC!::--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=OnLcPrepareHardware
+{
+}
+#typev PmicLcDevice_c263 21 "%0%!FUNC!:  GPIO connection ID[%10!d!] = 0x%11!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=OnLcPrepareHardware
+{
+IOResourceCount, ItemLong -- 10
+pDeviceContext->Hw_Data.GPIO[IOResourceCount].ConnID.QuadPart, ItemLongLongX -- 11
+}
+#typev PmicLcDevice_c248 20 "%0%!FUNC!:  I2C connection ID[%10!d!] = 0x%11!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=OnLcPrepareHardware
+{
+I2CResourceCount, ItemLong -- 10
+pDeviceContext->Hw_Data.I2cIO[I2CResourceCount].ConnID.QuadPart, ItemLongLongX -- 11
+}
+#typev PmicLcDevice_c224 19 "%0%!FUNC!:  Resource count = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=OnLcPrepareHardware
+{
+(UINT32)ResourceCount, ItemLong -- 10
+}
+#typev PmicLcDevice_c218 18 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=OnLcPrepareHardware
+{
+}
+#typev PmicLcDevice_c325 26 "%0%!FUNC!::--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=OnLcReleaseHardware
+{
+}
+#typev PmicLcDevice_c320 25 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=OnLcReleaseHardware
+{
+}
+#typev PmicLcDevice_c163 13 "%0%!FUNC!::--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=PmicLcDeviceCreate
+{
+}
+#typev PmicLcDevice_c151 12 "%0%!FUNC!::  WdfDeviceAssignS0IdleSettings failed, Error = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PmicLcDeviceCreate
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PmicLcDevice_c123 11 "%0%!FUNC!::  WdfDeviceCreate failed, Error = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PmicLcDeviceCreate
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PmicLcDevice_c93 10 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=PmicLcDeviceCreate
+{
+}
+#typev PmicLcDevice_c185 17 "%0%!FUNC!::--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=PmicLcOnDeviceAdd
+{
+}
+#typev PmicLcDevice_c183 16 "%0%!FUNC!::  Success, Status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PmicLcOnDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PmicLcDevice_c180 15 "%0%!FUNC!::  PmicLcDeviceCreate failed, Error = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PmicLcOnDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev PmicLcDevice_c175 14 "%0%!FUNC!::++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=PmicLcOnDeviceAdd
+{
+}

@@ -1,0 +1,93 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+82c2b2ff-71fa-3411-a249-163afd71a285 src // SRC=dp_edid.c MJ= MN=
+#typev dp_edid_c1334 24 "%0DP%10!d!: DP_FilterDuplicateModes() : Rejecting mode %11!d!x%12!d! with pclk %13!d! KHz. Duplicate of mode %14!d!x%15!d! with pclk %16!d! KHz" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_FilterDuplicateModes
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pLeastPreferredMode->sDisplayModeInfo.uWidthPx, ItemLong -- 11
+pLeastPreferredMode->sDisplayModeInfo.uHeightPx, ItemLong -- 12
+pLeastPreferredMode->sDisplayModeInfo.uPixelRate, ItemLong -- 13
+pPreferredMode->sDisplayModeInfo.uWidthPx, ItemLong -- 14
+pPreferredMode->sDisplayModeInfo.uHeightPx, ItemLong -- 15
+pPreferredMode->sDisplayModeInfo.uPixelRate, ItemLong -- 16
+}
+#typev dp_edid_c851 22 "%0DP%10!d!: EDID Filter, available bandwidth: %11!d!MB/s, link rate: %12!d!, effective link rate: %13!d!, lanes: %14!d!, VCSlots: %15!d!, PBN: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_GetMaxAvailableBw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+(uint32)(uMaxBandwidth / 1000000), ItemLong -- 11
+pDeviceCtx->uLinkRateInKhz, ItemLong -- 12
+uLinkRateInKhz, ItemLong -- 13
+pDeviceCtx->uNumLanes, ItemLong -- 14
+uSlotCount, ItemLong -- 15
+pStreamCtx->uMSTAvailablePBN, ItemLong -- 16
+}
+#typev dp_edid_c838 21 "%0DP%10!d!: EDID Filter, using %11!d! of %12!d! remaining slots for stream id %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_GetMaxAvailableBw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uSlotCount, ItemLong -- 11
+pDeviceCtx->uRemainingVCSlots, ItemLong -- 12
+pStreamCtx->eMSTStreamId, ItemLong -- 13
+}
+#typev dp_edid_c802 19 "%0DP%10!d!: EDID Filter, unexpected sink count (%11!d!) and stream id (%12!d!) to estimate available BW" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_GetMaxAvailableBw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uSinkCount, ItemLong -- 11
+pStreamCtx->eMSTStreamId, ItemLong -- 12
+}
+#typev dp_edid_c823 20 "%0DP%10!d!: EDID Filter, unexpected number of non allocated streams(%11!d!) to estimate available BW" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_GetMaxAvailableBw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uNumNonAllocatedStreams, ItemLong -- 11
+}
+#typev dp_edid_c776 18 "%0DP%10!d!: EDID Filter, available bandwidth: %11!d!MB/s, link rate: %12!d!, effective link rate: %13!d!, lanes: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_GetMaxAvailableBw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+(uint32)(uMaxBandwidth / 1000000), ItemLong -- 11
+pDeviceCtx->uLinkRateInKhz, ItemLong -- 12
+uLinkRateInKhz, ItemLong -- 13
+pDeviceCtx->uNumLanes, ItemLong -- 14
+}
+#typev dp_edid_c437 12 "%0DP%10!d!: DP_ParseSinkEDID() : Colorspace exposed (from DisplayID) (HDR10=6, sRGB=3) = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ParseSinkEDID
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->sColorimetryInfo.eColorBlendSpace, ItemLong -- 11
+}
+#typev dp_edid_c417 11 "%0DP%10!d!: DP_ParseSinkEDID() : Colorspace exposed (HDR10=6, sRGB=3) = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ParseSinkEDID
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->sColorimetryInfo.eColorBlendSpace, ItemLong -- 11
+}
+#typev dp_edid_c283 10 "%0DP %10!d!: disabling DSC as highest active pixel clock < minimum required bandwidth" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ParseSinkEDID
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_edid_c574 17 "%0DP%10!d!: DP_ReadSinkEDIDRaw() : EDID blockIdx = %11!d! Read Failed, eStatus = 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkEDIDRaw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uBlockIdx, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_edid_c553 16 "%0DP%10!d!: DP_ReadSinkEDIDRaw() : EDID corruption detected after %11!d! retries, trying to parse corrupted EDID" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkEDIDRaw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+DP_EDID_READ_RETRY_NUMBER, ItemLong -- 11
+}
+#typev dp_edid_c533 15 "%0DP%10!d!: DP_ReadSinkEDIDRaw() : Read EDID Header is not valid or corrupted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkEDIDRaw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_edid_c526 14 "%0DP%10!d!: DP_ReadSinkEDIDRaw() : Read EDID Checksum = 0x%11!02x! does not match expected checksum = 0x%12!02x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkEDIDRaw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uOriginalEDIDChecksum, ItemLong -- 11
+pStreamCtx->auEDIDCache[DP_EDID_CHECKSUM_ADDRESS], ItemLong -- 12
+}
+#typev dp_edid_c505 13 "%0DP%10!d!: DP_ReadSinkEDIDRaw() : EDID Read Failed, eStatus = 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkEDIDRaw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_edid_c952 23 "%0DP%10!d!: Defaulting to fail-safe mode due to EDID failures" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_SetFailSafeEDID
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}

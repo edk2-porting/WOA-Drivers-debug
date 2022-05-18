@@ -1,0 +1,729 @@
+// PDB:  qcspi7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:30:958 (UTC) [tracepdb]
+e35fb87b-6ee4-3e52-0e95-038179dbb480 10.7 // SRC=qcWdfSpidevice.c MJ= MN=
+#typev qcWdfSpidevice_c1778 114 "%0WdfDeviceOpenRegistryKey failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=DeviceQuerySeProperties
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c1768 113 "%0device_ctxt is null" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=DeviceQuerySeProperties
+{
+}
+#typev qcWdfSpidevice_c1760 112 "%0device is null" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=DeviceQuerySeProperties
+{
+}
+#typev qcWdfSpidevice_c2863 193 "%0--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnAbortTimerExpired
+{
+}
+#typev qcWdfSpidevice_c2859 192 "%0TransferCompleteDpc already queued" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnAbortTimerExpired
+{
+}
+#typev qcWdfSpidevice_c2855 191 "%0Abort Finished %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnAbortTimerExpired
+{
+s_status, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c2849 190 "%0AbortTimer expired, canceling transfer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnAbortTimerExpired
+{
+}
+#typev qcWdfSpidevice_c2848 189 "%0++ 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnAbortTimerExpired
+{
+Timer, ItemPtr -- 10
+}
+#typev qcWdfSpidevice_c2775 183 "%0--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnBuildScatterGatherDpc
+{
+}
+#typev qcWdfSpidevice_c2755 182 "%0++ 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnBuildScatterGatherDpc
+{
+Dpc, ItemPtr -- 10
+}
+#typev qcWdfSpidevice_c2283 146 "%0void" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnControllerLock
+{
+}
+#typev qcWdfSpidevice_c2281 145 "%0completing request 0x%10!p! (status = STATUS_SUCCESS)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnControllerLock
+{
+LockRequest, ItemPtr -- 10
+}
+#typev qcWdfSpidevice_c2269 143 "%00x%10!p!, 0x%11!p!, 0x%12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnControllerLock
+{
+Controller, ItemPtr -- 10
+Target, ItemPtr -- 11
+LockRequest, ItemPtr -- 12
+}
+#typev qcWdfSpidevice_c2327 150 "%0void" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnControllerUnlock
+{
+}
+#typev qcWdfSpidevice_c2325 149 "%0completing request 0x%10!p! (status = STATUS_SUCCESS)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnControllerUnlock
+{
+UnlockRequest, ItemPtr -- 10
+}
+#typev qcWdfSpidevice_c2323 148 "%0controller unlocked for chip select %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnControllerUnlock
+{
+target_ctxt->scdSettings.spi_slave_index, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c2314 147 "%00x%10!p!, 0x%11!p!, 0x%12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnControllerUnlock
+{
+Controller, ItemPtr -- 10
+Target, ItemPtr -- 11
+UnlockRequest, ItemPtr -- 12
+}
+#typev qcWdfSpidevice_c2013 127 "%0OnD0Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnD0Entry
+{
+}
+#typev qcWdfSpidevice_c2010 126 "%0Wake from Sleep" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnD0Entry
+{
+}
+#typev qcWdfSpidevice_c2004 125 "%0Hardware initialization is getting Fail %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnD0Entry
+{
+status, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c2000 124 "%0Wake from Hibernation" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnD0Entry
+{
+}
+#typev qcWdfSpidevice_c1997 123 "%00x%10!p!, 0x%11!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnD0Entry
+{
+Device, ItemPtr -- 10
+PreviousState, ItemLong -- 11
+}
+#typev qcWdfSpidevice_c2060 131 "%0OnD0Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnD0Exit
+{
+}
+#typev qcWdfSpidevice_c2057 130 "%0going to Sleep" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnD0Exit
+{
+}
+#typev qcWdfSpidevice_c2051 129 "%0Hardware deinit failed %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnD0Exit
+{
+status, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c2045 128 "%00x%10!p!, 0x%11!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnD0Exit
+{
+Device, ItemPtr -- 10
+TargetState, ItemLong -- 11
+}
+#typev qcWdfSpidevice_c2819 188 "%0void" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnDelayTimerExpired
+{
+}
+#typev qcWdfSpidevice_c2813 187 "%0DelayTimer expired, initiating transfer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnDelayTimerExpired
+{
+}
+#typev qcWdfSpidevice_c2810 186 "%00x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnDelayTimerExpired
+{
+Timer, ItemPtr -- 10
+}
+#typev qcWdfSpidevice_c2808 185 "%0perform_transfer: NULL request_ctxt" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=WARNING FUNC=OnDelayTimerExpired
+{
+}
+#typev qcWdfSpidevice_c2805 184 "%0perform_transfer: NULL target_ctxt" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=WARNING FUNC=OnDelayTimerExpired
+{
+}
+#typev qcWdfSpidevice_c2678 177 "%0TRUE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnInterruptIsr
+{
+}
+#typev qcWdfSpidevice_c2659 174 "%0cannot disable all interrupts" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnInterruptIsr
+{
+}
+#typev qcWdfSpidevice_c2674 176 "%0interrupt object is already queued" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnInterruptIsr
+{
+}
+#typev qcWdfSpidevice_c2667 175 "%0scdIsrHook is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnInterruptIsr
+{
+}
+#typev qcWdfSpidevice_c2650 173 "%00x%10!p!, 0x%11!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnInterruptIsr
+{
+Interrupt, ItemPtr -- 10
+MessageID, ItemLong -- 11
+}
+#typev qcWdfSpidevice_c2579 172 "%0void" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnIoInCallerContext
+{
+}
+#typev qcWdfSpidevice_c2574 171 "%0completing request 0x%10!p! (info = 0, status = 0x%11!08X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnIoInCallerContext
+{
+Request, ItemPtr -- 10
+status, ItemLong -- 11
+}
+#typev qcWdfSpidevice_c2552 168 "%0SpbRequestCaptureIoOtherTransferList() failed (0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnIoInCallerContext
+{
+status, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c2543 167 "%0IOCTL_SPB_FULL_DUPLEX" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnIoInCallerContext
+{
+}
+#typev qcWdfSpidevice_c2569 170 "%0WdfDeviceEnqueueRequest() failed (0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnIoInCallerContext
+{
+status, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c2557 169 "%0IOCTL 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnIoInCallerContext
+{
+code, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c2532 166 "%00x%10!p!, 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnIoInCallerContext
+{
+Device, ItemPtr -- 10
+Request, ItemPtr -- 11
+}
+#typev qcWdfSpidevice_c2499 165 "%0void" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnOther
+{
+}
+#typev qcWdfSpidevice_c2472 160 "%0IOCTL_SPB_FULL_DUPLEX" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnOther
+{
+}
+#typev qcWdfSpidevice_c2494 164 "%0unknown IOCTL code (0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnOther
+{
+IoControlCode, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c2488 163 "%0IOCTL_SPB_CS_AUTO" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnOther
+{
+}
+#typev qcWdfSpidevice_c2482 162 "%0IOCTL_SPB_CS_LOW" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnOther
+{
+}
+#typev qcWdfSpidevice_c2476 161 "%0IOCTL_SPB_CS_HIGH" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnOther
+{
+}
+#typev qcWdfSpidevice_c2467 159 "%0recving request (perf_cnt = %10!I64d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PERF FUNC=OnOther
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev qcWdfSpidevice_c2465 158 "%00x%10!p!, 0x%11!p!, 0x%12!p!, 0x%13!IX!, 0x%14!IX!, 0x%15!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnOther
+{
+Controller, ItemPtr -- 10
+Target, ItemPtr -- 11
+Request, ItemPtr -- 12
+OutputBufferLength, ItemPtr -- 13
+InputBufferLength, ItemPtr -- 14
+IoControlCode, ItemLong -- 15
+}
+#typev qcWdfSpidevice_c1913 119 "%00x%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnPrepareHardware
+{
+status, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c1899 118 "%0WdfCollectionCreate failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnPrepareHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c1889 117 "%0GSI PNP registration failed for pDevice 0x%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnPrepareHardware
+{
+Device, ItemPtr -- 10
+}
+#typev qcWdfSpidevice_c1872 24 "%0ACPI property "CoreBaseAddress"        = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnPrepareHardware
+{
+props->ControllerNumber, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c1849 22 "%0DEVPKEY_Device_InstanceId = "%10!s!"" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnPrepareHardware
+{
+buf, ItemWString -- 10
+}
+#typev qcWdfSpidevice_c1849 21 "%0Unexpected property type (0x%10!X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnPrepareHardware
+{
+type, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c1849 20 "%0IoGetDevicePropertyData() failed (0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnPrepareHardware
+{
+status, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c1842 116 "%00x%10!p!, 0x%11!p!, 0x%12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnPrepareHardware
+{
+Device, ItemPtr -- 10
+ResourcesRaw, ItemPtr -- 11
+ResourcesTranslated, ItemPtr -- 12
+}
+#typev qcWdfSpidevice_c2360 152 "%0void" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnRead
+{
+}
+#typev qcWdfSpidevice_c2356 151 "%00x%10!p!, 0x%11!p!, 0x%12!p!, 0x%13!IX!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnRead
+{
+Controller, ItemPtr -- 10
+Target, ItemPtr -- 11
+Request, ItemPtr -- 12
+Length, ItemPtr -- 13
+}
+#typev qcWdfSpidevice_c1954 121 "%0SPI Core Device De-Initialization failed %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnReleaseHardware
+{
+result, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c1965 122 "%0STATUS_SUCCESS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnReleaseHardware
+{
+}
+#typev qcWdfSpidevice_c1963 90 "%0Frequency table is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnReleaseHardware
+{
+}
+#typev qcWdfSpidevice_c1946 120 "%00x%10!p!, 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnReleaseHardware
+{
+Device, ItemPtr -- 10
+ResourcesTranslated, ItemPtr -- 11
+}
+#typev qcWdfSpidevice_c2999 202 "%0transfer_complete: NULL target_ctxt" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=WARNING FUNC=OnRequestCancel
+{
+}
+#typev qcWdfSpidevice_c2992 201 "%0Request Cancel Initiated" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=OnRequestCancel
+{
+}
+#typev qcWdfSpidevice_c2988 200 "%0Invalid pDevice" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnRequestCancel
+{
+}
+#typev qcWdfSpidevice_c2981 199 "%0Invalid pRequest" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnRequestCancel
+{
+}
+#typev qcWdfSpidevice_c2428 157 "%0void" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnSequence
+{
+}
+#typev qcWdfSpidevice_c2424 156 "%0recving request (perf_cnt = %10!I64d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PERF FUNC=OnSequence
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev qcWdfSpidevice_c2423 155 "%00x%10!p!, 0x%11!p!, 0x%12!p!, 0x%13!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnSequence
+{
+Controller, ItemPtr -- 10
+Target, ItemPtr -- 11
+Request, ItemPtr -- 12
+TransferCount, ItemLong -- 13
+}
+#typev qcWdfSpidevice_c2090 133 "%0void" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnSurpriseRemoval
+{
+}
+#typev qcWdfSpidevice_c2085 132 "%00x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnSurpriseRemoval
+{
+Device, ItemPtr -- 10
+}
+#typev qcWdfSpidevice_c2161 135 "%00x%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnTargetConnect
+{
+status, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c2141 56 "%0invalid SERIAL_BUS_COMMON structure" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnTargetConnect
+{
+}
+#typev qcWdfSpidevice_c2141 58 "%0invalid vendor data length (%10!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnTargetConnect
+{
+vendor_length, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c2141 57 "%0SPI specific structure too small (%10!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnTargetConnect
+{
+serial_bus_common->type_data_length, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c2141 55 "%0serial bus descriptor too small (%10!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnTargetConnect
+{
+total_len, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c2133 134 "%00x%10!p!, 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnTargetConnect
+{
+Controller, ItemPtr -- 10
+Target, ItemPtr -- 11
+}
+#typev qcWdfSpidevice_c2198 137 "%0Both pDevice & pTarget are NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnTargetDisconnect
+{
+}
+#typev qcWdfSpidevice_c2208 138 "%0*DEBUG*: OnTargetDisconnect() NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnTargetDisconnect
+{
+}
+#typev qcWdfSpidevice_c2235 142 "%0void" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnTargetDisconnect
+{
+}
+#typev qcWdfSpidevice_c2231 141 "%0Failed to unmark cancelable request - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnTargetDisconnect
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c2224 140 "%0*DEBUG*: OnTargetDisconnect(): WdfRequestUnmarkCancelable SUCCESS: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnTargetDisconnect
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c2219 139 "%0Failed to unmark cancelable request - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=OnTargetDisconnect
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c2194 136 "%00x%10!p!, 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnTargetDisconnect
+{
+Controller, ItemPtr -- 10
+Target, ItemPtr -- 11
+}
+#typev qcWdfSpidevice_c2728 181 "%0void" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnTransferCompleteDpc
+{
+}
+#typev qcWdfSpidevice_c2716 180 "%00x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnTransferCompleteDpc
+{
+Dpc, ItemPtr -- 10
+}
+#typev qcWdfSpidevice_c2714 179 "%0transfer_complete: NULL request_ctxt" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=WARNING FUNC=OnTransferCompleteDpc
+{
+}
+#typev qcWdfSpidevice_c2711 178 "%0transfer_complete: NULL target_ctxt" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=WARNING FUNC=OnTransferCompleteDpc
+{
+}
+#typev qcWdfSpidevice_c2393 154 "%0void" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnWrite
+{
+}
+#typev qcWdfSpidevice_c2389 153 "%00x%10!p!, 0x%11!p!, 0x%12!p!, 0x%13!IX!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=OnWrite
+{
+Controller, ItemPtr -- 10
+Target, ItemPtr -- 11
+Request, ItemPtr -- 12
+Length, ItemPtr -- 13
+}
+#typev qcWdfSpidevice_c2908 198 "%0--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=TransferCompleteCallback
+{
+}
+#typev qcWdfSpidevice_c2906 197 "%0TransferCompleteDpc already queued" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=TransferCompleteCallback
+{
+}
+#typev qcWdfSpidevice_c2900 196 "%0++ 0x%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=TransferCompleteCallback
+{
+transfer_status, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c243 11 "%0Unable to allocate physically contiguous TX buffer for SPI BAM transfers" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=allocate_buffers
+{
+}
+#typev qcWdfSpidevice_c230 10 "%0Unable to allocate physically contiguous RX buffer for SPI BAM transfers" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=allocate_buffers
+{
+}
+#typev qcWdfSpidevice_c377 13 "%0mdl_copy failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=configure_transfer
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c353 12 "%0validate_transfer_length: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=configure_transfer
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c351 93 "%0transfer length (%10!Id!) is not a multiple of transfer word size (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=configure_transfer
+{
+transfer_length, ItemPtr -- 10
+num_bits, ItemLong -- 11
+}
+#typev qcWdfSpidevice_c351 92 "%0transfer length (%10!Id!) is not a multiple of transfer word size (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=configure_transfer
+{
+transfer_length, ItemPtr -- 10
+num_bits, ItemLong -- 11
+}
+#typev qcWdfSpidevice_c351 91 "%0transfer length (%10!Id!) exceeds maximum allowed (%11!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=configure_transfer
+{
+transfer_length, ItemPtr -- 10
+QSPI_SPI_BUFFER_SIZE, ItemLong -- 11
+}
+#typev qcWdfSpidevice_c1581 97 "%0Invalid QUP information, %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+qup_se_info_obj->num_qup, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c1715 111 "%0WdfRegistryQueryValue QupBlock failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c1706 110 "%0WdfRegistryQueryValue OpMode failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c1697 109 "%0WdfRegistryQueryValue gpii failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c1689 108 "%0WdfRegistryOpenKey failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c1676 107 "%0RtlUnicodeStringCat failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c1668 106 "%0RtlIntegerToUnicodeString failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c1661 105 "%0RtlUnicodeStringCopy failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c1591 98 "%0RtlUnicodeStringCopy for qup_idx %10!d!, failed with status %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+qup_idx, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev qcWdfSpidevice_c1598 99 "%0RtlIntegerToUnicodeString for qup_idx %10!d!, failed with status %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+qup_idx, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev qcWdfSpidevice_c1606 100 "%0RtlUnicodeStringCat for qup_idx %10!d!, failed with status %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+qup_idx, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev qcWdfSpidevice_c1619 101 "%0WdfRegistryOpenKey failed for qup_idx %10!d!, with status %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+qup_idx, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev qcWdfSpidevice_c1627 102 "%0WdfRegistryQueryValue NumSe failed for qup_idx %10!d!, with status %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+qup_idx, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev qcWdfSpidevice_c1633 103 "%0Invalid SE information %10!d!, for QUP %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+qup_se_info_obj->num_se[qup_idx], ItemLong -- 10
+qup_idx, ItemLong -- 11
+}
+#typev qcWdfSpidevice_c1644 104 "%0SPI instance id %10!d!, exceeds the total SEs of all the QUPs %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+device_ctxt->AcpiProperties.ControllerNumber, ItemLong -- 10
+qup_se_info_obj->total_se_of_all_qups, ItemLong -- 11
+}
+#typev qcWdfSpidevice_c1573 96 "%0WdfRegistryQueryValue NumQup failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c1565 95 "%0WdfRegistryOpenKey failed for QUP Info, with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c1552 94 "%0RtlUnicodeStringCopy failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=device_query_se_properties_instance
+{
+status, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c446 15 "%0FNOC buffer length is invalid (0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=get_acpi_properties
+{
+arg->DataLength, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c437 14 "%0ACPI output buffer is invalid (Signature = 0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=get_acpi_properties
+{
+acpi_buffer->Signature, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c507 18 "%0                         (Flags = 0x%10!X!, ShareDisposition = 0x%11!X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=get_acpi_resources
+{
+resource->Flags, ItemLong -- 10
+resource->ShareDisposition, ItemLong -- 11
+}
+#typev qcWdfSpidevice_c504 17 "%0Interrupt resource found (Level = %10!d!, Vector = %11!d!, Affinity = 0x%12!IX!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=get_acpi_resources
+{
+resource->u.Interrupt.Level, ItemLong -- 10
+resource->u.Interrupt.Vector, ItemLong -- 11
+resource->u.Interrupt.Affinity, ItemPtr -- 12
+}
+#typev qcWdfSpidevice_c493 16 "%0Memory resource found (Start = 0x%10!08X!, Length = 0x%11!08X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=get_acpi_resources
+{
+resource->u.Memory.Start.LowPart, ItemLong -- 10
+resource->u.Memory.Length, ItemLong -- 11
+}
+#typev qcWdfSpidevice_c517 19 "%0unexpected resource type (%10!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=get_acpi_resources
+{
+resource->Type, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c596 23 "%0get_op_mode failed, default to FIFO mode" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=handle_transfer_request
+{
+}
+#typev qcWdfSpidevice_c701 47 "%0   resource_name             = "%10!s!"" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+rn, ItemString -- 10
+}
+#typev qcWdfSpidevice_c696 46 "%0   cs_clk_delay_cycles       = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+vd->cs_clk_delay_cycles, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c695 45 "%0   endianness                = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+vd->endianness, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c694 44 "%0   cs_toggle                 = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+vd->cs_toggle, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c693 43 "%0   loopback_mode             = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+vd->loopback_mode, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c692 42 "%0   inter_word_delay_cycles   = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+vd->inter_word_delay_cycles, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c691 41 "%0   spi_mode                  = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+vd->spi_mode, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c690 40 "%0   reserved                  = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+vd->reserved, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c685 39 "%0   device_selection          = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+ss->device_selection, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c684 38 "%0   clock_polarity            = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+ss->clock_polarity, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c683 37 "%0   clock_phase               = 0x%10!04X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+ss->clock_phase, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c682 36 "%0   data_bit_length           = 0x%10!04X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+ss->data_bit_length, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c681 35 "%0   connection_speed          = 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+ss->connection_speed, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c676 34 "%0   type_data_length          = 0x%10!04X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+sbc->type_data_length, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c675 33 "%0   type_specific_revision_id = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+sbc->type_specific_revision_id, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c674 32 "%0   type_specific_flags       = 0x%10!04X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+sbc->type_specific_flags, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c673 31 "%0   general_flags             = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+sbc->general_flags, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c672 30 "%0   serial_bus_type           = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+sbc->serial_bus_type, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c671 29 "%0   resource_source_index     = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+sbc->resource_source_index, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c670 28 "%0   revision_id               = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+sbc->revision_id, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c669 27 "%0   length                    = 0x%10!04X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+sbc->length, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c668 26 "%0   tag                       = 0x%10!02X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+sbc->tag, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c664 25 "%0resource hub connection properties:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=log_spi_descriptor
+{
+}
+#typev qcWdfSpidevice_c1284 80 "%0pstate = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=map_connection_speed_to_pstate
+{
+pstate, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c1278 79 "%0connection_speed = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FUNCTION FUNC=map_connection_speed_to_pstate
+{
+connection_speed, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c730 49 "%0SPI QUP virtual address = 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=map_hardware
+{
+virtual_address, ItemPtr -- 10
+}
+#typev qcWdfSpidevice_c726 48 "%0Error mapping controller registers" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=map_hardware
+{
+}
+#typev qcWdfSpidevice_c794 54 "%0%10!d! bytes written to client MDL:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=mdl_copy
+{
+bytes_copied, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c789 53 "%0%10!d! bytes read from client MDL:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=mdl_copy
+{
+bytes_copied, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c764 50 "%0MmGetSystemAddressForMdlSafe() returned NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=mdl_copy
+{
+}
+#typev qcWdfSpidevice_c770 51 "%0total bytes in MDL chain exceeds expected size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=mdl_copy
+{
+}
+#typev qcWdfSpidevice_c783 52 "%0total bytes in MDL chain less than expected" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=mdl_copy
+{
+}
+#typev qcWdfSpidevice_c1000 65 "%0SPI Core Device perform_transfer failed %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=perform_transfer
+{
+result, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c981 64 "%0TransferCompleteDpc already queued" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=perform_transfer
+{
+}
+#typev qcWdfSpidevice_c973 63 "%0Mark cancel tarnsfer fail with status %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=perform_transfer
+{
+status, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c961 62 "%0starting transfer (perf_cnt = %10!I64d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PERF FUNC=perform_transfer
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev qcWdfSpidevice_c945 61 "%0Delaying %10!u! us before starting transfer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=perform_transfer
+{
+delay, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c936 60 "%0perform_transfer: NULL request_ctxt" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=WARNING FUNC=perform_transfer
+{
+}
+#typev qcWdfSpidevice_c933 59 "%0perform_transfer: NULL target_ctxt" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=WARNING FUNC=perform_transfer
+{
+}
+#typev qcWdfSpidevice_c1066 68 "%0IOCTL_ACPI_EVAL_METHOD failed (0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=query_acpi_method
+{
+status, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c1054 67 "%0Memory Allocation failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=query_acpi_method
+{
+}
+#typev qcWdfSpidevice_c1034 66 "%0Memory Allocation failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=query_acpi_method
+{
+}
+#typev qcWdfSpidevice_c1085 70 "%0transfer complete (perf_cnt = %10!I64d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PERF FUNC=spb_request_complete
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev qcWdfSpidevice_c1084 69 "%0completing request 0x%10!p! (info = 0x%11!08X!, status = 0x%12!08X!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=spb_request_complete
+{
+request, ItemPtr -- 10
+info, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev qcWdfSpidevice_c1217 78 "%0Transaction curr index %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=transfer_complete
+{
+request_ctxt->TransferIndex, ItemLong -- 10
+}
+#typev qcWdfSpidevice_c1211 77 "%0transfer_complete(): STATUS_CANCELLED OnRequestCancel !!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=transfer_complete
+{
+}
+#typev qcWdfSpidevice_c1165 76 "%0Transaction must contain one transfer for SPI. %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=transfer_complete
+{
+dmaStatus, ItemNTSTATUS -- 10
+}
+#typev qcWdfSpidevice_c1147 75 "%0Transaction must contain one transfer for SPI. %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=transfer_complete
+{
+dmaStatus, ItemNTSTATUS -- 10
+}
+// PDB:  qcspi7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:30:958 (UTC) [tracepdb]
+#typev qcWdfSpidevice_c1125 74 "%0transfer_complete: NULL request_ctxt" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=WARNING FUNC=transfer_complete
+{
+}
+#typev qcWdfSpidevice_c1122 73 "%0transfer_complete: NULL target_ctxt" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=WARNING FUNC=transfer_complete
+{
+}
+#typev qcWdfSpidevice_c1113 72 "%0Invalid pDevice" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=transfer_complete
+{
+}
+#typev qcWdfSpidevice_c1109 71 "%0transfer complete (perf_cnt = %10!I64d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PERF FUNC=transfer_complete
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev qcWdfSpidevice_c1326 83 "%0data_bit_length must be between 4 and 32" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=translate_spi_descriptor
+{
+}
+#typev qcWdfSpidevice_c1388 89 "%0transfer is done in little endian" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=translate_spi_descriptor
+{
+}
+#typev qcWdfSpidevice_c1372 88 "%0using default vendor data" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=INFO FUNC=translate_spi_descriptor
+{
+}
+#typev qcWdfSpidevice_c1350 85 "%0invalid clock_polarity" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=translate_spi_descriptor
+{
+}
+#typev qcWdfSpidevice_c1362 86 "%0invalid clock_polarity" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=translate_spi_descriptor
+{
+}
+#typev qcWdfSpidevice_c1365 87 "%0invalid clock_phase" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=translate_spi_descriptor
+{
+}
+#typev qcWdfSpidevice_c1320 82 "%03-wire mode not supported" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=translate_spi_descriptor
+{
+}
+#typev qcWdfSpidevice_c1314 81 "%0slave mode not supported" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=ERROR FUNC=translate_spi_descriptor
+{
+}

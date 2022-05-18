@@ -1,0 +1,33 @@
+// PDB:  QcTftpKmdf.pdb
+// PDB:  Last Updated :2021-10-17:21:54:39:798 (UTC) [tracepdb]
+bcda39af-eddf-386d-672a-142df5c86d46 kmdf // SRC=tftp_socket_ipcr_windows.c MJ= MN=
+#typev tftp_socket_ipcr_windows_c77 10 "%4!s! [%!LEVEL!] | [tftp_socket_ipcr_windows.c, 77] | %!FUNC! ::Socket already closed" //   LEVEL=WARN FLAGS=QCTFTP_KMDF FUNC=tftp_socket_close
+{
+}
+#typev tftp_socket_ipcr_windows_c77 10 "%4!s! [%!LEVEL!] | [tftp_socket_ipcr_windows.c, 77] | %!FUNC! ::Socket already closed" //   LEVEL=WARN FLAGS=QCTFTP_KMDF FUNC=tftp_socket_close$fin$0
+{
+}
+#typev tftp_socket_ipcr_windows_c312 13 "%4!s! [%!LEVEL!] | [tftp_socket_ipcr_windows.c, 312] | %!FUNC! ::qpoll failed with error %10!s!" //   LEVEL=ERR_ FLAGS=QCTFTP_KMDF FUNC=tftp_socket_poll
+{
+tftp_strsocketerr(poll_res), ItemString -- 10
+}
+#typev tftp_socket_ipcr_windows_c449 16 "%4!s! [%!LEVEL!] | [tftp_socket_ipcr_windows.c, 449] | %!FUNC! ::qrecv failed with error %10!s!" //   LEVEL=ERR_ FLAGS=QCTFTP_KMDF FUNC=tftp_socket_recv
+{
+tftp_strsocketerr(result), ItemString -- 10
+}
+#typev tftp_socket_ipcr_windows_c415 15 "%4!s! [%!LEVEL!] | [tftp_socket_ipcr_windows.c, 415] | %!FUNC! ::qrecvfrom failed. result = %10!s!" //   LEVEL=ERR_ FLAGS=QCTFTP_KMDF FUNC=tftp_socket_recvfrom
+{
+tftp_strsocketerr(result), ItemString -- 10
+}
+#typev tftp_socket_ipcr_windows_c275 12 "%4!s! [%!LEVEL!] | [tftp_socket_ipcr_windows.c, 275] | %!FUNC! ::IPCRouter QSend failed with error %10!s!" //   LEVEL=ERR_ FLAGS=QCTFTP_KMDF FUNC=tftp_socket_send
+{
+tftp_strsocketerr(result), ItemString -- 10
+}
+#typev tftp_socket_ipcr_windows_c250 11 "%4!s! [%!LEVEL!] | [tftp_socket_ipcr_windows.c, 250] | %!FUNC! ::qsendto failed with error %10!s!" //   LEVEL=ERR_ FLAGS=QCTFTP_KMDF FUNC=tftp_socket_sendto
+{
+tftp_strsocketerr(result), ItemString -- 10
+}
+#typev tftp_socket_ipcr_windows_c358 14 "%4!s! [%!LEVEL!] | [tftp_socket_ipcr_windows.c, 358] | %!FUNC! ::poll failed : %10!d!" //   LEVEL=ERR_ FLAGS=QCTFTP_KMDF FUNC=tftp_socket_wait
+{
+-poll_res, ItemLong -- 10
+}

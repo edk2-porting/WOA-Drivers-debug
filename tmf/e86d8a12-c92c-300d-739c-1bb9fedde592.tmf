@@ -1,0 +1,691 @@
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+e86d8a12-c92c-300d-739c-1bb9fedde592 10.7 // SRC=RevTunnel.c MJ= MN=
+#typev RevRmnet_c427 168 "%0%10!s! <%!FUNC!>:: Freeing the context. TODO: Tear down tunnel if up." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_ReleaseClientHandles
+{
+pRevTunnelContext->PortName, ItemString -- 10
+}
+#typev RevRmnet_c427 167 "%0<%!FUNC!>::" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevRmnet_ReleaseClientHandles
+{
+}
+#typev RevRmnet_c416 147 "%0<%!FUNC!>:: pRevTunnelContext = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_ReleaseClientHandles
+{
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevTunnel_c1075 58 "%0<%!FUNC!>:: %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c884 47 "%0<%!FUNC!>:: Error: localAddrSrv and remoteAddrSrv type does not match!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+}
+#typev RevTunnel_c1062 57 "%0<%!FUNC!>:: spi_rx = 0x%10!x! spi_tx = 0x%11!x! Tmpspi = 0x%12!x! %13!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+pReverseRMNetContext->spi_rx, ItemLong -- 10
+pReverseRMNetContext->spi_tx, ItemLong -- 11
+Tmpspi, ItemLong -- 12
+status, ItemNTSTATUS -- 13
+}
+#typev RevTunnel_c1057 56 "%0<%!FUNC!>:: IPsecSaContextAddInbound0 = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c999 55 "%0<%!FUNC!>:: Inbound SPI is configured to %10!u! and Tmpspi = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+pReverseRMNetContext->spi_rx, ItemLong -- 10
+Tmpspi, ItemLong -- 11
+}
+#typev RevTunnel_c995 54 "%0<%!FUNC!>:: IPsecSaContextGetSpi1 error code = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c981 53 "%0<%!FUNC!>:: IPsecSaContextSetSpi0 error code = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c971 52 "%0<%!FUNC!>:: Setting Inbound SPI: %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+pReverseRMNetContext->spi_rx, ItemLong -- 10
+}
+#typev RevTunnel_c964 51 "%0<%!FUNC!>:: Odd-To-Even Inbound SPI: %10!u! to %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+pReverseRMNetContext->spi_rx, ItemLong -- 10
+Tmpspi, ItemLong -- 11
+}
+#typev RevTunnel_c947 50 "%0<%!FUNC!>:: Enabling NAT UDP encapsulation. Local Port = %10!d!, Remote Port = %11!d!." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+REV_TUNNEL_NAT_ENCAPSULATION_LOCAL_PORT, ItemLong -- 10
+REV_TUNNEL_NAT_ENCAPSULATION_REMOTE_PORT, ItemLong -- 11
+}
+#typev RevTunnel_c923 49 "%0<%!FUNC!>:: SA ID: %10!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+tmpSaId, ItemLongLong -- 10
+}
+#typev RevTunnel_c920 48 "%0<%!FUNC!>:: IPsecSaContextCreate1 %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c867 46 "%0<%!FUNC!>:: Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_AddInboundSa
+{
+}
+#typev RevTunnel_c1168 60 "%0<%!FUNC!>:: %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_AddOutboundSa
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c1159 59 "%0<%!FUNC!>:: spi_tx = %10!u!, %11!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_AddOutboundSa
+{
+pReverseRMNetContext->spi_tx, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevTunnel_c827 45 "%0<%!FUNC!>:: CLEANUP %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=RevRmnet_GetIFRLogHandle() FLAGS=RVRM_WPP FUNC=RevTunnel_ConfigureIPSecTunnelMode
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c642 36 "%0<%!FUNC!>:: Error: Tunnel endpoint type does not match!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=RevRmnet_GetIFRLogHandle() FLAGS=RVRM_WPP FUNC=RevTunnel_ConfigureIPSecTunnelMode
+{
+}
+#typev RevTunnel_c822 44 "%0<%!FUNC!>:: %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=RevRmnet_GetIFRLogHandle() FLAGS=RVRM_WPP FUNC=RevTunnel_ConfigureIPSecTunnelMode
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c818 43 "%0<%!FUNC!>:: Error FwpmFilterAdd ALE receive filter failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_ConfigureIPSecTunnelMode
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c815 42 "%0<%!FUNC!>:: FwpmFilterAdd(outtransFilter, ...) outfilterId = %10!I64u!. %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_ConfigureIPSecTunnelMode
+{
+pRevTunnelContext->aleAuthRecvFilterId, ItemULongLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevTunnel_c791 41 "%0<%!FUNC!>:: Error FwpmFilterAdd outbound transport filter failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_ConfigureIPSecTunnelMode
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c788 40 "%0<%!FUNC!>:: FwpmFilterAdd(outtransFilter, ...) outfilterId = %10!I64u!. %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_ConfigureIPSecTunnelMode
+{
+pRevTunnelContext->outfilterId, ItemULongLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevTunnel_c762 39 "%0<%!FUNC!>:: Error FwpmFilterAdd inbound transport filter failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_ConfigureIPSecTunnelMode
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c759 38 "%0<%!FUNC!>:: FwpmFilterAdd(intransFilter, ...) intransFilter = %10!I64u!. %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_ConfigureIPSecTunnelMode
+{
+pRevTunnelContext->infilterId, ItemULongLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevTunnel_c686 37 "%0<%!FUNC!>:: Error FwpmProviderContextAdd failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_ConfigureIPSecTunnelMode
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c637 35 "%0<%!FUNC!>:: ePDG IPv6 transport tunnel" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=RevRmnet_GetIFRLogHandle() FLAGS=RVRM_WPP FUNC=RevTunnel_ConfigureIPSecTunnelMode
+{
+}
+#typev RevTunnel_c632 34 "%0<%!FUNC!>:: ePDG IPv4 transport tunnel" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=RevRmnet_GetIFRLogHandle() FLAGS=RVRM_WPP FUNC=RevTunnel_ConfigureIPSecTunnelMode
+{
+}
+#typev RevTunnel_c550 33 "%0%10!s! <%!FUNC!>:: FwpmProviderContextDeleteById error code = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteSaContextFiltersAndProvContext
+{
+pRevTunnelContext->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevTunnel_c540 32 "%0%10!s! <%!FUNC!>:: FwpmFilterDeleteById error code = %11!s!, aleAuthRecvFilterId = %12!I64u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteSaContextFiltersAndProvContext
+{
+pRevTunnelContext->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+pRevTunnelContext->aleAuthRecvFilterId, ItemULongLong -- 12
+}
+#typev RevTunnel_c530 31 "%0%10!s! <%!FUNC!>:: FwpmFilterDeleteById error code = %11!s!, outfilterId = %12!I64u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteSaContextFiltersAndProvContext
+{
+pRevTunnelContext->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+pRevTunnelContext->outfilterId, ItemULongLong -- 12
+}
+#typev RevTunnel_c520 30 "%0%10!s! <%!FUNC!>:: FwpmFilterDeleteById error code = %11!s!, infilterId = %12!I64u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteSaContextFiltersAndProvContext
+{
+pRevTunnelContext->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+pRevTunnelContext->infilterId, ItemULongLong -- 12
+}
+#typev RevTunnel_c499 29 "%0%10!s! <%!FUNC!>:: pRevTunnelContext->IPv6SaId is deleted" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteSaContextFiltersAndProvContext
+{
+pRevTunnelContext->PortName, ItemString -- 10
+}
+#typev RevTunnel_c495 28 "%0<%!FUNC!>:: IPsecSaContextDeleteById0 failed for IPv6SaId. Status = %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteSaContextFiltersAndProvContext
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c485 27 "%0%10!s! <%!FUNC!>:: pRevTunnelContext->IPv4SaId is deleted" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteSaContextFiltersAndProvContext
+{
+pRevTunnelContext->PortName, ItemString -- 10
+}
+#typev RevTunnel_c481 26 "%0<%!FUNC!>:: IPsecSaContextDeleteById0 failed for IPv4SaId. Status = %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteSaContextFiltersAndProvContext
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c466 25 "%0<%!FUNC!>:: pRevTunnelContext = NULL" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteSaContextFiltersAndProvContext
+{
+}
+#typev RevTunnel_c462 24 "%0<%!FUNC!>::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteSaContextFiltersAndProvContext
+{
+}
+#typev RevTunnel_c1474 150 "%0%10!s! <%!FUNC!>:: %11!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevTunnel_c1469 149 "%0%10!s! <%!FUNC!>:: RevTunnel_DeleteSaContextFiltersAndProvContext Failed with error code = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevTunnel_c1483 151 "%0%10!s! <%!FUNC!>:: Failed %11!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevTunnel_c1449 148 "%0<%!FUNC!>:: Error = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_DeleteTunnel
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c1404 146 "%0<%!FUNC!>:: offload byte count             : %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.outboundTrafficStatistics.offloadByteCount, ItemLongLong -- 10
+}
+#typev RevTunnel_c1403 145 "%0<%!FUNC!>:: tunnel byte count              : %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.outboundTrafficStatistics.tunnelByteCount, ItemLongLong -- 10
+}
+#typev RevTunnel_c1402 144 "%0<%!FUNC!>:: transport byte count           : %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.outboundTrafficStatistics.transportByteCount, ItemLongLong -- 10
+}
+#typev RevTunnel_c1401 143 "%0<%!FUNC!>:: authenticated ESP byte count   : %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.outboundTrafficStatistics.authenticatedESPByteCount, ItemLongLong -- 10
+}
+#typev RevTunnel_c1400 142 "%0<%!FUNC!>:: authenticated AH byte count    : %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.outboundTrafficStatistics.authenticatedAHByteCount, ItemLongLong -- 10
+}
+#typev RevTunnel_c1399 141 "%0<%!FUNC!>:: encrypted byte count           : %10!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.outboundTrafficStatistics.encryptedByteCount, ItemLongLong -- 10
+}
+#typev RevTunnel_c1398 140 "%0<%!FUNC!>:: IPsec outbound traffic statistics" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+}
+#typev RevTunnel_c1396 139 "%0<%!FUNC!>:: offload byte count             : %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.inboundTrafficStatistics.offloadByteCount, ItemLongLong -- 10
+}
+#typev RevTunnel_c1395 138 "%0<%!FUNC!>:: tunnel byte count              : %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.inboundTrafficStatistics.tunnelByteCount, ItemLongLong -- 10
+}
+#typev RevTunnel_c1394 137 "%0<%!FUNC!>:: transport byte count           : %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.inboundTrafficStatistics.transportByteCount, ItemLongLong -- 10
+}
+#typev RevTunnel_c1393 136 "%0<%!FUNC!>:: authenticated ESP byte count   : %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.inboundTrafficStatistics.authenticatedESPByteCount, ItemLongLong -- 10
+}
+#typev RevTunnel_c1392 135 "%0<%!FUNC!>:: authenticated AH byte count    : %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.inboundTrafficStatistics.authenticatedAHByteCount, ItemLongLong -- 10
+}
+#typev RevTunnel_c1391 134 "%0<%!FUNC!>:: encrypted byte count           : %10!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.inboundTrafficStatistics.encryptedByteCount, ItemLongLong -- 10
+}
+#typev RevTunnel_c1390 133 "%0<%!FUNC!>:: IPsec inbound traffic statistics" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+}
+#typev RevTunnel_c1388 132 "%0<%!FUNC!>:: # of inbound packets without matching filter   : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateDropPacketStatistics.secureReceivesNotMatchingFilters, ItemLong -- 10
+}
+#typev RevTunnel_c1387 131 "%0<%!FUNC!>:: # of inbound packet drops for unmatched SAs    : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateDropPacketStatistics.receiveOverIncorrectSaInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1386 130 "%0<%!FUNC!>:: # of inbound packet drops for uninitialized SAs: %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateDropPacketStatistics.saNotInitializedOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1385 129 "%0<%!FUNC!>:: # of invalid clear text instances on inbound   : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateDropPacketStatistics.invalidClearTextInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1384 128 "%0<%!FUNC!>:: # of replay check failures on inbound          : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateDropPacketStatistics.replayCheckFailuresOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1383 127 "%0<%!FUNC!>:: # of UDP ESP validation failures on inbound    : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateDropPacketStatistics.udpEspValidationFailuresOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1382 126 "%0<%!FUNC!>:: # of authentication failures on inbound        : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateDropPacketStatistics.authenticationFailuresOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1381 125 "%0<%!FUNC!>:: # of decryption failures on inbound            : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateDropPacketStatistics.decryptionFailuresOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1380 124 "%0<%!FUNC!>:: # of invalid SPIs on inbound                   : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateDropPacketStatistics.invalidSpisOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1379 123 "%0<%!FUNC!>:: IPsec aggregate drop packet statistics" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+}
+#typev RevTunnel_c1377 122 "%0<%!FUNC!>:: # of inbound packet drops for uninitialized SAs: %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.ahDropPacketStatistics.saNotInitializedOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1376 121 "%0<%!FUNC!>:: # of replay check failures on inbound          : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.ahDropPacketStatistics.replayCheckFailuresOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1375 120 "%0<%!FUNC!>:: # of authentication failures on inbound        : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.ahDropPacketStatistics.authenticationFailuresOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1374 119 "%0<%!FUNC!>:: # of invalid SPIs on inbound                   : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.ahDropPacketStatistics.invalidSpisOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1373 118 "%0<%!FUNC!>:: IPsec AH drop packet statistics" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+}
+#typev RevTunnel_c1371 117 "%0<%!FUNC!>:: # of inbound packet drops for uninitialized SAs: %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.espDropPacketStatistics.saNotInitializedOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1370 116 "%0<%!FUNC!>:: # of replay check failures on inbound          : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.espDropPacketStatistics.replayCheckFailuresOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1369 115 "%0<%!FUNC!>:: # of authentication failures on inbound        : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.espDropPacketStatistics.authenticationFailuresOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1368 114 "%0<%!FUNC!>:: # of decryption failures on inbound            : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.espDropPacketStatistics.decryptionFailuresOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1367 113 "%0<%!FUNC!>:: # of invalid SPIs on inbound                   : %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.espDropPacketStatistics.invalidSpisOnInbound, ItemLong -- 10
+}
+#typev RevTunnel_c1366 112 "%0<%!FUNC!>:: IPsec ESP drop packet statistics" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+}
+#typev RevTunnel_c1364 111 "%0<%!FUNC!>:: # of offloaded SAs             : %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateSaStatistics.offloadedSas, ItemLong -- 10
+}
+#typev RevTunnel_c1363 110 "%0<%!FUNC!>:: # of active tunnels            : %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateSaStatistics.activeTunnels, ItemLong -- 10
+}
+#typev RevTunnel_c1362 109 "%0<%!FUNC!>:: # of successful re-keys        : %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateSaStatistics.successfulRekeys, ItemLong -- 10
+}
+#typev RevTunnel_c1361 108 "%0<%!FUNC!>:: total # of SAs deleted         : %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateSaStatistics.totalSasDeleted, ItemLong -- 10
+}
+#typev RevTunnel_c1360 107 "%0<%!FUNC!>:: total # of SAs added           : %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateSaStatistics.totalSasAdded, ItemLong -- 10
+}
+#typev RevTunnel_c1359 106 "%0<%!FUNC!>:: # of pending SA negotiations   : %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateSaStatistics.pendingSaNegotiations, ItemLong -- 10
+}
+#typev RevTunnel_c1358 105 "%0<%!FUNC!>:: # of active SAs                : %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+ipsecStatistics.aggregateSaStatistics.activeSas, ItemLong -- 10
+}
+#typev RevTunnel_c1357 104 "%0<%!FUNC!>:: IPsec aggregate SA statistics" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_DumpStatistics
+{
+}
+#typev RevTunnel_c1266 90 "%0<%!FUNC!>:: %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c1249 89 "%0<%!FUNC!>::     transportFilter->numFilterConditions = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->outboundSa->transportFilter->numFilterConditions, ItemLong -- 10
+}
+#typev RevTunnel_c1246 88 "%0<%!FUNC!>::     traffic.realIfProfileId = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->outboundSa->traffic.realIfProfileId, ItemLong -- 10
+}
+#typev RevTunnel_c1245 87 "%0<%!FUNC!>::     traffic.localIfLuid = %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->outboundSa->traffic.localIfLuid, ItemLongLong -- 10
+}
+#typev RevTunnel_c1244 86 "%0<%!FUNC!>::     traffic.ipProtocol = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->outboundSa->traffic.ipProtocol, ItemLong -- 10
+}
+#typev RevTunnel_c1243 85 "%0<%!FUNC!>::     traffic.localPort = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->outboundSa->traffic.localPort, ItemLong -- 10
+}
+#typev RevTunnel_c1242 84 "%0<%!FUNC!>::     traffic.remotePort = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->outboundSa->traffic.remotePort, ItemLong -- 10
+}
+#typev RevTunnel_c1241 83 "%0<%!FUNC!>::     traffic.trafficType = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->outboundSa->traffic.trafficType, ItemLong -- 10
+}
+#typev RevTunnel_c1240 82 "%0<%!FUNC!>::     traffic.remoteV4Address = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+RtlUlongByteSwap(remoteAddr.S_un.S_addr), ItemIPAddr -- 10
+}
+#typev RevTunnel_c1239 81 "%0<%!FUNC!>::     traffic.localV4Address = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+RtlUlongByteSwap(localAddr.S_un.S_addr), ItemIPAddr -- 10
+}
+#typev RevTunnel_c1235 80 "%0<%!FUNC!>::     traffic.ipVersion = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->outboundSa->traffic.ipVersion, ItemLong -- 10
+}
+#typev RevTunnel_c1234 79 "%0<%!FUNC!>::     saDirection = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->outboundSa->saDirection, ItemLong -- 10
+}
+#typev RevTunnel_c1233 78 "%0<%!FUNC!>::     saContextId = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->outboundSa->ipVersion, ItemLong -- 10
+}
+#typev RevTunnel_c1232 77 "%0<%!FUNC!>:: OUTBOUND" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+}
+#typev RevTunnel_c1227 76 "%0<%!FUNC!>::     transportFilter->numFilterConditions = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->inboundSa->transportFilter->numFilterConditions, ItemLong -- 10
+}
+#typev RevTunnel_c1223 75 "%0<%!FUNC!>::     traffic.realIfProfileId = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->inboundSa->traffic.realIfProfileId, ItemLong -- 10
+}
+#typev RevTunnel_c1222 74 "%0<%!FUNC!>::     traffic.localIfLuid = %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->inboundSa->traffic.localIfLuid, ItemLongLong -- 10
+}
+#typev RevTunnel_c1221 73 "%0<%!FUNC!>::     traffic.ipProtocol = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->inboundSa->traffic.ipProtocol, ItemLong -- 10
+}
+#typev RevTunnel_c1220 72 "%0<%!FUNC!>::     traffic.localPort = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->inboundSa->traffic.localPort, ItemLong -- 10
+}
+#typev RevTunnel_c1219 71 "%0<%!FUNC!>::     traffic.remotePort = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->inboundSa->traffic.remotePort, ItemLong -- 10
+}
+#typev RevTunnel_c1218 70 "%0<%!FUNC!>::     traffic.trafficType = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->inboundSa->traffic.trafficType, ItemLong -- 10
+}
+#typev RevTunnel_c1217 69 "%0<%!FUNC!>::     traffic.remoteV4Address = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+RtlUlongByteSwap(remoteAddr.S_un.S_addr), ItemIPAddr -- 10
+}
+#typev RevTunnel_c1216 68 "%0<%!FUNC!>::     traffic.localV4Address = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+RtlUlongByteSwap(localAddr.S_un.S_addr), ItemIPAddr -- 10
+}
+#typev RevTunnel_c1212 67 "%0<%!FUNC!>::     traffic.ipVersion = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->inboundSa->traffic.ipVersion, ItemLong -- 10
+}
+#typev RevTunnel_c1211 66 "%0<%!FUNC!>::     saDirection = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->inboundSa->saDirection, ItemLong -- 10
+}
+#typev RevTunnel_c1210 65 "%0<%!FUNC!>::     saContextId = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->inboundSa->ipVersion, ItemLong -- 10
+}
+#typev RevTunnel_c1209 64 "%0<%!FUNC!>:: INBOUND" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+}
+#typev RevTunnel_c1206 63 "%0<%!FUNC!>:: saContextId = %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+details->saContextId, ItemLongLong -- 10
+}
+#typev RevTunnel_c1198 62 "%0<%!FUNC!>:: IPsecSaContextEnum1 returned %10!d! entries" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+entriesReturned, ItemLong -- 10
+}
+#typev RevTunnel_c1197 61 "%0<%!FUNC!>:: Enumerate SA Contexts:" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAContext
+{
+}
+#typev RevTunnel_c1322 103 "%0<%!FUNC!>:: SPI = %10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+saDetails->saBundle.saList[j].spi, ItemLong -- 10
+}
+#typev RevTunnel_c1319 102 "%0<%!FUNC!>:: Direction = %10!d!, #SAs = %11!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+saDetails->saDirection, ItemLong -- 10
+saDetails->saBundle.numSAs, ItemLong -- 11
+}
+#typev RevTunnel_c1317 101 "%0<%!FUNC!>:: traffic.realIfProfileId = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+saDetails->traffic.realIfProfileId, ItemLong -- 10
+}
+#typev RevTunnel_c1316 100 "%0<%!FUNC!>:: traffic.localIfLuid = %10!I64d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+saDetails->traffic.localIfLuid, ItemLongLong -- 10
+}
+#typev RevTunnel_c1315 99 "%0<%!FUNC!>:: traffic.ipProtocol = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+saDetails->traffic.ipProtocol, ItemLong -- 10
+}
+#typev RevTunnel_c1314 98 "%0<%!FUNC!>:: traffic.localPort = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+saDetails->traffic.localPort, ItemLong -- 10
+}
+#typev RevTunnel_c1313 97 "%0<%!FUNC!>:: traffic.tunnelPolicyId = %10!I64u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+saDetails->traffic.tunnelPolicyId, ItemULongLong -- 10
+}
+#typev RevTunnel_c1312 96 "%0<%!FUNC!>:: traffic.remotePort = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+saDetails->traffic.remotePort, ItemLong -- 10
+}
+#typev RevTunnel_c1307 95 "%0<%!FUNC!>:: traffic.trafficType = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+saDetails->traffic.trafficType, ItemLong -- 10
+}
+#typev RevTunnel_c1306 94 "%0<%!FUNC!>:: traffic.ipVersion = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+saDetails->traffic.ipVersion, ItemLong -- 10
+}
+#typev RevTunnel_c1305 93 "%0<%!FUNC!>:: ipVersion = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+saDetails->ipVersion, ItemLong -- 10
+}
+#typev RevTunnel_c1296 92 "%0<%!FUNC!>:: IPsecSaEnum0 returned %10!d! entries" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+entriesReturned, ItemLong -- 10
+}
+#typev RevTunnel_c1295 91 "%0<%!FUNC!>:: Enumerate SAs:" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=RVRM_WPP FUNC=RevTunnel_EnumerateSAs
+{
+}
+#typev RevTunnel_c449 23 "%0<%!FUNC!>:: HashAlgo = 0x%10!X!, CryptoAlgo = 0x%11!X!. %12!s!" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=RevRmnet_GetIFRLogHandle() FLAGS=RVRM_WPP FUNC=RevTunnel_GetHashCryptoMap
+{
+HashAlgo, ItemLong -- 10
+CryptoAlgo, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevTunnel_c445 22 "%0<%!FUNC!>:: RevTunnel_MapCipherAlgo failed. %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=RevRmnet_GetIFRLogHandle() FLAGS=RVRM_WPP FUNC=RevTunnel_GetHashCryptoMap
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c438 21 "%0<%!FUNC!>:: RevTunnel_MapHashAlgo failed. %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=RevRmnet_GetIFRLogHandle() FLAGS=RVRM_WPP FUNC=RevTunnel_GetHashCryptoMap
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c429 20 "%0<%!FUNC!>:: STATUS_INVALID_PARAMETER." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_GetHashCryptoMap
+{
+}
+#typev RevTunnel_c1809 177 "%0%10!s! <%!FUNC!>:: IPinIPProviderContextKey GUID: %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_Init
+{
+pRevTunnelContext->PortName, ItemString -- 10
+&pRevTunnelContext->IPinIPProviderContextKey, ItemGuid -- 11
+}
+#typev RevTunnel_c1817 178 "%0<%!FUNC!>:: TODO: Cleanup." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_Init
+{
+}
+#typev RevTunnel_c1804 176 "%0%10!s! <%!FUNC!>:: GUID generation failed for IPinIPProviderContextKey." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_Init
+{
+pRevTunnelContext->PortName, ItemString -- 10
+}
+#typev RevTunnel_c1789 175 "%0%10!s! <%!FUNC!>:: IPv6ProviderContextKey GUID: %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_Init
+{
+pRevTunnelContext->PortName, ItemString -- 10
+&pRevTunnelContext->IPv6ProviderContextKey, ItemGuid -- 11
+}
+#typev RevTunnel_c1784 174 "%0%10!s! <%!FUNC!>:: GUID generation failed for IPv6ProviderContextKey." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_Init
+{
+pRevTunnelContext->PortName, ItemString -- 10
+}
+#typev RevTunnel_c1769 173 "%0%10!s! <%!FUNC!>:: IPv4ProviderContextKey GUID: %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_Init
+{
+pRevTunnelContext->PortName, ItemString -- 10
+&pRevTunnelContext->IPv4ProviderContextKey, ItemGuid -- 11
+}
+#typev RevTunnel_c1764 172 "%0%10!s! <%!FUNC!>:: GUID generation failed for IPv4ProviderContextKey." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_Init
+{
+pRevTunnelContext->PortName, ItemString -- 10
+}
+#typev RevTunnel_c1750 171 "%0%10!s!<%!FUNC!>  : SubLayerKey GUID: %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_Init
+{
+pRevTunnelContext->PortName, ItemString -- 10
+&SUBLAYER_KEY_GUID, ItemGuid -- 11
+}
+#typev RevTunnel_c1749 170 "%0%10!s! <%!FUNC!>:: ProviderKey GUID: %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_Init
+{
+pRevTunnelContext->PortName, ItemString -- 10
+&PROVIDER_KEY_GUID, ItemGuid -- 11
+}
+#typev RevTunnel_c1740 169 "%0<%!FUNC!>:: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_Init
+{
+}
+#typev RevTunnel_c330 16 "%0<%!FUNC!>:: Failed with error code = %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_LoadEngine
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c324 15 "%0<%!FUNC!>:: status = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_LoadEngine
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c251 14 "%0<%!FUNC!>::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_LoadEngine
+{
+}
+#typev RevTunnel_c127 10 "%0<%!FUNC!>:: STATUS_INVALID_PARAMETER." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_MapCipherAlgo
+{
+}
+#typev RevTunnel_c174 11 "%0<%!FUNC!>:: CryptoAlgo = 0x%10!X!, IKECipherType = 0x%11!X!, IPSECCipherConfig = 0x%12!X!, IPSECCipherType = 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_MapCipherAlgo
+{
+CryptoAlgo, ItemLong -- 10
+*pIKECipherType, ItemLong -- 11
+*pIPSECCipherConfig, ItemLong -- 12
+*pIPSECCipherType, ItemLong -- 13
+}
+#typev RevTunnel_c186 12 "%0<%!FUNC!>:: STATUS_INVALID_PARAMETER." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_MapHashAlgo
+{
+}
+#typev RevTunnel_c226 13 "%0<%!FUNC!>:: HashAlgo = 0x%10!X!, IKEIntegrityType = 0x%11!X!, IPSECAuthConfig = 0x%12!X!, IPSECAuthType = 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_MapHashAlgo
+{
+HashAlgo, ItemLong -- 10
+*pIKEIntegrityType, ItemLong -- 11
+*pIPSECAuthConfig, ItemLong -- 12
+*pIPSECAuthType, ItemLong -- 13
+}
+#typev RevTunnel_c1532 154 "%0<%!FUNC!>:: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevTunnel_c1706 166 "%0%10!s! <%!FUNC!>:: %11!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevTunnel_c1683 165 "%0%10!s! <%!FUNC!>:: Inbound SPI: %11!u!, SA ID: %12!I64d!, Outbound SPI: %13!u!. %14!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+pWDSReverseRMNetContext->spi_rx, ItemLong -- 11
+*pSaId, ItemLongLong -- 12
+pWDSReverseRMNetContext->spi_tx, ItemLong -- 13
+status, ItemNTSTATUS -- 14
+}
+#typev RevTunnel_c1647 164 "%0%10!s! <%!FUNC!>:: pRevTunnelContext->TunnelId = %11!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+pRevTunnelContext->TunnelId, ItemULongLong -- 11
+}
+#typev RevTunnel_c1611 163 "%0%10!s! <%!FUNC!>:: IPSecTunnelOutfilterId = %11!I64u!, IPSecTunnelProvContextId = %12!I64u!, IPSecTunnelRefCount = %13!I64u!, VirtualTunnelId = %14!I64u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+RevTunnelStaticContext.IPSecTunnelOutfilterId, ItemULongLong -- 11
+RevTunnelStaticContext.IPSecTunnelProvContextId, ItemULongLong -- 12
+RevTunnelStaticContext.IPSecTunnelRefCount, ItemULongLong -- 13
+RevTunnelStaticContext.VirtualTunnelId, ItemULongLong -- 14
+}
+#typev RevTunnel_c1592 152 "%0%10!s! <%!FUNC!>:: Increase RevTunnelStaticContext.IPSecTunnelRefCount = %11!u! and pRevTunnelContext->DataCallRefCount = %12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+RevTunnelStaticContext.IPSecTunnelRefCount, ItemLong -- 11
+pRevTunnelContext->DataCallRefCount, ItemLong -- 12
+}
+#typev RevTunnel_c1590 162 "%0%10!s! <%!FUNC!>:: Entered block for adding filter conditions with shared SPIs." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+}
+#typev RevTunnel_c1558 161 "%0%10!s! <%!FUNC!>:: Setting IPv4 tunnel" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+}
+#typev RevTunnel_c1552 160 "%0%10!s! <%!FUNC!>:: Setting IPv6 tunnel" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+}
+#typev RevTunnel_c1547 159 "%0%10!s! <%!FUNC!>:: remoteAddrSrv32 = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+RtlUlongByteSwap(pWDSReverseRMNetContext->IWLAN_Server_addr.IP_Addr.IPv4), ItemIPAddr -- 11
+}
+#typev RevTunnel_c1546 158 "%0%10!s! <%!FUNC!>:: remoteMask32 = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+RtlUlongByteSwap(pWDSReverseRMNetContext->IWLAN_Server_subnet_mask.IP_Addr.IPv4), ItemIPAddr -- 11
+}
+#typev RevTunnel_c1545 157 "%0%10!s! <%!FUNC!>:: remoteAddr32 = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+RtlUlongByteSwap(pWDSReverseRMNetContext->IWLAN_Server_addr.IP_Addr.IPv4), ItemIPAddr -- 11
+}
+#typev RevTunnel_c1544 156 "%0%10!s! <%!FUNC!>:: localMask32 = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+RtlUlongByteSwap(pWDSReverseRMNetContext->IWLAN_Client_subnet_mask.IP_Addr.IPv4), ItemIPAddr -- 11
+}
+#typev RevTunnel_c1543 155 "%0%10!s! <%!FUNC!>:: localAddr = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevTunnel_SetupTunnel
+{
+pRevTunnelContext->PortName, ItemString -- 10
+RtlUlongByteSwap(pWDSReverseRMNetContext->IWLAN_Client_addr.IP_Addr.IPv4), ItemIPAddr -- 11
+}

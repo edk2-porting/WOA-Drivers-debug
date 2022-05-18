@@ -1,0 +1,27 @@
+// PDB:  QcTftpKmdf.pdb
+// PDB:  Last Updated :2021-10-17:21:54:39:798 (UTC) [tracepdb]
+77fee0b8-66c2-3b8e-c683-83e172c3c9c8 kmdf // SRC=tftp_server_folders_windows.c MJ= MN=
+#typev tftp_server_folders_windows_c116 12 "%4!s! [%!LEVEL!] | [tftp_server_folders_windows.c, 116] | %!FUNC! ::Failed to auto_dir for(%10!s!) | Errno = %11!d! (%12!s!)" //   LEVEL=ERR_ FLAGS=QCTFTP_KMDF FUNC=tftp_server_folders_create_data_folders
+{
+SHARED_DATA_FOLDER, ItemString -- 10
+-(result), ItemLong -- 11
+tftp_strerror(-result), ItemString -- 12
+}
+#typev tftp_server_folders_windows_c102 11 "%4!s! [%!LEVEL!] | [tftp_server_folders_windows.c, 102] | %!FUNC! ::Failed to auto_dir for(%10!s!) Errno = %11!d! (%12!s!)" //   LEVEL=ERR_ FLAGS=QCTFTP_KMDF FUNC=tftp_server_folders_create_data_folders
+{
+dir_path, ItemString -- 10
+-(result), ItemLong -- 11
+tftp_strerror(result), ItemString -- 12
+}
+#typev tftp_server_folders_windows_c79 10 "%4!s! [%!LEVEL!] | [tftp_server_folders_windows.c, 79] | %!FUNC! ::Failed to auto_dir for(%10!s!) Errno = %11!d! (%12!s!)" //   LEVEL=ERR_ FLAGS=QCTFTP_KMDF FUNC=tftp_server_folders_create_data_folders
+{
+TFTP_DRIVER_DATA_PATH, ItemString -- 10
+-(result), ItemLong -- 11
+tftp_strerror(result), ItemString -- 12
+}
+#typev tftp_server_folders_windows_c185 13 "%4!s! [%!LEVEL!] | [tftp_server_folders_windows.c, 153] | %!FUNC! ::Failed to create symlink for(%10!s!) Errno = %11!d! (%12!s!)" //   LEVEL=ERR_ FLAGS=QCTFTP_KMDF FUNC=tftp_server_folders_init
+{
+tftp_server_folders_path_buf, ItemString -- 10
+-(result), ItemLong -- 11
+tftp_strerror(result), ItemString -- 12
+}

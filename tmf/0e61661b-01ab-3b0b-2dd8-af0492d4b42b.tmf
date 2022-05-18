@@ -1,0 +1,37 @@
+// PDB:  qcslimbus7180.pdb
+// PDB:  Last Updated :2021-10-17:21:55:09:341 (UTC) [tracepdb]
+0e61661b-01ab-3b0b-2dd8-af0492d4b42b kmdf // SRC=SlimBusSat.c MJ= MN=
+#typev SlimBusSat_c456 15 "%0[DevId: 0x%10!x!][SlimBusSat.c 456] %!FUNC!::Got manager powered down notification (TID: %11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_ProcessSatRxMsg
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+TID, ItemLong -- 11
+}
+#typev SlimBusSat_c448 14 "%0[DevId: 0x%10!x!][SlimBusSat.c 448] %!FUNC!::Got manager powered up notification (TID: %11!d!) (code: %12!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_ProcessSatRxMsg
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+TID, ItemLong -- 11
+uCode, ItemLong -- 12
+}
+#typev SlimBusSat_c433 13 "%0[DevId: 0x%10!x!][SlimBusSat.c 433] %!FUNC!::received master capability (protocol: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_ProcessSatRxMsg
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+uProto, ItemLong -- 11
+}
+#typev SlimBusSat_c149 11 "%0[DevId: 0x%10!x!][SlimBusSat.c 149] %!FUNC!::Turning off satellite slimbus clock" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_SatCheckEnterStandaloneLowPowerMode
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBusSat_c133 10 "%0[DevId: 0x%10!x!][SlimBusSat.c 133] %!FUNC!::Resetting hardware and turning off slimbus core clock" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_SatCheckEnterStandaloneLowPowerMode
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBusSat_c193 12 "%0[DevId: 0x%10!x!][SlimBusSat.c 193] %!FUNC!::Turning on satellite/standalone slimbus ref clock" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_SatLeaveStandaloneLowPowerMode
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBusSat_c539 16 "%0[DevId: 0x%10!x!][SlimBusSat.c 539] %!FUNC!::master ack timeout (client: 0x%11!x!) (msg header: 0x%12!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_WaitForMasterAck
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+uMsgHeader, ItemLong -- 12
+}

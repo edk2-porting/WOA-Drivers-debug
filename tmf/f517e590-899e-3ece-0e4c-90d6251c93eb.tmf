@@ -1,0 +1,856 @@
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+f517e590-899e-3ece-0e4c-90d6251c93eb PEP // SRC=PEP_Thermal_Adc.c MJ= MN=
+#typev PEP_Thermal_Adc_c2788 177 "%0VADC_TM%10!d!: %11!d! C" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoctlCallback
+{
+cbContext->channel, ItemLong -- 10
+cbContext->temp, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2786 176 "%0 [Warn] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM%10!d!: %11!d! C" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoctlCallback
+{
+cbContext->channel, ItemLong -- 10
+cbContext->temp, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2770 175 "%0IoStatus 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoctlCallback
+{
+aParams->IoStatus.Status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2769 174 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2769 :IoStatus 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoctlCallback
+{
+aParams->IoStatus.Status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2762 173 "%0Invalid adc status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoctlCallback
+{
+adcTmOut->adcResult.eStatus, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2760 172 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2760 :Invalid adc status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoctlCallback
+{
+adcTmOut->adcResult.eStatus, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2740 171 "%0threshType is invalid 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoctlCallback
+{
+threshType, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2739 170 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2739 :threshType is invalid 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoctlCallback
+{
+threshType, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2730 169 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Request 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoctlCallback
+{
+aRequest, ItemPtr -- 10
+}
+#typev PEP_Thermal_Adc_c327 19 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :aPsvK = %10!d!, aTemperatureReadK = %11!d!, Inverse value in Kelvin = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=CalculateInverseTemp
+{
+aPsvK, ItemLong -- 10
+aTemperatureReadK, ItemLong -- 11
+aInverseValueK, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c1271 84 "%0Invalid, Request 0x%10!p! not matching with outstanding request 0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleCancelRequest
+{
+Request, ItemPtr -- 10
+devExt->outstandingRequest, ItemPtr -- 11
+}
+#typev PEP_Thermal_Adc_c1268 83 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1268 :Invalid, Request 0x%10!p! not matching with outstanding request 0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleCancelRequest
+{
+Request, ItemPtr -- 10
+devExt->outstandingRequest, ItemPtr -- 11
+}
+#typev PEP_Thermal_Adc_c1245 82 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Marking channel%10!d! thresh%11!d! temp req cancelled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleCancelRequest
+{
+devExt->sensor, ItemLong -- 10
+i, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1238 81 "%0Channel%10!d!, %11!s! Threshold, reqState %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleCancelRequest
+{
+sensor, ItemLong -- 10
+(i) ? 'High' : 'Low', ItemString -- 11
+channelReq->reqState, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c1225 80 "%0VADC_TM%10!d! Request 0x%11!p! completed" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleCancelRequest
+{
+devExt->sensor, ItemLong -- 10
+Request, ItemPtr -- 11
+}
+#typev PEP_Thermal_Adc_c1223 79 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM%10!d! Request%11!d! cancelled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleCancelRequest
+{
+devExt->sensor, ItemLong -- 10
+devExt->reqId, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1207 78 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM%10!d!, Request: 0x%11!p! received cancel" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleCancelRequest
+{
+devExt->sensor, ItemLong -- 10
+Request, ItemPtr -- 11
+}
+#typev PEP_Thermal_Adc_c280 18 "%0ACPI output buffer is invalid (Signature = 0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=QueryTZInvertField
+{
+output_buffer->Signature, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c278 17 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::278 :ACPI output buffer is invalid (Signature = 0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=QueryTZInvertField
+{
+output_buffer->Signature, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c268 16 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::268 :IOCTL_ACPI_EVAL_METHOD failed (0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=QueryTZInvertField
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c253 15 "%0PEP_Malloc_WithTag() failed" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=QueryTZInvertField
+{
+}
+#typev PEP_Thermal_Adc_c252 14 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::252 :PEP_Malloc_WithTag() failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=QueryTZInvertField
+{
+}
+#typev PEP_Thermal_Adc_c227 13 "%0PEP_Malloc_WithTag() failed" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=QueryTZInvertField
+{
+}
+#typev PEP_Thermal_Adc_c226 12 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::226 :PEP_Malloc_WithTag() failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=QueryTZInvertField
+{
+}
+#typev PEP_Thermal_Adc_c210 11 "%0Failed to get ACPI device handle" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=QueryTZInvertField
+{
+}
+#typev PEP_Thermal_Adc_c209 10 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::209 :Failed to get ACPI device handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=QueryTZInvertField
+{
+}
+#typev PEP_Thermal_Adc_c1292 85 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM request timer expired" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmReqExpiredTimerFunc
+{
+}
+#typev PEP_Thermal_Adc_c3278 205 "%0All AdcInterfaces opened" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCChannelInitWorker
+{
+}
+#typev PEP_Thermal_Adc_c3271 204 "%0 [Verb] PEP_Thermal_Adc.c::%!FUNC! :Adc Handle was never opened" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCChannelInitWorker
+{
+}
+#typev PEP_Thermal_Adc_c3267 203 "%0 [Verb] PEP_Thermal_Adc.c::%!FUNC! :Adc Handle closed" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCChannelInitWorker
+{
+}
+#typev PEP_Thermal_Adc_c3246 202 "%0WdfIoTargetOpen failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCChannelInitWorker
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c3244 201 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::3244 :WdfIoTargetOpen failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCChannelInitWorker
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c3233 200 "%0Adc channel %10!d! Initialized" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCChannelInitWorker
+{
+i, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c3228 199 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::3228 :InitVadcTmChannel failed status:0x%10!x!, channel:%11!d! is not available in adc:%12!d! interface" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCChannelInitWorker
+{
+status, ItemLong -- 10
+i, ItemLong -- 11
+adc_num, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c3215 198 "%0ADC interface %10!d! arrived" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCChannelInitWorker
+{
+adc_num, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c3213 197 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :ADC interface %10!d! arrived" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCChannelInitWorker
+{
+adc_num, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c3206 196 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Handle Open succeeded" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCChannelInitWorker
+{
+}
+#typev PEP_Thermal_Adc_c3114 194 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :ADCPnPCallback %10!d! Interface" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCPnPCallback
+{
+Adc_intf_num, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c3108 193 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :ADCPnP removal callback" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCPnPCallback
+{
+}
+#typev PEP_Thermal_Adc_c3096 192 "%0ADCPnPCallback Input parameters NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCPnPCallback
+{
+}
+#typev PEP_Thermal_Adc_c3095 191 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::3095 :ADCPnPCallback Input parameters NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ADCPnPCallback
+{
+}
+#typev PEP_Thermal_Adc_c2968 186 "%0WdfIoTargetSendIoctlSynchronously failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoControl
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2966 185 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2966 :WdfIoTargetSendIoctlSynchronously failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoControl
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2924 184 "%0IoTarget is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoControl
+{
+}
+#typev PEP_Thermal_Adc_c2923 183 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2923 :IoTarget is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoControl
+{
+}
+#typev PEP_Thermal_Adc_c2882 182 "%0Channel%10!d!, Threshold %11!d!, reqState %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoControlAsync
+{
+aChannel, ItemLong -- 10
+aThreshType, ItemLong -- 11
+aReqData->reqState, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c2872 181 "%0%10!s! WdfRequestSend Failed for interface %11!d! with status 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoControlAsync
+{
+(aThreshType == ADC_TM_THRESHOLD_LOWER) ? 'LOWER' : 'HIGHER', ItemString -- 10
+InterfaceIndex, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c2868 180 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2868 :%10!s! WdfRequestSend Failed for interface %11!d! with status 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoControlAsync
+{
+(aThreshType == ADC_TM_THRESHOLD_LOWER) ? 'LOWER' : 'HIGHER', ItemString -- 10
+InterfaceIndex, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c2855 179 "%0%10!s! WdfIoTargetFormatRequestForIoctl failed for interface %11!d! with status: 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoControlAsync
+{
+(aThreshType == ADC_TM_THRESHOLD_LOWER) ? 'LOWER' : 'HIGHER', ItemString -- 10
+InterfaceIndex, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c2851 178 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2851 :%10!s! WdfIoTargetFormatRequestForIoctl failed for interface %11!d! with status: 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoControlAsync
+{
+(aThreshType == ADC_TM_THRESHOLD_LOWER) ? 'LOWER' : 'HIGHER', ItemString -- 10
+InterfaceIndex, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c2690 168 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :%10!s! AdcIoRequestCreate Successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoRequestCreate
+{
+(threshType == ADC_TM_THRESHOLD_LOWER) ? 'Lower Thresh' : 'Higher Thresh', ItemString -- 10
+}
+#typev PEP_Thermal_Adc_c2685 167 "%0WdfMemoryCreatePreallocated failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoRequestCreate
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2683 166 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2683 :WdfMemoryCreatePreallocated failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoRequestCreate
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2672 165 "%0WdfMemoryCreatePreallocated failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoRequestCreate
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2670 164 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2670 :WdfMemoryCreatePreallocated failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoRequestCreate
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2656 163 "%0WdfRequestCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoRequestCreate
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2654 162 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2654 :WdfRequestCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AdcIoRequestCreate
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c3156 195 "%0 [Verb] PEP_Thermal_Adc.c::%!FUNC! :Adc Interface %10!d! not opened" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_THERMAL_FLAG_ADC FUNC=AllADCInterfacesOpened
+{
+i, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2416 147 "%0WdfRequestCancelSentRequest failed status: 0x%10!x! channel %11!d!" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=BracketVadcTmChannel
+{
+status, ItemLong -- 10
+aChannel, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2413 146 "%0 [Warn] PEP_Thermal_Adc.c::%!FUNC! :WdfRequestCancelSentRequest failed status: 0x%10!x! channel %11!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_ADC FUNC=BracketVadcTmChannel
+{
+status, ItemLong -- 10
+aChannel, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2404 145 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Cancel Channel%10!d!, Thresh%11!d! Request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=BracketVadcTmChannel
+{
+aChannel, ItemLong -- 10
+i, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2398 144 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Channel%10!d!, %11!s! Threshold %12!d!, cancel %13!s!, set %14!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=BracketVadcTmChannel
+{
+aChannel, ItemLong -- 10
+(i) ? 'High' : 'Low', ItemString -- 11
+channelTemps[i], ItemLong -- 12
+(cancel) ? 'Yes' : 'No', ItemString -- 13
+(set) ? 'Yes' : 'No', ItemString -- 14
+}
+#typev PEP_Thermal_Adc_c2394 143 "%0Channel%10!d!, %11!s! Threshold %12!d!, cancel %13!s!, set %14!s!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=BracketVadcTmChannel
+{
+aChannel, ItemLong -- 10
+(i) ? 'High' : 'Low', ItemString -- 11
+channelTemps[i], ItemLong -- 12
+(cancel) ? 'Yes' : 'No', ItemString -- 13
+(set) ? 'Yes' : 'No', ItemString -- 14
+}
+#typev PEP_Thermal_Adc_c2385 142 "%0ValidateAdcChannelNumber for channel:%10!d! failed" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=BracketVadcTmChannel
+{
+aChannel, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2383 141 "%0 [Warn] PEP_Thermal_Adc.c::%!FUNC! :ValidateAdcChannelNumber for channel:%10!d! failed" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_ADC FUNC=BracketVadcTmChannel
+{
+aChannel, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2228 131 "%0Not a cancel thermal manger request" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=CancelTMgrReq
+{
+}
+#typev PEP_Thermal_Adc_c2226 130 "%0 [Warn] PEP_Thermal_Adc.c::%!FUNC! :Not a cancel thermal manger request" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_ADC FUNC=CancelTMgrReq
+{
+}
+#typev PEP_Thermal_Adc_c2219 129 "%0Waiting for one of the cancel req on channel %10!d!, HighTempReq %11!d! LowTempReq %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=CancelTMgrReq
+{
+aChannel, ItemLong -- 10
+highThreshReq->reqState, ItemLong -- 11
+lowThreshReq->reqState, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c2216 128 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Waiting for one of the cancel req on channel %10!d!, HighTempReq %11!d! LowTempReq %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=CancelTMgrReq
+{
+aChannel, ItemLong -- 10
+highThreshReq->reqState, ItemLong -- 11
+lowThreshReq->reqState, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c2207 127 "%0VADC_TM %10!d!, Request 0x%11!p! Cancel Completed" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=CancelTMgrReq
+{
+aChannel, ItemLong -- 10
+gVadcTmChannelDevice[aChannel].thermMgrsCancelRequest, ItemPtr -- 11
+}
+#typev PEP_Thermal_Adc_c2205 126 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM %10!d!, Request 0x%11!p! Cancel Completed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=CancelTMgrReq
+{
+aChannel, ItemLong -- 10
+gVadcTmChannelDevice[aChannel].thermMgrsCancelRequest, ItemPtr -- 11
+}
+#typev PEP_Thermal_Adc_c2188 125 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM %10!d! Cancel Completed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=CancelTMgrReq
+{
+aChannel, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1798 121 "%0%10!s! ADC channel read is failing with estatus: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=GetVadcTemp
+{
+gThermalSensorConfigurations.HidToVadcTmMap[aChannel].ChannelName, ItemString -- 10
+AdcResult.eStatus, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1794 120 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1794 :%10!s! ADC channel read is failing with estatus: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=GetVadcTemp
+{
+gThermalSensorConfigurations.HidToVadcTmMap[aChannel].ChannelName, ItemString -- 10
+AdcResult.eStatus, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1786 119 "%0AdcIoControl failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=GetVadcTemp
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1784 118 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1784 :AdcIoControl failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=GetVadcTemp
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1768 117 "%0AdcIoTarget is uninitialized" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=GetVadcTemp
+{
+}
+#typev PEP_Thermal_Adc_c1767 116 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1767 :AdcIoTarget is uninitialized" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=GetVadcTemp
+{
+}
+#typev PEP_Thermal_Adc_c1759 115 "%0ValidateAdcChannelNumber for channel:%10!d! failed with status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=GetVadcTemp
+{
+aChannel, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1756 114 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1756 :ValidateAdcChannelNumber for channel:%10!d! failed with status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=GetVadcTemp
+{
+aChannel, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2570 161 "%0Sent Request completed on Channel%10!d!, reqstate %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleChannelRequestStates
+{
+channel, ItemLong -- 10
+currRequest->reqState, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2565 160 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Sent Request completed on Channel%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleChannelRequestStates
+{
+channel, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2559 159 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Sent Request Cancelled on Channel%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleChannelRequestStates
+{
+channel, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2544 158 "%0Internal Cancel Request completed on Channel%10!d!, reqstate %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleChannelRequestStates
+{
+channel, ItemLong -- 10
+currRequest->reqState, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2539 157 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Internal Cancel Request completed on Channel%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleChannelRequestStates
+{
+channel, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2534 156 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Cancel req on channel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleChannelRequestStates
+{
+channel, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2524 155 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Channel:%10!d! ThreshType:%11!d! RequestState:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleChannelRequestStates
+{
+channel, ItemLong -- 10
+threshType, ItemLong -- 11
+currRequest->reqState, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c2520 154 "%0Channel:%10!d! ThreshType:%11!d! RequestState:%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleChannelRequestStates
+{
+channel, ItemLong -- 10
+threshType, ItemLong -- 11
+currRequest->reqState, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c2514 153 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2514 :Invalid Threshold type %10!d!, channel %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleChannelRequestStates
+{
+threshType, ItemLong -- 10
+channel, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2511 152 "%0Invalid Threshold type %10!d!, channel %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleChannelRequestStates
+{
+threshType, ItemLong -- 10
+channel, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2507 151 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Request 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleChannelRequestStates
+{
+currRequest->adcIoReq, ItemPtr -- 10
+}
+#typev PEP_Thermal_Adc_c1537 103 "%0WdfTimerCreate failed with status : 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1535 102 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1535 :WdfTimerCreate failed with status : 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1518 101 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM%10!d! request queued" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+devExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1508 100 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM%10!d! request - After swap Low:%11!d! High: %12!d! temperatureC: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+devExt->sensor, ItemLong -- 10
+devExt->lowTemperature, ItemLong -- 11
+devExt->highTemperature, ItemLong -- 12
+temperatureC, ItemLong -- 13
+}
+#typev PEP_Thermal_Adc_c1477 99 "%0VADC_TM%10!d! has outstanding request, return" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+devExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1475 98 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1475 :VADC_TM%10!d! has outstanding request, return" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+devExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1455 97 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM%10!d! request satisfied immediately: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+devExt->sensor, ItemLong -- 10
+temperatureACPI, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1427 96 "%0GetVadcTemp for sensor:%10!d! failed with status : 0x%11!x!" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+devExt->sensor, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1424 95 "%0 [Warn] PEP_Thermal_Adc.c::%!FUNC! :GetVadcTemp for sensor:%10!d! failed with status : 0x%11!x!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+devExt->sensor, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1402 94 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM%10!d! PSV Temperature in (K) %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+devExt->sensor, ItemLong -- 10
+devExt->aPSV, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1381 93 "%0VADC_TM%10!d! request 0x%11!p! - Low:%12!d! High: %13!d! Timeout: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+devExt->sensor, ItemLong -- 10
+aRequest, ItemPtr -- 11
+thermalInput->LowTemperature, ItemLong -- 12
+thermalInput->HighTemperature, ItemLong -- 13
+thermalInput->Timeout, ItemLong -- 14
+}
+#typev PEP_Thermal_Adc_c1375 92 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM%10!d! request 0x%11!p! - Low:%12!d! High: %13!d! Timeout: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+devExt->sensor, ItemLong -- 10
+aRequest, ItemPtr -- 11
+thermalInput->LowTemperature, ItemLong -- 12
+thermalInput->HighTemperature, ItemLong -- 13
+thermalInput->Timeout, ItemLong -- 14
+}
+#typev PEP_Thermal_Adc_c1366 91 "%0Invalid read buffer size" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+}
+#typev PEP_Thermal_Adc_c1365 90 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1365 :Invalid read buffer size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+}
+#typev PEP_Thermal_Adc_c1359 89 "%0Invalid InputBufferLength" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+}
+#typev PEP_Thermal_Adc_c1358 88 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1358 :Invalid InputBufferLength" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+}
+#typev PEP_Thermal_Adc_c1351 87 "%0WdfRequestRetrieveInputBuffer failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1349 86 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1349 :WdfRequestRetrieveInputBuffer failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandleVadcTmReadTempReq
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1719 113 "%0AdcIoRequestCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=InitVadcTmChannel
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1717 112 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1717 :AdcIoRequestCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=InitVadcTmChannel
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1697 111 "%0PepWorkitemCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=InitVadcTmChannel
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1695 110 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1695 :PepWorkitemCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=InitVadcTmChannel
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1674 109 "%0IOCTL_ADC_TM_GET_MEAS_IDX failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=InitVadcTmChannel
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1672 108 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1672 :IOCTL_ADC_TM_GET_MEAS_IDX failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=InitVadcTmChannel
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1656 107 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1656 :IOCTL_ADC_TM_GET_MEAS_IDX command invalid for RRADCs (BATT_THERM, SKIN_THERM, PMIC_TEMP2 & CHG_TEMP)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=InitVadcTmChannel
+{
+}
+#typev PEP_Thermal_Adc_c1633 106 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1633 :IOCTL_ADC_GET_CHANNEL failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=InitVadcTmChannel
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1586 105 "%0Channel:%10!d! is invalid" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=InitVadcTmChannel
+{
+aChannel, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c1585 104 "%0 [Warn] PEP_Thermal_Adc.c::%!FUNC! :Channel:%10!d! is invalid" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_ADC FUNC=InitVadcTmChannel
+{
+aChannel, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c3312 206 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM%10!d!: %11!d!C" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=LogChannelTemp
+{
+aSensor, ItemLong -- 10
+aTemp, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c572 37 "%0RegisterAdcPnPNotify failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcEvtDeviceSelfManagedIoInit
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c570 36 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::570 :RegisterAdcPnPNotify failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcEvtDeviceSelfManagedIoInit
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c527 35 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Regular boot" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcTmChannelEvtDeviceD0Entry
+{
+}
+#typev PEP_Thermal_Adc_c522 34 "%0Exit VadcChannel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_FLAG_HIBERNATE FUNC=PEPVadcTmChannelEvtDeviceD0Entry
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c520 33 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Hibernate: Exiting PEPVadcTmChannelEvtDeviceD0Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcTmChannelEvtDeviceD0Entry
+{
+}
+#typev PEP_Thermal_Adc_c515 32 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Hibernate: Failed to register ADC arrival Notification 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcTmChannelEvtDeviceD0Entry
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c510 31 "%0Enter VadcChannel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_FLAG_HIBERNATE FUNC=PEPVadcTmChannelEvtDeviceD0Entry
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c508 30 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Hibernate: Entering PEPVadcTmChannelEvtDeviceD0Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcTmChannelEvtDeviceD0Entry
+{
+}
+#typev PEP_Thermal_Adc_c461 29 "%0Exit VadcChannel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_FLAG_HIBERNATE FUNC=PEPVadcTmChannelEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c460 28 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Exit VadcChannel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcTmChannelEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c446 27 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Wait for pending workItem associated with %10!d! Adc channel" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcTmChannelEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c431 26 "%0WdfRequestCancelSentRequest failed, channel %10!d!, %11!s!, status: %12!d!" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcTmChannelEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+(i) ? 'HighThreshold' : 'LowThreshold', ItemString -- 11
+flag, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c428 25 "%0 [Warn] PEP_Thermal_Adc.c::%!FUNC! :WdfRequestCancelSentRequest failed, channel %10!d!, %11!s!, status: %12!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcTmChannelEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+(i) ? 'HighThreshold' : 'LowThreshold', ItemString -- 11
+flag, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c417 24 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Cancel Channel%10!d!, Thresh%11!d! Request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PEPVadcTmChannelEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+i, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c410 23 "%0 [Warn] PEP_Thermal_Adc.c::%!FUNC! :Channel%10!d!, %11!s! Threshold, reqState %12!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcTmChannelEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+(i) ? 'High' : 'Low', ItemString -- 11
+reqData->reqState, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c407 22 "%0Channel%10!d!, %11!s! Threshold, reqState %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcTmChannelEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+(i) ? 'High' : 'Low', ItemString -- 11
+reqData->reqState, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c393 21 "%0Enter VadcChannel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcTmChannelEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c391 20 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Enter VadcChannel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=PEPVadcTmChannelEvtDeviceD0Exit
+{
+DevExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c3044 190 "%0ADC arrival notification sent for interface %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=RegisterAdcPnPNotify
+{
+i, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c3042 189 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :ADC arrival notification sent for interface %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=RegisterAdcPnPNotify
+{
+i, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c3026 188 "%0IoRegisterPlugPlayNotification failed for ADC %10!d! status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=RegisterAdcPnPNotify
+{
+i, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c3024 187 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::3024 :IoRegisterPlugPlayNotification failed for ADC %10!d! status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=RegisterAdcPnPNotify
+{
+i, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2310 140 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Case 6: No outstanding request 0x%10!p!, no need to cancel" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ScanChannel
+{
+aReq->adcIoReq, ItemPtr -- 10
+}
+#typev PEP_Thermal_Adc_c2305 139 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Case 5: Send a brand new request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ScanChannel
+{
+}
+#typev PEP_Thermal_Adc_c2299 138 "%0Channel%10!d!,  Threshold %11!d!, reqState %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ScanChannel
+{
+aChannel, ItemLong -- 10
+threshTemp, ItemLong -- 11
+aReq->reqState, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c2296 137 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Channel%10!d!, Threshold %11!d!, reqState %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ScanChannel
+{
+aChannel, ItemLong -- 10
+threshTemp, ItemLong -- 11
+aReq->reqState, ItemLong -- 12
+}
+#typev PEP_Thermal_Adc_c2289 136 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Case 4: Update existing request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ScanChannel
+{
+}
+#typev PEP_Thermal_Adc_c2283 135 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Case 3: Cancel a queued request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ScanChannel
+{
+}
+#typev PEP_Thermal_Adc_c2269 134 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Case 2: Request Cancelled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ScanChannel
+{
+}
+#typev PEP_Thermal_Adc_c2263 133 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Case 1: Request in Cancel" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ScanChannel
+{
+}
+#typev PEP_Thermal_Adc_c2257 132 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Request 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ScanChannel
+{
+aReq->adcIoReq, ItemPtr -- 10
+}
+#typev PEP_Thermal_Adc_c2073 124 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM:%10!d! queued request satisfied: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ScanCollection
+{
+devExt->sensor, ItemLong -- 10
+temperatureACPI, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2068 123 "%0Adc-WdfRequestUnmarkCancelable failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ScanCollection
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c2066 122 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2066 :WdfRequestUnmarkCancelable failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=ScanCollection
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c713 45 "%0ADC:%10!d! Handle was never opened" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=UnRegisterAdcPnPNotify
+{
+AdcInterface, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c711 44 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::711 :ADC:%10!d! Handle was never opened" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=UnRegisterAdcPnPNotify
+{
+AdcInterface, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c706 43 "%0ADC:%10!d! Handle closed" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=UnRegisterAdcPnPNotify
+{
+AdcInterface, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c705 42 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :ADC:%10!d! Handle closed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=UnRegisterAdcPnPNotify
+{
+AdcInterface, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c695 41 "%0IoUnregisterPlugPlayNotificationEx failed for ADC:%10!d! status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=UnRegisterAdcPnPNotify
+{
+AdcInterface, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c692 40 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::692 :IoUnregisterPlugPlayNotificationEx failed for ADC:%10!d! status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=UnRegisterAdcPnPNotify
+{
+AdcInterface, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c659 39 "%0ADC interface %10!s!, channel %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=UnRegisterAdcPnPNotify
+{
+(adc_active == 1) ? 'active' : 'not initialized', ItemString -- 10
+aChannel, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c657 38 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :ADC interface %10!s!, channel %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=UnRegisterAdcPnPNotify
+{
+(adc_active == 1) ? 'active' : 'not initialized', ItemString -- 10
+aChannel, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2473 150 "%0VadcSetThresholds Invalid threshold type: %10!d! Channel %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcSetThresholds
+{
+aThreshType, ItemLong -- 10
+aChannel, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2470 149 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::2470 :VadcSetThresholds Invalid threshold type: %10!d! Channel %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcSetThresholds
+{
+aThreshType, ItemLong -- 10
+aChannel, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c2455 148 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Setting %10!d! Threshold" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcSetThresholds
+{
+aThreshType, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c920 65 "%0WdfCollectionAdd for channel:%10!d! failed with status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+DevExt->sensor, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c917 64 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::917 :WdfCollectionAdd for channel:%10!d! failed with status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+DevExt->sensor, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c902 63 "%0WdfCollectionCreate for channel:%10!d! failed with status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+DevExt->sensor, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c899 62 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::899 :WdfCollectionCreate for channel:%10!d! failed with status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+DevExt->sensor, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c885 61 "%0WdfIoQueueCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c883 60 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::883 :WdfIoQueueCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c866 59 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :ADC Channel %10!d! does NOT support Thermal Aggregation" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+aChannel, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c860 58 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :ADC Channel %10!d! supports Thermal Aggregation" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+aChannel, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c854 57 "%0 [Warn] PEP_Thermal_Adc.c::%!FUNC! :QueryACPIType status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c848 56 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Regular thermal zone %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+aAcpiField, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c840 55 "%0_CRT configuration for Inverted TZ not supported" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+}
+#typev PEP_Thermal_Adc_c838 54 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::838 :_CRT configuration for Inverted TZ not supported" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+}
+#typev PEP_Thermal_Adc_c833 53 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :This is inverse Temperature zone" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+}
+#typev PEP_Thermal_Adc_c829 52 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Field Value %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+aAcpiField, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c796 51 "%0WdfWaitLockCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c794 50 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::794 :WdfWaitLockCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c780 49 "%0WdfDeviceCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c778 48 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::778 :WdfDeviceCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c755 47 "%0ValidateAdcChannelNumber for channel:%10!d! failed with status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+aChannel, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c752 46 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::752 :ValidateAdcChannelNumber for channel:%10!d! failed with status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmChannelEvtDeviceAdd
+{
+aChannel, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1048 77 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :ActionFlags: WdfRequestStopActionPurge" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmEvtIoStop
+{
+}
+#typev PEP_Thermal_Adc_c1041 76 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :ActionFlags: WdfRequestStopActionSuspend" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmEvtIoStop
+{
+}
+#typev PEP_Thermal_Adc_c1033 75 "%0Invalid, Request 0x%10!p! not matching with outstanding request 0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmEvtIoStop
+{
+Request, ItemPtr -- 10
+devExt->outstandingRequest, ItemPtr -- 11
+}
+#typev PEP_Thermal_Adc_c1030 74 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::1030 :Invalid, Request 0x%10!p! not matching with outstanding request 0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmEvtIoStop
+{
+Request, ItemPtr -- 10
+devExt->outstandingRequest, ItemPtr -- 11
+}
+#typev PEP_Thermal_Adc_c1020 73 "%0Request 0x%10!p! Completed, VadcChannel %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=VadcTmEvtIoStop
+{
+Request, ItemPtr -- 10
+devExt->sensor, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1018 72 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Request 0x%10!p! Completed as CANCELLED, VadcChannel %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmEvtIoStop
+{
+Request, ItemPtr -- 10
+devExt->sensor, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1011 71 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :ActionFlags: WdfRequestStopRequestCancelable" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmEvtIoStop
+{
+}
+#typev PEP_Thermal_Adc_c1005 70 "%0Request 0x%10!p! Completed, VadcChannel %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_GENERIC FUNC=VadcTmEvtIoStop
+{
+Request, ItemPtr -- 10
+devExt->sensor, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c1002 69 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Request 0x%10!p! Completed as CANCELLED, VadcChannel %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmEvtIoStop
+{
+Request, ItemPtr -- 10
+devExt->sensor, ItemLong -- 11
+}
+#typev PEP_Thermal_Adc_c987 68 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :VADC_TM%10!d! request cancelled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmEvtIoStop
+{
+devExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c981 67 "%0 [Err ] PEP_Thermal_Adc.c::%!FUNC!::981 :Failed to stop Timer for HID%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmEvtIoStop
+{
+devExt->sensor, ItemLong -- 10
+}
+#typev PEP_Thermal_Adc_c962 66 "%0 [Info] PEP_Thermal_Adc.c::%!FUNC! :Entering VadcTmEvtIoStop, VadcChannel %10!d!, Request 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_ADC FUNC=VadcTmEvtIoStop
+{
+aSensor, ItemLong -- 10
+Request, ItemPtr -- 11
+}

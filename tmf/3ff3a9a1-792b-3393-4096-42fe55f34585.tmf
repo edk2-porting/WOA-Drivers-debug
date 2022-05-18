@@ -1,0 +1,127 @@
+// PDB:  qcccidbridge7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:30:818 (UTC) [tracepdb]
+3ff3a9a1-792b-3393-4096-42fe55f34585 CCID // SRC=CcidBrgQmiUimClient.c MJ= MN=
+#typev CcidBrgCmdHandler_c292 35 "%0%!FUNC!::I:APDU: Len = %10!d!, APDU: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgHandleXfrBlockCmd
+{
+RspBuf.apdu_len, ItemLong -- 10
+CCID_LOG_XSTR(RspBuf.apdu. RspBuf.apdu_len), ItemHEXDump -- 11
+}
+#typev CcidBrgCmdHandler_c292 34 "%0%!FUNC!::E:Invalid data buffer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgHandleXfrBlockCmd
+{
+}
+// PDB:  qcccidbridge7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:30:818 (UTC) [tracepdb]
+#typev CcidBrgQmiUimClient_c83 11 "%0%!FUNC!::I:Slot status cache updated for slot %10!d!. Current slot state: %11!s!, card state: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgCacheSlotStatus
+{
+i, ItemLong -- 10
+pDeviceContext->QmiIfCtxt.SlotStatus[i].SlotState, ItemEnum(uim_physical_slot_state_enum_v01) -- 11
+pDeviceContext->QmiIfCtxt.SlotStatus[i].CardState, ItemEnum(uim_physical_card_state_enum_v01) -- 12
+}
+#typev CcidBrgQmiUimClient_c410 33 "%0%!FUNC!::I:ATR: Len = %10!d!, ATR: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimGetAtr
+{
+RspBuf.ATR_value_len, ItemLong -- 10
+CCID_LOG_XSTR(RspBuf.ATR_value. RspBuf.ATR_value_len), ItemHEXDump -- 11
+}
+#typev CcidBrgQmiUimClient_c398 32 "%0%!FUNC!::E:Invalid data buffer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimGetAtr
+{
+}
+#typev CcidBrgQmiUimClient_c223 19 "%0%!FUNC!::E:Failed to get physical slot status. QmiErr: %10!d!, Error: 0x%11!04x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimGetPhysicalSlotStatus
+{
+QmiErr, ItemLong -- 10
+RspBuf.resp.error, ItemLong -- 11
+}
+#typev CcidBrgQmiUimClient_c217 18 "%0%!FUNC!::I:Received QMI get slot status response. Caching slot/card states." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimGetPhysicalSlotStatus
+{
+}
+#typev CcidBrgQmiUimClient_c201 17 "%0%!FUNC!::E:Invalid device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimGetPhysicalSlotStatus
+{
+}
+#typev CcidBrgQmiUimClient_c135 10 "%0%!FUNC!::I:Received SAP connect indication for slot: %10!d!, SAP state: %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimIndicationCb
+{
+pSapConnectInd->sap_connection_event.slot, ItemLong -- 10
+pSapConnectInd->sap_connection_event.sap_state, ItemLong -- 11
+}
+#typev CcidBrgQmiUimClient_c138 13 "%0%!FUNC!::E:Unexpected UIM indication." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimIndicationCb
+{
+}
+// PDB:  qcccidbridge7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:30:818 (UTC) [tracepdb]
+#typev CcidBrgQmiUimClient_c118 12 "%0%!FUNC!::I:Received QMI indication: 0x%10!04x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimIndicationCb
+{
+MsgId, ItemLong -- 10
+}
+#typev CcidBrgQmiUimClient_c304 26 "%0%!FUNC!::E:SAP connect failed QmiErr: %10!d!, Error: 0x%11!04x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimProcessSapConnectRequest
+{
+QmiErr, ItemLong -- 10
+RespBuf.resp.error, ItemLong -- 11
+}
+#typev CcidBrgQmiUimClient_c293 25 "%0%!FUNC!::I:SAP connect failed with status: %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimProcessSapConnectRequest
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev CcidBrgQmiUimClient_c289 24 "%0%!FUNC!::I:SAP state transition successful. Current SAP state: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimProcessSapConnectRequest
+{
+ReqBuf.sap_connect.connect, ItemLong -- 10
+}
+#typev CcidBrgQmiUimClient_c284 23 "%0%!FUNC!::I:SAP connect in progress. Wait for SAP connect to complete. Timeout: %10!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimProcessSapConnectRequest
+{
+Timeout.QuadPart, ItemLongLong -- 10
+}
+#typev CcidBrgQmiUimClient_c275 22 "%0%!FUNC!::I:SAP state transition successful. Current SAP state: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimProcessSapConnectRequest
+{
+RespBuf.sap_state, ItemLong -- 10
+}
+#typev CcidBrgQmiUimClient_c250 21 "%0%!FUNC!::E:Invalid device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimProcessSapConnectRequest
+{
+}
+#typev CcidBrgQmiUimClient_c365 31 "%0%!FUNC!::E:SAP connect Command %10!d! Failed. QmiErr: %11!d!, Error: 0x%12!04x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimProcessSapRequest
+{
+ReqBuf.sap_request.sap_request, ItemLong -- 10
+QmiErr, ItemLong -- 11
+pRspBuf->resp.error, ItemLong -- 12
+}
+#typev CcidBrgQmiUimClient_c360 30 "%0%!FUNC!::I:SAP Command %10!d! for slot %11!d! Succcessful." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimProcessSapRequest
+{
+ReqBuf.sap_request.sap_request, ItemLong -- 10
+ReqBuf.sap_request.slot, ItemLong -- 11
+}
+#typev CcidBrgQmiUimClient_c344 29 "%0%!FUNC!::I:Sending APDU for Slot:%10!u!. APDU Length: %11!d!, APDU: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimProcessSapRequest
+{
+ReqBuf.sap_request.slot, ItemLong -- 10
+ReqBuf.apdu_len, ItemLong -- 11
+CCID_LOG_XSTR(ReqBuf.apdu. ReqBuf.apdu_len), ItemHEXDump -- 12
+}
+#typev CcidBrgQmiUimClient_c331 28 "%0%!FUNC!::E:Invalid device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimProcessSapRequest
+{
+}
+#typev CcidBrgQmiUimClient_c325 27 "%0%!FUNC!::E:Unsupported slot" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimProcessSapRequest
+{
+}
+#typev CcidBrgQmiUimClient_c174 14 "%0%!FUNC!::E:Failed to register for UIM indications. QmiErr: %10!d!, result: %11!d!, Error: 0x%12!04x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimRegisterIndication
+{
+QmiErr, ItemLong -- 10
+RespBuf.resp.error, ItemLong -- 11
+RespBuf.resp.result, ItemLong -- 12
+}
+#typev CcidBrgQmiUimClient_c182 16 "%0%!FUNC!::I:UIM indication registered for event mask: 0x%10!08x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimRegisterIndication
+{
+RespBuf.event_mask, ItemLong -- 10
+}
+#typev CcidBrgQmiUimClient_c179 15 "%0%!FUNC!::I:UIM indication registration successful." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgQmiUimRegisterIndication
+{
+}
+#enumv uim_physical_slot_state_enum_v01
+{
+UIM_PHYSICAL_SLOT_STATE_ENUM_MIN_ENUM_VAL_V01,0x80000001
+UIM_PHYSICAL_SLOT_STATE_INACTIVE_V01,0x0
+UIM_PHYSICAL_SLOT_STATE_ACTIVE_V01,0x1
+UIM_PHYSICAL_SLOT_STATE_ENUM_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}
+#enumv uim_physical_card_state_enum_v01
+{
+UIM_PHYSICAL_CARD_STATE_ENUM_MIN_ENUM_VAL_V01,0x80000001
+UIM_PHYSICAL_CARD_STATE_UNKNOWN_V01,0x0
+UIM_PHYSICAL_CARD_STATE_ABSENT_V01,0x1
+UIM_PHYSICAL_CARD_STATE_PRESENT_V01,0x2
+UIM_PHYSICAL_CARD_STATE_ENUM_MAX_ENUM_VAL_V01,0x7FFFFFFF
+}

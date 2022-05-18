@@ -1,0 +1,32 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+4217dbaf-08ff-38c1-a9f7-787e63789a59 src // SRC=dsBacklight.c MJ= MN=
+#typev dsBacklight_c832 12 "%0BacklightFn: Changing brightness level from %10!d! millinits to %11!d! millinits" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceBrightness FUNC=BacklightFn
+{
+pBacklightCtl->sInitialBacklight.uMillinits, ItemLong -- 10
+uBrightnessLevel, ItemLong -- 11
+}
+#typev dsBacklight_c1625 13 "%0ABA Brightness: Ratio = %10!4d!,  Value = %11!d! mNits -> %12!d! mNits (%13!d!%%)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceBrightness FUNC=BacklightProcessABA
+{
+uBacklightRatio, ItemLong -- 10
+uPrevABA, ItemLong -- 11
+pBacklightCtl->sAbaBacklight.uMillinits, ItemLong -- 12
+pBacklightCtl->sAbaBacklight.uPercent, ItemLong -- 13
+}
+#typev dsBacklight_c2742 14 "%0SBC Brightness: Ratio = %10!4d!,  Value = %11!d! mNits -> %12!d! mNits (%13!d!%%)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceBrightness FUNC=BacklightProcessSBC
+{
+uBacklightRatio, ItemLong -- 10
+uPrevAba, ItemLong -- 11
+pBacklightCtl->sAbaBacklight.uMillinits, ItemLong -- 12
+pBacklightCtl->sAbaBacklight.uPercent, ItemLong -- 13
+}
+#typev dsBacklight_c245 10 "%0dsBacklight_Init(): Min Luminance = %10!d! mNits, Max Luminance = %11!d! mNits" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceBrightness FUNC=dsBacklight_Init
+{
+pBrightnessConfig->uMinLuminance, ItemLong -- 10
+pBrightnessConfig->uMaxLuminance, ItemLong -- 11
+}
+#typev dsBacklight_c587 11 "%0Brightness: OEM backlight change from level %10!d! to new level %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceBrightness FUNC=dsBacklight_OEMSetBacklight
+{
+uBacklightLevel, ItemLong -- 10
+pBacklightCtl->sOemBacklight.uPercent, ItemLong -- 11
+}

@@ -1,0 +1,101 @@
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+73e0ee21-b3e0-394f-7d15-078643da7a6e vcxproj // SRC=packetizer.c MJ= MN=
+#typev packetizer_c284 27 "%0%10!s!: Already initialized" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_init
+{
+__func__, ItemString -- 10
+}
+#typev packetizer_c308 30 "%0%10!s!: Done, ret = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=pktzr_init
+{
+__func__, ItemString -- 10
+ret, ItemLong -- 11
+}
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+#typev packetizer_c291 28 "%0%10!s!: Initialization failed, ret = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_init
+{
+__func__, ItemString -- 10
+ret, ItemLong -- 11
+}
+#typev packetizer_c279 26 "%0%10!s!: Failed to allocate memory for ppriv" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_init
+{
+__func__, ItemString -- 10
+}
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+#typev packetizer_c104 17 "%0%10!s!: received size %11!d! is greater than requested buf size %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_resp_cb
+{
+__func__, ItemString -- 10
+hdr->payload_size, ItemLong -- 11
+rsp->buf_size, ItemLong -- 12
+}
+#typev packetizer_c94 16 "%0%10!s!: Invalid response buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_resp_cb
+{
+__func__, ItemString -- 10
+}
+#typev packetizer_c87 15 "%0%10!s!: read callback function is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_resp_cb
+{
+__func__, ItemString -- 10
+}
+#typev packetizer_c80 14 "%0%10!s!: token %11!d! matched" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_resp_cb
+{
+__func__, ItemString -- 10
+token, ItemLong -- 11
+}
+#typev packetizer_c77 13 "%0%10!s!: wnode %11!p!, wnode->token = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=pktzr_resp_cb
+{
+__func__, ItemString -- 10
+wnode, ItemPtr -- 11
+wnode->token, ItemLong -- 12
+}
+#typev packetizer_c70 12 "%0%10!s!: event callback function is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_resp_cb
+{
+__func__, ItemString -- 10
+}
+#typev packetizer_c63 11 "%0%10!s!: opcode = 0x%11!x! size = %12!d! token = %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_resp_cb
+{
+__func__, ItemString -- 10
+hdr->opcode, ItemLong -- 11
+hdr->payload_size, ItemLong -- 12
+hdr->token, ItemLong -- 13
+}
+#typev packetizer_c55 10 "%0%10!s!: payload is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_resp_cb
+{
+__func__, ItemString -- 10
+}
+#typev packetizer_c218 25 "%0%10!s!: Done, ret = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=pktzr_send_cmd
+{
+__func__, ItemString -- 10
+ret, ItemLong -- 11
+}
+#typev packetizer_c132 18 "%0%10!s!: Input parameters are NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_send_cmd
+{
+__func__, ItemString -- 10
+}
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+#typev packetizer_c187 24 "%0%10!s!: Failed to send pkt" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_send_cmd
+{
+__func__, ItemString -- 10
+}
+#typev packetizer_c183 23 "%0%10!s!: wnode %11!p! with token %12!d! added to wait queue" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=pktzr_send_cmd
+{
+__func__, ItemString -- 10
+wnode, ItemPtr -- 11
+ppriv->token, ItemLong -- 12
+}
+#typev packetizer_c169 22 "%0%10!s!: Failed to allocate memory for wnode" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_send_cmd
+{
+__func__, ItemString -- 10
+}
+#typev packetizer_c155 21 "%0%10!s!: Memory allocation failed for pkt" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_send_cmd
+{
+__func__, ItemString -- 10
+}
+#typev packetizer_c145 19 "%0%10!s!: opcode = 0x%11!x!, size = %12!d!, token = %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=pktzr_send_cmd
+{
+__func__, ItemString -- 10
+cmd, ItemLong -- 11
+size, ItemLong -- 12
+ppriv->token, ItemLong -- 13
+}

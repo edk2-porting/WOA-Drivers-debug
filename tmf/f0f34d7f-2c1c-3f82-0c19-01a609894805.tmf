@@ -1,0 +1,38 @@
+// PDB:  qcmbbnetadapterfilter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+f0f34d7f-2c1c-3f82-0c19-01a609894805 NetAdapterFilter // SRC=QnetFilterDatapathIpaIface.c MJ= MN=
+#typev QnetFilterDatapathIface_c47 13 "%0%!FUNC!::E:Failed to deinit datapath with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFltrDatapathIfaceDeinit
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+// PDB:  qcmbbnetadapterfilter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QnetFilterDatapathIface_c100 14 "%0%!FUNC!::E:Wait for IPA ready state change with timeout %10!d! completed with status %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFltrDatapathIfaceWaitForDatapathReady
+{
+u32TimeoutInSec, ItemLong -- 10
+ntStatus, ItemNTSTATUS -- 11
+}
+// PDB:  qcmbbnetadapterfilter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QnetFilterDatapathIpaIface_c34 10 "%0%!FUNC!::E:DP IPA:: Failed to get EndPointId for Endpoint %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFltrDP_IpaGetEndpointId
+{
+eQmapHalClientType, ItemEnum(QMAP_HAL_CHANNEL_TYPE) -- 10
+}
+#typev QnetFilterDatapathIpaIface_c71 12 "%0%!FUNC!::E:DP IPA:: Failed to create lock with status %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFltrDP_IpaInit
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev QnetFilterDatapathIpaIface_c63 11 "%0%!FUNC!::E:DP:: Failed to query IPA interface with status %10!s! for wdfDevice 0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFltrDP_IpaInit
+{
+ntStatus, ItemNTSTATUS -- 10
+wdfDevice, ItemPtr -- 11
+}
+#enumv QMAP_HAL_CHANNEL_TYPE
+{
+QMAPHAL_DATA_CH_INVALID,0xFF
+QMAPHAL_DATA_TX_0,0x0
+QMAPHAL_DATA_RX_0,0x1
+QMAPHAL_DATA_TX_CTRL_0,0x2
+QMAPHAL_DATA_RX_CTRL_0,0x3
+QMAPHAL_DATA_CH_MAX,0x4
+}

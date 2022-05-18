@@ -1,0 +1,814 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+a018bea3-f95d-3bf5-3195-7f5ad85e4476 PEP // SRC=PEP_Thermal_PmicTempAlarm.c MJ= MN=
+#typev PEP_Thermal_PmicTempAlarm_c715 54 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interrupt Enabled for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c702 53 "%0CompletePendingRequestIfThresholdCrossed failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c700 52 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::700 :CompletePendingRequestIfThresholdCrossed failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c692 51 "%0UpdateTemperatureFromTempAlarmStatus failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c690 50 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::690 :UpdateTemperatureFromTempAlarmStatus failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c681 49 "%0UpdatePmicTempAlarmTzThresholds failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c678 48 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::678 :UpdatePmicTempAlarmTzThresholds failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+status, ItemNTSTATUS -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c664 47 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm vote for removing CPU Constraints" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c650 46 "%0IOCTL_PM_TEMP_ALARM_GET_CONFIG for PmicId [%10!d!] returned: FirstStageThreshold= %11!d!, SecondStageThreshold= %12!d!, ThirdStageThreshold= %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+GetConfigOutputBuffer.channel_id, ItemLong -- 10
+GetConfigOutputBuffer.firstStageThreshold, ItemLong -- 11
+GetConfigOutputBuffer.secondStageThreshold, ItemLong -- 12
+GetConfigOutputBuffer.thirdStageThreshold, ItemLong -- 13
+}
+#typev PEP_Thermal_PmicTempAlarm_c645 45 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :IOCTL_PM_TEMP_ALARM_GET_CONFIG for PmicId [%10!d!] returned: FirstStageThreshold= %11!d!, SecondStageThreshold= %12!d!, ThirdStageThreshold= %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+GetConfigOutputBuffer.channel_id, ItemLong -- 10
+GetConfigOutputBuffer.firstStageThreshold, ItemLong -- 11
+GetConfigOutputBuffer.secondStageThreshold, ItemLong -- 12
+GetConfigOutputBuffer.thirdStageThreshold, ItemLong -- 13
+}
+#typev PEP_Thermal_PmicTempAlarm_c642 44 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::642 :Pmic Interface is supported and ready for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+GetConfigOutputBuffer.channel_id, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c632 43 "%0IOCTL_PM_TEMP_ALARM_GET_CONFIG failed %10!s!, PmicId [%11!d!], bytesReturned [%12!u!]" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+status, ItemNTSTATUS -- 10
+deviceContext->ChannelId, ItemLong -- 11
+(unsigned long) bytesReturned, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c629 42 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::629 :IOCTL_PM_TEMP_ALARM_GET_CONFIG failed %10!s!, PmicId [%11!d!], bytesReturned [%12!u!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+status, ItemNTSTATUS -- 10
+deviceContext->ChannelId, ItemLong -- 11
+(unsigned long) bytesReturned, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c613 41 "%0Can't get Parent Device from DMFMODULE handle" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c611 40 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::611 :Can't get Parent Device from DMFMODULE handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c606 39 "%0PMIC Interface Opened!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c605 38 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Interface Opened!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePostOpenCallback
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c715 54 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interrupt Enabled for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c702 53 "%0CompletePendingRequestIfThresholdCrossed failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c700 52 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::700 :CompletePendingRequestIfThresholdCrossed failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c692 51 "%0UpdateTemperatureFromTempAlarmStatus failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c690 50 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::690 :UpdateTemperatureFromTempAlarmStatus failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c681 49 "%0UpdatePmicTempAlarmTzThresholds failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c678 48 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::678 :UpdatePmicTempAlarmTzThresholds failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+status, ItemNTSTATUS -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c664 47 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm vote for removing CPU Constraints" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c650 46 "%0IOCTL_PM_TEMP_ALARM_GET_CONFIG for PmicId [%10!d!] returned: FirstStageThreshold= %11!d!, SecondStageThreshold= %12!d!, ThirdStageThreshold= %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+GetConfigOutputBuffer.channel_id, ItemLong -- 10
+GetConfigOutputBuffer.firstStageThreshold, ItemLong -- 11
+GetConfigOutputBuffer.secondStageThreshold, ItemLong -- 12
+GetConfigOutputBuffer.thirdStageThreshold, ItemLong -- 13
+}
+#typev PEP_Thermal_PmicTempAlarm_c645 45 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :IOCTL_PM_TEMP_ALARM_GET_CONFIG for PmicId [%10!d!] returned: FirstStageThreshold= %11!d!, SecondStageThreshold= %12!d!, ThirdStageThreshold= %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+GetConfigOutputBuffer.channel_id, ItemLong -- 10
+GetConfigOutputBuffer.firstStageThreshold, ItemLong -- 11
+GetConfigOutputBuffer.secondStageThreshold, ItemLong -- 12
+GetConfigOutputBuffer.thirdStageThreshold, ItemLong -- 13
+}
+#typev PEP_Thermal_PmicTempAlarm_c642 44 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::642 :Pmic Interface is supported and ready for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+GetConfigOutputBuffer.channel_id, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c632 43 "%0IOCTL_PM_TEMP_ALARM_GET_CONFIG failed %10!s!, PmicId [%11!d!], bytesReturned [%12!u!]" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+status, ItemNTSTATUS -- 10
+deviceContext->ChannelId, ItemLong -- 11
+(unsigned long) bytesReturned, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c629 42 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::629 :IOCTL_PM_TEMP_ALARM_GET_CONFIG failed %10!s!, PmicId [%11!d!], bytesReturned [%12!u!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+status, ItemNTSTATUS -- 10
+deviceContext->ChannelId, ItemLong -- 11
+(unsigned long) bytesReturned, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c613 41 "%0Can't get Parent Device from DMFMODULE handle" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c611 40 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::611 :Can't get Parent Device from DMFMODULE handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c606 39 "%0PMIC Interface Opened!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c605 38 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Interface Opened!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePostOpenCallback'::`1'::fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c574 37 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interrupt Disabled for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePreCloseCallback
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c567 36 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm de-vote for removing CPU Constraints" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePreCloseCallback
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c557 35 "%0Can't get Parent Device from DMFMODULE handle" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePreCloseCallback
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c555 34 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::555 :Can't get Parent Device from DMFMODULE handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePreCloseCallback
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c550 33 "%0PMIC Interface Closed!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePreCloseCallback
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c549 32 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Interface Closed!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicDmfModulePreCloseCallback
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c574 37 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interrupt Disabled for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePreCloseCallback'::`1'::fin$0
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c567 36 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm de-vote for removing CPU Constraints" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePreCloseCallback'::`1'::fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c557 35 "%0Can't get Parent Device from DMFMODULE handle" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePreCloseCallback'::`1'::fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c555 34 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::555 :Can't get Parent Device from DMFMODULE handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePreCloseCallback'::`1'::fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c550 33 "%0PMIC Interface Closed!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePreCloseCallback'::`1'::fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c549 32 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Interface Closed!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=`PmicDmfModulePreCloseCallback'::`1'::fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c262 14 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interrupt has been enabled for PmicId [%10!d!], PreviousState [%11!d!] " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmD0EntryPostInterruptsEnabled
+{
+deviceContext->ChannelId, ItemLong -- 10
+PreviousState, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c244 13 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interrupt about to be disabled for PmicId [%10!d!], TargetState [%11!d!] " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmD0ExitPreInterruptsDisabled
+{
+deviceContext->ChannelId, ItemLong -- 10
+TargetState, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c197 10 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Enqueueing Temp Alarm Interrupt WorkItem for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmDpc
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1061 84 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm vote for removing CPU Constraints" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Entry
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1057 83 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interface Ready!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Entry
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1048 82 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1048 :Unexpected PreviousState [%10!d!] for PmicId [%11!d!]!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Entry
+{
+PreviousState, ItemLong -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1040 81 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1040 :TestTimer was started already for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Entry
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1033 80 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Starting TestTimer [%10!d!] times for [%11!d!] secs to end @ abs time [%12!I64d!] for PmicId [%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Entry
+{
+deviceContext->TestNumTimerExpiriesSinceBoot, ItemLong -- 10
+TestTimeoutInSecs, ItemLong -- 11
+deviceContext->TestTimerExpiryTime.QuadPart, ItemLongLong -- 12
+deviceContext->ChannelId, ItemLong -- 13
+}
+#typev PEP_Thermal_PmicTempAlarm_c1024 79 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1024 :TestTimer creation failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Entry
+{
+ntStatus, ItemNTSTATUS -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1002 78 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Regular boot for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Entry
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c997 77 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Resuming from hibernate for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Entry
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c963 76 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Exit for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Exit
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c960 75 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :ADC de-vote for removing CPU Constraints" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Exit
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c953 74 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::953 :Unexpected TargetState [%10!d!] for PmicId [%11!d!]!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Exit
+{
+TargetState, ItemLong -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c945 73 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Stopped TestTimer for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Exit
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c938 72 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Entered to shutdown for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Exit
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c933 71 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Entered to hibernate for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceD0Exit
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c229 12 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interrupt Disabled for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmInterruptDisable
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c213 11 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interrupt Enabled for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmInterruptEnable
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1344 108 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :ActionFlags: WdfRequestStopActionPurge for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmIoStop
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1337 107 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :ActionFlags: WdfRequestStopActionSuspend for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmIoStop
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1329 106 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1329 :Invalid Request 0x%10!p! not matching with outstanding request 0x%11!p! for PmicId [%12!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmIoStop
+{
+Request, ItemPtr -- 10
+deviceContext->PendingRequest, ItemPtr -- 11
+deviceContext->ChannelId, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c1320 105 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Request 0x%10!p! with RequestId %11!I64u! cancelled for PmicId [%12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmIoStop
+{
+Request, ItemPtr -- 10
+deviceContext->RequestId, ItemULongLong -- 11
+deviceContext->ChannelId, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c1306 104 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :ActionFlags: WdfRequestStopRequestCancelable" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmIoStop
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1302 103 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Entering for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmIoStop
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1135 87 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1135 :OSTM Cancelled unknown request for PmicId [%10!d!]!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=RequestCancelCallback
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1125 86 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :OSTM Cancelled Pending RequestId [%10!I64u!] for PmicId [%11!d!] with LowThreshold [%12!d!], HighThreshold [%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=RequestCancelCallback
+{
+deviceContext->RequestId, ItemULongLong -- 10
+deviceContext->ChannelId, ItemLong -- 11
+deviceContext->LowTemperature, ItemLong -- 12
+deviceContext->HighTemperature, ItemLong -- 13
+}
+#typev PEP_Thermal_PmicTempAlarm_c847 66 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::847 :TestTimer was started already for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=TestTimerExpiry
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c840 65 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Starting TestTimer [%10!d!] times for [%11!d!] secs to end @ abs time [%12!I64d!] for PmicId [%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=TestTimerExpiry
+{
+deviceContext->TestNumTimerExpiriesSinceBoot, ItemLong -- 10
+TestTimeoutInSecs, ItemLong -- 11
+deviceContext->TestTimerExpiryTime.QuadPart, ItemLongLong -- 12
+deviceContext->ChannelId, ItemLong -- 13
+}
+#typev PEP_Thermal_PmicTempAlarm_c830 64 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Temperature updated to [%10!d!] for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=TestTimerExpiry
+{
+deviceContext->TemperatureTenthsKelvin, ItemLong -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c825 63 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::825 :Invalid TestNumTimerExpiriesSinceBoot [%10!d!] for PmicId [%11!d!]!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=TestTimerExpiry
+{
+deviceContext->TestNumTimerExpiriesSinceBoot, ItemLong -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c805 62 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :TestTimer expired [%10!d!] times for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=TestTimerExpiry
+{
+deviceContext->TestNumTimerExpiriesSinceBoot, ItemLong -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c345 21 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :OSTM getting threshold crossed Temp [%10!d!] with RequestId [%11!I64u!] for PmicId [%12!d!] from Test Timer Expiry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=CompletePendingRequestIfThresholdCrossed
+{
+deviceContext->TemperatureTenthsKelvin, ItemLong -- 10
+deviceContext->RequestId, ItemULongLong -- 11
+deviceContext->ChannelId, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c340 20 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::340 :Request was already cancelled for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=CompletePendingRequestIfThresholdCrossed
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c345 21 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :OSTM getting threshold crossed Temp [%10!d!] with RequestId [%11!I64u!] for PmicId [%12!d!] from Test Timer Expiry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=CompletePendingRequestIfThresholdCrossed$fin$0
+{
+deviceContext->TemperatureTenthsKelvin, ItemLong -- 10
+deviceContext->RequestId, ItemULongLong -- 11
+deviceContext->ChannelId, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c340 20 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::340 :Request was already cancelled for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=CompletePendingRequestIfThresholdCrossed$fin$0
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c394 24 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Converted FsmState [%10!d!] to Temperature [%11!d!] for PmicId [%12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=FsmStateToTemperature
+{
+pm_temp_alarm_fsm_state, ItemLong -- 10
+deviceContext->TemperatureTenthsKelvin, ItemLong -- 11
+deviceContext->ChannelId, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c386 23 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::386 :Unexpected FsmState [%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=FsmStateToTemperature
+{
+pm_temp_alarm_fsm_state, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c380 22 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::380 :Unexpected FsmSate PTEMP_ALARM_STATE_S3" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=FsmStateToTemperature
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c394 24 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Converted FsmState [%10!d!] to Temperature [%11!d!] for PmicId [%12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=FsmStateToTemperature$fin$0
+{
+pm_temp_alarm_fsm_state, ItemLong -- 10
+deviceContext->TemperatureTenthsKelvin, ItemLong -- 11
+deviceContext->ChannelId, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c386 23 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::386 :Unexpected FsmState [%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=FsmStateToTemperature$fin$0
+{
+pm_temp_alarm_fsm_state, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c380 22 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::380 :Unexpected FsmSate PTEMP_ALARM_STATE_S3" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=FsmStateToTemperature$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1272 102 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Leaving with status=%10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+status, ItemNTSTATUS -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1263 101 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1263 :OSTM called with invalid Timeout [%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+TempReadRequest->Timeout, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1255 100 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :OSTM getting immediate Temp [%10!d!] with RequestId [%11!I64u!] for PmicId [%12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+deviceContext->TemperatureTenthsKelvin, ItemLong -- 10
+deviceContext->RequestId, ItemULongLong -- 11
+deviceContext->ChannelId, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c1240 99 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :OSTM setting Thresholds for PmicId [%10!d!] with RequestId [%11!I64u!]. LowTemperature [%12!d!], HighTemperature [%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+deviceContext->ChannelId, ItemLong -- 10
+deviceContext->RequestId, ItemULongLong -- 11
+TempReadRequest->LowTemperature, ItemLong -- 12
+TempReadRequest->HighTemperature, ItemLong -- 13
+}
+#typev PEP_Thermal_PmicTempAlarm_c1234 98 "%0PmicId %10!d! has outstandingRequest" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1232 97 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1232 :PmicId %10!d! has outstandingRequest" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1225 96 "%0Non-zero TestTimeoutInSecs. Not calling UpdateTemperatureFromTempAlarmStatus" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1223 95 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Non-zero TestTimeoutInSecs. Not calling UpdateTemperatureFromTempAlarmStatus" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1216 94 "%0UpdateTemperatureFromTempAlarmStatus failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1214 93 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1214 :UpdateTemperatureFromTempAlarmStatus failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1204 92 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Entering RequestId [%10!I64u!] for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+deviceContext->RequestId, ItemULongLong -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1197 91 "%0Invalid read buffer size" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandlePmicTempAlarmReadTempReq
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1196 90 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1196 :Invalid read buffer size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1191 89 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1191 :Invalid InputBufferLength" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1183 88 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1183 :WdfRequestRetrieveInputBuffer failed with  %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq
+{
+status, ItemNTSTATUS -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1272 102 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Leaving with status=%10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+status, ItemNTSTATUS -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1263 101 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1263 :OSTM called with invalid Timeout [%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+TempReadRequest->Timeout, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1255 100 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :OSTM getting immediate Temp [%10!d!] with RequestId [%11!I64u!] for PmicId [%12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+deviceContext->TemperatureTenthsKelvin, ItemLong -- 10
+deviceContext->RequestId, ItemULongLong -- 11
+deviceContext->ChannelId, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c1240 99 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :OSTM setting Thresholds for PmicId [%10!d!] with RequestId [%11!I64u!]. LowTemperature [%12!d!], HighTemperature [%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+deviceContext->ChannelId, ItemLong -- 10
+deviceContext->RequestId, ItemULongLong -- 11
+TempReadRequest->LowTemperature, ItemLong -- 12
+TempReadRequest->HighTemperature, ItemLong -- 13
+}
+#typev PEP_Thermal_PmicTempAlarm_c1234 98 "%0PmicId %10!d! has outstandingRequest" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1232 97 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1232 :PmicId %10!d! has outstandingRequest" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1225 96 "%0Non-zero TestTimeoutInSecs. Not calling UpdateTemperatureFromTempAlarmStatus" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1223 95 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Non-zero TestTimeoutInSecs. Not calling UpdateTemperatureFromTempAlarmStatus" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1216 94 "%0UpdateTemperatureFromTempAlarmStatus failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1214 93 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1214 :UpdateTemperatureFromTempAlarmStatus failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1204 92 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Entering RequestId [%10!I64u!] for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+deviceContext->RequestId, ItemULongLong -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1197 91 "%0Invalid read buffer size" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_ADC FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1196 90 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1196 :Invalid read buffer size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1191 89 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1191 :Invalid InputBufferLength" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1183 88 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1183 :WdfRequestRetrieveInputBuffer failed with  %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=HandlePmicTempAlarmReadTempReq$fin$0
+{
+status, ItemNTSTATUS -- 10
+deviceContext->ChannelId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c897 70 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Leaving" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmDmfDeviceModulesAdd
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c887 69 "%0PMIC Temp Alarm  DMF_DeviceInterfaceTarget Module Created" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmDmfDeviceModulesAdd
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c885 68 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm DMF_DeviceInterfaceTarget Module Created" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmDmfDeviceModulesAdd
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c865 67 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Entering" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmDmfDeviceModulesAdd
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c897 70 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Leaving" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmDmfDeviceModulesAdd$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c887 69 "%0PMIC Temp Alarm  DMF_DeviceInterfaceTarget Module Created" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmDmfDeviceModulesAdd$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c885 68 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm DMF_DeviceInterfaceTarget Module Created" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmDmfDeviceModulesAdd$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c865 67 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Entering" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmDmfDeviceModulesAdd$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c1641 122 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Leaving with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1629 121 "%0DMF_ModulesCreate Failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1627 120 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1627 :DMF_ModulesCreate Failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1612 119 "%0WdfInterruptCreate Failed with %10!s!  for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1610 118 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1610 :WdfInterruptCreate Failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1595 117 "%0PepWorkitemCreate failed with  %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1593 116 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1593 :PepWorkitemCreate failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1582 115 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1582 :WdfIoQueueCreate failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1550 114 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1550 :WdfWaitLockCreate failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1531 113 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1531 :WdfDeviceCreate failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1495 112 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1495 :DMF_DmfDeviceInitAllocate Failed for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd
+{
+PmicId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1491 111 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Entering for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd
+{
+PmicId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1641 122 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Leaving with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd$fin$0
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1629 121 "%0DMF_ModulesCreate Failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd$fin$0
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1627 120 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1627 :DMF_ModulesCreate Failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd$fin$0
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1612 119 "%0WdfInterruptCreate Failed with %10!s!  for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd$fin$0
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1610 118 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1610 :WdfInterruptCreate Failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd$fin$0
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1595 117 "%0PepWorkitemCreate failed with  %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd$fin$0
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1593 116 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1593 :PepWorkitemCreate failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd$fin$0
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1582 115 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1582 :WdfIoQueueCreate failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd$fin$0
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1550 114 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1550 :WdfWaitLockCreate failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd$fin$0
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1531 113 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1531 :WdfDeviceCreate failed with %10!s! for PmicId [%11!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd$fin$0
+{
+ntStatus, ItemNTSTATUS -- 10
+PmicId, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c1495 112 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::1495 :DMF_DmfDeviceInitAllocate Failed for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd$fin$0
+{
+PmicId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1491 111 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Entering for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceAdd$fin$0
+{
+PmicId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1107 85 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Entered for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmEvtDeviceSelfManagedIoInit
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c301 19 "%0CompletePendingRequestIfThresholdCrossed failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmInterruptWorker
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c299 18 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::299 :CompletePendingRequestIfThresholdCrossed failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmInterruptWorker
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c290 17 "%0UpdateTemperatureFromTempAlarmStatus failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmInterruptWorker
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c288 16 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::288 :UpdateTemperatureFromTempAlarmStatus failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmInterruptWorker
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c281 15 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interrupt Disabled for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmInterruptWorker
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c301 19 "%0CompletePendingRequestIfThresholdCrossed failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmInterruptWorker$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c299 18 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::299 :CompletePendingRequestIfThresholdCrossed failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmInterruptWorker$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c290 17 "%0UpdateTemperatureFromTempAlarmStatus failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmInterruptWorker$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c288 16 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::288 :UpdateTemperatureFromTempAlarmStatus failed with %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmInterruptWorker$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c281 15 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interrupt Disabled for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmInterruptWorker$fin$0
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c1386 109 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Got IoctlCode %10!d! Request 0x%11!p! for PmicId [%12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmIoDeviceControl
+{
+IoControlCode, ItemLong -- 10
+Request, ItemPtr -- 11
+deviceContext->ChannelId, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c1452 110 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Got Internal IoctlCode %10!d! Request 0x%11!p! for PmicId [%12!d!] and sending to ACPI driver" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=PmicTempAlarmIoInternalDeviceControl
+{
+IoControlCode, ItemLong -- 10
+Request, ItemPtr -- 11
+deviceContext->ChannelId, ItemLong -- 12
+}
+#typev PEP_Thermal_PmicTempAlarm_c530 31 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Leaving with %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c517 30 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::517 :OutputBuffer Data Invalid, %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams
+{
+retValue, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c510 29 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::510 :IOCTL_ACPI_EVAL_METHOD failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c451 28 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::451 :PEP_Malloc_WithTag failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c432 27 "%0Failed to get ACPI device handle" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c431 26 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::431 :Failed to get ACPI device handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c423 25 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Entered with Psv %10!d!, Crt %11!d!, Tc2 %12!d! for PmicId [%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams
+{
+Psv, ItemLong -- 10
+Crt, ItemLong -- 11
+Tc2, ItemLong -- 12
+deviceContext->ChannelId, ItemLong -- 13
+}
+#typev PEP_Thermal_PmicTempAlarm_c530 31 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Leaving with %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c517 30 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::517 :OutputBuffer Data Invalid, %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams$fin$0
+{
+retValue, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c510 29 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::510 :IOCTL_ACPI_EVAL_METHOD failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c451 28 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::451 :PEP_Malloc_WithTag failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c432 27 "%0Failed to get ACPI device handle" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c431 26 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::431 :Failed to get ACPI device handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c423 25 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :Entered with Psv %10!d!, Crt %11!d!, Tc2 %12!d! for PmicId [%13!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdatePmicTempAlarmTzParams$fin$0
+{
+Psv, ItemLong -- 10
+Crt, ItemLong -- 11
+Tc2, ItemLong -- 12
+deviceContext->ChannelId, ItemLong -- 13
+}
+#typev PEP_Thermal_PmicTempAlarm_c784 61 "%0PmicInterface is NOT Ready" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c783 60 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::783 :PmicInterface is NOT Ready" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c775 59 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interrupt Enabled for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c761 58 "%0IOCTL_PM_TEMP_ALARM_GET_STATE for PmicId [%10!d!] returned FSM State [%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus
+{
+GetStateOutputBuffer.channel_id, ItemLong -- 10
+GetStateOutputBuffer.pm_temp_alarm_fsm_state, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c758 57 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :IOCTL_PM_TEMP_ALARM_GET_STATE for PmicId [%10!d!] returned FSM State [%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus
+{
+GetStateOutputBuffer.channel_id, ItemLong -- 10
+GetStateOutputBuffer.pm_temp_alarm_fsm_state, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c751 56 "%0IOCTL_PM_TEMP_ALARM_GET_STATE failed with status = %10!s! and bytesReturned [%11!u!]" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus
+{
+status, ItemNTSTATUS -- 10
+(unsigned long) bytesReturned, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c748 55 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::748 :IOCTL_PM_TEMP_ALARM_GET_STATE failed with status = %10!s! and bytesReturned [%11!u!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus
+{
+status, ItemNTSTATUS -- 10
+(unsigned long) bytesReturned, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c784 61 "%0PmicInterface is NOT Ready" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c783 60 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::783 :PmicInterface is NOT Ready" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus$fin$0
+{
+}
+#typev PEP_Thermal_PmicTempAlarm_c775 59 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :PMIC Temp Alarm Interrupt Enabled for PmicId [%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus$fin$0
+{
+deviceContext->ChannelId, ItemLong -- 10
+}
+#typev PEP_Thermal_PmicTempAlarm_c761 58 "%0IOCTL_PM_TEMP_ALARM_GET_STATE for PmicId [%10!d!] returned FSM State [%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus$fin$0
+{
+GetStateOutputBuffer.channel_id, ItemLong -- 10
+GetStateOutputBuffer.pm_temp_alarm_fsm_state, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c758 57 "%0 [Info] PEP_Thermal_PmicTempAlarm.c::%!FUNC! :IOCTL_PM_TEMP_ALARM_GET_STATE for PmicId [%10!d!] returned FSM State [%11!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus$fin$0
+{
+GetStateOutputBuffer.channel_id, ItemLong -- 10
+GetStateOutputBuffer.pm_temp_alarm_fsm_state, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c751 56 "%0IOCTL_PM_TEMP_ALARM_GET_STATE failed with status = %10!s! and bytesReturned [%11!u!]" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmIfrHandle FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus$fin$0
+{
+status, ItemNTSTATUS -- 10
+(unsigned long) bytesReturned, ItemLong -- 11
+}
+#typev PEP_Thermal_PmicTempAlarm_c748 55 "%0 [Err ] PEP_Thermal_PmicTempAlarm.c::%!FUNC!::748 :IOCTL_PM_TEMP_ALARM_GET_STATE failed with status = %10!s! and bytesReturned [%11!u!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_TMPALRM FUNC=UpdateTemperatureFromTempAlarmStatus$fin$0
+{
+status, ItemNTSTATUS -- 10
+(unsigned long) bytesReturned, ItemLong -- 11
+}

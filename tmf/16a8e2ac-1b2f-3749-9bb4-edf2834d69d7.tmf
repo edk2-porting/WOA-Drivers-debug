@@ -1,0 +1,173 @@
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+16a8e2ac-1b2f-3749-9bb4-edf2834d69d7 10.7 // SRC=RevDataPort.c MJ= MN=
+#typev RevDataPort_c219 13 "%0<%!FUNC!>:: ERROR NdisAllocateNetBufferListPool failed. RevDataGlobalContext.hNdisPool = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_GlobalInit
+{
+}
+#typev RevDataPort_c200 12 "%0<%!FUNC!>:: Memory allocation failed for Descriptor %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_GlobalInit
+{
+i, ItemLong -- 10
+}
+#typev RevDataPort_c859 56 "%0<%!FUNC!>:: Failed = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_Init
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevDataPort_c926 60 "%0<%!FUNC!>:: PortIndex = %10!d!, MuxID = %11!d!.  %12!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevDataPort_Init
+{
+pRevDataContext->PortIndex, ItemLong -- 10
+pRevDataContext->MuxID, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevDataPort_c920 59 "%0<%!FUNC!>:: PortIndex = %10!d!, MuxID = %11!d!.  %12!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevDataPort_Init
+{
+pRevDataContext->PortIndex, ItemLong -- 10
+pRevDataContext->MuxID, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevDataPort_c897 58 "%0<%!FUNC!>:: InterConnectType %10!d! and *pfnSendDataToModemCB %11!p!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_Init
+{
+InterConnectType, ItemLong -- 10
+(PVOID)pfnSendDataToModemCB, ItemPtr -- 11
+}
+#typev RevDataPort_c871 57 "%0<%!FUNC!>:: *pfnRecvFromModemCompleteCB = RevDataPort_ReceiveDataFromModemCompleteCB" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_Init
+{
+}
+#typev RevDataPort_c253 16 "%0<%!FUNC!>:: received DeviceInterfaceRemove PNPnotification" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_ReadyCbRoutine
+{
+}
+#typev RevDataPort_c249 15 "%0<%!FUNC!>:: received DeviceQUeryRemove PNPnotification" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_ReadyCbRoutine
+{
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevDataPort_c237 14 "%0<%!FUNC!>:: Context = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_ReadyCbRoutine
+{
+}
+#typev RevDataPort_c792 53 "%0: SSR in progress. Exiting RevDataPort_ReceiveDataFromModem processing." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModem
+{
+}
+#typev RevDataPort_c786 52 "%0<%!FUNC!:%10!s!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModem
+{
+KeGetCurrentIrql(), ItemListByte(Low,APC,DPC) -- 10
+}
+#typev RevDataPort_c676 44 "%0<%!FUNC!>:: STATUS_SUCCESS" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModemCompleteCB
+{
+}
+#typev RevDataPort_c658 43 "%0<%!FUNC!>:: Calling FwpsFreeNetBufferList. Port %10!d!/ MuxID %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModemCompleteCB
+{
+pRevDataContext->PortIndex, ItemLong -- 10
+pRevDataContext->MuxID, ItemLong -- 11
+}
+#typev RevDataPort_c653 42 "%0<%!FUNC!>:: Calling FwpsFreeCloneNetBufferList. Port %10!d!/ MuxID %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModemCompleteCB
+{
+pRevDataContext->PortIndex, ItemLong -- 10
+pRevDataContext->MuxID, ItemLong -- 11
+}
+#typev RevDataPort_c647 41 "%0<%!FUNC!>:: pMatchingNBLEntry = NULL." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModemCompleteCB
+{
+}
+#typev RevDataPort_c701 45 "%0<%!FUNC!>:: Invalid pRevDataContext/pNetBufferList = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModem_Async
+{
+}
+#typev RevDataPort_c769 51 "%0<%!FUNC!>:: Invalid Callback function." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModem_Async
+{
+}
+#typev RevDataPort_c725 48 "%0<%!FUNC!>:: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModem_Async
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevDataPort_c733 49 "%0<%!FUNC!>:: STATUS_INSUFFICIENT_RESOURCES" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModem_Async
+{
+}
+#typev RevDataPort_c747 50 "%0<%!FUNC!>:: NBL allocation failed. STATUS_INSUFFICIENT_RESOURCES" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModem_Async
+{
+}
+#typev RevDataPort_c720 47 "%0<%!FUNC!>:: currentNB = 0x%10!p!, nextNB = 0x%11!p!, currentNB Length %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModem_Async
+{
+pCurrentNB, ItemPtr -- 10
+pNextNB, ItemPtr -- 11
+NET_BUFFER_DATA_LENGTH(pCurrentNB), ItemLong -- 12
+}
+#typev RevDataPort_c715 46 "%0<%!FUNC!>:: currentNBL = 0x%10!p! nextNBL = 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDataPort_ReceiveDataFromModem_Async
+{
+pCurrentNBL, ItemPtr -- 10
+pNextNBL, ItemPtr -- 11
+}
+#typev RevDataPort_c371 24 "%0<%!FUNC!>:: Calling FwpsFreeNetBufferList. Port %10!d!/ MuxID %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDataPort_SendDataToModemCompleteCB
+{
+pRevDataContext->PortIndex, ItemLong -- 10
+pRevDataContext->MuxID, ItemLong -- 11
+}
+#typev RevDataPort_c366 23 "%0<%!FUNC!>:: Calling FwpsFreeCloneNetBufferList. Port %10!d!/ MuxID %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDataPort_SendDataToModemCompleteCB
+{
+pRevDataContext->PortIndex, ItemLong -- 10
+pRevDataContext->MuxID, ItemLong -- 11
+}
+#typev RevDataPort_c360 22 "%0<%!FUNC!>:: pMatchingNBLEntry = NULL." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevDataPort_SendDataToModemCompleteCB
+{
+}
+#typev RevDataPort_c566 37 "%0<%!FUNC!>:: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_SendDataToModemQMAP
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevDataPort_c604 39 "%0<%!FUNC!>:: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDataPort_SendDataToModemQMAP
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevDataPort_c609 40 "%0<%!FUNC!>:: ERROR: CLEANUP: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDataPort_SendDataToModemQMAP
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevDataPort_c574 38 "%0<%!FUNC!>:: ERROR: Ran out of data descriptors." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=RVRM_WPP FUNC=RevDataPort_SendDataToModemQMAP
+{
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmnet_c2505 11 "%0<%!FUNC!>:: SendToModemFreeList is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_DeInit
+{
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmnet_c2467 55 "%0<%!FUNC!>:: Exit with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_DeInit
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmnet_c2282 54 "%0<%!FUNC!>:: STATUS_SUCCESS" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_InitContexts
+{
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmnet_c2325 21 "%0<%!FUNC!>:: %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmnet_PrepareHardwareContext
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevRmnet_c2325 20 "%0<%!FUNC!>:: DataIoPnpRegister returned %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_PrepareHardwareContext
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmnet_c2325 19 "%0<%!FUNC!>:: ERROR: DataIoPnpRegister failed with status = %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_PrepareHardwareContext
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmnet_c2325 18 "%0<%!FUNC!>:: Error pDriverObject = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_PrepareHardwareContext
+{
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmnet_c609 10 "%0<%!FUNC!>:: PortIndex = %10!u!, MuxID = %11!u!, hDataIO = %12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_SSRHandler
+{
+pRevDataContext->PortIndex, ItemLong -- 10
+pRevDataContext->MuxID, ItemLong -- 11
+(PVOID)pRevDataContext->hDataIO, ItemPtr -- 12
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmnet_c2359 17 "%0<%!FUNC!>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevrRmnet_ReleaseHardwareContext
+{
+}

@@ -1,0 +1,24 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+8b7f4d6e-ab34-3d06-1530-d809fa41d704 PEP // SRC=PEP_Feature.c MJ= MN=
+#typev PEP_Feature_c320 10 "%0MmMapIoSpaceEx for EUD register Failed! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=CheckEudRegisterStatus
+{
+}
+#typev PEP_Feature_c345 11 "%0EUD is ACTIVE :  Enabling EUD resource in PEP default " //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=ExecuteOnAllOptionalFeatureDefaultResources
+{
+}
+#typev PEP_Feature_c505 13 "%0 [Err ] PEP_Feature.c::%!FUNC!::505 :ExecuteSuppressibleResources failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=ExecuteSuppressibleResources
+{
+}
+#typev PEP_Feature_c463 12 "%0 [Err ] PEP_Feature.c::%!FUNC!::463 :ExecuteSuppressibleStateLockless failed for clock: %10!s!, action: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=ExecuteSuppressibleStateLockless
+{
+TClockNode->ClockName, ItemString -- 10
+TClockNode->Action, ItemLong -- 11
+}
+#typev PEP_Feature_c566 15 "%0 [Err ] PEP_Feature.c::%!FUNC!::566 :PepClockConfigPowerDomain failed for footswitch: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=MarkResourcesAsSuppressible
+{
+PowerDomainActionTypeEnum2Str[TFootswitchNode->Action], ItemString -- 10
+}
+#typev PEP_Feature_c544 14 "%0 [Err ] PEP_Feature.c::%!FUNC!::544 :MarkResourcesAsSuppressible failed to mark clock as suppressible" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=MarkResourcesAsSuppressible
+{
+}

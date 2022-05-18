@@ -1,0 +1,99 @@
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+863bdb84-afa1-3997-996b-120ef2a713e2 10.7 // SRC=ipa_endpoint.c MJ= MN=
+#typev ipa_endpoint_c223 11 "%0IPA::%10!s!:%11!d!: Control endpoint Initialized, status = %12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAEndpointInitializeControlEP
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev ipa_endpoint_c686 20 "%0IPA::<----%10!s!:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAEndpointInitializeDataEP
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_endpoint_c683 19 "%0IPA::%10!s!:%11!d!: WdfWorkItemCreate failed. 0x%12!x! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAEndpointInitializeDataEP
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+#typev ipa_endpoint_c478 15 "%0IPA::---->%10!s!:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAEndpointInitializeDataEP
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_endpoint_c414 14 "%0IPA::%10!s!:%11!d!: WdfWorkItemCreate() failed: 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAEndpointInitializeStatusEP
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev ipa_endpoint_c392 13 "%0IPA::%10!s!:%11!d!:  Configured status endpoint" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAEndpointInitializeStatusEP
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_endpoint_c349 12 "%0IPA::%10!s!:%11!d!: Status endpoint Initialized " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAEndpointInitializeStatusEP
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_endpoint_c1115 39 "%0IPA::%10!s!:%11!d!: Request Completed for command %12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAEndpointProcessCallbackForCommands
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pCompletedReqInfo->command, ItemLong -- 12
+}
+#typev ipa_endpoint_c796 22 "%0IPA::%10!s!:%11!d!: Processed pReqInfo = 0x%12!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAEndpointProcessCallbackForDataTransfer
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+userData, ItemPtr -- 12
+}
+#typev ipa_endpoint_c812 23 "%0IPA::<----%10!s!: " //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=IPAEndpointProcessCallbackForDataTransfer
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_endpoint_c771 21 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=IPAEndpointProcessCallbackForDataTransfer
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_endpoint_c1089 38 "%0IPA::<----%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAEndpointProcessCallbackForStatusInfo
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_endpoint_c994 31 "%0IPA::%10!s!:%11!d!: Recd Status packet with exception 0x%12!I64x! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAEndpointProcessCallbackForStatusInfo
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pStatusInfo->pkt_status.exception, ItemLongLongX -- 12
+}
+#typev ipa_endpoint_c985 30 "%0IPA::%10!s! Received packet tag1:%11!d!, tag2:0x%12!x!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAEndpointProcessCallbackForStatusInfo
+{
+__FUNCTION__, ItemString -- 10
+pDeviceContext->Core.tag_info_0, ItemLong -- 11
+pDeviceContext->Core.tag_info_1, ItemLong -- 12
+}
+#typev ipa_endpoint_c894 24 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAEndpointProcessCallbackForStatusInfo
+{
+__FUNCTION__, ItemString -- 10
+}
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+#typev ipa_endpoint_c1726 57 "%0IPA::%10!s!:%11!d!: Immediate Command to IPA to install Filter/Routing Rules failed." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAEndpointSendDmaSharedMemCmdToIPA
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_endpoint_c1712 56 "%0IPA::%10!s!:%11!d!: Sending IPA_HW_IMM_CMD_OPCODE_DMA_SHARED_MEM to hardware" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAEndpointSendDmaSharedMemCmdToIPA
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_endpoint_c1481 52 "%0IPA::%10!s!:%11!d!: Invalid flag %12!d! being passed in. " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAEndpointTransferData
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+xfer_flags, ItemLong -- 12
+}

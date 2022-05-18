@@ -1,0 +1,48 @@
+// PDB:  qcadcm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:24:338 (UTC) [tracepdb]
+7504c569-c89d-3926-d1ca-6e03ba96e85c src // SRC=q6ad_asm_dec.c MJ= MN=
+#typev q6ad_asm_dec_c109 13 "%0ADCM.ASM.q6ad as dec deinit ok" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ASM_VERBOSE FUNC=q6ad_asm_dec_dinit
+{
+}
+#typev q6ad_asm_dec_c143 15 "%0ADCM.ASM.BUF done exist" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ASM_VERBOSE FUNC=q6ad_asm_dec_handle_buf_done
+{
+}
+#typev q6ad_asm_dec_c154 16 "%0ADCM.ASM.q6ad_asm_dec_handle_eos_ack, self=0x%10!p!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ASM_INFO FUNC=q6ad_asm_dec_handle_eos_ack
+{
+self, ItemPtr -- 10
+}
+#typev q6ad_asm_dec_c197 19 "%0ADCM.ASM.Err.q6ad_asm_dec_handle_rx_underflow_evt, self=0x%10!p!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_dec_handle_rx_underflow_evt
+{
+self, ItemPtr -- 10
+}
+#typev q6ad_asm_dec_c177 18 "%0ADCM.ASM.q6ad_asm_dec_handle_sr_cm_notify, self=0x%10!p!,sr=0x%11!Ix!,cm=%12!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ASM_INFO FUNC=q6ad_asm_dec_handle_sr_cm_notify
+{
+self, ItemPtr -- 10
+imsg->u.sr_cm_notification.sample_rate, ItemPtr -- 11
+imsg->u.sr_cm_notification.num_channels, ItemPtr -- 12
+}
+#typev q6ad_asm_dec_c171 17 "%0ADCM.ASM.Err.q6ad_asm_dec_handle_sr_cm_notify, self=0x%10!p!, invalid buf_len=%11!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_dec_handle_sr_cm_notify
+{
+self, ItemPtr -- 10
+buf_len, ItemPtr -- 11
+}
+#typev q6ad_asm_dec_c214 20 "%0ADCM.ASM.q6ad_asm_dec_handle_watermark_evt, self=0x%10!p!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_DATA FLAGS=ADCM_ASM_DATA FUNC=q6ad_asm_dec_handle_watermark_evt
+{
+self, ItemPtr -- 10
+}
+#typev q6ad_asm_dec_c122 14 "%0ADCM.ASM.q6ad as dec init ok" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ASM_VERBOSE FUNC=q6ad_asm_dec_init
+{
+}
+#typev q6ad_asm_dec_c96 12 "%0ADCM.ASM.buf write leave, bytes_sent=0x%10!Ix!,nError=0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_DATA FLAGS=ADCM_ASM_DATA FUNC=q6ad_asm_dec_write
+{
+byte_consumed, ItemPtr -- 10
+nError, ItemPtr -- 11
+}
+#typev q6ad_asm_dec_c92 11 "%0ADCM.ASM.Err.q6ad_asm_dec_write.Err.q6ad_asm_q6_send_w_buf(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_asm_dec_write
+{
+nError, ItemPtr -- 10
+}
+#typev q6ad_asm_dec_c88 10 "%0ADCM.ASM.buf write enter, self=0x%10!p!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ASM_VERBOSE FUNC=q6ad_asm_dec_write
+{
+self, ItemPtr -- 10
+}

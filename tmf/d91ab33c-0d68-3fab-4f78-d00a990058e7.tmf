@@ -1,0 +1,235 @@
+// PDB:  qcSensors.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+d91ab33c-0d68-3fab-4f78-d00a990058e7 qcSensors // SRC=ssc_connection.cpp MJ= MN=
+#typev ssc_connection_cpp333 35 "%0 %!FUNC! : indication, payload_len=%10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::handle_indication<sns_client_jumbo_report_ind_msg_v01>
+{
+ind->payload_len, ItemLong -- 10
+}
+#typev ssc_connection_cpp330 34 "%0 %!FUNC! : [ERROR] (at line - 330 ) - qmi_idl_message_decode() failed. qmi_err=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::handle_indication<sns_client_jumbo_report_ind_msg_v01>
+{
+qmi_err, ItemLong -- 10
+}
+#typev ssc_connection_cpp333 35 "%0 %!FUNC! : indication, payload_len=%10!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::handle_indication<sns_client_report_ind_msg_v01>
+{
+ind->payload_len, ItemLong -- 10
+}
+#typev ssc_connection_cpp330 34 "%0 %!FUNC! : [ERROR] (at line - 330 ) - qmi_idl_message_decode() failed. qmi_err=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::handle_indication<sns_client_report_ind_msg_v01>
+{
+qmi_err, ItemLong -- 10
+}
+#typev ssc_connection_cpp479 53 "%0 %!FUNC! : ssc connected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_connection::ssc_connection
+{
+}
+#typev ssc_connection_cpp149 10 "%0 %!FUNC! : _service_accessed %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::ssc_qmi_connection
+{
+(int)_service_accessed, ItemLong -- 10
+}
+#typev ssc_connection_cpp484 54 "%0 %!FUNC! : ssc disconnected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_connection::~ssc_connection
+{
+}
+#typev ssc_connection_cpp157 12 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=ssc_qmi_connection::~ssc_qmi_connection
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev ssc_connection_cpp154 11 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=ssc_qmi_connection::~ssc_qmi_connection
+{
+}
+#typev ssc_connection_cpp390 42 "%0 %!FUNC! : [ERROR] (at line - 390 ) - Exception occured, could not reconnect: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=<lambda_fd186a0f85ee7589170f878a4e45c479>::operator()
+{
+e.what(), ItemString -- 10
+}
+#typev ssc_connection_cpp397 44 "%0 %!FUNC! : sensor deactivated during ssr" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=<lambda_fd186a0f85ee7589170f878a4e45c479>::operator()
+{
+}
+#typev ssc_connection_cpp394 43 "%0 %!FUNC! : qmi connection re-established" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=<lambda_fd186a0f85ee7589170f878a4e45c479>::operator()
+{
+}
+#typev ssc_connection_cpp384 41 "%0 %!FUNC! : qmi error, trying to reconnect" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=<lambda_fd186a0f85ee7589170f878a4e45c479>::operator()
+{
+}
+#typev ssc_connection_cpp390 42 "%0 %!FUNC! : [ERROR] (at line - 390 ) - Exception occured, could not reconnect: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`<lambda_fd186a0f85ee7589170f878a4e45c479>::operator()'::`1'::catch$0
+{
+e.what(), ItemString -- 10
+}
+#typev ssc_connection_cpp397 44 "%0 %!FUNC! : sensor deactivated during ssr" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`<lambda_fd186a0f85ee7589170f878a4e45c479>::operator()'::`1'::catch$0
+{
+}
+#typev ssc_connection_cpp394 43 "%0 %!FUNC! : qmi connection re-established" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`<lambda_fd186a0f85ee7589170f878a4e45c479>::operator()'::`1'::catch$0
+{
+}
+#typev ssc_connection_cpp384 41 "%0 %!FUNC! : qmi error, trying to reconnect" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`<lambda_fd186a0f85ee7589170f878a4e45c479>::operator()'::`1'::catch$0
+{
+}
+#typev ssc_connection_cpp172 13 "%0 %!FUNC! :Skipping QMI init as hibernate/shutdown is in progress." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=CheckForQmiInitWaitTerminationSignal
+{
+}
+#typev ssc_connection_cpp282 25 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=ssc_qmi_connection::qmi_connect
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev ssc_connection_cpp281 24 "%0 %!FUNC! : connected to ssc for %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_connect
+{
+(void *)this, ItemPtr -- 10
+}
+#typev ssc_connection_cpp277 23 "%0 %!FUNC! : [ERROR] (at line - 277 ) - qmi_client_register_error_cb() failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_connect
+{
+}
+#typev ssc_connection_cpp271 22 "%0 %!FUNC! : qmi_client_init_instance succeeded" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_connect
+{
+}
+#typev ssc_connection_cpp267 21 "%0 %!FUNC! : [ERROR] (at line - 267 ) - qmi_client_init_instance() failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_connect
+{
+}
+#typev ssc_connection_cpp253 20 "%0 %!FUNC! : [ERROR] (at line - 253 ) -qmi_client_init_instance() failed with error %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_connect
+{
+qmi_err, ItemLong -- 10
+}
+#typev ssc_connection_cpp247 19 "%0 %!FUNC! :qmi_client_init_instance() timed out, retrying." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_connect
+{
+}
+#typev ssc_connection_cpp242 18 "%0 %!FUNC! :qmi_client_init_instance() successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_connect
+{
+}
+#typev ssc_connection_cpp239 17 "%0 %!FUNC! :waited total at most %10!d! seconds for qmi_client_init_instance" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_connect
+{
+iTimeWaited/1000, ItemLong -- 10
+}
+#typev ssc_connection_cpp200 16 "%0 %!FUNC! : service_accessed= %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_connect
+{
+(int)_service_accessed, ItemLong -- 10
+}
+#typev ssc_connection_cpp197 15 "%0 %!FUNC! : connecting to qmi service" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_connect
+{
+}
+#typev ssc_connection_cpp188 14 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=ssc_qmi_connection::qmi_connect
+{
+}
+#typev ssc_connection_cpp313 32 "%0 %!FUNC! : [ERROR] (at line - 313 ) - Exception occured, could not disconnect: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_disconnect
+{
+e.what(), ItemString -- 10
+}
+#typev ssc_connection_cpp316 33 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=ssc_qmi_connection::qmi_disconnect
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev ssc_connection_cpp308 31 "%0 %!FUNC! :ssc_qmi_connection instance already released" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_disconnect
+{
+}
+#typev ssc_connection_cpp303 30 "%0 %!FUNC! : disconnected from ssc for %10!p!, _service_accessed %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_disconnect
+{
+(void *)this, ItemPtr -- 10
+(int)_service_accessed, ItemLong -- 11
+}
+#typev ssc_connection_cpp299 29 "%0 %!FUNC! :_qmi_handle is NULL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_disconnect
+{
+}
+#typev ssc_connection_cpp297 28 "%0 %!FUNC! :qmi_client_release done" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_disconnect
+{
+}
+#typev ssc_connection_cpp294 27 "%0 %!FUNC! :calling qmi_client_release" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_disconnect
+{
+}
+#typev ssc_connection_cpp288 26 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=ssc_qmi_connection::qmi_disconnect
+{
+}
+#typev ssc_connection_cpp313 32 "%0 %!FUNC! : [ERROR] (at line - 313 ) - Exception occured, could not disconnect: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`ssc_qmi_connection::qmi_disconnect'::`1'::catch$1
+{
+e.what(), ItemString -- 10
+}
+#typev ssc_connection_cpp316 33 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=`ssc_qmi_connection::qmi_disconnect'::`1'::catch$1
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev ssc_connection_cpp308 31 "%0 %!FUNC! :ssc_qmi_connection instance already released" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`ssc_qmi_connection::qmi_disconnect'::`1'::catch$1
+{
+}
+#typev ssc_connection_cpp303 30 "%0 %!FUNC! : disconnected from ssc for %10!p!, _service_accessed %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`ssc_qmi_connection::qmi_disconnect'::`1'::catch$1
+{
+(void *)this, ItemPtr -- 10
+(int)_service_accessed, ItemLong -- 11
+}
+#typev ssc_connection_cpp299 29 "%0 %!FUNC! :_qmi_handle is NULL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`ssc_qmi_connection::qmi_disconnect'::`1'::catch$1
+{
+}
+#typev ssc_connection_cpp297 28 "%0 %!FUNC! :qmi_client_release done" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`ssc_qmi_connection::qmi_disconnect'::`1'::catch$1
+{
+}
+#typev ssc_connection_cpp294 27 "%0 %!FUNC! :calling qmi_client_release" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=`ssc_qmi_connection::qmi_disconnect'::`1'::catch$1
+{
+}
+#typev ssc_connection_cpp288 26 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=`ssc_qmi_connection::qmi_disconnect'::`1'::catch$1
+{
+}
+#typev ssc_connection_cpp409 45 "%0 %!FUNC! : [ERROR] (at line - 409 ) - Exception occured, could not reconnect: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_error_cb
+{
+e.what(), ItemString -- 10
+}
+#typev ssc_connection_cpp375 40 "%0 %!FUNC! : [ERROR] (at line - 375 ) - error=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_error_cb
+{
+error, ItemLong -- 10
+}
+#typev ssc_connection_cpp409 45 "%0 %!FUNC! : [ERROR] (at line - 409 ) - Exception occured, could not reconnect: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`ssc_qmi_connection::qmi_error_cb'::`1'::catch$1
+{
+e.what(), ItemString -- 10
+}
+#typev ssc_connection_cpp375 40 "%0 %!FUNC! : [ERROR] (at line - 375 ) - error=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`ssc_qmi_connection::qmi_error_cb'::`1'::catch$1
+{
+error, ItemLong -- 10
+}
+#typev ssc_connection_cpp362 38 "%0 %!FUNC! : [ERROR] (at line - 362 ) - Exception occured: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_indication_cb
+{
+e.what(), ItemString -- 10
+}
+#typev ssc_connection_cpp365 39 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=ssc_qmi_connection::qmi_indication_cb
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev ssc_connection_cpp357 37 "%0 %!FUNC! : [ERROR] (at line - 357 ) - Unknown indication message ID %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::qmi_indication_cb
+{
+msg_id, ItemLong -- 10
+}
+#typev ssc_connection_cpp344 36 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=ssc_qmi_connection::qmi_indication_cb
+{
+}
+#typev ssc_connection_cpp362 38 "%0 %!FUNC! : [ERROR] (at line - 362 ) - Exception occured: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`ssc_qmi_connection::qmi_indication_cb'::`1'::catch$0
+{
+e.what(), ItemString -- 10
+}
+#typev ssc_connection_cpp365 39 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=`ssc_qmi_connection::qmi_indication_cb'::`1'::catch$0
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev ssc_connection_cpp357 37 "%0 %!FUNC! : [ERROR] (at line - 357 ) - Unknown indication message ID %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=`ssc_qmi_connection::qmi_indication_cb'::`1'::catch$0
+{
+msg_id, ItemLong -- 10
+}
+#typev ssc_connection_cpp344 36 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=`ssc_qmi_connection::qmi_indication_cb'::`1'::catch$0
+{
+}
+#typev ssc_connection_cpp494 55 "%0 %!FUNC! : [ERROR] (at line - 494 ) - _qmi_conn is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_connection::send_request
+{
+}
+#typev ssc_connection_cpp472 52 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=ssc_qmi_connection::send_request
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev ssc_connection_cpp461 51 "%0 %!FUNC! : [ERROR] (at line - 461 ) - qmi_client_send_msg_sync() failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::send_request
+{
+}
+#typev ssc_connection_cpp453 50 "%0 %!FUNC! : [ERROR] (at line - 453 ) - triggred ssr _qmi_err_cnt %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::send_request
+{
+g_qmierr_cnt, ItemLong -- 10
+}
+#typev ssc_connection_cpp429 49 "%0 %!FUNC! : [ERROR] (at line - 429 ) -error: payload size too large" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::send_request
+{
+}
+#typev ssc_connection_cpp423 48 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_UNSUCCESSFUL FUNC=ssc_qmi_connection::send_request
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev ssc_connection_cpp422 47 "%0 %!FUNC! : [ERROR] (at line - 422 ) - qmi connection failed, cannot send data" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=ssc_qmi_connection::send_request
+{
+}
+#typev ssc_connection_cpp416 46 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=ssc_qmi_connection::send_request
+{
+}

@@ -1,0 +1,238 @@
+// PDB:  qcgnss.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+c6ae1738-2d01-3220-c39d-67ae1c126c95 latest // SRC=gpsdriverzpp.c MJ= MN=
+#typev gpsdriverzpp_c590 67 "%0gpsdriverzpp.c::590 QCGPS: --> GPSDriverZPPProcessIOCTL SHOULDNT be here %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_LOW FUNC=GPSDriverZPPProcessIOCTL
+{
+SessionID, ItemLong -- 10
+}
+#typev gpsdriverzpp_c586 66 "%0gpsdriverzpp.c::586 QCGPS: --> GPSDriverZPPProcessIOCTL STOP ZPP DO NOTHING %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_LOW FUNC=GPSDriverZPPProcessIOCTL
+{
+SessionID, ItemLong -- 10
+}
+#typev gpsdriverzpp_c580 65 "%0gpsdriverzpp.c::580 QCGPS: --> GPSDriverZPPProcessIOCTL Start ZPP %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_LOW FUNC=GPSDriverZPPProcessIOCTL
+{
+ZPP_transactionID, ItemLong -- 10
+}
+#typev gpsdriverzpp_c574 64 "%0gpsdriverzpp.c::574 QCGPS: --> GPSDriverZPPProcessIOCTL " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_HIGH FUNC=GPSDriverZPPProcessIOCTL
+{
+}
+#typev gpsdriverzpp_c521 61 "%0gpsdriverzpp.c::521 GPSDriverZPPModuleInit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_HIGH FUNC=GPSDriverZppModuleInit
+{
+}
+#typev gpsdriverzpp_c627 71 "%0gpsdriverzpp.c::627 locclientSendReq ZPP  FAILED" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMILOC_DBG_ERR FUNC=ProcessZPPRequest
+{
+}
+#typev gpsdriverzpp_c621 70 "%0gpsdriverzpp.c::621 locclientSendReq ZPP  SUCCESS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=ProcessZPPRequest
+{
+}
+#typev gpsdriverzpp_c616 69 "%0gpsdriverzpp.c::616 locclientSendReq done" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_LOW FUNC=ProcessZPPRequest
+{
+}
+#typev gpsdriverzpp_c614 68 "%0gpsdriverzpp.c::614 START ZPP FIX " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_LOW FUNC=ProcessZPPRequest
+{
+}
+#typev gpsdriverzpp_c544 63 "%0gpsdriverzpp.c::544 [TELY] E_PENDING_IOCTL_UNAVAILABLE IOCTL_GNSS_GET_FIXDATA" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=ProcessZPPResp
+{
+}
+#typev gpsdriverzpp_c543 62 "%0gpsdriverzpp.c::543 QCGPS: ZPP SendPositionToOS  no more pending IOCTLs, return immediately" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_WARNING FUNC=ProcessZPPResp
+{
+}
+#typev gpsdriverzpp_c505 60 "%0gpsdriverzpp.c::505 QCGPS: WdfRequestRetrieveOutputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMILOC_DBG_ERR FUNC=SendZPPPositionToOS
+{
+bufLength, ItemPtr -- 10
+sizeof(GNSS_EVENT_2), ItemLong -- 11
+}
+#typev gpsdriverzpp_c497 59 "%0gpsdriverzpp.c::497 QCGPS:  ****************************" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c496 58 "%0gpsdriverzpp.c::496 QCGPS:  TECH MASK:%10!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.technologyMask, ItemLong -- 10
+}
+#typev gpsdriverzpp_c495 57 "%0gpsdriverzpp.c::495 QCGPS:  TUNC:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.timeUnc, ItemDouble -- 10
+}
+#typev gpsdriverzpp_c494 56 "%0gpsdriverzpp.c::494 QCGPS:  HOR_UNC:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.horUncCircular, ItemDouble -- 10
+}
+#typev gpsdriverzpp_c493 55 "%0gpsdriverzpp.c::493 QCGPS:  VERT_UNC:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.vertUnc, ItemDouble -- 10
+}
+#typev gpsdriverzpp_c492 54 "%0gpsdriverzpp.c::492 QCGPS:  ALT:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.altitudeWrtMeanSeaLevel, ItemDouble -- 10
+}
+#typev gpsdriverzpp_c491 53 "%0gpsdriverzpp.c::491 QCGPS:  LONG:%10!d!.%11!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+ulTestInt, ItemLong -- 10
+ulTestDec, ItemLong -- 11
+}
+#typev gpsdriverzpp_c485 52 "%0gpsdriverzpp.c::485 QCGPS:  LAT: %10!d!.%11!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+ulTestInt, ItemLong -- 10
+ulTestDec, ItemLong -- 11
+}
+#typev gpsdriverzpp_c479 51 "%0gpsdriverzpp.c::479 QCGPS:  UTC:%10!u! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+(ULONG)g_zpp_respInd_copy.zppReqInd.timestampUtc, ItemLong -- 10
+}
+#typev gpsdriverzpp_c478 50 "%0gpsdriverzpp.c::478 QCGPS:  Status:%10!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.status, ItemLong -- 10
+}
+#typev gpsdriverzpp_c476 49 "%0gpsdriverzpp.c::476 QCGPS:  Status: SUCCESS 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c474 48 "%0gpsdriverzpp.c::474 QCGPS:  ZPP_FIX:		" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c473 47 "%0gpsdriverzpp.c::473 QCGPS:  ****************************" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c462 46 "%0gpsdriverzpp.c::462 QCGPS: ZPP gnssSvUsedList[%10!d!]: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_LOW FUNC=SendZPPPositionToOS
+{
+ctr, ItemLong -- 10
+g_zpp_respInd_copy.zppReqInd.gnssSvUsedList[ctr], ItemLong -- 11
+}
+#typev gpsdriverzpp_c451 45 "%0gpsdriverzpp.c::451 QCGPS:  ZPP Send SV INFO %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+nSvlistlength, ItemLong -- 10
+}
+#typev gpsdriverzpp_c389 44 "%0gpsdriverzpp.c::389 QCGPS:  ZPP horUncCircular_valid is invalid - converting elliptical to circular" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c378 43 "%0gpsdriverzpp.c::378 QCGPS: ZPP horUncCircular is 0m - converting elliptical to circular %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+pGnssFixEvent2->FixData.AccuracyData.HorizontalAccuracy, ItemLong -- 10
+}
+#typev gpsdriverzpp_c377 42 "%0gpsdriverzpp.c::377 QCGPS: ZPP horUncCircular is 0m - elliptical uncs major %10!s!, minor %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.horUncEllipseSemiMajor, ItemDouble -- 10
+g_zpp_respInd_copy.zppReqInd.horUncEllipseSemiMinor, ItemDouble -- 11
+}
+#typev gpsdriverzpp_c309 41 "%0gpsdriverzpp.c::309 QCGPS:  SendZPPPositionToOS  sessionStatus %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.status, ItemLong -- 10
+}
+#typev gpsdriverzpp_c307 40 "%0gpsdriverzpp.c::307 QCGPS  SendZPPPositionToOS  FixSessionID %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.transactionId, ItemLong -- 10
+}
+#typev gpsdriverzpp_c294 39 "%0gpsdriverzpp.c::294 QCGPS: ZPP SendPositionToOS  BufLength %10!Iu!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+bufLength, ItemPtr -- 10
+}
+#typev gpsdriverzpp_c293 38 "%0gpsdriverzpp.c::293 QCGPS: SV info enabled  " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c291 37 "%0gpsdriverzpp.c::291 QCGPS: Accuracy info enabled  " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c284 36 "%0gpsdriverzpp.c::284 QCGPS:  WdfRequestRetrieveOutputBuffer failed 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMILOC_DBG_ERR FUNC=SendZPPPositionToOS
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverzpp_c273 35 "%0gpsdriverzpp.c::273 QCGPS: WdfRequestRetrieveOutputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMILOC_DBG_ERR FUNC=SendZPPPositionToOS
+{
+bufLength, ItemPtr -- 10
+sizeof(GNSS_EVENT), ItemLong -- 11
+}
+#typev gpsdriverzpp_c265 34 "%0gpsdriverzpp.c::265 QCGPS:  ****************************" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c264 33 "%0gpsdriverzpp.c::264 QCGPS:  TECH MASK:%10!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.technologyMask, ItemLong -- 10
+}
+#typev gpsdriverzpp_c263 32 "%0gpsdriverzpp.c::263 QCGPS:  TUNC:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.timeUnc, ItemDouble -- 10
+}
+#typev gpsdriverzpp_c262 31 "%0gpsdriverzpp.c::262 QCGPS:  HOR_UNC:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.horUncCircular, ItemDouble -- 10
+}
+#typev gpsdriverzpp_c261 30 "%0gpsdriverzpp.c::261 QCGPS:  VERT_UNC:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.vertUnc, ItemDouble -- 10
+}
+#typev gpsdriverzpp_c260 29 "%0gpsdriverzpp.c::260 QCGPS:  ALT:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.altitudeWrtMeanSeaLevel, ItemDouble -- 10
+}
+#typev gpsdriverzpp_c259 28 "%0gpsdriverzpp.c::259 QCGPS:  LONG:%10!d!.%11!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+ulTestInt, ItemLong -- 10
+ulTestDec, ItemLong -- 11
+}
+#typev gpsdriverzpp_c253 27 "%0gpsdriverzpp.c::253 QCGPS:  LAT: %10!d!.%11!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+ulTestInt, ItemLong -- 10
+ulTestDec, ItemLong -- 11
+}
+#typev gpsdriverzpp_c247 26 "%0gpsdriverzpp.c::247 QCGPS:  UTC:%10!u! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+(ULONG)g_zpp_respInd_copy.zppReqInd.timestampUtc, ItemLong -- 10
+}
+#typev gpsdriverzpp_c246 25 "%0gpsdriverzpp.c::246 QCGPS:  Status:%10!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.status, ItemLong -- 10
+}
+#typev gpsdriverzpp_c244 24 "%0gpsdriverzpp.c::244 QCGPS:  Status: SUCCESS 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c242 23 "%0gpsdriverzpp.c::242 QCGPS:  ZPP_FIX:		" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c241 22 "%0gpsdriverzpp.c::241 QCGPS:  ****************************" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c230 21 "%0gpsdriverzpp.c::230 QCGPS: ZPP gnssSvUsedList[%10!d!]: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_LOW FUNC=SendZPPPositionToOS
+{
+ctr, ItemLong -- 10
+g_zpp_respInd_copy.zppReqInd.gnssSvUsedList[ctr], ItemLong -- 11
+}
+#typev gpsdriverzpp_c219 20 "%0gpsdriverzpp.c::219 QCGPS:  ZPP Send SV INFO %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+nSvlistlength, ItemLong -- 10
+}
+#typev gpsdriverzpp_c162 19 "%0gpsdriverzpp.c::162 QCGPS:  ZPP horUncCircular_valid is invalid - converting elliptical to circular" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c151 18 "%0gpsdriverzpp.c::151 QCGPS: ZPP horUncCircular is 0m - converting elliptical to circular %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+pGnssFixEvent->FixData.AccuracyData.HorizontalAccuracy, ItemLong -- 10
+}
+#typev gpsdriverzpp_c150 17 "%0gpsdriverzpp.c::150 QCGPS: ZPP horUncCircular is 0m - elliptical uncs major %10!s!, minor %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.horUncEllipseSemiMajor, ItemDouble -- 10
+g_zpp_respInd_copy.zppReqInd.horUncEllipseSemiMinor, ItemDouble -- 11
+}
+#typev gpsdriverzpp_c88 16 "%0gpsdriverzpp.c::88 QCGPS:  SendZPPPositionToOS  sessionStatus %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.status, ItemLong -- 10
+}
+#typev gpsdriverzpp_c86 15 "%0gpsdriverzpp.c::86 QCGPS  SendZPPPositionToOS  FixSessionID %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+g_zpp_respInd_copy.zppReqInd.transactionId, ItemLong -- 10
+}
+#typev gpsdriverzpp_c73 14 "%0gpsdriverzpp.c::73 QCGPS: ZPP SendPositionToOS  BufLength %10!Iu!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+bufLength, ItemPtr -- 10
+}
+#typev gpsdriverzpp_c72 13 "%0gpsdriverzpp.c::72 QCGPS: SV info enabled  " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c70 12 "%0gpsdriverzpp.c::70 QCGPS: Accuracy info enabled  " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_MEDIUM FUNC=SendZPPPositionToOS
+{
+}
+#typev gpsdriverzpp_c63 11 "%0gpsdriverzpp.c::63 QCGPS:  WdfRequestRetrieveOutputBuffer failed 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QMILOC_DBG_ERR FUNC=SendZPPPositionToOS
+{
+status, ItemLong -- 10
+}
+#typev gpsdriverzpp_c52 10 "%0gpsdriverzpp.c::52 QCGPS:  SendZPPPositionToOS  " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QMILOC_DBG_INFO_HIGH FUNC=SendZPPPositionToOS
+{
+}

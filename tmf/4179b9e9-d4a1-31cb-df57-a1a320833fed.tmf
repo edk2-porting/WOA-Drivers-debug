@@ -1,0 +1,1158 @@
+// PDB:  qcdx11arm32um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+4179b9e9-d4a1-31cb-df57-a1a320833fed utils // SRC=dxcmdmgr.cpp MJ= MN=
+#typev dxcmdmgr_cpp1357 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddIB1Handles
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp2078 14 "%0Device:0x%10!p! AddToBoundList Flushing CPU Cache hAllocation=0x%11!08x! handleFlags=0x%12!08x! Size = %13!I64d! CpuAddr = %14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pInfo->hAllocation, ItemLong -- 11
+handleFlags, ItemLong -- 12
+pInfo->allocationSize, ItemLongLong -- 13
+pInfo->pCpuAddr, ItemPtr -- 14
+}
+#typev dxcmdmgr_cpp2049 11 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp1638 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp261 10 "%0Device=0x%10!p!, Preemption disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Init
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp4191 17 "%0Device:0x%10!p! Submission WaitForSyncObjFromCpu " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SignalCommandSubmission
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp3009 15 "%0Device:0x%10!p! NumPrimaries submitted=0x%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SubmitCommands
+{
+m_pDevice, ItemPtr -- 10
+m_numPrimaries, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp3588 16 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxdevicestate_cpp1276 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::PostDispatch
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxdevicestate_cpp880 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::PostDraw
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev a6xdsview_cpp501 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=A6xDsView::HwClear
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxcmdmgr_cpp1357 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddIB1Handles
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp2078 14 "%0Device:0x%10!p! AddToBoundList Flushing CPU Cache hAllocation=0x%11!08x! handleFlags=0x%12!08x! Size = %13!I64d! CpuAddr = %14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pInfo->hAllocation, ItemLong -- 11
+handleFlags, ItemLong -- 12
+pInfo->allocationSize, ItemLongLong -- 13
+pInfo->pCpuAddr, ItemPtr -- 14
+}
+#typev dxcmdmgr_cpp2049 11 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp82 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Destroy
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1638 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1451 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::GetCmdSpaceCommon
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1438 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::GetCmdSpaceCommon
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp261 10 "%0Device=0x%10!p!, Preemption disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Init
+{
+m_pDevice, ItemPtr -- 10
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxcmdmgr_cpp4191 17 "%0Device:0x%10!p! Submission WaitForSyncObjFromCpu " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SignalCommandSubmission
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp3009 15 "%0Device:0x%10!p! NumPrimaries submitted=0x%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SubmitCommands
+{
+m_pDevice, ItemPtr -- 10
+m_numPrimaries, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp3588 16 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp1091 11 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::UpdateWrittenPrimaryList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxencodeif_cpp589 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDecodeDevice::Render
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev rotator5device_cpp162 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=Rotator5Device::HwRotate
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev mdp5device_cpp1138 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=Mdp5Device::SendMdpCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp5499 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::EndMp4Frame
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp5149 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::EndVc1Frame
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp8529 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::StartEngineCrypto
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp3552 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::StartEngineDecodeSession
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp3596 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::StopEngineDecodeSession
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp8474 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitDecryptCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp4865 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitH264DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp6112 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitHEVCDecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp6353 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitHEVCDecodeCommandV2
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp7395 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitVp8DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp6772 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitVp9DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp7024 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitVp9DecodeCommandV2
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxdevicestate_cpp1276 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::PostDispatch
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxdevicestate_cpp880 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::PostDraw
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev a6xdsview_cpp501 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=A6xDsView::HwClear
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxcmdmgr_cpp1357 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddIB1Handles
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp2078 14 "%0Device:0x%10!p! AddToBoundList Flushing CPU Cache hAllocation=0x%11!08x! handleFlags=0x%12!08x! Size = %13!I64d! CpuAddr = %14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pInfo->hAllocation, ItemLong -- 11
+handleFlags, ItemLong -- 12
+pInfo->allocationSize, ItemLongLong -- 13
+pInfo->pCpuAddr, ItemPtr -- 14
+}
+#typev dxcmdmgr_cpp2049 11 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp82 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Destroy
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1638 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1451 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::GetCmdSpaceCommon
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1438 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::GetCmdSpaceCommon
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp261 10 "%0Device=0x%10!p!, Preemption disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Init
+{
+m_pDevice, ItemPtr -- 10
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxcmdmgr_cpp4191 17 "%0Device:0x%10!p! Submission WaitForSyncObjFromCpu " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SignalCommandSubmission
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp3009 15 "%0Device:0x%10!p! NumPrimaries submitted=0x%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SubmitCommands
+{
+m_pDevice, ItemPtr -- 10
+m_numPrimaries, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp3588 16 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp1091 11 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::UpdateWrittenPrimaryList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxencodeif_cpp589 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDecodeDevice::Render
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp5499 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::EndMp4Frame
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp5149 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::EndVc1Frame
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp8529 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::StartEngineCrypto
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp3552 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::StartEngineDecodeSession
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp3596 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::StopEngineDecodeSession
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp8474 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitDecryptCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp4865 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitH264DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp6112 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitHEVCDecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp6353 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitHEVCDecodeCommandV2
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp7395 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitVp8DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp6772 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitVp9DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp7024 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitVp9DecodeCommandV2
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev mdp5device_cpp1138 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=Mdp5Device::SendMdpCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11arm64xum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev rotator5device_cpp162 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=Rotator5Device::HwRotate
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxdevicestate_cpp1276 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::PostDispatch
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxdevicestate_cpp880 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::PostDraw
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev a6xdsview_cpp501 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=A6xDsView::HwClear
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxcmdmgr_cpp1357 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddIB1Handles
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp2078 14 "%0Device:0x%10!p! AddToBoundList Flushing CPU Cache hAllocation=0x%11!08x! handleFlags=0x%12!08x! Size = %13!I64d! CpuAddr = %14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pInfo->hAllocation, ItemLong -- 11
+handleFlags, ItemLong -- 12
+pInfo->allocationSize, ItemLongLong -- 13
+pInfo->pCpuAddr, ItemPtr -- 14
+}
+#typev dxcmdmgr_cpp2049 11 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp82 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Destroy
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1638 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1451 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::GetCmdSpaceCommon
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1438 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::GetCmdSpaceCommon
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp261 10 "%0Device=0x%10!p!, Preemption disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Init
+{
+m_pDevice, ItemPtr -- 10
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxcmdmgr_cpp4191 17 "%0Device:0x%10!p! Submission WaitForSyncObjFromCpu " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SignalCommandSubmission
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp3009 15 "%0Device:0x%10!p! NumPrimaries submitted=0x%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SubmitCommands
+{
+m_pDevice, ItemPtr -- 10
+m_numPrimaries, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp3588 16 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp1091 11 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::UpdateWrittenPrimaryList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxencodeif_cpp589 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDecodeDevice::Render
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp5499 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::EndMp4Frame
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp5149 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::EndVc1Frame
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp8529 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::StartEngineCrypto
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp3552 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::StartEngineDecodeSession
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp3596 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::StopEngineDecodeSession
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp8474 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitDecryptCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp4865 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitH264DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp6112 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitHEVCDecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp6353 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitHEVCDecodeCommandV2
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp7395 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitVp8DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp6772 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitVp9DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp7024 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitVp9DecodeCommandV2
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev mdp5device_cpp1138 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=Mdp5Device::SendMdpCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11chpeum7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev rotator5device_cpp162 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=Rotator5Device::HwRotate
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxdevicestate_cpp1276 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxDevice::PostDispatch
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxdevicestate_cpp1276 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::PostDispatch
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxdevicestate_cpp880 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxDevice::PostDraw
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxdevicestate_cpp880 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDevice::PostDraw
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev a6xdsview_cpp501 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=A6xDsView::HwClear
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev a6xdsview_cpp501 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=A6xDsView::HwClear
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxcmdmgr_cpp1357 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddIB1Handles
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp2078 14 "%0Device:0x%10!p! AddToBoundList Flushing CPU Cache hAllocation=0x%11!08x! handleFlags=0x%12!08x! Size = %13!I64d! CpuAddr = %14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+pInfo->hAllocation, ItemLong -- 11
+handleFlags, ItemLong -- 12
+pInfo->allocationSize, ItemLongLong -- 13
+pInfo->pCpuAddr, ItemPtr -- 14
+}
+#typev dxcmdmgr_cpp2049 11 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::AddToBoundList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+#typev dxcmdmgr_cpp1687 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1638 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::Flush
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1451 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::GetCmdSpaceCommon
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1451 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::GetCmdSpaceCommon
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1438 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::GetCmdSpaceCommon
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp1438 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxCmdMgr::GetCmdSpaceCommon
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+#typev dxcmdmgr_cpp261 10 "%0Device=0x%10!p!, Preemption disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::Init
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp4191 17 "%0Device:0x%10!p! Submission WaitForSyncObjFromCpu " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SignalCommandSubmission
+{
+m_pDevice, ItemPtr -- 10
+}
+#typev dxcmdmgr_cpp3009 15 "%0Device:0x%10!p! NumPrimaries submitted=0x%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SubmitCommands
+{
+m_pDevice, ItemPtr -- 10
+m_numPrimaries, ItemLong -- 11
+}
+#typev dxcmdmgr_cpp3588 16 "%0CmdMgr:%10!p! SyncDependency b/w %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::SyncDependencies
+{
+this, ItemPtr -- 10
+dependentCmdMgrType, ItemLong -- 11
+m_type, ItemLong -- 12
+}
+#typev dxcmdmgr_cpp1091 11 "%0Device:0x%10!p! UpdateWrittenPrimaryList Primary hAllocation=0x%11!x! GpuVirtAddr=0x%12!I64x! handleFlags=0x%13!x! NumPrimaries=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxCmdMgr::UpdateWrittenPrimaryList
+{
+m_pDevice, ItemPtr -- 10
+hAllocation, ItemLong -- 11
+pMemoryHandle->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 12
+handleFlags, ItemLong -- 13
+m_numPrimaries, ItemLong -- 14
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dxencodeif_cpp589 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=DxDecodeDevice::Render
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev dxencodeif_cpp589 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=DxDecodeDevice::Render
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp5499 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=VenusDecodeDevice::EndMp4Frame
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev venusdecodedevice_cpp5499 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::EndMp4Frame
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp5149 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=VenusDecodeDevice::EndVc1Frame
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev venusdecodedevice_cpp5149 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::EndVc1Frame
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp8529 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=VenusDecodeDevice::StartEngineCrypto
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev venusdecodedevice_cpp8529 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::StartEngineCrypto
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp3552 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=VenusDecodeDevice::StartEngineDecodeSession
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev venusdecodedevice_cpp3552 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::StartEngineDecodeSession
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp3596 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=VenusDecodeDevice::StopEngineDecodeSession
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev venusdecodedevice_cpp3596 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::StopEngineDecodeSession
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp8474 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=VenusDecodeDevice::SubmitDecryptCommand
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev venusdecodedevice_cpp8474 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitDecryptCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp4865 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=VenusDecodeDevice::SubmitH264DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev venusdecodedevice_cpp4865 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitH264DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp6112 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=VenusDecodeDevice::SubmitHEVCDecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev venusdecodedevice_cpp6112 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitHEVCDecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp6353 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=VenusDecodeDevice::SubmitHEVCDecodeCommandV2
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev venusdecodedevice_cpp6353 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitHEVCDecodeCommandV2
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp7395 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=VenusDecodeDevice::SubmitVp8DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev venusdecodedevice_cpp7395 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitVp8DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp6772 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=VenusDecodeDevice::SubmitVp9DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev venusdecodedevice_cpp6772 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitVp9DecodeCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev venusdecodedevice_cpp7024 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=VenusDecodeDevice::SubmitVp9DecodeCommandV2
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev venusdecodedevice_cpp7024 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=VenusDecodeDevice::SubmitVp9DecodeCommandV2
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev mdp5device_cpp1138 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=Mdp5Device::SendMdpCommand
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev mdp5device_cpp1138 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=Mdp5Device::SendMdpCommand
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}
+// PDB:  qcdx11x86um7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev rotator5device_cpp162 12 "%0Device=0x%10!p!, IB1(GPU Virtual Address 0x%11!I64x!, CPU Address 0x%12!p! Entries %13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=utils FUNC=Rotator5Device::HwRotate
+{
+m_pDevice, ItemPtr -- 10
+pCurrentIB->pBufferVidMem->AllocInfo()->gpuVirtualAddress, ItemLongLongX -- 11
+pCurrentIB->pCpuAddr, ItemPtr -- 12
+pCurrentIB->entriesUsed, ItemLong -- 13
+}
+#typev rotator5device_cpp162 13 "%0Device=0x%10!p!: FLUSH: Reason=0x%11!08x! Engine=%12!d! NeedsFlush:0x%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=bin FUNC=Rotator5Device::HwRotate
+{
+m_pDevice, ItemPtr -- 10
+flushReason, ItemLong -- 11
+m_engine, ItemLong -- 12
+needsFlush, ItemLong -- 13
+}

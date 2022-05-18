@@ -1,0 +1,165 @@
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+4170797f-b000-35dc-6740-7ec77b399a74 NetAdapter // SRC=QmapHalIf.cpp MJ= MN=
+#typev QmapHalIf_cpp606 39 "%0%!FUNC!::606:: kewaitformultipleobject fails with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapCancelAllChannels
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QmapHalIf_cpp598 38 "%0%!FUNC!::598:: kewaitformultipleobject timeed out with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapCancelAllChannels
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QmapHalIf_cpp585 37 "%0%!FUNC!::585:: ignoring channel reset as not supported by hardware" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapCancelAllChannels
+{
+}
+#typev QmapHalIf_cpp581 36 "%0%!FUNC!::581:: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapCancelAllChannels
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QmapHalIf_cpp565 35 "%0%!FUNC!::565:: ignoring channel reset as not supported by hardware" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapCancelAllChannels
+{
+}
+#typev QmapHalIf_cpp561 34 "%0%!FUNC!::561:: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapCancelAllChannels
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QmapHalIf_cpp343 22 "%0%!FUNC!::343:: Pending DL NetPackets dropped = %10!d! for muxid = %11!d! queueid = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapCancelRxCb
+{
+pend_notify, ItemLong -- 10
+pQmapCtx->clientCtx[index].muxId, ItemLong -- 11
+queueIdx, ItemLong -- 12
+}
+#typev QmapHalIf_cpp320 21 "%0%!FUNC!::320:: pend_rx_desc = %10!d!, desc_arr_size = %11!I64d!, QmapClients = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapCancelRxCb
+{
+pQmapCtx->total_pend_rx_desc, ItemLong -- 10
+desc_arr_size, ItemLongLong -- 11
+noOfQmapClients, ItemLong -- 12
+}
+#typev QmapHalIf_cpp302 20 "%0%!FUNC!::302:: free_tx_desc = %10!d!, tx_desc_index = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapCancelTxCb
+{
+pQmapCtx->total_free_tx_desc, ItemLong -- 10
+pQmapCtx->tx_desc_index, ItemLong -- 11
+}
+#typev QmapHalIf_cpp417 26 "%0%!FUNC!::417:: Failed to allocate UL buffer %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapDeinitBuffers
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapHalIf_cpp407 25 "%0%!FUNC!::407:: Failed to allocate DL buffer %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapDeinitBuffers
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapHalIf_cpp379 23 "%0%!FUNC!::379:: Failed to allocate DL buffer %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapInitBuffers
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev QmapHalIf_cpp387 24 "%0%!FUNC!::387:: Failed to allocate UL buffer %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapInitBuffers
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapHalIf_cpp487 30 "%0%!FUNC!::487:: Return no memory descBuf = %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapPostDlBuffers
+{
+descBuf, ItemPtr -- 10
+}
+#typev QmapHalIf_cpp524 33 "%0%!FUNC!::524:: Index = %10!d!, pend_rx_desc = %11!d!, len = %12!d!, pRb %13!p!, phy %14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Qmap FUNC=QmapPostDlBuffers
+{
+index, ItemLong -- 10
+pQmapCtx->total_pend_rx_desc, ItemLong -- 11
+len, ItemLong -- 12
+pRb, ItemPtr -- 13
+(PVOID)bufAddr, ItemPtr -- 14
+}
+#typev QmapHalIf_cpp519 32 "%0%!FUNC!::519:: Failed: Status = %10!d!, Index = %11!d!, pend_rx_desc = %12!d!, length = %13!d!, pRb %14!p!, phy %15!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapPostDlBuffers
+{
+status, ItemLong -- 10
+index, ItemLong -- 11
+pQmapCtx->total_pend_rx_desc, ItemLong -- 12
+len, ItemLong -- 13
+pRb, ItemPtr -- 14
+(PVOID)bufAddr, ItemPtr -- 15
+}
+#typev QmapHalIf_cpp497 31 "%0%!FUNC!::497:: Error, buffer already with HW %10!d!, for index = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapPostDlBuffers
+{
+pUsrPtr->bufstat, ItemLong -- 10
+index, ItemLong -- 11
+}
+#typev QmapHalIf_cpp475 29 "%0%!FUNC!::475:: Channel in reset-descBuf %10!p! not posted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapPostDlBuffers
+{
+descBuf, ItemPtr -- 10
+}
+#typev QmapHalIf_cpp162 11 "%0%!FUNC!::162:: HW power on request status %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Qmap FUNC=QmapPowerOnHW
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev QmapHalIf_cpp147 10 "%0%!FUNC!::147:: HW power isn't on, attempting to powering on HW." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Qmap FUNC=QmapPowerOnHW
+{
+}
+#typev QmapHalIf_cpp252 17 "%0%!FUNC!::252::no_of_dl_backoff = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Qmap FUNC=QmapRxCb
+{
+pQmapCtx->no_of_dl_backoff, ItemLong -- 10
+}
+#typev QmapHalIf_cpp244 16 "%0%!FUNC!::244:: %10!s! Index = %11!d!, pend_rx_desc = %12!d!, len = %13!d!, pRb %14!p!, bufPa 0x%15!I64x! %16!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Qmap FUNC=QmapRxCb
+{
+xferResult->xFerStatus, ItemNTSTATUS -- 10
+pUsrPtr->Desc_index, ItemLong -- 11
+pQmapCtx->total_pend_rx_desc, ItemLong -- 12
+xferResult->TransferSize, ItemLong -- 13
+(PVOID)&pUsrPtr->reqBlock, ItemPtr -- 14
+xferResult->bufPa, ItemLongLongX -- 15
+hex_dump(vAddr. pQmapCtx->bytesDump), ItemHEXDump -- 16
+}
+#typev QmapHalIf_cpp442 28 "%0%!FUNC!::442:: Queue Buffers failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapStateChangeCb
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapHalIf_cpp433 27 "%0%!FUNC!:: HW state changed from 0x%10!x! to 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapStateChangeCb
+{
+pQmapCtx->qmapHalInfo.deviceState, ItemLong -- 10
+event, ItemLong -- 11
+}
+#typev QmapHalIf_cpp228 15 "%0%!FUNC!::228:: %10!s! Index = %11!d!, free_tx_desc = %12!d!, len = %13!d!, pRb %14!p!, descBuf = %15!p!, bufPa 0x%16!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Qmap FUNC=QmapTxCb
+{
+xferResult->xFerStatus, ItemNTSTATUS -- 10
+pUsrPtr->Desc_index, ItemLong -- 11
+pQmapCtx->total_free_tx_desc, ItemLong -- 12
+xferResult->TransferSize, ItemLong -- 13
+(PVOID)&pUsrPtr->reqBlock, ItemPtr -- 14
+pUsrPtr->descBuf, ItemPtr -- 15
+xferResult->bufPa, ItemLongLongX -- 16
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapTxQueue_cpp315 14 "%0%!FUNC!::213:: Index = %10!d!, free_tx_desc = %11!d!, len = %12!d!, pRb %13!p!, desc = %14!p!, phy %15!p! %16!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Qmap FUNC=QmapEvtTxQueueAdvance
+{
+pQmapTxBuf->index, ItemLong -- 10
+pQmapCtx->total_free_tx_desc, ItemLong -- 11
+len, ItemLong -- 12
+pRb, ItemPtr -- 13
+pUsrPtr->descBuf, ItemPtr -- 14
+(PVOID)pQmapTxBuf->aggrBufLA.QuadPart, ItemPtr -- 15
+hex_dump(pQmapTxBuf->aggrBufVA. pQmapCtx->bytesDump), ItemHEXDump -- 16
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapTxQueue_cpp315 13 "%0%!FUNC!::207:: TX failed: Status = %10!d!, index = %11!d!, total_free_tx_desc = %12!d!, length = %13!d!, pRb %14!p!, desc = %15!p!, payload_phy %16!p! %17!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapEvtTxQueueAdvance
+{
+status, ItemLong -- 10
+pQmapTxBuf->index, ItemLong -- 11
+pQmapCtx->total_free_tx_desc, ItemLong -- 12
+len, ItemLong -- 13
+pRb, ItemPtr -- 14
+pUsrPtr->descBuf, ItemPtr -- 15
+(PVOID)pQmapTxBuf->aggrBufLA.QuadPart, ItemPtr -- 16
+hex_dump(pQmapTxBuf->aggrBufVA. pQmapCtx->bytesDump), ItemHEXDump -- 17
+}
+#typev QmapTxQueue_cpp315 12 "%0%!FUNC!::184:: Error, buffer already with HW %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapEvtTxQueueAdvance
+{
+pUsrPtr->bufstat, ItemLong -- 10
+}

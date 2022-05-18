@@ -1,0 +1,520 @@
+// PDB:  qci2c7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:11:248 (UTC) [tracepdb]
+ea364299-8c8d-3cf2-60e8-b08df12c161a 10.7 // SRC=device.c MJ= MN=
+#typev device_c3436 150 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=CoreDriverCallbackFunc
+{
+}
+#typev device_c3425 149 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=CoreDriverRequestCompleteCallback
+{
+}
+#typev device_c3387 148 "%0Error: Split Transfers Configure for index %10!d! failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_SPBDDI FUNC=CoreDriverRequestCompleteCallback
+{
+pRequest->TransferIndex, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev device_c3236 147 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=CoreDriverRequestCompleteCallback
+{
+}
+#typev device_c432 24 "%0I2C Core Device setting power ON state failed %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnD0Entry
+{
+result, ItemLong -- 10
+}
+#typev device_c451 28 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnD0Entry
+{
+}
+#typev device_c448 27 "%0D2 State: Wake up from Sleep" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnD0Entry
+{
+}
+#typev device_c443 26 "%0I2C Core Device Hardware init state failed %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnD0Entry
+{
+result, ItemLong -- 10
+}
+#typev device_c439 25 "%0D3 State: Wake up from Hibernation" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnD0Entry
+{
+}
+#typev device_c414 23 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnD0Entry
+{
+}
+#typev device_c517 33 "%0I2C Core Device setting power OFF state failed %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnD0Exit
+{
+result, ItemLong -- 10
+}
+#typev device_c522 34 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnD0Exit
+{
+}
+#typev device_c510 32 "%0D2 State: going for Sleep" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnD0Exit
+{
+}
+#typev device_c502 30 "%0I2C Core Device Deinit state failed %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnD0Exit
+{
+result, ItemLong -- 10
+}
+#typev device_c506 31 "%0D2 State: going for Sleep" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnD0Exit
+{
+}
+#typev device_c484 29 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnD0Exit
+{
+}
+#typev device_c2833 127 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=OnDelayTimerExpired
+{
+}
+#typev device_c2824 126 "%0Error completing request synchronously in delayed transfer - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_SPBDDI FUNC=OnDelayTimerExpired
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c2804 125 "%0Failed to unmark cancelable request - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=OnDelayTimerExpired
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c2772 124 "%0Error configuring delayed transfer, completing request synchronously - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_SPBDDI FUNC=OnDelayTimerExpired
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c2757 123 "%0Delay timer expired, ready to configure transfer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_TRANSFER FUNC=OnDelayTimerExpired
+{
+}
+#typev device_c2749 122 "%0SpbRequest is NULL when timer expired" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=TRACE_FLAG_TRANSFER FUNC=OnDelayTimerExpired
+{
+}
+#typev device_c2736 121 "%0Likely STALE TIMER" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=TRACE_FLAG_TRANSFER FUNC=OnDelayTimerExpired
+{
+}
+#typev device_c2725 120 "%0Delay timer expired without a request, this should only occur if the request was cancelled" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=TRACE_FLAG_TRANSFER FUNC=OnDelayTimerExpired
+{
+}
+#typev device_c2712 119 "%0Delay timer expired without a target, this should only occur if the request was already completed" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=TRACE_FLAG_TRANSFER FUNC=OnDelayTimerExpired
+{
+}
+#typev device_c2682 118 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=OnDelayTimerExpired
+{
+}
+#typev device_c644 41 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceCleanup
+{
+}
+#typev device_c1514 81 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=OnInterruptDpc
+{
+}
+#typev device_c1501 80 "%0[%10!I64d!] Enter DPC" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_PERFORMANCE FUNC=OnInterruptDpc
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev device_c1499 79 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=OnInterruptDpc
+{
+}
+#typev device_c1470 78 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=OnInterruptIsr
+{
+}
+#typev device_c1465 77 "%0[%10!I64d!] Leave ISR" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_PERFORMANCE FUNC=OnInterruptIsr
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev device_c1456 76 "%0Interrupt with no status occurred pDevice = 0x%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=OnInterruptIsr
+{
+pDevice, ItemPtr -- 10
+}
+#typev device_c1406 74 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=OnInterruptIsr
+{
+}
+#typev device_c3216 146 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnMonitorPowerSettingCallback
+{
+}
+#typev device_c3204 145 "%0Failed to assign S0 idle settings - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnMonitorPowerSettingCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c3151 144 "%0%!FUNC! parameter Context is NULL - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnMonitorPowerSettingCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c3143 143 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnMonitorPowerSettingCallback
+{
+}
+#typev device_c277 17 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnPrepareHardware
+{
+}
+#typev device_c266 16 "%0I2C Core Device pdesc alloc Initialization failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnPrepareHardware
+{
+}
+#typev device_c242 15 "%0I2C Core Device Initialization failed %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnPrepareHardware
+{
+result, ItemLong -- 10
+}
+#typev device_c152 11 "%0Error mapping controller registers - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnPrepareHardware
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  qci2c7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:11:248 (UTC) [tracepdb]
+#typev device_c204 14 "%0INF Eval Method failed for pDevice 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnPrepareHardware
+{
+pDevice, ItemPtr -- 10
+}
+#typev device_c188 13 "%0I2C QUP Controller @ paddr %10!I64x! vaddr @ %11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnPrepareHardware
+{
+res->u.Memory.Start.QuadPart, ItemLongLongX -- 10
+pDevice->pRegisters, ItemPtr -- 11
+}
+#typev device_c102 10 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnPrepareHardware
+{
+}
+#typev device_c1023 58 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_SPBDDI FUNC=OnRead
+{
+}
+#typev device_c1012 57 "%0[%10!I64d!] OnRead" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_PERFORMANCE FUNC=OnRead
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev device_c1010 56 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_SPBDDI FUNC=OnRead
+{
+}
+#typev device_c355 20 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnReleaseHardware
+{
+}
+#typev device_c313 18 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnReleaseHardware
+{
+}
+#typev device_c2952 132 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=OnRequestCancel
+{
+}
+#typev device_c2939 131 "%0IO %10!s!, transferred %11!u! bytes - %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_TRANSFER FUNC=OnRequestCancel
+{
+NT_SUCCESS(pRequest->Status) ? 'complete' : 'error', ItemString -- 10
+pRequest->TotalInformation, ItemLong -- 11
+pRequest->Status, ItemNTSTATUS -- 12
+}
+#typev device_c2906 130 "%0Timer is already running" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_TRANSFER FUNC=OnRequestCancel
+{
+}
+#typev device_c2888 129 "%0Request Cancelled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_TRANSFER FUNC=OnRequestCancel
+{
+}
+#typev device_c2869 128 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=OnRequestCancel
+{
+}
+#typev device_c3025 136 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=OnRequestCancelTimerExpired
+{
+}
+#typev device_c3008 135 "%0Cancel Timer Failed pRequest NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=OnRequestCancelTimerExpired
+{
+}
+#typev device_c2995 134 "%0Cancel Timer Failed pDevice NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=OnRequestCancelTimerExpired
+{
+}
+#typev device_c2985 133 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=OnRequestCancelTimerExpired
+{
+}
+#typev device_c622 39 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnSelfManagedIoCleanup
+{
+}
+#typev device_c610 38 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnSelfManagedIoCleanup
+{
+}
+#typev device_c583 37 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnSelfManagedIoInit
+{
+}
+#typev device_c575 36 "%0Failed to register monitor power setting callback - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnSelfManagedIoInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c551 35 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnSelfManagedIoInit
+{
+}
+#typev device_c1298 69 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_SPBDDI FUNC=OnSequence
+{
+}
+#typev device_c1256 67 "%0pDevice && pDevice->pCurrentRequest are NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=OnSequence
+{
+}
+#typev device_c1267 68 "%0Failed to unmark cancelable request - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=OnSequence
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c1226 66 "%0Error configuring sequence, completing request synchronously - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_SPBDDI FUNC=OnSequence
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c1185 65 "%0Error: Sequence is not supported %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_SPBDDI FUNC=OnSequence
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c1170 64 "%0Error: Split Transfers Configure for index %10!d! failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_SPBDDI FUNC=OnSequence
+{
+pRequest->TransferIndex, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev device_c1157 73 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=OnSequence
+{
+}
+#typev device_c1157 71 "%0Split Transfer Sequence" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_TRANSFER FUNC=OnSequence
+{
+}
+#typev device_c1157 72 "%0Single Shot Sequence" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_TRANSFER FUNC=OnSequence
+{
+}
+#typev device_c1157 70 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=OnSequence
+{
+}
+#typev device_c1113 63 "%0[%10!I64d!] OnSequence" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_PERFORMANCE FUNC=OnSequence
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev device_c1111 62 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_SPBDDI FUNC=OnSequence
+{
+}
+#typev device_c383 22 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnSurpriseRemoval
+{
+}
+#typev device_c381 21 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnSurpriseRemoval
+{
+}
+#typev device_c740 44 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_SPBDDI FUNC=OnTargetConnect
+{
+}
+#typev device_c730 43 "%0Connected to target with slave address 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_SPBDDI FUNC=OnTargetConnect
+{
+pTarget->Settings.Address, ItemLong -- 10
+}
+#typev device_c697 42 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_SPBDDI FUNC=OnTargetConnect
+{
+}
+#typev device_c831 49 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_SPBDDI FUNC=OnTargetDisConnect
+{
+}
+#typev device_c790 46 "%0No inflight requests from this this target 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_SPBDDI FUNC=OnTargetDisConnect
+{
+pTarget->Settings.Address, ItemLong -- 10
+}
+#typev device_c821 48 "%0Failed to unmark cancelable request - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_SPBDDI FUNC=OnTargetDisConnect
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c806 47 "%0Failed to unmark cancelable request - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_SPBDDI FUNC=OnTargetDisConnect
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c774 45 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_SPBDDI FUNC=OnTargetDisConnect
+{
+}
+#typev device_c1068 61 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_SPBDDI FUNC=OnWrite
+{
+}
+#typev device_c1057 60 "%0[%10!I64d!] OnWrite" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_PERFORMANCE FUNC=OnWrite
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev device_c1055 59 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_SPBDDI FUNC=OnWrite
+{
+}
+#typev device_c1647 88 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcDpcHandler
+{
+}
+#typev device_c1630 87 "%0IO %10!s!, transferred %11!u! bytes - %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcDpcHandler
+{
+NT_SUCCESS(pRequest->Status) ? 'complete' : 'error', ItemString -- 10
+pRequest->TotalInformation, ItemLong -- 11
+pRequest->Status, ItemNTSTATUS -- 12
+}
+#typev device_c1612 86 "%0Failed to unmark cancelable request - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcDpcHandler
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c1585 85 "%0TransferState = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcDpcHandler
+{
+TransferState, ItemLong -- 10
+}
+#typev device_c1566 84 "%0DPC scheduled without a valid current request, this can occur if the request was already completed" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcDpcHandler
+{
+}
+#typev device_c1553 83 "%0DPC scheduled without a valid current target, this can occur if the request was already completed" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcDpcHandler
+{
+}
+#typev device_c1546 82 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcDpcHandler
+{
+}
+#typev device_c3551 158 "%0WdfRegistryQueryValue failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=PbcEvaluateInfMethod
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c3545 157 "%0WdfRegistryQueryValue failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=PbcEvaluateInfMethod
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c3539 156 "%0WdfRegistryQueryValue failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=PbcEvaluateInfMethod
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c3532 155 "%0WdfRegistryOpenKey failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=PbcEvaluateInfMethod
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c3519 154 "%0RtlUnicodeStringCat failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=PbcEvaluateInfMethod
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c3511 153 "%0RtlIntegerToUnicodeString failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=PbcEvaluateInfMethod
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c3504 152 "%0RtlUnicodeStringCopy failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=PbcEvaluateInfMethod
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c3495 151 "%0WdfDeviceOpenRegistryKey failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=PbcEvaluateInfMethod
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c3105 142 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestComplete
+{
+}
+#typev device_c3099 141 "%0pRequest is NULL. Cannot complete request." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestComplete
+{
+}
+#typev device_c3091 140 "%0pRequest is NULL. Cannot complete request." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestComplete
+{
+}
+#typev device_c3066 139 "%0[%10!I64d!] Completing" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_PERFORMANCE FUNC=PbcRequestComplete
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev device_c3058 138 "%0IO %10!s!, transferred %11!u! bytes - %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestComplete
+{
+NT_SUCCESS(pRequest->Status) ? 'complete' : 'error', ItemString -- 10
+pRequest->TotalInformation, ItemLong -- 11
+pRequest->Status, ItemNTSTATUS -- 12
+}
+#typev device_c3051 137 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestComplete
+{
+}
+#typev device_c2461 109 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestConfigureForNonSequenceTransfer
+{
+}
+#typev device_c2448 108 "%0NonSequence configured, address 0x%10!x!, Type 0x%11!x!, Position 0x%12!x!, Length %13!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestConfigureForNonSequenceTransfer
+{
+pTarget->Settings.Address, ItemLong -- 10
+pRequest->Type, ItemLong -- 11
+pRequest->SequencePosition, ItemLong -- 12
+pdesc->length, ItemLong -- 13
+}
+#typev device_c2341 107 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestConfigureForNonSequenceTransfer
+{
+}
+#typev device_c2306 106 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestConfigureForSequenceTransfer
+{
+}
+#typev device_c2300 105 "%0Sequence configured, address 0x%10!x!," //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestConfigureForSequenceTransfer
+{
+pTarget->Settings.Address, ItemLong -- 10
+}
+#typev device_c2186 104 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestConfigureForSequenceTransfer
+{
+}
+#typev device_c2650 117 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestDoTransfer
+{
+}
+#typev device_c2641 116 "%0Failed Async Transfer - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestDoTransfer
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c2594 114 "%0i2c_is_gsi_enabled failed, defaulting to FIFO mode- %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestDoTransfer
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c2601 115 "%0TransferCompleteDpc already queued" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestDoTransfer
+{
+}
+#typev device_c2586 113 "%0[%10!I64d!] Calling Core APIs" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_PERFORMANCE FUNC=PbcRequestDoTransfer
+{
+KeQueryPerformanceCounter(NULL).QuadPart, ItemLongLong -- 10
+}
+#typev device_c2567 112 "%0Marking request cancelable failed - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestDoTransfer
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c2525 111 "%0Delaying %10!u! us before configuring transfer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestDoTransfer
+{
+pRequest->DelayInUs, ItemLong -- 10
+}
+#typev device_c2499 110 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestDoTransfer
+{
+}
+#typev device_c2142 103 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestPerformNonSequenceTransfer
+{
+}
+#typev device_c2111 102 "%0Failed to unmark cancelable request - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestPerformNonSequenceTransfer
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c2100 101 "%0pDevice && pDevice->pCurrentRequest are NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestPerformNonSequenceTransfer
+{
+}
+#typev device_c2071 100 "%0Error configuring sequence, completing request synchronously - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_SPBDDI FUNC=PbcRequestPerformNonSequenceTransfer
+{
+status, ItemNTSTATUS -- 10
+}
+#typev device_c2056 99 "%0Request context has been configured for %10!s! to address 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_SPBDDI FUNC=PbcRequestPerformNonSequenceTransfer
+{
+pRequest->Type == SpbRequestTypeRead ? 'read' : 'write', ItemString -- 10
+pTarget->Settings.Address, ItemLong -- 11
+}
+#typev device_c1991 98 "%0Error: Configure for index %10!d! failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_SPBDDI FUNC=PbcRequestPerformNonSequenceTransfer
+{
+pRequest->TransferIndex, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev device_c1933 97 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_TRANSFER FUNC=PbcRequestPerformNonSequenceTransfer
+{
+}
+#typev device_c1892 96 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_PBCLOADING FUNC=PbcTargetGetSettings
+{
+}
+#typev device_c1875 95 "%0Address: 0x%10!02x!
+CurrentBusSpeed: %11!u!
+ByteDurationInUs: %12!u!
+BitDurationInUs: %13!u!
+SlaveClkStretchInUs: %14!u!
+VendorFlags: %15!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_PBCLOADING FUNC=PbcTargetGetSettings
+{
+pSettings->Address, ItemLong -- 10
+pSettings->CurrentBusSpeed, ItemLong -- 11
+pSettings->ByteDurationInUs, ItemLong -- 12
+pSettings->BitDurationInUs, ItemLong -- 13
+pSettings->SlaveClkStretchInUs, ItemLong -- 14
+pSettings->VendorFlags, ItemLong -- 15
+}
+#typev device_c1813 94 "%0WARNING: Using ClockStretch default %10!d! us.NOTE: I2C Clk Stretch Timeout value must be 4 bytes." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=TRACE_FLAG_PBCLOADING FUNC=PbcTargetGetSettings
+{
+pSettings->SlaveClkStretchInUs, ItemLong -- 10
+}
+#typev device_c1803 93 "%0WARNING: Disabling Vendor Settings.NOTE: Vendor settings must be 4 bytes." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=TRACE_FLAG_PBCLOADING FUNC=PbcTargetGetSettings
+{
+}
+#typev device_c1758 92 "%0ERROR: Unsupported bus speed %10!d! ERROR: Maximum bus speed supported by this I2C HW is only %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_PBCLOADING FUNC=PbcTargetGetSettings
+{
+i2cDescriptor->ConnectionSpeed, ItemLong -- 10
+I2C_QUP_MAX_BUS_SPEED_SUPPORTED, ItemLong -- 11
+}
+#typev device_c1731 91 "%0Bus type %10!c! not supported, only I2C - %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_PBCLOADING FUNC=PbcTargetGetSettings
+{
+descriptor->SerialBusType, ItemChar -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev device_c1712 90 "%0Invalid connection properties (length = %10!d!, expected = %11!d!) - %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_PBCLOADING FUNC=PbcTargetGetSettings
+{
+connection->PropertiesLength, ItemLong -- 10
+sizeof(PPNP_SERIAL_BUS_DESCRIPTOR), ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev device_c1691 89 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_PBCLOADING FUNC=PbcTargetGetSettings
+{
+}
+#typev device_c3591 159 "%0MmGetSystemAddressForMdlSafe() returned NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=mdl_copy
+{
+}
+#typev device_c3600 160 "%0total bytes in MDL chain exceeds expected size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=mdl_copy
+{
+}
+#typev device_c3607 161 "%0descripter Buffer Address 0x%10!p! with desc length %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_WDFLOADING FUNC=mdl_copy
+{
+mdl_address, ItemPtr -- 10
+mdl_bytes, ItemLong -- 11
+}

@@ -1,0 +1,598 @@
+// PDB:  qcdiagrouter7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:26:048 (UTC) [tracepdb]
+1351d681-30ef-3148-a6ba-deb00fa17d7d QCDiagRouter // SRC=DiagRouterCtrl.c MJ= MN=
+#typev DiagRouterCtrl_c1469 76 "%0CreateCtrlPacket:WdfRequestCreate failed, status %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=CreateCtrlPacket
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1484 77 "%0CreateCtrlPacket:WdfMemoryCreate failed, status %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=CreateCtrlPacket
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1508 78 "%0%!FUNC!: Invalid TransType for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagFwdSetAllEventRtMask
+{
+idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1515 79 "%0DiagFwdSetAllEventRtMask: Failed to create mask request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagFwdSetAllEventRtMask
+{
+}
+#typev DiagRouterCtrl_c1546 80 "%0DiagFwdSetAllEventRtMask: Error sending to IPC port =%10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagFwdSetAllEventRtMask
+{
+idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1069 55 "%0%!FUNC!: Lookup for port_idx %10!d!, name %11!s!, name_len %12!d! Status %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagIDLookup
+{
+port_idx, ItemLong -- 10
+name, ItemString -- 11
+name_len, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev DiagRouterCtrl_c1146 58 "%0DiagID %10!d! to peripheral %11!d! NOT SENT, Error**" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdDiagID
+{
+pListEntry->Diag_ID, ItemLong -- 10
+port_idx, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1142 57 "%0DiagID %10!d! to peripheral %11!d! needs to be re-sent in CtrlPktFwdThread, still pending" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CTRL FUNC=DiagRouterFwdDiagID
+{
+pListEntry->Diag_ID, ItemLong -- 10
+port_idx, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1135 56 "%0DiagID %10!d! sent to peripheral %11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterFwdDiagID
+{
+pListEntry->Diag_ID, ItemLong -- 10
+port_idx, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c2388 135 "%0%!FUNC!: Invalid TransType for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdDiagOverSTMCtrlPack
+{
+idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2395 136 "%0DiagRouterFwdDiagOverSTMCtrlPack: Failed to create STMStateUpdateReq" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdDiagOverSTMCtrlPack
+{
+}
+#typev DiagRouterCtrl_c2419 137 "%0DiagRouterFwdDiagOverSTMCtrlPack: Error sending to IPC port =%10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdDiagOverSTMCtrlPack
+{
+idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2319 130 "%0DiagRouterFwdDrainImmediate: Invalid input for peripheral_id = %10!u!, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdDrainImmediate
+{
+peripheral_id, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2332 132 "%0%!FUNC!: Invalid TransType for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdDrainImmediate
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2339 133 "%0DiagRouterFwdPeripheralTxModeHighWMValue: Failed to create mask request " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdDrainImmediate
+{
+}
+#typev DiagRouterCtrl_c2366 134 "%0DiagRouterFwdDrainImmediate: DrainImmediate request was not forwarded to port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdDrainImmediate
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2325 131 "%0DiagRouterFwdDrainImmediate: The peripheral does not support buffering, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdDrainImmediate
+{
+}
+#typev DiagRouterCtrl_c1407 73 "%0%!FUNC!: Invalid TransType for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdEventMask
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1420 74 "%0DiagRouterFwdEventMask: Failed to create mask request " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdEventMask
+{
+}
+#typev DiagRouterCtrl_c1448 75 "%0DiagRouterFwdEventMask: Error sending to IPC port idx = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdEventMask
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1351 70 "%0%!FUNC!: Invalid TransType for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdFeatureMask
+{
+idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1360 71 "%0DiagRouterFwdFeatureMask: Failed to create mask request port %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdFeatureMask
+{
+idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1386 72 "%0DiagRouterFwdFeatureMask: Feature Mask not forwarded to port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdFeatureMask
+{
+idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1608 85 "%0DiagRouterFwdLogMask: Will send mask later when flow is enabled port_idx %10!u! ,equip_id = %11!d!  " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdLogMask
+{
+port_idx, ItemLong -- 10
+equip_id, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1613 86 "%0DiagRouterFwdLogMask failed sending mask update to IPC port_idx %10!u! ,equip_id = %11!d!  " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdLogMask
+{
+port_idx, ItemLong -- 10
+equip_id, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1640 88 "%0DiagRouterFwdLogMask: Failed to create mask request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdLogMask
+{
+}
+#typev DiagRouterCtrl_c1656 92 "%0DiagRouterFwdLogMask: Failed to send mask update request to IPC port_idx = %10!u! ,equip_id = %11!d!  " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdLogMask
+{
+port_idx, ItemLong -- 10
+equip_id, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1604 84 "%0DiagRouterFwdLogMask : After SendCtrlPacketToPeripheral log_mask_update[stream_idx][equip_id][port_idx] = %10!d!, status = %11!X!, pMaskUpdateContext->MaskUpdateMemory = %12!p! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdLogMask
+{
+log_mask_update[stream_idx][equip_id][port_idx], ItemLong -- 10
+status, ItemLong -- 11
+pMaskUpdateContext->MaskUpdateMemory, ItemPtr -- 12
+}
+#typev DiagRouterCtrl_c1600 83 "%0DiagRouterFwdLogMask : After FormatLogMaskPacket log_mask_update[stream_idx][equip_id][port_idx] = %10!d!, mask_update = %11!u!, pMaskUpdateContext->MaskUpdateMemory = %12!p! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdLogMask
+{
+log_mask_update[stream_idx][equip_id][port_idx], ItemLong -- 10
+mask_update, ItemLong -- 11
+pMaskUpdateContext->MaskUpdateMemory, ItemPtr -- 12
+}
+#typev DiagRouterCtrl_c1596 82 "%0DiagRouterFwdLogMask : Before FormatLogMaskPacket log_mask_update[stream_idx][equip_id][port_idx] = %10!d!, mask_update = %11!u! pMaskUpdateContext->MaskUpdateMemory = %12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdLogMask
+{
+log_mask_update[stream_idx][equip_id][port_idx], ItemLong -- 10
+mask_update, ItemLong -- 11
+pMaskUpdateContext->MaskUpdateMemory, ItemPtr -- 12
+}
+#typev DiagRouterCtrl_c1594 81 "%0DiagRouterFwdLogMask : stream_idx = %10!d!, equip_id = %11!d!, port_idx = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdLogMask
+{
+stream_idx, ItemLong -- 10
+equip_id, ItemLong -- 11
+port_idx, ItemLong -- 12
+}
+#typev DiagRouterCtrl_c1652 91 "%0DiagRouterFwdLogMask : After SendCtrlPacketToPeripheral log_mask_update[stream_idx][equip_id][port_idx] = %10!d!, status = %11!X!, MaskUpdateReq = %12!p! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdLogMask
+{
+log_mask_update[stream_idx][equip_id][port_idx], ItemLong -- 10
+status, ItemLong -- 11
+MaskUpdateReq, ItemPtr -- 12
+}
+#typev DiagRouterCtrl_c1648 90 "%0DiagRouterFwdLogMask : After FormatLogMaskPacket log_mask_update[stream_idx][equip_id][port_idx] = %10!d!, mask_update = %11!u!, MaskUpdateMem = %12!p! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdLogMask
+{
+log_mask_update[stream_idx][equip_id][port_idx], ItemLong -- 10
+mask_update, ItemLong -- 11
+MaskUpdateMem, ItemPtr -- 12
+}
+#typev DiagRouterCtrl_c1644 89 "%0DiagRouterFwdLogMask : Before FormatLogMaskPacket log_mask_update[stream_idx][equip_id][port_idx] = %10!d!, mask_update = %11!u! MaskUpdateMem = %12!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdLogMask
+{
+log_mask_update[stream_idx][equip_id][port_idx], ItemLong -- 10
+mask_update, ItemLong -- 11
+MaskUpdateMem, ItemPtr -- 12
+}
+#typev DiagRouterCtrl_c1635 87 "%0DiagRouterFwdLogMask : stream_idx = %10!d!, equip_id = %11!d!, port_idx = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdLogMask
+{
+stream_idx, ItemLong -- 10
+equip_id, ItemLong -- 11
+port_idx, ItemLong -- 12
+}
+#typev DiagRouterCtrl_c2055 111 "%0%!FUNC!: Invalid TransType for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdModeConfigureReq
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2062 112 "%0DiagRouterFwdModeConfigureReq:Failed to create wdfrequest for port = %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdModeConfigureReq
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2100 113 "%0DiagRouterFwdModeConfigureReq: NRT mode control packet not forwarded to port %10!u! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdModeConfigureReq
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2048 110 "%0DiagRouterFwdModeConfigureReq: Invalid input Config value for NRTMode , quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdModeConfigureReq
+{
+}
+#typev DiagRouterCtrl_c2041 109 "%0DiagRouterFwdModeConfigureReq: Invalid input for port_idx = %10!u!, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdModeConfigureReq
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2439 139 "%0%!FUNC!: Invalid TransType for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdModeCtrlPacket
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2484 144 "%0%!FUNC!: DiagRouterFwdPeripheralTxModeWMValue failed, status 0x%10!08x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdModeCtrlPacket
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2474 143 "%0%!FUNC!: DiagRouterFwdPeripheralTxMode failed, status 0x%10!08x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdModeCtrlPacket
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2463 142 "%0%!FUNC!: DiagRouterFwdModeConfigureReq failed, status 0x%10!08x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdModeCtrlPacket
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2450 141 "%0%!FUNC!: DiagRouterFwdModeConfigureReq failed, status 0x%10!08x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdModeCtrlPacket
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2443 140 "%0DiagRouterFwdModeCtrlPacket: Configuring TX_MODE" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=DiagRouterFwdModeCtrlPacket
+{
+}
+// PDB:  qcdiagrouter7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:26:048 (UTC) [tracepdb]
+#typev DiagRouterCtrl_c2430 138 "%0%!FUNC!: The peripheral = %10!u!, does not support buffering, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdModeCtrlPacket
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1862 98 "%0DiagRouterFwdMsgMask: Failed to send msg masks " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdMsgMask
+{
+}
+#typev DiagRouterCtrl_c1859 94 "%0DiagRouterSendMsgMaskCtrlPacket: Failed to send mask request to IPC port= %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdMsgMask
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1875 99 "%0DiagRouterFwdMsgMask: Failed to send msg masks " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdMsgMask
+{
+}
+#typev DiagRouterCtrl_c1872 93 "%0DiagRouterSendMsgMaskCtrlPacket: Failed to create mask request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdMsgMask
+{
+}
+#typev DiagRouterCtrl_c1872 94 "%0DiagRouterSendMsgMaskCtrlPacket: Failed to send mask request to IPC port= %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdMsgMask
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1820 96 "%0DiagRouterFwdMsgMask: Failed to send msg masks " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdMsgMask
+{
+}
+#typev DiagRouterCtrl_c1815 94 "%0DiagRouterSendMsgMaskCtrlPacket: Failed to send mask request to IPC port= %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdMsgMask
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1835 97 "%0DiagRouterFwdMsgMask: Failed to send msg masks " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdMsgMask
+{
+}
+#typev DiagRouterCtrl_c1797 95 "%0DiagRouterFwdMsgMask: Failed to acquire MsgInfoListLock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdMsgMask
+{
+}
+#typev DiagRouterCtrl_c2138 116 "%0%!FUNC!: Invalid TransType for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdPeripheralTxMode
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2145 117 "%0DiagRouterFwdPeripheralTxMode: Failed to create mask request " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdPeripheralTxMode
+{
+}
+#typev DiagRouterCtrl_c2162 118 "%0DiagRouterFwdPeripheralTxMode: Periph TX Mode was not forwarded to port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdPeripheralTxMode
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2131 115 "%0DiagRouterFwdPeripheralTxMode: Invalid input Config value for Mode = %10!u!, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdPeripheralTxMode
+{
+mode, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2123 114 "%0DiagRouterFwdPeripheralTxMode: Invalid input for port_idx = %10!u!, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdPeripheralTxMode
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2201 121 "%0DiagRouterFwdPeripheralTxModeWMValue: Invalid input Config value for WM Value(s) high = %10!u!, low = %11!u!, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdPeripheralTxModeWMValue
+{
+high_wm_value, ItemLong -- 10
+low_wm_value, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c2208 122 "%0%!FUNC!: Invalid TransType for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdPeripheralTxModeWMValue
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2215 123 "%0DiagRouterFwdPeripheralTxModeWMValue: Failed to create mask request " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdPeripheralTxModeWMValue
+{
+}
+#typev DiagRouterCtrl_c2233 124 "%0DiagRouterFwdPeripheralTxModeWMValue: Low Watermark Value was not forwarded to port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdPeripheralTxModeWMValue
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2192 120 "%0DiagRouterFwdPeripheralTxModeWMValue: WM Value(s) high = %10!u!, low = %11!u!, No need to send the ctrl pkt to port_idx = %12!u!, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdPeripheralTxModeWMValue
+{
+high_wm_value, ItemLong -- 10
+low_wm_value, ItemLong -- 11
+port_idx, ItemLong -- 12
+}
+#typev DiagRouterCtrl_c2183 119 "%0DiagRouterFwdPeripheralTxModeWMValue: Invalid input for port_idx = %10!u!, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterFwdPeripheralTxModeWMValue
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c984 49 "%0%!FUNC!: Setting workitem free event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c620 19 "%0%!FUNC!: Max registrations reached!!! Please check!! " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c704 22 "%0%!FUNC!: Max registrations reached!!! Please check!! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c964 48 "%0%!FUNC!: Received unknown Ctrl Message!!cmd type=%10!x!,datalength=%11!x! " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+CtrlBufHdr->cmd_type, ItemLong -- 10
+CtrlBufHdr->data_len, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c959 47 "%0%!FUNC!: Received DiagID Ctrl Msg from peripheral %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pWrkCtxt->PortNum, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c955 46 "%0%!FUNC!: Minimum length check failed for DIAGROUTER_CTRL_PERIPH_BUF_SIZE control packet" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c948 45 "%0%!FUNC!: %10!d! version is not supported for DIAGROUTER_CTRL_PERIPH_BUF_SIZE" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pCtrlPeriphBufSize->Version, ItemLong -- 10
+}
+// PDB:  qcdiagrouter7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:26:048 (UTC) [tracepdb]
+#typev DiagRouterCtrl_c935 44 "%0%!FUNC!:Failed to signal the client for DRAIN_COMPLETE_NOTIF" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+// PDB:  qcdiagrouter7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:26:048 (UTC) [tracepdb]
+#typev DiagRouterCtrl_c930 43 "%0%!FUNC!: Received Drain complete control packet, version %10!d!, peripheral_id %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pCtrlDrainStatus->Version, ItemLong -- 10
+pCtrlDrainStatus->Peripheral_Id, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c924 42 "%0%!FUNC!: Minimum length check failed for DIAGROUTER_CTRL_BT_MSG_BT_MASK_REPORT control packet" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c918 41 "%0%!FUNC!: Bad DIAGROUTER_CTRL_BT_MSG_BT_MASK_REPORT received, SSID_First = %10!d!, SSID_Last = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pMsgBuildMask->SSID_Range.SSID_First, ItemLong -- 10
+pMsgBuildMask->SSID_Range.SSID_Last, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c903 40 "%0%!FUNC!: %10!d! version is not supported for DIAGROUTER_CTRL_BT_MSG_BT_MASK_REPORT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pCtrlMsgBtMaskInfo->Version, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c888 39 "%0%!FUNC!: Minimum length check failed for DIAGROUTER_CTRL_BT_MSG_SSID_RANGE_REPORT control packet" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c882 38 "%0%!FUNC!:  Received bad control packet, SSID_FIRST %10!d! > SSID_LAST %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pMsgSSIDRange->SSID_First, ItemLong -- 10
+pMsgSSIDRange->SSID_Last, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c867 37 "%0%!FUNC!: %10!d! version is not supported for DIAGROUTER_CTRL_BT_MSG_SSID_RANGE_REPORT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pCtrlMsgInfo->Version, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c861 36 "%0%!FUNC!:  Received control packet of incorrect length for DIAGROUTER_CTRL_BT_MSG_SSID_RANGE_REPORT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c846 35 "%0%!FUNC!: Minimum length check failed for DIAGROUTER_CTRL_BT_LOG_RANGE_REPORT control packet" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c842 34 "%0%!FUNC!:Failed to acquire LogInfoUpdateLock " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c815 33 "%0%!FUNC!: %10!d! version is not supported for DIAGROUTER_CTRL_BT_LOG_RANGE_REPORT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pCtrlLogInfo->Version, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c809 32 "%0%!FUNC!: Received control packet of incorrect length for DIAGROUTER_CTRL_BT_LOG_RANGE_REPORT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c796 31 "%0%!FUNC!: Minimum length check failed for DIAGROUTER_CTRL_BT_LAST_EVENT_ID_REPORT control packet" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c793 30 "%0%!FUNC!: Last Event Id reported =%10!d! for IoTarget %11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pCtrlEventInfo->Event_Last_Id, ItemLong -- 10
+IoTarget, ItemPtr -- 11
+}
+#typev DiagRouterCtrl_c786 29 "%0%!FUNC!: %10!d! version is not supported for DIAGROUTER_CTRL_BT_LAST_EVENT_ID_REPORT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pCtrlEventInfo->Version, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c770 145 "%0%!FUNC!: Updated socket control context area, %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+Diag_IPC_Ctrl_Conn[pWrkCtxt->PortNum].updatedIPCConn, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c766 28 "%0%!FUNC!:Feature mask=%10!x!,is_log_on_demand_registered=%11!d! for IoTarget%12!p! for port = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pCtrlFeatureMask->mask[0], ItemLong -- 10
+pCtrlPortContext->is_log_on_demand_rsp_on_slave, ItemLong -- 11
+IoTarget, ItemPtr -- 12
+pWrkCtxt->PortNum, ItemLong -- 13
+}
+#typev DiagRouterCtrl_c758 27 "%0%!FUNC!: Got feature mask of len = %10!d! for port %11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+CtrlBufHdr->data_len, ItemLong -- 10
+pWrkCtxt->PortNum, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c737 26 "%0Match found idx=%10!x!, cmd_code=%11!x!, subsysid=%12!x!, count=%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+idx, ItemLong -- 10
+pCtrlPortContext->PeriphCmdRegTable[idx].cmd_code, ItemLong -- 11
+pCtrlPortContext->PeriphCmdRegTable[idx].subsys_id, ItemLong -- 12
+pCtrlPortContext->PeriphCmdRegTable[idx].count, ItemLong -- 13
+}
+#typev DiagRouterCtrl_c724 25 "%0%!FUNC!: %10!d! version is not supported for DIAGROUTER_CTRL_MSG_DEREG" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pCtrlDeReg->version, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c718 24 "%0version=%10!x!, cmd_code=%11!x!, subsysid=%12!x!, count=%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pCtrlDeReg->version, ItemLong -- 10
+pCtrlDeReg->cmd_code, ItemLong -- 11
+pCtrlDeReg->subsysid, ItemLong -- 12
+pCtrlDeReg->count, ItemLong -- 13
+}
+#typev DiagRouterCtrl_c717 23 "%0%!FUNC!: Received Deregistration Ctrl Msg " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c629 21 "%0version=%10!x!, cmd_code=%11!x!, subsysid=%12!x!, count=%13!x!, port = %14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pCtrlReg->version, ItemLong -- 10
+pCtrlReg->cmd_code, ItemLong -- 11
+pCtrlReg->subsysid, ItemLong -- 12
+pCtrlReg->count, ItemLong -- 13
+pCtrlReg->port, ItemLong -- 14
+}
+#typev DiagRouterCtrl_c628 20 "%0%!FUNC!: Received Registration Ctrl Msg " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c610 18 "%0%!FUNC!: Ctrl packet length is %10!u! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+(UINT32)pkt_len, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c607 17 "%0%!FUNC!: Type=%10!x!, Length=%11!x! for port = %12!d!, data_idx = %13!u! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+CtrlBufHdr->cmd_type, ItemLong -- 10
+CtrlBufHdr->data_len, ItemLong -- 11
+pWrkCtxt->PortNum, ItemLong -- 12
+(UINT32)data_idx, ItemLong -- 13
+}
+#typev DiagRouterCtrl_c599 16 "%0%!FUNC!:Bad length reported in Ctrl packet, length = %10!u!, BufSize = %11!u!,exiting without processing packet" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+(UINT32)(pWrkCtxt->CtrlLen), ItemLong -- 10
+(UINT32)BufSize, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c596 15 "%0%!FUNC!: Total Length=%10!u!, port = %11!d!, ChannelType = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+(UINT32)(pWrkCtxt->CtrlLen), ItemLong -- 10
+pWrkCtxt->PortNum, ItemLong -- 11
+pWrkCtxt->ChannelType, ItemLong -- 12
+}
+#typev DiagRouterCtrl_c592 14 "%0%!FUNC!: Failed to acquire PeriphCmdRegTableLock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+}
+#typev DiagRouterCtrl_c579 13 "%0%!FUNC!: Un-expected NULL pCommonContext for Ctrl Port %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+pWrkCtxt->PortNum, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c530 12 "%0%!FUNC!: Deleted MaskUpdateReq" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterMaskUpdateReqDeInit
+{
+}
+#typev DiagRouterCtrl_c500 10 "%0DiagRouterMaskUpdateReqInit:WdfRequestCreate failed, status %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterMaskUpdateReqInit
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c515 11 "%0DiagRouterMaskUpdateReqInit:WdfMemoryCreate failed, status %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterMaskUpdateReqInit
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2259 126 "%0DiagRouterFwdPeripheralTxMode: Invalid input Config value for PeripheralId = %10!u!. No corresponding IPC port, in bound, is found. Quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterPeripheralTxMode
+{
+pConfigParam->PeripheralId, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2284 129 "%0DiagRouterFwdPeripheralTxMode: Invalid input Config value for WM Value(s) HighWMValue = %10!u!, LowWMValue = %11!u!, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterPeripheralTxMode
+{
+pConfigParam->HighWMValue, ItemLong -- 10
+pConfigParam->LowWMValue, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c2273 128 "%0DiagRouterFwdPeripheralTxMode: Invalid input Config value for Mode = %10!u!, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterPeripheralTxMode
+{
+pConfigParam->Mode, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2265 127 "%0DiagRouterFwdPeripheralTxMode: The peripheral = %10!u!, does not support buffering, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterPeripheralTxMode
+{
+pConfigParam->PeripheralId, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2251 125 "%0DiagRouterFwdPeripheralTxMode: Input Config parameters are NULL, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterPeripheralTxMode
+{
+}
+#typev DiagRouterCtrl_c1748 94 "%0DiagRouterSendMsgMaskCtrlPacket: Failed to send mask request to IPC port= %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterSendMsgMaskCtrlPacket
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1729 93 "%0DiagRouterSendMsgMaskCtrlPacket: Failed to create mask request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=DiagRouterSendMsgMaskCtrlPacket
+{
+}
+#typev DiagRouterCtrl_c1964 104 "%0%!FUNC!: Invalid MsgMaskUpdateStatus, reset the buffer length to 0" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=FormatMsgMaskPacket
+{
+}
+#typev DiagRouterCtrl_c1956 103 "%0%!FUNC!: Disabling all f3s Msg Mask length %10!u! datalen %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=FormatMsgMaskPacket
+{
+ptr->data.msg_data.msg_mask_length, ItemLong -- 10
+ptr->hdr.data_len, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1945 102 "%0%!FUNC!: Enabling all f3s Msg Mask length %10!u! datalen %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=FormatMsgMaskPacket
+{
+ptr->data.msg_data.msg_mask_length, ItemLong -- 10
+ptr->hdr.data_len, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1933 101 "%0%!FUNC!: valid mask msg_mask_len %10!u! data_len %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=FormatMsgMaskPacket
+{
+ptr->data.msg_data.msg_mask_length, ItemLong -- 10
+ptr->hdr.data_len, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1922 100 "%0%!FUNC!: ssid first %10!u! ssid last %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=FormatMsgMaskPacket
+{
+ptr->data.msg_data.ssid_first, ItemLong -- 10
+ptr->data.msg_data.ssid_last, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1313 69 "%0MsgSSIDLookupAndUpdate: Failed to allocate memory for RTMaskArray for SSID_FIRST = %10!d!, SSID_LAST = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=MsgSSIDLookupAndUpdate
+{
+SSID_FIRST, ItemLong -- 10
+SSID_LAST, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1299 68 "%0MsgSSIDLookupAndUpdate: Failed to allocate memory for BTMaskArray for SSID_FIRST = %10!d!, SSID_LAST = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=MsgSSIDLookupAndUpdate
+{
+SSID_FIRST, ItemLong -- 10
+SSID_LAST, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1287 67 "%0MsgSSIDLookupAndUpdate: Failed to allocate memory for PDIAG_MSTR_MASK_TBL_ENTRY Node for SSID_FIRST = %10!d!, SSID_LAST = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=MsgSSIDLookupAndUpdate
+{
+SSID_FIRST, ItemLong -- 10
+SSID_LAST, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1278 66 "%0MsgSSIDLookupAndUpdate: Adding a new node for SSID_FIRST = %10!d!, SSID_LAST = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=MsgSSIDLookupAndUpdate
+{
+SSID_FIRST, ItemLong -- 10
+SSID_LAST, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1247 65 "%0MsgSSIDLookupAndUpdate: Failed to allocate memory for new build or runtime mask array for SSID_FIRST = %10!d!, SSID_LAST = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=MsgSSIDLookupAndUpdate
+{
+SSID_FIRST, ItemLong -- 10
+SSID_LAST, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1232 64 "%0MsgSSIDLookupAndUpdate: Copied data from old BTMaskArray to new BTMaskArray and freed old array" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=MsgSSIDLookupAndUpdate
+{
+}
+#typev DiagRouterCtrl_c1215 63 "%0MsgSSIDLookupAndUpdate: Allocated memory for pBuildMaskArray and pRTMaskArray" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=MsgSSIDLookupAndUpdate
+{
+}
+#typev DiagRouterCtrl_c1207 62 "%0MsgSSIDLookupAndUpdate: NewBufSize : %10!d! OldBufSize : %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=MsgSSIDLookupAndUpdate
+{
+(UINT32)NewBufSize, ItemLong -- 10
+(UINT32)OldBufSize, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1200 61 "%0MsgSSIDLookupAndUpdate: Node exists, update the same node with the new SSID_LAST" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=MsgSSIDLookupAndUpdate
+{
+}
+#typev DiagRouterCtrl_c1190 60 "%0MsgSSIDLookupAndUpdate: SSID_FIRST : %10!d! SSID_LAST : %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=MsgSSIDLookupAndUpdate
+{
+SSID_FIRST, ItemLong -- 10
+SSID_LAST, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1183 59 "%0MsgSSIDLookupAndUpdate: Failed to acquire MsgInfoListLock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=MsgSSIDLookupAndUpdate
+{
+}
+#typev DiagRouterCtrl_c1035 54 "%0%!FUNC!: Error allocating memory to store DiagID" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=ProcessDiagID
+{
+}
+#typev DiagRouterCtrl_c1025 53 "%0%!FUNC!: Invalid process name length %10!d! for DiagID" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=ProcessDiagID
+{
+process_name_len, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1021 52 "%0version=%10!x!, port_idx = %11!d!, Process Name = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=ProcessDiagID
+{
+pDiagID->version, ItemLong -- 10
+pCtrlCtxt->Port_Num, ItemLong -- 11
+(char*)((char*)pDiagID + sizeof(DIAG_CTRL_MSG_DIAGID_TYPE)), ItemString -- 12
+}
+#typev DiagRouterCtrl_c1018 51 "%0%!FUNC!: %10!d! version is not supported for DIAGROUTER_CTRL_MSG_DEREG" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=ProcessDiagID
+{
+pDiagID->version, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1012 50 "%0%!FUNC!: control packet length %10!x! invalid for DiagID" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=ProcessDiagID
+{
+pDiagIDHdr->data_len, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1985 105 "%0%!FUNC!: Packet not sent due to invalid BufferLength : %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=SendCtrlPacketToPeripheral
+{
+(UINT32)send_memory_desc.BufferLength, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c2004 108 "%0%!FUNC!: DiagIPCRSock_Write failed for port %10!d! with error = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=SendCtrlPacketToPeripheral
+{
+port_idx, ItemLong -- 10
+result, ItemLong -- 11
+}
+#typev DiagRouterCtrl_c1999 107 "%0%!FUNC!: Need to send the control packet in system dedicated thread for port %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CTRL FUNC=SendCtrlPacketToPeripheral
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterCtrl_c1994 106 "%0%!FUNC!: Forwarded control packet to Qsocket for port = %10!d!, len %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CTRL FUNC=SendCtrlPacketToPeripheral
+{
+port_idx, ItemLong -- 10
+(UINT32)(send_memory_desc.BufferLength), ItemLong -- 11
+}

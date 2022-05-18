@@ -1,0 +1,112 @@
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+79a1b71c-8ce5-3520-2b96-0401360ea205 Framework // SRC=npa_client.c MJ= MN=
+#typev npa_client_c944 29 "%0npa_complete_request (handle: 0x%10!p!) (client: "%11!s!") (resource: "%12!s!") (attr: 0x%13!08x!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=client->log_handle FUNC=npa_complete_request
+{
+client, ItemPtr -- 10
+client->name, ItemString -- 11
+client->resource_name, ItemString -- 12
+client->request_attr | NPA_REQUEST_FIRE_AND_FORGET, ItemLong -- 13
+}
+#typev npa_client_c378 16 "%0	FAILED npa_create_sync_client (resource: "%10!s!") (client: "%11!s!") (client_type: %12!s!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_create_sync_client_ex
+{
+resource_name, ItemString -- 10
+client_name, ItemString -- 11
+npa_client_type_name(client_type), ItemString -- 12
+}
+#typev npa_client_c365 15 "%0	end npa_create_sync_client (handle: 0x%10!p!) (resource: "%11!s!") (client: "%12!s!") (client_type: %13!s!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_create_sync_client_ex
+{
+client, ItemPtr -- 10
+client->resource_name, ItemString -- 11
+client->name, ItemString -- 12
+npa_client_type_name(client_type), ItemString -- 13
+}
+#typev npa_client_c349 14 "%0npa_create_sync_client (resource: "%10!s!") (client: "%11!s!") (client_type: %12!s!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_create_sync_client_ex
+{
+resource_name, ItemString -- 10
+client_name, ItemString -- 11
+npa_client_type_name(client_type), ItemString -- 12
+}
+#typev npa_client_c1080 32 "%0	end npa_destroy_client (handle: 0x%10!p!) (client: "%11!s!") (resource: "%12!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_destroy_client
+{
+client, ItemPtr -- 10
+client_name, ItemString -- 11
+resource_name, ItemString -- 12
+}
+#typev npa_client_c1023 31 "%0npa_destroy_client (handle: 0x%10!p!) (client: "%11!s!") (resource: "%12!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_destroy_client
+{
+client, ItemPtr -- 10
+client_name, ItemString -- 11
+resource_name, ItemString -- 12
+}
+#typev npa_client_c1168 34 "%0	end npa_force_destroy_client (handle: 0x%10!p!) (client: "%11!s!") (resource: "%12!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_force_destroy_client
+{
+client, ItemPtr -- 10
+client_name, ItemString -- 11
+resource_name, ItemString -- 12
+}
+#typev npa_client_c1116 33 "%0npa_force_destroy_client (handle: 0x%10!p!) (client: "%11!s!") (resource: "%12!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_force_destroy_client
+{
+client, ItemPtr -- 10
+client_name, ItemString -- 11
+resource_name, ItemString -- 12
+}
+#typev npa_client_c598 21 "%0npa_issue_limit_max_request (handle: 0x%10!p!) (client: "%11!s!") (max: %12!d!) (resource: "%13!s!") (active_max: %14!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=client->log_handle FUNC=npa_issue_limit_max_request
+{
+client, ItemPtr -- 10
+client->name, ItemString -- 11
+max, ItemLong -- 12
+resource->definition->name, ItemString -- 13
+active_max, ItemLong -- 14
+}
+#typev npa_client_c644 22 "%0npa_issue_%10!s!_request (handle: 0x%11!p!) (client: "%12!s!") (request: %13!u!) (resource: "%14!s!") (attr: 0x%15!08x!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=client->log_handle FUNC=npa_issue_scalar_request
+{
+client_type, ItemString -- 10
+client, ItemPtr -- 11
+client->name, ItemString -- 12
+state, ItemLong -- 13
+client->resource_name, ItemString -- 14
+client->request_attr, ItemLong -- 15
+}
+#typev npa_client_c874 27 "%0npa_issue%10!s!vector_request (handle: %11!p!) (client: "%12!s!") (resource: "%13!s!") (attr: 0x%14!08x!) (num_elems: %15!d!) (vector: 0x%16!p!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=client->log_handle FUNC=npa_issue_vector_request
+{
+client_type, ItemString -- 10
+client, ItemPtr -- 11
+client->name, ItemString -- 12
+client->resource_name, ItemString -- 13
+client->request_attr, ItemLong -- 14
+num_elems, ItemLong -- 15
+vector, ItemPtr -- 16
+}
+#typev npa_client_c857 26 "%0npa_issue%10!s!vector_request (handle: 0x%11!p!) (client: "%12!s!") (resource: "%13!s!") (attr: 0x%14!08x!) (num_elems: %15!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=client->log_handle FUNC=npa_issue_vector_request
+{
+client_type, ItemString -- 10
+client, ItemPtr -- 11
+client->name, ItemString -- 12
+client->resource_name, ItemString -- 13
+client->request_attr, ItemLong -- 14
+num_elems, ItemLong -- 15
+}
+#typev npa_client_c147 10 "%0	FAILED npa_new_client "%10!s!": resource "%11!s!" does not exist" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_new_client
+{
+client_name, ItemString -- 10
+resource_name, ItemString -- 11
+}
+#typev npa_client_c227 13 "%0	FAILED npa_new_client "%10!s!": resource "%11!s!" failed client create (error_code: %12!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_new_client
+{
+client_name, ItemString -- 10
+resource_name, ItemString -- 11
+code, ItemLong -- 12
+}
+#typev npa_client_c205 12 "%0	FAILED npa_new_client "%10!s!": resource "%11!s!" only supports SINGLE client of each type and already has one of type %12!s!" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_new_client
+{
+client_name, ItemString -- 10
+resource_name, ItemString -- 11
+npa_client_type_name(client_type), ItemString -- 12
+}
+#typev npa_client_c160 11 "%0	FAILED npa_new_client "%10!s!": resource %11!s! does not support client type %12!s!" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_new_client
+{
+client_name, ItemString -- 10
+resource_name, ItemString -- 11
+npa_client_type_name(client_type), ItemString -- 12
+}

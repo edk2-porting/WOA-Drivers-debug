@@ -1,0 +1,171 @@
+// PDB:  qcdiagrouter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+f0800910-c973-3a31-8087-cc5a2de10451 QCDiagRouter // SRC=DiagRouterSocket.c MJ= MN=
+#typev DiagRouterSocket_c1039 57 "%0DiagRouterCloseSocket(), closing socket " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Transport FUNC=DiagRouterCloseSocket
+{
+}
+#typev DiagRouterSocket_c1034 56 "%0DiagRouterCloseSocket: Failed to acquire Diag_Transport_Connection_Lock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=DiagRouterCloseSocket
+{
+}
+#typev DiagRouterSocket_c1087 58 "%0DiagRouterSocketSendCompletion: IRP status Failed, %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSocketSendCompletion
+{
+Irp->IoStatus.Status, ItemLong -- 10
+}
+#typev DiagRouterSocket_c180 11 "%0%!FUNC!: invalid port %10!d! or func %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSocketSendCompletionIPC
+{
+pReadReqContext->port_idx, ItemLong -- 10
+pReadReqContext->func_idx, ItemLong -- 11
+}
+#typev DiagRouterSocket_c217 13 "%0%!FUNC!: Compl, freeing Mdl %10!p! from wsk_buf %11!p! from Req %12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Transport FUNC=DiagRouterSocketSendCompletionIPC
+{
+pReadReqContext->wskBuf.Mdl, ItemPtr -- 10
+&(pReadReqContext->wskBuf), ItemPtr -- 11
+pReadReqContext, ItemPtr -- 12
+}
+#typev DiagRouterSocket_c188 12 "%0%!FUNC!: Irp Status is failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSocketSendCompletionIPC
+{
+}
+#typev DiagRouterSocket_c172 10 "%0%!FUNC!: NULL Context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSocketSendCompletionIPC
+{
+}
+#typev DiagRouterSocket_c406 22 "%0WskDiagRouterDisconnectEvent: DISPATCH_LEVEL " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Transport FUNC=WskDiagRouterDisconnectEvent
+{
+}
+#typev DiagRouterSocket_c404 21 "%0WskDiagRouterDisconnectEvent: Abortive disconnect " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Transport FUNC=WskDiagRouterDisconnectEvent
+{
+}
+#typev DiagRouterSocket_c382 20 "%0 Received data size > %10!x!, data size = %11!Ix! " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Transport FUNC=WskDiagRouterReceiveEvent
+{
+DiagRouterMaxRXSize, ItemLong -- 10
+BytesIndicated, ItemPtr -- 11
+}
+#typev DiagRouterSocket_c380 19 "%0WskDiagRouterReceiveEvent: DataIndication NULL " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Transport FUNC=WskDiagRouterReceiveEvent
+{
+}
+#typev DiagRouterSocket_c353 16 "%0%!FUNC!: diag packet is complete length %10!u!, queue work " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Transport FUNC=WskDiagRouterReceiveEvent
+{
+(unsigned int)pWrkItemContext->RxItemSize, ItemLong -- 10
+}
+#typev DiagRouterSocket_c360 17 "%0%!FUNC!: Received partial packet size %10!u! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Transport FUNC=WskDiagRouterReceiveEvent
+{
+(unsigned int)pWrkItemContext->RxItemSize, ItemLong -- 10
+}
+#typev DiagRouterSocket_c366 18 "%0%!FUNC!: Received invalid packet, free the work item " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Transport FUNC=WskDiagRouterReceiveEvent
+{
+}
+#typev DiagRouterSocket_c288 14 "%0 Received data size > %10!x!, data size = %11!Ix! " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Transport FUNC=WskDiagRouterReceiveEvent
+{
+DiagRouterMaxRXSize, ItemLong -- 10
+(pWrkItemContext->RxItemSize + BytesIndicated), ItemPtr -- 11
+}
+#typev DiagRouterSocket_c314 15 "%0WskDiagRouterReceiveEvent: Could not find free work item" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterReceiveEvent
+{
+}
+#typev DiagRouterSocket_c941 53 "%0DiagRouterSetupSocketThread: Terminate event" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c573 30 "%0WskDiagRouterSetupSocketThread: Could not allocate non-paged pool for WskDiagRouterRegistration" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c583 31 "%0WskDiagRouterSetupSocketThread: WskRegister failed with status 0x%10!0x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSocket_c597 32 "%0WskDiagRouterSetupSocketThread: WskCaptureProviderNPI failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c620 33 "%0WskDiagRouterSetupSocketThread: WSK_SET_STATIC_EVENT_CALLBACKS FAIL 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSocket_c633 34 "%0WskDiagRouterSetupSocketThread: Failed to allocate IRP " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c657 36 "%0WskDiagRouterSetupSocketThread: IoSetCompletionRoutineEx failed, status %10!08x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSocket_c684 37 "%0WskDiagRouterSetupSocketThread: WskSocket FAIL 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+Irp->IoStatus.Status, ItemLong -- 10
+}
+#typev DiagRouterSocket_c723 39 "%0WskDiagRouterSetupSocketThread: IoSetCompletionRoutineEx failed %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterSocket_c734 40 "%0WskDiagRouterSetupSocketThread: WskBind FAIL 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+Irp->IoStatus.Status, ItemLong -- 10
+}
+#typev DiagRouterSocket_c895 49 "%0WskConnect not succeeded, exiting socket set-up thread.." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c867 47 "%0DiagRouterSetupSocketThread: Terminate event while trying to re-connect" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c1000 55 "%0Exiting WskDiagRouterSetupSocketThread, failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c806 45 "%0Note on DiagRouter: On Apollo, name resolution is not supported, please specify host IP " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c805 44 "%0DiagRouter: Host address resolution failed, please try specifying host IP. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c804 43 "%0WskDiagRouterSetupSocketThread: WskGetAddressInfo FAIL no address in remote,quitting. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c537 26 "%0WskDiagRouterSetupSocketThread: RtlUnicodeStringToAnsiString failed for Port " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c545 27 "%0WskDiagRouterSetupSocketThread: RtlUnicodeStringToAnsiString failed for HostName " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c554 28 "%0WskDiagRouterSetupSocketThread: RtlIpv4StringToAddress failed, error = %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+Rtlret, ItemLong -- 10
+}
+#typev DiagRouterSocket_c963 54 "%0!FUNC!: Reconnect event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c917 52 "%0DiagRouterSetupSocketThread: Read Requests Q-ed to IPC" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c914 51 "%0DiagRouterSetupSocketThread: QueueReadRequests failed for %10!d!, func_idx = %11!d!, status %12!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+ipc_idx, ItemLong -- 10
+func_idx, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev DiagRouterSocket_c898 50 "%0DiagRouterSetupSocketThread: WskConnect succeeded " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c888 48 "%0DiagRouterSetupSocketThread: WskConnect failed, retrying.. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c846 46 "%0WskDiagRouterSetupSocketThread: WskConnect FAIL 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+Irp->IoStatus.Status, ItemLong -- 10
+}
+#typev DiagRouterSocket_c778 42 "%0DiagRouterSetupSocketThread: WskGetAddressInfo failed, retrying.. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c772 41 "%0WskDiagRouterSetupSocketThread: WskGetAddressInfo FAIL 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+Irp->IoStatus.Status, ItemLong -- 10
+}
+#typev DiagRouterSocket_c709 38 "%0DiagRouterSocket created successfully " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c642 35 "%0WskDiagRouterSetupSocketThread: HostDetail not specified as name " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+}
+#typev DiagRouterSocket_c565 29 "%0WskDiagRouterSetupSocketThread:remote_in.sin_addr=%10!s!, remote_in.sin_port = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+ansiRemoteName.Buffer, ItemString -- 10
+remote_in.sin_port, ItemLong -- 11
+}
+#typev DiagRouterSocket_c497 24 "%0WskDiagRouterSetupSocketThread: DiagTransportCreateRx failed, status %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=WskDiagRouterSetupSocketThread
+{
+status, ItemLong -- 10
+}

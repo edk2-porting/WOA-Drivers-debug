@@ -1,0 +1,777 @@
+// PDB:  qcslimbus7180.pdb
+// PDB:  Last Updated :2021-10-17:21:55:09:341 (UTC) [tracepdb]
+3230a947-514d-3c9a-a699-cef2824a61fa kmdf // SRC=SlimBus.c MJ= MN=
+#typev SlimBus_c2490 45 "%0[DevId: 0x%10!x!][SlimBus.c 2490] %!FUNC!::Detected port overflow/underflow (client: 0x%11!x!) (resource: 0x%12!x!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pPort->pClientCtxt, ItemLong -- 11
+pPort->handle, ItemLong -- 12
+pPort->portNum, ItemLong -- 13
+}
+#typev SlimBus_c2437 44 "%0[DevId: 0x%10!x!][SlimBus.c 2437] %!FUNC!::Msg device IE change (IE: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+HAL_sb_DeviceGetIeStatus(pDevCtxt->hSB. pDevCtxt->eMsgDev), ItemLong -- 11
+}
+#typev SlimBus_c2433 43 "%0[DevId: 0x%10!x!][SlimBus.c 2433] %!FUNC!::Msg device error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c2429 42 "%0[DevId: 0x%10!x!][SlimBus.c 2429] %!FUNC!::Invalid Tx message was sent" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c2400 41 "%0[DevId: 0x%10!x!][SlimBus.c 2400] %!FUNC!::Simulating master ACK for reconfiguration sequence (channel already active) (client: 0x%11!x!) (channel: %12!ld!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pPort->aEndPoints[endPointNum].pChannel->pClientCtxt, ItemLong -- 11
+pPort->aEndPoints[endPointNum].pChannel->channelNum, ItemLong -- 12
+pPort->portNum, ItemLong -- 13
+}
+#typev SlimBus_c2349 40 "%0[DevId: 0x%10!x!][SlimBus.c 2349] %!FUNC!::Framer active state changed (bActive: %11!ld!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+bActiveFramer, ItemLong -- 11
+}
+#typev SlimBus_c2243 39 "%0[DevId: 0x%10!x!][SlimBus.c 2243] %!FUNC!::Tx message was nacked (MC: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+NackMC, ItemLong -- 11
+}
+#typev SlimBus_c2235 38 "%0[DevId: 0x%10!x!][SlimBus.c 2235] %!FUNC!::Slimbus Tx contention plus message sent!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c2220 37 "%0[DevId: 0x%10!x!][SlimBus.c 2220] %!FUNC!::contention for Tx interface" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c2210 36 "%0[DevId: 0x%10!x!][SlimBus.c 2210] %!FUNC!::PGD device IE change (IE: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+HAL_sb_DeviceGetIeStatus(pDevCtxt->hSB. HAL_SB_DEVICE_PORTED_GENERIC), ItemLong -- 11
+}
+#typev SlimBus_c2206 35 "%0[DevId: 0x%10!x!][SlimBus.c 2206] %!FUNC!::PGD device error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c2198 34 "%0[DevId: 0x%10!x!][SlimBus.c 2198] %!FUNC!::Intf device no data line activity" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c2192 33 "%0[DevId: 0x%10!x!][SlimBus.c 2192] %!FUNC!::Intf device IE change (IE: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+HAL_sb_DeviceGetIeStatus(pDevCtxt->hSB. HAL_SB_DEVICE_INTERFACE), ItemLong -- 11
+}
+#typev SlimBus_c2176 32 "%0[DevId: 0x%10!x!][SlimBus.c 2176] %!FUNC!::Intf device error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c2158 31 "%0[DevId: 0x%10!x!][SlimBus.c 2158] %!FUNC!::Framer device IE change (IE: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+HAL_sb_DeviceGetIeStatus(pDevCtxt->hSB. HAL_SB_DEVICE_FRAMER), ItemLong -- 11
+}
+#typev SlimBus_c2154 30 "%0[DevId: 0x%10!x!][SlimBus.c 2154] %!FUNC!::Framer device error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusCommonDpc
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c2710 50 "%0[DevId: 0x%10!x!][SlimBus.c 2710] %!FUNC!::Hardware initialization failed after enumeration timeout" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusEnumFailHardwareReset
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c2687 49 "%0[DevId: 0x%10!x!][SlimBus.c 2687] %!FUNC!::Hardware reset successful after enumeration timeout" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBusEnumFailHardwareReset
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c2683 48 "%0[DevId: 0x%10!x!][SlimBus.c 2683] %!FUNC!::Hardware reset failed after enumeration timeout" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusEnumFailHardwareReset
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c2675 47 "%0[DevId: 0x%10!x!][SlimBus.c 2675] %!FUNC!::Hardware failed to enumerate after timeout (FS: %11!d!) (SFS: %12!d!) (MS: %13!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusEnumFailHardwareReset
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+HAL_sb_IntfIsFrameSyncAcquired(pDevCtxt->hSB), ItemLong -- 11
+HAL_sb_IntfIsSuperframeSyncAcquired(pDevCtxt->hSB), ItemLong -- 12
+HAL_sb_IntfIsMessageSyncAcquired(pDevCtxt->hSB), ItemLong -- 13
+}
+#typev SlimBus_c2807 52 "%0[DevId: 0x%10!x!][SlimBus.c 2807] %!FUNC!::Received a timer event while waiting for superframe sync" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBusSFTimerCallback
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c2803 51 "%0[DevId: 0x%10!x!][SlimBus.c 2803] %!FUNC!::Shifting superframe sync acquisition offset (FS: 1)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBusSFTimerCallback
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c6202 102 "%0[DevId: 0x%10!x!][SlimBus.c 6202] %!FUNC!::Failed to allocated data channel" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_AllocDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c4540 75 "%0[DevId: 0x%10!x!][SlimBus.c 4540] %!FUNC!::Unable to alloc all requested master ports" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_AllocMasterPortsInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c4510 74 "%0[DevId: 0x%10!x!][SlimBus.c 4510] %!FUNC!::disconnecting BAM pipe during alloc (client: 0x%11!x!) (resource: 0x%12!x!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_AllocMasterPortsInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pPort->handle, ItemLong -- 12
+pPort->portNum, ItemLong -- 13
+}
+#typev SlimBus_c4480 73 "%0[DevId: 0x%10!x!][SlimBus.c 4480] %!FUNC!::disconnecting BAM pipe during alloc (client: 0x%11!x!) (resource: 0x%12!x!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_AllocMasterPortsInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pPort->handle, ItemLong -- 12
+pPort->portNum, ItemLong -- 13
+}
+#typev SlimBus_c4421 72 "%0[DevId: 0x%10!x!][SlimBus.c 4421] %!FUNC!::No master ports available during alloc request (err: 0x%11!x!) (minEP: %12!d!) (minFIFO: %13!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_AllocMasterPortsInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+result, ItemLong -- 11
+uMinNumEndPoints, ItemLong -- 12
+uMinFifoBytes, ItemLong -- 13
+}
+#typev SlimBus_c1737 28 "%0[DevId: 0x%10!x!][SlimBus.c 1737] %!FUNC!::Disabling message queues due to physical malloc failure" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_AllocMsgBuffers
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c6250 103 "%0[DevId: 0x%10!x!][SlimBus.c 6250] %!FUNC!::Shared channel allocation request out of range (chan# %11!ld!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_AllocSharedDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+uChannelNum, ItemLong -- 11
+}
+#typev SlimBus_c6304 104 "%0[DevId: 0x%10!x!][SlimBus.c 6304] %!FUNC!::Shared channel alloc failed, already allocated (chan# %11!ld!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_AllocSharedDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+uChannelNum, ItemLong -- 11
+}
+#typev SlimBus_c3008 53 "%0[DevId: 0x%10!x!][SlimBus.c 3008] %!FUNC!::Restoring non-retention registers" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_CheckAndRestoreNonRetentionRegisters
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c4715 77 "%0[DevId: 0x%10!x!][SlimBus.c 4715] %!FUNC!::Waiting for port disconnection during config port (client: 0x%11!x!) (resource: 0x%12!x!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_ConfigMasterPort
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pPort->handle, ItemLong -- 12
+pPort->portNum, ItemLong -- 13
+}
+#typev SlimBus_c4704 76 "%0[DevId: 0x%10!x!][SlimBus.c 4704] %!FUNC!::Configure master port (client: 0x%11!x!) (hport: 0x%12!x!) (watermark: %13!ld!) (upperwatermark: %14!ld!) (fifosize: %15!ld!) (packed: %16!ld!) (alignmsb: %17!ld!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_ConfigMasterPort
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+hPort, ItemLong -- 12
+pConfig->uWaterMark, ItemLong -- 13
+((pConfig->bUpperWaterMarkValid)?pConfig->uUpperWaterMark:0), ItemLong -- 14
+HAL_sb_PgdPortGetFifoSize(pDevCtxt->hSB. 0. pPort->portNum), ItemLong -- 15
+(pConfig->eOptions&SLIMBUS_PORT_O_PACKED), ItemLong -- 16
+(pConfig->eOptions&SLIMBUS_PORT_O_ALIGN_MSB), ItemLong -- 17
+}
+#typev SlimBus_c7116 123 "%0[DevId: 0x%10!x!][SlimBus.c 7116] %!FUNC!::Error during connect channel request (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_ConnectPortToChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c6993 116 "%0[DevId: 0x%10!x!][SlimBus.c 6993] %!FUNC!::Not enough endpoints to support connect master port request (client: 0x%11!x!) (#channels: %12!ld!) (port: %13!ld!) (#endpoints %14!ld!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_ConnectPortToChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+GetNodeCount(&pGroup->ResourceList), ItemLong -- 12
+portNum, ItemLong -- 13
+pPort->numEndPoints, ItemLong -- 14
+}
+#typev SlimBus_c6958 115 "%0[DevId: 0x%10!x!][SlimBus.c 6958] %!FUNC!::Attempt to connect port during channel purge" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_ConnectPortToChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c7086 122 "%0[DevId: 0x%10!x!][SlimBus.c 7086] %!FUNC!::Manually disconnecting previous source port due to channel reactivating (port: %11!ld!) (channel: %12!ld!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_ConnectPortToChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pMasterPort->portNum, ItemLong -- 11
+pChannel->channelNum, ItemLong -- 12
+}
+#typev SlimBus_c7050 121 "%0[DevId: 0x%10!x!][SlimBus.c 7050] %!FUNC!::Got connect slave port request (client: 0x%11!x!) (channel: 0x%12!x!) (LA: 0x%13!x!) (port: 0x%14!x!) (endpoint: %15!ld!) (flow: Sink)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_ConnectPortToChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+chanNum, ItemLong -- 12
+LA, ItemLong -- 13
+portNum, ItemLong -- 14
+endPointNum, ItemLong -- 15
+}
+#typev SlimBus_c7044 120 "%0[DevId: 0x%10!x!][SlimBus.c 7044] %!FUNC!::Got connect slave port request (client: 0x%11!x!) (channel: 0x%12!x!) (LA: 0x%13!x!) (port: 0x%14!x!) (endpoint: %15!ld!) (flow: Source)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_ConnectPortToChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+chanNum, ItemLong -- 12
+LA, ItemLong -- 13
+portNum, ItemLong -- 14
+endPointNum, ItemLong -- 15
+}
+#typev SlimBus_c7016 119 "%0[DevId: 0x%10!x!][SlimBus.c 7016] %!FUNC!::Waiting for port disconnection during connect port (client: 0x%11!x!) (resource: 0x%12!x!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_ConnectPortToChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pPort->handle, ItemLong -- 12
+pPort->portNum, ItemLong -- 13
+}
+#typev SlimBus_c7009 118 "%0[DevId: 0x%10!x!][SlimBus.c 7009] %!FUNC!::Got connect master port request (client: 0x%11!x!) (channel: %12!ld!) (port: %13!ld!) (endpoint: %14!ld!) (flow: Sink) (LA: 0x%15!x!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_ConnectPortToChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+chanNum, ItemLong -- 12
+portNum, ItemLong -- 13
+endPointNum, ItemLong -- 14
+LA, ItemLong -- 15
+}
+#typev SlimBus_c7003 117 "%0[DevId: 0x%10!x!][SlimBus.c 7003] %!FUNC!::Got connect master port request (client: 0x%11!x!) (channel: %12!ld!) (port: %13!ld!) (endpoint: %14!ld!) (flow: Source) (LA: 0x%15!x!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_ConnectPortToChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+chanNum, ItemLong -- 12
+portNum, ItemLong -- 13
+endPointNum, ItemLong -- 14
+LA, ItemLong -- 15
+}
+#typev SlimBus_c7955 144 "%0[DevId: 0x%10!x!][SlimBus.c 7955] %!FUNC!::Unable to complete channel removal during dealloc (res: 0x%11!x!) (chan: %12!ld!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_DeallocDataChannelInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pChannel->handle, ItemLong -- 11
+pChannel->channelNum, ItemLong -- 12
+}
+#typev SlimBus_c7939 143 "%0[DevId: 0x%10!x!][SlimBus.c 7939] %!FUNC!::Skipping reconfig now during channel dealloc due to pending requests (res: 0x%11!x!) (chan: %12!ld!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_DeallocDataChannelInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pChannel->handle, ItemLong -- 11
+pChannel->channelNum, ItemLong -- 12
+}
+#typev SlimBus_c7933 142 "%0[DevId: 0x%10!x!][SlimBus.c 7933] %!FUNC!::Generating reconfigure now request for channel dealloc (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_DeallocDataChannelInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c7970 145 "%0[DevId: 0x%10!x!][SlimBus.c 7970] %!FUNC!::Failed to deallocate data channel (res: 0x%11!x!) (chan: %12!ld!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_DeallocDataChannelInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+((NULL != pChannel) ? pChannel->handle : 0), ItemLong -- 11
+((NULL != pChannel) ? pChannel->channelNum : -1), ItemLong -- 12
+}
+#typev SlimBus_c7915 141 "%0[DevId: 0x%10!x!][SlimBus.c 7915] %!FUNC!::Channel still active during dealloc, attemping removal (res: 0x%11!x!) (chan: %12!ld!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_DeallocDataChannelInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pChannel->handle, ItemLong -- 11
+pChannel->channelNum, ItemLong -- 12
+}
+#typev SlimBus_c4163 71 "%0[DevId: 0x%10!x!][SlimBus.c 4163] %!FUNC!::disconnecting BAM pipe during dealloc (client: 0x%11!x!) (resource: 0x%12!x!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_DeallocPort
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pPort->pClientCtxt, ItemLong -- 11
+pPort->handle, ItemLong -- 12
+pPort->portNum, ItemLong -- 13
+}
+#typev SlimBus_c4115 70 "%0[DevId: 0x%10!x!][SlimBus.c 4115] %!FUNC!::Waiting for port disconnection during deallocation (client: 0x%11!x!) (resource: 0x%12!x!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_DeallocPort
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pCtxt, ItemLong -- 11
+pPort->handle, ItemLong -- 12
+pPort->portNum, ItemLong -- 13
+}
+#typev SlimBus_c3726 66 "%0[DevId: 0x%10!x!][SlimBus.c 3726] %!FUNC!::Slimbus device closed (client: 0x%11!x!) (#open %12!ld!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_DeviceClose
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pDevCtxt->uOpenCnt, ItemLong -- 12
+}
+#typev SlimBus_c3716 65 "%0[DevId: 0x%10!x!][SlimBus.c 3716] %!FUNC!::Deallocating port during device close (client: 0x%11!x!) (hport: %12!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_DeviceClose
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pPort->handle, ItemLong -- 12
+}
+#typev SlimBus_c9010 151 "%0[DevId: 0x%10!x!][SlimBus.c 9010] %!FUNC!::Generating reconfigure now request (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_DeviceDetach
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c9002 150 "%0[DevId: 0x%10!x!][SlimBus.c 9002] %!FUNC!::Client detaching from device (client: 0x%11!x!) (device: 0x%12!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_DeviceDetach
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+(uint32)pDevCtxt, ItemLong -- 12
+}
+#typev SlimBus_c3559 61 "%0[DevId: 0x%10!x!][SlimBus.c 3559] %!FUNC!::Hardware initialization completed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_DeviceInitHardware
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c3426 60 "%0[DevId: 0x%10!x!][SlimBus.c 3426] %!FUNC!::Hardware reset failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_DeviceInitHardware
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c3400 58 "%0[DevId: 0x%10!x!][SlimBus.c 3400] %!FUNC!::Bus appears to be paused but driver is expecting external framer" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_DeviceInitHardware
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c3394 57 "%0[DevId: 0x%10!x!][SlimBus.c 3394] %!FUNC!::Switching to active framer mode due to lack of external clock toggle" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_DeviceInitHardware
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c3223 55 "%0[DevId: 0x%10!x!][SlimBus.c 3223] %!FUNC!::*** Driver Initialization (master: %11!d!) (protocols: 0x%12!x!) (workarounds: 0x%13!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_DeviceInitInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(pDevCtxt->eDrvType == SB_MASTER_DRIVER), ItemLong -- 11
+SB_QC_SUPPORTED_PROTOCOLS, ItemLong -- 12
+pDevCtxt->eWrkrnd, ItemLong -- 13
+}
+#typev SlimBus_c3068 54 "%0[DevId: 0x%10!x!][SlimBus.c 3068] %!FUNC!::Error performing target-specific initialization" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_DeviceInitInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c3675 64 "%0[DevId: 0x%10!x!][SlimBus.c 3675] %!FUNC!::Timeout waiting for hardware enumeration during device open" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_DeviceOpen
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c3661 63 "%0[DevId: 0x%10!x!][SlimBus.c 3661] %!FUNC!::Error during device open (client: 0x%11!x!) (#open %12!ld!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_DeviceOpen
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pDevCtxt->uOpenCnt, ItemLong -- 12
+}
+#typev SlimBus_c3611 62 "%0[DevId: 0x%10!x!][SlimBus.c 3611] %!FUNC!::Slimbus device is being opened (client: 0x%11!x!) (#open %12!ld!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_DeviceOpen
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pDevCtxt->uOpenCnt+1, ItemLong -- 12
+}
+#typev SlimBus_c7207 125 "%0[DevId: 0x%10!x!][SlimBus.c 7207] %!FUNC!::Got disconnect slave port request (client: 0x%11!x!) (resource: 0x%12!x!) (LA: 0x%13!x!) (port %14!ld!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_DisconnectPortFromChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+hPort, ItemLong -- 12
+LA, ItemLong -- 13
+portNum, ItemLong -- 14
+}
+#typev SlimBus_c7199 124 "%0[DevId: 0x%10!x!][SlimBus.c 7199] %!FUNC!::Got disconnect master port request (client: 0x%11!x!) (resource: 0x%12!x!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_DisconnectPortFromChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+hPort, ItemLong -- 12
+portNum, ItemLong -- 13
+}
+#typev SlimBus_c7281 126 "%0[DevId: 0x%10!x!][SlimBus.c 7281] %!FUNC!::Error during disconnect port from channel request (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_DisconnectPortFromChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c5303 86 "%0[DevId: 0x%10!x!][SlimBus.c 5303] %!FUNC!::No free events during DoReadWriteOp (client 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_DoReadWriteOp
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c5293 85 "%0[DevId: 0x%10!x!][SlimBus.c 5293] %!FUNC!::Unable to get device pointer (LA: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_DoReadWriteOp
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+LA, ItemLong -- 11
+}
+#typev SlimBus_c5281 84 "%0[DevId: 0x%10!x!][SlimBus.c 5281] %!FUNC!::Got IE/VE transaction (LA: 0x%11!x!) (addr: 0x%12!x!) (#write: %13!ld!) (#read: %14!ld!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_DoReadWriteOp
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+LA, ItemLong -- 11
+uByteAddr, ItemLong -- 12
+((NULL!=pucWriteData)?uReadDataLen:0), ItemLong -- 13
+((NULL!=pucReadData)?uReadDataLen:0), ItemLong -- 14
+}
+#typev SlimBus_c5258 83 "%0[DevId: 0x%10!x!][SlimBus.c 5258] %!FUNC!::Error attempting to initialize buffer for batch transfers" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_DoReadWriteOp
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c5247 82 "%0[DevId: 0x%10!x!][SlimBus.c 5247] %!FUNC!::Non blocking DoReadWriteOp with read data pointer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_DoReadWriteOp
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c5236 81 "%0[DevId: 0x%10!x!][SlimBus.c 5236] %!FUNC!::DoReadWriteOp got bad slice size (ucCurSize: 0x%11!x!) (uSliceLen: %12!ld!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_DoReadWriteOp
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+ucCurSize, ItemLong -- 11
+uSliceLen, ItemLong -- 12
+}
+#typev SlimBus_c7824 140 "%0[DevId: 0x%10!x!][SlimBus.c 7824] %!FUNC!::Got reconfigure now request (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_DoReconfigureNow
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c7787 139 "%0[DevId: 0x%10!x!][SlimBus.c 7787] %!FUNC!::Error during reconfigure now request (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_DoReconfigureNowInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c7741 138 "%0[DevId: 0x%10!x!][SlimBus.c 7741] %!FUNC!::Port descriptors are flushed (port: %11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_DoReconfigureNowInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pPort->portNum, ItemLong -- 11
+}
+#typev SlimBus_c7734 137 "%0[DevId: 0x%10!x!][SlimBus.c 7734] %!FUNC!::Timeout while waiting for the port desc to be empty (portres: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_DoReconfigureNowInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pPort->handle, ItemLong -- 11
+}
+#typev SlimBus_c7730 136 "%0[DevId: 0x%10!x!][SlimBus.c 7730] %!FUNC!::Port descriptors are flushed (port: %11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_DoReconfigureNowInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pPort->portNum, ItemLong -- 11
+}
+#typev SlimBus_c7720 135 "%0[DevId: 0x%10!x!][SlimBus.c 7720] %!FUNC!::Waiting for port descriptors to flush (port: %11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_DoReconfigureNowInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pPort->portNum, ItemLong -- 11
+}
+#typev SlimBus_c1132 25 "%0[DevId: 0x%10!x!][SlimBus.c 1132] %!FUNC!::No free events during EnqueueMsgEvent (client 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_EnqueueMsgEvent
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c3900 69 "%0[DevId: 0x%10!x!][SlimBus.c 3900] %!FUNC!::logical address lookup failed (client: 0x%11!x!) (EA: 0x%12!04x!%13!08x!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_GetDeviceLogicalAddr
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+*(uint16*)&pEA[4], ItemLong -- 12
+*(uint32*)&pEA[0], ItemLong -- 13
+}
+#typev SlimBus_c3881 68 "%0[DevId: 0x%10!x!][SlimBus.c 3881] %!FUNC!::Got LA query (client: 0x%11!x!) (EA: 0x%12!04x!%13!08x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_GetDeviceLogicalAddr
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+*(uint16*)&pEA[4], ItemLong -- 12
+*(uint32*)&pEA[0], ItemLong -- 13
+}
+#typev SlimBus_c1232 26 "%0[DevId: 0x%10!x!][SlimBus.c 1232] %!FUNC!::Auto created device structure (LA: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_GetDevicePtr
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+LA, ItemLong -- 11
+}
+#typev SlimBus_c3834 67 "%0[DevId: 0x%10!x!][SlimBus.c 3834] %!FUNC!::detected SB core (version: 0x%11!x!) (workarounds: 0x%12!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_GetMasterPgdLA
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+uRev, ItemLong -- 11
+pDevCtxt->eWrkrnd, ItemLong -- 12
+}
+#typev SlimBus_c701 19 "%0[DevId: 0x%10!x!][SlimBus.c 701] %!FUNC!::Invalid params to getmsgbuffer (pMsgFifo: 0x%11!x!) (pBuf: 0x%12!x!) (uNumBytes: 0x%13!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_GetMsgBuffer
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pMsgFifo, ItemLong -- 11
+(uint32)pMsgFifo->pBuf, ItemLong -- 12
+uNumBytes, ItemLong -- 13
+}
+#typev SlimBus_c762 20 "%0[DevId: 0x%10!x!][SlimBus.c 762] %!FUNC!::No buffer space in queue (uHeadIdx: 0x%11!I64x!) (uTailIdx: 0x%12!I64x!) (uLen: 0x%13!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_GetMsgBuffer
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pMsgFifo->uHeadIdx, ItemLongLongX -- 11
+uTailIdx, ItemLongLongX -- 12
+pMsgFifo->uLen, ItemLong -- 13
+}
+#typev SlimBus_c7557 132 "%0[DevId: 0x%10!x!][SlimBus.c 7557] %!FUNC!::Request to control individual channel within multi-channel group coverted to group control (channel: %11!ld!) (resource: 0x%12!x!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_NextDataChannelControl
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pChannel->channelNum, ItemLong -- 11
+pChannel->pGroup->handle, ItemLong -- 12
+}
+#typev SlimBus_c7548 131 "%0[DevId: 0x%10!x!][SlimBus.c 7548] %!FUNC!::Failed to perform channel control due to invalid handle (res: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_NextDataChannelControl
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+hChannel, ItemLong -- 11
+}
+#typev SlimBus_c7491 130 "%0[DevId: 0x%10!x!][SlimBus.c 7491] %!FUNC!::Error during data channel control request (client: 0x%11!x!) (eCtrl: %12!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_NextDataChannelControlInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+eCtrl, ItemLong -- 12
+}
+#typev SlimBus_c7372 128 "%0[DevId: 0x%10!x!][SlimBus.c 7372] %!FUNC!::Can't activate/de-activate a channel that is already removed (res: %11!ld!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_NextDataChannelControlInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pTempChannel->channelNum, ItemLong -- 11
+}
+#typev SlimBus_c7457 129 "%0[DevId: 0x%10!x!][SlimBus.c 7457] %!FUNC!::Master nacked data channel control request, rolling back configuration (client: 0x%11!x!) (eCtrl: %12!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_NextDataChannelControlInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+eCtrl, ItemLong -- 12
+}
+#typev SlimBus_c7344 127 "%0[DevId: 0x%10!x!][SlimBus.c 7344] %!FUNC!::Got data channel control request (client: 0x%11!x!) (resource: 0x%12!x!) (channel: %13!ld!) (#channels: %14!ld!) (op: %15!d!) (#descs: %16!ld!) (#bytes: %17!ld!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_NextDataChannelControlInternal
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+hRes, ItemLong -- 12
+pChannel->channelNum, ItemLong -- 13
+uCnt, ItemLong -- 14
+eCtrl, ItemLong -- 15
+((NULL==pEndPoint)?((uint32)-1):(pEndPoint->pPort->uDescSubmit)), ItemLong -- 16
+((NULL==pEndPoint)?((uint32)-1):(pEndPoint->pPort->uBytesSubmit)), ItemLong -- 17
+}
+#typev SlimBus_c6597 109 "%0[DevId: 0x%10!x!][SlimBus.c 6597] %!FUNC!::Channel removal pending during call to define channel (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_NextDefineDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c6890 113 "%0[DevId: 0x%10!x!][SlimBus.c 6890] %!FUNC!::Master ack failure in call to define channel (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_NextDefineDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c6762 112 "%0[DevId: 0x%10!x!][SlimBus.c 6762] %!FUNC!::Converted rate for push/pull protocol: %11!ld! => %12!ld!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_NextDefineDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+uReqRate, ItemLong -- 11
+uActualRate, ItemLong -- 12
+}
+#typev SlimBus_c6720 111 "%0[DevId: 0x%10!x!][SlimBus.c 6720] %!FUNC!::Auto iso mode specified for channel but unableto determine flow direction (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_NextDefineDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c6705 110 "%0[DevId: 0x%10!x!][SlimBus.c 6705] %!FUNC!::Unable to convert half duplex to push-pull in call to define channel (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_NextDefineDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c6897 114 "%0[DevId: 0x%10!x!][SlimBus.c 6897] %!FUNC!::Error during define data channel request (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_NextDefineDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c6585 108 "%0[DevId: 0x%10!x!][SlimBus.c 6585] %!FUNC!::Master port flow validation error during call to define channel (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_NextDefineDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c6557 107 "%0[DevId: 0x%10!x!][SlimBus.c 6557] %!FUNC!::Reconfiguration pending during call to define channel (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_NextDefineDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c6549 106 "%0[DevId: 0x%10!x!][SlimBus.c 6549] %!FUNC!::Got define channel request (client: 0x%11!x!) (resource: 0x%12!x!) (channel: %13!ld!) (#channels: %14!ld!) (protocol: %15!d!) (baserate: %16!d!) (ratemult: %17!ld!) (bitwidth: %18!ld!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_NextDefineDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+hChannel, ItemLong -- 12
+pChannel->channelNum, ItemLong -- 13
+uCnt, ItemLong -- 14
+pChannelReq->eDesiredProtocol, ItemLong -- 15
+pChannelReq->eBaseSampleRate, ItemLong -- 16
+pChannelReq->uRateMultiplier, ItemLong -- 17
+pChannelReq->uSampleSize_bits, ItemLong -- 18
+}
+#typev SlimBus_c6532 105 "%0[DevId: 0x%10!x!][SlimBus.c 6532] %!FUNC!::Request to define individual channel within a multi-channel group coverted to a group request (channel: %11!ld!) (resource: %12!ld!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_NextDefineDataChannel
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pChannel->channelNum, ItemLong -- 11
+hChannel, ItemLong -- 12
+}
+#typev SlimBus_c4885 78 "%0[DevId: 0x%10!x!][SlimBus.c 4885] %!FUNC!::Got message bandwitdth request (client: 0x%11!x!) (bps: %12!ld!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_NextReserveMsgBandwidth
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+uBandwidth_bps, ItemLong -- 12
+}
+#typev SlimBus_c1047 24 "%0[DevId: 0x%10!x!][SlimBus.c 1047] %!FUNC!::Corruption of MsgFifo indicies detected during peek (uTailIdx: 0x%11!x!) (uHeadIdx: 0x%12!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_PeekBuffer
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pMsgFifo->uTailIdx, ItemLong -- 11
+(uint32)pMsgFifo->uHeadIdx, ItemLong -- 12
+}
+#typev SlimBus_c2051 29 "%0[DevId: 0x%10!x!][SlimBus.c 2051] %!FUNC!::Got port disconnection (client: 0x%11!x!) (resource: 0x%12!x!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_ProcessPortDisconnection
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pPort->pClientCtxt, ItemLong -- 11
+pPort->handle, ItemLong -- 12
+pPort->portNum, ItemLong -- 13
+}
+#typev SlimBus_c1593 27 "%0[DevId: 0x%10!x!][SlimBus.c 1593] %!FUNC!::Received unhandled message (msg: 0x%11!x! 0x%12!x! 0x%13!x!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_ProcessRxMsg
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+data, ItemLong -- 11
+((length>4)?(pDataBuf[0]):0), ItemLong -- 12
+((length>8)?(pDataBuf[1]):0), ItemLong -- 13
+}
+#typev SlimBus_c5421 87 "%0[DevId: 0x%10!x!][SlimBus.c 5421] %!FUNC!::Read VE validation error (bOpen: %11!ld!) (uByteAddr: 0x%12!x!) (uReadDataLen: %13!ld!) (pucReadData: 0x%14!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_ReadValueElement
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pClientCtxt->bOpen, ItemLong -- 11
+uByteAddr, ItemLong -- 12
+uReadDataLen, ItemLong -- 13
+(uint32)pucReadData, ItemLong -- 14
+}
+#typev SlimBus_c6004 95 "%0[DevId: 0x%10!x!][SlimBus.c 6004] %!FUNC!::Validation error during SendBatchedMessages" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendBatchedMessages
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c6029 98 "%0[DevId: 0x%10!x!][SlimBus.c 6029] %!FUNC!::No free events during SendBatchMessages (client 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendBatchedMessages
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c6124 101 "%0[DevId: 0x%10!x!][SlimBus.c 6124] %!FUNC!::Batch message transaction failure (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendBatchedMessages
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c6111 100 "%0[DevId: 0x%10!x!][SlimBus.c 6111] %!FUNC!::Event wait timeout during SendBatchedMessage" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendBatchedMessages
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c6071 99 "%0[DevId: 0x%10!x!][SlimBus.c 6071] %!FUNC!::Timeout waiting for Tx Fifo to go idle during SendBatchedMessages (client 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendBatchedMessages
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c6022 97 "%0[DevId: 0x%10!x!][SlimBus.c 6022] %!FUNC!::Unable to get device pointer (LA: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendBatchedMessages
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+LA, ItemLong -- 11
+}
+#typev SlimBus_c6016 96 "%0[DevId: 0x%10!x!][SlimBus.c 6016] %!FUNC!::Got request to send batched messages (client 0x%11!x!) (#bytes: %12!ld!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_SendBatchedMessages
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+(uint32)pClientCtxt->BatchMsgFifo.uHeadIdx*4, ItemLong -- 12
+}
+#typev SlimBus_c5179 80 "%0[DevId: 0x%10!x!][SlimBus.c 5179] %!FUNC!::Client message transaction failure (client: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendClientMessage
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c5165 79 "%0[DevId: 0x%10!x!][SlimBus.c 5165] %!FUNC!::Event wait timeout during SendClientMessage (uAvail: %11!ld!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendClientMessage
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pDevice->uAvailTrans, ItemLong -- 11
+}
+#typev SlimBus_c981 23 "%0[DevId: 0x%10!x!][SlimBus.c 981] %!FUNC!::Transfer Tx IO vector returned error (uNewTailIdx: 0x%11!x!) (uTailIdx: 0x%12!x!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_SendTxBamBuffer
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)uNewTailIdx, ItemLong -- 11
+(uint32)pMsgFifo->uTailIdx, ItemLong -- 12
+}
+#typev SlimBus_c930 22 "%0[DevId: 0x%10!x!][SlimBus.c 930] %!FUNC!::SlimBus_EmptyBamIOVec returned error!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendTxBamBuffer
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c921 21 "%0[DevId: 0x%10!x!][SlimBus.c 921] %!FUNC!::Corruption of MsgFifo indicies detected during send (uTailIdx: 0x%11!x!) (uHeadIdx: 0x%12!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendTxBamBuffer
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pMsgFifo->uTailIdx, ItemLong -- 11
+(uint32)pMsgFifo->uHeadIdx, ItemLong -- 12
+}
+#typev SlimBus_c5866 89 "%0[DevId: 0x%10!x!][SlimBus.c 5866] %!FUNC!::Send user-defined msg VE validation error (bOpen: %11!ld!) (uPayloadLen: %12!ld!) (pucPayload: 0x%13!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendUserDefinedMessage
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pClientCtxt->bOpen, ItemLong -- 11
+uPayloadLen, ItemLong -- 12
+(uint32)pucPayload, ItemLong -- 13
+}
+#typev SlimBus_c5916 93 "%0[DevId: 0x%10!x!][SlimBus.c 5916] %!FUNC!::Got request to send user-defined message to restricted device (LA: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendUserDefinedMessage
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+LA, ItemLong -- 11
+}
+#typev SlimBus_c5926 94 "%0[DevId: 0x%10!x!][SlimBus.c 5926] %!FUNC!::No free events during SendUserDefinedMessage (client 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendUserDefinedMessage
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c5908 92 "%0[DevId: 0x%10!x!][SlimBus.c 5908] %!FUNC!::Unable to get device pointer (LA: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendUserDefinedMessage
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+LA, ItemLong -- 11
+}
+#typev SlimBus_c5897 91 "%0[DevId: 0x%10!x!][SlimBus.c 5897] %!FUNC!::Got user-defined message request (LA: 0x%11!x!) (MC: %12!ld!) (size: %13!ld!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_SendUserDefinedMessage
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+LA, ItemLong -- 11
+MC, ItemLong -- 12
+uPayloadLen, ItemLong -- 13
+}
+#typev SlimBus_c5879 90 "%0[DevId: 0x%10!x!][SlimBus.c 5879] %!FUNC!::Error attempting to initialize buffer for batch transfers" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SendUserDefinedMessage
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBus_c652 18 "%0[DevId: 0x%10!x!][SlimBus.c 652] %!FUNC!::Error transferring Rx iovec (uNewDescIdx: 0x%11!x!) (uDescIdx: 0x%12!x!) (uTailIdx: 0x%13!x!) (uHeadIdx: 0x%14!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SubmitRxDescriptors
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)uNewDescIdx, ItemLong -- 11
+(uint32)uDescIdx, ItemLong -- 12
+(uint32)pMsgFifo->uTailIdx, ItemLong -- 13
+(uint32)pMsgFifo->uHeadIdx, ItemLong -- 14
+}
+#typev SlimBus_c7659 134 "%0[DevId: 0x%10!x!][SlimBus.c 7659] %!FUNC!::Finishing channel dealloc now that channel removal is complete (client: 0x%11!x!) (chan: %12!ld!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_UpdateChannelAfterReconfig
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pChannel->channelNum, ItemLong -- 12
+}
+#typev SlimBus_c7638 133 "%0[DevId: 0x%10!x!][SlimBus.c 7638] %!FUNC!::Manually disconnecting port after channel has reactivated (port: %11!ld!) (channel: %12!ld!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_UpdateChannelAfterReconfig
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pPort->portNum, ItemLong -- 11
+pChannel->channelNum, ItemLong -- 12
+}
+#typev SlimBus_c451 11 "%0[DevId: 0x%10!x!][SlimBus.c 451] %!FUNC!::Timeout while waiting for available transactions (client 0x%11!x!) (LA: 0x%12!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_WaitForAvailDeviceTrans
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pDevice->LA, ItemLong -- 12
+}
+#typev SlimBus_c427 10 "%0[DevId: 0x%10!x!][SlimBus.c 427] %!FUNC!::No free events while waiting for available transaction (client 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_WaitForAvailDeviceTrans
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c523 15 "%0[DevId: 0x%10!x!][SlimBus.c 523] %!FUNC!::Resuming message send after resume from pause clock (LA: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_WaitForBusActive
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pDevice->LA, ItemLong -- 11
+}
+#typev SlimBus_c519 14 "%0[DevId: 0x%10!x!][SlimBus.c 519] %!FUNC!::Timeout while waiting for bus active (client 0x%11!x!) (LA: 0x%12!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_WaitForBusActive
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pDevice->LA, ItemLong -- 12
+}
+#typev SlimBus_c505 13 "%0[DevId: 0x%10!x!][SlimBus.c 505] %!FUNC!::Waiting for resume from pause clock to send message (LA: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_WaitForBusActive
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pDevice->LA, ItemLong -- 11
+}
+#typev SlimBus_c496 12 "%0[DevId: 0x%10!x!][SlimBus.c 496] %!FUNC!::No free events while waiting for bus active (client 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_WaitForBusActive
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c579 17 "%0[DevId: 0x%10!x!][SlimBus.c 579] %!FUNC!::Timeout while waiting for Fifo not busy (client 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_WaitForMsgFifoNotBusy
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c559 16 "%0[DevId: 0x%10!x!][SlimBus.c 559] %!FUNC!::No free events while waiting for Fifo not busy (client 0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_WaitForMsgFifoNotBusy
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+}
+#typev SlimBus_c5486 88 "%0[DevId: 0x%10!x!][SlimBus.c 5486] %!FUNC!::Write VE validation error (bOpen: %11!ld!) (uByteAddr: 0x%12!x!) (uByteSize: %13!ld!) (uWriteDataLen: %14!ld!) (pucWriteData: 0x%15!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_WriteValueElement
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pClientCtxt->bOpen, ItemLong -- 11
+uByteAddr, ItemLong -- 12
+uByteSize, ItemLong -- 13
+uWriteDataLen, ItemLong -- 14
+(uint32)pucWriteData, ItemLong -- 15
+}
+// PDB:  qcslimbus7180.pdb
+// PDB:  Last Updated :2021-10-17:21:55:09:341 (UTC) [tracepdb]
+#typev Device_c1286 46 "%0[DevId: 0x%10!x!][SlimBus.c 2630] %!FUNC!::disconnecting BAM pipe (client: 0x%11!x!) (resource: 0x%12!x!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBusBamResetTimerCb
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pPort->pClientCtxt, ItemLong -- 11
+pPort->handle, ItemLong -- 12
+pPort->portNum, ItemLong -- 13
+}

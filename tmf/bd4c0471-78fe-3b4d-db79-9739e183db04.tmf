@@ -1,0 +1,26 @@
+// PDB:  qcadcm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:24:338 (UTC) [tracepdb]
+bd4c0471-78fe-3b4d-db79-9739e183db04 src // SRC=q6ad_q6msg.c MJ= MN=
+#typev q6ad_q6msg_c1906 14 "%0ADCM.UTIL.Q6MSG.Multichannel Mute : mute: [%10!Id!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_UTIL_INFO FUNC=q6ad_q6msg_create_multichannel_mute
+{
+msg->u.set_pp.data[0].u.multichannel_mute.mute_data[idx].mute, ItemPtr -- 10
+}
+#typev q6ad_q6msg_c1901 13 "%0ADCM.UTIL.Q6MSG.Multichannel Mute : channel_type: [%10!Id!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_UTIL_INFO FUNC=q6ad_q6msg_create_multichannel_mute
+{
+msg->u.set_pp.data[0].u.multichannel_mute.mute_data[idx].channel_type, ItemPtr -- 10
+}
+#typev q6ad_q6msg_c1894 12 "%0ADCM.UTIL.Q6MSG.Multichannel Mute : num_channels: [%10!Id!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_UTIL_INFO FUNC=q6ad_q6msg_create_multichannel_mute
+{
+msg->u.set_pp.data[0].u.multichannel_mute.num_channels, ItemPtr -- 10
+}
+#typev q6ad_q6msg_c1160 11 "%0ADCM.UTIL.Q6MSG.Err.Invalid feature mask (%10!Id!) for pull mode" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ASM_ERROR FUNC=q6ad_q6msg_create_stream_open
+{
+q6ad_open->feature_mask, ItemPtr -- 10
+}
+#typev q6ad_q6msg_c1130 10 "%0ADCM.UTIL.Q6MSG.stream open=> op_code = 0x%10!x! , feature_mask = 0x%11!x! , topology_id = (0x%12!x!), app_type = (0x%13!x!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_UTIL_INFO FUNC=q6ad_q6msg_create_stream_open
+{
+q6ad_open->op_code, ItemLong -- 10
+q6ad_open->feature_mask, ItemLong -- 11
+stream->topology_id, ItemLong -- 12
+q6ad_open->app_type, ItemLong -- 13
+}

@@ -1,0 +1,107 @@
+// PDB:  QcXhciFilter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+c16d162d-6dd1-3e77-fe84-9843c60835ca 10.8 // SRC=QcUsbHwCommon.c MJ= MN=
+#typev QcUsbHwCommon_c1132 27 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbInitHsPhy
+{
+}
+#typev QcUsbHwCommon_c1128 26 "%0Invalid CoreType = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QcUsbHwCommon FUNC=QcUsbInitHsPhy
+{
+QcUsbGetCoreTypeStr(CoreType), ItemString -- 10
+}
+#typev QcUsbHwCommon_c1110 25 "%0++, Core = %10!s!, ClkBase = 0x%11!p!, PhyBase = 0x%12!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbInitHsPhy
+{
+QcUsbGetCoreTypeStr(CoreType), ItemString -- 10
+ClkBase, ItemPtr -- 11
+PhyBase, ItemPtr -- 12
+}
+#typev QcUsbHwCommon_c896 22 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbInitHsPhyPrim
+{
+}
+#typev QcUsbHwCommon_c715 21 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbInitHsPhyPrim
+{
+}
+#typev QcUsbHwCommon_c1084 24 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbInitHsPhySec
+{
+}
+#typev QcUsbHwCommon_c908 23 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbInitHsPhySec
+{
+}
+#typev QcUsbHwCommon_c1276 36 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbInitSsPhy
+{
+}
+#typev QcUsbHwCommon_c1273 35 "%0Invalid CoreType = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QcUsbHwCommon FUNC=QcUsbInitSsPhy
+{
+QcUsbGetCoreTypeStr(CoreType), ItemString -- 10
+}
+#typev QcUsbHwCommon_c1268 34 "%0Superspeed is not supported for secondary port" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QcUsbHwCommon FUNC=QcUsbInitSsPhy
+{
+}
+#typev QcUsbHwCommon_c1255 33 "%0++, Core = %10!s!, PhyLane = %11!d!, ClkBase = 0x%12!p!, PhyBase = 0x%13!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbInitSsPhy
+{
+QcUsbGetCoreTypeStr(CoreType), ItemString -- 10
+PhyLane, ItemLong -- 11
+ClkBase, ItemPtr -- 12
+PhyBase, ItemPtr -- 13
+}
+#typev QcUsbHwCommon_c1227 32 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbInitSsPhyPrim
+{
+}
+#typev QcUsbHwCommon_c1224 31 "%0HWIO_USB3_DP_PHY_USB3_PCS_PCS_STATUS1_PHYSTATUS = 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QcUsbHwCommon FUNC=QcUsbInitSsPhyPrim
+{
+ReadVal >> HWIO_USB3_DP_PHY_USB3_PCS_PCS_STATUS1_PHYSTATUS_SHFT, ItemLong -- 10
+}
+#typev QcUsbHwCommon_c1177 30 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbInitSsPhyPrim
+{
+}
+#typev QcUsbHwCommon_c662 16 "%0End Index = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QcUsbHwCommon FUNC=QcUsbProcessPhyRegArray
+{
+(UINT32)index, ItemLong -- 10
+}
+#typev QcUsbHwCommon_c646 15 "%0Start Index = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QcUsbHwCommon FUNC=QcUsbProcessPhyRegArray
+{
+(UINT32)StartIndex, ItemLong -- 10
+}
+#typev QcUsbHwCommon_c641 14 "%0Null Parameter Passed, OffsetArray = 0x%10!x!, ValueArray = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QcUsbHwCommon FUNC=QcUsbProcessPhyRegArray
+{
+(UINT32)OffsetArray, ItemLong -- 10
+(UINT32)ValueArray, ItemLong -- 11
+}
+#typev QcUsbHwCommon_c634 13 "%0++, OffsetArray = 0x%10!x!, ValueArray = 0x%11!x!, StartIndex = %12!d!, Size = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QcUsbHwCommon FUNC=QcUsbProcessPhyRegArray
+{
+(UINT32)OffsetArray, ItemLong -- 10
+(UINT32)ValueArray, ItemLong -- 11
+StartIndex, ItemLong -- 12
+ArrayEntryCnt, ItemLong -- 13
+}
+#typev QcUsbHwCommon_c681 18 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbResetHsPhyPrim
+{
+}
+#typev QcUsbHwCommon_c670 17 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbResetHsPhyPrim
+{
+}
+#typev QcUsbHwCommon_c703 20 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbResetHsPhySec
+{
+}
+#typev QcUsbHwCommon_c690 19 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbResetHsPhySec
+{
+}
+#typev QcUsbHwCommon_c1158 29 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbResetSsPhyPrim
+{
+}
+#typev QcUsbHwCommon_c1141 28 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbResetSsPhyPrim
+{
+}
+#typev QcUsbHwCommon_c608 12 "%0xhc:c%10!d!:--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UpdateFromACPI
+{
+CoreType, ItemLong -- 10
+}
+#typev QcUsbHwCommon_c602 11 "%0xhc:c%10!d!: Set PHY tuning register [0x%11!x!] to [0x%12!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QcUsbHwCommon FUNC=UpdateFromACPI
+{
+CoreType, ItemLong -- 10
+pPhyVal->RegAddr, ItemLong -- 11
+pPhyVal->Value, ItemLong -- 12
+}
+#typev QcUsbHwCommon_c590 10 "%0xhc:c%10!d!:++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UpdateFromACPI
+{
+CoreType, ItemLong -- 10
+}

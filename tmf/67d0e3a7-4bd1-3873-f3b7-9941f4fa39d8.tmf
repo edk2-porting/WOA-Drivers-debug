@@ -1,0 +1,124 @@
+// PDB:  qcppx7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+67d0e3a7-4bd1-3873-f3b7-9941f4fa39d8 qcppx // SRC=acpinotify.c MJ= MN=
+#typev acpinotify_c129 15 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiAbandonDevice
+{
+}
+#typev acpinotify_c122 14 "%0 [%!FUNC!]%10!s!: Device = %11!s!, Accepted = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiAbandonDevice
+{
+PepAcpiNotificationHandlers[PEP_NOTIFY_ACPI_ABANDON_DEVICE].Name, ItemString -- 10
+AcpiAbandonDevice->AcpiDeviceName->Buffer, ItemWString -- 11
+AcpiAbandonDevice->DeviceAccepted, ItemLong -- 12
+}
+#typev acpinotify_c113 13 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiAbandonDevice
+{
+}
+#typev acpinotify_c467 28 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiEnumerateDeviceNamespace
+{
+}
+#typev acpinotify_c436 27 "%0 [%!FUNC!]%10!s!: %11!s!: Enumerate method %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiEnumerateDeviceNamespace
+{
+__FUNCTION__, ItemString -- 10
+PepAcpiNotificationHandlers[                                             PEP_NOTIFY_ACPI_ENUMERATE_DEVICE_NAMESPACE].Name, ItemString -- 11
+(ULONG)DeviceDefinition->Objects[Index].ObjectName, ItemLong -- 12
+}
+#typev acpinotify_c420 26 "%0 [%!FUNC!]%10!s!: %11!s!: Insufficient buffer size. Required = %12!d!, Provided = %13!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiEnumerateDeviceNamespace
+{
+__FUNCTION__, ItemString -- 10
+PepAcpiNotificationHandlers[                                             PEP_NOTIFY_ACPI_ENUMERATE_DEVICE_NAMESPACE].Name, ItemString -- 11
+(ULONG)RequiredSize, ItemLong -- 12
+(ULONG)ObjectBufferSize, ItemLong -- 13
+}
+#typev acpinotify_c396 25 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiEnumerateDeviceNamespace
+{
+}
+#typev acpinotify_c596 32 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiEvaluateControlMethod
+{
+}
+#typev acpinotify_c570 31 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiEvaluateControlMethod
+{
+}
+#typev acpinotify_c83 12 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiPrepareDevice
+{
+}
+#typev acpinotify_c78 11 "%0 [%!FUNC!]%10!s!: Device = %11!s!, Accepted = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiPrepareDevice
+{
+PepAcpiNotificationHandlers[PEP_NOTIFY_ACPI_PREPARE_DEVICE].Name, ItemString -- 10
+AcpiPrepareDevice->AcpiDeviceName->Buffer, ItemWString -- 11
+(ULONG)AcpiPrepareDevice->DeviceAccepted, ItemLong -- 12
+}
+#typev acpinotify_c66 10 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiPrepareDevice
+{
+}
+#typev acpinotify_c679 35 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiQueryDeviceControlResources
+{
+}
+#typev acpinotify_c668 34 "%0 [%!FUNC!]%10!s!: %11!s!: No resource required." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiQueryDeviceControlResources
+{
+__FUNCTION__, ItemString -- 10
+PepAcpiNotificationHandlers[                                             PEP_NOTIFY_ACPI_QUERY_DEVICE_CONTROL_RESOURCES].Name, ItemString -- 11
+}
+#typev acpinotify_c632 33 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiQueryDeviceControlResources
+{
+}
+#typev acpinotify_c538 30 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiQueryObjectInformation
+{
+}
+#typev acpinotify_c503 29 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiQueryObjectInformation
+{
+}
+#typev acpinotify_c297 21 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiRegisterDevice
+{
+}
+#typev acpinotify_c279 20 "%0 [%!FUNC!]%10!s!: %11!s!: SUCCESS! Device = %12!s!, PEPHANDLE = %13!p!
+." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiRegisterDevice
+{
+__FUNCTION__, ItemString -- 10
+PepAcpiNotificationHandlers[                                          PEP_NOTIFY_ACPI_REGISTER_DEVICE].Name, ItemString -- 11
+RegisterDevice->AcpiDeviceName->Buffer, ItemWString -- 12
+PepInternalDevice, ItemPtr -- 13
+}
+#typev acpinotify_c238 19 "%0 [%!FUNC!]%10!s!: %11!s!: Device initialization routine failed. Status = %12!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiRegisterDevice
+{
+__FUNCTION__, ItemString -- 10
+PepAcpiNotificationHandlers[                                                PEP_NOTIFY_ACPI_REGISTER_DEVICE].Name, ItemString -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev acpinotify_c205 18 "%0 [%!FUNC!]%10!s!: %11!s!: Failed to allocate internal device context." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiRegisterDevice
+{
+__FUNCTION__, ItemString -- 10
+PepAcpiNotificationHandlers[                                             PEP_NOTIFY_ACPI_REGISTER_DEVICE].Name, ItemString -- 11
+}
+#typev acpinotify_c179 17 "%0 [%!FUNC!]%10!s!: %11!s!: Device registration routine failed. Device = %12!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiRegisterDevice
+{
+__FUNCTION__, ItemString -- 10
+PepAcpiNotificationHandlers[                                             PEP_NOTIFY_ACPI_REGISTER_DEVICE].Name, ItemString -- 11
+RegisterDevice->AcpiDeviceName->Buffer, ItemWString -- 12
+}
+#typev acpinotify_c167 16 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiRegisterDevice
+{
+}
+#typev acpinotify_c734 37 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiTranslatedDeviceControlResources
+{
+}
+#typev acpinotify_c713 36 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiTranslatedDeviceControlResources
+{
+}
+#typev acpinotify_c357 24 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiUnregisterDevice
+{
+}
+#typev acpinotify_c346 23 "%0 [%!FUNC!]%10!s!: %11!s!: Device = %12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiUnregisterDevice
+{
+__FUNCTION__, ItemString -- 10
+PepAcpiNotificationHandlers[                                             PEP_NOTIFY_ACPI_UNREGISTER_DEVICE].Name, ItemString -- 11
+DeviceName, ItemWString -- 12
+}
+#typev acpinotify_c331 22 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiUnregisterDevice
+{
+}
+#typev acpinotify_c765 39 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiWorkNotification
+{
+}
+#typev acpinotify_c761 38 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_ACPINOTIFY FUNC=PepAcpiWorkNotification
+{
+}

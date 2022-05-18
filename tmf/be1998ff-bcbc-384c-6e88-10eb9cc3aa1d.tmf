@@ -1,0 +1,66 @@
+// PDB:  qcpmicglink7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+be1998ff-bcbc-384c-6e88-10eb9cc3aa1d PmicGlink // SRC=PmicGlinkPlatformUsbc.c MJ= MN=
+#typev PmicGlinkPlatform_c605 10 "%0%!FUNC!::Skip USBC Pin Assignment Enable Request, Feature Disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkRegisterInterfaceWorkItem
+{
+}
+#typev PmicGlinkPlatform_c605 12 "%0%!FUNC!::ERROR: Queue Request: Pin Assignment Enable Failed, status=0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkRegisterInterfaceWorkItem
+{
+status, ItemLong -- 10
+}
+#typev PmicGlinkPlatform_c605 11 "%0%!FUNC!::Queue Request: Pin Assignment Enable successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkRegisterInterfaceWorkItem
+{
+}
+// PDB:  qcpmicglink7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PmicGlinkPlatformUsbc_c237 15 "%0%!FUNC!::ERROR: Queue Request: Pin Assignment Ack Failed: Port=%10!d!, status=0x%11!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkPlatformUsbc_AcpiNotificationHandler
+{
+sPmicGlink_PendingPAN, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PmicGlinkPlatformUsbc_c237 14 "%0%!FUNC!::Queue Request: Pin Assignment Ack successful: Port=%10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkPlatformUsbc_AcpiNotificationHandler
+{
+sPmicGlink_PendingPAN, ItemLong -- 10
+}
+#typev PmicGlinkPlatformUsbc_c237 13 "%0%!FUNC!::WARN: Invalid Pending Pin Assignment: Port=%10!d!, skip ACK" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkPlatformUsbc_AcpiNotificationHandler
+{
+sPmicGlink_PendingPAN, ItemLong -- 10
+}
+#typev PmicGlinkPlatformUsbc_c233 20 "%0%!FUNC!::Receive ACPI Notification 0x%10!08X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_device FUNC=PmicGlinkPlatformUsbc_AcpiNotificationHandler
+{
+NotifyValue, ItemLong -- 10
+}
+#typev PmicGlinkPlatformUsbc_c199 18 "%0%!FUNC!::Queue Usbc Notification Success" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkPlatformUsbc_Notify_Usbc
+{
+}
+// PDB:  qcpmicglink7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PmicGlinkPlatformUsbc_c203 19 "%0%!FUNC!::ERROR: Queue Usbc Notification Failed, status=0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkPlatformUsbc_Notify_Usbc
+{
+status, ItemLong -- 10
+}
+// PDB:  qcpmicglink7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PmicGlinkPlatformUsbc_c188 17 "%0%!FUNC!::Pin Assignment: Port=0x%10!02X!, orientation=0x%11!02X!, mux_ctrl=0x%12!02X!
+, svid=0x%13!04X!
+, Extended=%14!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkPlatformUsbc_Notify_Usbc
+{
+pPANData->common.port_index, ItemLong -- 10
+pPANData->common.orientation, ItemLong -- 11
+pPANData->common.mux_ctrl, ItemLong -- 12
+pPANData->common.svid, ItemLong -- 13
+extended_payload_str, ItemString -- 14
+}
+#typev PmicGlinkPlatformUsbc_c181 16 "%0%!FUNC!::ERROR: Invalid PAN: Port=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkPlatformUsbc_Notify_Usbc
+{
+pPANData->common.port_index, ItemLong -- 10
+}
+#typev PmicGlinkPlatformUsbc_c323 22 "%0%!FUNC!::WriteCmd = %10!d! Failed, status=0x%11!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkPlatformUsbc_Request_Write_WorkItem
+{
+sUsbcWReqeust.cmd_type, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev PmicGlinkPlatformUsbc_c319 21 "%0%!FUNC!::WriteCmd = %10!d! Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PmicGlinkWPP_Platform FUNC=PmicGlinkPlatformUsbc_Request_Write_WorkItem
+{
+sUsbcWReqeust.cmd_type, ItemLong -- 10
+}

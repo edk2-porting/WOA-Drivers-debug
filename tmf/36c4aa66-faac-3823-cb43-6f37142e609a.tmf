@@ -1,0 +1,133 @@
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+36c4aa66-faac-3823-cb43-6f37142e609a NetAdapter // SRC=MbimPacketInfo.cpp MJ= MN=
+#typev MbimPacketInfo_cpp538 11 "%0%!FUNC!:: ERROR:: %10!s! is not in the MBIM_SERVICES." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoGetServiceName
+{
+pGuid, ItemGuid -- 10
+}
+#typev MbimPacketInfo_cpp775 31 "%0%!FUNC!:: ERROR:: Invalid argument. pBuffer %10!p! nBuffer %11!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pBuffer, ItemPtr -- 10
+nBuffer, ItemULongLong -- 11
+}
+#typev MbimPacketInfo_cpp795 18 "%0%!FUNC!:: ERROR:: Invalid argument. pBuffer %10!p! nBuffer %11!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pBuffer, ItemPtr -- 10
+nBuffer, ItemULongLong -- 11
+}
+#typev MbimPacketInfo_cpp795 19 "%0%!FUNC!:: MBIM_CLOSE_DONE (0x%10!x!) TransactionId %11!u!, MessageLength %12!u!, Status %13!u! nBuffer %14!I64u!." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pMbimClosDoneMsg->MbimMessageHeader.MessageType, ItemLong -- 10
+pMbimClosDoneMsg->MbimMessageHeader.TransactionId, ItemLong -- 11
+pMbimClosDoneMsg->MbimMessageHeader.MessageLength, ItemLong -- 12
+pMbimClosDoneMsg->Status, ItemLong -- 13
+nBuffer, ItemULongLong -- 14
+}
+#typev MbimPacketInfo_cpp811 26 "%0%!FUNC!:: ERROR:: Invalid argument. pBuffer %10!p! nBuffer %11!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pBuffer, ItemPtr -- 10
+nBuffer, ItemULongLong -- 11
+}
+#typev MbimPacketInfo_cpp811 27 "%0%!FUNC!:: MBIM_FUNCTION_ERROR (0x%10!x!) TransactionId %11!u!, MessageLength %12!u!, ErrorCode %13!u!. nBuffer %14!I64u!." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pHostError->MbimMessageHeader.MessageType, ItemLong -- 10
+pHostError->MbimMessageHeader.TransactionId, ItemLong -- 11
+pHostError->MbimMessageHeader.MessageLength, ItemLong -- 12
+pHostError->ErrorStatusCode, ItemLong -- 13
+nBuffer, ItemULongLong -- 14
+}
+#typev MbimPacketInfo_cpp815 28 "%0%!FUNC!:: ERROR:: Invalid argument. pBuffer %10!p! nBuffer %11!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pBuffer, ItemPtr -- 10
+nBuffer, ItemULongLong -- 11
+}
+#typev MbimPacketInfo_cpp815 29 "%0%!FUNC!:: MBIM_INDICATE_STATUS (0x%10!x!) (%11!s!) TransactionId %12!u! MessageLength %13!u! Cid = %14!s!(%15!u!)." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pIndicateMsg->MbimMessageHeader.MessageType, ItemLong -- 10
+MbimPacketInfoGetServiceName(&pIndicateMsg->DeviceServiceIdUuid), ItemString -- 11
+pIndicateMsg->MbimMessageHeader.TransactionId, ItemLong -- 12
+pIndicateMsg->MbimMessageHeader.MessageLength, ItemLong -- 13
+MbimPacketInfoGetCidName(&pIndicateMsg->DeviceServiceIdUuid. pIndicateMsg->Cid), ItemString -- 14
+pIndicateMsg->Cid, ItemLong -- 15
+}
+#typev MbimPacketInfo_cpp787 14 "%0%!FUNC!:: ERROR:: Invalid argument. pBuffer %10!p! nBuffer %11!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pBuffer, ItemPtr -- 10
+nBuffer, ItemULongLong -- 11
+}
+#typev MbimPacketInfo_cpp787 15 "%0%!FUNC!:: MBIM_OPEN_DONE (0x%10!x!) TransactionId %11!u!, MessageLength %12!u!, Status %13!u!. nBuffer %14!I64u!." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pMbimOpenDoneMsg->MbimMessageHeader.MessageType, ItemLong -- 10
+pMbimOpenDoneMsg->MbimMessageHeader.TransactionId, ItemLong -- 11
+pMbimOpenDoneMsg->MbimMessageHeader.MessageLength, ItemLong -- 12
+pMbimOpenDoneMsg->Status, ItemLong -- 13
+nBuffer, ItemULongLong -- 14
+}
+#typev MbimPacketInfo_cpp783 12 "%0%!FUNC!:: ERROR:: Invalid argument. pBuffer %10!p! nBuffer %11!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pBuffer, ItemPtr -- 10
+nBuffer, ItemULongLong -- 11
+}
+#typev MbimPacketInfo_cpp783 13 "%0%!FUNC!:: MBIM_OPEN (0x%10!x!) TransactionId %11!u!, MessageLength %12!u!, MaxControlTransfer %13!u!. nBuffer %14!I64u!." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pMbimOpenMsg->MbimMessageHeader.MessageType, ItemLong -- 10
+pMbimOpenMsg->MbimMessageHeader.TransactionId, ItemLong -- 11
+pMbimOpenMsg->MbimMessageHeader.MessageLength, ItemLong -- 12
+pMbimOpenMsg->MaxControlTransfer, ItemLong -- 13
+nBuffer, ItemULongLong -- 14
+}
+#typev MbimPacketInfo_cpp791 17 "%0%!FUNC!:: MBIM_CLOSE (0x%10!x!) TransactionId %11!u!, MessageLength %12!u!. nBuffer %13!I64u!." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pMbimCloseMsg->MbimMessageHeader.MessageType, ItemLong -- 10
+pMbimCloseMsg->MbimMessageHeader.TransactionId, ItemLong -- 11
+pMbimCloseMsg->MbimMessageHeader.MessageLength, ItemLong -- 12
+nBuffer, ItemULongLong -- 13
+}
+#typev MbimPacketInfo_cpp807 24 "%0%!FUNC!:: ERROR:: Invalid argument. pBuffer %10!p! nBuffer %11!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pBuffer, ItemPtr -- 10
+nBuffer, ItemULongLong -- 11
+}
+#typev MbimPacketInfo_cpp807 25 "%0%!FUNC!:: MBIM_HOST_ERROR (0x%10!x!) TransactionId %11!u!, MessageLength %12!u!, ErrorCode %13!u!. nBuffer %14!I64u!." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintDetails
+{
+pHostError->MbimMessageHeader.MessageType, ItemLong -- 10
+pHostError->MbimMessageHeader.TransactionId, ItemLong -- 11
+pHostError->MbimMessageHeader.MessageLength, ItemLong -- 12
+pHostError->ErrorStatusCode, ItemLong -- 13
+nBuffer, ItemULongLong -- 14
+}
+#typev MbimPacketInfo_cpp655 22 "%0%!FUNC!:: ERROR:: Invalid argument. pBuffer %10!p! nBuffer %11!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintMbimServiceDoneResponse
+{
+pBuffer, ItemPtr -- 10
+nBuffer, ItemULongLong -- 11
+}
+#typev MbimPacketInfo_cpp660 23 "%0%!FUNC!:: MBIM_COMMAND_DONE (0x%10!x!) (%11!s!) TransactionId %12!u! MessageLength %13!u! Cid = %14!s!(%15!u!) Status(%16!u!)." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintMbimServiceDoneResponse
+{
+pCmdMsgDone->MbimMessageHeader.MessageType, ItemLong -- 10
+MbimPacketInfoGetServiceName(&pCmdMsgDone->DeviceServiceIdUuid), ItemString -- 11
+pCmdMsgDone->MbimMessageHeader.TransactionId, ItemLong -- 12
+pCmdMsgDone->MbimMessageHeader.MessageLength, ItemLong -- 13
+MbimPacketInfoGetCidName(&pCmdMsgDone->DeviceServiceIdUuid. pCmdMsgDone->Cid), ItemString -- 14
+pCmdMsgDone->Cid, ItemLong -- 15
+pCmdMsgDone->Status, ItemLong -- 16
+}
+#typev MbimPacketInfo_cpp624 20 "%0%!FUNC!:: ERROR:: Invalid argument. pBuffer %10!p!, nBuffer %11!I64u!, sizeof(MBIM_COMMAND_MSG) %12!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintMbimServiceRequest
+{
+pBuffer, ItemPtr -- 10
+nBuffer, ItemULongLong -- 11
+sizeof(MBIM_COMMAND_MSG), ItemULongLong -- 12
+}
+#typev MbimPacketInfo_cpp630 10 "%0%!FUNC!:: ERROR:: %10!u! is not in the MBIM_COMMAND_TYPE_STRING." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintMbimServiceRequest
+{
+CommandType, ItemLong -- 10
+}
+#typev MbimPacketInfo_cpp630 21 "%0%!FUNC!:: MBIM_COMMAND (0x%10!x!) (%11!s!) TransactionId %12!u! MessageLength %13!u! Cid = %14!s!(%15!u!) %16!s!." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=MbimPacketInfoPrintMbimServiceRequest
+{
+pCmdMsg->MbimMessageHeader.MessageType, ItemLong -- 10
+MbimPacketInfoGetServiceName(&pCmdMsg->DeviceServiceIdUuid), ItemString -- 11
+pCmdMsg->MbimMessageHeader.TransactionId, ItemLong -- 12
+pCmdMsg->MbimMessageHeader.MessageLength, ItemLong -- 13
+MbimPacketInfoGetCidName(&pCmdMsg->DeviceServiceIdUuid. pCmdMsg->Cid), ItemString -- 14
+pCmdMsg->Cid, ItemLong -- 15
+MbimPacketInfoGetCommandTypeString(pCmdMsg->CommandType), ItemString -- 16
+}

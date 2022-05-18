@@ -1,0 +1,176 @@
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+ecdd37cf-c70f-3a67-08b5-f915e170495f 10.7 // SRC=qmap_tx.c MJ= MN=
+#typev qmap_tx_c1429 62 "%0QMAP::%!FUNC!: FAILED pTxPktCompleteFunc is NULL" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxCleanPendingTxQueue
+{
+}
+#typev qmap_tx_c1436 63 "%0QMAP::%!FUNC!: -- nTxPendingNbls=%10!u!, nCleanupNbls=%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxCleanPendingTxQueue
+{
+nTxPendingNbls, ItemLong -- 10
+nCleanupNbls, ItemLong -- 11
+}
+#typev qmap_tx_c1420 61 "%0QMAP::%!FUNC!: Tx Complete NBL 0x%10!p!, ulMuxId=%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxCleanPendingTxQueue
+{
+pNblSnap, ItemPtr -- 10
+ulMuxId, ItemLong -- 11
+}
+#typev qmap_tx_c1405 60 "%0QMAP::%!FUNC!: ++" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxCleanPendingTxQueue
+{
+}
+#typev qmap_tx_c86 11 "%0QMAP::%!FUNC! pTxBufListItem=0x%10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapTxComplete
+{
+pReqInfo->pPayload, ItemPtr -- 10
+}
+#typev qmap_tx_c73 10 "%0QMAP::%!FUNC! Error: pReqInfo = NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapTxComplete
+{
+}
+#typev qmap_tx_c1383 59 "%0QMAP::%!FUNC!: ERROR, QmapTxThread thread create failed - %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxCreateThread
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_tx_c1367 58 "%0QMAP::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapTxCreateThread
+{
+}
+#typev qmap_tx_c658 27 "%0QMAP::%!FUNC!: Reset FC" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxFcResetTimerExpiry
+{
+}
+#typev qmap_tx_c722 34 "%0QMAP::%!FUNC!: --" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxHandleFcResetEvent
+{
+}
+#typev qmap_tx_c710 33 "%0QMAP::%!FUNC!: QMAP not flow controlled" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxHandleFcResetEvent
+{
+}
+#typev qmap_tx_c697 32 "%0QMAP::%!FUNC!: ++" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxHandleFcResetEvent
+{
+}
+#typev qmap_tx_c688 31 "%0QMAP::%!FUNC!--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapTxInitFcResetTimer
+{
+}
+#typev qmap_tx_c685 30 "%0QMAP::%!FUNC!: ERROR, WdfTimerCreate() failed - %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxInitFcResetTimer
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_tx_c672 29 "%0QMAP::%!FUNC!: TxFcResetTime %10!u! ms" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxInitFcResetTimer
+{
+pDeviceContext->Qmap.uTxFcResetTime, ItemLong -- 10
+}
+#typev qmap_tx_c669 28 "%0QMAP::%!FUNC!++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapTxInitFcResetTimer
+{
+}
+#typev qmap_tx_c353 17 "%0QMAP::%!FUNC!: ERROR, Failed IPATransferData: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=Core FUNC=QmapTxPipeTransferEx
+{
+ntStatus, ItemLong -- 10
+}
+#typev qmap_tx_c333 16 "%0QMAP::%!FUNC!: ERROR, Failed to get free TX request" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxPipeTransferEx
+{
+}
+#typev qmap_tx_c325 15 "%0QMAP::%!FUNC!: Error: Invalid buf size = %10!u! bytes" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxPipeTransferEx
+{
+ulLength, ItemLong -- 10
+}
+#typev qmap_tx_c890 36 "%0QMAP::%!FUNC! Recycle partial chain pNBL %10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapTxRecycleInProcessNblSnap
+{
+pDeviceContext->Qmap.TxInProcessNblSnaps.pHeadNBL, ItemPtr -- 10
+}
+#typev qmap_tx_c858 35 "%0QMAP::%!FUNC! Recycle chain pNBL 0x%10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapTxRecycleInProcessNblSnap
+{
+pDeviceContext->Qmap.TxInProcessNblSnaps.pHeadNBL, ItemPtr -- 10
+}
+#typev qmap_tx_c1258 51 "%0QMAP::%!FUNC!-- pTxBufListItem 0x%10!p!, bytesCopied (%11!d!/%12!d!)." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+pTxBufListItem, ItemPtr -- 10
+bytesCopied, ItemLong -- 11
+pDeviceContext->Qmap.txDeaggrMaxSize, ItemLong -- 12
+}
+#typev qmap_tx_c1254 50 "%0QMAP::%!FUNC! Wait++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+}
+#typev qmap_tx_c1246 49 "%0QMAP::%!FUNC! ERROR, QmapPipeTransfer failed 0x%10!x!. Recycling corresponding NBLs with failure." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+ntStatus, ItemLong -- 10
+}
+#typev qmap_tx_c1105 45 "%0QMAP::%!FUNC! ERROR, Out of tx buffers. pausedNBL=0x%10!p!, pausedNB=0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+pCurNBL, ItemPtr -- 10
+pCurNB, ItemPtr -- 11
+}
+#typev qmap_tx_c1192 48 "%0QMAP::%!FUNC! ERROR, encountered NULL MDL, pCurNB=0x%10!p!, nbDataLen=%11!d!, pktLen=%12!d!, mdlBufLen=%13!d!. Recycling current snapshot." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+pCurNB, ItemPtr -- 10
+nbDataLen, ItemLong -- 11
+pktLen, ItemLong -- 12
+mdlBufLen, ItemLong -- 13
+}
+#typev qmap_tx_c1085 44 "%0QMAP::%!FUNC! ERROR, QmapPipeTransfer failed 0x%10!x!. Recycling corresponding NBLs with failure." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+ntStatus, ItemLong -- 10
+}
+#typev qmap_tx_c1139 47 "%0QMAP::%!FUNC! ERROR, mdlBufVa = NULL ||  mdlBufLen = 0" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+}
+#typev qmap_tx_c1130 46 "%0QMAP::%!FUNC! ERROR, Curr MDL = NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+}
+#typev qmap_tx_c1072 43 "%0QMAP::%!FUNC! pTxBufListItem 0x%10!p!, pCurNBL 0x%11!p!, pCurNB 0x%12!p!, bytesCopied (%13!d!/%14!d!)." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+pTxBufListItem, ItemPtr -- 10
+pCurNBL, ItemPtr -- 11
+pCurNB, ItemPtr -- 12
+bytesCopied, ItemLong -- 13
+pDeviceContext->Qmap.txDeaggrMaxSize, ItemLong -- 14
+}
+#typev qmap_tx_c1062 42 "%0QMAP::%!FUNC! Error: Pkt len %10!u! exceeded buffer size, pCurNBL 0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+pktLen, ItemLong -- 10
+pCurNBL, ItemPtr -- 11
+}
+#typev qmap_tx_c1029 41 "%0QMAP::%!FUNC! No pending packets to process" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+}
+#typev qmap_tx_c1009 40 "%0QMAP::%!FUNC!-- ERROR, out of tx buffers" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+}
+#typev qmap_tx_c999 39 "%0QMAP::%!FUNC!++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapTxRoutineEx
+{
+}
+#typev qmap_tx_c1337 56 "%0QMAP::%!FUNC!: Client Disconnecting" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxThread
+{
+}
+#typev qmap_tx_c1356 57 "%0QMAP::%!FUNC!: Thread exiting -- %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxThread
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_tx_c1312 55 "%0QMAP::%!FUNC!: Error: ExAllocatePoolWithTag failed. pWaitBlocks=NULL" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxThread
+{
+}
+#typev qmap_tx_c1307 54 "%0QMAP::%!FUNC!: Thread starting!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxThread
+{
+}
+#typev qmap_tx_c1300 53 "%0QMAP::%!FUNC! ERROR, pDeviceContext NULL!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapTxThread
+{
+}
+#typev qmap_tx_c1296 52 "%0QMAP::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapTxThread
+{
+}
+#typev qmap_tx_c197 14 "%0QMAP::%!FUNC!: ERROR, Failed to queue buffer, so DROP packet 0x%10!p!, receivedFlags = %11!d!." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxWrite
+{
+pNBLData, ItemPtr -- 10
+(ULONG)pNBLData->MiniportReserved[1], ItemLong -- 11
+}
+#typev qmap_tx_c186 13 "%0QMAP::%!FUNC!: ERROR, Failed state, so DROP packet 0x%10!p! state = %11!d!, receivedFlags = %12!d!." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapTxWrite
+{
+pNBLData, ItemPtr -- 10
+pDeviceContext->Qmap.eQmapTxState, ItemLong -- 11
+(ULONG)pNBLData->MiniportReserved[1], ItemLong -- 12
+}
+#typev qmap_tx_c158 12 "%0QMAP::%!FUNC! muxId(%10!d!), pNBLs(0x%11!p!), state(%12!d!), Q(%13!d!/%14!d!)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=QmapTxWrite
+{
+ulMuxId, ItemLong -- 10
+pNBLData, ItemPtr -- 11
+pDeviceContext->Qmap.eQmapTxState, ItemLong -- 12
+pDeviceContext->Qmap.nPendingTxNbls, ItemLong -- 13
+QMAP_TX_NUM_MAX_NBLS, ItemLong -- 14
+}

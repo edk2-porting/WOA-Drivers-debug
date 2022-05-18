@@ -1,0 +1,499 @@
+// PDB:  qcadcm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:24:338 (UTC) [tracepdb]
+ba832234-0cef-37f0-6b32-906d141afc10 src // SRC=q6ad_adm_main.c MJ= MN=
+#typev q6ad_adm_main_c850 43 "%0ADCM.ADM.q6ad_adm_close.ac handle closed. ac=0x%10!Ix!,rc=0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_close
+{
+handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c843 42 "%0ADCM.ADM.Err.q6ad_adm_close end w/ ac=0x%10!Ix!, dev_id=0x%11!Ix!, copp_id=0x%12!Ix!, rc=0x%13!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_close
+{
+ac_obj->handle, ItemPtr -- 10
+ac_obj->dev_id[0], ItemPtr -- 11
+ac_obj->copp_id, ItemPtr -- 12
+rc, ItemPtr -- 13
+}
+#typev q6ad_adm_main_c825 41 "%0ADCM.ADM.ac close ac=0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_close
+{
+handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1655 116 "%0ADCM.ADM.Err.q6ad_adm_dinit failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_dinit
+{
+}
+#typev q6ad_adm_main_c1650 115 "%0ADCM.ADM.q6ad_adm_dinit success " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_dinit
+{
+}
+#typev q6ad_adm_main_c1643 114 "%0ADCM.ADM.Err.q6ad_mem_unmap failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_dinit
+{
+}
+#typev q6ad_adm_main_c548 26 "%0ADCM.ADM.q6ad_adm_do_open end adm_handle=0x%10!Ix!, dev_id=0x%11!Ix!, copp_id=0x%12!Ix!, rc=0x%13!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_do_open
+{
+adm_obj->handle, ItemPtr -- 10
+adm_obj->dev_id[0], ItemPtr -- 11
+adm_obj->copp_id, ItemPtr -- 12
+rc, ItemPtr -- 13
+}
+#typev q6ad_adm_main_c538 25 "%0ADCM.ADM.Err.q6ad_adm_proc_enable Q6 error - ac=0x%10!Ix!, dev_id=0x%11!Ix!, copp_id=0x%12!Ix!, rsp_status=0x%13!Ix!, first_boot_dynamic_modules_load_state= %14!Id!, current_boot_dynamic_modules_load_state = %15!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_do_open
+{
+adm_obj->handle, ItemPtr -- 10
+adm_obj->dev_id[0], ItemPtr -- 11
+tmp_msg.u.adm_copp_open_rsp.copp_id, ItemPtr -- 12
+tmp_msg.u.adm_copp_open_rsp.status, ItemPtr -- 13
+first_boot_dynamic_modules_load_state, ItemPtr -- 14
+current_boot_dynamic_modules_load_state, ItemPtr -- 15
+}
+#typev q6ad_adm_main_c511 23 "%0ADCM.ADM.q6ad_adm_do_open Channel type(%10!Id!-%11!Id!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_do_open
+{
+(size_t)i + 1, ItemPtr -- 10
+tmp_msg.u.adm_copp_open.dev_channel_mapping_eid3[i], ItemPtr -- 11
+}
+#typev q6ad_adm_main_c479 21 "%0ADCM.ADM.q6ad_adm_do_open Channel type(%10!Id!-%11!Id!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_do_open
+{
+(size_t)i + 1, ItemPtr -- 10
+tmp_msg.u.adm_copp_open.dev_channel_mapping_eid2[i], ItemPtr -- 11
+}
+#typev q6ad_adm_main_c530 24 "%0ADCM.ADM.Err.q6ad_adm_send_q6_cmd failed - adm_handle=0x%10!Ix!, dev_id=0x%11!Ix!, rc=0x%12!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_do_open
+{
+adm_obj->handle, ItemPtr -- 10
+adm_obj->dev_id[0], ItemPtr -- 11
+rc, ItemPtr -- 12
+}
+#typev q6ad_adm_main_c499 22 "%0ADCM.ADM. do open - q6ad_acdb_get_ep_info error rc=0x%10!Ix!,dev_id=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_do_open
+{
+rc, ItemPtr -- 10
+adm_obj->dev_id[2], ItemPtr -- 11
+}
+#typev q6ad_adm_main_c467 20 "%0ADCM.ADM. do open - q6ad_acdb_get_ep_info error rc=0x%10!Ix!,dev_id=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_do_open
+{
+rc, ItemPtr -- 10
+adm_obj->dev_id[1], ItemPtr -- 11
+}
+#typev q6ad_adm_main_c443 19 "%0ADCM.ADM.q6ad_adm_do_open Channel type(%10!Id!-%11!Id!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_do_open
+{
+(size_t)i + 1, ItemPtr -- 10
+tmp_msg.u.adm_copp_open.dev_channel_mapping[i], ItemPtr -- 11
+}
+#typev q6ad_adm_main_c403 18 "%0ADCM.ADM.q6ad_adm_do_open start w/ adm_handle=0x%10!Ix!,dev_id[0]=0x%11!Ix!, dev_id[1]=0x%12!Ix! adm mode = 0x%13!Ix!, channels %14!d!, adm apptype = 0x%15!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_do_open
+{
+adm_obj->handle, ItemPtr -- 10
+adm_obj->dev_id[0], ItemPtr -- 11
+adm_obj->dev_id[1], ItemPtr -- 12
+adm_obj->mode_of_op, ItemPtr -- 13
+adm_obj->device_info[0].numChannels, ItemLong -- 14
+adm_obj->app_type, ItemPtr -- 15
+}
+#typev q6ad_adm_main_c1235 71 "%0q6ad_adm_get_calibration_data::unsupported param_id and module_id values in ACDB" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_get_calibration_data
+{
+}
+#typev q6ad_adm_main_c1218 70 "%0[q6ad_adm_get_calibration_data]::unsupported param_id and module_id values in ACDB" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_get_calibration_data
+{
+}
+#typev q6ad_adm_main_c160 10 "%0ADCM.ADM.Err.Failed to retrieve device type from ACDB Error(%10!Id!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_get_direction
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1604 113 "%0ADCM.ADM.Err.q6ad_adm_init.q6ad_adm_dinit failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_init
+{
+}
+#typev q6ad_adm_main_c1595 112 "%0ADCM.ADM.Err.q6ad_adm_init.q6ad_mem_map failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_init
+{
+}
+#typev q6ad_adm_main_c1588 111 "%0ADCM.ADM.Err.q6ad_adm_init.q6ad_alloc_physical_memory failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_init
+{
+}
+#typev q6ad_adm_main_c1560 110 "%0ADCM.ADM.q6ad_adm_ioctl end - handle=0x%10!Ix!,ioctl=0x%11!Ix!,rc=0x%12!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+handle, ItemPtr -- 10
+cmd, ItemPtr -- 11
+rc, ItemPtr -- 12
+}
+#typev q6ad_adm_main_c1531 107 "%0ADCM.ADM.q6ad_adm_obj_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_SET_MATRIX_DB_GAIN, rc(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1527 106 "%0ADCM.ADM.q6ad_adm_obj_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_SET_MATRIX_DB_GAIN " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1547 109 "%0ADCM.ADM.q6ad_adm_obj_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_SET_MATRIX_PSPD_CHANNEL_DB_GAIN_PARAMS, rc(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1544 108 "%0ADCM.ADM.q6ad_adm_obj_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_SET_MATRIX_PSPD_CHANNEL_DB_GAIN_PARAMS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1429 93 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_ATTACH_LSM_ADM, rc(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1425 92 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_ATTACH_LSM_ADM " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1441 95 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_DETACH_LSM_ADM, rc(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1437 94 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_DETACH_LSM_ADM " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1498 103 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_SET_MUTE, rc(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1493 102 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_SET_MUTE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1452 97 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_GET_VOL_LEVELS, rc(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1448 96 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_GET_VOL_LEVELS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1405 89 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_ATTACH_ASM_ADM, rc(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1401 88 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_ATTACH_ASM_ADM " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1417 91 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_DETACH_ASM_ADM, rc(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1413 90 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_DETACH_ASM_ADM " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1463 99 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_CFG_PP_PARAMS, rc(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1459 98 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_CFG_PP_PARAMS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1480 101 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_SET_VOLUME, rc(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1475 100 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_SET_VOLUME " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1388 87 "%0ADCM.ADM.q6ad_adm_ioctl - handle=0x%10!Ix!,ioctl=0x%11!Ix!,param_len=0x%12!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+handle, ItemPtr -- 10
+cmd, ItemPtr -- 11
+len, ItemPtr -- 12
+}
+#typev q6ad_adm_main_c1329 81 "%0ADCM.ADM.q6ad_adm_ioctl Device id[0x%10!Ix!]  Q6AD_CMD_GET_DEVICE_MIN_MAX_DB_GAIN, rc(0x%11!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+param->dev_id, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1324 80 "%0ADCM.ADM.q6ad_adm_ioctl Device id[0x%10!Ix!], acdb_app_type 0x%11!Ix!  Q6AD_CMD_GET_DEVICE_MIN_MAX_DB_GAIN " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+param->dev_id, ItemPtr -- 10
+param->acdb_apptype, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1375 86 "%0ADCM.ADM.Err.q6ad_adm_ioctl - ACDB get device channel type info failed !!! rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_ioctl
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1369 85 "%0ADCM.ADM.Err.q6ad_adm_ioctl - ACDB get device info failed !!! rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_ioctl
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1363 84 "%0ADCM.ADM.q6ad_adm_ioctl Q6AD_CMD_GET_DEVICE_INFO- Shared_Channel_Config_[%10!d!]:0x%11!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+i, ItemLong -- 10
+param->shared_channel[i], ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1351 83 "%0ADCM.ADM.q6ad_adm_ioctl Q6AD_CMD_GET_DEVICE_INFO- Channel Config:0x%10!Ix!, Direction Mask:0x%11!Ix!, Sample Rate Mask:0x%12!Ix! rc(0x%13!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+ep_info.ulChannelConfig, ItemPtr -- 10
+ep_info.ulDirectionMask, ItemPtr -- 11
+ep_info.ulSampleRateMask, ItemPtr -- 12
+rc, ItemPtr -- 13
+}
+#typev q6ad_adm_main_c1344 82 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_GET_DEVICE_INFO " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1310 79 "%0ADCM.ADM.q6ad_adm_ioctl Stream Handle[0x%10!Ix!]  Q6AD_CMD_SET_CALIBRATION, rc(0x%11!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1305 78 "%0ADCM.ADM.q6ad_adm_ioctl Stream Handle[0x%10!Ix!]  Q6AD_CMD_SET_CALIBRATION " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1298 77 "%0ADCM.ADM.q6ad_adm_ioctl Stream Handle[0x%10!Ix!]  Q6AD_CMD_GET_CALIBRATION, rc(0x%11!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_ioctl
+{
+handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1293 76 "%0ADCM.ADM.q6ad_adm_ioctl Stream Handle[0x%10!Ix!]  Q6AD_CMD_GET_CALIBRATION " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1282 75 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_MEMORY_UNMAP, rc(0x%11!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1276 74 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_MEMORY_UNMAP " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1269 73 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_MEMORY_MAP, rc(0x%11!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1262 72 "%0ADCM.ADM.q6ad_adm_ioctl ADM Handle[0x%10!Ix!]  Q6AD_CMD_MEMORY_MAP " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_ioctl
+{
+handle, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c793 40 "%0ADCM.ADM.q6ad_adm_open.q6ad_acdb_get_ep_info for devId[0](0x%10!Ix!).mode(0x%11!Ix!).afeport(0x%12!Ix!).dirMask(0x%13!Ix!).topo(0x%14!Ix!).channl(0x%15!Ix!).devId[1](0x%16!Ix!).admHandle(0x%17!Ix!).rc(0x%18!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_open
+{
+adm_open->dev_id[0], ItemPtr -- 10
+adm_obj->mode_of_op, ItemPtr -- 11
+adm_obj->port_id, ItemPtr -- 12
+adm_obj->direction_mask, ItemPtr -- 13
+adm_obj->topology_id, ItemPtr -- 14
+adm_obj->device_info[0].numChannels, ItemPtr -- 15
+adm_open->dev_id[1], ItemPtr -- 16
+adm_obj->handle, ItemPtr -- 17
+rc, ItemPtr -- 18
+}
+#typev q6ad_adm_main_c789 39 "%0ADCM.ADM.q6ad_adm_open.Err.q6ad_adm_pp_set_gain_dependent_common_cal failed !!!!!!! rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_open
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c782 38 "%0ADCM.ADM.Err.q6ad_adm_open -gain dep calibration unsupported in ACDB rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_open
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c769 37 "%0ADCM.ADM.Err.q6ad_adm_open q6ad_adm_pp_get_vol_levels failed !!!!!! rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_open
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c759 36 "%0ADCM.ADM.q6ad_adm_open.Err.q6ad_adm_pp_set_gain_independent_common_cal failed !!!!!!! rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_open
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c752 35 "%0ADCM.ADM.Err.q6ad_adm_open -gain_indep calibration unsupported in ACDB rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_open
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c739 34 "%0ADCM.ADM.Err.Failed q6ad_adm_open:q6ad_get_q13_gain_step_table: admHandle(0x%10!Ix!).rc [%11!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_open
+{
+adm_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c730 33 "%0ADCM.ADM.Err.q6ad_adm_open failed (%10!Id!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_open
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c713 32 "%0ADCM.ADM.Err.q6ad_adm_open Failed to retrieve COPP Topo ID from ACDB Error(%10!Id!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_open
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c667 31 "%0ADCM.ADM.Err.q6ad_adm_open - q6ad_acdb_get_ep_info error. rc=0x%10!Ix!,dev_id=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_open
+{
+rc, ItemPtr -- 10
+adm_open->dev_id[0], ItemPtr -- 11
+}
+#typev q6ad_adm_main_c636 30 "%0ADCM.ADM.Err.q6ad_adm_open open - q6ad_adm_get_adm_obj returns NULL. No resource" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_open
+{
+}
+#typev q6ad_adm_main_c627 29 "%0ADCM.ADM.Err.q6ad_adm_open open handle alloc failed !!!! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_open
+{
+}
+#typev q6ad_adm_main_c617 28 "%0ADCM.ADM.Err.q6ad_adm_open failed-invalid input !!!! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_open
+{
+}
+#typev q6ad_adm_main_c607 27 "%0ADCM.ADM.q6ad_adm_open Device ID [0x%10!Ix!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_open
+{
+adm_open->dev_id[0], ItemPtr -- 10
+}
+#typev q6ad_adm_main_c220 11 "%0ADCM.ADM.Err.q6ad_adm_pp_send_client_gain_independent_cal_to_Q6 failed ! adm handle = %10!Id!, rc=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_send_client_gain_independent_cal_to_Q6
+{
+adm_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c980 54 "%0ADCM.ADM.sent attach cmd w/ rc(0x%10!Ix!).ac(0x%11!Ix!).devId(0x%12!Ix!).copp(0x%13!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_proc_asm_attach
+{
+rc, ItemPtr -- 10
+ac_obj->handle, ItemPtr -- 11
+ac_obj->dev_id[0], ItemPtr -- 12
+ac_obj->copp_id, ItemPtr -- 13
+}
+#typev q6ad_adm_main_c950 51 "%0ADCM.ADM.Err.invalid asm handle for q6ad_adm_proc_asm_attach" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_proc_asm_attach
+{
+}
+#typev q6ad_adm_main_c975 53 "%0ADCM.ADM.Err.failed to send attach cmd w/ dev status=0x%10!Ix!,ac=0x%11!Ix!,dev_id=0x%12!Ix!,copp_id=0x%13!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_proc_asm_attach
+{
+rc, ItemPtr -- 10
+ac_obj->handle, ItemPtr -- 11
+ac_obj->dev_id[0], ItemPtr -- 12
+ac_obj->copp_id, ItemPtr -- 13
+}
+#typev q6ad_adm_main_c968 52 "%0ADCM.ADM.Attach ASMs(%10!d!).ASM(0x%11!Ix!).ADM(0x%12!Ix!).COPP(0x%13!Ix!).dir(%14!d!).APPtype(0x%15!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_proc_asm_attach
+{
+param.num_as, ItemLong -- 10
+*param.as_handles, ItemPtr -- 11
+param.ac_handle, ItemPtr -- 12
+param.copp_id, ItemPtr -- 13
+param.direction, ItemLong -- 14
+param.app_type, ItemPtr -- 15
+}
+#typev q6ad_adm_main_c943 50 "%0ADCM.ADM.Attach ASM(%10!Id!,0x%11!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_proc_asm_attach
+{
+idx, ItemPtr -- 10
+attach->as_handles[idx], ItemPtr -- 11
+}
+#typev q6ad_adm_main_c934 49 "%0ADCM.ADM.Err.Invalid number = 0x%10!Ix! of ASM handles passed for attaching the LLNP ADM Session ac_obj->port_mode =0x%11!Ix! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_proc_asm_attach
+{
+attach->num_asm_handles, ItemPtr -- 10
+ac_obj->mode_of_op, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c926 48 "%0ADCM.ADM.Err.Non LL NP ASM session sesspassed for LL NP ADM device session" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_proc_asm_attach
+{
+}
+#typev q6ad_adm_main_c920 47 "%0ADCM.ADM.Err.invalid asm handle for q6ad_adm_proc_asm_attach" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_proc_asm_attach
+{
+}
+#typev q6ad_adm_main_c905 46 "%0ADCM.ADM.Err.Invalid number = 0x%10!Ix! of ASM handles passed for attaching the ultra low latency device session ac_obj->port_mode =0x%11!Ix! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_proc_asm_attach
+{
+attach->num_asm_handles, ItemPtr -- 10
+ac_obj->mode_of_op, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c897 45 "%0ADCM.ADM.Err.Non Ultra low latency ASM session sesspassed for Ultra low latency device session" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_proc_asm_attach
+{
+}
+#typev q6ad_adm_main_c891 44 "%0ADCM.ADM.Err.invalid asm handle for q6ad_adm_proc_asm_attach" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_proc_asm_attach
+{
+}
+#typev q6ad_adm_main_c1019 56 "%0ADCM.ADM.Err.invalid asm handle for q6ad_adm_proc_asm_detach" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_proc_asm_detach
+{
+}
+#typev q6ad_adm_main_c1027 57 "%0ADCM.ADM.done detach cmd w/ rc=0x%10!Ix!,ac=0x%11!Ix!,dev_id=0x%12!Ix!,copp_id=0x%13!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_proc_asm_detach
+{
+rc, ItemPtr -- 10
+ac_obj->handle, ItemPtr -- 11
+ac_obj->dev_id[0], ItemPtr -- 12
+ac_obj->copp_id, ItemPtr -- 13
+}
+#typev q6ad_adm_main_c1011 55 "%0ADCM.ADM.q6ad_adm_proc_asm_detach w/ asm_handle[%10!Id!]=0x%11!Ix!,ac=0x%12!Ix!,dev_id=0x%13!Ix!,copp_id=0x%14!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_proc_asm_detach
+{
+idx, ItemPtr -- 10
+detach->as_handles[idx], ItemPtr -- 11
+ac_obj->handle, ItemPtr -- 12
+ac_obj->dev_id[0], ItemPtr -- 13
+ac_obj->copp_id, ItemPtr -- 14
+}
+#typev q6ad_adm_main_c1096 62 "%0ADCM.ADM.sent LSM attach cmd w/ rc(0x%10!Ix!).ac(0x%11!Ix!).devId(0x%12!Ix!).copp(0x%13!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_proc_lsm_attach
+{
+rc, ItemPtr -- 10
+ac_obj->handle, ItemPtr -- 11
+ac_obj->dev_id[0], ItemPtr -- 12
+ac_obj->copp_id, ItemPtr -- 13
+}
+#typev q6ad_adm_main_c1067 59 "%0ADCM.ADM.Err.invalid lsm handle for q6ad_adm_proc_lsm_attach" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_proc_lsm_attach
+{
+}
+#typev q6ad_adm_main_c1091 61 "%0ADCM.ADM.Err.failed to send LSM attach cmd w/ dev status=0x%10!Ix!,ac=0x%11!Ix!,dev_id=0x%12!Ix!,copp_id=0x%13!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_proc_lsm_attach
+{
+rc, ItemPtr -- 10
+ac_obj->handle, ItemPtr -- 11
+ac_obj->dev_id[0], ItemPtr -- 12
+ac_obj->copp_id, ItemPtr -- 13
+}
+#typev q6ad_adm_main_c1085 60 "%0ADCM.ADM.Attach LSMs(%10!d!).LSM(0x%11!Ix!).ADM(0x%12!Ix!).COPP(0x%13!Ix!).dir(%14!d!).APPtype(0x%15!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_proc_lsm_attach
+{
+param.num_ls, ItemLong -- 10
+*param.ls_handles, ItemPtr -- 11
+param.ac_handle, ItemPtr -- 12
+param.copp_id, ItemPtr -- 13
+param.direction, ItemLong -- 14
+param.app_type, ItemPtr -- 15
+}
+#typev q6ad_adm_main_c1062 58 "%0ADCM.ADM.Attach LSM(%10!Id!,0x%11!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_proc_lsm_attach
+{
+idx, ItemPtr -- 10
+attach->ls_handles[idx], ItemPtr -- 11
+}
+#typev q6ad_adm_main_c1132 64 "%0ADCM.ADM.Err.invalid lsm handle for q6ad_adm_proc_lsm_detach" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_proc_lsm_detach
+{
+}
+#typev q6ad_adm_main_c1140 65 "%0ADCM.ADM.done LSM detach cmd w/ rc=0x%10!Ix!,ac=0x%11!Ix!,dev_id=0x%12!Ix!,copp_id=0x%13!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_proc_lsm_detach
+{
+rc, ItemPtr -- 10
+ac_obj->handle, ItemPtr -- 11
+ac_obj->dev_id[0], ItemPtr -- 12
+ac_obj->copp_id, ItemPtr -- 13
+}
+#typev q6ad_adm_main_c1126 63 "%0ADCM.ADM.q6ad_adm_proc_lsm_detach w/ asm_handle[%10!Id!]=0x%11!Ix!,ac=0x%12!Ix!,dev_id=0x%13!Ix!,copp_id=0x%14!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_proc_lsm_detach
+{
+idx, ItemPtr -- 10
+detach->ls_handles[idx], ItemPtr -- 11
+ac_obj->handle, ItemPtr -- 12
+ac_obj->dev_id[0], ItemPtr -- 13
+ac_obj->copp_id, ItemPtr -- 14
+}
+#typev q6ad_adm_main_c1188 69 "%0q6ad_adm_set_calibration_data: Applying Calib Data to current session." //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_set_calibration_data
+{
+}
+#typev q6ad_adm_main_c1181 68 "%0q6ad_adm_set_calibration_data:: ACDB Command failed with status = 0x%10!Ix!. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_set_calibration_data
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c1174 67 "%0[q6ad_adm_set_calibration_data : Setting single parameter to acdb" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_set_calibration_data
+{
+}
+#typev q6ad_adm_main_c1169 66 "%0q6ad_adm_set_calibration_data:q6ad_adm_acdb_copp_config_table_info Setting multiple parameters to acdb" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_set_calibration_data
+{
+}
+#typev q6ad_adm_main_c334 17 "%0ADCM.ADM.Err.q6ad_adm_pp_set_gain_independent_common_cal failed !!!!!!! rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_set_copp_calibration
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c328 16 "%0ADCM.ADM.Err.q6ad_adm_set_copp_calibration -gain_indep calibration unsupported in ACDB rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_set_copp_calibration
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c314 15 "%0ADCM.ADM.Err.q6ad_adm_set_copp_calibration:Exallocate Pool Memory Allocation failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_set_copp_calibration
+{
+}
+#typev q6ad_adm_main_c309 14 "%0ADCM.ADM.q6ad_adm_set_copp_calibration ADM session with specified device id is active =0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_set_copp_calibration
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_main_c289 13 "%0ADCM.ADM.Err.q6ad_adm_set_copp_calibration -gain_indep calibration unsupported in for ULL/LL NP ADM handle =0x%10!Ix!, adm mode = 0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_set_copp_calibration
+{
+adm_obj->handle, ItemPtr -- 10
+adm_obj->mode_of_op, ItemPtr -- 11
+}
+#typev q6ad_adm_main_c274 12 "%0ADCM.ADM.Err.q6ad_adm_set_copp_calibration ac_obj returned is invalid, continueing querying" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_set_copp_calibration
+{
+}

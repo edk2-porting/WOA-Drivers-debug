@@ -1,0 +1,107 @@
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+cbddb67a-b8b0-367b-fd07-0300d48627de 10.7 // SRC=RevSocket.c MJ= MN=
+#typev RevSocket_c335 27 "%0<%!FUNC!>:: close socket on IP socket = 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_ClearSocket
+{
+&pWskSocket, ItemPtr -- 10
+}
+#typev RevSocket_c324 26 "%0<%!FUNC!>:: IRP allocation failed on socket = 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_ClearSocket
+{
+pWskSocket, ItemPtr -- 10
+}
+#typev RevSocket_c316 25 "%0<%!FUNC!>:: pWskSocket == NULL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_ClearSocket
+{
+}
+#typev RevSocket_c367 29 "%0<%!FUNC!>:: WskCaptureProviderNPI failed with status = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_Init
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevSocket_c360 28 "%0<%!FUNC!>:: WskRegister failed with status = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_Init
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RevSocket_c71 10 "%0<%!FUNC!>:: ppWskSocket == NULL || pSocketInfo == NULL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+}
+#typev RevSocket_c137 13 "%0<%!FUNC!>:: Invalid Xport protocol = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->XportProtocol, ItemLong -- 10
+}
+#typev RevSocket_c267 23 "%0<%!FUNC!>:: Invalid Xport protocol = %10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->XportProtocol, ItemLong -- 10
+}
+#typev RevSocket_c262 22 "%0<%!FUNC!>:: WskGetLocalAddress call succeed on IP family = %10!u!, Xport type = %11!u!, Port = %12!u!: socket = 0x%13!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->IPFamily, ItemLong -- 10
+pSocketInfo->XportProtocol, ItemLong -- 11
+pSocketInfo->PortNum, ItemLong -- 12
+listeningSocket, ItemPtr -- 13
+}
+#typev RevSocket_c255 21 "%0<%!FUNC!>:: WskGetLocalAddress call failed on IP family = %10!u!, Xport type = %11!u!, Port = %12!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->IPFamily, ItemLong -- 10
+pSocketInfo->XportProtocol, ItemLong -- 11
+pSocketInfo->PortNum, ItemLong -- 12
+}
+#typev RevSocket_c237 20 "%0<%!FUNC!>:: WskBind call succeed on IP family = %10!u!, Xport type = %11!u!, Port = %12!u!: socket = 0x%13!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->IPFamily, ItemLong -- 10
+pSocketInfo->XportProtocol, ItemLong -- 11
+pSocketInfo->PortNum, ItemLong -- 12
+listeningSocket, ItemPtr -- 13
+}
+#typev RevSocket_c232 19 "%0<%!FUNC!>:: WskBind call failed on IP family = %10!u!, Xport type = %11!u!, Port = %12!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->IPFamily, ItemLong -- 10
+pSocketInfo->XportProtocol, ItemLong -- 11
+pSocketInfo->PortNum, ItemLong -- 12
+}
+#typev RevSocket_c206 18 "%0<%!FUNC!>:: WskGetLocalAddress call succeed on IP family = %10!u!, Xport type = %11!u!, Port = %12!u!: socket = 0x%13!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->IPFamily, ItemLong -- 10
+pSocketInfo->XportProtocol, ItemLong -- 11
+pSocketInfo->PortNum, ItemLong -- 12
+listeningSocket, ItemPtr -- 13
+}
+#typev RevSocket_c199 17 "%0<%!FUNC!>:: WskGetLocalAddress call failed on IP family = %10!u!, Xport type = %11!u!, Port = %12!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->IPFamily, ItemLong -- 10
+pSocketInfo->XportProtocol, ItemLong -- 11
+pSocketInfo->PortNum, ItemLong -- 12
+}
+#typev RevSocket_c181 16 "%0<%!FUNC!>:: WskBind call succeed on IP family = %10!u!, Xport type = %11!u!, Port = %12!u!: socket = 0x%13!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->IPFamily, ItemLong -- 10
+pSocketInfo->XportProtocol, ItemLong -- 11
+pSocketInfo->PortNum, ItemLong -- 12
+listeningSocket, ItemPtr -- 13
+}
+#typev RevSocket_c293 24 "%0<%!FUNC!>:: close socket on IP family = %10!u!, Xport type = %11!u!, Port = %12!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->IPFamily, ItemLong -- 10
+pSocketInfo->XportProtocol, ItemLong -- 11
+pSocketInfo->PortNum, ItemLong -- 12
+}
+#typev RevSocket_c176 15 "%0<%!FUNC!>:: WskBind call failed on IP family = %10!u!, Xport type = %11!u!, Port = %12!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->IPFamily, ItemLong -- 10
+pSocketInfo->XportProtocol, ItemLong -- 11
+pSocketInfo->PortNum, ItemLong -- 12
+}
+#typev RevSocket_c145 14 "%0<%!FUNC!>:: WskSocket call failed on IP family = %10!u!, Xport type = %11!u!, Port = %12!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->IPFamily, ItemLong -- 10
+pSocketInfo->XportProtocol, ItemLong -- 11
+pSocketInfo->PortNum, ItemLong -- 12
+}
+#typev RevSocket_c89 12 "%0<%!FUNC!>:: Warning: pWskSocket 0x%10!p! is not null, close the socket." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+*ppWskSocket, ItemPtr -- 10
+}
+#typev RevSocket_c79 11 "%0<%!FUNC!>:: IRP allocation failed on IP family = %10!u!, Xport type = %11!u!, Port = %12!u!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevSocket_SetupSocket
+{
+pSocketInfo->IPFamily, ItemLong -- 10
+pSocketInfo->XportProtocol, ItemLong -- 11
+pSocketInfo->PortNum, ItemLong -- 12
+}

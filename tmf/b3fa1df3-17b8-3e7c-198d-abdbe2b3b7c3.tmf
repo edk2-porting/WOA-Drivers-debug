@@ -1,0 +1,64 @@
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+b3fa1df3-17b8-3e7c-198d-abdbe2b3b7c3 10.7 // SRC=ipa_smem.c MJ= MN=
+#typev ipa_smem_c146 15 "%0IPA::<----%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASmemGetFilterTableAddress
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_smem_c142 14 "%0IPA::%10!s!:%11!d!:Filter Table VirtualAddress = 0x%12!I64x!, Physical Address = 0x%13!I64x!, size = %14!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASmemGetFilterTableAddress
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+(UINT64)pFilterTableAddress, ItemLongLongX -- 12
+(MmGetPhysicalAddress(*pFilterTableAddress)).QuadPart, ItemLongLongX -- 13
+*filterTableSize, ItemLong -- 14
+}
+#typev ipa_smem_c118 13 "%0IPA::%10!s!:%11!d!:Filter Table VirtualAddress = 0x%12!I64x!, size = %13!d!, Physical Address = 0x%14!I64x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASmemGetFilterTableAddress
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+(UINT64)pFilterTableAddress, ItemLongLongX -- 12
+*filterTableSize, ItemLong -- 13
+filterTablePhysicalAddress.QuadPart, ItemLongLongX -- 14
+}
+#typev ipa_smem_c102 12 "%0IPA::%10!s!:%11!d!: Error! smemParams.buffer is NULL: 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=IPASmemGetFilterTableAddress
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev ipa_smem_c74 10 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASmemGetFilterTableAddress
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_smem_c233 21 "%0IPA::<----%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=ipaSmemQueryForInterface
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_smem_c225 20 "%0IPA::%10!s!:%11!d!: Opened Smem function interface." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=ipaSmemQueryForInterface
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_smem_c218 19 "%0IPA::%10!s!:%11!d!: WdfIoTargetQueryForInterface failed with status(0x%12!x!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=ipaSmemQueryForInterface
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev ipa_smem_c198 18 "%0IPA::%10!s!:%11!d!: WdfIoTargetOpen failed: 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=ipaSmemQueryForInterface
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev ipa_smem_c183 17 "%0IPA::%10!s!:%11!d!: WdfIoTargetCreate failed: 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=ipaSmemQueryForInterface
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev ipa_smem_c170 16 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=ipaSmemQueryForInterface
+{
+__FUNCTION__, ItemString -- 10
+}

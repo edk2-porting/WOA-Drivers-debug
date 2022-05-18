@@ -1,0 +1,406 @@
+// PDB:  QcTrEE7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:06:258 (UTC) [tracepdb]
+2fa00c09-2b9c-3d54-4e44-bd9da0122528 10.7 // SRC=ListenerServices.c MJ= MN=
+#typev ListenerServices_c1172 67 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=CallListenerHandler
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev ListenerServices_c1169 66 "%0TrEE: Error: Listener with ID %10!d! neither exist nor registered with TZ [%11!p!] :%12!s! :%13!d! 0x%14!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=CallListenerHandler
+{
+ListenerId, ItemLong -- 10
+_TID(), ItemPtr -- 11
+__FILE__, ItemString -- 12
+__LINE__, ItemLong -- 13
+Status, ItemLong -- 14
+}
+#typev ListenerServices_c1160 65 "%0TrEE: Error: Listener with ID %10!d! neither external nor have valid callback to call [%11!p!] :%12!s! :%13!d! 0x%14!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=CallListenerHandler
+{
+ListenerId, ItemLong -- 10
+_TID(), ItemPtr -- 11
+__FILE__, ItemString -- 12
+__LINE__, ItemLong -- 13
+Status, ItemLong -- 14
+}
+#typev ListenerServices_c1126 64 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=CallListenerHandler
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev ListenerServices_c599 36 "%0TrEE: Error: SendShmBridgeDeleteReqToTZ for Listener failed with status [%10!p!] :%11!s! :%12!d! 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=DeregisterListener
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c584 35 "%0TrEE: Error: Unable to deregister Listener with id %10!d! [%11!p!] %12!s!:%13!d!: 0x%14!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=DeregisterListener
+{
+ListenerId, ItemLong -- 10
+_TID(), ItemPtr -- 11
+__FILE__, ItemString -- 12
+__LINE__, ItemLong -- 13
+Status, ItemLong -- 14
+}
+#typev ListenerServices_c612 37 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=DeregisterListener
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev ListenerServices_c577 34 "%0TrEE: Error: Listener node with ID %10!d! not found in registered Listener linked list [%11!p!] %12!s!:%13!d!: 0x%14!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=DeregisterListener
+{
+ListenerId, ItemLong -- 10
+_TID(), ItemPtr -- 11
+__FILE__, ItemString -- 12
+__LINE__, ItemLong -- 13
+Status, ItemLong -- 14
+}
+#typev ListenerServices_c555 33 "%0TrEE: Error: Listeners are not yet registered with TZ [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=DeregisterListener
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c548 32 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=DeregisterListener
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev ListenerServices_c1086 63 "%0TrEE: Error: SendShmBridgeDeleteReqToTZ to Listener failed with status [%10!p!] :%11!s! :%12!d! 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=DeregisterListeners
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c1071 62 "%0TrEE: Error: Failed to unregister Listener ID %10!d! with TZ [%11!p!] :%12!s! :%13!d! 0x%14!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=DeregisterListeners
+{
+ListenerNode->ListenerId, ItemLong -- 10
+_TID(), ItemPtr -- 11
+__FILE__, ItemString -- 12
+__LINE__, ItemLong -- 13
+Status, ItemLong -- 14
+}
+#typev ListenerServices_c515 31 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=RegisterExternalListener
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev ListenerServices_c455 30 "%0TrEE: Error: Unable to create External Listener node [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterExternalListener
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c446 29 "%0TrEE: External Listener with listener ID %10!d! registered successfully with TZ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_LISTENER FUNC=RegisterExternalListener
+{
+ListenerId, ItemLong -- 10
+}
+#typev ListenerServices_c442 28 "%0TrEE: Error: Failed to register External listener ID %10!d! with TZ [%11!p!] %12!s!:%13!d!: 0x%14!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterExternalListener
+{
+ListenerId, ItemLong -- 10
+_TID(), ItemPtr -- 11
+__FILE__, ItemString -- 12
+__LINE__, ItemLong -- 13
+Status, ItemLong -- 14
+}
+#typev ListenerServices_c434 27 "%0TrEE: Error: SendShmBridgeCreateReqToTZ for External Listener failed with status [%10!p!] :%11!s! :%12!d! 0x%13!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterExternalListener
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c424 26 "%0TrEE: External Listener buffer allocated successfully with length 0x%10!x! at address %11!p!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_LISTENER FUNC=RegisterExternalListener
+{
+(UINT32)SharedBufferLen, ItemLong -- 10
+SharedBufferVa, ItemPtr -- 11
+}
+#typev ListenerServices_c405 25 "%0TrEE: Error: Unable to allocate memory for External Listener buffer, failed with Status 0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterExternalListener
+{
+Status, ItemLong -- 10
+}
+#typev ListenerServices_c388 24 "%0TrEE: Error: Unable to allocate memory for External Listener buffer, failed with Status 0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterExternalListener
+{
+Status, ItemLong -- 10
+}
+#typev ListenerServices_c370 23 "%0TrEE: Warning: External Listener already registered with TZ [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_LISTENER FUNC=RegisterExternalListener
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c361 22 "%0TrEE: Error: External Listener buffer size crossed max limit [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterExternalListener
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c356 21 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=RegisterExternalListener
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev ListenerServices_c787 49 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=RegisterFileSystemListeners
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev ListenerServices_c782 48 "%0TrEE: Error: Unable to register SFS File System Listener with TZ [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterFileSystemListeners
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c766 47 "%0TrEE: Error: Unable to register GPFS File system Listener with TZ [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterFileSystemListeners
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c750 46 "%0TrEE: Error: Unable to register SFS File System Listener with TZ [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterFileSystemListeners
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c735 45 "%0TrEE: Error: Unable to register GPFS File system Listener with TZ [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterFileSystemListeners
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c719 44 "%0TrEE: Error: Unable to get TZ version [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterFileSystemListeners
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c712 43 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=RegisterFileSystemListeners
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev ListenerServices_c309 20 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=RegisterListener
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev ListenerServices_c248 19 "%0TrEE: Error: Unable to create Listener node [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterListener
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c239 18 "%0TrEE: Listener with listener ID %10!d! registered successfully with TZ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_LISTENER FUNC=RegisterListener
+{
+ListenerId, ItemLong -- 10
+}
+#typev ListenerServices_c235 17 "%0TrEE: Error: Failed to register Listener ID %10!d! with TZ [%11!p!] %12!s!:%13!d!: 0x%14!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterListener
+{
+ListenerId, ItemLong -- 10
+_TID(), ItemPtr -- 11
+__FILE__, ItemString -- 12
+__LINE__, ItemLong -- 13
+Status, ItemLong -- 14
+}
+#typev ListenerServices_c227 16 "%0TrEE: Error: SendShmBridgeCreateReqToTZ for Listener buffer failed with status [%10!p!] :%11!s! :%12!d! 0x%13!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterListener
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c216 15 "%0TrEE: Listener buffer allocated successfully with length 0x%10!x! at address %11!p!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_LISTENER FUNC=RegisterListener
+{
+(UINT32)SharedBufferLen, ItemLong -- 10
+SharedBufferVa, ItemPtr -- 11
+}
+#typev ListenerServices_c196 14 "%0TrEE: Error: Unable to allocate memory for Listener buffer, failed with Status 0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterListener
+{
+Status, ItemLong -- 10
+}
+#typev ListenerServices_c179 13 "%0TrEE: Error: Unable to allocate memory for Listener buffer from TGCM, failed with Status 0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterListener
+{
+Status, ItemLong -- 10
+}
+#typev ListenerServices_c162 12 "%0TrEE: Warning: Listener already registered with TZ. [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_LISTENER FUNC=RegisterListener
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c153 11 "%0TrEE: Error: Listner buffer size crossed Max limit [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterListener
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c148 10 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=RegisterListener
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev ListenerServices_c927 57 "%0TrEE: Error: Failed to register External Listener notifications with PNP manager [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterListenersPnpNotifications
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c937 58 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=RegisterListenersPnpNotifications
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev ListenerServices_c906 56 "%0TrEE: Error: Failed to register RPMB service notifications with PNP manager [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterListenersPnpNotifications
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c890 55 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=RegisterListenersPnpNotifications
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev ListenerServices_c983 61 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=RegisterTimeListener
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev ListenerServices_c976 60 "%0TrEE: Error: Failed to register Time Listner with TZ [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterTimeListener
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c967 59 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=RegisterTimeListener
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev ListenerServices_c1233 71 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=RegisterWaitListener
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev ListenerServices_c1215 69 "%0TrEE: Error: Failed to register waitlistener with TZ [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=RegisterWaitListener
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c1203 68 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=RegisterWaitListener
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev ListenerServices_c859 54 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=TreeEvtNotifyOsServiceInterfaceChange
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev ListenerServices_c830 51 "%0TrEE: Error: Invalid input parameters for TreeEvtNotifyOsServiceInterfaceChange [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=TreeEvtNotifyOsServiceInterfaceChange
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c842 52 "%0TrEE: Error: Failed to register External Listener with TZ [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=TreeEvtNotifyOsServiceInterfaceChange
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c825 50 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=TreeEvtNotifyOsServiceInterfaceChange
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev ListenerServices_c682 42 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=TreeEvtNotifyRpmbInterfaceChange
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev ListenerServices_c653 39 "%0TrEE: Error: Invalid input parameters for TreeEvtNotifyRpmbInterfaceChange[%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=TreeEvtNotifyRpmbInterfaceChange
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c675 41 "%0TrEE: Error: Deregistering RPMB Listener with TZ failed [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=TreeEvtNotifyRpmbInterfaceChange
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c665 40 "%0TrEE: Error: Registering RPMB Listener with TZ failed [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=TreeEvtNotifyRpmbInterfaceChange
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev ListenerServices_c648 38 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_LISTENER FUNC=TreeEvtNotifyRpmbInterfaceChange
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev ListenerServices_c1309 76 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_LISTENER FUNC=WaitForListenerCompletion
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev ListenerServices_c1279 73 "%0TrEE: Warning: Timeout occured while waiting for Listener event [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_LISTENER FUNC=WaitForListenerCompletion
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+WaitRetVal, ItemLong -- 13
+}
+#typev ListenerServices_c1300 75 "%0TrEE: Error: Wait on Listener event returned error [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_LISTENER FUNC=WaitForListenerCompletion
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+WaitRetVal, ItemLong -- 13
+}
+#typev ListenerServices_c1288 74 "%0TrEE: Info: Listener event recieved by blocked listener." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_LISTENER FUNC=WaitForListenerCompletion
+{
+}
+#typev ListenerServices_c1265 72 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_LISTENER FUNC=WaitForListenerCompletion
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}

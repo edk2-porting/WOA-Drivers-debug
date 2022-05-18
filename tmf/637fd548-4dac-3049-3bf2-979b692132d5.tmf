@@ -1,0 +1,56 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+637fd548-4dac-3049-3bf2-979b692132d5 miniport // SRC=opm.cpp MJ= MN=
+#typev opm_cpp2439 19 "%0OPM: Srmversion set to 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDCP FUNC=DxKmDdiOPMConfigureProtectedOutput
+{
+pDevice->srmVersion, ItemLong -- 10
+}
+#typev opm_cpp2379 18 "%0OPM: Number of OPM Clients requested HDCP ON :%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDCP FUNC=DxKmDdiOPMConfigureProtectedOutput
+{
+pDevice->opmHDCPRefCount, ItemLong -- 10
+}
+#typev opm_cpp2346 17 "%0OPM: Disabling HDCP as HDCPRefCount is 0 VidPnTargetID: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDCP FUNC=DxKmDdiOPMConfigureProtectedOutput
+{
+pProtectedOutput->vidPnTargetId, ItemLong -- 10
+}
+#typev opm_cpp2306 14 "%0OPM: HDCP_OFF requested for vidPnTargetID: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDCP FUNC=DxKmDdiOPMConfigureProtectedOutput
+{
+pProtectedOutput->vidPnTargetId, ItemLong -- 10
+}
+#typev opm_cpp2314 15 "%0OPM: HDCP_ON_WITH_NO_TYPE_RESTRICTION requested for vidPnTargetID: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDCP FUNC=DxKmDdiOPMConfigureProtectedOutput
+{
+pProtectedOutput->vidPnTargetId, ItemLong -- 10
+}
+#typev opm_cpp2323 16 "%0OPM: HDCP_ON_WITH_TYPE1_RESTRICTION requested for vidPnTargetID: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDCP FUNC=DxKmDdiOPMConfigureProtectedOutput
+{
+pProtectedOutput->vidPnTargetId, ItemLong -- 10
+}
+#typev opm_cpp804 11 "%0OPM : Protected output is created vidPnTargetId:%10!d! status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDCP FUNC=DxKmDdiOPMCreateProtectedOutput
+{
+vidPnTargetId, ItemLong -- 10
+ntStatus, ItemLong -- 11
+}
+#typev opm_cpp795 10 "%0OPM : vidPnTargetId:%10!d! supportsHDCP:%11!d! isRepeater:%12!d! numDownsreamDevices: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDCP FUNC=DxKmDdiOPMCreateProtectedOutput
+{
+vidPnTargetId, ItemLong -- 10
+pProtectedOutput->supportsHDCP, ItemLong -- 11
+pProtectedOutput->isRepeater, ItemLong -- 12
+pProtectedOutput->numDownstreamDevices, ItemLong -- 13
+}
+#typev opm_cpp2599 21 "%0OPM: Disabling HDCP as HDCPRefCount is 0 vidPnTargetId: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDCP FUNC=DxKmDdiOPMDestroyProtectedOutput
+{
+pProtectedOutput->vidPnTargetId, ItemLong -- 10
+}
+#typev opm_cpp2590 20 "%0OPM: protected output handle for one client is destroyed (HDCPrefcount: %10!d!) vidPnTargetId: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDCP FUNC=DxKmDdiOPMDestroyProtectedOutput
+{
+pDevice->opmHDCPRefCount, ItemLong -- 10
+pProtectedOutput->vidPnTargetId, ItemLong -- 11
+}
+#typev opm_cpp1189 13 "%0OPM :Device attached supports HDCP vidPnTargetID: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDCP FUNC=DxKmDdiOPMGetInformation
+{
+pProtectedOutput->vidPnTargetId, ItemLong -- 10
+}
+#typev opm_cpp1071 12 "%0OPM: Revoked HDCP device attached vidPnTargetID: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceHDCP FUNC=DxKmDdiOPMGetInformation
+{
+pProtectedOutput->vidPnTargetId, ItemLong -- 10
+}

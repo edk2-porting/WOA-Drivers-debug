@@ -1,0 +1,23 @@
+// PDB:  qcdxkm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:02:688 (UTC) [tracepdb]
+d049eeb8-c795-38ca-d55d-a3aeef46d40c src // SRC=dp_edid.c MJ= MN=
+#typev dp_edid_c130 13 "%0DP%10!d!: DP_ReadSinkEDIDRaw() : EDID blockIdx = %11!d! Read Failed, eStatus = 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkEDIDRaw
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+uBlockIdx, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_edid_c109 12 "%0DP%10!d!: DP_ReadSinkEDIDRaw() : EDID corruption detected after %11!d! retries, trying to parse corrupted EDID" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkEDIDRaw
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+DP_EDID_READ_RETRY_NUMBER, ItemLong -- 11
+}
+#typev dp_edid_c90 11 "%0DP%10!d!: DP_ReadSinkEDIDRaw() : Read EDID Header or CheckSum is not valid or corrupted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkEDIDRaw
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_edid_c84 10 "%0DP%10!d!: DP_ReadSinkEDIDRaw() : EDID Read Failed, eStatus = 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadSinkEDIDRaw
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}

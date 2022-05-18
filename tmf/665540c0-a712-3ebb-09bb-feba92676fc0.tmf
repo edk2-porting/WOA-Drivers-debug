@@ -1,0 +1,516 @@
+// PDB:  qcthermalmdm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+665540c0-a712-3ebb-09bb-feba92676fc0 ThermalMDM // SRC=Sensor.c MJ= MN=
+#typev Sensor_c54 13 "%0[Sensor.c][%!FUNC!] Exit bRetValue %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorCheckIfRequestIsValid
+{
+bRetValue, ItemLong -- 10
+}
+#typev Sensor_c51 12 "%0[Sensor.c][%!FUNC!] bRetValue %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorCheckIfRequestIsValid
+{
+bRetValue, ItemLong -- 10
+}
+#typev Sensor_c48 11 "%0[Sensor.c][%!FUNC!] bRetValue %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorCheckIfRequestIsValid
+{
+bRetValue, ItemLong -- 10
+}
+#typev Sensor_c36 10 "%0[Sensor.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorCheckIfRequestIsValid
+{
+}
+#typev Sensor_c225 26 "%0[Sensor.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorDeviceAdd
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Sensor_c221 25 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!p!][%12!s!]Sensor Device Added" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorDeviceAdd
+{
+pCommonDevCtx, ItemPtr -- 10
+pCommonDevCtx->pSensorDeviceContext, ItemPtr -- 11
+pCommonDevCtx->pSensorDeviceContext->QMISensorDeviceName, ItemString -- 12
+}
+#typev Sensor_c218 24 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!p!][%12!s!]WdfTimerCreate %13!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorDeviceAdd
+{
+pCommonDevCtx, ItemPtr -- 10
+pCommonDevCtx->pSensorDeviceContext, ItemPtr -- 11
+pCommonDevCtx->pSensorDeviceContext->QMISensorDeviceName, ItemString -- 12
+status, ItemNTSTATUS -- 13
+}
+#typev Sensor_c207 23 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!p!][%12!s!]WdfWaitLockCreate  %13!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorDeviceAdd
+{
+pCommonDevCtx, ItemPtr -- 10
+pCommonDevCtx->pSensorDeviceContext, ItemPtr -- 11
+pCommonDevCtx->pSensorDeviceContext->QMISensorDeviceName, ItemString -- 12
+status, ItemNTSTATUS -- 13
+}
+#typev Sensor_c202 22 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!p!][%12!s!]WdfIoQueueCreate %13!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorDeviceAdd
+{
+pCommonDevCtx, ItemPtr -- 10
+pCommonDevCtx->pSensorDeviceContext, ItemPtr -- 11
+pCommonDevCtx->pSensorDeviceContext->QMISensorDeviceName, ItemString -- 12
+status, ItemNTSTATUS -- 13
+}
+#typev Sensor_c174 21 "%0[Sensor.c][%!FUNC!][Sensor]WdfMemoryCreate %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorDeviceAdd
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Sensor_c162 20 "%0[Sensor.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorDeviceAdd
+{
+}
+#typev Sensor_c961 96 "%0[Sensor.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtDelayedReadTimeoutCB
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Sensor_c957 95 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]lockacquired. %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtDelayedReadTimeoutCB
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+lockacquired, ItemLong -- 12
+}
+#typev Sensor_c947 94 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]The request has been cancelled." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorEvtDelayedReadTimeoutCB
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c935 93 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]SensorQMIITemperatureReadRequest() Failed. status = 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorEvtDelayedReadTimeoutCB
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+status, ItemLong -- 12
+}
+#typev Sensor_c926 92 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]lockacquired. %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtDelayedReadTimeoutCB
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+lockacquired, ItemLong -- 12
+}
+#typev Sensor_c918 91 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]lockacquired. %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtDelayedReadTimeoutCB
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+lockacquired, ItemLong -- 12
+}
+#typev Sensor_c905 90 "%0[Sensor.c][%!FUNC!][Sensor]Delayed Read timer timeout!!!!!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorEvtDelayedReadTimeoutCB
+{
+}
+#typev Sensor_c903 89 "%0[Sensor.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtDelayedReadTimeoutCB
+{
+}
+#typev Sensor_c887 88 "%0[Sensor.c][%!FUNC!] Exit status %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Sensor_c881 87 "%0[Sensor.c][%!FUNC!][Sensor]WdfRequestSend() Failed. Request status %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Sensor_c865 86 "%0[Sensor.c][%!FUNC!][Sensor]Driver doesnt handle this IOCTL request." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoDeviceControl
+{
+}
+#typev Sensor_c857 85 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]SensorInitiateTempReadRequest() Failed. %12!s!. for Request %13!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorEvtIoDeviceControl
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+status, ItemNTSTATUS -- 12
+Request, ItemPtr -- 13
+}
+#typev Sensor_c850 84 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]IOCTL_THERMAL_READ_TEMPERATURE Received. Request %12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorEvtIoDeviceControl
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+Request, ItemPtr -- 12
+}
+#typev Sensor_c844 83 "%0[Sensor.c][%!FUNC!][Sensor]IoControlCode 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoDeviceControl
+{
+IoctlCode, ItemLong -- 10
+}
+#typev Sensor_c840 82 "%0[Sensor.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoDeviceControl
+{
+}
+#typev Sensor_c1023 103 "%0%!FUNC! Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleCancelRequest
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Sensor_c1019 102 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]blockacquired. %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleCancelRequest
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+blockacquired, ItemLong -- 12
+}
+#typev Sensor_c1010 101 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Request %12!p! handled with STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleCancelRequest
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+Request, ItemPtr -- 12
+}
+#typev Sensor_c1003 100 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Request %12!p! Cancelled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleCancelRequest
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+Request, ItemPtr -- 12
+}
+#typev Sensor_c990 99 "%0%!FUNC!:: [Sensor][%10!p!][%11!s!] Received Cancel for Request  %12!p! while outstandingrequest is %13!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleCancelRequest
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+Request, ItemPtr -- 12
+pSensorDevContext->outstandingrequest, ItemPtr -- 13
+}
+#typev Sensor_c987 98 "%0%!FUNC! [Sensor][%10!p!][%11!s!]blockacquired. %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleCancelRequest
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+blockacquired, ItemLong -- 12
+}
+#typev Sensor_c977 97 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleCancelRequest
+{
+}
+#typev Sensor_c1080 110 "%0%!FUNC! Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleStop
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Sensor_c1077 109 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]blockacquired. %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleStop
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+blockacquired, ItemLong -- 12
+}
+#typev Sensor_c1063 108 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Request Received To Cancel outstandingrequest %12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleStop
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+pSensorDevContext->outstandingrequest, ItemPtr -- 12
+}
+#typev Sensor_c1056 107 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]status 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleStop
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+status, ItemLong -- 12
+}
+#typev Sensor_c1051 106 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!] Request UnMarked Cancelable" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleStop
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c1046 105 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]blockacquired. %12!d! ActionFlags 0x%13!0x! Request %14!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleStop
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+blockacquired, ItemLong -- 12
+ActionFlags, ItemLong -- 13
+Request, ItemPtr -- 14
+}
+#typev Sensor_c1039 104 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoHandleStop
+{
+}
+#typev Sensor_c818 81 "%0[Sensor.c][%!FUNC!] Exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoInternalDeviceControl
+{
+}
+#typev Sensor_c811 80 "%0[Sensor.c][%!FUNC!][Sensor]Trigger WdfRequestGetStatus" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoInternalDeviceControl
+{
+}
+#typev Sensor_c792 79 "%0[Sensor.c][%!FUNC!] IoControlCode 0x%10!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorEvtIoInternalDeviceControl
+{
+IoControlCode, ItemLong -- 10
+}
+#typev Sensor_c114 16 "%0[Sensor.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorInitializeDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Sensor_c94 15 "%0[Sensor.c][%!FUNC!][Sensor]pSensorDevCtx %10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorInitializeDevice
+{
+pSensorDevCtx, ItemPtr -- 10
+}
+#typev Sensor_c90 14 "%0[Sensor.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorInitializeDevice
+{
+}
+#typev Sensor_c758 76 "%0[Sensor.c][%!FUNC!] [Sensor][%10!p!][%11!s!]Request Queued as Device was not up yet.bQmiPathFailedToInitialize = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+pDriver->bQmiPathFailedToInitialize, ItemLong -- 12
+}
+#typev Sensor_c738 74 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!] Failed. %12!s!. for Outstanding Request %13!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+status, ItemNTSTATUS -- 12
+ReadRequest, ItemPtr -- 13
+}
+#typev Sensor_c772 78 "%0[Sensor.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorInitiateTempReadRequest
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Sensor_c749 75 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Starting Timer %12!I64d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+ExpirationTime.QuadPart, ItemLongLong -- 12
+}
+#typev Sensor_c726 73 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]blockacquired. %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_QMI FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+blockacquired, ItemLong -- 12
+}
+#typev Sensor_c717 72 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!] Request Marked Cancelable" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c707 71 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]ExpirationTime Calculated %12!I64d! for Outstanding Request %13!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+ExpirationTime.QuadPart, ItemLongLong -- 12
+ReadRequest, ItemPtr -- 13
+}
+#typev Sensor_c768 77 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]blockacquired. %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_QMI FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+blockacquired, ItemLong -- 12
+}
+#typev Sensor_c688 70 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]WdfRequestRetrieveOutputBuffer() Failed when device is not up . %12!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev Sensor_c679 69 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Copied temperature and returning to host when device is not up %12!u! K RequestCount %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+*RequestTemperature, ItemLong -- 12
+pSensorDevCxt->requestcount, ItemLong -- 13
+}
+#typev Sensor_c663 68 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Requested Timeout %12!ld! LowTemperature %13!ld! HighTemperature %14!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+ThermalWaitRead->Timeout, ItemLong -- 12
+ThermalWaitRead->LowTemperature, ItemLong -- 13
+ThermalWaitRead->HighTemperature, ItemLong -- 14
+}
+#typev Sensor_c657 67 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]WdfRequestRetrieveInputBuffer() Failed. 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+status, ItemLong -- 12
+}
+#typev Sensor_c648 66 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]WdfRequestRetrieveInputBuffer() Failed. %12!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev Sensor_c638 65 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]blockacquired. %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_QMI FUNC=SensorInitiateTempReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+blockacquired, ItemLong -- 12
+}
+#typev Sensor_c630 64 "%0[Sensor.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorInitiateTempReadRequest
+{
+}
+#typev Sensor_c137 19 "%0[Sensor.c][%!FUNC!] Exit bissensoractive %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorIsDeviceActive
+{
+bRetVal, ItemLong -- 10
+}
+#typev Sensor_c134 18 "%0[Sensor.c][%!FUNC!] bRetVal %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorIsDeviceActive
+{
+bRetVal, ItemLong -- 10
+}
+#typev Sensor_c127 17 "%0[Sensor.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorIsDeviceActive
+{
+}
+#typev Sensor_c396 43 "%0[Sensor.c][%!FUNC!] Exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorListCompareAndPopulateIndex
+{
+}
+#typev Sensor_c395 42 "%0[Sensor.c][%!FUNC!] bmatch_found is %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorListCompareAndPopulateIndex
+{
+bmatch_found, ItemLong -- 10
+}
+#typev Sensor_c382 41 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Match found for sensor device." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorListCompareAndPopulateIndex
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c365 40 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Match found for sensor device." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorListCompareAndPopulateIndex
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c351 39 "%0[Sensor.c][%!FUNC!] pSensorDevCxt is NULL" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorListCompareAndPopulateIndex
+{
+}
+#typev Sensor_c346 38 "%0[Sensor.c][%!FUNC!] psensor_get_device_list_resp is NULL" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorListCompareAndPopulateIndex
+{
+}
+#typev Sensor_c341 37 "%0[Sensor.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorListCompareAndPopulateIndex
+{
+}
+#typev Sensor_c609 63 "%0[Sensor.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Sensor_c605 62 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]ThermalMdm Lock Released. %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+blockAcquired, ItemLong -- 12
+}
+#typev Sensor_c435 45 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]FAILURE: Will not process request when bReceivedIoSuspend %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+pDriver->bReceivedIoSuspend, ItemLong -- 12
+}
+#typev Sensor_c587 61 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]No Matching Sensor.Will fall to default." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c576 60 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]QMI Request To Read Temperature sent succesfully.Waiting for indication." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c570 59 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]FAILURE: QMI_TS_REGISTER_NOTIFICATION_TEMP_REQ_V01 returned 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+sensor_register_notification_resp.resp.error, ItemLong -- 12
+}
+#typev Sensor_c566 58 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Received QMI Response." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c560 57 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]FAILURE: qmi_client_send_msg_sync unsuccessful, status %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+qmiRet, ItemLong -- 12
+}
+#typev Sensor_c550 56 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Sending QMI Request." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c543 55 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Sent Converted HighTemperature %12!s! to Modem" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+((HighTemperature / 10) - 273), ItemDouble -- 12
+}
+#typev Sensor_c531 54 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Sent Converted LowTemperature %12!s! to Modem" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+((LowTemperature / 10) - 273), ItemDouble -- 12
+}
+#typev Sensor_c517 53 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Requested LowTemperature %12!I64u! HighTemperature %13!I64u! QMI" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+LowTemperature, ItemULongLong -- 12
+HighTemperature, ItemULongLong -- 13
+}
+#typev Sensor_c511 52 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Immediate read %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+bimmediate_read, ItemLong -- 12
+}
+#typev Sensor_c502 51 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Going to compare strings for device" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c495 50 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]FAILURE: QMI_TS_GET_SENSOR_LIST_REQ_V01 returned error code, status 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+psensor_get_device_list_resp->resp.error, ItemLong -- 12
+}
+#typev Sensor_c486 49 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]FAILURE: qmi_client_send_msg_sync unsuccessful, status %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+qmiRet, ItemLong -- 12
+}
+#typev Sensor_c469 48 "%0[Sensor.c][%!FUNC!] FAILURE: [Sensor][%10!p!][%11!s!]WdfMemoryCreate failed to allocate memory forthe device list response QMI message with status %12!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev Sensor_c453 47 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]FAILURE: Failure to get QMI client info" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c447 46 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Acquired ThermalMdm Lock. %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+blockAcquired, ItemLong -- 12
+}
+#typev Sensor_c424 44 "%0[Sensor.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorQMIITemperatureReadRequest
+{
+}
+#typev Sensor_c326 36 "%0[Sensor.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorSendResponseToHost
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Sensor_c322 35 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]lockacquired. %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorSendResponseToHost
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+lockacquired, ItemLong -- 12
+}
+#typev Sensor_c310 34 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]The request for which response was received is alreadycancelled or there are no pending request." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorSendResponseToHost
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c300 33 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]status 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorSendResponseToHost
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+status, ItemLong -- 12
+}
+#typev Sensor_c295 32 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!] Request UnMarked Cancelable" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorSendResponseToHost
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Sensor_c288 31 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]WdfRequestRetrieveOutputBuffer() Failed. 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SENSOR FUNC=SensorSendResponseToHost
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+status, ItemLong -- 12
+}
+#typev Sensor_c277 30 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Returning Default for request outstandingrequest %12!p!Temperature i.e. %13!u! Kelvin to host" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorSendResponseToHost
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+pSensorDevCxt->outstandingrequest, ItemPtr -- 12
+*RequestTemperature, ItemLong -- 13
+}
+#typev Sensor_c264 29 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]Returning Mapped for request outstandingrequest %12!p!Temperature %13!ld! celcius -> %14!u! Kelvin to host" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SENSOR FUNC=SensorSendResponseToHost
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+pSensorDevCxt->outstandingrequest, ItemPtr -- 12
+pSensorDevCxt->Temperature, ItemLong -- 13
+*RequestTemperature, ItemLong -- 14
+}
+#typev Sensor_c247 28 "%0[Sensor.c][%!FUNC!][Sensor][%10!p!][%11!s!]lockacquired. %12!d! bcancelrequest %13!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_QMI FUNC=SensorSendResponseToHost
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+lockacquired, ItemLong -- 12
+bcancelrequest, ItemLong -- 13
+}
+#typev Sensor_c242 27 "%0[Sensor.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=SensorSendResponseToHost
+{
+}

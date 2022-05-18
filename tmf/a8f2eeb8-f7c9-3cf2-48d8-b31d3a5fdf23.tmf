@@ -1,0 +1,41 @@
+// PDB:  qcadcm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+a8f2eeb8-f7c9-3cf2-48d8-b31d3a5fdf23 vcxproj // SRC=AdcmGlinkChannelHandler.c MJ= MN=
+#typev AdcmGlinkChannelHandler_c489 15 "%0GlinkReadWorkerThread Event:%10!d!" //   IFRLOG=GetIfrHandle() LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_INFO FUNC=GlinkReadWorkerThread
+{
+waitStatus, ItemLong -- 10
+}
+#typev AdcmGlinkChannelHandler_c464 14 "%0GlinkReadWorkerThread ASYNC_PROCESS_PACKET_EVENT pGlinkChannelContext->Receive.Cb:0x%10!x! " //   IFRLOG=GetIfrHandle() LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_INFO FUNC=GlinkReadWorkerThread
+{
+ReadPktStatus, ItemLong -- 10
+}
+#typev AdcmGlinkChannelHandler_c455 13 "%0GlinkReadWorkerThread ASYNC_PROCESS_PACKET_EVENT reset Rx ProcessPktEvt" //   IFRLOG=GetIfrHandle() LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_INFO FUNC=GlinkReadWorkerThread
+{
+}
+#typev AdcmGlinkChannelHandler_c572 18 "%0GlinkTxDoneWorkerThread Event:%10!d!" //   IFRLOG=GetIfrHandle() LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_INFO FUNC=GlinkTxDoneWorkerThread
+{
+waitStatus, ItemLong -- 10
+}
+#typev AdcmGlinkChannelHandler_c564 17 "%0GlinkTxDoneWorkerThread pGlinkChannelContext->SendDone.Cb:0x%10!x!" //   IFRLOG=GetIfrHandle() LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_INFO FUNC=GlinkTxDoneWorkerThread
+{
+TxDonePktStatus, ItemLong -- 10
+}
+#typev AdcmGlinkChannelHandler_c556 16 "%0GlinkTxDoneWorkerThread reset TxDonePktEvt" //   IFRLOG=GetIfrHandle() LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_INFO FUNC=GlinkTxDoneWorkerThread
+{
+}
+#typev AdcmGlinkChannelHandler_c679 19 "%0RemoveIntentContext Dequeued Rx Intent|ptr:0x%10!p!|" //   IFRLOG=GetIfrHandle() LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_INFO FUNC=RemoveIntentContext
+{
+pIntentContext, ItemPtr -- 10
+}
+#typev AdcmGlinkChannelHandler_c354 12 "%0glink_notify_rx_cb_fn DSP_PKT_IN opcode:0x%10!x! src_port:0x%11!x! dst_port:0x%12!x!" //   IFRLOG=GetIfrHandle() LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_INFO FUNC=glink_notify_rx_cb_fn
+{
+pGprPkt->opcode, ItemLong -- 10
+pGprPkt->src_port, ItemLong -- 11
+pGprPkt->dst_port, ItemLong -- 12
+}
+#typev AdcmGlinkChannelHandler_c300 11 "%0glink_notify_rx_intent_req_cb_fn " //   IFRLOG=GetIfrHandle() LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_INFO FUNC=glink_notify_rx_intent_req_cb_fn
+{
+}
+#typev AdcmGlinkChannelHandler_c248 10 "%0glink_notify_tx_done_cb_fn " //   IFRLOG=GetIfrHandle() LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_INFO FUNC=glink_notify_tx_done_cb_fn
+{
+}

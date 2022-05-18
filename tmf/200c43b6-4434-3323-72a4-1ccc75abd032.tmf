@@ -1,0 +1,108 @@
+// PDB:  qcrpen.pdb
+// PDB:  Last Updated :2021-10-17:21:54:33:738 (UTC) [tracepdb]
+200c43b6-4434-3323-72a4-1ccc75abd032 notifier // SRC=dump_api.c MJ= MN=
+#typev dump_api_c64 11 "%0%!FUNC!, A required parameter is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetContext
+{
+}
+#typev dump_api_c104 15 "%0%!FUNC!, GetRpeNotifierWpcdClientContext returned NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetContext
+{
+}
+#typev dump_api_c94 14 "%0%!FUNC!, WPCD (CDI) driver not yet loaded." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetContext
+{
+}
+#typev dump_api_c85 13 "%0%!FUNC!, GetRpeNotifierDriverContext returned NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetContext
+{
+}
+#typev dump_api_c74 12 "%0%!FUNC!, WdfGetDriver returned NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetContext
+{
+}
+#typev dump_api_c57 10 "%0%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=GetContext
+{
+}
+#typev dump_api_c198 25 "%0%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=Notifier_HelperDumpAddData
+{
+}
+#typev dump_api_c195 24 "%0%!FUNC!, Client %10!8x! successfully requested that dump data be added, for Dumper %11!8x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=Notifier_HelperDumpAddData
+{
+(UINT32)(ClientGuid->Data1), ItemLong -- 10
+(DumpingGuid != NULL ? (UINT32)(DumpingGuid->Data1) : 0), ItemLong -- 11
+}
+#typev dump_api_c190 23 "%0%!FUNC!: pWpcdClientContext->RpeDumpAddDumpData failed with status 0x%10!08X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=Notifier_HelperDumpAddData
+{
+status, ItemLong -- 10
+}
+#typev dump_api_c182 22 "%0%!FUNC!: Retrieving the context information failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=Notifier_HelperDumpAddData
+{
+}
+#typev dump_api_c175 21 "%0%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=Notifier_HelperDumpAddData
+{
+}
+#typev dump_api_c326 40 "%0%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=Notifier_HelperDumpAddTriageData
+{
+}
+#typev dump_api_c322 39 "%0%!FUNC!, Client %10!8x! successfully requested that %11!d! bytes of triage data be added." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=Notifier_HelperDumpAddTriageData
+{
+(UINT32)(ClientGuid->Data1), ItemLong -- 10
+TriageDataSize, ItemLong -- 11
+}
+#typev dump_api_c315 38 "%0%!FUNC!: pWpcdClientContext->RpeDumpAddTriageData failed with status 0x%10!08X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=Notifier_HelperDumpAddTriageData
+{
+status, ItemLong -- 10
+}
+#typev dump_api_c306 37 "%0%!FUNC!: Retrieving the context information failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=Notifier_HelperDumpAddTriageData
+{
+}
+#typev dump_api_c299 36 "%0%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=Notifier_HelperDumpAddTriageData
+{
+}
+#typev dump_api_c280 35 "%0%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=Notifier_HelperDumpQueryParam
+{
+}
+#typev dump_api_c277 34 "%0%!FUNC!, successfully requested RpeDumpQueryParam for Client %10!8x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=Notifier_HelperDumpQueryParam
+{
+(UINT32)(ClientGuid->Data1), ItemLong -- 10
+}
+#typev dump_api_c272 33 "%0%!FUNC!: pWpcdClientContext->RpeDumpQueryParam failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=Notifier_HelperDumpQueryParam
+{
+status, ItemLong -- 10
+}
+#typev dump_api_c264 32 "%0%!FUNC!: Retrieving the context information failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=Notifier_HelperDumpQueryParam
+{
+}
+#typev dump_api_c257 31 "%0%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=Notifier_HelperDumpQueryParam
+{
+}
+#typev dump_api_c154 20 "%0%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=Notifier_HelperDumpStart
+{
+}
+#typev dump_api_c151 19 "%0%!FUNC!, Client %10!8x! successfully requested that a new dump be started." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=Notifier_HelperDumpStart
+{
+(UINT32)(ClientGuid->Data1), ItemLong -- 10
+}
+#typev dump_api_c146 18 "%0%!FUNC!: pWpcdClientContext->RpeDumpStart failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=Notifier_HelperDumpStart
+{
+status, ItemLong -- 10
+}
+#typev dump_api_c138 17 "%0%!FUNC!: Retrieving the context information failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=Notifier_HelperDumpStart
+{
+}
+#typev dump_api_c131 16 "%0%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=Notifier_HelperDumpStart
+{
+}
+#typev dump_api_c239 30 "%0%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=Notifier_HelperDumpStop
+{
+}
+#typev dump_api_c236 29 "%0%!FUNC!, Client %10!8x! successfully requested that a new dump be stopped." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=Notifier_HelperDumpStop
+{
+(UINT32)(ClientGuid->Data1), ItemLong -- 10
+}
+#typev dump_api_c231 28 "%0%!FUNC!: pWpcdClientContext->RpeDumpStop failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=Notifier_HelperDumpStop
+{
+status, ItemLong -- 10
+}
+#typev dump_api_c223 27 "%0%!FUNC!: Retrieving the context information failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=Notifier_HelperDumpStop
+{
+}
+#typev dump_api_c216 26 "%0%!FUNC!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=Notifier_HelperDumpStop
+{
+}

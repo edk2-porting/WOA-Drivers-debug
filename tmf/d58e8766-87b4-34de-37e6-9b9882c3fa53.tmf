@@ -1,0 +1,240 @@
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+d58e8766-87b4-34de-37e6-9b9882c3fa53 10.7 // SRC=ipa_ssr.c MJ= MN=
+#typev ipa_ssr_c425 36 "%0IPA::<---- %10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=DeinitWithRPE
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_ssr_c419 35 "%0IPA::DeinitWithRPE, RpeClientDeinit failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=DeinitWithRPE
+{
+(UINT32)status, ItemLong -- 10
+}
+#typev ipa_ssr_c396 34 "%0IPA::----> %10!s!:" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=DeinitWithRPE
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_ssr_c912 71 "%0IPA::%10!s!:%11!d!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPARPEConnectionStatusChangeCallback
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c519 39 "%0IPA::%10!s!:%11!d!: Invalid parameter received from RPE OR pDeviceContext is NULL " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPARpeAppStateNotificationCallback
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c537 41 "%0IPA::%10!s!:%11!d!: Received RPE event %12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPARpeAppStateNotificationCallback
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+StateId, ItemLong -- 12
+}
+#typev ipa_ssr_c529 40 "%0IPA::%10!s!:%11!d!: Received RPE_STATE_ID_SHUTDOWN_STARTED. Device Shutting down " //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPARpeAppStateNotificationCallback
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c513 38 "%0IPA::%10!s!:%11!d!: Invalid parameter received from RPE OR pDeviceContext is NULL " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=IPARpeAppStateNotificationCallback
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c506 37 "%0IPA::%10!s!:%11!d!: IPA setup the RPE callback action table initialization successfully" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPARpeAppStateNotificationCallback
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c899 70 "%0IPA::<----%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASSRModemRestartReq
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_ssr_c884 69 "%0WdfIoTargetSendIoctlSynchronously() failed!  status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=IPASSRModemRestartReq
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ipa_ssr_c874 68 "%0Send request to reset the modem" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASSRModemRestartReq
+{
+}
+#typev ipa_ssr_c864 67 "%0WdfRequestCreate() failed!  status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=IPASSRModemRestartReq
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ipa_ssr_c852 66 "%0WdfIoTargetOpen() failed!  status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=IPASSRModemRestartReq
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ipa_ssr_c837 65 "%0WdfIoTargetCreate() failed!  status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=IPASSRModemRestartReq
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ipa_ssr_c825 64 "%0ExAllocatePoolWithTag failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=IPASSRModemRestartReq
+{
+}
+#typev ipa_ssr_c817 63 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASSRModemRestartReq
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_ssr_c114 13 "%0%!FUNC!: ERROR, WdfWorkItemCreate() failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=IPASsrCreateAndEnqueueWoritem
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ipa_ssr_c80 12 "%0IPA::IPAEvtWorkItemModemStateNotification IPA sent the RPE_STATE_ID_RESTARTING notification to RPE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASsrEvtWorkItemAckRpe
+{
+}
+#typev ipa_ssr_c75 11 "%0IPA::IPAEvtWorkItemModemStateNotification, RpeSendState failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=IPASsrEvtWorkItemAckRpe
+{
+(UINT32)status, ItemLong -- 10
+}
+#typev ipa_ssr_c66 10 "%0IPA::IPAEvtWorkItemModemStateNotification" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASsrEvtWorkItemAckRpe
+{
+}
+#typev ipa_ssr_c601 44 "%0IPA::IPAModemStateNotificationCallback, Invalid parameter received from RPE callback, status =0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+(UINT32)status, ItemLong -- 10
+}
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+#typev ipa_ssr_c655 51 "%0IPA::Release clocks held for SMP2P requests" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+}
+#typev ipa_ssr_c648 50 "%0IPA::%10!s!:%11!d!: Failed to enque RPE ack workitem." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c644 49 "%0IPA::IPAModemStateNotificationCallback, Received RPE_STATE_ID_RESTARTING during device shutdown or bootup" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+}
+#typev ipa_ssr_c637 48 "%0IPA::%10!s!:%11!d!: Could not post IPA_STATE_SSR_MODEM_RESET ." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c626 47 "%0IPA::IPAModemStateNotificationCallback, pDeviceContext->MSSREventCounter = %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+pDeviceContext->MSSREventCounter, ItemLong -- 10
+}
+#typev ipa_ssr_c615 46 "%0IPA::%10!s!:%11!d! Received RPE_STATE_ID_RESTARTING state from modem " //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c677 54 "%0IPA::%10!s!:%11!d!: Could not post IPA_STATE_MODEM_READY ." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c669 53 "%0IPA::IPAModemStateNotificationCallback, Received READY state from modem" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+}
+#typev ipa_ssr_c665 52 "%0IPA::IPAModemStateNotificationCallback, Received RPE_STATE_ID_READY_FOR_COMMANDS state from modem" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+}
+#typev ipa_ssr_c683 55 "%0IPA::IPAModemStateNotificationCallback, Received RPE_STATE_ID_ERROR state from modem " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+}
+#typev ipa_ssr_c688 56 "%0IPA::IPAModemStateNotificationCallback, Notification callback from RPE for invalid state = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+RpeState->StateId, ItemLong -- 10
+}
+#typev ipa_ssr_c608 45 "%0IPA::IPAModemStateNotificationCallback, RPE Notification received for unregistered module, status =0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+(UINT32)status, ItemLong -- 10
+}
+#typev ipa_ssr_c594 43 "%0IPA::IPAModemStateNotificationCallback, ERROR, received pDeviceContext NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+}
+#typev ipa_ssr_c587 42 "%0IPA::%10!s!:%11!d!: IPA got the Modem state change notification::StateId = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASubsystemStateNotificationCallback
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+RpeState->StateId, ItemLong -- 12
+}
+#typev ipa_ssr_c268 24 "%0IPA::%10!s!:%11!d!: Wait ended with an unexpected status.status = 0x%12!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev ipa_ssr_c260 23 "%0IPA::%10!s!:%11!d!: Received StopWaitForRPE during Hibernate/Shutdown " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c372 33 "%0IPA::%10!s!:%11!d!: IPA initialized the setup with RPE successfully" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c366 32 "%0IPA::SetupIfaceWithRPE, Unusual behaviour from RPE. Received STATUS_RPE_HELPER_RPE_DRIVER_NOT_AVAILABLE for RpeClientInit. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+}
+#typev ipa_ssr_c359 31 "%0IPA::SetupIfaceWithRPE, RpeRegisterForStateNotification for Modem RPE_STATE_ID_ERROR failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+(UINT32)status, ItemLong -- 10
+}
+#typev ipa_ssr_c343 30 "%0IPA::SetupIfaceWithRPE, Unusual behaviour from RPE. Received STATUS_RPE_HELPER_RPE_DRIVER_NOT_AVAILABLE for RpeClientInit. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+}
+#typev ipa_ssr_c336 29 "%0IPA::SetupIfaceWithRPE, RpeRegisterForStateNotification for Modem RPE_STATE_ID_READY_FOR_COMMANDS failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+(UINT32)status, ItemLong -- 10
+}
+#typev ipa_ssr_c322 28 "%0IPA::SetupIfaceWithRPE, Unusual behaviour from RPE. Received STATUS_RPE_HELPER_RPE_DRIVER_NOT_AVAILABLE for RpeClientInit. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+}
+#typev ipa_ssr_c315 27 "%0IPA::SetupIfaceWithRPE, RpeRegisterForStateNotification for Modem RPE_STATE_ID_RESTARTING failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+(UINT32)status, ItemLong -- 10
+}
+#typev ipa_ssr_c298 26 "%0IPA::SetupIfaceWithRPE, Unusual behaviour from RPE. Received STATUS_RPE_HELPER_RPE_DRIVER_NOT_AVAILABLE for RpeClientInit. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+}
+#typev ipa_ssr_c291 25 "%0IPA::SetupIfaceWithRPE, RpeClientInit for Apps-Modem edge failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+(UINT32)status, ItemLong -- 10
+}
+#typev ipa_ssr_c251 22 "%0IPA::%10!s!:%11!d!: Received Connection ready from RPE. " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c222 21 "%0IPA::SetupIfaceWithRPE, RpeInit failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+(UINT32)status, ItemLong -- 10
+}
+#typev ipa_ssr_c209 20 "%0IPA::%10!s!:%11!d!: SetupIfaceWithRPE " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=SetupIfaceWithRPE
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c175 19 "%0IPA::<----%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=TearDownIfaceWithRPE
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_ssr_c170 18 "%0IPA::%10!s!:%11!d!: RPE deinit complete " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=TearDownIfaceWithRPE
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c162 17 "%0IPA::%10!s!:%11!d!: RPE deinit failed with status 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=TearDownIfaceWithRPE
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev ipa_ssr_c154 16 "%0IPA::%10!s!:%11!d!: client deinit with RPE done " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=TearDownIfaceWithRPE
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_ssr_c146 15 "%0IPA::%10!s!:%11!d!: client deinit failed with status 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=TearDownIfaceWithRPE
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev ipa_ssr_c139 14 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=TearDownIfaceWithRPE
+{
+__FUNCTION__, ItemString -- 10
+}

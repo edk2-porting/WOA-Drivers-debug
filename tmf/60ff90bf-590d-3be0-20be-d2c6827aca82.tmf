@@ -1,0 +1,36 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+60ff90bf-590d-3be0-20be-d2c6827aca82 gfxLib // SRC=gfxlibDcvs.cpp MJ= MN=
+#typev gfxlibDcvs_cpp2246 14 "%0(BusAlgClampedFreqCommand: %10!d!) (GpuAlgClampedFreqCommand: %11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GpuDcvsAlgorithmOutput FUNC=ExecuteGenericModelDCVS
+{
+pBusControl->pPstateLevels[pBusControl->algorithmPstate], ItemLong -- 10
+pGpuControl->pPstateLevels[pGpuControl->algorithmPstate], ItemLong -- 11
+}
+#typev gfxlibDcvs_cpp2210 13 "%0(BusAlgFreqTarget: %10!d!) (BusAlgFreqFilter: %11!d!) (BusAlgFreqCommand: %12!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GpuDcvsAlgorithmOutput FUNC=ExecuteGenericModelDCVS
+{
+pBusControl->currentTargetValue, ItemLong -- 10
+(UINT32)pBusControl->currentFilterValue, ItemLong -- 11
+pBusControl->pPstateLevels[pBusControl->algorithmPstate], ItemLong -- 12
+}
+#typev gfxlibDcvs_cpp2186 12 "%0(GpuAlgFreqTarget: %10!d!) (GpuAlgFreqFilter: %11!d!) (GpuAlgFreqCommand: %12!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GpuDcvsAlgorithmOutput FUNC=ExecuteGenericModelDCVS
+{
+(UINT32)pGpuControl->currentTargetValue, ItemLong -- 10
+(UINT32)pGpuControl->currentFilterValue, ItemLong -- 11
+pGpuControl->pPstateLevels[pGpuControl->algorithmPstate], ItemLong -- 12
+}
+#typev gfxlibDcvs_cpp2137 11 "%0(AdjGpuBusyTime: %10!d!) (AdjGpuSampleTime: %11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GpuDcvsAlgorithmOutput FUNC=ExecuteGenericModelDCVS
+{
+gpuBusyTime, ItemLong -- 10
+sampleTime, ItemLong -- 11
+}
+#typev gfxlibDcvs_cpp2101 10 "%0(GpuBusyTime: %10!d!) (GpuSampleTime: %11!d!) (ThrottleTime: %12!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GpuDcvsAlgorithmOutput FUNC=ExecuteGenericModelDCVS
+{
+gpuBusyTime, ItemLong -- 10
+sampleTime, ItemLong -- 11
+throttleTime, ItemLong -- 12
+}
+#typev gfxlibDcvs_cpp2260 15 "%0(GpuFreqGbpm: %10!d!) (GpuBwGbpm: %11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GpuDcvsAlgorithmOutput FUNC=ExecuteGenericModelDCVS
+{
+pGpuControl->pPstateLevels[gbpmGpuClockPstate], ItemLong -- 10
+pBusControl->pPstateLevels[gbpmGpuBwPstate], ItemLong -- 11
+}

@@ -1,0 +1,55 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+2edd6c93-fd9a-3cca-2bc5-8694b9756e41 PEP // SRC=PEP_DCVS_Utility.c MJ= MN=
+#typev PEP_DCVS_Utility_c742 23 "%0 [Info] PEP_DCVS_Utility.c::%!FUNC! :DcvsL3CachePerfSet: Setting a FLOOR on L3 cache frequency to: %10!d! for testing" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=RegistryAppliedL3PerfContraints
+{
+pL3CacheProp->desiredPerfLevel, ItemLong -- 10
+}
+#typev PEP_DCVS_Utility_c731 22 "%0 [Info] PEP_DCVS_Utility.c::%!FUNC! :DcvsL3CachePerfSet: Setting a CEILING on L3 cache frequency to: %10!d! for testing" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=RegistryAppliedL3PerfContraints
+{
+pL3CacheProp->desiredPerfLevel, ItemLong -- 10
+}
+#typev PEP_DCVS_Utility_c771 25 "%0 [Info] PEP_DCVS_Utility.c::%!FUNC! :DcvsL3CachePerfSet: Setting a FLOOR on L3 cache frequency for CPU: %10!d! to: %11!d! for testing" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=RegistryAppliedPerCoreL3PerfContraints
+{
+cpuNum, ItemLong -- 10
+pL3CacheProp->desiredPerCoreL3PerfLevel[cpuNum], ItemLong -- 11
+}
+#typev PEP_DCVS_Utility_c759 24 "%0 [Info] PEP_DCVS_Utility.c::%!FUNC! :DcvsL3CachePerfSet: Setting a CEILING on L3 cache frequency for CPU: %10!d! to: %11!d! for testing" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=RegistryAppliedPerCoreL3PerfContraints
+{
+cpuNum, ItemLong -- 10
+pL3CacheProp->desiredPerCoreL3PerfLevel[cpuNum], ItemLong -- 11
+}
+#typev PEP_DCVS_Utility_c651 21 "%0Failed to get max frequency for Best performing CPU from ClkRgm status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=returnCpuNormalizingfactor
+{
+status, ItemLong -- 10
+}
+#typev PEP_DCVS_Utility_c649 20 "%0 [Err ] PEP_DCVS_Utility.c::%!FUNC!::649 :Failed to get max frequency for Best performing CPU from ClkRgm" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=returnCpuNormalizingfactor
+{
+}
+#typev PEP_DCVS_Utility_c636 19 "%0Failed to get max frequency for desired CPU from ClkRgm status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=returnCpuNormalizingfactor
+{
+status, ItemLong -- 10
+}
+#typev PEP_DCVS_Utility_c634 18 "%0 [Err ] PEP_DCVS_Utility.c::%!FUNC!::634 :Failed to get max frequency for desired CPU from ClkRgm" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=returnCpuNormalizingfactor
+{
+}
+#typev PEP_DCVS_Utility_c622 17 "%0Failed to get max perf level for Best Performing CPU from ClkRgm status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=returnCpuNormalizingfactor
+{
+status, ItemLong -- 10
+}
+#typev PEP_DCVS_Utility_c620 16 "%0 [Err ] PEP_DCVS_Utility.c::%!FUNC!::620 :Failed to get max perf level for Best performing CPU from ClkRgm" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=returnCpuNormalizingfactor
+{
+}
+#typev PEP_DCVS_Utility_c608 15 "%0Failed to get max perf level for desired CPU from ClkRgm status 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=returnCpuNormalizingfactor
+{
+status, ItemLong -- 10
+}
+#typev PEP_DCVS_Utility_c606 14 "%0 [Err ] PEP_DCVS_Utility.c::%!FUNC!::606 :Failed to get max perf level for desired CPU from ClkRgm" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=returnCpuNormalizingfactor
+{
+}
+#typev PEP_DCVS_Utility_c596 13 "%0Normalizing factor is less than 1" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=returnCpuNormalizingfactor
+{
+}
+#typev PEP_DCVS_Utility_c594 12 "%0 [Err ] PEP_DCVS_Utility.c::%!FUNC!::594 :Normalizing factor is less than 1" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=returnCpuNormalizingfactor
+{
+}

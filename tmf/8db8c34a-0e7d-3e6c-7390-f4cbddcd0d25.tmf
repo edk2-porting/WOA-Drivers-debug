@@ -1,0 +1,501 @@
+// PDB:  qcpil.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+8db8c34a-0e7d-3e6c-7390-f4cbddcd0d25 PIL-Rel // SRC=utils.c MJ= MN=
+#typev standard_interface_c256 34 "%0Error: imageInfo->program_hdr_ptr is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=GetMemoryLayout
+{
+}
+#typev standard_interface_c256 35 "%0Error: phdr is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=GetMemoryLayout
+{
+}
+// PDB:  qcpil.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev standard_interface_c256 37 "%0Moving the low physical address of 0x%10!X! up to 0x%11!X! to avoid creating a contiguous segment larger than the maximum allowed: %12!u! bytes" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=GetMemoryLayout
+{
+lowPhysicalAddress, ItemLong -- 10
+phdr->p_paddr, ItemLong -- 11
+PIL_MAX_LEN_IN_BYTES_CONTIGUOUS_MEMORY, ItemLong -- 12
+}
+#typev standard_interface_c256 36 "%0Retaining the low physical address of 0x%10!X! (instead of 0x%11!X!) to avoid creating a contiguous segment larger than the maximum allowed: %12!u! bytes" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=GetMemoryLayout
+{
+lowPhysicalAddress, ItemLong -- 10
+phdr->p_paddr, ItemLong -- 11
+PIL_MAX_LEN_IN_BYTES_CONTIGUOUS_MEMORY, ItemLong -- 12
+}
+// PDB:  qcpil.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev utils_c1611 34 "%0Error: imageInfo->program_hdr_ptr is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=AddImageInfoToSharedImem
+{
+}
+#typev utils_c1636 75 "%0Recorded Image details for GUID 0x%10!X! successfully to Shared Imem region" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=AddImageInfoToSharedImem
+{
+fileContext->ImageInfo.ImageGuid.Data1, ItemLong -- 10
+}
+#typev utils_c1611 35 "%0Error: phdr is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=AddImageInfoToSharedImem
+{
+}
+#typev utils_c1611 37 "%0Moving the low physical address of 0x%10!X! up to 0x%11!X! to avoid creating a contiguous segment larger than the maximum allowed: %12!u! bytes" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=AddImageInfoToSharedImem
+{
+lowPhysicalAddress, ItemLong -- 10
+phdr->p_paddr, ItemLong -- 11
+PIL_MAX_LEN_IN_BYTES_CONTIGUOUS_MEMORY, ItemLong -- 12
+}
+#typev utils_c1611 36 "%0Retaining the low physical address of 0x%10!X! (instead of 0x%11!X!) to avoid creating a contiguous segment larger than the maximum allowed: %12!u! bytes" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=AddImageInfoToSharedImem
+{
+lowPhysicalAddress, ItemLong -- 10
+phdr->p_paddr, ItemLong -- 11
+PIL_MAX_LEN_IN_BYTES_CONTIGUOUS_MEMORY, ItemLong -- 12
+}
+#typev utils_c1569 74 "%0Warning: No space available to record image details into PIL reserved Shared memory region" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=AddImageInfoToSharedImem
+{
+}
+#typev utils_c1534 73 "%0Warning: Unable to get Image name for GUID 0x%10!X! from pre-defined PIL data structure" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=AddImageInfoToSharedImem
+{
+fileContext->ImageInfo.ImageGuid.Data1, ItemLong -- 10
+}
+#typev utils_c1523 72 "%0Warning: Unable to get Shared Imem Virtual Address to record image details" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=AddImageInfoToSharedImem
+{
+}
+#typev utils_c292 14 "%0Error: Invalid address range AL:0x%10!X!,AH:0x%11!X!,CL:0x%12!X!,CH:0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AllocateContiguousAlignedMemory
+{
+lowestAcceptableAddress.u.LowPart, ItemLong -- 10
+highestAcceptableAddress.u.LowPart, ItemLong -- 11
+startAddress.u.LowPart, ItemLong -- 12
+endAddress.u.LowPart, ItemLong -- 13
+}
+#typev utils_c254 13 "%0Error: Failed to query the physical address range from OS." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AllocateContiguousAlignedMemory
+{
+}
+#typev utils_c193 12 "%0Error: Unable to allocate 0x%10!Ix! bytes of contiguous, uncached RAM in the range 0x%11!Ix! to 0x%12!Ix!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=AllocateContiguousMemory
+{
+NumAllocatedBytes, ItemPtr -- 10
+lowestAcceptableAddress.LowPart, ItemPtr -- 11
+highestAcceptableAddress.LowPart, ItemPtr -- 12
+}
+#typev utils_c188 11 "%0Successfully allocated 0x%10!Ix! bytes of contiguous RAM in the range 0x%11!Ix! to 0x%12!Ix!, Physical Address 0x%13!Ix!, bytecount 0x%14!Ix!." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_INIT FUNC=AllocateContiguousMemory
+{
+NumAllocatedBytes, ItemPtr -- 10
+lowestAcceptableAddress.LowPart, ItemPtr -- 11
+highestAcceptableAddress.LowPart, ItemPtr -- 12
+PtrToUlong(*PhysicalAddress), ItemPtr -- 13
+byteCount, ItemPtr -- 14
+}
+#typev utils_c1742 80 "%0Cleared Image details for GUID 0x%10!X! successfully from Shared Imem region" //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=DeleteImageInfoFromSharedImem
+{
+fileContext->ImageInfo.ImageGuid.Data1, ItemLong -- 10
+}
+#typev utils_c1716 79 "%0Warning: Failed to get Image details for GUID 0x%10!X! in recorded images of Shared Imem region " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=DeleteImageInfoFromSharedImem
+{
+fileContext->ImageInfo.ImageGuid.Data1, ItemLong -- 10
+}
+#typev utils_c1692 78 "%0Warning: Image details are not yet recorded into PIL reserved Shared memory region" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=DeleteImageInfoFromSharedImem
+{
+}
+#typev utils_c1679 77 "%0Warning: Failed to get Image name for GUID 0x%10!X! from pre-defined PIL data structure" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=DeleteImageInfoFromSharedImem
+{
+fileContext->ImageInfo.ImageGuid.Data1, ItemLong -- 10
+}
+#typev utils_c1668 76 "%0Warning: Failed to get Shared Imem Virtual Address to delete image details" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=DeleteImageInfoFromSharedImem
+{
+}
+#typev utils_c382 25 "%0End Image Info Dump" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+}
+#typev utils_c381 24 "%0 Hash Segment Size in Bytes: 0x%10!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+ImageInfo->TzMemorySize, ItemLong -- 10
+}
+#typev utils_c380 23 "%0 Hash Segment Physical: 0x%10!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+ImageInfo->PhysicalTzAddress.LowPart, ItemLong -- 10
+}
+#typev utils_c379 22 "%0 Hash Segment Virtual: 0x%10!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+PtrToUint(ImageInfo->VirtualTzAddress), ItemLong -- 10
+}
+#typev utils_c376 21 "%0 High Virtual: 0x%10!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+(UINT)highVirtualAddressParm, ItemLong -- 10
+}
+#typev utils_c375 20 "%0 High Physical: 0x%10!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+highPhysicalAddressParm, ItemLong -- 10
+}
+#typev utils_c374 19 "%0 Low Virtual: 0x%10!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+(UINT)lowVirtualAddressParm, ItemLong -- 10
+}
+#typev utils_c373 18 "%0 Low Physical: 0x%10!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+lowPhysicalAddressParm, ItemLong -- 10
+}
+#typev utils_c368 34 "%0Error: imageInfo->program_hdr_ptr is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=DumpImageInfo
+{
+}
+#typev utils_c368 35 "%0Error: phdr is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_ELF FUNC=DumpImageInfo
+{
+}
+#typev utils_c372 17 "%0 Name: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+ImageInfo->AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev utils_c368 37 "%0Moving the low physical address of 0x%10!X! up to 0x%11!X! to avoid creating a contiguous segment larger than the maximum allowed: %12!u! bytes" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+lowPhysicalAddress, ItemLong -- 10
+phdr->p_paddr, ItemLong -- 11
+PIL_MAX_LEN_IN_BYTES_CONTIGUOUS_MEMORY, ItemLong -- 12
+}
+#typev utils_c368 36 "%0Retaining the low physical address of 0x%10!X! (instead of 0x%11!X!) to avoid creating a contiguous segment larger than the maximum allowed: %12!u! bytes" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+lowPhysicalAddress, ItemLong -- 10
+phdr->p_paddr, ItemLong -- 11
+PIL_MAX_LEN_IN_BYTES_CONTIGUOUS_MEMORY, ItemLong -- 12
+}
+#typev utils_c367 16 "%0Begin Image Info Dump (assuming contiguous segment):" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+}
+#typev utils_c363 15 "%0Image Info Dump parameter is NULL, cannot dump." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DumpImageInfo
+{
+}
+#typev utils_c707 44 "%0Error: Queueing next load image request to default queue failed: 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=EnqueueNextRequest
+{
+status, ItemLong -- 10
+}
+#typev utils_c703 43 "%0Processing the next pending load request." //   LEVEL=TRACE_LEVEL_RELEASE FLAGS=DBG_IOCTLS FUNC=EnqueueNextRequest
+{
+}
+#typev utils_c1854 82 "%0Error: Conditions to process IRP are not valid." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=EvtIrpPreprocessQueryDevRelations
+{
+}
+#typev utils_c1883 84 "%0Exit from  EvtIrpPreprocessQueryDevRelations" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=EvtIrpPreprocessQueryDevRelations
+{
+}
+#typev utils_c1880 83 "%0Error: Unable to deliver IRP successfully to framework." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=EvtIrpPreprocessQueryDevRelations
+{
+}
+#typev utils_c1849 81 "%0Entered EvtIrpPreprocessQueryDevRelations" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=EvtIrpPreprocessQueryDevRelations
+{
+}
+#typev utils_c2110 92 "%0Exit from EvtQueryDevicePowerRelations" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations
+{
+}
+#typev utils_c2057 91 "%0Unable to allocate required memory to copy relation count" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations
+{
+}
+#typev utils_c2033 90 "%0Filter driver detected, skipping all power relations IRPs....." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations
+{
+}
+#typev utils_c2021 89 "%0IoInvalidateDeviceRelations was not issued by TrEE driver" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations
+{
+}
+#typev utils_c1952 88 "%0Error: EvtQueryDevicePowerRelations: dmfDeviceContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations
+{
+}
+#typev utils_c1945 87 "%0IO target not yet opened with TrEE driver" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations
+{
+}
+#typev utils_c1933 86 "%0Filter driver present in device stack, skipping all power relations IRPs....." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations
+{
+}
+#typev utils_c1926 85 "%0Entered EvtIrpPreprocessQueryDevRelations" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations
+{
+}
+#typev utils_c2110 92 "%0Exit from EvtQueryDevicePowerRelations" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations$fin$0
+{
+}
+#typev utils_c2057 91 "%0Unable to allocate required memory to copy relation count" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations$fin$0
+{
+}
+#typev utils_c2033 90 "%0Filter driver detected, skipping all power relations IRPs....." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations$fin$0
+{
+}
+#typev utils_c2021 89 "%0IoInvalidateDeviceRelations was not issued by TrEE driver" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations$fin$0
+{
+}
+#typev utils_c1952 88 "%0Error: EvtQueryDevicePowerRelations: dmfDeviceContext is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations$fin$0
+{
+}
+#typev utils_c1945 87 "%0IO target not yet opened with TrEE driver" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations$fin$0
+{
+}
+#typev utils_c1933 86 "%0Filter driver present in device stack, skipping all power relations IRPs....." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations$fin$0
+{
+}
+#typev utils_c1926 85 "%0Entered EvtIrpPreprocessQueryDevRelations" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_INIT FUNC=EvtQueryDevicePowerRelations$fin$0
+{
+}
+#typev utils_c676 42 "%0Error: RetrieveNextRequest failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=GetNextRequest
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c654 41 "%0WARNING: WdfIoQueueRetrieveRequestByFileObject returned: %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=GetNextRequest
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c649 40 "%0Prioritizing pending load request from GFX driver " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=GetNextRequest
+{
+}
+#typev utils_c643 39 "%0Error: deviceContext is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=GetNextRequest
+{
+}
+#typev utils_c634 38 "%0Error: controlDevice is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=GetNextRequest
+{
+}
+#typev utils_c676 42 "%0Error: RetrieveNextRequest failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=GetNextRequest$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c654 41 "%0WARNING: WdfIoQueueRetrieveRequestByFileObject returned: %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=GetNextRequest$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c649 40 "%0Prioritizing pending load request from GFX driver " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=GetNextRequest$fin$0
+{
+}
+#typev utils_c643 39 "%0Error: deviceContext is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=GetNextRequest$fin$0
+{
+}
+#typev utils_c634 38 "%0Error: controlDevice is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=GetNextRequest$fin$0
+{
+}
+#typev utils_c1215 59 "%0Error:Failure allocating memory for reg map with status %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitRegistryMap
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1191 58 "%0Error:Failure getting device context to init reg map" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitRegistryMap
+{
+}
+#typev utils_c1215 59 "%0Error:Failure allocating memory for reg map with status %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitRegistryMap$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1191 58 "%0Error:Failure getting device context to init reg map" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitRegistryMap$fin$0
+{
+}
+#typev utils_c476 32 "%0This load/reload image request is from GFX driver, prioritize this " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest
+{
+}
+#typev utils_c436 27 "%0Error: WdfRequestRetrieveInputBuffer for IOCTL_PIL_LOAD_IMAGE failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest
+{
+status, ItemLong -- 10
+}
+#typev utils_c463 30 "%0Error: WdfRequestRetrieveInputBuffer for IOCTL_PIL_RELOAD_IMAGE failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest
+{
+status, ItemLong -- 10
+}
+#typev utils_c445 28 "%0Error: WdfRequestRetrieveInputBuffer for IOCTL_PIL_TZ_LOAD_IMAGE failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest
+{
+status, ItemLong -- 10
+}
+#typev utils_c454 29 "%0Error: WdfRequestRetrieveInputBuffer for IOCTL_PIL_TZ_RELOAD_IMAGE failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest
+{
+status, ItemLong -- 10
+}
+#typev utils_c469 31 "%0This is not a load/reload image request." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest
+{
+}
+#typev utils_c426 26 "%0fileObject is NULL " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest
+{
+}
+#typev utils_c476 32 "%0This load/reload image request is from GFX driver, prioritize this " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest$fin$0
+{
+}
+#typev utils_c436 27 "%0Error: WdfRequestRetrieveInputBuffer for IOCTL_PIL_LOAD_IMAGE failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest$fin$0
+{
+status, ItemLong -- 10
+}
+#typev utils_c463 30 "%0Error: WdfRequestRetrieveInputBuffer for IOCTL_PIL_RELOAD_IMAGE failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest$fin$0
+{
+status, ItemLong -- 10
+}
+#typev utils_c445 28 "%0Error: WdfRequestRetrieveInputBuffer for IOCTL_PIL_TZ_LOAD_IMAGE failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest$fin$0
+{
+status, ItemLong -- 10
+}
+#typev utils_c454 29 "%0Error: WdfRequestRetrieveInputBuffer for IOCTL_PIL_TZ_RELOAD_IMAGE failed 0x%10!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest$fin$0
+{
+status, ItemLong -- 10
+}
+#typev utils_c469 31 "%0This is not a load/reload image request." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest$fin$0
+{
+}
+#typev utils_c426 26 "%0fileObject is NULL " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=IsGfxLoadRequest$fin$0
+{
+}
+#typev utils_c2160 96 "%0DMF_Registry_HandleOpenByDeviceInterface for FWUpdate PIL interface failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PIL_GetFWUpdateDriverRegistryKeyPath
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c2147 95 "%0Failed to get device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PIL_GetFWUpdateDriverRegistryKeyPath
+{
+}
+#typev utils_c2138 94 "%0Invalid phRegistryKey" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PIL_GetFWUpdateDriverRegistryKeyPath
+{
+}
+#typev utils_c2130 93 "%0Invalid device" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PIL_GetFWUpdateDriverRegistryKeyPath
+{
+}
+#typev utils_c2160 96 "%0DMF_Registry_HandleOpenByDeviceInterface for FWUpdate PIL interface failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PIL_GetFWUpdateDriverRegistryKeyPath$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c2147 95 "%0Failed to get device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PIL_GetFWUpdateDriverRegistryKeyPath$fin$0
+{
+}
+#typev utils_c2138 94 "%0Invalid phRegistryKey" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PIL_GetFWUpdateDriverRegistryKeyPath$fin$0
+{
+}
+#typev utils_c2130 93 "%0Invalid device" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=PIL_GetFWUpdateDriverRegistryKeyPath$fin$0
+{
+}
+#typev utils_c1152 57 "%0Warning: Unable to map Shared IMEM memory for recording loaded subsystem image details" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ProcessRegistryItem
+{
+}
+#typev utils_c1147 56 "%0Memory mapped for the Shared IMEM Region at virtual address: 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=ProcessRegistryItem
+{
+imemVirtAddress, ItemPtr -- 10
+}
+#typev utils_c1102 55 "%0Error: ProcessRegistryItem failed to get device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ProcessRegistryItem
+{
+}
+#typev utils_c1152 57 "%0Warning: Unable to map Shared IMEM memory for recording loaded subsystem image details" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ProcessRegistryItem$fin$0
+{
+}
+#typev utils_c1147 56 "%0Memory mapped for the Shared IMEM Region at virtual address: 0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=ProcessRegistryItem$fin$0
+{
+imemVirtAddress, ItemPtr -- 10
+}
+#typev utils_c1102 55 "%0Error: ProcessRegistryItem failed to get device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ProcessRegistryItem$fin$0
+{
+}
+#typev utils_c926 49 "%0Error: Unable to locate the direct interface, GUID: %10!s!, status: %11!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=QueryDeviceInterface
+{
+interfaceGuid, ItemGuid -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev utils_c911 48 "%0Error:IoTarget is NULL, will not query for interface" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=QueryDeviceInterface
+{
+}
+#typev utils_c903 47 "%0Error: IoTarget is shutting down or gone" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=QueryDeviceInterface
+{
+}
+#typev utils_c895 46 "%0Error: DMF_DeviceInterfaceTarget_Get failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=QueryDeviceInterface
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c926 49 "%0Error: Unable to locate the direct interface, GUID: %10!s!, status: %11!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INTERFACES FUNC=QueryDeviceInterface$fin$0
+{
+interfaceGuid, ItemGuid -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev utils_c911 48 "%0Error:IoTarget is NULL, will not query for interface" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=QueryDeviceInterface$fin$0
+{
+}
+#typev utils_c903 47 "%0Error: IoTarget is shutting down or gone" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=QueryDeviceInterface$fin$0
+{
+}
+#typev utils_c895 46 "%0Error: DMF_DeviceInterfaceTarget_Get failed with status code %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=QueryDeviceInterface$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1385 70 "%0ProcessRegistryItem failed for key %10!s! under %11!s! with %12!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration
+{
+pRegEntry->KeyName, ItemWString -- 10
+pRegEntry->KeyFolder, ItemWString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev utils_c1366 69 "%0RtlGUIDFromString failed for key %10!s! with %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration
+{
+pRegEntry->KeyName, ItemWString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev utils_c1359 68 "%0RtlUnicodeStringInit failed with %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1349 67 "%0DMF_Registry_ValueReadString failed for %10!s! key with %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration
+{
+pRegEntry->KeyName, ItemWString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev utils_c1332 66 "%0ProcessRegistryItem failed for key %10!s! under %11!s! with %12!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration
+{
+pRegEntry->KeyName, ItemWString -- 10
+pRegEntry->KeyFolder, ItemWString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev utils_c1315 65 "%0DMF_Registry_ValueReadDword failed for %10!s! key with %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration
+{
+pRegEntry->KeyName, ItemWString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev utils_c1394 71 "%0Invalid reg key type found in registry buffer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration
+{
+}
+#typev utils_c1299 64 "%0DMF_Registry_HandleOpenByHandle failed for %10!s! key, ignoring and proceeding.." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration
+{
+pRegEntry->KeyFolder, ItemWString -- 10
+}
+#typev utils_c1277 63 "%0pRegMapBuffer is NULL!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration
+{
+}
+#typev utils_c1270 62 "%0Failure opening Device Parameters key with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1258 61 "%0Invalid DMF device context!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration
+{
+}
+#typev utils_c1250 60 "%0Invalid device handle!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration
+{
+}
+#typev utils_c1385 70 "%0ProcessRegistryItem failed for key %10!s! under %11!s! with %12!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration$fin$0
+{
+pRegEntry->KeyName, ItemWString -- 10
+pRegEntry->KeyFolder, ItemWString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev utils_c1366 69 "%0RtlGUIDFromString failed for key %10!s! with %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration$fin$0
+{
+pRegEntry->KeyName, ItemWString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev utils_c1359 68 "%0RtlUnicodeStringInit failed with %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1349 67 "%0DMF_Registry_ValueReadString failed for %10!s! key with %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration$fin$0
+{
+pRegEntry->KeyName, ItemWString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev utils_c1332 66 "%0ProcessRegistryItem failed for key %10!s! under %11!s! with %12!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration$fin$0
+{
+pRegEntry->KeyName, ItemWString -- 10
+pRegEntry->KeyFolder, ItemWString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev utils_c1315 65 "%0DMF_Registry_ValueReadDword failed for %10!s! key with %11!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration$fin$0
+{
+pRegEntry->KeyName, ItemWString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev utils_c1394 71 "%0Invalid reg key type found in registry buffer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration$fin$0
+{
+}
+#typev utils_c1299 64 "%0DMF_Registry_HandleOpenByHandle failed for %10!s! key, ignoring and proceeding.." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration$fin$0
+{
+pRegEntry->KeyFolder, ItemWString -- 10
+}
+#typev utils_c1277 63 "%0pRegMapBuffer is NULL!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration$fin$0
+{
+}
+#typev utils_c1270 62 "%0Failure opening Device Parameters key with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1258 61 "%0Invalid DMF device context!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration$fin$0
+{
+}
+#typev utils_c1250 60 "%0Invalid device handle!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=ReadPILRegistryConfiguration$fin$0
+{
+}

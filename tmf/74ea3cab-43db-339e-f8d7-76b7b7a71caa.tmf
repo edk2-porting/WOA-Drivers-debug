@@ -1,0 +1,182 @@
+// PDB:  qcthermalmdm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+74ea3cab-43db-339e-f8d7-76b7b7a71caa ThermalMDM // SRC=Mitigation.c MJ= MN=
+#typev Mitigation_c467 44 "%0[Mitigation.c][%!FUNC!] Exit  %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Mitigation_c463 43 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!p!][%12!s!]Mitigation device Added" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+pCommonDevCtx, ItemPtr -- 10
+pMitigationDevCxt, ItemPtr -- 11
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 12
+}
+#typev Mitigation_c439 42 "%0[Mitigation.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+}
+#typev Mitigation_c348 33 "%0[Mitigation.c][%!FUNC!][%10!p!][%11!s!]Invalid data!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_MITIGATION FUNC=MitigationInitializeDevice
+{
+pMitigationDevCtx, ItemPtr -- 10
+pMitigationDevCtx->QMIMitigationDeviceName, ItemString -- 11
+}
+#typev Mitigation_c410 40 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!] Successfully initialized Thermal Mitigation Device" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_MITIGATION FUNC=MitigationInitializeDevice
+{
+pMitigationDevCtx, ItemPtr -- 10
+pMitigationDevCtx->QMIMitigationDeviceName, ItemString -- 11
+}
+#typev Mitigation_c407 39 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]WdfDeviceCreateDeviceInterface %12!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationInitializeDevice
+{
+pMitigationDevCtx, ItemPtr -- 10
+pMitigationDevCtx->QMIMitigationDeviceName, ItemString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev Mitigation_c403 38 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]WdfDeviceAddQueryInterface %12!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationInitializeDevice
+{
+pMitigationDevCtx, ItemPtr -- 10
+pMitigationDevCtx->QMIMitigationDeviceName, ItemString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev Mitigation_c381 37 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]Index %12!d! Mitigation Level %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_MITIGATION FUNC=MitigationInitializeDevice
+{
+pMitigationDevCtx, ItemPtr -- 10
+pMitigationDevCtx->QMIMitigationDeviceName, ItemString -- 11
+Index, ItemLong -- 12
+*level, ItemLong -- 13
+}
+#typev Mitigation_c377 36 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]Index %12!d! Mitigation Percentage %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_MITIGATION FUNC=MitigationInitializeDevice
+{
+pMitigationDevCtx, ItemPtr -- 10
+pMitigationDevCtx->QMIMitigationDeviceName, ItemString -- 11
+Index, ItemLong -- 12
+*percent, ItemLong -- 13
+}
+#typev Mitigation_c363 35 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]Mitigation Values %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_MITIGATION FUNC=MitigationInitializeDevice
+{
+pMitigationDevCtx, ItemPtr -- 10
+pMitigationDevCtx->QMIMitigationDeviceName, ItemString -- 11
+pMitigationDevCtx->MitigationNumValues, ItemLong -- 12
+}
+#typev Mitigation_c418 41 "%0[Mitigation.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationInitializeDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Mitigation_c357 34 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]FAILURE: MitigationNumValues is 0, will not init Mitigation Information!!!!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_MITIGATION FUNC=MitigationInitializeDevice
+{
+pMitigationDevCtx, ItemPtr -- 10
+pMitigationDevCtx->QMIMitigationDeviceName, ItemString -- 11
+}
+#typev Mitigation_c342 32 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]WdfRegistryQueryMemory %12!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationInitializeDevice
+{
+pMitigationDevCtx, ItemPtr -- 10
+pMitigationDevCtx->QMIMitigationDeviceName, ItemString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev Mitigation_c334 31 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]WdfDeviceOpenRegistryKey %12!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationInitializeDevice
+{
+pMitigationDevCtx, ItemPtr -- 10
+pMitigationDevCtx->QMIMitigationDeviceName, ItemString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev Mitigation_c309 30 "%0[Mitigation.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationInitializeDevice
+{
+}
+#typev Mitigation_c283 29 "%0[Mitigation.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Mitigation_c270 27 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]Mitigation device is not currently active, ignore mitigation request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+}
+#typev Mitigation_c278 28 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]MitigationSendQMIMsgToModem %12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev Mitigation_c268 24 "%0[Mitigation.c][%!FUNC!] Exit bRetVal %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+bRetVal, ItemLong -- 10
+}
+#typev Mitigation_c268 23 "%0[Mitigation.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+}
+#typev Mitigation_c256 26 "%0 [Mitigation.c][%!FUNC!] Parameters passed to function are invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+}
+#typev Mitigation_c251 25 "%0[Mitigation.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+}
+#typev Mitigation_c215 22 "%0Exit from [Mitigation.c][%!FUNC!] %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Mitigation_c211 21 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]Released ThermalMdm Lock %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+blockacquired, ItemLong -- 12
+}
+#typev Mitigation_c184 20 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]Sent TMD for device: %12!s!, Percentage %13!u!, Level %14!u! lastmitigationpercentage %15!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+ptmd_get_device_list_resp->mitigation_device_list[index].mitigation_dev_id.mitigation_dev_id, ItemString -- 12
+RequestedPercentage, ItemLong -- 13
+level, ItemLong -- 14
+pMitigationDevCxt->lastmitigationpercentage, ItemLong -- 15
+}
+#typev Mitigation_c177 19 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]FAILURE: QMI_TMD_SET_MITIGATION_LEVEL_REQ_V01 retured 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+tmd_set_mitigation_level_resp.resp.error, ItemLong -- 12
+}
+#typev Mitigation_c168 18 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]FAILURE: qmi_client_send_msg_sync unsuccessful, status %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+qmiRet, ItemLong -- 12
+}
+#typev Mitigation_c134 17 "%0[Mitigation.c][%!FUNC!][Mitigation] FAILURE: [%10!p!][%11!s!]QMI_TMD_GET_MITIGATION_DEVICE_LIST_REQ_V01 retured error code, status 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+ptmd_get_device_list_resp->resp.error, ItemLong -- 12
+}
+#typev Mitigation_c125 16 "%0[Mitigation.c][%!FUNC!][Mitigation] FAILURE: [%10!p!][%11!s!]qmi_client_send_msg_sync unsuccessful, status %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+qmiRet, ItemLong -- 12
+}
+#typev Mitigation_c111 15 "%0[Mitigation.c][%!FUNC!] FAILURE: WdfMemoryCreate failed to allocate memory for the device list response QMI message with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Mitigation_c84 13 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]Corresponding Level for %12!u! Percentage is %13!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+RequestedPercentage, ItemLong -- 12
+level, ItemLong -- 13
+}
+#typev Mitigation_c96 14 "%0[Mitigation.c][%!FUNC!] FAILURE: Failure to get mitigation QMI client info." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+}
+#typev Mitigation_c72 12 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]Acquire ThermalMdm Lock %12!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+blockacquired, ItemLong -- 12
+}
+#typev Mitigation_c65 11 "%0[Mitigation.c][%!FUNC!][Mitigation][%10!p!][%11!s!]RequestedPercentage to apply %12!u!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+RequestedPercentage, ItemLong -- 12
+}
+#typev Mitigation_c61 10 "%0[Mitigation.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_MITIGATION FUNC=MitigationSendQMIMsgToModem
+{
+}

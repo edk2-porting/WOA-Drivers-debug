@@ -1,0 +1,46 @@
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+7afdd4b2-c33c-31ac-ee0d-50525678a840 10.7 // SRC=MPUtilNVStore.c MJ= MN=
+#typev MPUtilNVStore_c241 18 "%0%!FUNC!::Error: Failed to allocate memory for NV Item %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUtilNVStoreAllocReadBuffer
+{
+pNvInfo->Item, ItemLong -- 10
+}
+#typev MPUtilNVStore_c232 17 "%0%!FUNC!::Error: expected length %10!u! exceeds max length %11!d! for NV item %12!d!. NV data length %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUtilNVStoreAllocReadBuffer
+{
+ulExpectedLength, ItemLong -- 10
+MP_NV_DATA_LEN_MAX, ItemLong -- 11
+pNvInfo->Item, ItemLong -- 12
+ValueLen, ItemLong -- 13
+}
+#typev MPUtilNVStore_c206 16 "%0%!FUNC!::E: NV %10!d! close failed with status %11!s!(0x%12!08x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUtilNVStoreDeinit
+{
+pNvInfo->Item, ItemLong -- 10
+ntStatus, ItemNTSTATUS -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPUtilNVStore_c179 13 "%0%!FUNC!::NV %10!d! open failed with Status %11!s! (0x%12!08x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUtilNVStoreInit
+{
+pNvInfo->Item, ItemLong -- 10
+ntStatus, ItemNTSTATUS -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPUtilNVStore_c170 11 "%0%!FUNC!::E: Data buffer provided for NV item %10!d! is NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPUtilNVStoreInit
+{
+Item, ItemLong -- 10
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPDataIf_c883 20 "%0%!FUNC!::NV %10!d! read failed with Status %11!s! (0x%12!08x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDataIf_DataIoDisconnect
+{
+NvInfo.Item, ItemLong -- 10
+ntStatus, ItemNTSTATUS -- 11
+ntStatus, ItemLong -- 12
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPDataIf_c54 19 "%0%!FUNC!::NV %10!d! read failed with Status %11!s! (0x%12!08x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPDataIf_HasPreviousInitFailed
+{
+NvInfo.Item, ItemLong -- 10
+ntStatus, ItemNTSTATUS -- 11
+ntStatus, ItemLong -- 12
+}

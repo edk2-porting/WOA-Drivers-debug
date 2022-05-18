@@ -1,0 +1,178 @@
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+c0200de3-bce4-3239-24ae-315386844bfc RPMh // SRC=rpmh_client.c MJ= MN=
+#typev rpmh_client_c1113 38 "%0	adding command set to sleep/wake AMC (SET: %10!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=add_cmd_set_for_sleep
+{
+set, ItemLong -- 10
+}
+#typev rpmh_client_c1096 37 "%0		 (CMD ADDRESS: 0x%10!08x!) (CMD DATA: 0x%11!08x!) (COMPLETION? %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=log_command_set_internal
+{
+cmds->commands[i].address, ItemLong -- 10
+cmds->commands[i].data, ItemLong -- 11
+cmds->commands[i].completion, ItemLong -- 12
+}
+#typev rpmh_client_c204 10 "%0rpmh_create_handle: (CLIENT: %10!s!) (DRV_ID: 0x%11!08x!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_create_handle_internal
+{
+client_name, ItemString -- 10
+drv_id, ItemLong -- 11
+}
+#typev rpmh_client_c707 27 "%0rpmh_finish_amc_complete" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_finish_amc
+{
+}
+#typev rpmh_client_c699 26 "%0	NO_AMC_COMPLETED" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_finish_amc
+{
+}
+#typev rpmh_client_c687 25 "%0	finished req: (CLIENT: %10!s!)(REQ_ID: %11!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_finish_amc
+{
+finished_client->name, ItemString -- 10
+req_id, ItemLong -- 11
+}
+#typev rpmh_client_c676 24 "%0rpmh_finish_amc (HW_DRV: 0x%10!08x!) (SW_DRV: 0x%11!08x!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_finish_amc
+{
+hw_drv, ItemLong -- 10
+drv_id, ItemLong -- 11
+}
+#typev rpmh_client_c968 33 "%0rpmh_invlidate_command (CLIENT: %10!s!)(ADDRESS: 0x%11!08x!)(SET: %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_invalidate_command
+{
+handle->name, ItemString -- 10
+address, ItemLong -- 11
+set, ItemLong -- 12
+}
+#typev rpmh_client_c1564 53 "%0rpmh_rsc_clocks_init_complete" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_rsc_clocks_init
+{
+}
+#typev rpmh_client_c1552 52 "%0rpmh_rsc_clocks_init" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_rsc_clocks_init
+{
+}
+#typev rpmh_client_c560 17 "%0rpmh_barrier_all_complete: (HANDLE: %10!s!) (DRV_ID: 0x%11!08x!) (REQ_ID: %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_barrier_all
+{
+client->name, ItemString -- 10
+client->drv_id, ItemLong -- 11
+req_id, ItemLong -- 12
+}
+#typev rpmh_client_c558 16 "%0rpmh_barrier_all: (HANDLE: %10!s!) (DRV_ID: 0x%11!08x!) (REQ_ID: %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_barrier_all
+{
+client->name, ItemString -- 10
+client->drv_id, ItemLong -- 11
+req_id, ItemLong -- 12
+}
+#typev rpmh_client_c576 19 "%0rpmh_barrier_single_complete: (HANDLE: %10!s!) (DRV_ID: 0x%11!08x!) (REQ_ID: %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_barrier_single
+{
+client->name, ItemString -- 10
+client->drv_id, ItemLong -- 11
+req_id, ItemLong -- 12
+}
+#typev rpmh_client_c574 18 "%0rpmh_barrier_single: (HANDLE: %10!s!) (DRV_ID: 0x%11!08x!) (REQ_ID: %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_barrier_single
+{
+client->name, ItemString -- 10
+client->drv_id, ItemLong -- 11
+req_id, ItemLong -- 12
+}
+#typev rpmh_client_c527 13 "%0rpmh_churn_all_complete" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_churn_all
+{
+}
+#typev rpmh_client_c525 12 "%0rpmh_churn_all: (HANDLE: %10!s!) (DRV_ID: 0x%11!08x!) (REQ_ID: %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_churn_all
+{
+client->name, ItemString -- 10
+client->drv_id, ItemLong -- 11
+req_id, ItemLong -- 12
+}
+#typev rpmh_client_c544 15 "%0rpmh_churn_single_complete" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_churn_single
+{
+}
+#typev rpmh_client_c542 14 "%0rpmh_churn_single: (HANDLE: %10!s!) (DRV_ID: 0x%11!08x!) (REQ_ID: %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_churn_single
+{
+client->name, ItemString -- 10
+client->drv_id, ItemLong -- 11
+req_id, ItemLong -- 12
+}
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+#typev rpmh_client_c1819 56 "%0rpmh_free_all_client_handles" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_client_deinit
+{
+}
+#typev rpmh_client_c1629 55 "%0rpmh_client_init_complete" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_client_init
+{
+}
+#typev rpmh_client_c1587 54 "%0rpmh_client_init" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_client_init
+{
+}
+#typev rpmh_client_c314 11 "%0rpmh_delete_handle: (CLIENT: %10!s!) (DRV_ID: 0x%11!08x!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_delete_handle
+{
+client->name, ItemString -- 10
+client->drv_id, ItemLong -- 11
+}
+#typev rpmh_client_c1417 44 "%0rpmh_enter_sleep_complete" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_enter_sleep
+{
+}
+#typev rpmh_client_c1396 43 "%0	flushing sleep AMCs" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_enter_sleep
+{
+}
+#typev rpmh_client_c1358 42 "%0rpmh_enter_sleep (DRV_ID: 0x%10!08x!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_enter_sleep
+{
+drv_id, ItemLong -- 10
+}
+#typev rpmh_client_c1349 41 "%0rpmh_enter_sleep short circuit (STANDALONE MODE)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_enter_sleep
+{
+}
+#typev rpmh_client_c1496 47 "%0rpmh_exit_sleep_complete" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_exit_sleep
+{
+}
+#typev rpmh_client_c1460 46 "%0rpmh_exit_sleep, flushing wake AMCs (DRV_ID: 0x%10!08x!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_exit_sleep
+{
+drv_id, ItemLong -- 10
+}
+#typev rpmh_client_c1435 45 "%0rpmh_exit_sleep short circuit (STANDALONE MODE)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_exit_sleep
+{
+}
+#typev rpmh_client_c889 32 "%0issue_command_set_complete (REQ_ID: %10!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_issue_command_set
+{
+req_id, ItemLong -- 10
+}
+#typev rpmh_client_c841 31 "%0	standalone mode, short circuiting" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_issue_command_set
+{
+}
+#typev rpmh_client_c837 30 "%0	redundant commands, short circuiting" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_issue_command_set
+{
+}
+#typev rpmh_client_c823 29 "%0	resource_command (ADDRESS: 0x%10!08x!)(DATA: 0x%11!08x!)(COMPLETION? %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_issue_command_set
+{
+command.address, ItemLong -- 10
+command.data, ItemLong -- 11
+command.completion, ItemLong -- 12
+}
+#typev rpmh_client_c800 28 "%0rpmh_issue_command_set (CLIENT: %10!s!)(DRV_ID: 0x%11!08x!)(SET: %12!d!)(NUM_CMDS: %13!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_issue_command_set
+{
+handle->name, ItemString -- 10
+handle->drv_id, ItemLong -- 11
+cmd_set->set, ItemLong -- 12
+cmd_set->num_commands, ItemLong -- 13
+}
+#typev rpmh_client_c595 21 "%0rpmh_notify_completion_all_complete: (HANDLE: %10!s!) (DRV_ID: 0x%11!08x!) (REQ_ID: %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_notify_completion_all
+{
+client->name, ItemString -- 10
+client->drv_id, ItemLong -- 11
+req_id, ItemLong -- 12
+}
+#typev rpmh_client_c592 20 "%0rpmh_notify_completion_all: (HANDLE: %10!s!) (DRV_ID: 0x%11!08x!) (REQ_ID: %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_notify_completion_all
+{
+client->name, ItemString -- 10
+client->drv_id, ItemLong -- 11
+req_id, ItemLong -- 12
+}
+#typev rpmh_client_c613 23 "%0rpmh_notify_completion_single_complete: (HANDLE: %10!s!) (DRV_ID: 0x%11!08x!) (REQ_ID: %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_notify_completion_single
+{
+client->name, ItemString -- 10
+client->drv_id, ItemLong -- 11
+req_id, ItemLong -- 12
+}
+#typev rpmh_client_c610 22 "%0rpmh_notify_completion_single: (HANDLE: %10!s!) (DRV_ID: 0x%11!08x!) (REQ_ID: %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_notify_completion_single
+{
+client->name, ItemString -- 10
+client->drv_id, ItemLong -- 11
+req_id, ItemLong -- 12
+}
+#typev rpmh_client_c1863 57 "%0PepWorkitemWaitToFinish returned for RPM Workitem rsc:%10!d!" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=rpmh_prepare_for_hibernate
+{
+cnt, ItemLong -- 10
+}

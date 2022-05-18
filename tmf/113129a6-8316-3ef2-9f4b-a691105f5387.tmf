@@ -1,0 +1,295 @@
+// PDB:  qcthermalmdm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+113129a6-8316-3ef2-9f4b-a691105f5387 ThermalMDM // SRC=Device.c MJ= MN=
+#typev Device_c323 37 "%0[Device.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c318 36 "%0 [Device.c][%!FUNC!] FATAL !! DeviceType is neither sensor or mitigation !!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DEVICE FUNC=DeviceCreate
+{
+}
+#typev Device_c314 35 "%0[Device.c][%!FUNC!] MitigationDeviceAdd %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c309 34 "%0[Device.c][%!FUNC!] SensorDeviceAdd %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c299 33 "%0[Device.c][%!FUNC!] DeviceEnqueueObject %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c296 32 "%0[Device.c][%!FUNC!] DeviceType is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceCreate
+{
+pCommonDevContext->DeviceType, ItemLong -- 10
+}
+#typev Device_c293 31 "%0[Device.c][%!FUNC!] DeviceReadfromRegistry %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c290 30 "%0[Device.c][%!FUNC!] pCommonDevContext %10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceCreate
+{
+pCommonDevContext, ItemPtr -- 10
+}
+#typev Device_c287 29 "%0[Device.c][%!FUNC!] WdfDeviceCreate %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c266 28 "%0[Device.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceCreate
+{
+}
+#typev Device_c709 79 "%0[Device.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceD0Entry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c702 78 "%0[Device.c][%!FUNC!] FAILURE: WdfWorkItemCreate failed, status: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DEVICE FUNC=DeviceD0Entry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c687 77 "%0[Device.c][%!FUNC!] bQmiPathFailedToInitialize %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QMI FUNC=DeviceD0Entry
+{
+pDriver->bReceivedIoSuspend, ItemLong -- 10
+}
+#typev Device_c681 76 "%0[Device.c][%!FUNC!] bReceivedIoSuspend %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QMI FUNC=DeviceD0Entry
+{
+pDriver->bReceivedIoSuspend, ItemLong -- 10
+}
+#typev Device_c669 75 "%0[Device.c][%!FUNC!][Mitigation][%10!p!][%11!s!] Entry PreviousState = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceD0Entry
+{
+pMitigationDevContext, ItemPtr -- 10
+pMitigationDevContext->QMIMitigationDeviceName, ItemString -- 11
+PreviousState, ItemLong -- 12
+}
+#typev Device_c660 74 "%0[Device.c][%!FUNC!][Sensor][%10!p!][%11!s!] Entry PreviousState = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceD0Entry
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+PreviousState, ItemLong -- 12
+}
+#typev Device_c654 73 "%0[Device.c][%!FUNC!] pCommonDeviceContext %10!p!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_QMI FUNC=DeviceD0Entry
+{
+pCommonDeviceContext, ItemPtr -- 10
+}
+#typev Device_c442 52 "%0[Device.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceD0EntryExecuteWorkItem
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c434 51 "%0[Device.c][%!FUNC!] DeviceType %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceD0EntryExecuteWorkItem
+{
+pCommonDevCtx->DeviceType, ItemLong -- 10
+}
+#typev Device_c432 50 "%0[Device.c][%!FUNC!] pCommonDevCtx %10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceD0EntryExecuteWorkItem
+{
+pCommonDevCtx, ItemPtr -- 10
+}
+#typev Device_c426 49 "%0[Device.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceD0EntryExecuteWorkItem
+{
+}
+#typev Device_c631 72 "%0[Device.c][%!FUNC!] Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceD0Exit
+{
+}
+#typev Device_c624 71 "%0[Device.c][%!FUNC!][Mitigation][%10!p!][%11!s!]Entry TargetState = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceD0Exit
+{
+pMitigationDevContext, ItemPtr -- 10
+pMitigationDevContext->QMIMitigationDeviceName, ItemString -- 11
+TargetState, ItemLong -- 12
+}
+#typev Device_c615 70 "%0[Device.c][%!FUNC!][Sensor][%10!p!][%11!s!]Entry TargetState = %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceD0Exit
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+TargetState, ItemLong -- 12
+}
+#typev Device_c609 69 "%0[Device.c][%!FUNC!] pCommonDeviceContext %10!p!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_QMI FUNC=DeviceD0Exit
+{
+pCommonDeviceContext, ItemPtr -- 10
+}
+#typev Device_c244 27 "%0[Device.c][%!FUNC!] Exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceEnqueueObject
+{
+}
+#typev Device_c240 26 "%0[Device.c][%!FUNC!] Added pDeviceList %10!p! next to %11!p! in the queue" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceEnqueueObject
+{
+pDeviceList, ItemPtr -- 10
+pDeviceList->HeadListEntry.Blink, ItemPtr -- 11
+}
+#typev Device_c237 25 "%0[Device.c][%!FUNC!] Going to add %10!p! device with node address %11!p! in queue with headlist %12!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceEnqueueObject
+{
+pDeviceList->DeviceObject, ItemPtr -- 10
+pDeviceList, ItemPtr -- 11
+&pDriverContext->devicelist.HeadListEntry, ItemPtr -- 12
+}
+#typev Device_c228 24 "%0[Device.c][%!FUNC!] FAILURE: WdfMemoryCreate %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DEVICE FUNC=DeviceEnqueueObject
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c210 23 "%0[Device.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceEnqueueObject
+{
+}
+#typev Device_c65 11 "%0pMitigationDeviceContext is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DEVICE FUNC=DeviceGetMitigationCtx
+{
+}
+#typev Device_c55 10 "%0pCommonDeviceContext is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DEVICE FUNC=DeviceGetMitigationCtx
+{
+}
+#typev Device_c93 13 "%0pSensorDeviceContext is NULL" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceGetSensorCtx
+{
+}
+#typev Device_c83 12 "%0pCommonDeviceContext is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DEVICE FUNC=DeviceGetSensorCtx
+{
+}
+#typev Device_c412 48 "%0[Device.c][%!FUNC!] Exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceInitQMIAndCheckPendReq
+{
+}
+#typev Device_c399 46 "%0[Device.c][%!FUNC!][Mitigation][%10!p!][%11!s!]MitigationSendQMIMsgToModem lastmitigationpercentage %12!u! %13!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_MITIGATION FUNC=DeviceInitQMIAndCheckPendReq
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+pMitigationDevCxt->lastmitigationpercentage, ItemLong -- 12
+status, ItemNTSTATUS -- 13
+}
+#typev Device_c391 45 "%0[Device.c][%!FUNC!][Mitigation][%10!p!][%11!s!]Device is now Active." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceInitQMIAndCheckPendReq
+{
+pMitigationDevCxt, ItemPtr -- 10
+pMitigationDevCxt->QMIMitigationDeviceName, ItemString -- 11
+}
+#typev Device_c409 47 "%0%!FUNC! lockacquired. %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SENSOR FUNC=DeviceInitQMIAndCheckPendReq
+{
+blockacquired, ItemLong -- 10
+}
+#typev Device_c381 44 "%0[Device.c][%!FUNC!][Sensor][%10!p!][%11!s!]No Request in Queue." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceInitQMIAndCheckPendReq
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Device_c371 43 "%0[Device.c][%!FUNC!][Sensor][%10!p!]][%11!s!] Failed to read temperature. status = %12!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DEVICE FUNC=DeviceInitQMIAndCheckPendReq
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev Device_c365 42 "%0[Device.c][%!FUNC!] lockacquired. %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceInitQMIAndCheckPendReq
+{
+blockacquired, ItemLong -- 10
+}
+#typev Device_c356 41 "%0[Device.c][%!FUNC!][Sensor][%10!p!][%11!s!]Device is now Active." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceInitQMIAndCheckPendReq
+{
+pSensorDevCxt, ItemPtr -- 10
+pSensorDevCxt->QMISensorDeviceName, ItemString -- 11
+}
+#typev Device_c352 40 "%0%!FUNC! lockacquired. %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceInitQMIAndCheckPendReq
+{
+blockacquired, ItemLong -- 10
+}
+#typev Device_c342 39 "%0[Device.c][%!FUNC!] QmiInitialize %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceInitQMIAndCheckPendReq
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c339 38 "%0[Device.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceInitQMIAndCheckPendReq
+{
+}
+#typev Device_c497 59 "%0[Device.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceIoSuspendExecuteWorkItem
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c492 58 "%0%!FUNC!:: QmiClientRelease %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceIoSuspendExecuteWorkItem
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c488 57 "%0[Device.c][%!FUNC!] bReceivedIoSuspend %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QMI FUNC=DeviceIoSuspendExecuteWorkItem
+{
+pDriver->bReceivedIoSuspend, ItemLong -- 10
+}
+#typev Device_c479 56 "%0[Device.c][%!FUNC!][Mitigation][%10!p!][%11!s!]DeviceIoSuspendExecuteWorkItem Received" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceIoSuspendExecuteWorkItem
+{
+pMitigationDevContext, ItemPtr -- 10
+pMitigationDevContext->QMIMitigationDeviceName, ItemString -- 11
+}
+#typev Device_c471 55 "%0[Device.c][%!FUNC!][Sensor][%10!p!][%11!s!]DeviceIoSuspendExecuteWorkItem Received" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceIoSuspendExecuteWorkItem
+{
+pSensorDevContext, ItemPtr -- 10
+pSensorDevContext->QMISensorDeviceName, ItemString -- 11
+}
+#typev Device_c465 54 "%0[Device.c][%!FUNC!] pCommonDeviceContext %10!p!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_QMI FUNC=DeviceIoSuspendExecuteWorkItem
+{
+pCommonDeviceContext, ItemPtr -- 10
+}
+#typev Device_c459 53 "%0[Device.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceIoSuspendExecuteWorkItem
+{
+}
+#typev Device_c192 22 "%0[Device.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceReadfromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c143 17 "%0[Device.c][%!FUNC!] Invalid device type read from registry." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DEVICE FUNC=DeviceReadfromRegistry
+{
+}
+#typev Device_c167 20 "%0[Device.c][%!FUNC!] FAILURE: Read invalid device name." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DEVICE FUNC=DeviceReadfromRegistry
+{
+}
+#typev Device_c184 21 "%0[Device.c][%!FUNC!] Device Name is %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceReadfromRegistry
+{
+DeviceName, ItemString -- 10
+}
+#typev Device_c161 19 "%0[Device.c][%!FUNC!] WdfRegistryQueryMemory %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceReadfromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c148 18 "%0[Device.c][%!FUNC!] DeviceType is %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceReadfromRegistry
+{
+*DeviceType, ItemLong -- 10
+}
+#typev Device_c131 16 "%0[Device.c][%!FUNC!] WdfRegistryQueryULong %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceReadfromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c126 15 "%0[Device.c][%!FUNC!] WdfDeviceOpenRegistryKey %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceReadfromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c115 14 "%0[Device.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DEVICE FUNC=DeviceReadfromRegistry
+{
+}
+#typev Device_c729 81 "%0[Device.c][%!FUNC!] Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceReleaseHardware
+{
+}
+#typev Device_c727 80 "%0[Device.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceReleaseHardware
+{
+}
+#typev Device_c533 63 "%0[Device.c][%!FUNC!] Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceSelfManagedIoCleanup
+{
+}
+#typev Device_c531 62 "%0[Device.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceSelfManagedIoCleanup
+{
+}
+#typev Device_c516 61 "%0[Device.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceSelfManagedIoInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c514 60 "%0[Device.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceSelfManagedIoInit
+{
+}
+#typev Device_c589 68 "%0[Device.c][%!FUNC!] Exit %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceSelfManagedIoRestart
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c587 67 "%0[Device.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceSelfManagedIoRestart
+{
+}
+#typev Device_c572 66 "%0[Device.c][%!FUNC!] Exit %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceSelfManagedIoSuspend
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c565 65 "%0[Device.c][%!FUNC!] FAILURE: WdfWorkItemCreate failed, status: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DEVICE FUNC=DeviceSelfManagedIoSuspend
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c551 64 "%0[Device.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceSelfManagedIoSuspend
+{
+}
+#typev Device_c746 83 "%0[Device.c][%!FUNC!] Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceSurpriseRemoval
+{
+}
+#typev Device_c744 82 "%0[Device.c][%!FUNC!] Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=DeviceSurpriseRemoval
+{
+}

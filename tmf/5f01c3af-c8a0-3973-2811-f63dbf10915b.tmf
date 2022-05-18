@@ -1,0 +1,123 @@
+// PDB:  QcPmicApps7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:52:468 (UTC) [tracepdb]
+5f01c3af-c8a0-3973-2811-f63dbf10915b PmicApps // SRC=PmicAppsABD.c MJ= MN=
+#typev PmicAppsAbd_c1030 38 "%0qcpmicapps_SelfHost: PmicAppsABD.c::%!FUNC!: PM_APPS_WriteNVTimeZoneVariable Failed in timer call back" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NVUpdateEvtTimerFunc
+{
+}
+#typev PmicAppsAbd_c1015 37 "%0PmicAppsABD.c::%!FUNC!: time_zone:%10!Iu!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=NVUpdateEvtTimerFunc
+{
+deviceContext->AbdDeviceContext.RTC_Info_variable.RTC_Info.TimeZone, ItemPtr -- 10
+}
+#typev PmicAppsAbd_c1014 36 "%0PmicAppsABD.c::%!FUNC!: valid:%10!Iu!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=NVUpdateEvtTimerFunc
+{
+deviceContext->AbdDeviceContext.RTC_Info_variable.RTC_Info.Valid, ItemPtr -- 10
+}
+#typev PmicAppsAbd_c1013 35 "%0PmicAppsABD.c::%!FUNC!: NV writing Offset:%10!Iu!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=NVUpdateEvtTimerFunc
+{
+deviceContext->AbdDeviceContext.RTC_Info_variable.RTC_Info.Offset, ItemPtr -- 10
+}
+#typev PmicAppsAbd_c427 12 "%0%!FUNC!::  Invalid param, Error = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicAppsAbd_c539 23 "%0%!FUNC! --" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c537 22 "%0RTC_GET_ALARM_STATUS - AlarmStatus: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+rtc_get_alarm_status_out.alarm_status, ItemLong -- 10
+}
+#typev PmicAppsAbd_c532 21 "%0PmicAppsABD.c::%!FUNC!: IOCTL_PM_RTC_GET_ALARM_STATUS failed %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+status, ItemLong -- 10
+}
+#typev PmicAppsAbd_c517 20 "%0RTC_GET_ALARM - AlarmTime: %10!Iu!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+rtc_get_alarm_out.alarm_time, ItemPtr -- 10
+}
+#typev PmicAppsAbd_c512 19 "%0PmicAppsABD.c::%!FUNC!: IOCTL_PM_RTC_GET_ALARM_TIME failed %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+status, ItemLong -- 10
+}
+#typev PmicAppsAbd_c490 18 "%0RTC_GET_TIME - Time(h:m:s)= %10!Iu!:%11!Iu!:%12!Iu!, Date(m:d:y)= %13!Iu!:%14!Iu!:%15!Iu!, TimeZone: %16!d!, TimeValid: %17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+abd_rtc_time->hour, ItemPtr -- 10
+abd_rtc_time->minute, ItemPtr -- 11
+abd_rtc_time->second, ItemPtr -- 12
+abd_rtc_time->month, ItemPtr -- 13
+abd_rtc_time->day, ItemPtr -- 14
+abd_rtc_time->year, ItemPtr -- 15
+abd_rtc_time->time_zone, ItemLong -- 16
+abd_rtc_time->valid, ItemLong -- 17
+}
+#typev PmicAppsAbd_c483 17 "%0PMIC RTC ticks: %10!Iu!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+rtc_get_time_out.seconds, ItemPtr -- 10
+}
+#typev PmicAppsAbd_c479 16 "%0PmicAppsABD.c::%!FUNC!: Power was lost, saved offset is invalid" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c470 15 "%0%!FUNC!:  PM_APPS_ReadNVTimeZoneVariable Failed, Error = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicAppsAbd_c451 14 "%0qcpmicapps_SelfHost: PmicAppsABD.c::%!FUNC!: IOCTL_PM_RTC_GET_TIME Failed %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+status, ItemLong -- 10
+}
+#typev PmicAppsAbd_c431 13 "%0%!FUNC! ++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_GET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c584 24 "%0%!FUNC!::  Invalid param, Error = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PmicAppsAbd_c692 33 "%0%!FUNC! --" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Trace FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c685 32 "%0PmicAppsABD.c::%!FUNC!: IOCTL_PM_RTC_DISABLE_ALARM failed %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+status, ItemLong -- 10
+}
+#typev PmicAppsAbd_c669 31 "%0%!FUNC!: RTC_DISABLE_ALARM" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c664 30 "%0PmicAppsABD.c::%!FUNC!: IOCTL_PM_RTC_ENABLE_ALARM failed %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+status, ItemLong -- 10
+}
+#typev PmicAppsAbd_c647 29 "%0%!FUNC!: RTC_ENABLE_ALARM" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c642 28 "%0%!FUNC!: RtcAlarmSupport: %10!d!, AlarmTimer: %11!Iu!, AlarmClear: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+pDeviceContext->AbdDeviceContext.RtcAlarmSupport, ItemLong -- 10
+timerValue, ItemPtr -- 11
+clearWakeAlarm, ItemLong -- 12
+}
+#typev PmicAppsAbd_c615 27 "%0qcpmicapps_SelfHost: PmicAppsABD.c::%!FUNC!: IOCTL_PM_RTC_GET_TIME Failed %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+status, ItemLong -- 10
+}
+#typev PmicAppsAbd_c598 26 "%0RTC_SET_TIME - Time(h:m:s)= %10!Iu!:%11!Iu!:%12!Iu!, Date(m:d:y)= %13!Iu!:%14!Iu!:%15!Iu!, TimeZone: %16!d!, TimeValid: %17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+abd_rtc_time->hour, ItemPtr -- 10
+abd_rtc_time->minute, ItemPtr -- 11
+abd_rtc_time->second, ItemPtr -- 12
+abd_rtc_time->month, ItemPtr -- 13
+abd_rtc_time->day, ItemPtr -- 14
+abd_rtc_time->year, ItemPtr -- 15
+abd_rtc_time->time_zone, ItemLong -- 16
+abd_rtc_time->valid, ItemLong -- 17
+}
+#typev PmicAppsAbd_c588 25 "%0%!FUNC! ++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Trace FUNC=PM_ABD_SET_PMIC_RTC_DATA
+{
+}
+#typev PmicAppsAbd_c254 10 "%0PmicAppsABD.c::%!FUNC!: interface has been removed." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Core FUNC=PmicAppsAbdInterfaceNotficationCallback
+{
+}
+// PDB:  QcPmicApps7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:52:468 (UTC) [tracepdb]
+#typev PmicAppsIoctl_c64 34 "%0-PmicAppsABD.c::%!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Trace FUNC=HandleIoCtlRequest
+{
+}

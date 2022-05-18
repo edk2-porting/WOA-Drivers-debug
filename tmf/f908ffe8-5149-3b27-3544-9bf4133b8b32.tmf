@@ -1,0 +1,61 @@
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+f908ffe8-5149-3b27-3544-9bf4133b8b32 vcxproj // SRC=bus_manager.c MJ= MN=
+#typev bus_manager_c575 36 "%0=CDC_BUS_MGR: <Activating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_activate_bus
+{
+}
+#typev bus_manager_c184 16 "%0-CDC_BUS_MGR: <Bus deinit. RC:%10!d!.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_bus_deinit
+{
+rc, ItemLong -- 10
+}
+#typev bus_manager_c166 15 "%0=CDC_BUS_MGR: <Init count is: %10!u!.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_bus_deinit
+{
+(uint32)context->init_counter, ItemLong -- 10
+}
+#typev bus_manager_c159 14 "%0+CDC_BUS_MGR: <Bus deinit.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_bus_deinit
+{
+}
+#typev bus_manager_c150 13 "%0-CDC_BUS_MGR: <Bus init. RC:%10!d!.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_bus_init
+{
+rc, ItemLong -- 10
+}
+#typev bus_manager_c132 11 "%0=CDC_BUS_MGR:<Error initializing bus.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_bus_init
+{
+}
+#typev bus_manager_c100 10 "%0+CDC_BUS_MGR: <Bus init.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_bus_init
+{
+}
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+#typev bus_manager_c609 37 "%0=CDC_BUS_MGR: <Deactivating bus.>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_deactivate_bus
+{
+}
+#typev bus_manager_c459 31 "%0=CDC_BUS_MGR: <cdc_register_read_actual, Register = 0x%10!x! , Mask = 0x%11!x! , Read_value = 0x%12!x! >" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=cdc_register_read
+{
+reg, ItemLong -- 10
+mask, ItemLong -- 11
+*value, ItemLong -- 12
+}
+#typev bus_manager_c424 30 "%0=CDC_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_register_read
+{
+}
+#typev bus_manager_c405 29 "%0=CDC_BUS_MGR: <value parameter is invalid.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_register_read
+{
+}
+#typev bus_manager_c399 28 "%0=CDC_BUS_MGR: <prevent_HW_access is true, returning bus error.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_register_read
+{
+}
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+#typev bus_manager_c257 20 "%0=CDC_BUS_MGR: <Bus has not been activated.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_register_write
+{
+}
+#typev bus_manager_c245 19 "%0=CDC_BUS_MGR: <Bus has not been initialized.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_register_write
+{
+}
+#typev bus_manager_c238 18 "%0=CDC_BUS_MGR: <register write received a mask 0 this won't perform any write!!!!.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_register_write
+{
+}
+#typev bus_manager_c231 17 "%0=CDC_BUS_MGR: <prevent_HW_access is true, returning bus error.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_register_write
+{
+}

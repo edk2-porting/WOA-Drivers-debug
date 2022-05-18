@@ -1,0 +1,117 @@
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+83f9f16c-1de1-3f50-19f8-3cac4044a63a 10.7 // SRC=MPIoctl.c MJ= MN=
+#typev MPIoctl_c143 11 "%0%!FUNC!::<%10!s!> MPIOC: IRP_MJ_CREATE to 0x%11!p! CSL %12!d!/%13!d!/%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IRPDispatch
+{
+pAdapter->PortName, ItemString -- 10
+DeviceObject, ItemPtr -- 11
+Irp->CurrentLocation, ItemLong -- 12
+Irp->StackCount, ItemLong -- 13
+DeviceObject->StackSize, ItemLong -- 14
+}
+#typev MPIoctl_c182 13 "%0%!FUNC!::<%10!s!> MPIOC: IRP_MJ_CLOSE to 0x%11!p!/0x%12!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IRPDispatch
+{
+pAdapter->PortName, ItemString -- 10
+pIocDev, ItemPtr -- 11
+DeviceObject, ItemPtr -- 12
+}
+#typev MPIoctl_c371 25 "%0%!FUNC!::<%10!s!> CIRP C 0x%11!p!(0x%12!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IRPDispatch
+{
+pAdapter->PortName, ItemString -- 10
+Irp, ItemPtr -- 11
+status, ItemLong -- 12
+}
+#typev MPIoctl_c353 24 "%0%!FUNC!::<%10!s!> MPIOC: IRP_MJ_DEVICE_CONTROL/UNKNOWN to 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IRPDispatch
+{
+pAdapter->PortName, ItemString -- 10
+DeviceObject, ItemPtr -- 11
+}
+#typev MPIoctl_c222 16 "%0%!FUNC!::<%10!s!> MPIOC: IO Code 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IRPDispatch
+{
+pAdapter->PortName, ItemString -- 10
+irpStack->Parameters.DeviceIoControl.IoControlCode, ItemLong -- 11
+}
+#typev MPIoctl_c210 15 "%0%!FUNC!::<%10!s!> MPIOC: failure - security not reset" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=IRPDispatch
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPIoctl_c201 14 "%0%!FUNC!::<%10!s!> MPIOC: IRP_MJ_DEVICE_CONTROL to 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IRPDispatch
+{
+pAdapter->PortName, ItemString -- 10
+DeviceObject, ItemPtr -- 11
+}
+#typev MPIoctl_c171 12 "%0%!FUNC!::<%10!s!> MPIOC: IRP_MJ_CLEANUP to 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IRPDispatch
+{
+pAdapter->PortName, ItemString -- 10
+DeviceObject, ItemPtr -- 11
+}
+#typev MPIoctl_c121 10 "%0%!FUNC!::<%10!s!> CIRP => 0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=IRPDispatch
+{
+pAdapter->PortName, ItemString -- 10
+Irp, ItemPtr -- 11
+}
+#typev MPIoctl_c436 28 "%0%!FUNC!::MPIOC: AddDev failure." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIOC_AddDevice
+{
+}
+#typev MPIoctl_c498 30 "%0%!FUNC!::<%10!s!> <--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIOC_DeleteIoctlDevice
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPIoctl_c477 29 "%0%!FUNC!::<%10!s!> -->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIOC_DeleteIoctlDevice
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPIoctl_c643 35 "%0%!FUNC!::MPIOC: reg dev failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIOC_RegisterIoctlInterface
+{
+}
+#typev MPIoctl_c621 34 "%0%!FUNC!::<%10!s!> MPIOC: created IF %11!u! device(0x%12!p! flg 0x%13!x!) %14!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIOC_RegisterIoctlInterface
+{
+pAdapter->PortName, ItemString -- 10
+myDeviceIndex, ItemLong -- 11
+ControlDeviceObject, ItemPtr -- 12
+ControlDeviceObject->Flags, ItemLong -- 13
+myDeviceName, ItemString -- 14
+}
+#typev MPIoctl_c561 33 "%0%!FUNC!::MPIOC: out of memory-3." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIOC_RegisterIoctlInterface
+{
+}
+#typev MPIoctl_c548 32 "%0%!FUNC!::MPIOC: out of memory-2." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIOC_RegisterIoctlInterface
+{
+}
+#typev MPIoctl_c533 31 "%0%!FUNC!::MPIOC: out of memory." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIOC_RegisterIoctlInterface
+{
+}
+#typev MPIoctl_c897 43 "%0%!FUNC!::<%10!s!>  0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIOC_ResetDeviceSecurity
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPIoctl_c877 42 "%0%!FUNC!::<%10!s!> failure C 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIOC_ResetDeviceSecurity
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPIoctl_c860 41 "%0%!FUNC!::<%10!s!> failure B 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIOC_ResetDeviceSecurity
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPIoctl_c840 40 "%0%!FUNC!::<%10!s!> failure A 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPIOC_ResetDeviceSecurity
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPIoctl_c800 39 "%0%!FUNC!::<%10!s!> -->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPIOC_ResetDeviceSecurity
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPMain_c472 27 "%0%!FUNC!::<%10!s!> <--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPTeardown
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c472 26 "%0%!FUNC!::<%10!s!> -->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPTeardown
+{
+pAdapter->PortName, ItemString -- 10
+}

@@ -1,0 +1,28 @@
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+7bfc3079-8618-3ce3-d3ed-a9124c54abc1 Framework // SRC=npa_event.c MJ= MN=
+#typev npa_event_c710 14 "%0npa_destroy_event_handle (event: "%10!s!") (resource: "%11!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_destroy_event_handle
+{
+event->name, ItemString -- 10
+resource->definition->name, ItemString -- 11
+}
+#typev npa_event_c500 11 "%0	FAILED npa_new_event "%10!s!": resource "%11!s!" does not exist" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_new_event
+{
+event_name, ItemString -- 10
+resource_name, ItemString -- 11
+}
+#typev npa_event_c522 13 "%0 Can't create event "%10!s!" against marker resource "%11!s!"" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_new_event
+{
+event_name, ItemString -- 10
+resource_name, ItemString -- 11
+}
+#typev npa_event_c509 12 "%0	FAILED npa_new_event "%10!s!": NPA target configuration does not support async events" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_new_event
+{
+event_name, ItemString -- 10
+}
+#typev npa_event_c489 10 "%0npa_create_event (resource: "%10!s!") (event: "%11!s!") (type: "%12!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_new_event
+{
+resource_name, ItemString -- 10
+event_name, ItemString -- 11
+npa_event_type_name( trigger_type ), ItemString -- 12
+}

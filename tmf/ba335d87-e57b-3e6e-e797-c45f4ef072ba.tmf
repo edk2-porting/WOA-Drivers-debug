@@ -1,0 +1,182 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+ba335d87-e57b-3e6e-e797-c45f4ef072ba main // SRC=qdiExport.c MJ= MN=
+#typev qdiExport_c6928 32 "%0DPDrv%10!d!: Handle HPD In, status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleHPDIn
+{
+eDisplayId, ItemLong -- 10
+eLocalStatus, ItemLong -- 11
+}
+#typev qdiExport_c6447 30 "%0DPDrv%10!d!: Soft interrupt (HPD Out), Mode Status: %11!d!, Max Timeout: %12!d!ms, status: 0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleHPDOut
+{
+eDisplayId, ItemLong -- 10
+pPhyDisplayInfo->eConnectInit, ItemLong -- 11
+DS_DEFAULT_MAX_HPD_PROCESSING_TIME_MS, ItemLong -- 12
+eLocalStatus, ItemLong -- 13
+}
+#typev qdiExport_c7484 42 "%0DPDrv%10!d!: Tunneled Mode - USB4 Host Router D0 event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleUSB4HostRouterD0Event
+{
+eDisplayId, ItemLong -- 10
+}
+#typev qdiExport_c7480 41 "%0DPDrv%10!d!: Tunneled Mode - Unexpected USB4 Host Router D0 event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleUSB4HostRouterD0Event
+{
+eDisplayId, ItemLong -- 10
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qdiExport_c7575 44 "%0DPDrv%10!d!: Tunneled Mode - USB4 Host Router D3 event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleUSB4HostRouterD3Event
+{
+eDisplayId, ItemLong -- 10
+}
+#typev qdiExport_c7571 43 "%0DPDrv%10!d!: Tunneled Mode - Unexpected USB4 Host Router D3 event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleUSB4HostRouterD3Event
+{
+eDisplayId, ItemLong -- 10
+}
+#typev qdiExport_c7432 40 "%0DPDrv%10!d!: USB HPD Event (HPD_IRQ) processed - status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleUSBIRQHPD
+{
+eDisplayId, ItemLong -- 10
+eLocalStatus, ItemLong -- 11
+}
+#typev qdiExport_c7423 39 "%0DPDrv%10!d!: [USB_IRQ_HPD] Display not powered ON, skip IRQ processing" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleUSBIRQHPD
+{
+eDisplayId, ItemLong -- 10
+}
+#typev qdiExport_c7418 38 "%0DPDrv%10!d!: [USB_IRQ_HPD] Display not in use, skip IRQ processing" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleUSBIRQHPD
+{
+eDisplayId, ItemLong -- 10
+}
+#typev qdiExport_c7396 37 "%0DPDrv%10!d!: [USB_IRQ_HPD] Sink already setup, trigger soft HPD" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleUSBIRQHPD
+{
+eDisplayId, ItemLong -- 10
+}
+#typev qdiExport_c7384 36 "%0DPDrv%10!d!: [USB_IRQ_HPD] New sink connected, processing as HPD In" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleUSBIRQHPD
+{
+eDisplayId, ItemLong -- 10
+}
+#typev qdiExport_c7362 35 "%0DPDrv%10!d!: [USB_IRQ_HPD] Sink unplugged, processing as HPD Out" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleUSBIRQHPD
+{
+eDisplayId, ItemLong -- 10
+}
+#typev qdiExport_c7351 34 "%0DPDrv%10!d!: [USB_IRQ_HPD] New sink status - Plugged=%11!d!, LinkLost=%12!d!, SinkCount=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleUSBIRQHPD
+{
+eDisplayId, ItemLong -- 10
+sNewSinkStatus.bPluggedIn, ItemLong -- 11
+sNewSinkStatus.bLinkLost, ItemLong -- 12
+sNewSinkStatus.uSinkCount, ItemLong -- 13
+}
+#typev qdiExport_c7339 33 "%0DPDrv%10!d!: [USB_IRQ_HPD] Old sink status - Plugged=%11!d!, LinkLost=%12!d!, SinkCount=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=HandleUSBIRQHPD
+{
+eDisplayId, ItemLong -- 10
+sOldSinkStatus.bPluggedIn, ItemLong -- 11
+sOldSinkStatus.bLinkLost, ItemLong -- 12
+sOldSinkStatus.uSinkCount, ItemLong -- 13
+}
+#typev qdiExport_c5308 23 "%0Power: Preparing to hibernate for power component %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTracePower FUNC=PrepareForHibernate
+{
+ePowerComponentType, ItemLong -- 10
+}
+#typev qdiExport_c1770 10 "%0Power: QDI_DriverFStateChangeNotify: EncodeUSBHPDEvent failed on display%10!d!, eStatus = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTracePower FUNC=QDI_DriverFStateChangeNotify
+{
+pPhyDisplay->sTopologyConfig.eTopologyChangeDispID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev qdiExport_c6861 31 "%0DPDrv%10!d!: Power Worker Thread (HPD In), status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_DriverGenerateHotPlug
+{
+eDispId, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev qdiExport_c2820 22 "%0DPDrv%10!d!: Tunneled Mode - Skipped handling USB4 Host Router event: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_DriverQueryInfo
+{
+eDisplayId, ItemLong -- 10
+eHostRouterStatus, ItemLong -- 11
+}
+#typev qdiExport_c2785 21 "%0QDI_DRIVER_INFO_HDCP_SESSION_EVENT: Cached  min_enc_level = %10!d! for Display = %11!d!, with status(0x%12!x!)!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTracePower FUNC=QDI_DriverQueryInfo
+{
+pInputParams->sHDCPSessionInfo.sHDCP_DP_Info[0].uMin_enc_level, ItemLong -- 10
+eDisplayId, ItemLong -- 11
+eResult, ItemLong -- 12
+}
+#typev qdiExport_c2772 20 "%0QDI_DriverQueryInfo : checking for display = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTracePower FUNC=QDI_DriverQueryInfo
+{
+eDisplayId, ItemLong -- 10
+}
+#typev qdiExport_c2746 19 "%0QDI_DRIVER_INFO_DRM_SESSION_EVENT: IsDRMActive = %10!d!, request processed with status(0x%11!x!)!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTracePower FUNC=QDI_DriverQueryInfo
+{
+pInputParams->sDRMSessionEventInfo.bIsDRMActive, ItemLong -- 10
+eResult, ItemLong -- 11
+}
+#typev qdiExport_c2673 18 "%0DPDrv%10!d!: ACPI USB Event (Unknown), EventId: 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_DriverQueryInfo
+{
+eDisplayId, ItemLong -- 10
+pInputParams->sUSBHPDEventInfo.eHPDStatus, ItemLong -- 11
+}
+#typev qdiExport_c2632 17 "%0DPDrv%10!d!: USB HPD Event (HPD In), EventId: 0x%11!x!, DisplayInUse: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_DriverQueryInfo
+{
+eDisplayId, ItemLong -- 10
+pInputParams->sUSBHPDEventInfo.eHPDStatus, ItemLong -- 11
+pPhyDisplayInfo->bInUse, ItemLong -- 12
+}
+#typev qdiExport_c2615 16 "%0DPDrv%10!d!: USB HPD Event (HPD Out), EventId: 0x%11!x!, DisplayInUse: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_DriverQueryInfo
+{
+eDisplayId, ItemLong -- 10
+pInputParams->sUSBHPDEventInfo.eHPDStatus, ItemLong -- 11
+pPhyDisplayInfo->bInUse, ItemLong -- 12
+}
+#typev qdiExport_c2597 15 "%0DPDrv%10!d!: USB HPD Event (IRQ_HPD), Couldn't acquire lock, skip processing!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_DriverQueryInfo
+{
+eDisplayId, ItemLong -- 10
+}
+#typev qdiExport_c2588 14 "%0DPDrv%10!d!: USB HPD Event (IRQ_HPD), EventId: 0x%11!x!, DisplayInUse: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_DriverQueryInfo
+{
+eDisplayId, ItemLong -- 10
+pInputParams->sUSBHPDEventInfo.eHPDStatus, ItemLong -- 11
+pPhyDisplayInfo->bInUse, ItemLong -- 12
+}
+#typev qdiExport_c2311 11 "%0DPDrv%10!d!: ACPI Event (HPD In), EventId: 0x%11!x!, DisplayInUse: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_DriverQueryInfo
+{
+eDisplayId, ItemLong -- 10
+pInputParams->sACPIEventInfo.uEventID, ItemLong -- 11
+pPhyDisplayInfo->bInUse, ItemLong -- 12
+}
+#typev qdiExport_c2443 13 "%0DPDrv%10!d!: ACPI Event (HPD Out), EventId: 0x%11!x!, DisplayInUse: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_DriverQueryInfo
+{
+QDI_DISPLAY_EXTERNAL, ItemLong -- 10
+pInputParams->sACPIEventInfo.uEventID, ItemLong -- 11
+pPhyDisplayInfo->bInUse, ItemLong -- 12
+}
+#typev qdiExport_c2399 12 "%0DPDrv%10!d!: ACPI Event (HPD In), EventId: 0x%11!x!, DisplayInUse: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_DriverQueryInfo
+{
+QDI_DISPLAY_EXTERNAL, ItemLong -- 10
+pInputParams->sACPIEventInfo.uEventID, ItemLong -- 11
+pPhyDisplayInfo->bInUse, ItemLong -- 12
+}
+#typev qdiExport_c6372 29 "%0DPDrv%10!d!: Tunneled Mode - Attempted to process Rx packet received event." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_USB4DPAuxWorkItemWorkerThreadRoutine
+{
+eDisplayId, ItemLong -- 10
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qdiExport_c6198 27 "%0DPDrv%10!d!: Tunneled Mode - Processing IRQ_HPD event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_USB4DPHPDWorkItemWorkerThreadRoutine
+{
+eDisplayId, ItemLong -- 10
+}
+#typev qdiExport_c6176 26 "%0DPDrv%10!d!: Tunneled Mode - Processing HPD plug event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_USB4DPHPDWorkItemWorkerThreadRoutine
+{
+eDisplayId, ItemLong -- 10
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qdiExport_c6241 28 "%0DPDrv%10!d!: Tunneled Mode - Processing path teardown event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_USB4DPHPDWorkItemWorkerThreadRoutine
+{
+eDisplayId, ItemLong -- 10
+}
+#typev qdiExport_c6163 25 "%0DPDrv%10!d!: Tunneled Mode - Skipping processing received work item, Host Router in D3 state: %11!d!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=QDI_USB4DPHPDWorkItemWorkerThreadRoutine
+{
+eDisplayId, ItemLong -- 10
+sDisplayWorkItem.uEventId, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qdiExport_c5379 24 "%0Power: Resuming from hibernate for power component %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTracePower FUNC=ResumeFromHibernate
+{
+ePowerComponentType, ItemLong -- 10
+}

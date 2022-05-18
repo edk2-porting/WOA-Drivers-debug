@@ -1,0 +1,82 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+8dd3f0e1-ffb9-39a8-1a4a-65225bde8de4 src // SRC=dsDisplayOps.c MJ= MN=
+#typev qdiExport_c7581 13 "%0Display work item enqueued, uClientId=%10!d!, uEventId=%11!d!, events queued=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=HandleUSB4HostRouterD3Event
+{
+pDisplayWorkItemCtx->uClientId, ItemLong -- 10
+pDisplayWorkItem->uEventId, ItemLong -- 11
+displayWorkItemNumEventsQueued(pDisplayWorkItemCtx->uReadIndex. pDisplayWorkItemCtx->uWriteIndex), ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qdiExport_c6330 14 "%0Display work item dequeued, uClientId=%10!d!, uEventId=%11!d!, events queued=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=QDI_USB4DPAuxWorkItemWorkerThreadRoutine
+{
+pDisplayWorkItemCtx->uClientId, ItemLong -- 10
+pDisplayWorkItem->uEventId, ItemLong -- 11
+displayWorkItemNumEventsQueued(pDisplayWorkItemCtx->uReadIndex. pDisplayWorkItemCtx->uWriteIndex), ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qdiExport_c6264 13 "%0Display work item enqueued, uClientId=%10!d!, uEventId=%11!d!, events queued=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=QDI_USB4DPHPDWorkItemWorkerThreadRoutine
+{
+pDisplayWorkItemCtx->uClientId, ItemLong -- 10
+pDisplayWorkItem->uEventId, ItemLong -- 11
+displayWorkItemNumEventsQueued(pDisplayWorkItemCtx->uReadIndex. pDisplayWorkItemCtx->uWriteIndex), ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev qdiExport_c6129 14 "%0Display work item dequeued, uClientId=%10!d!, uEventId=%11!d!, events queued=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=QDI_USB4DPHPDWorkItemWorkerThreadRoutine
+{
+pDisplayWorkItemCtx->uClientId, ItemLong -- 10
+pDisplayWorkItem->uEventId, ItemLong -- 11
+displayWorkItemNumEventsQueued(pDisplayWorkItemCtx->uReadIndex. pDisplayWorkItemCtx->uWriteIndex), ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dsDisplayOps_c7023 15 "%0Waiting for timing engine %10!s! state - display=%11!d!, interface=%12!d! waitTime=%13!d!us, result=0x%14!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceMDP FUNC=displayPollTimingEngineStatus
+{
+(TRUE == bRequiredState) ? 'enabled' : 'disabled', ItemString -- 10
+pDisplayControlPath->eInterfaceId, ItemLong -- 11
+eDisplayId, ItemLong -- 12
+uIterCount*DS_MIN_POLLING_SLEEP_TIME_US, ItemLong -- 13
+eStatus, ItemLong -- 14
+}
+#typev dsDisplayOps_c2989 13 "%0Display work item enqueued, uClientId=%10!d!, uEventId=%11!d!, events queued=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=ds_DisplayWorkItemClearAll
+{
+pDisplayWorkItemCtx->uClientId, ItemLong -- 10
+pDisplayWorkItem->uEventId, ItemLong -- 11
+displayWorkItemNumEventsQueued(pDisplayWorkItemCtx->uReadIndex. pDisplayWorkItemCtx->uWriteIndex), ItemLong -- 12
+}
+#typev dsDisplayOps_c871 12 "%0Display:%10!d! Adaptive Sync refresh rate request, from %11!d!Hz to %12!d!Hz. AVR Enabled: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=ds_commitDisplayLevel
+{
+pDisplayUserCtx->ePhyDisplayId, ItemLong -- 10
+(uint32)Q16_WHOLE(pDynamicRefreshCfg->sDynamicBlankingConfig.uDynamicBlankingConfigRates[psPhyDisplayInfo->uDynamicRefreshRateIndex]), ItemLong -- 11
+(uint32)fRequestedVsyncRefreshRate, ItemLong -- 12
+bAVREnable, ItemLong -- 13
+}
+#typev dsDisplayOps_c429 10 "%0Interface disabled - display=%10!d!, uFlags=0x%11!x!, status=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=ds_displayDisableInterface
+{
+eDisplayId, ItemLong -- 10
+uFlags, ItemLong -- 11
+eStatusRet, ItemLong -- 12
+}
+#typev dsDisplayOps_c500 11 "%0Interface enabled - display=%10!d!, uFlags=0x%11!x!, status=0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=ds_displayEnableInterface
+{
+eDisplayId, ItemLong -- 10
+uFlags, ItemLong -- 11
+eStatusRet, ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dpdriver_c8217 13 "%0Display work item enqueued, uClientId=%10!d!, uEventId=%11!d!, events queued=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=USB4DPInterruptDPCHandler
+{
+pDisplayWorkItemCtx->uClientId, ItemLong -- 10
+pDisplayWorkItem->uEventId, ItemLong -- 11
+displayWorkItemNumEventsQueued(pDisplayWorkItemCtx->uReadIndex. pDisplayWorkItemCtx->uWriteIndex), ItemLong -- 12
+}
+#typev dpdriver_c8221 13 "%0Display work item enqueued, uClientId=%10!d!, uEventId=%11!d!, events queued=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceMDP FUNC=USB4DPInterruptDPCHandler
+{
+pDisplayWorkItemCtx->uClientId, ItemLong -- 10
+pDisplayWorkItem->uEventId, ItemLong -- 11
+displayWorkItemNumEventsQueued(pDisplayWorkItemCtx->uReadIndex. pDisplayWorkItemCtx->uWriteIndex), ItemLong -- 12
+}

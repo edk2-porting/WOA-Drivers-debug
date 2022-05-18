@@ -1,0 +1,431 @@
+// PDB:  QcTrEE.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+38748216-e1a6-39c3-dfa2-71d57a5f1bfd latest // SRC=MssecService.c MJ= MN=
+#typev MssecService_c589 37 "%0TrEE: Verbose: [%10!p!]  %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceCancelSecureServiceRequest
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c316 26 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceConnectSecureService
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev MssecService_c270 20 "%0TrEE: Error: MSsec returned error for TZEXEC_SVC_MSSECAPP_STPM_GET_CONTROL_AREA command [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceConnectSecureService
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c277 21 "%0TrEE: Error: MSsec Get Control area command returned wrong length [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceConnectSecureService
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+MssecGetCARsp.controlAreaSize, ItemLong -- 13
+}
+#typev MssecService_c310 25 "%0TrEE: Error: [%10!p!] ReadPpiVarInfo for MSsecservice failed %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceConnectSecureService
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c302 24 "%0TrEE: Error: SendShmBridgeCreateReqToTZ for stpm Control Area failed with status [%10!p!] :%11!s! :%12!d! 0x%13!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceConnectSecureService
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c290 23 "%0TrEE: Info: [%10!p!] Physical Address of Control Area: 0x%11!I64X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_MSSEC FUNC=MssecServiceConnectSecureService
+{
+_TID(), ItemPtr -- 10
+ServiceContext->ControlAreaPa.QuadPart, ItemLongLongXX -- 11
+}
+#typev MssecService_c286 22 "%0TrEE: Error: Failed to map TPM control area buffer in Mssec app service [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceConnectSecureService
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c255 19 "%0TrEE: Error: [%10!p!] Unable to read MSSecApp ID %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceConnectSecureService
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c244 18 "%0TrEE: Error: [%10!p!] Invalid parameters for MssecServiceConnectSecureService %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceConnectSecureService
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c239 17 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceConnectSecureService
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c154 14 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceCreateSecureServiceContext
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev MssecService_c149 13 "%0TrEE: Error: Failed to allocate buffer for MSSEC response [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceCreateSecureServiceContext
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c142 12 "%0TrEE: Error: Failed to allocate buffer for MSSEC request [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceCreateSecureServiceContext
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c130 11 "%0TrEE: Error: [%10!p!] WdfObjectAllocateContext failed %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceCreateSecureServiceContext
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c124 10 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceCreateSecureServiceContext
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c444 32 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceCreateSessionContext
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev MssecService_c427 31 "%0TrEE: Error: [%10!p!] Unable to create context for MSSEC service %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceCreateSessionContext
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c417 30 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceCreateSessionContext
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c201 16 "%0TrEE: Verbose: [%10!p!] -- %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceDestroySecureServiceContext
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c184 15 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceDestroySecureServiceContext
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c480 33 "%0TrEE: Verbose: [%10!p!]  %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceDestroySessionContext
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c375 29 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceDisconnectSecureService
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev MssecService_c355 28 "%0TrEE: Warn: [%10!p!] SendShmBridgeDeleteReqToTZ for STPM Control area buffer failed with status :%11!s! :%12!d! 0x%13!X!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_MSSEC FUNC=MssecServiceDisconnectSecureService
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c347 27 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceDisconnectSecureService
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c731 46 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceInvoke
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev MssecService_c679 41 "%0TrEE: Error: Invalid input parameters received for MssecServiceInvoke [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceInvoke
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c715 45 "%0TrEE: Error: TzAppSend returned failure in MssecServiceInvoke [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceInvoke
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c697 44 "%0TrEE: Info: [%10!p!] TPM Go Idle" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_MSSEC FUNC=MssecServiceInvoke
+{
+_TID(), ItemPtr -- 10
+}
+#typev MssecService_c691 43 "%0TrEE: Info: [%10!p!] TPM Command Ready" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TPM FUNC=MssecServiceInvoke
+{
+_TID(), ItemPtr -- 10
+}
+#typev MssecService_c687 42 "%0TrEE: Info: [%10!p!] Control Area Request: 0x%11!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_MSSEC FUNC=MssecServiceInvoke
+{
+_TID(), ItemPtr -- 10
+*ControlAreaRequest, ItemLong -- 11
+}
+#typev MssecService_c672 40 "%0TrEE: Error: Neither function code not valid nor command received from user space [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceInvoke
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c665 39 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceInvoke
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c771 49 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServicePpi
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev MssecService_c754 48 "%0TrEE: Error: [%10!p!] Invalid input parameters received for TpmServicePpi %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServicePpi
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c749 47 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServicePpi
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c631 38 "%0TrEE: Verbose: [%10!p!]  %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceProcessOtherSecureServiceIo
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c554 36 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceProcessSecureServiceRequest
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev MssecService_c540 35 "%0TrEE: Error: [%10!p!] Send data command failed for MssecServiceProcessSecureServiceRequest %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceProcessSecureServiceRequest
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c535 34 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceProcessSecureServiceRequest
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c845 55 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceShutdown
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev MssecService_c810 52 "%0TrEE: Error: Invalid input parameters received for MssecServiceInvoke [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceShutdown
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c829 53 "%0TrEE: Error: TzAppSend returned failure in MssecServiceShutdown [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceShutdown
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c832 54 "%0TrEE: Verbose: [%10!p!] Mssecapp TA shutdown successfully! %11!s!()" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_MSSEC FUNC=MssecServiceShutdown
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c803 51 "%0TrEE: Error: Either the function code is not valid or the command is received from user space [%10!p!] %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=MssecServiceShutdown
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c797 50 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=MssecServiceShutdown
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c1173 82 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=ReadPpiVarInfo
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev MssecService_c1128 78 "%0TrEE: Error: [%10!p!] Invalid input parameters %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ReadPpiVarInfo
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c1168 81 "%0TrEE: Error: [%10!p!] Uefisec app returned error for PPI variable query %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ReadPpiVarInfo
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+(UINT32)EfiStatus, ItemLong -- 13
+}
+#typev MssecService_c1153 80 "%0TrEE: Error: [%10!p!] Failed to get PPI state through Uefi sec app %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ReadPpiVarInfo
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c1136 79 "%0TrEE: Error: [%10!p!] Failed to query Uefi sec app ID %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ReadPpiVarInfo
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c1123 77 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=ReadPpiVarInfo
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev MssecService_c1106 76 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev MssecService_c890 58 "%0TrEE: Error: [%10!p!] Invalid input parameters received for TpmServicePpi %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c1096 75 "%0TrEE: Error: [%10!p!] Invalid switch case received for PPI operations %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c1038 74 "%0TrEE: Error: [%10!p!] Buffer not sufficient to hold User confirmation status %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c1032 73 "%0TrEE: Info: -- PPIGetUserConfirmationStatus" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+}
+#typev MssecService_c999 72 "%0TrEE: Error: [%10!p!] Buffer not sufficient to hold Pre OS environment %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c993 71 "%0TrEE: Info: -- PPISubmitToPreOSEnvironment2" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+}
+#typev MssecService_c983 70 "%0TrEE: Error: [%10!p!] Buffer not sufficient to hold Preferred user language %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c978 69 "%0TrEE: Info: -- PPISubmitPreferredUserLanguage" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+}
+#typev MssecService_c966 68 "%0TrEE: Error: [%10!p!] Buffer not sufficient to hold PPI operation response %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c961 67 "%0TrEE: Info: -- PPIGetOperationResponse" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+}
+#typev MssecService_c951 66 "%0TrEE: Error: [%10!p!] Buffer not sufficient to hold platform specific action %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c946 65 "%0TrEE: Info: -- PPIGetPlatformSpecificAction" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+}
+#typev MssecService_c935 64 "%0TrEE: Error: [%10!p!] Buffer not sufficient to get PPI operation %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c930 63 "%0TrEE: Info: -- PPIGetPendingOperation" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+}
+#typev MssecService_c920 62 "%0TrEE: Error: [%10!p!] Buffer not sufficient to get PPI status %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c915 61 "%0TrEE: Info: -- PPISubmitToPreOSEnvironement" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+}
+#typev MssecService_c903 60 "%0TrEE: Error: [%10!p!] PPI version buffer not sufficient to receive data %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c898 59 "%0TrEE: Info: -- PPIGetVersion: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+PPI_VERSION, ItemString -- 10
+}
+#typev MssecService_c883 57 "%0TrEE: Error: [%10!p!] Neither function code not valid nor command received from user space %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev MssecService_c878 56 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_MSSEC FUNC=ServicePpi
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}

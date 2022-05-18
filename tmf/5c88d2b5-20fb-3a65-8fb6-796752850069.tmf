@@ -1,0 +1,53 @@
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+5c88d2b5-20fb-3a65-8fb6-796752850069 10.7 // SRC=RevRmLockMgmt.c MJ= MN=
+#typev RevRmLockMgmt_c133 13 "%0%!FUNC!:: ERROR MPWaitLockList.bInitialized = %10!d! pWaitLock = 0x%11!p!. nWaitLockCount = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmLockMgmt_WaitLockAcquire
+{
+MPWaitLockList.bInitialized, ItemLong -- 10
+pWaitLock, ItemPtr -- 11
+MPWaitLockList.nWaitLockCount, ItemLong -- 12
+}
+#typev RevRmLockMgmt_c100 11 "%0%!FUNC!:: ERROR MPWaitLockList.bInitialized = %10!s! nWaitLockCount = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmLockMgmt_WaitLockCreate
+{
+MPWaitLockList.bInitialized, ItemListLong(false,true) -- 10
+MPWaitLockList.nWaitLockCount, ItemLong -- 11
+}
+#typev RevRmLockMgmt_c92 10 "%0%!FUNC!:: Ran out of available locks. New lock = 0x%10!p!. bAssigned = %11!d!. Total WaitLocks = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmLockMgmt_WaitLockCreate
+{
+pWaitLock, ItemPtr -- 10
+pWaitLock->bAssigned, ItemLong -- 11
+MPWaitLockList.nWaitLockCount, ItemLong -- 12
+}
+#typev RevRmLockMgmt_c146 14 "%0%!FUNC!:: ERROR MPWaitLockList.bInitialized = %10!d! pWaitLock = 0x%11!p!. nWaitLockCount = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmLockMgmt_WaitLockRelease
+{
+MPWaitLockList.bInitialized, ItemLong -- 10
+pWaitLock, ItemPtr -- 11
+MPWaitLockList.nWaitLockCount, ItemLong -- 12
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmQCCI_c92 12 "%0%!FUNC!:: ERROR MPWaitLockList.bInitialized = %10!d! pWaitLock = 0x%11!p!. nWaitLockCount = %12!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_FreeQMIRequest
+{
+MPWaitLockList.bInitialized, ItemLong -- 10
+pWaitLock, ItemPtr -- 11
+MPWaitLockList.nWaitLockCount, ItemLong -- 12
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmnet_c2304 17 "%0%!FUNC!:: nWaitLockCount = %10!u!. STATUS_SUCCESS" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_PrepareHardwareContext
+{
+MPWaitLockList.nWaitLockCount, ItemLong -- 10
+}
+#typev RevRmnet_c2304 15 "%0%!FUNC!:: Failed. STATUS_UNSUCCESSFUL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_PrepareHardwareContext
+{
+}
+#typev RevRmnet_c2304 16 "%0%!FUNC!:: pWaitLock = 0x%10!p!. nWaitLockCount = %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_PrepareHardwareContext
+{
+pWaitLock, ItemPtr -- 10
+MPWaitLockList.nWaitLockCount, ItemLong -- 11
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmnet_c2364 18 "%0%!FUNC!:: STATUS_SUCCESS." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevrRmnet_ReleaseHardwareContext
+{
+}

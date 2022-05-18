@@ -1,0 +1,90 @@
+// PDB:  ufnserialclass.pdb
+// PDB:  Last Updated :2021-10-17:21:54:23:868 (UTC) [tracepdb]
+1bb4a09d-6a66-34f1-2662-4d68b9a5a19e src // SRC=utility.c MJ= MN=
+#typev utility_c333 23 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=DumpGsiChannelConfig
+{
+}
+#typev utility_c316 22 "%0ChTraffic [%10!s!], UsbPipeId [%11!d!], UsbIfcId [%12!d!], XferRingLen [%13!Id!], XferRingBasePa[0x%14!Ix!], XfeRingLastTrbPa[0x%15!Ix!], ConstBufSize[%16!Id!], DEPCMDLowPa[0x%17!x!], DEPCMDHighPa [0x%18!x!], GEVNTCOUNTLowPa [0x%19!x!], GEVNTCOUNTHighPa [0x%20!x!], DoorBellAddress [0x%21!Ix!], XferRsrcIdx [%22!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_IOCTL FUNC=DumpGsiChannelConfig
+{
+IpaUsbTraName[cfg->ChTraffic], ItemString -- 10
+cfg->UsbPipeId, ItemLong -- 11
+cfg->UsbIfcId, ItemLong -- 12
+cfg->XferRingLen, ItemPtr -- 13
+(ULONG_PTR)cfg->XferRingBasePa, ItemPtr -- 14
+(ULONG_PTR)cfg->XfeRingLastTrbPa, ItemPtr -- 15
+cfg->ConstBufSize, ItemPtr -- 16
+cfg->DEPCMDLowPa, ItemLong -- 17
+cfg->DEPCMDHighPa, ItemLong -- 18
+cfg->GEVNTCOUNTLowPa, ItemLong -- 19
+cfg->GEVNTCOUNTHighPa, ItemLong -- 20
+(ULONG_PTR)cfg->DoorBellAddress, ItemPtr -- 21
+cfg->XferRsrcIdx, ItemLong -- 22
+}
+#typev utility_c309 21 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=DumpGsiChannelConfig
+{
+}
+#typev utility_c428 30 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=EmptyCollection
+{
+}
+#typev utility_c418 29 "%0invalid parameters" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=EmptyCollection
+{
+}
+#typev utility_c415 28 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=EmptyCollection
+{
+}
+#typev utility_c198 18 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=FindBulkInPipe
+{
+}
+#typev utility_c194 17 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=FindBulkInPipe
+{
+}
+#typev utility_c231 20 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=FindBulkOutPipe
+{
+}
+#typev utility_c227 19 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=FindBulkOutPipe
+{
+}
+#typev utility_c133 14 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=FindControlPipe
+{
+}
+#typev utility_c131 13 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=FindControlPipe
+{
+}
+#typev utility_c164 16 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=FindInterruptPipe
+{
+}
+#typev utility_c160 15 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=FindInterruptPipe
+{
+}
+#typev utility_c104 12 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=FindUsbPipe
+{
+}
+#typev utility_c90 11 "%0Error: WdfMemoryCreateFromLookaside failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TRANSFER FUNC=FindUsbPipe
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utility_c62 10 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=FindUsbPipe
+{
+}
+#typev utility_c571 36 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxWaitHwPipeClear
+{
+}
+#typev utility_c529 34 "%0ERROR: DevCtxt %10!p!, hwPipeCtxt %11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_BUS_EVENT FUNC=UsbGxWaitHwPipeClear
+{
+devCtxt, ItemPtr -- 10
+hwPipeCtxt, ItemPtr -- 11
+}
+#typev utility_c555 35 "%0Device %10!s! Notify D3 Event" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_BUS_EVENT FUNC=UsbGxWaitHwPipeClear
+{
+devCtxt->ClassInfo.InterfaceName, ItemWString -- 10
+}
+#typev utility_c522 33 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=UsbGxWaitHwPipeClear
+{
+}
+#typev utility_c484 32 "%0KeWaitForMultipleObjects failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_BUS_EVENT FUNC=UsbGxWaitHwPipeEvents
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utility_c481 31 "%0Event Signaled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_BUS_EVENT FUNC=UsbGxWaitHwPipeEvents
+{
+}

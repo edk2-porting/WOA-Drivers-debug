@@ -1,0 +1,72 @@
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+db855925-ef98-3573-302c-66d4c5874228 10.7 // SRC=qmap_wda.c MJ= MN=
+#typev qmap_qcci_c208 21 "%0QMI::%!FUNC! ERROR Msg not supported msgId = 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapQCCIProcessInboundQMIResponse
+{
+pQMIElement->uMsgId, ItemLong -- 10
+}
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+#typev qmap_wda_c171 18 "%0QMI::%!FUNC! MPQMI_SendWdaDataFormatReq Status - %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapQMIInitWdaClient
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_wda_c166 17 "%0QMI::%!FUNC! ERROR QmapQCCIInitClientFromServiceObj" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapQMIInitWdaClient
+{
+}
+#typev qmap_wda_c150 16 "%0QMI::%!FUNC! ERROR pClient NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapQMIInitWdaClient
+{
+}
+#typev qmap_wda_c254 22 "%0QMI::%!FUNC! ERROR pQMI/pRespBuff NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapQMIProcessWDASetDataFormatResp
+{
+}
+#typev qmap_wda_c292 27 "%0QMI::%!FUNC! Negotiated txDeaggrMaxDatagrams=%10!u!, txDeaggrMaxSize=%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapQMIProcessWDASetDataFormatResp
+{
+pDeviceContext->Qmap.txDeaggrMaxDatagrams, ItemLong -- 10
+pDeviceContext->Qmap.txDeaggrMaxSize, ItemLong -- 11
+}
+#typev qmap_wda_c291 26 "%0QMI::%!FUNC! ul_data_aggregation_max_size=%10!u!, dl_data_aggregation_max_size=%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapQMIProcessWDASetDataFormatResp
+{
+pResp->ul_data_aggregation_max_size, ItemLong -- 10
+pResp->dl_data_aggregation_max_size, ItemLong -- 11
+}
+#typev qmap_wda_c290 25 "%0QMI::%!FUNC! ul_data_aggregation_max_datagrams=%10!u!, dl_data_aggregation_max_datagrams=%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapQMIProcessWDASetDataFormatResp
+{
+pResp->ul_data_aggregation_max_datagrams, ItemLong -- 10
+pResp->dl_data_aggregation_max_datagrams, ItemLong -- 11
+}
+#typev qmap_wda_c274 24 "%0QMI::%!FUNC! ul_data_aggregation_protocol=0x%10!x!, dl_data_aggregation_protocol=0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapQMIProcessWDASetDataFormatResp
+{
+pResp->ul_data_aggregation_protocol, ItemLong -- 10
+pResp->dl_data_aggregation_protocol, ItemLong -- 11
+}
+#typev qmap_wda_c265 23 "%0QMI::%!FUNC! ERROR pResp result = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapQMIProcessWDASetDataFormatResp
+{
+pResp->resp.result, ItemLong -- 10
+}
+#typev qmap_wda_c94 13 "%0QMAP::%!FUNC!: -- %10!s! %11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapQMISendWdaDataFormatReq
+{
+ntStatus, ItemNTSTATUS -- 10
+ntStatus, ItemLong -- 11
+}
+#typev qmap_wda_c47 12 "%0QMI::%!FUNC!: ERROR, Request buffer is null." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapQMISendWdaDataFormatReq
+{
+}
+#typev qmap_wda_c40 11 "%0QMI::%!FUNC!: ERROR, Allocate QMI element failed." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->Qmap.IFRlogHandle FLAGS=IPA FUNC=QmapQMISendWdaDataFormatReq
+{
+}
+#typev qmap_wda_c35 10 "%0QMI::%!FUNC! ++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapQMISendWdaDataFormatReq
+{
+}
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+#typev qmap_main_c1561 15 "%0QMI::%!FUNC! ExAllocatePoolWithTag Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapQMIClientAllocate
+{
+}
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+#typev qmap_main_c1642 14 "%0QMI::%!FUNC! WDAQmiclient -  %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=QmapQMIClientDeinit
+{
+qmiErr, ItemLong -- 10
+}

@@ -1,0 +1,67 @@
+// PDB:  qcuart7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:52:688 (UTC) [tracepdb]
+a2a31f3e-8aef-3ca9-d2cd-39a3cd2b9b5e 10.7 // SRC=tal_interrupt_woa.c MJ= MN=
+#typev DalUart_c1215 23 "%0-%!FUNC!(0x%10!X!)" //   FLAGS=FUNCTION FUNC=open_devices
+{
+result, ItemLong -- 10
+}
+#typev DalUart_c1215 22 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=open_devices
+{
+phandle, ItemPtr -- 10
+device_id, ItemPtr -- 11
+}
+// PDB:  qcuart7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:52:688 (UTC) [tracepdb]
+#typev tal_interrupt_woa_c147 11 "%0create_interrupt: ExAllocatePoolWithTag() failed" //   FLAGS=ERROR FUNC=create_interrupt
+{
+}
+#typev tal_interrupt_woa_c233 14 "%0extract_gsi: invalid interrupt" //   FLAGS=ERROR FUNC=extract_gsi
+{
+}
+#typev tal_interrupt_woa_c362 16 "%0register_isr: IoConnectInterruptEx() failed (0x%10!X!)" //   FLAGS=ERROR FUNC=register_isr
+{
+status, ItemLong -- 10
+}
+#typev tal_interrupt_woa_c354 15 "%0Calling IoConnectInterruptEx()" //   FLAGS=INFO FUNC=register_isr
+{
+}
+#typev tal_interrupt_woa_c388 17 "%0service dpc get fail due to Null int_object" //   FLAGS=ERROR FUNC=service_dpc
+{
+}
+#typev tal_interrupt_woa_c479 19 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=tal_interrupt_close
+{
+}
+#typev tal_interrupt_woa_c473 13 "%0Calling IoDisconnectInterruptEx()" //   FLAGS=INFO FUNC=tal_interrupt_close
+{
+}
+#typev tal_interrupt_woa_c468 18 "%0+%!FUNC!(0x%10!p!)" //   FLAGS=FUNCTION FUNC=tal_interrupt_close
+{
+handle, ItemPtr -- 10
+}
+#typev tal_interrupt_woa_c503 21 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=tal_interrupt_deregister
+{
+}
+#typev tal_interrupt_woa_c501 12 "%0Calling IoReportInterruptInactive()" //   FLAGS=INFO FUNC=tal_interrupt_deregister
+{
+}
+#typev tal_interrupt_woa_c491 20 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=tal_interrupt_deregister
+{
+handle, ItemPtr -- 10
+interrupt, ItemPtr -- 11
+}
+#typev tal_interrupt_woa_c653 25 "%0-%!FUNC!(0x%10!X!)" //   FLAGS=FUNCTION FUNC=tal_interrupt_register
+{
+result, ItemLong -- 10
+}
+#typev tal_interrupt_woa_c638 10 "%0Calling IoReportInterruptActive()" //   FLAGS=INFO FUNC=tal_interrupt_register
+{
+}
+#typev tal_interrupt_woa_c617 24 "%0+%!FUNC!(0x%10!p!, 0x%11!p!, %12!d!, 0x%13!Ix!, 0x%14!Ix!, 0x%15!p!)" //   FLAGS=FUNCTION FUNC=tal_interrupt_register
+{
+handle, ItemPtr -- 10
+interrupt, ItemPtr -- 11
+trigger, ItemLong -- 12
+(UINT_PTR)isr, ItemPtr -- 13
+(UINT_PTR)dpc, ItemPtr -- 14
+ctxt, ItemPtr -- 15
+}

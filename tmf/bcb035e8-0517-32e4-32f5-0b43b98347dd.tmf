@@ -1,0 +1,632 @@
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+bcb035e8-0517-32e4-32f5-0b43b98347dd 10.7 // SRC=MPMain.c MJ= MN=
+#typev MPInit_c581 58 "%0%!FUNC!::<%10!s!> ERROR: %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPInitializeEx
+{
+pAdapter->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPMain_c5636 213 "%0%!FUNC!::Invalid Wrong PIN Length %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=Alloc_WrongSimPinInfo
+{
+pAdapter->WRONG_SIM_PIN_INFO.PINLength, ItemLong -- 10
+}
+#typev MPMain_c5623 212 "%0%!FUNC!::NULL pAdapter : %10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=Alloc_WrongSimPinInfo
+{
+pAdapter, ItemPtr -- 10
+}
+#typev MPMain_c404 18 "%0%!FUNC!::<qcnet> NdisMRegisterMiniportDriver failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+Status, ItemLong -- 10
+}
+#typev MPMain_c350 17 "%0%!FUNC!:: GlobalData.MTUDataSize=%10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+GlobalData.MTUDataSize, ItemLong -- 10
+}
+#typev MPMain_c333 16 "%0%!FUNC!::<qcnet> AllocMemory for RegistryPath failed " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+}
+#typev MPMain_c317 15 "%0%!FUNC!::<qcnet> RegPath: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+asRegPath.Buffer, ItemString -- 10
+}
+#typev MPMain_c302 14 "%0%!FUNC!::<qcnet> RtlUnicodeStringToAnsiString failed: 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPMain_c248 13 "%0%!FUNC!::<qcnet> ---> WdfDriverCreate failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPMain_c222 11 "%0%!FUNC!::WppRecorderLogCreate SUCCESS" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=*pLogHandle FLAGS=MBB_WPP FUNC=DriverEntry
+{
+}
+#typev MPMain_c222 10 "%0%!FUNC!:: WppRecorderLogCreate failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=DriverEntry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev MPMain_c215 12 "%0%!FUNC!::<qcnet> ---> built on %10!s! at %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=DriverEntry
+{
+cDate, ItemString -- 10
+cTime, ItemString -- 11
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPMain_c5113 190 "%0%!FUNC!::IoGetDeviceInterfaces failed. status=0x%10!x!, %11!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=GetDeviceObject
+{
+status, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev MPMain_c5134 191 "%0%!FUNC!::IoGetDeviceObjectPointer failed. deviceName=%10!s!, status=0x%11!x!, %12!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=GetDeviceObject
+{
+&deviceName, ItemPWString -- 10
+status, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev MPMain_c578 25 "%0%!FUNC!::<%10!s!> Halt Action %11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPHaltEx
+{
+pAdapter->PortName, ItemString -- 10
+HaltAction, ItemLong -- 11
+}
+#typev MPMain_c2032 88 "%0%!FUNC!::<%10!s!> MP cxl in pro" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_CancelMPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2020 87 "%0%!FUNC!::<%10!s!> MP Cxl: wrong IRQL" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPMAIN_CancelMPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2012 86 "%0%!FUNC!::<%10!s!> MP Cxl" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_CancelMPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2773 114 "%0%!FUNC!::
+<%10!s!>System does not support valid NDIS version for this driver." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_DetermineValidNdisVersion
+{
+gDeviceName, ItemString -- 10
+}
+#typev MPMain_c2769 113 "%0%!FUNC!::
+<%10!s!>QCMP_NDIS630_Ok" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_DetermineValidNdisVersion
+{
+gDeviceName, ItemString -- 10
+}
+#typev MPMain_c1704 70 "%0%!FUNC!::<%10!s!> <--MPQCCI_Init: Succeeded" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_InitializeQMI
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1694 69 "%0%!FUNC!::<%10!s!><-- MPQCCI_Init: SendSetDataFormatIOCTL failed - 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_InitializeQMI
+{
+pAdapter->PortName, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev MPMain_c1639 65 "%0%!FUNC!::<%10!s!> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_InitializeQMI
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2417 107 "%0%!FUNC!::<%10!s!> MPth: OUT (0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c2195 93 "%0%!FUNC!::<%10!s!> MPth: CANCEL" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2326 100 "%0%!FUNC!::<%10!s!> MPth: RECONFIG_TIMER_EXPIRED" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2308 99 "%0%!FUNC!::<%10!s!> timeout waiting for SecondMediaConnect!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2292 98 "%0%!FUNC!::<%10!s!> MPth: Waiting for other IP address " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2279 97 "%0%!FUNC!::<%10!s!> timeout waiting for IPTypeDeterminedEvent!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2263 96 "%0%!FUNC!::<%10!s!> Waiting for IPType of adapter to be determined!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2244 95 "%0%!FUNC!::<%10!s!>  MEDIA_CONN for eHRPD, performing media bounce after getting IPv6 and DNS addresses." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2225 94 "%0%!FUNC!::<%10!s!> MPth: MEDIA_CONN" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2339 101 "%0%!FUNC!::<%10!s!> MPth: IODEV_ACT" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2381 104 "%0%!FUNC!::<%10!s!> MPth: Could not open DataIf Interface!. Status = 0x%11!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c2370 103 "%0%!FUNC!::<%10!s!>  Datapath connection successfully established " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2351 102 "%0%!FUNC!::<%10!s!> MPth: SMD_IF_UP" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2391 105 "%0%!FUNC!::<%10!s!> MPth: DATA_IF_DOWN" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2398 106 "%0%!FUNC!::<%10!s!> MPth: unexpected evt-0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c2157 92 "%0%!FUNC!::<%10!s!> MPth: NO_MEM" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2135 91 "%0%!FUNC!::<%10!s!> MPth: QBI Thread failure %11!d!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c2120 90 "%0%!FUNC!::<%10!s!> MPth: Work failure" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c2105 89 "%0%!FUNC!::<%10!s!> MPth: wrong IRQL" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPMAIN_MPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1425 57 "%0%!FUNC!::<%10!s!> IPO: _SetDeviceId: (%11!d!, %12!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_SetDeviceId
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->DeviceId, ItemLong -- 11
+pAdapter->DeviceId2, ItemLong -- 12
+}
+#typev MPMain_c1899 81 "%0%!FUNC!::<%10!s!> MPThread up/resumed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_StartMPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1924 82 "%0%!FUNC!::<%10!s!> MP th failure" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPMAIN_StartMPThread
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1974 85 "%0%!FUNC!::<%10!s!> MP handle=0x%11!p! thOb=0x%12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_StartMPThread
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->hMPThreadHandle, ItemPtr -- 11
+pAdapter->pMPThread, ItemPtr -- 12
+}
+#typev MPMain_c1962 84 "%0%!FUNC!::<%10!s!> MP ZwClose failed - 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMAIN_StartMPThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c1951 83 "%0%!FUNC!::<%10!s!> MP: ObReferenceObjectByHandle failed 0x%11!x!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPMAIN_StartMPThread
+{
+pAdapter->PortName, ItemString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c1889 80 "%0%!FUNC!::<%10!s!> - wrong IRQL::%11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMAIN_StartMPThread
+{
+pAdapter->PortName, ItemString -- 10
+KeGetCurrentIrql(), ItemLong -- 11
+}
+#typev MPMain_c5654 214 "%0%!FUNC!:: Invalidating Wrong Sim Info" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ClearWrongSimPinInfo
+{
+}
+#typev MPMain_c4131 163 "%0%!FUNC!::MBB:  Error reading Verizon ERI file to buffer " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ERIRead
+{
+}
+#typev MPMain_c4114 162 "%0%!FUNC!::MBB: MPMain_CheckIfERIEnabledAndInit() ERIDataFileName = %10!s! and ERIDataFileName length in bytes = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ERIRead
+{
+wcERIDataFileNameValue, ItemWString -- 10
+(unsigned int) ERIDataFileNameLength, ItemLong -- 11
+}
+#typev MPMain_c4110 161 "%0%!FUNC!::MBB: Read Registry: ERIDataFileName Failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_ERIRead
+{
+}
+#typev MPMain_c4105 155 "%0%!FUNC!::MBB: Key %10!s! value = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ERIRead
+{
+inputKey, ItemWString -- 10
+outBuffer, ItemWString -- 11
+}
+#typev MPMain_c4105 154 "%0%!FUNC!::MBB:  Insufficient buffer provided to copy the string value." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ERIRead
+{
+}
+#typev MPMain_c4105 153 "%0%!FUNC!::MBB:  IoOpenDriverRegistryKey failed!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ERIRead
+{
+}
+#typev MPMain_c4098 160 "%0%!FUNC!::MBB:   Reading Verizon ERI file to buffer " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_ERIRead
+{
+}
+#typev MPMain_c5911 224 "%0%!FUNC!:: IOCTL_GET_MODEM_FIRMWARE_ID faild with Status %10!d! " //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=MBB_WPP FUNC=MPMain_GetFirmwareId
+{
+status, ItemLong -- 10
+}
+#typev MPMain_c3667 142 "%0%!FUNC!::MBB: IPV6 control state for EHRPD = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigInit
+{
+GlobalData.IPV6EHRPDConfigEnable, ItemLong -- 10
+}
+#typev MPMain_c3608 141 "%0%!FUNC!::IoOpenDriverRegistryKey failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigInit
+{
+}
+#typev MPMain_c3592 140 "%0%!FUNC!::MBB: IPV6 control APN for EHRPD = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigInit
+{
+GlobalData.IPV6EHRPDConfigAPN, ItemWString -- 10
+}
+#typev MPMain_c3521 139 "%0%!FUNC!::IoOpenDriverRegistryKey failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDConfigInit
+{
+}
+#typev MPMain_c3761 148 "%0%!FUNC!::MBB: Error getting EHRPD IPV6 media notify state registry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDMediaNotifyInit
+{
+}
+#typev MPMain_c3757 147 "%0%!FUNC!::MBB: EHRPD IPV6 media notify state for EHRPD = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDMediaNotifyInit
+{
+GlobalData.IPV6EHRPDMediaNotify, ItemLong -- 10
+}
+#typev MPMain_c3730 144 "%0%!FUNC!::MBB: IPV6 EHRPD media notify found" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDMediaNotifyInit
+{
+}
+#typev MPMain_c3744 146 "%0%!FUNC!::MBB: Unknown ntStatus" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDMediaNotifyInit
+{
+}
+#typev MPMain_c3737 145 "%0%!FUNC!::MBB: Query overflow" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDMediaNotifyInit
+{
+}
+#typev MPMain_c3699 143 "%0%!FUNC!::MBB:  IoOpenDriverRegistryKey failed!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_IPV6EHRPDMediaNotifyInit
+{
+}
+#typev MPMain_c5509 208 "%0%!FUNC!:: EncryptPinLength:%10!d! (status 0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_InitSimPinInfo
+{
+pAdapter->SIM_PIN_INFO.EncryptPinLength, ItemLong -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c5491 207 "%0%!FUNC!:: SimICCId:%10!s! (status 0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_InitSimPinInfo
+{
+pAdapter->SIM_PIN_INFO.SimIccID, ItemWString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c5471 206 "%0%!FUNC!:: IsSilentPinVerifyEnabled:%10!d! (status 0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_InitSimPinInfo
+{
+pAdapter->SIM_PIN_INFO.IsSilentPinVerifyEnabled, ItemLong -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c5851 223 "%0%!FUNC!:: WrongPINLength:%10!d! ChangeCount: %11!d! DisableCount: %12!d! (status 0x%13!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_InitWrongSimPinInfo
+{
+pAdapter->WRONG_SIM_PIN_INFO.PINLength, ItemLong -- 10
+pAdapter->WRONG_SIM_PIN_INFO.TotalRetries.ChangeCount, ItemLong -- 11
+pAdapter->WRONG_SIM_PIN_INFO.TotalRetries.DisableCount, ItemLong -- 12
+ntStatus, ItemLong -- 13
+}
+#typev MPMain_c5841 222 "%0%!FUNC!::Failed to read MP_NV_CFG_ITEM_OP_DISABLE_COUNT" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_InitWrongSimPinInfo
+{
+}
+#typev MPMain_c5826 221 "%0%!FUNC!::Failed to read MP_NV_CFG_ITEM_OP_CHANGE_COUNT" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_InitWrongSimPinInfo
+{
+}
+#typev MPMain_c5801 220 "%0%!FUNC!::Alloc_WrongSimPinInfo Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_InitWrongSimPinInfo
+{
+}
+#typev MPMain_c5786 219 "%0%!FUNC!::Failed to read registry MP_NV_CFG_ITEM_SILENT_PIN_VERIFICATION" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_InitWrongSimPinInfo
+{
+}
+#typev MPMain_c5416 205 "%0%!FUNC!:: Invalidating Sim Info" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_InvalidateSimPinInfo
+{
+}
+#typev MPMain_c5214 195 "%0%!FUNC!::<%10!s!> <-- " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_SendWakeupIOCTL
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c5179 194 "%0%!FUNC!::<%10!s!> AMSS Bus Addr = %11!u!, status=%12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_SendWakeupIOCTL
+{
+pAdapter->PortName, ItemString -- 10
+subsysWakeParam.BusAddress, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev MPMain_c5171 193 "%0%!FUNC!::<%10!s!> IoGetDeviceProperty failed. status=%11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_SendWakeupIOCTL
+{
+pAdapter->PortName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev MPMain_c5158 192 "%0%!FUNC!::<%10!s!> --> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_SendWakeupIOCTL
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c5598 211 "%0%!FUNC!:: PinLength %10!d! (status 0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_WriteSimPinInfo
+{
+pAdapter->SIM_PIN_INFO.EncryptPinLength, ItemLong -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c5576 210 "%0%!FUNC!:: SimIccID %10!s! (status 0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_WriteSimPinInfo
+{
+pAdapter->SIM_PIN_INFO.SimIccID, ItemWString -- 10
+ntStatus, ItemLong -- 11
+}
+#typev MPMain_c5561 209 "%0%!FUNC!::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_WriteSimPinInfo
+{
+}
+#typev MPMain_c5755 218 "%0%!FUNC!::Falied to Write MP_NV_CFG_ITEM_OP_DISABLE_COUNT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_WriteWrongSimPinInfo
+{
+}
+#typev MPMain_c5745 217 "%0%!FUNC!::Falied to Write MP_NV_CFG_ITEM_OP_CHANGE_COUNT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_WriteWrongSimPinInfo
+{
+}
+#typev MPMain_c5734 216 "%0%!FUNC!::Falied to Write MP_NV_CFG_ITEM_WRONG_PIN" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_WriteWrongSimPinInfo
+{
+}
+#typev MPMain_c5708 215 "%0%!FUNC!::Falied to Write MP_NV_CFG_ITEM_WRONG_PIN_LENGTH" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPMain_WriteWrongSimPinInfo
+{
+}
+#typev MPMain_c4247 168 "%0%!FUNC!::MBB:  error reading Verizon ERI file %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_copyERIBinarytoBuffer
+{
+pERIDataFileName, ItemWString -- 10
+}
+#typev MPMain_c4256 169 "%0%!FUNC!::MBB:  Verizon ERI file %10!s! data copied to buffer, file size = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_copyERIBinarytoBuffer
+{
+pERIDataFileName, ItemWString -- 10
+fileSize, ItemLong -- 11
+}
+#typev MPMain_c4233 167 "%0%!FUNC!::MBB: MPMain_ERIReadBinary error appending Verizon ERI binary file name 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPMain_copyERIBinarytoBuffer
+{
+ntStatus, ItemLong -- 10
+}
+#typev MPMain_c2980 119 "%0%!FUNC!::<%10!s!> Flags 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPause
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->Flags, ItemLong -- 11
+}
+#typev MPMain_c2972 118 "%0%!FUNC!::<%10!s!> - waiting(%11!u!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPause
+{
+pAdapter->PortName, ItemString -- 10
+pauseCount, ItemLong -- 11
+}
+#typev MPMain_c2967 122 "%0%!FUNC!::<%10!s!> %11!s!: nBusyTx %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPause
+{
+pAdapter->PortName, ItemString -- 10
+Caller, ItemString -- 11
+pAdapter->nBusyTx, ItemLong -- 12
+}
+#typev MPMain_c2957 117 "%0%!FUNC!::<%10!s!> Flags 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPause
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->Flags, ItemLong -- 11
+}
+#typev MPMain_c1304 52 "%0%!FUNC!::<%10!s!> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1168 43 "%0%!FUNC!::<%10!s!> NdisDevicePnPEventQueryRemoved" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1180 44 "%0%!FUNC!::<%10!s!> NdisDevicePnPEventRemoved" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1192 45 "%0%!FUNC!::<%10!s!> NdisDevicePnPEventSurpriseRemoved" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1238 46 "%0%!FUNC!::<%10!s!> NdisDevicePnPEventQueryStopped" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1251 47 "%0%!FUNC!::<%10!s!> NdisDevicePnPEventStopped" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1286 50 "%0%!FUNC!::<%10!s!> The host system is running on AC power" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1278 49 "%0%!FUNC!::<%10!s!> The host system is running on battery power" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1266 48 "%0%!FUNC!::<%10!s!> NdisDevicePnPEventPowerProfileChanged" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c1296 51 "%0%!FUNC!::<%10!s!> unknown PnP event: %11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+PnPEvent, ItemLong -- 11
+}
+#typev MPMain_c1153 42 "%0%!FUNC!::<%10!s!> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPPnPEventNotify
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c3009 121 "%0%!FUNC!::<%10!s!> Flags 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPRestart
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->Flags, ItemLong -- 11
+}
+#typev MPMain_c3001 120 "%0%!FUNC!::<%10!s!> Flags 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPRestart
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->Flags, ItemLong -- 11
+}
+#typev MPMain_c3091 124 "%0%!FUNC!::
+<%10!s!> <--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSetOptions
+{
+gDeviceName, ItemString -- 10
+}
+#typev MPMain_c3085 123 "%0%!FUNC!::
+<%10!s!> -->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPSetOptions
+{
+gDeviceName, ItemString -- 10
+}
+#typev MPMain_c1038 41 "%0%!FUNC!::<%10!s!> MPShutdownEx: Shutdown Action %11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPShutdownEx
+{
+pAdapter->PortName, ItemString -- 10
+ShutdownAction, ItemLong -- 11
+}
+#typev MPMain_c1036 40 "%0%!FUNC!::<%10!s!>  Shutdown Action %11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPShutdownEx
+{
+pAdapter->PortName, ItemString -- 10
+ShutdownAction, ItemLong -- 11
+}
+#typev MPMain_c536 24 "%0%!FUNC!::<---MBB Teardown completed--->" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPTeardown
+{
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPMain_c484 23 "%0%!FUNC!::<%10!s!>: QBI open in progress. Wait for QBI open to complete. " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPTeardown
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c482 22 "%0%!FUNC!::<%10!s!>: QBI open in progress. Wait for QBI open to complete. " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPTeardown
+{
+pAdapter->PortName, ItemString -- 10
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPMain_c449 21 "%0%!FUNC!::<%10!s!> Initialize QCCI in progress" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MPTeardown
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c444 20 "%0%!FUNC!::<%10!s!> MBB Teardown in progress" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPTeardown
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c441 19 "%0%!FUNC!::<%10!s!> MBB Teardown in progress" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPTeardown
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c993 39 "%0%!FUNC!::MPUnload actions complete" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPUnload
+{
+}
+#typev MPMain_c968 38 "%0%!FUNC!::MPUnload received" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=GlobalData.IFRlogHandle FLAGS=MBB_WPP FUNC=MPUnload
+{
+}
+#typev MPMain_c1352 55 "%0%!FUNC!::<%10!s!> Failed Set Complete (Oid: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ResetOIDWaitingQueue
+{
+pAdapter->PortName, ItemString -- 10
+pWaitingOid->Oid, ItemLong -- 11
+}
+#typev MPMain_c1342 54 "%0%!FUNC!::<%10!s!> Failed Query Complete (Oid: 0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ResetOIDWaitingQueue
+{
+pAdapter->PortName, ItemString -- 10
+pWaitingOid->Oid, ItemLong -- 11
+}
+#typev MPMain_c1365 56 "%0%!FUNC!::<%10!s!> <--ResetOIDWaitingQueue, nBusyOID = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ResetOIDWaitingQueue
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->nBusyOID, ItemLong -- 11
+}
+#typev MPMain_c1323 53 "%0%!FUNC!::<%10!s!> -->ResetOIDWaitingQueue, nBusyOID = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_ResetOIDWaitingQueue
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->nBusyOID, ItemLong -- 11
+}
+#typev MPMain_c4077 159 "%0%!FUNC!::MBB:  FIle size = %10!u! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_UtilReadFileContentsToByteBuffer
+{
+fileSize, ItemLong -- 10
+}
+#typev MPMain_c4064 158 "%0%!FUNC!::MBB:  UNABLE TO READ FILE status = %10!d!, IO_STATUS = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_UtilReadFileContentsToByteBuffer
+{
+ntStatus, ItemLong -- 10
+FileStatusBlock.Status, ItemLong -- 11
+}
+#typev MPMain_c4041 157 "%0%!FUNC!::MBB:  UNABLE TO QUERY FILE INFO status = %10!d!, IO_STATUS = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_UtilReadFileContentsToByteBuffer
+{
+ntStatus, ItemLong -- 10
+FileStatusBlock.Status, ItemLong -- 11
+}
+#typev MPMain_c4028 156 "%0%!FUNC!::MBB:  UNABLE TO READ FILE status = %10!d!, IO_STATUS = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MP_UtilReadFileContentsToByteBuffer
+{
+ntStatus, ItemLong -- 10
+FileStatusBlock.Status, ItemLong -- 11
+}
+#typev MPMain_c3788 149 "%0%!FUNC!::Failed to Open Driver Registry Key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MP_UtilReadRegistryDWORD
+{
+}
+#typev MPMain_c5292 196 "%0%!FUNC!::Invalid config item %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MP_UtilReadRegistryItem
+{
+InputItem, ItemLong -- 10
+}
+#typev MPMain_c5319 199 "%0%!FUNC!::Failed to allocate memory to read registry." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MP_UtilReadRegistryItem
+{
+}
+#typev MPMain_c5330 200 "%0%!FUNC!::Error: Registry Read failed for item %10!s! with Status %11!s!(0x%12!08x!). ExpectedRegBufSize %13!d!, DataLen %14!d!, ActualRegBufSize %15!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MP_UtilReadRegistryItem
+{
+MP_NvCfgItemNames[InputItem], ItemWString -- 10
+ntStatus, ItemNTSTATUS -- 11
+ntStatus, ItemLong -- 12
+ExpectedRegBufSize, ItemLong -- 13
+DataLen, ItemLong -- 14
+ActualRegBufSize, ItemLong -- 15
+}
+#typev MPMain_c5311 198 "%0%!FUNC!::Error: cfg_item %10!s! data length %11!d! exceeds max length %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MP_UtilReadRegistryItem
+{
+MP_NvCfgItemNames[InputItem], ItemWString -- 10
+DataLen, ItemLong -- 11
+MBB_REG_ITEM_MAX_DATA_LEN, ItemLong -- 12
+}
+#typev MPMain_c5301 197 "%0%!FUNC!::Failed to open registry %10!s! with Status %11!s!(0x%12!08x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MP_UtilReadRegistryItem
+{
+MP_NvCfgItemNames[InputItem], ItemWString -- 10
+ntStatus, ItemNTSTATUS -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPMain_c3890 152 "%0%!FUNC!::ZwSetValueKey failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MP_UtilWriteRegistryDWORD
+{
+}
+#typev MPMain_c3881 151 "%0%!FUNC!::IoOpenDriverRegistryKey failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MP_UtilWriteRegistryDWORD
+{
+}
+#typev MPMain_c5375 202 "%0%!FUNC!::Invalid config item %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MP_UtilWriteRegistryItem
+{
+InputItem, ItemLong -- 10
+}
+#typev MPMain_c5391 204 "%0%!FUNC!::Registry write failed for item %10!s! %11!s!(0x%12!08x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MP_UtilWriteRegistryItem
+{
+MP_NvCfgItemNames[InputItem], ItemWString -- 10
+ntStatus, ItemNTSTATUS -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPMain_c5382 203 "%0%!FUNC!::Failed to open registry %10!s! with Status %11!s!(0x%12!08x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MP_UtilWriteRegistryItem
+{
+MP_NvCfgItemNames[InputItem], ItemWString -- 10
+ntStatus, ItemNTSTATUS -- 11
+ntStatus, ItemLong -- 12
+}
+#typev MPMain_c5367 201 "%0%!FUNC!::Data buffer is NULL. Please provide valid input buffer." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=MP_UtilWriteRegistryItem
+{
+}
+#typev MPMain_c2832 116 "%0%!FUNC!::
+<%10!s!> StatusCode 0x%11!x!
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MyNdisMIndicateStatus
+{
+pAdapter->PortName, ItemString -- 10
+GeneralStatus, ItemLong -- 11
+}
+#typev MPMain_c2792 115 "%0%!FUNC!::
+<%10!s!> StatusCode 0x%11!X! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=SendNdisMIndicateStatusToPort
+{
+pAdapter->PortName, ItemString -- 10
+GeneralStatus, ItemLong -- 11
+}
+#typev MPMain_c929 37 "%0%!FUNC!::<%10!s!> nBusyOID = %11!d! F%12!d! W%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=cleanupQueues
+{
+pAdapter->PortName, ItemString -- 10
+pAdapter->nBusyOID, ItemLong -- 11
+listDepth(&pAdapter->OIDFreeList. &pAdapter->OIDLock), ItemLong -- 12
+listDepth(&pAdapter->OIDWaitingList. &pAdapter->OIDLock), ItemLong -- 13
+}
+#typev MPMain_c923 36 "%0%!FUNC!::<%10!s!> cleanupQueues results - " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=cleanupQueues
+{
+pAdapter->PortName, ItemString -- 10
+}
+#typev MPMain_c877 35 "%0%!FUNC!::<qnetxxx> Error: RxPendingList not empty!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=cleanupQueues
+{
+}

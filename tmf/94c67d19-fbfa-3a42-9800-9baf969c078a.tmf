@@ -1,0 +1,1020 @@
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+94c67d19-fbfa-3a42-9800-9baf969c078a PEP // SRC=PEP_Acpi.c MJ= MN=
+#typev PEP_Acpi_c7722 334 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7722 :Failed Parse and Add data to PEP data structures" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseACPIResourcesFromRegistry
+{
+}
+#typev PEP_Acpi_c1066 46 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddBusResource
+{
+}
+#typev PEP_Acpi_c1063 45 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1063 :Failed to create bus resource for %10!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddBusResource
+{
+PEPStateNode->name, ItemString -- 10
+}
+#typev PEP_Acpi_c1046 44 "%0 [Info] PEP_Acpi.c::%!FUNC! :Success in BUS request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddBusResource
+{
+}
+#typev PEP_Acpi_c1039 43 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1039 :We shouldn't be here. Device: %10!s!, ArbType=%11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddBusResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+Request.arbType, ItemLong -- 11
+}
+#typev PEP_Acpi_c1008 42 "%0 [Info] PEP_Acpi.c::%!FUNC! :State node name: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddBusResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c1004 41 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddBusResource
+{
+}
+#typev PEP_Acpi_c1001 40 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1001 :Failed to allocate the memory for BUS resource for device: %10!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddBusResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c989 39 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddBusResource
+{
+}
+#typev PEP_Acpi_c1394 57 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddClockResource
+{
+}
+#typev PEP_Acpi_c1344 56 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1344 :Failed to create clock resource for %10!s! and clock %11!s!!!!  Possible Match Type mismatch: %12!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddClockResource
+{
+clientInfo->clientName, ItemString -- 10
+ClockName, ItemString -- 11
+Match, ItemLong -- 12
+}
+#typev PEP_Acpi_c1303 55 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddClockResource
+{
+}
+#typev PEP_Acpi_c1300 54 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1300 :String copy return error %10!x! for Client Name: %11!s!, Clock Name: %12!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddClockResource
+{
+status, ItemLong -- 10
+(clientInfo->clientName), ItemString -- 11
+ClockName, ItemString -- 12
+}
+#typev PEP_Acpi_c1284 53 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1284 :PEP: PepClockGetClockDebugId error %10!d! for Client Name: %11!s!, Clock Name: %12!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddClockResource
+{
+status, ItemLong -- 10
+(clientInfo->clientName), ItemString -- 11
+ClockName, ItemString -- 12
+}
+#typev PEP_Acpi_c1273 52 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1273 :PEP: PepClockGetClockId error %10!d! for Client Name: %11!s!, Clock Name: %12!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddClockResource
+{
+status, ItemLong -- 10
+(clientInfo->clientName), ItemString -- 11
+ClockName, ItemString -- 12
+}
+#typev PEP_Acpi_c1266 51 "%0 [Info] PEP_Acpi.c::%!FUNC! : Client Name: %10!s!, Clock Name: %11!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddClockResource
+{
+(clientInfo->clientName), ItemString -- 10
+ClockName, ItemString -- 11
+}
+#typev PEP_Acpi_c1261 50 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddClockResource
+{
+}
+#typev PEP_Acpi_c1258 49 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1258 :Failed to allocate the memory for clock resource Client Name: %10!s!, Clock Name: %11!s! !!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddClockResource
+{
+(clientInfo->clientName), ItemString -- 10
+ClockName, ItemString -- 11
+}
+#typev PEP_Acpi_c1252 48 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddClockResource
+{
+}
+#typev PEP_Acpi_c657 15 "%0 [Info] PEP_Acpi.c::%!FUNC! :: DeviceNode=%10!s!, CompIndex=%11!d!, Componentcount= %12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddComponent
+{
+&(DeviceNode->InstancePathAnsi), ItemPString -- 10
+CompIndex, ItemLong -- 11
+DeviceNode->Componentcount, ItemLong -- 12
+}
+#typev PEP_Acpi_c617 14 "%0 [Err ] PEP_Acpi.c::%!FUNC!::617 :Failed to allocate the memory for component node DeviceNode=%10!s!, CompIndex=%11!d!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddComponent
+{
+&(DeviceNode->InstancePathAnsi), ItemPString -- 10
+CompIndex, ItemLong -- 11
+}
+#typev PEP_Acpi_c1448 62 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddDelayResource
+{
+}
+#typev PEP_Acpi_c1440 61 "%0 [Info] PEP_Acpi.c::%!FUNC! :State node name= %10!s!, Delay in Millisecs: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddDelayResource
+{
+PEPStateNode->name, ItemString -- 10
+DelayInMilliSecs, ItemLong -- 11
+}
+#typev PEP_Acpi_c1436 60 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddDelayResource
+{
+}
+#typev PEP_Acpi_c1433 59 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1433 :Failed to allocate the memory for delay resource for client: %10!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddDelayResource
+{
+PEPStateNode->name, ItemString -- 10
+}
+#typev PEP_Acpi_c1427 58 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddDelayResource
+{
+}
+#typev PEP_Acpi_c483 12 "%0 [Info] PEP_Acpi.c::%!FUNC! :Device added: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddDevice
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_Acpi_c422 11 "%0 [Err ] PEP_Acpi.c::%!FUNC!::422 :Failed to allocate the memory for device node: %10!s! !!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddDevice
+{
+InstancePath, ItemString -- 10
+}
+#typev PEP_Acpi_c411 10 "%0 [Crit] PEP_Acpi.c::%!FUNC! :Found a new APCI package that has Device %10!s! 's resources" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddDevice
+{
+&(PDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_Acpi_c2093 112 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddExecuteFunctionResource
+{
+}
+#typev PEP_Acpi_c2083 111 "%0 [Info] PEP_Acpi.c::%!FUNC! :Device name: %10!s!, Function name: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddExecuteFunctionResource
+{
+&(Device->InstancePathAnsi), ItemPString -- 10
+FunctionName, ItemString -- 11
+}
+#typev PEP_Acpi_c2077 110 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddExecuteFunctionResource
+{
+}
+#typev PEP_Acpi_c2074 109 "%0 [Err ] PEP_Acpi.c::%!FUNC!::2074 :Failed to allocate the memory for Execute Function resource Device name: %10!s!, Function name: %11!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddExecuteFunctionResource
+{
+&(Device->InstancePathAnsi), ItemPString -- 10
+FunctionName, ItemString -- 11
+}
+#typev PEP_Acpi_c2067 108 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddExecuteFunctionResource
+{
+}
+#typev PEP_Acpi_c947 38 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddFOOTSWITCHResource
+{
+}
+#typev PEP_Acpi_c943 37 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddFOOTSWITCHResource
+{
+}
+#typev PEP_Acpi_c927 36 "%0 [Info] PEP_Acpi.c::%!FUNC! :Footswitch Client Name= %10!s!, type = %11!s!, PowerDomainName: %12!s!, Action Type: %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddFOOTSWITCHResource
+{
+(clientInfo->clientName), ItemString -- 10
+&(clientInfo->stateObj->StateTypeAnsi), ItemPString -- 11
+PowerDomainName, ItemString -- 12
+PowerDomainActionTypeEnum2Str[Action], ItemString -- 13
+}
+#typev PEP_Acpi_c922 35 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddFOOTSWITCHResource
+{
+}
+#typev PEP_Acpi_c919 34 "%0 [Err ] PEP_Acpi.c::%!FUNC!::919 :Failed to allocate the memory for Foot Switch resource Footswitch Client Name= %10!s!, type = %11!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddFOOTSWITCHResource
+{
+(clientInfo->clientName), ItemString -- 10
+&(clientInfo->stateObj->StateTypeAnsi), ItemPString -- 11
+}
+#typev PEP_Acpi_c914 33 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddFOOTSWITCHResource
+{
+}
+#typev PEP_Acpi_c1594 73 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicGpioResource
+{
+}
+#typev PEP_Acpi_c1582 72 "%0 [Info] PEP_Acpi.c::%!FUNC! :State node name: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicGpioResource
+{
+PEPStateNode->name, ItemString -- 10
+}
+#typev PEP_Acpi_c1578 71 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicGpioResource
+{
+}
+#typev PEP_Acpi_c1575 70 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1575 :Failed to allocate the memory for PMIC Gpio resource for clent: %10!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicGpioResource
+{
+PEPStateNode->name, ItemString -- 10
+}
+#typev PEP_Acpi_c1568 69 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddPmicGpioResource
+{
+}
+#typev PEP_Acpi_c1783 88 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicIbbLabResource
+{
+}
+#typev PEP_Acpi_c1771 87 "%0 [Info] PEP_Acpi.c::%!FUNC! :Clent name: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicIbbLabResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c1767 86 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicIbbLabResource
+{
+}
+#typev PEP_Acpi_c1764 85 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1764 :Failed to allocate the memory for PMIC IBBLAB resource for client: %10!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicIbbLabResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c1756 84 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddPmicIbbLabResource
+{
+}
+#typev PEP_Acpi_c1914 98 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicLpgResource
+{
+}
+#typev PEP_Acpi_c1901 97 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Client name: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicLpgResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c1897 96 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicLpgResource
+{
+}
+#typev PEP_Acpi_c1894 95 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1894 :PEP: Failed to allocate the memory for PMIC USB OTG resource for client: %10!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicLpgResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c1885 94 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddPmicLpgResource
+{
+}
+#typev PEP_Acpi_c1656 78 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicMppResource
+{
+}
+#typev PEP_Acpi_c1644 77 "%0 [Info] PEP_Acpi.c::%!FUNC! :Clent name = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicMppResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c1641 76 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicMppResource
+{
+}
+#typev PEP_Acpi_c1638 75 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1638 :Failed to allocate the memory for PMIC Mpp resource for clent: %10!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicMppResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c1631 74 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddPmicMppResource
+{
+}
+#typev PEP_Acpi_c1847 93 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicUsbOtgResource
+{
+}
+#typev PEP_Acpi_c1835 92 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Client name: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicUsbOtgResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c1831 91 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicUsbOtgResource
+{
+}
+#typev PEP_Acpi_c1828 90 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1828 :PEP: Failed to allocate the memory for PMIC USB OTG resource for client: %10!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicUsbOtgResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c1820 89 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddPmicUsbOtgResource
+{
+}
+#typev PEP_Acpi_c1532 68 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicVregVoteResource
+{
+}
+#typev PEP_Acpi_c1524 67 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Devices %10!s! is Voting for the PMIC_VREG resources %11!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddPmicVregVoteResource
+{
+(char *) packedData, ItemString -- 10
+pPMICVregVote->ResourceId, ItemLong -- 11
+}
+#typev PEP_Acpi_c1498 66 "%0 [Info] PEP_Acpi.c::%!FUNC! :Client Name: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicVregVoteResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_Acpi_c1494 65 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicVregVoteResource
+{
+}
+#typev PEP_Acpi_c1491 64 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1491 :Failed to allocate the memory for PMIC Vreg resource for clent: %10!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicVregVoteResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_Acpi_c1485 63 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddPmicVregVoteResource
+{
+}
+#typev PEP_Acpi_c1720 83 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicWledResource
+{
+}
+#typev PEP_Acpi_c1708 82 "%0 [Info] PEP_Acpi.c::%!FUNC! :Clent Name: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicWledResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c1704 81 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddPmicWledResource
+{
+}
+#typev PEP_Acpi_c1701 80 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1701 :Failed to allocate the memory for PMIC WLED resource for client: %10!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddPmicWledResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c1693 79 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddPmicWledResource
+{
+}
+#typev PEP_Acpi_c874 32 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddRequiredResource
+{
+}
+#typev PEP_Acpi_c870 31 "%0 [Info] PEP_Acpi.c::%!FUNC! :Success in initializing NPA resource " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddRequiredResource
+{
+}
+#typev PEP_Acpi_c858 30 "%0 [Info] PEP_Acpi.c::%!FUNC! :NPA Client name: %10!s! , Resource Name: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddRequiredResource
+{
+NpaClientHandle->name, ItemString -- 10
+NpaResourceName, ItemString -- 11
+}
+#typev PEP_Acpi_c854 29 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddRequiredResource
+{
+}
+#typev PEP_Acpi_c851 28 "%0 [Err ] PEP_Acpi.c::%!FUNC!::851 :Failed to allocate the memory for NPA Client name: %10!s! , Resource Name: %11!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddRequiredResource
+{
+NpaClientHandle->name, ItemString -- 10
+NpaResourceName, ItemString -- 11
+}
+#typev PEP_Acpi_c848 27 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddRequiredResource
+{
+}
+#typev PEP_Acpi_c1970 103 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddRpmhCommitPackage
+{
+}
+#typev PEP_Acpi_c1961 102 "%0 [Info] PEP_Acpi.c::%!FUNC! :State node name= %10!s!, RPMH commit action in Millisecs: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddRpmhCommitPackage
+{
+PEPStateNode->name, ItemString -- 10
+Action, ItemLong -- 11
+}
+#typev PEP_Acpi_c1957 101 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddRpmhCommitPackage
+{
+}
+#typev PEP_Acpi_c1954 100 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1954 :Failed to allocate the memory for RPMH Commit for client: %10!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddRpmhCommitPackage
+{
+PEPStateNode->name, ItemString -- 10
+}
+#typev PEP_Acpi_c1948 99 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddRpmhCommitPackage
+{
+}
+#typev PEP_Acpi_c748 21 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddTLMMGpioResource
+{
+}
+#typev PEP_Acpi_c743 20 "%0 [Warn] PEP_Acpi.c::%!FUNC! :TLMM LPIGpio pin value is set to %10!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddTLMMGpioResource
+{
+LPIGpio, ItemLong -- 10
+}
+#typev PEP_Acpi_c721 19 "%0 [Info] PEP_Acpi.c::%!FUNC! :PEP State node name: %10!s!, PinNumber: %11!d!, FunctionSelect: %12!d!, Direction: %13!d!, PullValue: %14!d!, DriveStrength: %15!d!, GPIOState: %16!d! LPIGpio: %17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddTLMMGpioResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+GPIONo, ItemLong -- 11
+FuncSelect, ItemLong -- 12
+Direction, ItemLong -- 13
+PullValue, ItemLong -- 14
+DriveStrength, ItemLong -- 15
+GPIOState, ItemLong -- 16
+LPIGpio, ItemLong -- 17
+}
+#typev PEP_Acpi_c717 18 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddTLMMGpioResource
+{
+}
+#typev PEP_Acpi_c715 17 "%0 [Err ] PEP_Acpi.c::%!FUNC!::715 :Failed to allocate the memory for TLMM gpio resource!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddTLMMGpioResource
+{
+}
+#typev PEP_Acpi_c710 16 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddTLMMGpioResource
+{
+}
+#typev PEP_Acpi_c805 26 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddTLMMPortResource
+{
+}
+#typev PEP_Acpi_c795 25 "%0 [Info] PEP_Acpi.c::%!FUNC! :PEP State node name: %10!s!, Offset: %11!d!, BitMask: %12!d!, ValueToWrite: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddTLMMPortResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+ulOffset, ItemLong -- 11
+ulBitMask, ItemLong -- 12
+ulValueToWrite, ItemLong -- 13
+}
+#typev PEP_Acpi_c791 24 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=AddTLMMPortResource
+{
+}
+#typev PEP_Acpi_c788 23 "%0 [Err ] PEP_Acpi.c::%!FUNC!::788 :Failed to allocate the memory for TLMM port resource for device: %10!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=AddTLMMPortResource
+{
+PEPStateNode ? PEPStateNode->name : 'NULL', ItemString -- 10
+}
+#typev PEP_Acpi_c785 22 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=AddTLMMPortResource
+{
+}
+#typev PEP_Acpi_c7264 329 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7264 :Invalid chip ID/versions identified!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7236 328 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7236 :Invalid cluster configuration" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7205 327 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7205 :data is NULL because key frequency information read failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7168 326 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7168 :data is NULL because key frequency information read failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7137 325 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7137 :data is NULL because symbol->ExpectAndUsePackage() method failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7118 324 "%0 [Info] PEP_Acpi.c::%!FUNC! :Chip ID match found!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7112 323 "%0Chip ID/Version mismatch" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepDrvIfrHandle FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7111 322 "%0 [Warn] PEP_Acpi.c::%!FUNC! :Chip ID/Version mismatch" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=PEP_DCVS_FLAG_GENERIC FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7097 321 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7097 :data is NULL because symbol->ExpectAndUsePackage() method failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7088 320 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7088 :data is NULL because symbol->ExpectAndUsePackage() method failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7079 319 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7079 :data is NULL because symbol->ExpectAndUsePackage() method failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7071 318 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7071 :Invalid syntax" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7063 317 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7063 :data is NULL because symbol->ExpectAndUsePackage() method failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c7045 316 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7045 :parser is NULL because QueryRegistryPackage method failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_DCVS_Data
+{
+}
+#typev PEP_Acpi_c6907 310 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6907 :parser is NULL because QueryRegistryPackage method failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Construct_PepNpa_Data
+{
+}
+#typev PEP_Acpi_c1090 47 "%0 [Err ] PEP_Acpi.c::%!FUNC!::1090 :Failed to create PEP_BUS_CLIENT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=CreateBusClient
+{
+}
+#typev PEP_Acpi_c2032 107 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=GetDeviceExecutationFunctionPointer
+{
+}
+#typev PEP_Acpi_c2026 106 "%0 [Err ] PEP_Acpi.c::%!FUNC!::2026 :Error ExecutationFunction = %10!s! not defined for device: %11!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetDeviceExecutationFunctionPointer
+{
+FunctionName, ItemString -- 10
+&(Device->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_Acpi_c2011 105 "%0 [Info] PEP_Acpi.c::%!FUNC! : Device name: %10!s!, Execution Function name = %11!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetDeviceExecutationFunctionPointer
+{
+&(Device->InstancePathAnsi), ItemPString -- 10
+FunctionName, ItemString -- 11
+}
+#typev PEP_Acpi_c2007 104 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=GetDeviceExecutationFunctionPointer
+{
+}
+#typev PEP_Acpi_c6264 298 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6264 :Could not find LocalBUSARBMasterName(%10!s!) in internal data base" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetICBMasterBusID
+{
+LocalBUSARBMasterName, ItemString -- 10
+}
+#typev PEP_Acpi_c6251 297 "%0 [Info] PEP_Acpi.c::%!FUNC! :BUSARB Master Nam: %10!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetICBMasterBusID
+{
+LocalBUSARBMasterName, ItemString -- 10
+}
+#typev PEP_Acpi_c6309 300 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6309 :Could not find LocalBUSARBSlaveName(%10!s!) in internal data base" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetICBSlaveBusID
+{
+LocalBUSARBSlaveName, ItemString -- 10
+}
+#typev PEP_Acpi_c6296 299 "%0 [Info] PEP_Acpi.c::%!FUNC! :BUSARB Slave Nam: %10!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetICBSlaveBusID
+{
+LocalBUSARBSlaveName, ItemString -- 10
+}
+#typev PEP_Acpi_c6376 302 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6376 :Could not allocate NpaResourceClinetRelationShipType, tempClient is NULL for NPA Client name: %10!s!, NPA resource name: %11!s!  " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetNpaClientHandle
+{
+pClientInfo->clientName, ItemString -- 10
+NpaResourceName, ItemString -- 11
+}
+#typev PEP_Acpi_c6329 301 "%0 [Info] PEP_Acpi.c::%!FUNC! :NPA Client name: %10!s!, NPA resource name: %11!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=GetNpaClientHandle
+{
+pClientInfo->clientName, ItemString -- 10
+NpaResourceName, ItemString -- 11
+}
+#typev PEP_Acpi_c7566 332 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7566 :Failed Parse and Add data to PEP data structures" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseACPIList
+{
+}
+#typev PEP_Acpi_c4958 270 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4958 :Invalid argument type: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddCPUDevicePackage
+{
+currentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c4954 269 "%0 [Info] PEP_Acpi.c::%!FUNC! :CPU TYPE= %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddCPUDevicePackage
+{
+(uint32)uintValue, ItemLong -- 10
+}
+#typev PEP_Acpi_c4950 268 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4950 :Device is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddCPUDevicePackage
+{
+}
+#typev PEP_Acpi_c4939 267 "%0 [Info] PEP_Acpi.c::%!FUNC! :GlobalCPUDeviceName = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddCPUDevicePackage
+{
+(const char *)currentArgument->Data, ItemString -- 10
+}
+#typev PEP_Acpi_c3086 161 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndAddDiscreteVregMappingSubPackages
+{
+}
+#typev PEP_Acpi_c3076 160 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3076 :Error Parsing Discrete Vreg Mapping SubPackages Package " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddDiscreteVregMappingSubPackages
+{
+}
+#typev PEP_Acpi_c3069 159 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3069 :Error Data corruption " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddDiscreteVregMappingSubPackages
+{
+}
+#typev PEP_Acpi_c3042 158 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3042 :Error Parsing Discrete Vreg Mapping SubPackages Package due to ACPI_INVALID_DATA " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddDiscreteVregMappingSubPackages
+{
+}
+#typev PEP_Acpi_c3015 157 "%0 [Info] PEP_Acpi.c::%!FUNC! :Parsing for Vreg State %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddDiscreteVregMappingSubPackages
+{
+(const char *)CurrentArgument->Data, ItemString -- 10
+}
+#typev PEP_Acpi_c3006 156 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndAddDiscreteVregMappingSubPackages
+{
+}
+#typev PEP_Acpi_c3004 155 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3004 :Error Parsing Discrete Vreg Mapping SubPackages Node " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddDiscreteVregMappingSubPackages
+{
+}
+#typev PEP_Acpi_c2997 154 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndAddDiscreteVregMappingSubPackages
+{
+}
+#typev PEP_Acpi_c2862 149 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndAddDiscreteVregTypePMICGPIO
+{
+}
+#typev PEP_Acpi_c2860 148 "%0 [Err ] PEP_Acpi.c::%!FUNC!::2860 :Error while parsing for Discrete Vreg PMIC GPIO Mapping " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddDiscreteVregTypePMICGPIO
+{
+}
+#typev PEP_Acpi_c2856 147 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndAddDiscreteVregTypePMICGPIO
+{
+}
+#typev PEP_Acpi_c2773 146 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndAddDiscreteVregTypePMICGPIO
+{
+}
+#typev PEP_Acpi_c2959 153 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndAddDiscreteVregTypePMICMPP
+{
+}
+#typev PEP_Acpi_c2957 152 "%0 [Err ] PEP_Acpi.c::%!FUNC!::2957 :Error while parsing for Discrete Vreg PMIC MPP Mapping " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddDiscreteVregTypePMICMPP
+{
+}
+#typev PEP_Acpi_c2953 151 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndAddDiscreteVregTypePMICMPP
+{
+}
+#typev PEP_Acpi_c2895 150 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndAddDiscreteVregTypePMICMPP
+{
+}
+#typev PEP_Acpi_c2740 145 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndAddDiscreteVregTypeTLMMGPIO
+{
+}
+#typev PEP_Acpi_c2738 144 "%0 [Err ] PEP_Acpi.c::%!FUNC!::2738 :Error while parsing for Discrete Vreg TLMM GPIO Mapping " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddDiscreteVregTypeTLMMGPIO
+{
+}
+#typev PEP_Acpi_c2734 143 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndAddDiscreteVregTypeTLMMGPIO
+{
+}
+#typev PEP_Acpi_c2674 142 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndAddDiscreteVregTypeTLMMGPIO
+{
+}
+#typev PEP_Acpi_c5114 277 "%0 [Info] PEP_Acpi.c::%!FUNC! :DRV ICB string = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddDrvIdPackage
+{
+(const char *)currentArgument->Data, ItemString -- 10
+}
+#typev PEP_Acpi_c5107 276 "%0 [Info] PEP_Acpi.c::%!FUNC! :DRV ID= %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddDrvIdPackage
+{
+(uint32)drvIdMap->drvId, ItemLong -- 10
+}
+#typev PEP_Acpi_c5098 275 "%0 [Info] PEP_Acpi.c::%!FUNC! :DRV ID string = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndAddDrvIdPackage
+{
+(const char *)currentArgument->Data, ItemString -- 10
+}
+#typev PEP_Acpi_c3306 172 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndBuildDiscreteVregMappingTable
+{
+}
+#typev PEP_Acpi_c3274 171 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3274 :Error parsing Discrete Vreg Mapping Table" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndBuildDiscreteVregMappingTable
+{
+}
+#typev PEP_Acpi_c3266 170 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3266 :Error In Discrete Vreg Mapping Package " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndBuildDiscreteVregMappingTable
+{
+}
+#typev PEP_Acpi_c3237 169 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3237 :Error in Discrete Vreg Mapping Package " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndBuildDiscreteVregMappingTable
+{
+}
+#typev PEP_Acpi_c3229 168 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3229 :Error Parsing Discrete Vreg Type " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndBuildDiscreteVregMappingTable
+{
+}
+#typev PEP_Acpi_c3163 167 "%0 [Info] PEP_Acpi.c::%!FUNC! :Vreg Type is %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndBuildDiscreteVregMappingTable
+{
+(const char *)CurrentArgument->Data, ItemString -- 10
+}
+#typev PEP_Acpi_c3157 166 "%0 [Info] PEP_Acpi.c::%!FUNC! :Discrete Vreg ID = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndBuildDiscreteVregMappingTable
+{
+pDiscreteVregMappingNode->DiscreteVregID, ItemLong -- 10
+}
+#typev PEP_Acpi_c3147 165 "%0 [Info] PEP_Acpi.c::%!FUNC! :Vreg Mapping for ID %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndBuildDiscreteVregMappingTable
+{
+(const char *)CurrentArgument->Data, ItemString -- 10
+}
+#typev PEP_Acpi_c3127 164 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndBuildDiscreteVregMappingTable
+{
+}
+#typev PEP_Acpi_c3125 163 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3125 :Failed to allocate the memory for Discrete Vreg Mapping table!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndBuildDiscreteVregMappingTable
+{
+}
+#typev PEP_Acpi_c3117 162 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndBuildDiscreteVregMappingTable
+{
+}
+#typev PEP_Acpi_c3951 219 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateBclConfigurations
+{
+}
+#typev PEP_Acpi_c3949 218 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3949 :Corruption occurred in Argument->Type" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateBclConfigurations
+{
+}
+#typev PEP_Acpi_c3942 217 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateBclConfigurations
+{
+}
+#typev PEP_Acpi_c3940 216 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3940 :Corruption occurred in POutPutBuffer->Signature" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateBclConfigurations
+{
+}
+#typev PEP_Acpi_c3930 215 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateBclConfigurations
+{
+}
+#typev PEP_Acpi_c3928 214 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3928 :POutPutBuffer or length pointers is NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateBclConfigurations
+{
+}
+#typev PEP_Acpi_c3924 213 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndUpdateBclConfigurations
+{
+}
+#typev PEP_Acpi_c4892 266 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4892 :Invalid Device Package: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateCPUInfoIntoPEPDataStructures
+{
+currentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c4886 265 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4886 :ParseAndAddCPUDevicePackage failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateCPUInfoIntoPEPDataStructures
+{
+Result, ItemLong -- 10
+}
+#typev PEP_Acpi_c4872 264 "%0 [Info] PEP_Acpi.c::%!FUNC! :PEP: NumberOfDevicePackages %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateCPUInfoIntoPEPDataStructures
+{
+NumberOfDevicePackages, ItemLong -- 10
+}
+#typev PEP_Acpi_c4867 263 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4867 :Signature corruption occurred" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateCPUInfoIntoPEPDataStructures
+{
+}
+#typev PEP_Acpi_c3540 190 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateCPUSensors
+{
+}
+#typev PEP_Acpi_c3532 189 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3532 :ParseAndUpdateCPUSensors failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateCPUSensors
+{
+Result, ItemLong -- 10
+}
+#typev PEP_Acpi_c3514 188 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndUpdateCPUSensors
+{
+}
+#typev PEP_Acpi_c4158 235 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateDiscretVregMappingPackage
+{
+}
+#typev PEP_Acpi_c4148 234 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4148 :Invalid Device Package: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateDiscretVregMappingPackage
+{
+CurrentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c4142 233 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4142 :ParseAndBuildDiscreteVregMappingTable failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateDiscretVregMappingPackage
+{
+Result, ItemLong -- 10
+}
+#typev PEP_Acpi_c4122 232 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4122 :Corruption occurred in POutPutBuffer->Signature" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateDiscretVregMappingPackage
+{
+}
+#typev PEP_Acpi_c4112 231 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateDiscretVregMappingPackage
+{
+}
+#typev PEP_Acpi_c4110 230 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4110 :POutPutBuffer is NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateDiscretVregMappingPackage
+{
+}
+#typev PEP_Acpi_c4107 229 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndUpdateDiscretVregMappingPackage
+{
+}
+#typev PEP_Acpi_c5054 274 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5054 :Invalid Device Package: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateDrvIdInfoIntoPEPDataStructures
+{
+currentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c5047 273 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5047 :ParseAndUpdateDrvIdInfoIntoPEPDataStructures failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateDrvIdInfoIntoPEPDataStructures
+{
+Result, ItemLong -- 10
+}
+#typev PEP_Acpi_c5032 272 "%0 [Info] PEP_Acpi.c::%!FUNC! :PEP: NumberOfDevicePackages %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateDrvIdInfoIntoPEPDataStructures
+{
+NumberOfDevicePackages, ItemLong -- 10
+}
+#typev PEP_Acpi_c5000 271 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5000 :Signature corruption occurred" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateDrvIdInfoIntoPEPDataStructures
+{
+}
+#typev PEP_Acpi_c3838 209 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateLtvrVfcData
+{
+}
+#typev PEP_Acpi_c3830 208 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3830 :ParseAndUpdateLtvrVfcData failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateLtvrVfcData
+{
+Result, ItemLong -- 10
+}
+#typev PEP_Acpi_c3799 207 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndUpdateLtvrVfcData
+{
+}
+#typev PEP_Acpi_c2523 139 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdatePEPMethodNames
+{
+}
+#typev PEP_Acpi_c2513 138 "%0 [Err ] PEP_Acpi.c::%!FUNC!::2513 :Invalid Device Package: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdatePEPMethodNames
+{
+currentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c2482 137 "%0 [Err ] PEP_Acpi.c::%!FUNC!::2482 :Corruption occurred in POutPutBuffer->Signature" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdatePEPMethodNames
+{
+}
+#typev PEP_Acpi_c2476 136 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndUpdatePEPMethodNames
+{
+}
+#typev PEP_Acpi_c3788 206 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateQMIClientsData
+{
+}
+#typev PEP_Acpi_c3779 205 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3779 :ParseAndUpdateQMIClientsData failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateQMIClientsData
+{
+Result, ItemLong -- 10
+}
+#typev PEP_Acpi_c3771 204 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3771 :ParseAndUpdateQMIClientsData failed, Current argument type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateQMIClientsData
+{
+CurrentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3738 203 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndUpdateQMIClientsData
+{
+}
+#typev PEP_Acpi_c2612 141 "%0 [Err ] PEP_Acpi.c::%!FUNC!::2612 :Invalid Device Package: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateSpkrCalibParams
+{
+packageArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c2562 140 "%0 [Err ] PEP_Acpi.c::%!FUNC!::2562 :Corruption occurred in POutPutBuffer->Signature" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateSpkrCalibParams
+{
+}
+#typev PEP_Acpi_c3504 187 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateSubCPUSensors
+{
+}
+#typev PEP_Acpi_c3497 186 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3497 :ParseAndUpdateSubCPUSensors failed, CurrentArgument->Type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateSubCPUSensors
+{
+CurrentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3483 185 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3483 :ParseAndUpdateSubCPUSensors failed, SubPacakgeArgument->Type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateSubCPUSensors
+{
+SubPacakgeArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3458 184 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3458 :ParseAndUpdateSubCPUSensors failed, CurrentArgument->Type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateSubCPUSensors
+{
+CurrentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3442 183 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3442 :ParseAndUpdateSubCPUSensors failed, CurrentArgument->Type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateSubCPUSensors
+{
+CurrentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3426 182 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3426 :ParseAndUpdateSubCPUSensors failed, CurrentArgument->Type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateSubCPUSensors
+{
+CurrentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3414 181 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndUpdateSubCPUSensors
+{
+}
+#typev PEP_Acpi_c4078 228 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateTSensConfigurations
+{
+}
+#typev PEP_Acpi_c4069 227 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4069 :Invalid Device Package: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateTSensConfigurations
+{
+CurrentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c4062 226 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4062 :ParseAndBuidTsensConfigStructures failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateTSensConfigurations
+{
+Result, ItemLong -- 10
+}
+#typev PEP_Acpi_c4053 225 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4053 :ParseAndBuidTsensConfigStructures failed, NumberOfMappingPackages: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateTSensConfigurations
+{
+NumberOfMappingPackages, ItemLong -- 10
+}
+#typev PEP_Acpi_c4004 224 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateTSensConfigurations
+{
+}
+#typev PEP_Acpi_c4002 223 "%0 [Err ] PEP_Acpi.c::%!FUNC!::4002 :Corruption occurred in POutPutBuffer->Signature" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateTSensConfigurations
+{
+}
+#typev PEP_Acpi_c3992 222 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateTSensConfigurations
+{
+}
+#typev PEP_Acpi_c3990 221 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3990 :POutPutBuffer is NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateTSensConfigurations
+{
+}
+#typev PEP_Acpi_c3986 220 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndUpdateTSensConfigurations
+{
+}
+#typev PEP_Acpi_c3728 202 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateThermalRistrictions
+{
+}
+#typev PEP_Acpi_c3719 201 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3719 :ParseAndUpdateThermalRistrictions failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateThermalRistrictions
+{
+Result, ItemLong -- 10
+}
+#typev PEP_Acpi_c3711 200 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3711 :ParseAndUpdateThermalRistrictions failed, Current argument type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateThermalRistrictions
+{
+CurrentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3696 199 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3696 :ParseAndUpdateThermalRistrictions failed, SubPacakgeArgument->Type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateThermalRistrictions
+{
+SubPacakgeArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3666 198 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndUpdateThermalRistrictions
+{
+}
+#typev PEP_Acpi_c3404 180 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateTsensIdMapping
+{
+}
+#typev PEP_Acpi_c3395 179 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3395 :ParseAndUpdateTsensIdMapping failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateTsensIdMapping
+{
+Result, ItemLong -- 10
+}
+#typev PEP_Acpi_c3387 178 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3387 :ParseAndUpdateTsensIdMapping failed, Current argument type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateTsensIdMapping
+{
+CurrentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3365 177 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndUpdateTsensIdMapping
+{
+}
+#typev PEP_Acpi_c3656 197 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseAndUpdateVadcThermisterMapping
+{
+}
+#typev PEP_Acpi_c3648 196 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3648 :ParseAndUpdateVadcThermisterMapping failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateVadcThermisterMapping
+{
+Result, ItemLong -- 10
+}
+#typev PEP_Acpi_c3638 195 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3638 :ParseAndUpdateVadcThermisterMapping failed, Current argument type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateVadcThermisterMapping
+{
+CurrentPackageArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3617 194 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3617 :ParseAndUpdateVadcThermisterMapping failed, Current argument type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateVadcThermisterMapping
+{
+CurrentPackageArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3597 193 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3597 :ParseAndUpdateVadcThermisterMapping failed, Current argument type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateVadcThermisterMapping
+{
+CurrentPackageArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3576 192 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3576 :ParseAndUpdateVadcThermisterMapping failed, Current argument type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseAndUpdateVadcThermisterMapping
+{
+CurrentPackageArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3550 191 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseAndUpdateVadcThermisterMapping
+{
+}
+#typev PEP_Acpi_c3355 176 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=ParseSensorHIDAndNumbers
+{
+}
+#typev PEP_Acpi_c3346 175 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3346 :ParseSensorHIDAndNumbers failed with status: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseSensorHIDAndNumbers
+{
+Result, ItemLong -- 10
+}
+#typev PEP_Acpi_c3338 174 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3338 :ParseSensorHIDAndNumbers failed, Current argument type: %10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseSensorHIDAndNumbers
+{
+CurrentArgument->Type, ItemLong -- 10
+}
+#typev PEP_Acpi_c3317 173 "%0 [Verb] PEP_Acpi.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=ParseSensorHIDAndNumbers
+{
+}
+#typev PEP_Acpi_c6779 306 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6779 :Invalid Argument length: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ParseUIntValue
+{
+currentArgument->DataLength, ItemLong -- 10
+}
+#typev PEP_Acpi_c7009 315 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7009 :data is NULL because symbol->ExpectAndUsePackage() method failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Parse_keyFrequencySettings
+{
+}
+#typev PEP_Acpi_c6995 314 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6995 :Memory allocation failure" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Parse_keyFrequencySettings
+{
+}
+#typev PEP_Acpi_c6985 313 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6985 :data is NULL because symbol->ExpectAndUsePackage() method failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Parse_keyFrequencySettings
+{
+}
+#typev PEP_Acpi_c6964 312 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6964 :data is NULL because symbol->ExpectAndUsePackage() method failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Parse_keyFrequencySettings
+{
+}
+#typev PEP_Acpi_c6951 311 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6951 :data is NULL because symbol->ExpectAndUsePackage() method failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=Parse_keyFrequencySettings
+{
+}
+#typev PEP_Acpi_c3909 212 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3909 :ACPI ioctl returned id string count %10!d!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepGetHid
+{
+pOutput->Count, ItemLong -- 10
+}
+#typev PEP_Acpi_c3904 211 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3904 :ACPI ioctl output buffer signature not correct!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepGetHid
+{
+}
+#typev PEP_Acpi_c3899 210 "%0 [Err ] PEP_Acpi.c::%!FUNC!::3899 :WdfIoTargetSendIoctlSynchronously failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepGetHid
+{
+result, ItemNTSTATUS -- 10
+}
+#typev PEP_Acpi_c7434 331 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7434 :Failed to get buffer from pooled memory" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadAcpiConfiguration
+{
+}
+#typev PEP_Acpi_c7347 330 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7347 :Failed to get buffer from pooled memory" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadAcpiConfiguration
+{
+}
+#typev PEP_Acpi_c7803 337 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7803 :Failed to query Resource list registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadExemptPStateSlpmBlockingComponents
+{
+}
+#typev PEP_Acpi_c7787 336 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7787 :Failed WdfCollectionCreate" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadExemptPStateSlpmBlockingComponents
+{
+}
+#typev PEP_Acpi_c7775 335 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7775 :Failed to open PEP HW registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadExemptPStateSlpmBlockingComponents
+{
+}
+#typev PEP_Acpi_c7803 337 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7803 :Failed to query Resource list registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadExemptPStateSlpmBlockingComponents$fin$0
+{
+}
+#typev PEP_Acpi_c7787 336 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7787 :Failed WdfCollectionCreate" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadExemptPStateSlpmBlockingComponents$fin$0
+{
+}
+#typev PEP_Acpi_c7775 335 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7775 :Failed to open PEP HW registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadExemptPStateSlpmBlockingComponents$fin$0
+{
+}
+#typev PEP_Acpi_c7990 343 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7990 :Failed to read the resources from the registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadPEPConfigurationFromRegistry
+{
+}
+#typev PEP_Acpi_c7954 342 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7954 :Failed to query Resource list registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadPEPConfigurationFromRegistry
+{
+}
+#typev PEP_Acpi_c7938 341 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7938 :Failed WdfCollectionCreate" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadPEPConfigurationFromRegistry
+{
+}
+#typev PEP_Acpi_c7927 340 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7927 :Failed to open Resource sub registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadPEPConfigurationFromRegistry
+{
+}
+#typev PEP_Acpi_c7912 339 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7912 :Failed to open PEP HW registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadPEPConfigurationFromRegistry
+{
+}
+#typev PEP_Acpi_c7890 338 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7890 :Failed to get buffer from pooled memory" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadPEPConfigurationFromRegistry
+{
+}
+#typev PEP_Acpi_c7990 343 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7990 :Failed to read the resources from the registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadPEPConfigurationFromRegistry$fin$0
+{
+}
+#typev PEP_Acpi_c7954 342 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7954 :Failed to query Resource list registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadPEPConfigurationFromRegistry$fin$0
+{
+}
+#typev PEP_Acpi_c7938 341 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7938 :Failed WdfCollectionCreate" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadPEPConfigurationFromRegistry$fin$0
+{
+}
+#typev PEP_Acpi_c7927 340 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7927 :Failed to open Resource sub registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadPEPConfigurationFromRegistry$fin$0
+{
+}
+#typev PEP_Acpi_c7912 339 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7912 :Failed to open PEP HW registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadPEPConfigurationFromRegistry$fin$0
+{
+}
+#typev PEP_Acpi_c7890 338 "%0 [Err ] PEP_Acpi.c::%!FUNC!::7890 :Failed to get buffer from pooled memory" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadPEPConfigurationFromRegistry$fin$0
+{
+}
+#typev PEP_Acpi_c6528 305 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6528 :Failed to read the resource data from registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadResourceFromRegistry
+{
+}
+#typev PEP_Acpi_c6516 304 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6516 :Failed to open the sub registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadResourceFromRegistry
+{
+}
+#typev PEP_Acpi_c6503 303 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6503 :Failed to open PEP HW registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadResourceFromRegistry
+{
+}
+#typev PEP_Acpi_c6528 305 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6528 :Failed to read the resource data from registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadResourceFromRegistry$fin$0
+{
+}
+#typev PEP_Acpi_c6516 304 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6516 :Failed to open the sub registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadResourceFromRegistry$fin$0
+{
+}
+#typev PEP_Acpi_c6503 303 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6503 :Failed to open PEP HW registry key" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ReadResourceFromRegistry$fin$0
+{
+}
+#typev PEP_Acpi_c7585 333 "%0 [Info] PEP_Acpi.c::%!FUNC! :NPA Client name: %10!s!, NPA resource name: %11!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=RecreateNpaClientHandle
+{
+pClientInfo->clientName, ItemString -- 10
+NpaResourceName, ItemString -- 11
+}
+#typev PEP_Acpi_c5334 280 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5334 : Invalid ClockActionType: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolveCLKRGMActionEnumtoString
+{
+Argument, ItemLong -- 10
+}
+#typev PEP_Acpi_c5259 279 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5259 : Invalid ClockActionType: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolveCLKRGMActionValueToEnum
+{
+Argument, ItemLong -- 10
+}
+#typev PEP_Acpi_c5412 282 "%0 [Info] PEP_Acpi.c::%!FUNC! :Invalid Match Type in CLOCK package. Defaulting to CLOCK_FREQUENCY_HZ_AT_LEAST." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolveCLKRGMMatchValueToEnum
+{
+}
+#typev PEP_Acpi_c5405 281 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5405 :Invalid Match Type in CLOCK package. Defaulting to CLOCK_FREQUENCY_HZ_AT_LEAST." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolveCLKRGMMatchValueToEnum
+{
+}
+#typev PEP_Acpi_c5966 292 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5966 : Invalid regulator type: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolvePMICVREGType
+{
+Argument, ItemLong -- 10
+}
+#typev PEP_Acpi_c5504 284 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5504 :Could not find Name(%10!s!) in internal data base" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolvePmicGpioIoctlNameFromAcpiToInternalEnum
+{
+LocalPmicVregName, ItemString -- 10
+}
+#typev PEP_Acpi_c5595 286 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5595 :Could not find Name(%10!s!) in internal data base" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolvePmicIbbLabIoctlNameFromAcpiToInternalEnum
+{
+LocalPmicVregName, ItemString -- 10
+}
+#typev PEP_Acpi_c5685 288 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5685 :Error did not find Name(%10!s!) in internal data base" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolvePmicLpgIoctlNameFromAcpiToInternalEnum
+{
+LocalPmicVregName, ItemString -- 10
+}
+#typev PEP_Acpi_c5458 283 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5458 :Did not find Name(%10!s!) in internal data base" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolvePmicMppIoctlNameFromAcpiToInternalEnum
+{
+LocalPmicVregName, ItemString -- 10
+}
+#typev PEP_Acpi_c5640 287 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5640 :Error did not find Name(%10!s!) in internal data base" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolvePmicUsbOtgIoctlNameFromAcpiToInternalEnum
+{
+LocalPmicVregName, ItemString -- 10
+}
+#typev PEP_Acpi_c6001 293 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6001 :Could not find PPPResource(%10!s!) in internal data base" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolvePmicVregNameFromAcpiToInternalEnum
+{
+LocalPmicVregName, ItemString -- 10
+}
+#typev PEP_Acpi_c5550 285 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5550 :Could not find Name(%10!s!) in internal data base" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolvePmicWledIoctlNameFromAcpiToInternalEnum
+{
+LocalPmicVregName, ItemString -- 10
+}
+#typev PEP_Acpi_c5182 278 "%0 [Err ] PEP_Acpi.c::%!FUNC!::5182 :PowerDomainActionType Invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=ResolvePowerDomainActionValueToEnum
+{
+}
+#typev PEP_Acpi_c6180 295 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6180 :Discrete Vreg voting not found: pDiscreteVregTypeSrc is NULL " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=VerifyAndMapDiscreteVregVote
+{
+}
+#typev PEP_Acpi_c6173 294 "%0 [Err ] PEP_Acpi.c::%!FUNC!::6173 :Discrete Vreg Mapping Package corrupted " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=VerifyAndMapDiscreteVregVote
+{
+}
+#typev PEP_Acpi_c8029 344 "%0 [Err ] PEP_Acpi.c::%!FUNC!::8029 :Runtime resource enumeration failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=parse_resource_buffer
+{
+}

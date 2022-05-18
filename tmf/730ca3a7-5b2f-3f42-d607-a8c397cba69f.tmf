@@ -1,0 +1,114 @@
+// PDB:  qcgpi7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:29:868 (UTC) [tracepdb]
+730ca3a7-5b2f-3f42-d607-a8c397cba69f qcgpi // SRC=GpiOS.c MJ= MN=
+#typev gpi_c83 18 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=gpi_init_dev
+{
+}
+#typev gpi_c83 17 "%0 [%!FUNC!]Error, Max number of %10!d! devices exceeded, quitting" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=gpi_init_dev
+{
+MAX_NUM_QUP_BLOCKS, ItemLong -- 10
+}
+#typev gpi_c83 16 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=gpi_init_dev
+{
+}
+// PDB:  qcgpi7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:29:868 (UTC) [tracepdb]
+#typev gpi_threads_c594 31 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=spawn_threads
+{
+}
+// PDB:  qcgpi7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:29:868 (UTC) [tracepdb]
+#typev gpi_threads_c594 30 "%0 [%!FUNC!]Failed to set Thread priority" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=spawn_threads
+{
+}
+#typev gpi_threads_c594 29 "%0 [%!FUNC!]Failed to create System Thread" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=spawn_threads
+{
+}
+#typev gpi_threads_c594 28 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=spawn_threads
+{
+}
+// PDB:  qcgpi7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:29:868 (UTC) [tracepdb]
+#typev GpiOS_c648 39 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiDeviceUnload
+{
+}
+#typev GpiOS_c616 38 "%0 [%!FUNC!]Deleting GPI device-%10!d! Ctxt" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiDeviceUnload
+{
+devExt->QupType, ItemLong -- 10
+}
+#typev GpiOS_c609 37 "%0 [%!FUNC!]Devctx is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiDeviceUnload
+{
+}
+#typev GpiOS_c605 36 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiDeviceUnload
+{
+}
+#typev GpiOS_c587 35 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiDriverUnload
+{
+}
+// PDB:  qcgpi7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:29:868 (UTC) [tracepdb]
+#typev GpiOS_c579 33 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiDriverUnload
+{
+}
+#typev GpiOS_c59 11 "%0 [%!FUNC!]ERROR - GPII-%10!d! alloc" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+gpiiId, ItemLong -- 10
+}
+#typev GpiOS_c71 12 "%0 [%!FUNC!]ERROR - GPII-%10!d! evt ring alloc fail" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+gpiiId, ItemLong -- 10
+}
+#typev GpiOS_c67 26 "%0 [%!FUNC!]ERROR: Failed allocating Contiguous Memory!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+}
+#typev GpiOS_c67 25 "%0 [%!FUNC!]ERROR - Failed to get physical addr of the allocated Contiguous Memory!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+}
+#typev GpiOS_c97 15 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+}
+#typev GpiOS_c94 14 "%0 [%!FUNC!]QUP[%10!d!] gpii[%11!d!] id: %12!d!, irq: %13!d!
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+qup_type, ItemLong -- 10
+i, ItemLong -- 11
+gpii->id, ItemLong -- 12
+gpii->irq, ItemLong -- 13
+}
+#typev GpiOS_c76 13 "%0 [%!FUNC!]Allocated GPII-%10!d! evt ring: Virt Aligned: 0x%11!I64x!, Phys Aligned 0x%12!I64x!, Size: %13!d! bytes" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+gpiiId, ItemLong -- 10
+gpii->EvtRingMemProps.VirtAligned, ItemLongLongX -- 11
+gpii->EvtRingMemProps.PhysAligned, ItemLongLongX -- 12
+(NUM_GPI_EVT_RING_ELEM * sizeof(gpi_ring_elem)), ItemLong -- 13
+}
+#typev GpiOS_c67 27 "%0 [%!FUNC!] <-- exit" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+}
+#typev GpiOS_c67 24 "%0 [%!FUNC!]Contiguous Memory PhysAligned: 0x%10!I64x!, VirtAligned: 0x%11!I64x!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+MemProps->PhysAligned, ItemLongLongX -- 10
+MemProps->VirtAligned, ItemLongLongX -- 11
+}
+#typev GpiOS_c67 23 "%0 [%!FUNC!]Succeeded allocating Contiguous Memory of size: 0x%10!I64u!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+MemProps->Size, ItemULongLong -- 10
+}
+#typev GpiOS_c67 22 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+}
+#typev GpiOS_c48 10 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_GPI FUNC=GpiInitGpiiTgtInfo
+{
+}
+#typev GpiOS_c202 21 "%0 [%!FUNC!]WdfCollectionAdd() failed. (Status: 0x%10!08x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiMalloc
+{
+Status, ItemLong -- 10
+}
+#typev GpiOS_c193 20 "%0 [%!FUNC!]WdfMemoryCreate() failed. (Status: 0x%10!08x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiMalloc
+{
+Status, ItemLong -- 10
+}
+#typev GpiOS_c173 19 "%0 [%!FUNC!]WdfCollectionCreate() failed. (Status: 0x%10!08x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_GPI FUNC=GpiMalloc
+{
+Status, ItemLong -- 10
+}

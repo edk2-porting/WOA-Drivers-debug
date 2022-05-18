@@ -1,0 +1,698 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+52c9e687-beca-38f5-f149-0cd7c3bff777 src // SRC=dp_mst_topology.c MJ= MN=
+#typev dp_mst_topology_c1213 46 "%0DP%10!d!: DP MST topology change, number of sinks: %11!d! -> %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_CheckTopologyChange
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+*pOldSinkCount, ItemLong -- 11
+*pNewSinkCount, ItemLong -- 12
+}
+#typev dp_mst_topology_c1197 45 "%0DP%10!d!: DPMST_ParseTopology() Failed at link address in DPMST_CheckTopologyChange() for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_CheckTopologyChange
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c197 12 "%0DP%10!d!: DPMST_ClearIRQStatus() write Failed for device=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ClearIRQStatus
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c185 11 "%0DP%10!d!: DPMST_ClearIRQStatus() read Failed for device=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ClearIRQStatus
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c1837 70 "%0DP%10!d!: DPMST_ConfigurePayload() Received NAK on de-allocate payload for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ConfigurePayload
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c1832 69 "%0DP%10!d!: DPMST_ConfigurePayload() : DPMST_DownRequestReply Failed, eStatus=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ConfigurePayload
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_mst_topology_c1826 68 "%0DP%10!d!: Configure Rx payload, VCID=%11!d!, AllocatePBN=%12!d!, uPortNum =0x%13!x!, Status=0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ConfigurePayload
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+sReqInfo.sData.sAllocPayload.uVCPayloadID, ItemLong -- 11
+sReqInfo.sData.sAllocPayload.uPBN, ItemLong -- 12
+sReqInfo.sData.sAllocPayload.uPortNum, ItemLong -- 13
+eStatus, ItemLong -- 14
+}
+#typev dp_mst_topology_c1799 67 "%0DP%10!d!: DPMST_ConfigurePayload() Not enough PBN allocated device=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ConfigurePayload
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+}
+#typev dp_mst_topology_c1793 66 "%0DP%10!d!: DPMST_ConfigurePayload() Received NAK on allocate payload for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ConfigurePayload
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c1788 65 "%0DP%10!d!: DPMST_ConfigurePayload() : DPMST_DownRequestReply Failed, eStatus=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ConfigurePayload
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_mst_topology_c1782 64 "%0DP%10!d!: Configure Rx payload, VCID=%11!d!, AllocatePBN=%12!d!, uPortNum =0x%13!x!, Status=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ConfigurePayload
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+sReqInfo.sData.sAllocPayload.uVCPayloadID, ItemLong -- 11
+sReqInfo.sData.sAllocPayload.uPBN, ItemLong -- 12
+sReqInfo.sData.sAllocPayload.uPortNum, ItemLong -- 13
+eStatus, ItemLong -- 14
+}
+#typev dp_mst_topology_c1756 63 "%0DP%10!d!: DPMST_ConfigurePayload(): Sink=%11!d! not available, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ConfigurePayload
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->eMSTStreamId, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c419 16 "%0DP%10!d!: DPMST_DownRequestReply() PackSidebandMsg failed for device=%11!d!, reqId=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_DownRequestReply
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dp_mst_topology_c535 21 "%0DP%10!d!: DPMST_DownRequestReply() UnpackSideband failed for device=%11!d!, reqId=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_DownRequestReply
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dp_mst_topology_c474 18 "%0DP%10!d!: DPMST_DownRequestReply() Timeout on reply for device=%11!d!, reqId=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_DownRequestReply
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c559 24 "%0DP%10!d!: DPMST_DownRequestReply() Nak received for device=%11!d!, reqId=%12!d!, reason=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_DownRequestReply
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+pReplyInfo->sData.sNAK.eNAKReason, ItemLong -- 13
+}
+#typev dp_mst_topology_c553 23 "%0DP%10!d!: DPMST_DownRequestReply() Incorrect reply data for device=%11!d!, reqId=%12!d!, repId=%13!d!, status=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_DownRequestReply
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+pReplyInfo->eReqID, ItemLong -- 13
+eStatus, ItemLong -- 14
+}
+#typev dp_mst_topology_c547 22 "%0DP%10!d!: DPMST_DownRequestReply() DecodeReply failed for device=%11!d!, reqId=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_DownRequestReply
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dp_mst_topology_c517 20 "%0DP%10!d!: DPMST_DownRequestReply() Invalid message sequence for device=%11!d!, reqId=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_DownRequestReply
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dp_mst_topology_c490 19 "%0DP%10!d!: DPMST_DownRequestReply() AuxRead failed for device=%11!d!, reqId=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_DownRequestReply
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c436 17 "%0DP%10!d!: DPMST_DownRequestReply() AuxWrite failed for device=%11!d!, reqId=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_DownRequestReply
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dp_mst_topology_c402 15 "%0DP%10!d!: DPMST_DownRequestReply() EncodeRequest failed for device=%11!d!, reqId=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_DownRequestReply
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dp_mst_topology_c287 14 "%0DP%10!d!: DPMST_EnableMST() write failed for device=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_EnableMST
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c142 10 "%0DP%10!d!: DPMST_IRQStatus() Failed for device=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_IRQStatus
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c1031 39 "%0DP%10!d!: DPMST_ParseTopology() invalid input: uLinkCountTotal=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ParseTopology
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pTopologyNodeInfo->uLinkCountTotal, ItemLong -- 11
+}
+#typev dp_mst_topology_c1070 42 "%0DP%10!d! MST Depth:%11!d! returned an invalid number of ports (%12!d!), ignoring this port" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ParseTopology
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pTopologyNodeInfo->uLinkCountTotal, ItemLong -- 11
+(uint32)sReplyInfo.sData.sLinkAddrACK.uNumPorts, ItemLong -- 12
+}
+#typev dp_mst_topology_c1131 44 "%0DP%10!d!: DPMST_ParseTopology() Failed at link address for device=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ParseTopology
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+}
+#typev dp_mst_topology_c1083 43 "%0DP%10!d!: DPMST_ParseTopology() Detect Sink PDT=%11!d!, MCS = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ParseTopology
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+sReplyInfo.sData.sLinkAddrACK.sPortInfo[uNumPortsIndex].uPeerDeviceType, ItemLong -- 11
+sReplyInfo.sData.sLinkAddrACK.sPortInfo[uNumPortsIndex].uMsgCapStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c1063 41 "%0DP%10!d!: DPMST_ParseTopology() Received NAK on link address in DPMST_DownRequestReply for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ParseTopology
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c1057 40 "%0DP%10!d!: DPMST_ParseTopology() Failed at link address in DPMST_DownRequestReply for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ParseTopology
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c239 13 "%0DP%10!d!: DPMST_PayloadTableStatus() Failed for device=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_PayloadTableStatus
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c1906 73 "%0DP%10!d!: DPMST_QueryAndAllocatePBN() Configure PBN failed for device=%11!d! status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_QueryAndAllocatePBN
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c1895 72 "%0DP%10!d!: DPMST_QueryAndAllocatePBN() QuerySinkInfo failed for sink=%11!d!, device=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_QueryAndAllocatePBN
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->eMSTStreamId, ItemLong -- 11
+pDeviceCtx->eDeviceID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dp_mst_topology_c1893 54 "%0DP%10!d!: DPMST_QuerySinkInfo() Query failed, status=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_QueryAndAllocatePBN
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_mst_topology_c1883 71 "%0DP%10!d!: DPMST_QueryAndAllocatePBN() No available PBN to allocate for sink=%11!d!, device=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_QueryAndAllocatePBN
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->eMSTStreamId, ItemLong -- 11
+pDeviceCtx->eDeviceID, ItemLong -- 12
+}
+#typev dp_mst_topology_c853 36 "%0DP%10!d!: DP MST query PBN, stream ID: %11!d!, RAD: %12!d!, FullPBN: %13!d!, AvailablePBN: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_QueryPBN
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->eMSTStreamId, ItemLong -- 11
+pSinkInfo->uRAD[0], ItemLong -- 12
+pSinkInfo->uFullPBN, ItemLong -- 13
+pSinkInfo->uAvailablePBN, ItemLong -- 14
+}
+#typev dp_mst_topology_c844 35 "%0DP%10!d!: DPMST_QueryPBN() Received NAK on enum_resources for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_QueryPBN
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c838 34 "%0DP%10!d!: DPMST_QueryPBN() Failed enum_resources for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_QueryPBN
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c814 33 "%0DP%10!d!: DPMST_QueryPBN() No sinks available for streamID=%11!d!, device=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_QueryPBN
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->eMSTStreamId, ItemLong -- 11
+pDeviceCtx->eDeviceID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dp_mst_topology_c2882 106 "%0DP%10!d!: Path FEC Capability for device=%11!d!, linkCountFromSink=%12!d! FECcapable=%13!d!, status:0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_QueryPathFECCapability
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+uLinkCountfromSink, ItemLong -- 12
+*pbFECSupported, ItemLong -- 13
+eStatus, ItemLong -- 14
+}
+#typev dp_mst_topology_c2844 105 "%0DP%10!d!: DPMST_QueryPathFECCapability() Returning branch FEC cap since link count = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_QueryPathFECCapability
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uLinkCountfromSink, ItemLong -- 11
+}
+#typev dp_mst_topology_c2972 110 "%0DP%10!d!: VC Payload ID Table, Addr:0x%11!04x!-0x%12!04x!:[%13!02x! %14!02x! %15!02x! %16!02x! %17!02x! %18!02x! %19!02x! %20!02x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ReadVCPayloadIDTable
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+(DP_MST_PAYLOAD_STATUS_ADDR + uIndex), ItemLong -- 11
+(DP_MST_PAYLOAD_STATUS_ADDR + uIndex + 7), ItemLong -- 12
+uVCPayloadTableBuffer[uIndex], ItemLong -- 13
+uVCPayloadTableBuffer[uIndex+1], ItemLong -- 14
+uVCPayloadTableBuffer[uIndex+2], ItemLong -- 15
+uVCPayloadTableBuffer[uIndex+3], ItemLong -- 16
+uVCPayloadTableBuffer[uIndex+4], ItemLong -- 17
+uVCPayloadTableBuffer[uIndex+5], ItemLong -- 18
+uVCPayloadTableBuffer[uIndex+6], ItemLong -- 19
+uVCPayloadTableBuffer[uIndex+7], ItemLong -- 20
+}
+#typev dp_mst_topology_c2962 109 "%0DP%10!d!: DPMST_ReadVCPayloadIDTable() Failed AUX read, addr:0x%11!04x!, size=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ReadVCPayloadIDTable
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+DP_MST_PAYLOAD_STATUS_ADDR, ItemLong -- 11
+uSizeRead, ItemLong -- 12
+}
+#typev dp_mst_topology_c2938 107 "%0DP%10!d!: DPMST_ReadVCPayloadIDTable() Failed AUX read, addr:0x%11!04x!, size=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ReadVCPayloadIDTable
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+DP_MST_PAYLOD_SET_ADDR, ItemLong -- 11
+uSizeRead, ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c2946 108 "%0DP%10!d!: VC Payload ID Table Info, VC ID: %11!d!, start slot: %12!d!, slot count: %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_ReadVCPayloadIDTable
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uVCPayloadTableUpdateRegsBuffer[0], ItemLong -- 11
+uVCPayloadTableUpdateRegsBuffer[1], ItemLong -- 12
+uVCPayloadTableUpdateRegsBuffer[2], ItemLong -- 13
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c2358 88 "%0DP%10!d!: MST Sent power up for device=%11!d!, stream=%12!d!, port=%13!d!, status=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_SendPowerUpPHY
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pStreamCtx->eMSTStreamId, ItemLong -- 12
+sReqInfo.sData.sPowerUpPHY.uPortNum, ItemLong -- 13
+eStatus, ItemLong -- 14
+}
+#typev dp_mst_topology_c2351 87 "%0DP%10!d!: DPMST_SendPowerUpPHY() Received NAK on power up message for device=%11!d!, port=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_SendPowerUpPHY
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+sReqInfo.sData.sPowerUpPHY.uPortNum, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dp_mst_topology_c2345 86 "%0DP%10!d!: DPMST_SendPowerUpPHY() Could not complete the message transaction for device=%11!d!, port=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_SendPowerUpPHY
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+sReqInfo.sData.sPowerUpPHY.uPortNum, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dp_mst_topology_c2107 79 "%0DP%10!d!: DPMST_TopologyDeInit StreamID = %11!d!, PixelRate=%12!08d!/%13!08d! VCSlots=%14!2d!/%15!2d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyDeInit
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->eMSTStreamId, ItemLong -- 11
+pStreamCtx->uPixelRate, ItemLong -- 12
+pDeviceCtx->uTotalPixelRate, ItemLong -- 13
+pStreamCtx->uMaxNumSlots, ItemLong -- 14
+pDeviceCtx->uRemainingVCSlots, ItemLong -- 15
+}
+#typev dp_mst_topology_c2060 75 "%0DPMST_TopologyDeInit() DPMST_ConfigureRxVCSlots failed  status=%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyDeInit
+{
+eLocalStatus, ItemLong -- 10
+}
+#typev dp_mst_topology_c2095 78 "%0DP%10!d!: DPMST_TopologyDeInit() Remaining VC slots went over %11!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyDeInit
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+DP_MST_MAX_TIME_SLOTS, ItemLong -- 11
+}
+#typev dp_mst_topology_c2084 77 "%0DP%10!d!: DPMST_TopologyDeInit: Total pixel rate (%11!d!) exceeded the max. Saturating to %12!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyDeInit
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->uTotalPixelRate, ItemLong -- 11
+uMaxPixelRate, ItemLong -- 12
+}
+#typev dp_mst_topology_c2075 76 "%0DP%10!d!: DPMST_TopologyDeInit() DPMST_TriggerMSTACT failed  status=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyDeInit
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eLocalStatus, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c2054 74 "%0DPMST_TopologyDeInit() DPMST_ConfigureRxPayload failed  status=%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyDeInit
+{
+eLocalStatus, ItemLong -- 10
+}
+#typev dp_mst_topology_c3144 113 "%0DP%10!d!: DPMST_TopologyDownReqRepRaw() Timeout on reply for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyDownReqRepRaw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c3160 114 "%0DP%10!d!: DPMST_TopologyDownReqRepRaw() AuxRead failed for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyDownReqRepRaw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c3107 112 "%0DP%10!d!: DPMST_TopologyDownReqRepRaw() AuxWrite failed for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyDownReqRepRaw
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c2282 85 "%0DP%10!d!:DPMST_TopologyEDIDRead() : Read Failed bytes read %11!d! (expected %12!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyEDIDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+sReplyInfo.sData.sI2CReadACK.uNumBytesRead, ItemLong -- 11
+sReqInfo.sData.sI2CRead.uNumBytesToRead, ItemLong -- 12
+}
+#typev dp_mst_topology_c2276 84 "%0DP%10!d!:DPMST_TopologyEDIDRead() Received NAK on I2C read for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyEDIDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c2271 83 "%0DP%10!d!:DPMST_TopologyEDIDRead() : DPMST_DownRequestReply Failed, eStatus=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyEDIDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_mst_topology_c2229 82 "%0DP%10!d!:DPMST_TopologyEDIDRead(): RAD[0]=%11!d! is invalid, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyEDIDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->eMSTStreamId, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c2223 81 "%0DP%10!d!:DPMST_TopologyEDIDRead(): Sink=%11!d! not available, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyEDIDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->eMSTStreamId, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c1346 53 "%0DP%10!d!: DP MST cleared payload ID table, reply: 0x%11!x!, status: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyInit
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+sReplyInfo.eReplyType, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c1342 52 "%0DP%10!d!: DPMST_TopologyInit() Received NAK on clear payload for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyInit
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c1338 51 "%0DP%10!d!: DPMST_TopologyInit() : DPMST_DownRequestReply Failed, eStatus=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyInit
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_mst_topology_c1318 50 "%0DP%10!d!: HW version: %11!d!, FW version: %12!d!.%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyInit
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->sDeviceSpecificInfo[DP_DEVICESPECIFIC_BRANCH].uHWRevision, ItemLong -- 11
+pStreamCtx->sDeviceSpecificInfo[DP_DEVICESPECIFIC_BRANCH].uFWMajorRevision, ItemLong -- 12
+pStreamCtx->sDeviceSpecificInfo[DP_DEVICESPECIFIC_BRANCH].uFWMinorRevision, ItemLong -- 13
+}
+#typev dp_mst_topology_c1314 49 "%0DP%10!d!: Device Identification String: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyInit
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+(LPCSTR)pStreamCtx->sDeviceSpecificInfo[DP_DEVICESPECIFIC_BRANCH].aDeviceString, ItemString -- 11
+}
+#typev dp_mst_topology_c1308 48 "%0DP%10!d!: IEEE OUI: %11!02x!-%12!02x!-%13!02x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyInit
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->sDeviceSpecificInfo[DP_DEVICESPECIFIC_BRANCH].aIEEEOUI[0], ItemLong -- 11
+pStreamCtx->sDeviceSpecificInfo[DP_DEVICESPECIFIC_BRANCH].aIEEEOUI[1], ItemLong -- 12
+pStreamCtx->sDeviceSpecificInfo[DP_DEVICESPECIFIC_BRANCH].aIEEEOUI[2], ItemLong -- 13
+}
+#typev dp_mst_topology_c1295 47 "%0DP%10!d!: DPMST_ParseTopology() Failed at link address for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyInit
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c2587 98 "%0DP%10!d!: Remote DPCD Read Addr:0x%11!04x! ReadSize:%12!d! Linkcount:%13!d! Data[%14!02x!]:[%15!02x! %16!02x! %17!02x! %18!02x! %19!02x! %20!02x! %21!02x! %22!02x!]" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uAddress, ItemLong -- 11
+uReadSize, ItemLong -- 12
+uLinkCountfromSink, ItemLong -- 13
+uIndex, ItemLong -- 14
+(uIndex < uReadSize) ? puReadDataBuffer[uIndex] : 0, ItemLong -- 15
+((uIndex + 1) < uReadSize) ? puReadDataBuffer[uIndex + 1] : 0, ItemLong -- 16
+((uIndex + 2) < uReadSize) ? puReadDataBuffer[uIndex + 2] : 0, ItemLong -- 17
+((uIndex + 3) < uReadSize) ? puReadDataBuffer[uIndex + 3] : 0, ItemLong -- 18
+((uIndex + 4) < uReadSize) ? puReadDataBuffer[uIndex + 4] : 0, ItemLong -- 19
+((uIndex + 5) < uReadSize) ? puReadDataBuffer[uIndex + 5] : 0, ItemLong -- 20
+((uIndex + 6) < uReadSize) ? puReadDataBuffer[uIndex + 6] : 0, ItemLong -- 21
+((uIndex + 7) < uReadSize) ? puReadDataBuffer[uIndex + 7] : 0, ItemLong -- 22
+}
+#typev dp_mst_topology_c2564 97 "%0DP%10!d!:DPMST_TopologyRemoteDPCDRead() : DPMST_DownRequestReply failed LC:%11!d! Address: 0x%12!x! ReadSize: %13!d! BytesRead : %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uLinkCountfromSink, ItemLong -- 11
+uAddress, ItemLong -- 12
+uReadSize, ItemLong -- 13
+sReplyInfo.sData.sDPCDReadACK.uNumBytesRead, ItemLong -- 14
+}
+#typev dp_mst_topology_c2554 96 "%0DP%10!d!:DPMST_TopologyRemoteDPCDRead() : Received NAK on DPCD read for device=%11!d!, LinkCount:%12!d! Address:%13!d! status=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+uLinkCountfromSink, ItemLong -- 12
+uAddress, ItemLong -- 13
+eStatus, ItemLong -- 14
+}
+#typev dp_mst_topology_c2544 95 "%0DP%10!d!:DPMST_TopologyRemoteDPCDRead() : DPMST_DownRequestReply Failed, eStatus=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_mst_topology_c2516 94 "%0DP%10!d!:DPMST_TopologyRemoteDPCDRead() : DP_Host_ClientRead failed Address: 0x%11!x! ReadSize: %12!d! BytesRead : %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uAddress, ItemLong -- 11
+uReadSize, ItemLong -- 12
+uNumBytesRead, ItemLong -- 13
+}
+#typev dp_mst_topology_c2509 93 "%0DP%10!d!:DPMST_TopologyRemoteDPCDRead() : DP_Host_AuxRead failed Address: 0x%11!x! status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c2497 92 "%0DP%10!d!:DPMST_TopologyRemoteDPCDRead(): RAD[0] is invalid, status=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_mst_topology_c2490 91 "%0DP%10!d!:DPMST_TopologyRemoteDPCDRead(): Sink not available, status=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDRead
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_mst_topology_c2708 103 "%0DP%10!d!:DPMST_TopologyRemoteDPCDWrite() Received NAK on DPCD Write for device=%11!d!, LinkCount:%12!d!, Address:%13!d!, status=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDWrite
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+uLinkCountfromSink, ItemLong -- 12
+uAddress, ItemLong -- 13
+eStatus, ItemLong -- 14
+}
+#typev dp_mst_topology_c2701 102 "%0DP%10!d!:DPMST_TopologyRemoteDPCDWrite() : DPMST_DownRequestReply Failed, eStatus=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDWrite
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_mst_topology_c2674 101 "%0DP%10!d!:DPMST_TopologyRemoteDPCDWrite() : DP_Host_ClientWrite failed Address: 0x%11!x! status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDWrite
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uAddress, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c2665 100 "%0DP%10!d!:DPMST_TopologyRemoteDPCDWrite(): RAD[0] is invalid, status=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDWrite
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_mst_topology_c2656 99 "%0DP%10!d!:DPMST_TopologyRemoteDPCDWrite(): Sink not available, status=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TopologyRemoteDPCDWrite
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_mst_topology_c919 37 "%0DP%10!d!: DPMST_TriggerMSTACT: Timeout waiting for ACT handled after 30ms." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_TriggerMSTACT
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_mst_topology_c699 27 "%0DP%10!d!: DPMST_UpReplyRequest() UnpackSideband failed for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_UpReplyRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c728 29 "%0DP%10!d!: DPMST_UpReplyRequest() EncodeRequest failed for device=%11!d!, reqId=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_UpReplyRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dp_mst_topology_c760 32 "%0DP%10!d!: DP MST up request reply received,  ReqId: %11!d!, status: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_UpReplyRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pReqInfo->eReqID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c747 30 "%0DP%10!d!: DPMST_UpReplyRequest() PackSidebandMsg failed for device=%11!d!, reqId=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_UpReplyRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c755 31 "%0DP%10!d!: DPMST_UpReplyRequest() AuxWrite failed for device=%11!d!, reqId=%12!d!, status=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_UpReplyRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+pReqInfo->eReqID, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c711 28 "%0DP%10!d!: DPMST_UpReplyRequest() DecodeReply failed for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_UpReplyRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c676 26 "%0DP%10!d!: DPMST_UpReplyRequest() Invalid message sequence for device=%11!d!,  status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_UpReplyRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c649 25 "%0DP%10!d!: DPMST_UpReplyRequest() AuxRead failed for device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_UpReplyRequest
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c2430 90 "%0DP%10!d!: DPMST_UpdateTargetGUID() DP_WriteGUID failed, status=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_UpdateTargetGUID
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c2425 89 "%0DP%10!d!: DPMST_UpdateTargetGUID() DP_GetDisplayContainerGUID failed, status=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_UpdateTargetGUID
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_mst_topology_c1556 62 "%0DP%10!d!: Configure Rx VC slots, VCPayLoadID=%11!d!, StartSlot=%12!d!, SlotCount=%13!d!, status=0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_WriteVCSlots
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uVCId, ItemLong -- 11
+uStartSlot, ItemLong -- 12
+uSlotCount, ItemLong -- 13
+eStatus, ItemLong -- 14
+}
+#typev dp_mst_topology_c1545 60 "%0DP%10!d!: DPMST_WriteVCSlots() Timeout  device=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_WriteVCSlots
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_mst_topology_c1525 59 "%0DP%10!d!: DPMST_WriteVCSlots(Slot count) Failed for device=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_WriteVCSlots
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c1517 58 "%0DP%10!d!: DPMST_WriteVCSlots(Start slot) Failed for device=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_WriteVCSlots
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c1509 57 "%0DP%10!d!: DPMST_WriteVCSlots(VC ID) Failed for device=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_WriteVCSlots
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_topology_c1500 56 "%0DP%10!d!: DPMST_WriteVCSlots(Payload table update) Failed for device=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_WriteVCSlots
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->eDeviceID, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_c986 111 "%0DP%10!d!:DPMST_TopologyGetLinkCount(): Sink=%11!d! not available, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_GetTopologyInfo
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->eMSTStreamId, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_mst_c226 54 "%0DP%10!d!: DPMST_QuerySinkInfo() Query failed, status=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPMST_Open
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_dsc_c802 115 "%0DP%10!d!: DPMST_TopologyIsCommonDecompressionNode: Unexpected streamID: stream ID = %11!d!, partner stream ID=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=IsDSCConfigurationRequired
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->eMSTStreamId, ItemLong -- 11
+pPartnerStreamCtx->eMSTStreamId, ItemLong -- 12
+}
+#typev dp_dsc_c802 116 "%0DP%10!d!: DPMST_TopologyIsCommonDecompressionNode: Unexpected MST LCT for stream and partner strean, LCT = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=IsDSCConfigurationRequired
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pSinkInfo->uLinkCountTotal, ItemLong -- 11
+}
+#typev dp_dsc_c802 117 "%0DP%10!d!: DPMST_TopologyIsCommonDecompressionNode: Unexpected RAD size for stream and partner strean, RAD size = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=IsDSCConfigurationRequired
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uRADSize, ItemLong -- 11
+}

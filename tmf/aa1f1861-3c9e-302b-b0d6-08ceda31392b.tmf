@@ -1,0 +1,97 @@
+// PDB:  qcsmmu7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:36:738 (UTC) [tracepdb]
+aa1f1861-3c9e-302b-b0d6-08ceda31392b SMMU // SRC=Driver.cpp MJ= MN=
+#typev Driver_cpp397 27 "%0 Driver.cpp::%!FUNC! : Exit." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=OnDeviceAdd
+{
+}
+#typev Driver_cpp390 26 "%0 Driver.cpp::%!FUNC!::390 :Power Resources Initialization failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=OnDeviceAdd
+{
+}
+#typev Driver_cpp378 25 "%0 Driver.cpp::%!FUNC!::378 : Failed WdfInterruptCreate with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=OnDeviceAdd
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Driver_cpp345 24 "%0 Driver.cpp::%!FUNC!::345 :INFO WdfDeviceWdmGetDeviceObject returned PDEVICE_OBJECT=0x%10!p!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=OnDeviceAdd
+{
+pDevice->PPwrDevObj, ItemPtr -- 10
+}
+#typev Driver_cpp331 23 "%0 Driver.cpp::%!FUNC!::331 : Could not get device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=OnDeviceAdd
+{
+}
+#typev Driver_cpp315 22 "%0 Driver.cpp::%!FUNC!::315 : Failed WdfDeviceCreate with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=OnDeviceAdd
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Driver_cpp297 21 "%0 Driver.cpp::%!FUNC!::297 :Error: WdfDeviceInitAssignWdmIrpPreprocessCallback failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=OnDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev Driver_cpp254 20 "%0 Driver.cpp::%!FUNC! :Enter." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=OnDeviceAdd
+{
+}
+#typev Driver_cpp153 15 "%0 Driver.cpp::%!FUNC! :Enter." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=OnDriverCleanup
+{
+}
+#typev Driver_cpp216 19 "%0 Driver.cpp::%!FUNC!::216 :IOMMU Interface not up, HVX is not enabled, go ahead with legacy SMMU driver" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmmuCheckHVXStatus
+{
+}
+#typev Driver_cpp211 18 "%0 Driver.cpp::%!FUNC!::211 :IOMMU API Not found, HVX is not enabled, go ahead with legacy SMMU driver" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmmuCheckHVXStatus
+{
+}
+#typev Driver_cpp206 17 "%0 Driver.cpp::%!FUNC!::206 :CreateDomain Failed, HVX is not enabled, go ahead with legacy SMMU driver" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmmuCheckHVXStatus
+{
+}
+#typev Driver_cpp202 16 "%0 Driver.cpp::%!FUNC!::202 : HVX Enabled, Skip legacy SMMU driver Initialization" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmmuCheckHVXStatus
+{
+}
+#typev Driver_cpp531 37 "%0 Driver.cpp::%!FUNC! : Exit." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=SmmuDpc
+{
+}
+#typev Driver_cpp527 36 "%0 Driver.cpp::%!FUNC!::527 :Decide on default behavior for interrupt servicing" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SmmuDpc
+{
+}
+#typev Driver_cpp522 35 "%0 Driver.cpp::%!FUNC!::522 : Client DPC returned FAILURE for faulted context index:[0x%10!x!]" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmmuDpc
+{
+pDevice->SmmuContextBankList [idx].ContextIndex, ItemLong -- 10
+}
+#typev Driver_cpp505 34 "%0 Driver.cpp::%!FUNC!::505 : Unidentified interrupt or Invalid Client ID" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmmuDpc
+{
+}
+#typev Driver_cpp469 33 "%0 Driver.cpp::%!FUNC!::469 : Failed device context integrity check" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmmuDpc
+{
+}
+#typev Driver_cpp463 32 "%0 Driver.cpp::%!FUNC!::463 : Failed to GetDeviceContext" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SmmuDpc
+{
+}
+#typev Driver_cpp459 31 "%0 Driver.cpp::%!FUNC! : Enter." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=SmmuDpc
+{
+}
+#typev Driver_cpp545 38 "%0 Driver.cpp::%!FUNC! : Enter." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=SmmuEvtDeviceSurpriseRemoval
+{
+}
+#typev Driver_cpp428 30 "%0 Driver.cpp::%!FUNC! : Exit." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=SmmuIsr
+{
+}
+#typev Driver_cpp426 29 "%0 Driver.cpp::%!FUNC!::426 : Enter." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=SmmuIsr
+{
+}
+#typev Driver_cpp425 28 "%0 Driver.cpp::%!FUNC! : Enter." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=SmmuIsr
+{
+}
+#typev Driver_cpp140 14 "%0 Driver.cpp::%!FUNC! :Exit." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=DriverEntry
+{
+}
+#typev Driver_cpp129 13 "%0 Driver.cpp::%!FUNC!::129 :Exit. Failed to initialize G_SmmuGlobalDataPtr %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=EntryExit FUNC=DriverEntry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Driver_cpp114 12 "%0 Driver.cpp::%!FUNC!::114 :Exit. WdfDriverCreate failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=EntryExit FUNC=DriverEntry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Driver_cpp95 11 "%0 Driver.cpp::%!FUNC!::95 :Exit. Failed to instantiate SmmuGlobalDataClass" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=EntryExit FUNC=DriverEntry
+{
+}
+#typev Driver_cpp82 10 "%0 Driver.cpp::%!FUNC! :Enter." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=DriverEntry
+{
+}

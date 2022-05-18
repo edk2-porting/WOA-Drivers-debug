@@ -1,0 +1,68 @@
+// PDB:  qcdiagrouter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+ba03a70c-85ab-394a-1005-3d59f97071f5 QCDiagRouter // SRC=DiagProtocol.c MJ= MN=
+#typev DiagProtocol_c906 22 "%0%!FUNC!: Enable HDLC" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Protocol FUNC=diag_enable_hdlc
+{
+}
+#typev DiagProtocol_c898 21 "%0%!FUNC!: Failed to acquire lock DiagRouter_HDLC_Protocol_Update_Lock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Protocol FUNC=diag_enable_hdlc
+{
+}
+#typev DiagProtocol_c787 18 "%0%!FUNC!:Incorrect Non-HDLC header" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Protocol FUNC=diag_extract_non_hdlc_pkt
+{
+}
+#typev DiagProtocol_c803 20 "%0%!FUNC!:Incorrect end byte %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Protocol FUNC=diag_extract_non_hdlc_pkt
+{
+packetEndByte, ItemLong -- 10
+}
+#typev DiagProtocol_c793 19 "%0%!FUNC!: Invalid non-hdlc packet length %10!u!, expected %11!u!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Protocol FUNC=diag_extract_non_hdlc_pkt
+{
+(unsigned int)src_size, ItemLong -- 10
+(unsigned int)pktlen, ItemLong -- 11
+}
+#typev DiagProtocol_c313 10 "%0DIAGROUTER: Bad RX CRC " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Protocol FUNC=diag_extract_pkt
+{
+}
+#typev DiagProtocol_c556 16 "%0diag_get_rx_pkt: packet decode returned without packet boundary " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Protocol FUNC=diag_get_rx_pkt
+{
+}
+#typev DiagProtocol_c550 15 "%0 %!FUNC!:Received good packet. cancel error recovery" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Protocol FUNC=diag_get_rx_pkt
+{
+}
+#typev DiagProtocol_c541 14 "%0%!FUNC!: Start DiagErrorRecoveryTimer" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Protocol FUNC=diag_get_rx_pkt
+{
+}
+#typev DiagProtocol_c527 13 "%0 %!FUNC!:Enable HDLC" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Protocol FUNC=diag_get_rx_pkt
+{
+}
+#typev DiagProtocol_c518 12 "%0 %!FUNC!:Max bad bytes received are %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Protocol FUNC=diag_get_rx_pkt
+{
+pDevContext->DiagTransport.MaxBadBytesReceived, ItemLong -- 10
+}
+#typev DiagProtocol_c493 11 "%0%!FUNC!: Failed to acquire lock DiagRouter_HDLC_Protocol_Update_Lock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Protocol FUNC=diag_get_rx_pkt
+{
+}
+#typev DiagProtocol_c635 17 "%0diag_hdlc_encode: Error in special case. Need memcpy!!! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Protocol FUNC=diag_hdlc_encode
+{
+}
+#typev DiagProtocol_c920 23 "%0%!FUNC!: bad packet %10!p! or length %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Protocol FUNC=diag_packet_complete
+{
+packet, ItemPtr -- 10
+(unsigned int)len, ItemLong -- 11
+}
+#typev DiagProtocol_c948 25 "%0%!FUNC!:Command might be in HDLC format" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Protocol FUNC=diag_packet_complete
+{
+}
+#typev DiagProtocol_c943 24 "%0%!FUNC!:Incorrect Non-HDLC header" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Protocol FUNC=diag_packet_complete
+{
+}
+#typev DiagProtocol_c966 28 "%0%!FUNC!:Partial packet" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Protocol FUNC=diag_packet_complete
+{
+}
+#typev DiagProtocol_c961 27 "%0%!FUNC!:Valid packet" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Protocol FUNC=diag_packet_complete
+{
+}
+#typev DiagProtocol_c955 26 "%0%!FUNC!: Invalid NHDLC packet length %10!u!, expected %11!u!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Protocol FUNC=diag_packet_complete
+{
+(unsigned int)len, ItemLong -- 10
+(unsigned int)pktlen, ItemLong -- 11
+}

@@ -1,0 +1,110 @@
+// PDB:  qcdxkm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:02:688 (UTC) [tracepdb]
+a11c040a-62c6-3b5e-f8af-f8b4159a3cc3 src // SRC=edid.c MJ= MN=
+#typev edid_c1340 10 "%0EDIDValidateEDIDHeader: Number of EXT blocks(%10!d!) is corrupted, set it to 0" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDIDValidateEDIDHeader
+{
+pEDIDData[EDID_CEA_EXTENSION_FLAG_OFFSET], ItemLong -- 10
+}
+#typev edid_c1767 11 "%0Extended audio data block present in CEA block : %10!d! not parsed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_GetAudioModeList
+{
+uCEABlockIndex, ItemLong -- 10
+}
+#typev edid_c3114 15 "%0EDID: Rejecting CEA mode. VIC Id %10!d! is not supported" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_InsertShortVideoDesc
+{
+uVicId, ItemLong -- 10
+}
+#typev edid_c3550 14 "%0Rejecting video mode %10!d! spec type %11!d!. No match found." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_InsertVideoFormat
+{
+eVideoMode, ItemLong -- 10
+pEdidSharedData->eEDIDSpecType, ItemLong -- 11
+}
+#typev edid_c3329 12 "%0EDID: Rejecting mode %10!d!x%11!d! @%12!d! KHz. Spec type not supported %13!d! vs %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_Parser_Detail_Desc
+{
+sModeInfo.uActiveH, ItemLong -- 10
+sModeInfo.uActiveV, ItemLong -- 11
+sModeInfo.uPixelFreq, ItemLong -- 12
+pEdidSharedData->eEDIDSpecType, ItemLong -- 13
+gEDIDSupportedVideoModeLUT[uMasterIndex].eEDIDSpecType, ItemLong -- 14
+}
+#typev edid_c3377 13 "%0EDID: Rejecting mode %10!d!x%11!d! with pclk %12!d! KHz. Reached limit of maximum number of modes (%13!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_Parser_InsertDispFormat
+{
+pModeInfo->uActiveH, ItemLong -- 10
+pModeInfo->uActiveV, ItemLong -- 11
+pModeInfo->uPixelFreq, ItemLong -- 12
+EDID_DISP_MODE_LIST_MAX_NUM, ItemLong -- 13
+}
+#typev edid_c3679 18 "%0EDID: Rejecting large Aspect Ratio %10!d!:%11!d! vs allowed: %12!d!:1" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_RejectFilteredModes
+{
+pModeInfo->uActiveH, ItemLong -- 10
+pModeInfo->uActiveV, ItemLong -- 11
+EDID_MAX_ASPECT_RATIO, ItemLong -- 12
+}
+#typev edid_c3740 25 "%0EDID: Rejecting mode %10!d!x%11!d! with pclk %12!d! KHz. Min refresh rate: %13!d! vs allowed: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_RejectFilteredModes
+{
+pModeInfo->uActiveH, ItemLong -- 10
+pModeInfo->uActiveV, ItemLong -- 11
+pModeInfo->uPixelFreq, ItemLong -- 12
+pModeInfo->uRefreshRate, ItemLong -- 13
+pEdidSharedData->uMinModeRefreshRate, ItemLong -- 14
+}
+#typev edid_c3732 24 "%0EDID: Rejecting mode %10!d!x%11!d! with pclk %12!d! KHz. Min height: %13!d! vs allowed: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_RejectFilteredModes
+{
+pModeInfo->uActiveH, ItemLong -- 10
+pModeInfo->uActiveV, ItemLong -- 11
+pModeInfo->uPixelFreq, ItemLong -- 12
+pModeInfo->uActiveV, ItemLong -- 13
+pEdidSharedData->uMinModeHeight, ItemLong -- 14
+}
+#typev edid_c3723 23 "%0EDID: Rejecting mode %10!d!x%11!d! with pclk %12!d! KHz. Min width: %13!d! vs allowed: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_RejectFilteredModes
+{
+pModeInfo->uActiveH, ItemLong -- 10
+pModeInfo->uActiveV, ItemLong -- 11
+pModeInfo->uPixelFreq, ItemLong -- 12
+pModeInfo->uActiveH, ItemLong -- 13
+pEdidSharedData->uMinModeWidth, ItemLong -- 14
+}
+#typev edid_c3714 22 "%0EDID: Rejecting mode %10!d!x%11!d! with pclk %12!d! KHz. Max refresh rate: %13!d! vs allowed: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_RejectFilteredModes
+{
+pModeInfo->uActiveH, ItemLong -- 10
+pModeInfo->uActiveV, ItemLong -- 11
+pModeInfo->uPixelFreq, ItemLong -- 12
+pModeInfo->uRefreshRate, ItemLong -- 13
+pEdidSharedData->uMaxModeRefreshRate, ItemLong -- 14
+}
+#typev edid_c3705 21 "%0EDID: Rejecting mode %10!d!x%11!d! with pclk %12!d! KHz. Max height: %13!d! vs allowed: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_RejectFilteredModes
+{
+pModeInfo->uActiveH, ItemLong -- 10
+pModeInfo->uActiveV, ItemLong -- 11
+pModeInfo->uPixelFreq, ItemLong -- 12
+pModeInfo->uActiveV, ItemLong -- 13
+pEdidSharedData->uMaxModeHeight, ItemLong -- 14
+}
+#typev edid_c3696 20 "%0EDID: Rejecting mode %10!d!x%11!d! with pclk %12!d! KHz. Max width: %13!d! vs allowed: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_RejectFilteredModes
+{
+pModeInfo->uActiveH, ItemLong -- 10
+pModeInfo->uActiveV, ItemLong -- 11
+pModeInfo->uPixelFreq, ItemLong -- 12
+pModeInfo->uActiveH * pModeInfo->uActiveV, ItemLong -- 13
+pEdidSharedData->uMaxModeWidth, ItemLong -- 14
+}
+#typev edid_c3687 19 "%0EDID: Rejecting mode %10!d!x%11!d! with pclk %12!d! KHz. Max pixels: %13!d! vs allowed: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_RejectFilteredModes
+{
+pModeInfo->uActiveH, ItemLong -- 10
+pModeInfo->uActiveV, ItemLong -- 11
+pModeInfo->uPixelFreq, ItemLong -- 12
+pModeInfo->uActiveH * pModeInfo->uActiveV, ItemLong -- 13
+pEdidSharedData->uMaxModePixels, ItemLong -- 14
+}
+#typev edid_c3673 17 "%0EDID: Rejecting odd width %10!d!x%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_RejectFilteredModes
+{
+pModeInfo->uActiveH, ItemLong -- 10
+pModeInfo->uActiveV, ItemLong -- 11
+}
+#typev edid_c3662 16 "%0EDID: Rejecting mode %10!d!x%11!d! with pclk %12!d! KHz. Required bw: %13!I64u! greather than allowed: %14!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=EDID_RejectFilteredModes
+{
+pModeInfo->uActiveH, ItemLong -- 10
+pModeInfo->uActiveV, ItemLong -- 11
+pModeInfo->uPixelFreq, ItemLong -- 12
+uBandwidth, ItemULongLong -- 13
+uMaxBandwidth, ItemULongLong -- 14
+}

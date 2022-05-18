@@ -1,0 +1,287 @@
+// PDB:  qcSubsysThermalMgr.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+be5c1f24-23fc-356e-c922-51fdae164d2b SubsysThermalMgr // SRC=mitigation.c MJ= MN=
+#typev mitigation_c317 34 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Exit with %10!s! " //   LEVEL=INFO FLAGS=EntryExit FUNC=InitializeMitigationDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c311 33 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Successfully initialized Subsys Thermal Mitigation Device :%10!s! " //   LEVEL=CRIT FLAGS=TRACE_MITIGATION FUNC=InitializeMitigationDevice
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev mitigation_c306 32 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::WdfDeviceCreateDeviceInterface failed for mitigation-device: %10!s! with %11!s!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=InitializeMitigationDevice
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev mitigation_c295 31 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::WdfDeviceAddQueryInterface failed for mitigation-device: %10!s! with %11!s!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=InitializeMitigationDevice
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev mitigation_c266 30 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid mitigation device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=InitializeMitigationDevice
+{
+}
+#typev mitigation_c258 29 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid common device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=InitializeMitigationDevice
+{
+}
+#typev mitigation_c250 28 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=InitializeMitigationDevice
+{
+}
+#typev mitigation_c244 27 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=InitializeMitigationDevice
+{
+}
+#typev mitigation_c317 34 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Exit with %10!s! " //   LEVEL=INFO FLAGS=EntryExit FUNC=InitializeMitigationDevice$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c311 33 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Successfully initialized Subsys Thermal Mitigation Device :%10!s! " //   LEVEL=CRIT FLAGS=TRACE_MITIGATION FUNC=InitializeMitigationDevice$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev mitigation_c306 32 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::WdfDeviceCreateDeviceInterface failed for mitigation-device: %10!s! with %11!s!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=InitializeMitigationDevice$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev mitigation_c295 31 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::WdfDeviceAddQueryInterface failed for mitigation-device: %10!s! with %11!s!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=InitializeMitigationDevice$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev mitigation_c266 30 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid mitigation device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=InitializeMitigationDevice$fin$0
+{
+}
+#typev mitigation_c258 29 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid common device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=InitializeMitigationDevice$fin$0
+{
+}
+#typev mitigation_c250 28 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=InitializeMitigationDevice$fin$0
+{
+}
+#typev mitigation_c244 27 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=InitializeMitigationDevice$fin$0
+{
+}
+#typev mitigation_c447 46 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::WdfCollectionAdd failed for qmiClientInfoCollection with %10!s! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c431 45 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::QmiAllocateClient for device :%10!s! failed with %11!s!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev mitigation_c416 44 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::qmiServiceObj is NULL!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+}
+#typev mitigation_c407 43 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::QMI client with instance id: 0x%10!X! already allocated." //   LEVEL=INFO FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+pQmiClientInfo->qmiInstanceID, ItemLong -- 10
+}
+#typev mitigation_c399 42 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Mitigation device: %10!s! initialization failed with %11!s! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev mitigation_c392 41 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::ReadMitigationConfiguratiomFromRegistry failed with %10!s! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c384 40 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::WdfObjectAllocateContext failed with %10!s! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c375 39 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid common driver context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+}
+#typev mitigation_c460 47 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Exit with %10!s!" //   LEVEL=INFO FLAGS=EntryExit FUNC=MitigationDeviceAdd
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c367 38 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid driver handle !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+}
+#typev mitigation_c359 37 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid common device context !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+}
+#typev mitigation_c352 36 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd
+{
+}
+#typev mitigation_c344 35 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=MitigationDeviceAdd
+{
+}
+#typev mitigation_c447 46 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::WdfCollectionAdd failed for qmiClientInfoCollection with %10!s! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c431 45 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::QmiAllocateClient for device :%10!s! failed with %11!s!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev mitigation_c416 44 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::qmiServiceObj is NULL!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd$fin$0
+{
+}
+#typev mitigation_c407 43 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::QMI client with instance id: 0x%10!X! already allocated." //   LEVEL=INFO FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd$fin$0
+{
+pQmiClientInfo->qmiInstanceID, ItemLong -- 10
+}
+#typev mitigation_c399 42 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Mitigation device: %10!s! initialization failed with %11!s! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev mitigation_c392 41 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::ReadMitigationConfiguratiomFromRegistry failed with %10!s! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c384 40 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::WdfObjectAllocateContext failed with %10!s! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c375 39 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid common driver context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd$fin$0
+{
+}
+#typev mitigation_c460 47 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Exit with %10!s!" //   LEVEL=INFO FLAGS=EntryExit FUNC=MitigationDeviceAdd$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c367 38 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid driver handle !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd$fin$0
+{
+}
+#typev mitigation_c359 37 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid common device context !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd$fin$0
+{
+}
+#typev mitigation_c352 36 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationDeviceAdd$fin$0
+{
+}
+#typev mitigation_c344 35 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=MitigationDeviceAdd$fin$0
+{
+}
+#typev mitigation_c220 26 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Exit with %10!s! " //   LEVEL=INFO FLAGS=EntryExit FUNC=MitigationPassiveCoolingCb
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c212 25 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::SendThermalMitigationRequest failed for device: %10!s! with %11!s!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev mitigation_c203 24 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Mitigation device:%10!s! is not currently active, skipping the mitigation request" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev mitigation_c195 23 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid common driver context !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+}
+#typev mitigation_c187 22 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid driver handle !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+}
+#typev mitigation_c180 21 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid common device context !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+}
+#typev mitigation_c172 20 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb
+{
+}
+#typev mitigation_c165 19 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=MitigationPassiveCoolingCb
+{
+}
+#typev mitigation_c220 26 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Exit with %10!s! " //   LEVEL=INFO FLAGS=EntryExit FUNC=MitigationPassiveCoolingCb$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c212 25 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::SendThermalMitigationRequest failed for device: %10!s! with %11!s!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev mitigation_c203 24 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Mitigation device:%10!s! is not currently active, skipping the mitigation request" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev mitigation_c195 23 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid common driver context !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb$fin$0
+{
+}
+#typev mitigation_c187 22 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid driver handle !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb$fin$0
+{
+}
+#typev mitigation_c180 21 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid common device context !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb$fin$0
+{
+}
+#typev mitigation_c172 20 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=MitigationPassiveCoolingCb$fin$0
+{
+}
+#typev mitigation_c165 19 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=MitigationPassiveCoolingCb$fin$0
+{
+}
+#typev mitigation_c140 18 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Exit with %10!s! " //   LEVEL=INFO FLAGS=EntryExit FUNC=SendThermalMitigationRequest
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c76 13 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid QMI client info!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest
+{
+}
+#typev mitigation_c129 17 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Succesfully sent mitigation request for Mitigation device: %10!s!, Requested Percentage %11!u!, Level %12!u! " //   LEVEL=CRIT FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+percentage, ItemLong -- 11
+level, ItemLong -- 12
+}
+#typev mitigation_c123 16 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Mitigation-device: %10!s!, QMI_TMD_SET_MITIGATION_LEVEL_REQ_V01 retured 0x%11!x! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+tmd_set_mitigation_level_resp.resp.error, ItemLong -- 11
+}
+#typev mitigation_c114 15 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Mitigation-device: %10!s!, qmi_client_send_msg_sync returned %11!d! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+qmiRet, ItemLong -- 11
+}
+#typev mitigation_c90 14 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::GetMitigationLevelFromPercentage failed with %10!s! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c67 12 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid common device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest
+{
+}
+#typev mitigation_c59 11 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest
+{
+}
+#typev mitigation_c52 10 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=SendThermalMitigationRequest
+{
+}
+#typev mitigation_c140 18 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Exit with %10!s! " //   LEVEL=INFO FLAGS=EntryExit FUNC=SendThermalMitigationRequest$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c76 13 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid QMI client info!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest$fin$0
+{
+}
+#typev mitigation_c129 17 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Succesfully sent mitigation request for Mitigation device: %10!s!, Requested Percentage %11!u!, Level %12!u! " //   LEVEL=CRIT FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+percentage, ItemLong -- 11
+level, ItemLong -- 12
+}
+#typev mitigation_c123 16 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Mitigation-device: %10!s!, QMI_TMD_SET_MITIGATION_LEVEL_REQ_V01 retured 0x%11!x! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+tmd_set_mitigation_level_resp.resp.error, ItemLong -- 11
+}
+#typev mitigation_c114 15 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Mitigation-device: %10!s!, qmi_client_send_msg_sync returned %11!d! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+qmiRet, ItemLong -- 11
+}
+#typev mitigation_c90 14 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::GetMitigationLevelFromPercentage failed with %10!s! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev mitigation_c67 12 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid common device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest$fin$0
+{
+}
+#typev mitigation_c59 11 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=SendThermalMitigationRequest$fin$0
+{
+}
+#typev mitigation_c52 10 "%0 [%!LEVEL!] mitigation.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=SendThermalMitigationRequest$fin$0
+{
+}

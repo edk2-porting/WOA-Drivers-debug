@@ -1,0 +1,114 @@
+// PDB:  qcsubsys7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+4de533aa-0b17-34cb-54dc-e4ec40162a69 subsys // SRC=adsp_dolby.c MJ= MN=
+#typev adsp_dolby_c124 12 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Exit with %10!s! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=CreateQ6adDMFInterfaceModule
+{
+status, ItemNTSTATUS -- 10
+}
+#typev adsp_dolby_c94 11 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::DMFDeviceContext not found in %!FUNC!" //   LEVEL=LOG_ERR_ FLAGS=ADSP FUNC=CreateQ6adDMFInterfaceModule
+{
+}
+#typev adsp_dolby_c86 10 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=CreateQ6adDMFInterfaceModule
+{
+}
+#typev adsp_dolby_c124 12 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Exit with %10!s! " //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=CreateQ6adDMFInterfaceModule$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev adsp_dolby_c94 11 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::DMFDeviceContext not found in %!FUNC!" //   LEVEL=LOG_ERR_ FLAGS=ADSP FUNC=CreateQ6adDMFInterfaceModule$fin$0
+{
+}
+#typev adsp_dolby_c86 10 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=CreateQ6adDMFInterfaceModule$fin$0
+{
+}
+#typev adsp_dolby_c391 30 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Free memory allocated for IP authentication" //   LEVEL=LOG_INFO FLAGS=ADSP FUNC=FreeDolbyLicense
+{
+}
+#typev adsp_dolby_c383 29 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=FreeDolbyLicense
+{
+}
+#typev adsp_dolby_c554 36 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Exit. status = %10!s!, result = %11!d!, hdl = %12!p!" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=GetLicenseDataSize
+{
+status, ItemNTSTATUS -- 10
+result != NULL ? *result : 0, ItemLong -- 11
+hdl != NULL ? *hdl : 0, ItemPtr -- 12
+}
+#typev adsp_dolby_c549 35 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::GetDPPItemSize_KMDF() failed! status = %10!s!" //   LEVEL=LOG_WARN FLAGS=ADSP FUNC=GetLicenseDataSize
+{
+dppStatus, ItemNTSTATUS -- 10
+}
+#typev adsp_dolby_c525 34 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::ZwQueryInformationFile() failed.  status = 0x%10!08X!, ioStatus.Status = 0x%11!08X!" //   LEVEL=LOG_WARN FLAGS=ADSP FUNC=GetLicenseDataSize
+{
+status, ItemLong -- 10
+ioStatus.Status, ItemLong -- 11
+}
+#typev adsp_dolby_c512 33 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::ZwOpenFile() failed.  status = 0x%10!08X!, ioStatus.Status = 0x%11!08X!" //   LEVEL=LOG_WARN FLAGS=ADSP FUNC=GetLicenseDataSize
+{
+status, ItemLong -- 10
+ioStatus.Status, ItemLong -- 11
+}
+#typev adsp_dolby_c474 32 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=GetLicenseDataSize
+{
+}
+#typev adsp_dolby_c274 23 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Registering for Q6AD Interface Notification succeeded." //   LEVEL=LOG_INFO FLAGS=ADSP FUNC=InitializeDolbyLicense
+{
+}
+#typev adsp_dolby_c270 22 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Registering for Q6AD Interface Notification failed.  status = 0x%10!08X!" //   LEVEL=LOG_WARN FLAGS=ADSP FUNC=InitializeDolbyLicense
+{
+status, ItemLong -- 10
+}
+#typev adsp_dolby_c256 21 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::GetDPP_KMDF() failed!  status = %10!s!" //   LEVEL=LOG_WARN FLAGS=ADSP FUNC=InitializeDolbyLicense
+{
+dppStatus, ItemNTSTATUS -- 10
+}
+#typev adsp_dolby_c242 20 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::ZwReadFile() failed.  status = 0x%10!08X!" //   LEVEL=LOG_WARN FLAGS=ADSP FUNC=InitializeDolbyLicense
+{
+status, ItemLong -- 10
+}
+#typev adsp_dolby_c219 19 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Manufacturer ID is 0x%10!08X!" //   LEVEL=LOG_INFO FLAGS=ADSP FUNC=InitializeDolbyLicense
+{
+*(ULONG*)context->pAuthCmdBuffer, ItemLong -- 10
+}
+#typev adsp_dolby_c215 18 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::QueryManufacturerIdFromRegistry() failed!  status = %10!s!" //   LEVEL=LOG_WARN FLAGS=ADSP FUNC=InitializeDolbyLicense
+{
+status, ItemNTSTATUS -- 10
+}
+#typev adsp_dolby_c195 17 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::MmAllocateContiguousMemorySpecifyCache, Starting virtual address=%10!p!" //   LEVEL=LOG_INFO FLAGS=ADSP FUNC=InitializeDolbyLicense
+{
+context->pAuthCmdBuffer, ItemPtr -- 10
+}
+#typev adsp_dolby_c190 16 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::MmAllocateContiguousMemorySpecifyCache() failed!" //   LEVEL=LOG_WARN FLAGS=ADSP FUNC=InitializeDolbyLicense
+{
+}
+#typev adsp_dolby_c172 15 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Found %10!d! bytes of license data." //   LEVEL=LOG_INFO FLAGS=ADSP FUNC=InitializeDolbyLicense
+{
+dwItemSize, ItemLong -- 10
+}
+#typev adsp_dolby_c164 14 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::GetLicenseDataSize() failed.  status = 0x%10!08X!" //   LEVEL=LOG_WARN FLAGS=ADSP FUNC=InitializeDolbyLicense
+{
+status, ItemLong -- 10
+}
+#typev adsp_dolby_c148 13 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=InitializeDolbyLicense
+{
+}
+#typev adsp_dolby_c570 37 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=Q6ADInterfacePostOpenCallback
+{
+}
+#typev adsp_dolby_c419 31 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=QueryManufacturerIdFromRegistry
+{
+}
+#typev adsp_dolby_c356 27 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Dolby license registration failed. Audio media requiring 3rd party license may not play!" //   LEVEL=LOG_WARN FLAGS=ADSP FUNC=SendDolbyLicense
+{
+}
+#typev adsp_dolby_c360 28 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Audio authentication request sent successfully." //   LEVEL=LOG_INFO FLAGS=ADSP FUNC=SendDolbyLicense
+{
+}
+#typev adsp_dolby_c327 26 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::DMFDeviceContext not found in %!FUNC!" //   LEVEL=LOG_ERR_ FLAGS=ADSP FUNC=SendDolbyLicense
+{
+}
+#typev adsp_dolby_c319 25 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Dolby license buffer is empty. Audio media requiring 3rd party license may not play!" //   LEVEL=LOG_WARN FLAGS=ADSP FUNC=SendDolbyLicense
+{
+}
+#typev adsp_dolby_c311 24 "%0 [%!LEVEL!] adsp_dolby.c::%!FUNC!::Entry" //   LEVEL=LOG_INFO FLAGS=EntryExit FUNC=SendDolbyLicense
+{
+}

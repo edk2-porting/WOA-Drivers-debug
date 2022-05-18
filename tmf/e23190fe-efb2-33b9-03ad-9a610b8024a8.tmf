@@ -1,0 +1,368 @@
+// PDB:  qcipcrouter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+e23190fe-efb2-33b9-03ad-9a610b8024a8 latest // SRC=driver.c MJ= MN=
+#typev driver_c414 19 "%0%10!s!:%11!d!: IPC Router::DriverEntry, WdfDriverCreate failed with status %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=EntryExit FUNC=DriverEntry
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev driver_c395 18 "%0%10!s!:%11!d!: IPC Router::DriverEntry, built %12!s! %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=DriverEntry
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+__DATE__, ItemString -- 12
+__TIME__, ItemString -- 13
+}
+// PDB:  qcipcrouter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev driver_c904 40 "%0%10!s!:%11!d!: Creating IPC Device" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCCreateDevice
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c684 34 "%0%10!s!:%11!d!: Got Count: %12!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+(uint64)glink_params->intents[j].count, ItemULongLong -- 12
+}
+#typev driver_c676 33 "%0%10!s!:%11!d!: Got Size: %12!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+(uint64)glink_params->intents[j].size, ItemULongLong -- 12
+}
+#typev driver_c651 32 "%0%10!s!:%11!d!: Got Max Intents: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+max_intents, ItemLong -- 12
+}
+#typev driver_c643 31 "%0%10!s!:%11!d!: Got Options: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+glink_params->options, ItemLong -- 12
+}
+#typev driver_c635 30 "%0%10!s!:%11!d!: Got PortName: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+glink_params->name, ItemString -- 12
+}
+#typev driver_c620 29 "%0%10!s!:%11!d!: Got RemoteSS: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+glink_params->remote_ss, ItemString -- 12
+}
+#typev driver_c605 28 "%0%10!s!:%11!d!: Got Transport: %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+glink_params->transport, ItemString -- 12
+}
+#typev driver_c578 27 "%0%10!s!:%11!d!: Got Type: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+xport->type, ItemLong -- 12
+}
+#typev driver_c545 26 "%0%10!s!:%11!d!: Got NumTransports: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+xports, ItemLong -- 12
+}
+#typev driver_c526 25 "%0%10!s!:%11!d!: IPCCreateDevice failed with status 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev driver_c513 24 "%0%10!s!:%11!d!: ipc_router_core_init failed with status code 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+rc, ItemLong -- 12
+}
+#typev driver_c506 23 "%0%10!s!:%11!d!: Processor ID not specified in registry, use default (1)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c502 22 "%0%10!s!:%11!d!: Got processor ID: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+processor_id, ItemLong -- 12
+}
+#typev driver_c490 21 "%0%10!s!:%11!d!: WdfDriverOpenParametersRegistryKey failed with status 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Wdf FUNC=IPCEvtDeviceAdd
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev driver_c755 41 "%0%10!s!:%11!d!: Deleting IPC Device" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceContextCleanup
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c753 35 "%0%10!s!:%11!d!: Entered IPCEvtDeviceContextCleanup" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=IPCEvtDeviceContextCleanup
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c832 39 "%0%10!s!:%11!d!: IPCEvtDeviceD0Entry PreviousState = %12!d! !" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtDeviceD0Entry
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+PreviousState, ItemLong -- 12
+}
+#typev driver_c797 38 "%0%10!s!:%11!d!: Entered WdfPowerDeviceD3Final" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=IPCEvtDeviceD0Exit
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c794 37 "%0%10!s!:%11!d!: Entered IPCEvtDeviceD0Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=IPCEvtDeviceD0Exit
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1118 43 "%0%10!s!:%11!d!: FileClose received in IPC control object." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtDeviceFileClose
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1107 42 "%0%10!s!:%11!d!: FileCreate received in IPC control object." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtDeviceFileCreate
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c780 36 "%0%10!s!:%11!d!: IPC Router::IPCEvtDriverUnload" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=IPCEvtDriverUnload
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c353 16 "%0%10!s!:%11!d!: %12!s! called" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoCanceledOnQueue
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+__FUNCTION__, ItemString -- 12
+}
+#typev driver_c1697 72 "%0%10!s!:%11!d!: IOCTL_IPC_RX_PEEK recieved a invalid pPortContext" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1691 71 "%0%10!s!:%11!d!: Ioctl IOCTL_IPC_RX_PEEK received." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1729 74 "%0%10!s!:%11!d!: IOCTL_IPC_EVENT_PEEK recieved a invalid pPortContext" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1725 73 "%0%10!s!:%11!d!: Ioctl IOCTL_IPC_EVENT_PEEK received." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1450 59 "%0%10!s!:%11!d!: ipc_router_core_open failed with status 0x%12!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+rc, ItemLong -- 12
+}
+#typev driver_c1434 58 "%0%10!s!:%11!d!: WdfIoQueueCreate failed with status 0x%12!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev driver_c1422 57 "%0%10!s!:%11!d!: WdfIoQueueCreate failed with status 0x%12!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev driver_c1410 56 "%0%10!s!:%11!d!: WdfIoQueueCreate failed with status 0x%12!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev driver_c1373 55 "%0%10!s!:%11!d!: WdfObjectAllocateContext failed with status 0x%12!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev driver_c1355 54 "%0%10!s!:%11!d!: Ioctl IOCTL_IPC_CORE_OPEN received." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1474 62 "%0%10!s!:%11!d!: ipc_router_core_close failed with status 0x%12!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+rc, ItemLong -- 12
+}
+#typev driver_c1467 61 "%0%10!s!:%11!d!: IOCTL_IPC_CORE_CLOSE recieved a invalid pPortContext" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1463 60 "%0%10!s!:%11!d!: Ioctl IOCTL_IPC_CORE_CLOSE received." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1755 75 "%0%10!s!:%11!d!: invalid IOCTL!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1678 70 "%0%10!s!:%11!d!: Ioctl IOCTL_IPC_UNREG_SERVER received." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1673 69 "%0%10!s!:%11!d!: Ioctl IOCTL_IPC_REG_SERVER received." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1493 64 "%0%10!s!:%11!d!: invalid parameter in IOCTL_IPC_READ_OOB request!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1563 66 "%0%10!s!:%11!d!: invalid event!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1501 65 "%0%10!s!:%11!d!: IOCTL_IPC_READ_OOB recieved a invalid pPortContext" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1489 63 "%0%10!s!:%11!d!: Ioctl IOCTL_IPC_READ_OOB received." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1585 67 "%0%10!s!:%11!d!: Ioctl IOCTL_IPC_FIND_ALL_SERVERS received." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1666 68 "%0%10!s!:%11!d!: IOCTL_IPC_UNREG_SERVER recieved a invalid pPortContext" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1342 53 "%0%10!s!:%11!d!: NULL file object handle for request!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1329 52 "%0%10!s!:%11!d!: Ioctl 0x%12!x! received in IPC control object." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoDeviceControl
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+IoControlCode, ItemLong -- 12
+}
+#typev driver_c1190 47 "%0%10!s!:%11!d!: output buffer invalid or too small. %12!I64u! < %13!I64u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoRead
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+(uint64)Length, ItemULongLong -- 12
+(uint64)information, ItemULongLong -- 13
+}
+#typev driver_c1156 46 "%0%10!s!:%11!d!: IPCEvtIoRead recieved a invalid pPortContext" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoRead
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1148 45 "%0%10!s!:%11!d!: NULL file object handle for request!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoRead
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1138 44 "%0%10!s!:%11!d!: Read %12!I64u! bytes received in IPC control object." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoRead
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+(uint64)Length, ItemULongLong -- 12
+}
+#typev driver_c365 17 "%0%10!s!:%11!d!: ActionFlags = 0x%12!08X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoStop
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+ActionFlags, ItemLong -- 12
+}
+#typev driver_c1249 49 "%0%10!s!:%11!d!: input buffer invalid or too small. %12!I64u! < %13!I64u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoWrite
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+(uint64)Length, ItemULongLong -- 12
+(uint64)information, ItemULongLong -- 13
+}
+#typev driver_c1265 51 "%0%10!s!:%11!d!: IPCEvtIoWrite recieved a invalid pPortContext" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoWrite
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1257 50 "%0%10!s!:%11!d!: NULL file object handle for request!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=IPCEvtIoWrite
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c1240 48 "%0%10!s!:%11!d!: Write %12!I64u! bytes received in IPC control object." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Wdf FUNC=IPCEvtIoWrite
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+(uint64)Length, ItemULongLong -- 12
+}
+#typev driver_c237 14 "%0%10!s!:%11!d!: malloc failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=event_cb
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c311 15 "%0%10!s!:%11!d!: IPC_ROUTER_EVENT_CLOSED received for port handle 0x%12!p!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=event_cb
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+port->handle, ItemPtr -- 12
+}
+#typev driver_c215 13 "%0%10!s!:%11!d!: NULL port context" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=event_cb
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c436 20 "%0%10!s!:%11!d!: NULL xport in pnp_notification!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Wdf FUNC=pnp_notification
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c140 12 "%0%10!s!:%11!d!: malloc failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=rx_cb
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c114 11 "%0%10!s!:%11!d!: Addition overflow" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=rx_cb
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev driver_c108 10 "%0%10!s!:%11!d!: NULL port context" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Wdf FUNC=rx_cb
+{
+__FILE__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}

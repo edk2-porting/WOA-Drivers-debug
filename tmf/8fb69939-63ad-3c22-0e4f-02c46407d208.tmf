@@ -1,0 +1,159 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+8fb69939-63ad-3c22-0e4f-02c46407d208 src // SRC=dp_link.c MJ= MN=
+#typev dp_host_c456 19 "%0DP%10!d!: RG output parameters uTS_INT_PLUS1: %11!d! uY_FRAC_ENUM: %12!d! uX_INT: %13!d! uSlotCount: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_Host_SetMode
+{
+psDisplayInfo->eDisplayId, ItemLong -- 10
+psRGConfig->uTS_INT_PLUS1, ItemLong -- 11
+psRGConfig->uY_FRAC_ENUM, ItemLong -- 12
+psRGConfig->uX_INT, ItemLong -- 13
+psRGConfig->uSlotCount, ItemLong -- 14
+}
+#typev dp_host_c456 18 "%0DP%10!d!: RG output parameters dMinSlotCount: %11!s! uPBN: %12!d! dMaxSlotCount: %13!s! dChosenSlotCount: %14!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_Host_SetMode
+{
+psDisplayInfo->eDisplayId, ItemLong -- 10
+psRGConfig->dMinSlotCount, ItemDouble -- 11
+psRGConfig->uPBN, ItemLong -- 12
+psRGConfig->dMaxSlotCount, ItemDouble -- 13
+psRGConfig->dChosenSlotCount, ItemDouble -- 14
+}
+#typev dp_host_c456 17 "%0DP%10!d!: RG input parameters uBPP: %11!d!, bYUV420: %12!d!, bSynchronousClk:%13!d!, bDSCEnabled: %14!d!, bFECEnabled: %15!d! fDSCOverHead: %16!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_Host_SetMode
+{
+psDisplayInfo->eDisplayId, ItemLong -- 10
+psDisplayInfo->uBPP, ItemLong -- 11
+psDisplayInfo->bYUV420, ItemLong -- 12
+psDisplayInfo->bSynchronousClk, ItemLong -- 13
+psDisplayInfo->bDSCEnabled, ItemLong -- 14
+psDisplayInfo->bFECEnabled, ItemLong -- 15
+psDisplayInfo->fDSCOverHead, ItemDouble -- 16
+}
+#typev dp_host_c456 16 "%0DP%10!d!: RG input parameters uVisWidth: %11!d!, uPixelClockInKhz: %12!u!, dLinkClockInMhz: %13!s!, uNumberOfLanes: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_Host_SetMode
+{
+psDisplayInfo->eDisplayId, ItemLong -- 10
+psDisplayInfo->uVisWidth, ItemLong -- 11
+psDisplayInfo->uPixelClockInKhz, ItemLong -- 12
+psDisplayInfo->dLinkClockInMhz, ItemDouble -- 13
+psDisplayInfo->uNumberOfLanes, ItemLong -- 14
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_link_c1462 22 "%0DP%10!d!: Link Settings - bSynchronousClk=%11!d!, uSWMvid=%12!d!, uSWNvid=%13!d!, uNvidFactor=%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CalculateLink
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->bSynchronousClk, ItemLong -- 11
+pPixClkInfo->uSWMvid, ItemLong -- 12
+pPixClkInfo->uSWNvid, ItemLong -- 13
+uNvidFactor, ItemLong -- 14
+}
+#typev dp_link_c1456 21 "%0DP%10!d!: Link Settings - uMVal=%11!d!, uNVal=%12!d!, uDVal=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CalculateLink
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+pPixClkInfo->uPixelClk_M, ItemLong -- 11
+pPixClkInfo->uPixelClk_N, ItemLong -- 12
+pPixClkInfo->uPixelClk_2D, ItemLong -- 13
+}
+#typev dp_link_c1451 20 "%0DP%10!d!: Link Settings - uLinkRate=%11!d!, VCODivClk=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CalculateLink
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+uLinkRate, ItemLong -- 11
+uVCODivClkMHz, ItemLong -- 12
+}
+#typev dp_link_c1038 10 "%0DP_CalculateTU: Invalid Input(s) lclk: %10!s!, pclk: %11!s!, actual_pclk: %12!s!, dwidth: %13!s!, nlanes: %14!d!, bpp: %15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CalculateTU
+{
+lclk, ItemDouble -- 10
+pclk, ItemDouble -- 11
+actual_pclk, ItemDouble -- 12
+dwidth, ItemDouble -- 13
+nlanes, ItemLong -- 14
+bpp, ItemLong -- 15
+}
+#typev dp_link_c1152 15 "%0DP%10!d!: TU output parameters uValidLowerBoundary: %11!d! uLowerBoundaryCount: %12!d! uUpperBoundaryCount: %13!d! dRatioByTU: %14!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CalculateTU
+{
+psDisplayInfo->eDisplayId, ItemLong -- 10
+psTUConfig->uValidLowerBoundary, ItemLong -- 11
+psTUConfig->uLowerBoundaryCount, ItemLong -- 12
+psTUConfig->uUpperBoundaryCount, ItemLong -- 13
+psTUConfig->dRatioByTU, ItemDouble -- 14
+}
+#typev dp_link_c1145 14 "%0DP%10!d!: TU output parameters uTuSize: %11!d! uDelayStartLink: %12!d! bBoundaryModEnable:%13!d! uValidBoundaryLink:%14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CalculateTU
+{
+psDisplayInfo->eDisplayId, ItemLong -- 10
+psTUConfig->uTuSize, ItemLong -- 11
+psTUConfig->uDelayStartLink, ItemLong -- 12
+psTUConfig->bBoundaryModEnable, ItemLong -- 13
+psTUConfig->uValidBoundaryLink, ItemLong -- 14
+}
+#typev dp_link_c1138 13 "%0DP%10!d!: TU input parameters dActualPixelClk: %11!s!, dActualLinkClk: %12!s!, uOriginalWidth: %13!d!, uOriginalhbp: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CalculateTU
+{
+psDisplayInfo->eDisplayId, ItemLong -- 10
+psDisplayInfo->dActualPixelClk, ItemDouble -- 11
+psDisplayInfo->dActualLinkClk, ItemDouble -- 12
+psDisplayInfo->uOriginalWidth, ItemLong -- 13
+psDisplayInfo->uOriginalhbp, ItemLong -- 14
+}
+#typev dp_link_c1129 12 "%0DP%10!d!: TU input parameters uBPP: %11!d!, ePixelFormat: %12!d!, bSynchronousClk: %13!d!, bDSCEnabled: %14!d!, bFECEnabled: %15!d!, bRB2Timing: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CalculateTU
+{
+psDisplayInfo->eDisplayId, ItemLong -- 10
+psDisplayInfo->uBPP, ItemLong -- 11
+psDisplayInfo->ePixelFormat, ItemLong -- 12
+psDisplayInfo->bSynchronousClk, ItemLong -- 13
+psDisplayInfo->bDSCEnabled, ItemLong -- 14
+psDisplayInfo->bFECEnabled, ItemLong -- 15
+psDisplayInfo->bRB2Timing, ItemLong -- 16
+}
+#typev dp_link_c1121 11 "%0DP%10!d!: TU input parameters uWidth: %11!d!, dPixelClockInMhz: %12!s!, dLinkClockInMhz: %13!s!, dHBlankPeriod: %14!s!, uNumberOfLanes: %15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CalculateTU
+{
+psDisplayInfo->eDisplayId, ItemLong -- 10
+psDisplayInfo->uWidth, ItemLong -- 11
+psDisplayInfo->dPixelClockInMhz, ItemDouble -- 12
+psDisplayInfo->dLinkClockInMhz, ItemDouble -- 13
+psDisplayInfo->dHBlankPeriod, ItemDouble -- 14
+psDisplayInfo->uNumberOfLanes, ItemLong -- 15
+}
+#typev dp_link_c1778 23 "%0DP%10!d!: Lane config - voltage swing:%11!d!(req:%12!d!), pre-emphasis:%13!d!(req:%14!d!), status:0x%15!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_LinkSetupPreemphSwing
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->uVoltageSwingLevel, ItemLong -- 11
+uVoltSwingLvl, ItemLong -- 12
+pDeviceCtx->uPreEmphasisLevel, ItemLong -- 13
+uPreemphasisLvl, ItemLong -- 14
+eStatus, ItemLong -- 15
+}
+#typev dp_link_c2124 32 "%0DP%10!d!: Link training channel equalization Failed (eStatus=%11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_LinkTraining_ChannelEqualization
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_link_c2067 29 "%0DP%10!d!: Link training channel equalization: clock recovery failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_LinkTraining_ChannelEqualization
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_link_c2063 28 "%0DP%10!d!: Link training Channel EQ fallback triggered, attempt to reduce lane count first" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_LinkTraining_ChannelEqualization
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_link_c2077 30 "%0DP%10!d!: Link training Channel EQ , Symbol Lock and Inter-lane align Done" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_LinkTraining_ChannelEqualization
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_link_c2110 31 "%0DP%10!d!: Link training channel equalization failed : max attempts with same drive settings" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_LinkTraining_ChannelEqualization
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_link_c1939 27 "%0DP%10!d!: Link training clock recovery Failed (eStatus=%11!d!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_LinkTraining_ClockRecovery
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev dp_link_c1878 24 "%0DP%10!d!: Link training clock recovery successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_LinkTraining_ClockRecovery
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_link_c1889 25 "%0DP%10!d!: Link training clock recovery failed: max voltage swing reached" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_LinkTraining_ClockRecovery
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_link_c1900 26 "%0DP%10!d!: Link training clock recovery failed: max attempts with same drive settings" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_LinkTraining_ClockRecovery
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}

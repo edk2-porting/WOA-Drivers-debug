@@ -1,0 +1,56 @@
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+c019a2fb-11be-38f0-ac91-620d64c46d53 logging.wp63 // SRC=MPQcdbIface.c MJ= MN=
+#typev MPDeviceLogging_c810 14 "%0%!FUNC!::clear handle :%10!p! and pfileobj : %11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_CancelDeviceLogThread
+{
+pHandle, ItemPtr -- 10
+pFileObject, ItemPtr -- 11
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPDeviceLogging_c600 19 "%0%!FUNC!::pfileObj is : %10!p! and drain immediate failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MPLOG_DeviceLogThread
+{
+pFileObject, ItemPtr -- 10
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev MPQcdbIface_c620 13 "%0%!FUNC!::Ioctl Handle : %10!p! FileObj : %11!p! ioctl : %12!x! size : %13!d! buffer: %14!p!, status=%15!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ConfigureTxMode
+{
+pHandle, ItemPtr -- 10
+FileObject, ItemPtr -- 11
+IoControlCode, ItemLong -- 12
+nInputBufferSize, ItemLong -- 13
+pInputBuffer, ItemPtr -- 14
+status, ItemLong -- 15
+}
+#typev MPQcdbIface_c620 12 "%0%!FUNC!::Status Unsuccessful!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=ConfigureTxMode
+{
+}
+#typev MPQcdbIface_c143 11 "%0%!FUNC!::MBBIoctl_SendQcdbIOCTL irp->IoStatus.Status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MBBIoctl_SendQcdbIOCTL
+{
+status, ItemLong -- 10
+}
+#typev MPQcdbIface_c138 10 "%0%!FUNC!::MBBIoctl_SendQcdbIOCTL timed out  0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=MBBIoctl_SendQcdbIOCTL
+{
+ntstatus, ItemLong -- 10
+}
+// PDB:  qcmbb7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:16:708 (UTC) [tracepdb]
+#typev qbi_os_win_c1173 17 "%0%!FUNC!::SetEventMask failed with status:%10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=qbi_os_win_configure_device_logging
+{
+Status, ItemLong -- 10
+}
+#typev qbi_os_win_c1173 16 "%0%!FUNC!::SetLoggingMasks failed with status:%10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=qbi_os_win_configure_device_logging
+{
+Status, ItemLong -- 10
+}
+#typev qbi_os_win_c1173 15 "%0%!FUNC!::SetRuntimeMasks failed with status:%10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=MBB_WPP FUNC=qbi_os_win_configure_device_logging
+{
+Status, ItemLong -- 10
+}
+#typev qbi_os_win_c1173 18 "%0%!FUNC!::ntstatus : 0x%10!x! phandle:%11!p! pFile:%12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=MBB_WPP FUNC=qbi_os_win_configure_device_logging
+{
+ntstatus, ItemLong -- 10
+*pHandle, ItemPtr -- 11
+*pFileObject, ItemPtr -- 12
+}

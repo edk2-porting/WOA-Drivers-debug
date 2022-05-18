@@ -1,0 +1,160 @@
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+c4fa774e-8633-3167-5689-3081ffbd354a vcxproj // SRC=cdc_slave_device_handler.c MJ= MN=
+#typev ioctl_manager_c441 40 "%0=CDC: <CDC slave API returned an error, temperature read failed.>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ioctl_spkr_prot_read_temperature
+{
+}
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+#typev cdc_slave_device_handler_c919 39 "%0=CDC: <cdc_device_info_table_add_internal_codec returned an error, 0x%10!x!>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_device_info_table_add_internal_codec
+{
+rc, ItemLong -- 10
+}
+#typev cdc_slave_device_handler_c875 38 "%0=CDC: <cdc_device_info_table_reset_external, Incorrect device row no passed, Exiting> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_device_info_table_reset_external
+{
+}
+#typev cdc_slave_device_handler_c841 37 "%0=CDC: <cdc_device_info_table_reset_internal, Incorrect device row no passed, Exiting> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_device_info_table_reset_internal
+{
+}
+#typev cdc_slave_device_handler_c163 11 "%0=CDC: <cdc_device_process_existing_device, slave entry is already present, but still received a CB with presence as TRUE> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_device_process_existing_device
+{
+}
+#typev cdc_slave_device_handler_c132 10 "%0=CDC: <cdc_device_process_existing_device, entry is present, row_no_int=(%10!u!), row_no_ext=(%11!u!)> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_device_process_existing_device
+{
+row_no_internal, ItemLong -- 10
+row_no_external, ItemLong -- 11
+}
+#typev cdc_slave_device_handler_c336 12 "%0=CDC: <cdc_device_process_new_device, slave entry is not present in the table, However a new entry can not be added at this point> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_device_process_new_device
+{
+}
+#typev cdc_slave_device_handler_c344 13 "%0=CDC: <cdc_device_process_new_device, slave entry is not present in the table, Adding new slave entry to the table at row_no_int=(%10!u!), row_no_ext=(%11!u!)> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_device_process_new_device
+{
+row_no_internal, ItemLong -- 10
+row_no_external, ItemLong -- 11
+}
+#typev cdc_slave_device_handler_c820 36 "%0=CDC: <cdc_extract_internal_device_handle_info, Did not find any matching entry for the device handle=(0x%10!x!)> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_extract_internal_device_handle_info
+{
+handle, ItemLong -- 10
+}
+#typev cdc_slave_device_handler_c816 35 "%0=CDC: <cdc_extract_internal_device_handle_info, Found a matching entry for the device handle=(0x%10!x!), bus_intf=(0x%11!x!)> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_extract_internal_device_handle_info
+{
+handle, ItemLong -- 10
+*bus_intf, ItemLong -- 11
+}
+#typev cdc_slave_device_handler_c743 34 "%0=CDC: <cdc_slave_bongo_reset, toggling slave GPIOs> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_bongo_reset
+{
+}
+#typev cdc_slave_device_handler_c739 33 "%0=CDC: <cdc_slave_bongo_reset, Error activating bus, Exiting> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_slave_bongo_reset
+{
+}
+#typev cdc_slave_device_handler_c641 32 "%0=CDC: <invalid parameter for device index = %10!d!>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_slave_device_deinit
+{
+i, ItemLong -- 10
+}
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+#typev cdc_slave_device_handler_c595 31 "%0=CDC: <invalid parameter for device index = %10!d!>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_slave_device_deinit
+{
+i, ItemLong -- 10
+}
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+#typev cdc_slave_device_handler_c1172 50 "%0=CDC: <cdc_slave_device_init, Error activating bus, Exiting> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_slave_device_init
+{
+}
+#typev cdc_slave_device_handler_c1165 49 "%0=CDC: <cdc_slave_device_init, Slave type =(0x%10!x!) already intiailized > " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_device_init
+{
+slaveType, ItemLong -- 10
+}
+#typev cdc_slave_device_handler_c445 16 "%0-CDC: <cdc_slave_device_updates_cb>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_device_updates_cb
+{
+}
+#typev cdc_slave_device_handler_c441 15 "%0=CDC: <cdc_slave_device_updates_cb, Invoking client CB for device info table updates> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_device_updates_cb
+{
+}
+#typev cdc_slave_device_handler_c423 14 "%0+CDC: <cdc_slave_device_updates_cb>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_device_updates_cb
+{
+}
+#typev cdc_slave_device_handler_c556 30 "%0=CDC: <cdc_slave_device_wcd_irq_cb called with NULL slave, Exiting without processing> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_slave_device_wcd_irq_cb
+{
+}
+#typev cdc_slave_device_handler_c551 29 "%0=CDC: <cdc_slave_device_wcd_irq_cb called> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_device_wcd_irq_cb
+{
+}
+#typev cdc_slave_device_handler_c521 26 "%0-CDC: <cdc_slave_device_wcd_updates_cb>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_device_wcd_updates_cb
+{
+}
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+#typev cdc_slave_device_handler_c507 25 "%0=CDC: <WCD Slave not recognized by any HAL, returning> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_slave_device_wcd_updates_cb
+{
+}
+#typev cdc_slave_device_handler_c494 24 "%0=CDC: <is_present=(%10!u!), Slave_UID=(%11!u!)> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_device_wcd_updates_cb
+{
+cdc_slave_entry_info->is_present, ItemLong -- 10
+cdc_slave_entry_info->slave.slave_UID, ItemLong -- 11
+}
+#typev cdc_slave_device_handler_c493 23 "%0+CDC: <cdc_slave_device_wcd_updates_cb>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_device_wcd_updates_cb
+{
+}
+#typev cdc_slave_device_handler_c490 22 "%0=CDC: <cdc_slave_device_wcd_updates_cb called with NULL slave, Exiting without processing> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_slave_device_wcd_updates_cb
+{
+}
+#typev cdc_slave_device_handler_c538 28 "%0=CDC: <cdc_slave_device_wsa_irq_cb called with NULL slave, Exiting without processing> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_slave_device_wsa_irq_cb
+{
+}
+#typev cdc_slave_device_handler_c533 27 "%0=CDC: <cdc_slave_device_wsa_irq_cb called> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_device_wsa_irq_cb
+{
+}
+#typev cdc_slave_device_handler_c480 21 "%0-CDC: <cdc_slave_device_wsa_updates_cb>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_device_wsa_updates_cb
+{
+}
+#typev cdc_slave_device_handler_c472 20 "%0=CDC: <Bongo Slave not recognized by any HAL, returning> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_slave_device_wsa_updates_cb
+{
+}
+#typev cdc_slave_device_handler_c459 19 "%0=CDC: <is_present=(%10!u!), Slave_UID=(%11!u!)> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_device_wsa_updates_cb
+{
+cdc_slave_entry_info->is_present, ItemLong -- 10
+cdc_slave_entry_info->slave.slave_UID, ItemLong -- 11
+}
+#typev cdc_slave_device_handler_c458 18 "%0+CDC: <cdc_slave_device_wsa_updates_cb>" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_device_wsa_updates_cb
+{
+}
+#typev cdc_slave_device_handler_c455 17 "%0=CDC: <cdc_slave_device_wsa_updates_cb called with NULL slave, Exiting without processing> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_slave_device_wsa_updates_cb
+{
+}
+#typev cdc_slave_device_handler_c1137 48 "%0=CDC: <cdc_slave_wcd_reset, toggling slave GPIOs> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_slave_wcd_reset
+{
+}
+#typev cdc_slave_device_handler_c1126 47 "%0=CDC: <cdc_slave_wcd_reset, Error activating bus, Exiting> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_slave_wcd_reset
+{
+}
+#typev cdc_slave_device_handler_c1090 44 "%0=CDC: <sound wire enumerated: Bongo initialized for swr_type = %10!d! > " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_swr_enumerate
+{
+swr_type, ItemLong -- 10
+}
+#typev cdc_slave_device_handler_c1096 45 "%0=CDC: <cdc_swr_enumerate, Error in WAIT_FOR_EVENT wait_status, NTSTATUS=(%10!d!) for swr_type = %11!d!> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_swr_enumerate
+{
+wait_status, ItemLong -- 10
+swr_type, ItemLong -- 11
+}
+#typev cdc_slave_device_handler_c1102 46 "%0=CDC: <cdc_swr_enumerate failed for swr_type = %10!d!, wait_statu = 0x%11!x! > " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_swr_enumerate
+{
+swr_type, ItemLong -- 10
+wait_status, ItemLong -- 11
+}
+#typev cdc_slave_device_handler_c1075 43 "%0=CDC: <cdc_swr_enumerate calling swr_reset to enumerate swr_type = %10!d! > " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_swr_enumerate
+{
+swr_type, ItemLong -- 10
+}
+#typev cdc_slave_device_handler_c1072 42 "%0=CDC: <cdc_swr_enumerate, swr enumeration event created.> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_swr_enumerate
+{
+}
+#typev cdc_slave_device_handler_c1065 41 "%0=CDC: <cdc_swr_enumerate, Error activating bus, Exiting> " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=cdc_swr_enumerate
+{
+}
+// PDB:  qcauddev7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:218 (UTC) [tracepdb]
+#typev cdc_slave_device_handler_c1301 51 "%0=CDC: <cdc_wcd_slave_device_mbhc_ioctl, WCD slave is not enumerated > " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=cdc_wcd_slave_device_mbhc_ioctl
+{
+}

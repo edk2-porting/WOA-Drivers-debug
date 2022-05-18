@@ -1,0 +1,463 @@
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+f1198361-b975-35aa-191c-060094a7a4db PEP // SRC=PEP_PowerRequest.c MJ= MN=
+#typev PEP_PowerRequest_c1660 110 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=HandleDefaultPowerControlRequest
+{
+}
+#typev PEP_PowerRequest_c1645 109 "%0Cannot handle IRQL > PASSIVE: PowerControlCode= %10!s!, Device=%11!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandleDefaultPowerControlRequest
+{
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c1641 108 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1641 :Cannot handle IRQL > PASSIVE: PowerControlCode= %10!s!, Device=%11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandleDefaultPowerControlRequest
+{
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c1631 107 "%0Device Handle or PowerControl is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=HandleDefaultPowerControlRequest
+{
+}
+#typev PEP_PowerRequest_c1629 106 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1629 :Device Handle or PowerControl is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=HandleDefaultPowerControlRequest
+{
+}
+#typev PEP_PowerRequest_c1625 105 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=HandleDefaultPowerControlRequest
+{
+}
+#typev PEP_PowerRequest_c1472 94 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=HandlePStateRequest
+{
+}
+#typev PEP_PowerRequest_c1421 93 "%0Failed to allocate memory for result PowerControlCode = %10!d! for device: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePStateRequest
+{
+PowerControlCode, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c1418 92 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1418 :Failed to allocate memory for result PowerControlCode = %10!d! for device: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePStateRequest
+{
+PowerControlCode, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c1408 91 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :Device=%10!s!, pPStateNodeType->Component=%11!d!, P State Index: %12!d!, PowerControlCode= %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePStateRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+pPStateNodeType->Component, ItemLong -- 11
+pPStateNodeType->PStateIndex, ItemLong -- 12
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 13
+}
+#typev PEP_PowerRequest_c1398 90 "%0Device Handle or PowerControl is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=HandlePStateRequest
+{
+}
+#typev PEP_PowerRequest_c1396 89 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1396 :Device Handle or PowerControl is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=HandlePStateRequest
+{
+}
+#typev PEP_PowerRequest_c1391 88 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=HandlePStateRequest
+{
+}
+#typev PEP_PowerRequest_c1352 87 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=HandlePStateV2Request
+{
+}
+#typev PEP_PowerRequest_c1280 86 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :Device=%10!s!, PowerControlCode= %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePStateV2Request
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 11
+}
+#typev PEP_PowerRequest_c1273 85 "%0Input buffer for PowerControl pPStateNodeV2 is NULL for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePStateV2Request
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1270 84 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1270 :Input buffer for PowerControl pPStateNodeV2 is NULL for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePStateV2Request
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1256 83 "%0Failed to allocate memory for pResultV2 for Device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePStateV2Request
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1253 82 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1253 :Failed to allocate memory for pResultV2 for Device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePStateV2Request
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1239 81 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=HandlePStateV2Request
+{
+}
+#typev PEP_PowerRequest_c737 45 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=HandlePowerLogRequest
+{
+}
+#typev PEP_PowerRequest_c723 44 "%0Cannot handle IRQL > PASSIVE: PowerControlCode= %10!s!, Device=%11!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePowerLogRequest
+{
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c719 43 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::719 :Cannot handle IRQL > PASSIVE: PowerControlCode= %10!s!, Device=%11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePowerLogRequest
+{
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c708 42 "%0Device Handle or PowerControl is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=HandlePowerLogRequest
+{
+}
+#typev PEP_PowerRequest_c706 41 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::706 :Device Handle or PowerControl is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=HandlePowerLogRequest
+{
+}
+#typev PEP_PowerRequest_c702 40 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=HandlePowerLogRequest
+{
+}
+#typev PEP_PowerRequest_c666 39 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=HandlePowerSetSelectExternalResourceRequest
+{
+}
+#typev PEP_PowerRequest_c649 38 "%0Failed to get clock ID for Device: %10!s!, Clock Name: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePowerSetSelectExternalResourceRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+pCSES->ClockName, ItemString -- 11
+}
+#typev PEP_PowerRequest_c646 37 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::646 :Failed to get clock ID for Device: %10!s!, Clock Name: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePowerSetSelectExternalResourceRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+pCSES->ClockName, ItemString -- 11
+}
+#typev PEP_PowerRequest_c639 36 "%0PEP: CLKRGM Resource configuration failed! for Device: %10!s!, Clock Name: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePowerSetSelectExternalResourceRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+pCSES->ClockName, ItemString -- 11
+}
+#typev PEP_PowerRequest_c637 35 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::637 : for Device: %10!s!, Clock Name: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePowerSetSelectExternalResourceRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+pCSES->ClockName, ItemString -- 11
+}
+#typev PEP_PowerRequest_c635 34 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::635 :PEP: CLKRGM Resource configuration failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePowerSetSelectExternalResourceRequest
+{
+}
+#typev PEP_PowerRequest_c623 33 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :Device=%10!s!, Clock Name: %11!s!, PowerControlCode= %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePowerSetSelectExternalResourceRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+pCSES->ClockName, ItemString -- 11
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 12
+}
+#typev PEP_PowerRequest_c613 32 "%0Cannot handle IRQL > PASSIVE: PowerControlCode= %10!s!, Device=%11!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePowerSetSelectExternalResourceRequest
+{
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c609 31 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::609 :Cannot handle IRQL > PASSIVE: PowerControlCode= %10!s!, Device=%11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandlePowerSetSelectExternalResourceRequest
+{
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c598 30 "%0Device Handle or PowerControl is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=HandlePowerSetSelectExternalResourceRequest
+{
+}
+#typev PEP_PowerRequest_c596 29 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::596 :Device Handle or PowerControl is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=HandlePowerSetSelectExternalResourceRequest
+{
+}
+#typev PEP_PowerRequest_c592 28 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=HandlePowerSetSelectExternalResourceRequest
+{
+}
+#typev PEP_PowerRequest_c237 23 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=HandleSDBusPStateSetRequest
+{
+}
+#typev PEP_PowerRequest_c167 22 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=HandleSDBusPStateSetRequest
+{
+}
+#typev PEP_PowerRequest_c555 27 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=HandleSdbusPStateMmcInfoRequest
+{
+}
+#typev PEP_PowerRequest_c542 26 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=HandleSdbusPStateMmcInfoRequest
+{
+}
+#typev PEP_PowerRequest_c509 25 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=HandleSdbusPStateRegisterRequest
+{
+}
+#typev PEP_PowerRequest_c269 24 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=HandleSdbusPStateRegisterRequest
+{
+}
+#typev PEP_PowerRequest_c1586 104 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=HandleSdbusPStateRequest
+{
+}
+#typev PEP_PowerRequest_c1566 103 "%0pUlRetIndex is NULL for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandleSdbusPStateRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1564 102 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1564 :pUlRetIndex is NULL for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandleSdbusPStateRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1544 101 "%0PTempDevListNode or PPepWork is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandleSdbusPStateRequest
+{
+}
+#typev PEP_PowerRequest_c1543 100 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1543 :PTempDevListNode or PPepWork is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandleSdbusPStateRequest
+{
+}
+#typev PEP_PowerRequest_c1530 99 "%0Cannot handle IRQL > PASSIVE: PowerControlCode= %10!s!, Device=%11!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandleSdbusPStateRequest
+{
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c1526 98 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1526 :Cannot handle IRQL > PASSIVE: PowerControlCode= %10!s!, Device=%11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=HandleSdbusPStateRequest
+{
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c1516 97 "%0Device Handle or PowerControl is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=HandleSdbusPStateRequest
+{
+}
+#typev PEP_PowerRequest_c1514 96 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1514 :Device Handle or PowerControl is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=HandleSdbusPStateRequest
+{
+}
+#typev PEP_PowerRequest_c1510 95 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=HandleSdbusPStateRequest
+{
+}
+#typev PEP_PowerRequest_c1857 132 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepPowerControlComplete
+{
+}
+#typev PEP_PowerRequest_c1853 131 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :Device: %10!s!PepPowerControlComplete called" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlComplete
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1843 130 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :<--PepPowerControlComplete, Device name = %10!s!, PowerControlComplete->BytesReturned = %11!u!,PowerControlComplete->Status = %12!d! , PowerControlCode= %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlComplete
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+(uint32)PowerControlComplete->BytesReturned, ItemLong -- 11
+PowerControlComplete->Status, ItemLong -- 12
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 13
+}
+#typev PEP_PowerRequest_c1828 129 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :<--PepPowerControlComplete, Device name = %10!s!, PowerControlComplete->BytesReturned = %11!u!,PowerControlComplete->Status = %12!d! , PowerControlCode= %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlComplete
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+(uint32)PowerControlComplete->BytesReturned, ItemLong -- 11
+PowerControlComplete->Status, ItemLong -- 12
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 13
+}
+#typev PEP_PowerRequest_c1818 128 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :PowerControlCode= %10!s!, Device=%11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlComplete
+{
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c1814 127 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepPowerControlComplete
+{
+}
+#typev PEP_PowerRequest_c1811 126 "%0Power control GUID is : power default for device: %10!s!!!! i.e. unknown GUID" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlComplete
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1808 125 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1808 :Power control GUID is : power default for device: %10!s!!!! i.e. unknown GUID" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlComplete
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1799 124 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :PowerControlComplete for Device: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlComplete
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1795 123 "%0Device handle NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlComplete
+{
+}
+#typev PEP_PowerRequest_c1794 122 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1794 :Device handle NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlComplete
+{
+}
+#typev PEP_PowerRequest_c1783 121 "%0PowerControlComplete is NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlComplete
+{
+}
+#typev PEP_PowerRequest_c1782 120 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1782 :PowerControlComplete is NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlComplete
+{
+}
+#typev PEP_PowerRequest_c1776 119 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepPowerControlComplete
+{
+}
+#typev PEP_PowerRequest_c1201 80 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepPowerControlRequest
+{
+}
+#typev PEP_PowerRequest_c1149 79 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :Device: %10!s!RequestPEPWorker failed for MSFT SD P-state req" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1107 78 "%0Unrecognized SubDxState received on power control call for device : %10!s!, subDxStateUSBH: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempDevListNode->subDxStateUSBH, ItemLong -- 11
+}
+#typev PEP_PowerRequest_c1104 77 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1104 :Unrecognized SubDxState received on power control call for device : %10!s!, subDxStateUSBH: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempDevListNode->subDxStateUSBH, ItemLong -- 11
+}
+#typev PEP_PowerRequest_c1084 76 "%0Unrecognized GUID received on power control call for device : %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1081 75 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1081 :Unrecognized GUID received on power control call for device : %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1070 74 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :PowerControlCode= %10!s!, Device=%11!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequest
+{
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c1064 73 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :Device Name: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequest
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1060 72 "%0DevListNode is NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequest
+{
+}
+#typev PEP_PowerRequest_c1059 71 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1059 :DevListNode is NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequest
+{
+}
+#typev PEP_PowerRequest_c1049 70 "%0PowerControl is NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequest
+{
+}
+#typev PEP_PowerRequest_c1048 69 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1048 :PowerControl is NULL!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequest
+{
+}
+#typev PEP_PowerRequest_c1041 68 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :PowerControl=0x%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequest
+{
+PowerControl, ItemPtr -- 10
+}
+#typev PEP_PowerRequest_c1038 67 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepPowerControlRequest
+{
+}
+#typev PEP_PowerRequest_c1734 118 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepPowerControlRequestWork
+{
+}
+#typev PEP_PowerRequest_c1730 117 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :Device: %10!s!PepPowerControlRequestWork called" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequestWork
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c1707 116 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :PowerControlCode= %10!s!, Device=%11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=PepPowerControlRequestWork
+{
+PowerControlCodeTypeEnum2Str[PowerControlCode], ItemString -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+}
+#typev PEP_PowerRequest_c1699 115 "%0Device Handle is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepPowerControlRequestWork
+{
+}
+#typev PEP_PowerRequest_c1698 114 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1698 :Device Handle is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepPowerControlRequestWork
+{
+}
+#typev PEP_PowerRequest_c1689 113 "%0PowerControl is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepPowerControlRequestWork
+{
+}
+#typev PEP_PowerRequest_c1688 112 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::1688 :PowerControl is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepPowerControlRequestWork
+{
+}
+#typev PEP_PowerRequest_c1682 111 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepPowerControlRequestWork
+{
+}
+#typev PEP_PowerRequest_c135 21 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=pepParseGUIDInfo
+{
+}
+#typev PEP_PowerRequest_c129 20 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::129 :unknown GUID received on power control call, so setting the power control to POWER_DEFAULT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=pepParseGUIDInfo
+{
+}
+#typev PEP_PowerRequest_c124 19 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :GUID_XHCI_SUB_DX_STATE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=pepParseGUIDInfo
+{
+}
+#typev PEP_PowerRequest_c119 18 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :POWER_SDBUS_PSTATE_MMC_INFO" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=pepParseGUIDInfo
+{
+}
+#typev PEP_PowerRequest_c114 17 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :POWER_SDBUS_PSTATE_REQUEST" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=pepParseGUIDInfo
+{
+}
+#typev PEP_PowerRequest_c109 16 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :POWER_SDBUS_PSTATE_REGISTER" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=pepParseGUIDInfo
+{
+}
+#typev PEP_PowerRequest_c103 15 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :POWER_LOG" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=pepParseGUIDInfo
+{
+}
+#typev PEP_PowerRequest_c97 14 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :POWER_SET_SELEXTSOURCE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=pepParseGUIDInfo
+{
+}
+#typev PEP_PowerRequest_c90 13 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :POWER_TEST_CLOCK" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=pepParseGUIDInfo
+{
+}
+#typev PEP_PowerRequest_c83 12 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :POWER_CHANGE_P_STATE_V2" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=pepParseGUIDInfo
+{
+}
+#typev PEP_PowerRequest_c77 11 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :POWER_CHANGE_P_STATE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=pepParseGUIDInfo
+{
+}
+#typev PEP_PowerRequest_c71 10 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=pepParseGUIDInfo
+{
+}
+#typev PEP_PowerRequest_c924 62 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=scheduleWorkerPStateReq
+{
+}
+#typev PEP_PowerRequest_c919 61 "%0Device: %10!s! RequestPEPWorker failed for a power control request" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=scheduleWorkerPStateReq
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c915 60 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::915 :Device: %10!s!RequestPEPWorker failed for a power control request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=scheduleWorkerPStateReq
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c900 59 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=scheduleWorkerPStateReq
+{
+}
+#typev PEP_PowerRequest_c990 66 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=scheduleWorkerPStateV2Req
+{
+}
+#typev PEP_PowerRequest_c985 65 "%0Device: %10!s! RequestPEPWorker failed for a power control request" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=scheduleWorkerPStateV2Req
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c981 64 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::981 :Device: %10!s!RequestPEPWorker failed for a power control request" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=scheduleWorkerPStateV2Req
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c958 63 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=scheduleWorkerPStateV2Req
+{
+}
+#typev PEP_PowerRequest_c865 58 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=validateIOCTLparametersPStateV2
+{
+}
+#typev PEP_PowerRequest_c860 57 "%0invalid Component Index for device: %10!s!, requested component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=validateIOCTLparametersPStateV2
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+pPStateNodeV2->hdr.ComponentIndex, ItemLong -- 11
+}
+#typev PEP_PowerRequest_c857 56 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::857 :invalid Component Index for device: %10!s!, requested component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=validateIOCTLparametersPStateV2
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+pPStateNodeV2->hdr.ComponentIndex, ItemLong -- 11
+}
+#typev PEP_PowerRequest_c850 55 "%0 [Info] PEP_PowerRequest.c::%!FUNC! :pPStateNodeV2->hdr.ComponentIndex=%10!d!, PTempDevListNode->Componentcount=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_POWER_REQUEST FUNC=validateIOCTLparametersPStateV2
+{
+pPStateNodeV2->hdr.ComponentIndex, ItemLong -- 10
+PTempDevListNode->Componentcount, ItemLong -- 11
+}
+#typev PEP_PowerRequest_c844 54 "%0Invalid P-State IOCTL version for device: %10!s!, IOCTL Version sent: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=validateIOCTLparametersPStateV2
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+pPStateNodeV2->hdr.version, ItemLong -- 11
+}
+#typev PEP_PowerRequest_c841 53 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::841 :Invalid P-State IOCTL version for device: %10!s!, IOCTL Version sent: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=validateIOCTLparametersPStateV2
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+pPStateNodeV2->hdr.version, ItemLong -- 11
+}
+#typev PEP_PowerRequest_c832 52 "%0output buffer is too small to receive all of the data for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=validateIOCTLparametersPStateV2
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c829 51 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::829 :output buffer is too small to receive all of the data for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=validateIOCTLparametersPStateV2
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c814 50 "%0output buffer for pOutBufferV2 power control is NULL for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=validateIOCTLparametersPStateV2
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c811 49 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::811 :output buffer for pOutBufferV2 power control is NULL for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=validateIOCTLparametersPStateV2
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c800 48 "%0Input buffer pOutBufferV2 for power control is NULL for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_POWER_REQUEST FUNC=validateIOCTLparametersPStateV2
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c797 47 "%0 [Err ] PEP_PowerRequest.c::%!FUNC!::797 :Input buffer pOutBufferV2 for power control is NULL for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_POWER_REQUEST FUNC=validateIOCTLparametersPStateV2
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_PowerRequest_c772 46 "%0 [Verb] PEP_PowerRequest.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=validateIOCTLparametersPStateV2
+{
+}

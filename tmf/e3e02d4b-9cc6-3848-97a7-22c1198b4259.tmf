@@ -1,0 +1,208 @@
+// PDB:  qcspmi7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+e3e02d4b-9cc6-3848-97a7-22c1198b4259 kmdf // SRC=Queue.c MJ= MN=
+#typev Queue_c79 13 "%0New Peripheral Address registered through ACPI. SID: %10!d!, Upper8BitRegisterAddress: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=AddAndVerifyPeripheralAddress
+{
+uSlaveId, ItemLong -- 10
+uUpper8BitRegisterAddress, ItemLong -- 11
+}
+#typev Queue_c68 12 "%0Peripheral Address already registered in ACPI. SID: %10!d!, Upper8BitRegisterAddress: 0x%11!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=AddAndVerifyPeripheralAddress
+{
+uSlaveId, ItemLong -- 10
+uUpper8BitRegisterAddress, ItemLong -- 11
+}
+#typev Queue_c57 11 "%0Access to Peripheral is restricted. SID: %10!d!, Upper8BitRegisterAddress: 0x%11!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=AddAndVerifyPeripheralAddress
+{
+uSlaveId, ItemLong -- 10
+uUpper8BitRegisterAddress, ItemLong -- 11
+}
+#typev Queue_c47 10 "%0Invalid Peripheral Address specified in ACPI. SID: %10!d!, Upper8BitRegisterAddress: 0x%11!X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=AddAndVerifyPeripheralAddress
+{
+uSlaveId, ItemLong -- 10
+uUpper8BitRegisterAddress, ItemLong -- 11
+}
+#typev Queue_c932 59 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+}
+#typev Queue_c925 58 "%0Succesfully read connection properties from ResourceHub" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+}
+#typev Queue_c902 57 "%0Unable to get Connection Properties from Resource Hub" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+}
+#typev Queue_c892 56 "%0Unable to get Connection Properties from Resource Hub %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c868 55 "%0Unable to create WDFMEMORY object for Output  %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c856 54 "%0Unable to create WDFMEMORY object for Input  %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c836 53 "%0Unable to get ResourceHubConnectionId from File name  %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c831 52 "%0Resource Hub opened the Device" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+}
+#typev Queue_c787 51 "%0'SuperUser' opened the Device" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+}
+#typev Queue_c779 50 "%0All 'SuperUser' have already opened the Device" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+}
+#typev Queue_c761 49 "%0WDF string create failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c714 48 "%0File Name validation failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c703 47 "%0File Name is null" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+}
+#typev Queue_c666 46 "%0Unable to get the device context from Device Handle" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+}
+#typev Queue_c650 45 "%0Unable to allocate Client Context %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c641 44 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=SpmiEvtDeviceFileCreate
+{
+}
+#typev Queue_c985 65 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=SpmiEvtFileClose
+{
+}
+#typev Queue_c978 64 "%0Ordinary User closed the Device" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=SpmiEvtFileClose
+{
+}
+#typev Queue_c973 14 "%0Peripheral Address unregistered. SID: %10!d!, Upper8BitRegisterAddress: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=SpmiEvtFileClose
+{
+uSlaveId, ItemLong -- 10
+uUpper8BitRegisterAddress, ItemLong -- 11
+}
+#typev Queue_c967 63 "%0SuperUser closed the Device" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=SpmiEvtFileClose
+{
+}
+#typev Queue_c957 62 "%0Resource Hub closed the Device" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=SpmiEvtFileClose
+{
+}
+#typev Queue_c946 61 "%0Unable to get Client Ctxt from File Object" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=SpmiEvtFileClose
+{
+}
+#typev Queue_c940 60 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=SpmiEvtFileClose
+{
+}
+#typev Queue_c565 43 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+}
+#typev Queue_c559 42 "%0completing the IO request %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c556 41 "%0Request Cancelled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+}
+#typev Queue_c409 32 "%0Read Success, setting IO request information" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+}
+#typev Queue_c389 31 "%0Invalid Output Buffer size %10!I64u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+uOutBufSize, ItemULongLong -- 10
+}
+#typev Queue_c380 30 "%0Unable to retrive Output Buffer %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c368 29 "%0Zero byte read is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+}
+#typev Queue_c356 28 "%0Unable to retrive Input Buffer %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c461 35 "%0Write Success." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+}
+#typev Queue_c440 34 "%0Invalid uInBufSize %10!I64u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+uInBufSize, ItemULongLong -- 10
+}
+#typev Queue_c428 33 "%0Unable to retrive Input Buffer %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c544 40 "%0Read  Modify Write Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+}
+#typev Queue_c519 39 "%0Invalid Output Buffer size %10!I64u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+uOutBufSize, ItemULongLong -- 10
+}
+#typev Queue_c500 38 "%0Invalid uNumBytes %10!d!. Read Modify Write IOCTL only supports 1 byte Read-Modify-Write." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+pSpmiRegAccessHeader->uNumBytes, ItemLong -- 10
+}
+#typev Queue_c488 37 "%0Invalid uInBufSize %10!I64u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+uInBufSize, ItemULongLong -- 10
+}
+#typev Queue_c478 36 "%0Unable to retrive Input Buffer %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c334 27 "%0IOCTL_SPMI_BLOCK_PERIPHERALS %10!d! peripherals blocked, completing" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+uPeripheralsBlocked, ItemLong -- 10
+}
+#typev Queue_c320 26 "%0Peripheral already in use - SlaveId %10!d!, Peripheral %11!x!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+uSlaveId, ItemLong -- 10
+uUpper8BitRegisterAddress, ItemLong -- 11
+}
+#typev Queue_c304 25 "%0Failed to get device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+}
+#typev Queue_c289 24 "%0No Peripherals Blocked" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+}
+#typev Queue_c277 23 "%0Unable to retrive Input Buffer %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c264 22 "%0Operation supported only for previliged user" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+}
+#typev Queue_c238 21 "%0Spmi Config is not Initialised for this client" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+}
+#typev Queue_c225 20 "%0Unable to get Client Ctxt from File Object" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+}
+#typev Queue_c209 19 "%0%!FUNC! Queue 0x%10!p!, Request 0x%11!p! OutputBufferLength %12!d! InputBufferLength %13!d! IoControlCode %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+Queue, ItemPtr -- 10
+Request, ItemPtr -- 11
+(int) OutputBufferLength, ItemLong -- 12
+(int) InputBufferLength, ItemLong -- 13
+IoControlCode, ItemLong -- 14
+}
+#typev Queue_c208 18 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=qcspmiEvtIoDeviceControl
+{
+}
+#typev Queue_c160 17 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=qcspmiQueueInitialize
+{
+}
+#typev Queue_c153 16 "%0WdfIoQueueCreate failed %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_QUEUE FUNC=qcspmiQueueInitialize
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Queue_c130 15 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=qcspmiQueueInitialize
+{
+}

@@ -1,0 +1,137 @@
+// PDB:  qcpil.pdb
+// PDB:  Last Updated :2021-10-17:21:53:58:868 (UTC) [tracepdb]
+3126ce63-fea1-3e45-29f9-9c4eec0b2d2b PIL-Rel // SRC=image_info.c MJ= MN=
+#typev image_info_c401 22 "%0Removing item #%10!u! from the collection, and deleting object." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DeleteAllImageInfo
+{
+imageInfoIndex, ItemLong -- 10
+}
+#typev image_info_c579 23 "%0Removing item #%10!u! from the collection, and deleting object." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=DeleteImageInfoByFile
+{
+imageInfoIndex, ItemLong -- 10
+}
+// PDB:  qcpil.pdb
+// PDB:  Last Updated :2021-10-17:21:53:58:868 (UTC) [tracepdb]
+#typev image_info_c281 20 "%0Error: ImageGuid or OutImageInfo is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=GetImageInfo
+{
+}
+#typev image_info_c324 21 "%0Copying item #%10!u! into the caller's out variable." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=GetImageInfo
+{
+imageInfoIndex, ItemLong -- 10
+}
+#typev image_info_c555 25 "%0Copying item #%10!d! into the context." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=GetImageInfoByFile
+{
+imageInfoIndex, ItemLong -- 10
+}
+#typev image_info_c78 11 "%0WdfWaitLockCreate(s_RetainedImageListLock) failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageInfo
+{
+status, ItemNTSTATUS -- 10
+}
+#typev image_info_c64 10 "%0Invalid device handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageInfo
+{
+}
+#typev image_info_c78 11 "%0WdfWaitLockCreate(s_RetainedImageListLock) failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageInfo$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev image_info_c64 10 "%0Invalid device handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitImageInfo$fin$0
+{
+}
+#typev image_info_c812 35 "%0Saving ImageInfo into loaded image list failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded
+{
+}
+#typev image_info_c804 34 "%0deviceObject is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded
+{
+}
+#typev image_info_c780 32 "%0fileContext is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded
+{
+}
+#typev image_info_c768 31 "%0Image (partial GUID): %10!0x!X already marked as pre-loaded to PIL!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded
+{
+imageGuid.Data1, ItemLong -- 10
+}
+#typev image_info_c760 30 "%0Invalid TzProcessorId :%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded
+{
+tzProcessorId, ItemLong -- 10
+}
+#typev image_info_c753 29 "%0Invalid Image GUID!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded
+{
+}
+#typev image_info_c746 28 "%0Invalid file object handle!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded
+{
+}
+#typev image_info_c812 35 "%0Saving ImageInfo into loaded image list failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded$fin$0
+{
+}
+#typev image_info_c804 34 "%0deviceObject is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded$fin$0
+{
+}
+#typev image_info_c780 32 "%0fileContext is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded$fin$0
+{
+}
+#typev image_info_c768 31 "%0Image (partial GUID): %10!0x!X already marked as pre-loaded to PIL!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded$fin$0
+{
+imageGuid.Data1, ItemLong -- 10
+}
+#typev image_info_c760 30 "%0Invalid TzProcessorId :%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded$fin$0
+{
+tzProcessorId, ItemLong -- 10
+}
+#typev image_info_c753 29 "%0Invalid Image GUID!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded$fin$0
+{
+}
+#typev image_info_c746 28 "%0Invalid file object handle!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=MarkImageAsPreloaded$fin$0
+{
+}
+#typev image_info_c250 19 "%0Image successfully loaded and saved, file: %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=RetainImageInfoByFile
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev image_info_c244 18 "%0Warning: Saving image info failed, file: %10!s!." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=RetainImageInfoByFile
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev image_info_c235 17 "%0Image successfully loaded and updated: file: %10!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=RetainImageInfoByFile
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev image_info_c229 16 "%0Warning: Updating of saved image info failed, file: %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=RetainImageInfoByFile
+{
+fileContext->ImageInfo.AnsiElfImageFileName.Buffer, ItemString -- 10
+}
+#typev image_info_c139 14 "%0Error: Failed to save Image info into loaded image list." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=SaveImageInfo
+{
+}
+#typev image_info_c133 13 "%0Saved image info at index: %10!d!, file: %11!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=SaveImageInfo
+{
+listEntryIndex, ItemLong -- 10
+retainedImageInfo->AnsiElfImageFileName.Buffer, ItemString -- 11
+}
+#typev image_info_c115 12 "%0Error: Memory allocation failed for the retained image info structure." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=SaveImageInfo
+{
+}
+#typev image_info_c139 14 "%0Error: Failed to save Image info into loaded image list." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=SaveImageInfo$fin$0
+{
+}
+#typev image_info_c133 13 "%0Saved image info at index: %10!d!, file: %11!s!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=SaveImageInfo$fin$0
+{
+listEntryIndex, ItemLong -- 10
+retainedImageInfo->AnsiElfImageFileName.Buffer, ItemString -- 11
+}
+#typev image_info_c115 12 "%0Error: Memory allocation failed for the retained image info structure." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=SaveImageInfo$fin$0
+{
+}
+#typev image_info_c507 24 "%0Error: Saving ImageInfo into loaded image list failed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_IOCTLS FUNC=SaveImageInfoByFile
+{
+}
+#typev image_info_c611 27 "%0Updated image info in collection at index: %10!d!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=UpdateImageInfoByFile
+{
+imageInfoIndex, ItemLong -- 10
+}
+#typev image_info_c608 26 "%0Warning: Updating the image info not succeeded." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_IOCTLS FUNC=UpdateImageInfoByFile
+{
+}
+#typev image_info_c605 15 "%0Copying the image info into image info collection item index #%10!u!, address 0x%11!p!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_IOCTLS FUNC=UpdateImageInfoByFile
+{
+imageInfoIndex, ItemLong -- 10
+retainedImageInfo, ItemPtr -- 11
+}

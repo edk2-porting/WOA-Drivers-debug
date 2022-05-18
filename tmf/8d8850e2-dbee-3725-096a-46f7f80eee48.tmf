@@ -1,0 +1,45 @@
+// PDB:  qcdxkm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:02:688 (UTC) [tracepdb]
+8d8850e2-dbee-3725-096a-46f7f80eee48 src // SRC=dp_audio.c MJ= MN=
+#typev dp_audio_c345 14 "%0DP%10!d!: Filtered out audio mode with eFormat: %11!d! at index: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_Audio_FilterModes
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pAudioModeInfo->eAudioFormat, ItemLong -- 11
+uAudioStreamIndex, ItemLong -- 12
+}
+#typev dp_audio_c329 13 "%0DP%10!d!: Filtered configurations higher in sample rate: %11!d! KHz and channel layout: %12!d! for audio mode with eFormat: %13!d! at index: %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_Audio_FilterModes
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uAudioBaseSampleRate * uAudioSampleRateMultiplier, ItemLong -- 11
+uAudioChannelLayout, ItemLong -- 12
+pAudioModeInfo->eAudioFormat, ItemLong -- 13
+uAudioStreamIndex, ItemLong -- 14
+}
+#typev dp_audio_c296 12 "%0DP%10!d!: dp_app_audio_filter : bMSTEnabled::0x%11!x!, bMSTConstantFill:0x%12!x!, dChosenSlotCount:%13!s!, uTS_INT_PLUS1:0x%14!x!,bDSCEnabled:0x%15!x!,uDSCDTONumerator:0x%16!x!, uDSCDTODenominator:0x%17!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_Audio_FilterModes
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+bMSTEnabled, ItemLong -- 11
+bMSTConstantFill, ItemLong -- 12
+dChosenSlotCount, ItemDouble -- 13
+uTS_INT_PLUS1, ItemLong -- 14
+bDSCEnabled, ItemLong -- 15
+uDSCDTONumerator, ItemLong -- 16
+uDSCDTODenominator, ItemLong -- 17
+}
+#typev dp_audio_c286 11 "%0DP%10!d!: dp_app_audio_filter : dLinkClockInMhz:%11!s! , dPixelClockInMhz:%12!s!, uNumLanes:0x%13!x!, uHblank:0x%14!x!, uHTotal:0x%15!x!, bFECEnabled :0x%16!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_Audio_FilterModes
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+dLinkClockInMhz, ItemDouble -- 11
+dPixelClockInMhz, ItemDouble -- 12
+uNumLanes, ItemLong -- 13
+uHblank, ItemLong -- 14
+uHTotal, ItemLong -- 15
+bFECEnabled, ItemLong -- 16
+}
+#typev dp_audio_c279 10 "%0DP%10!d!: filtering uAudioBaseSampleRate :0x%11!x! uAudioSampleRateMultiplier :0x%12!x! uAudioChannelLayout :0x%13!x! for following parameters" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_Audio_FilterModes
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uAudioBaseSampleRate, ItemLong -- 11
+uAudioSampleRateMultiplier, ItemLong -- 12
+uAudioChannelLayout, ItemLong -- 13
+}

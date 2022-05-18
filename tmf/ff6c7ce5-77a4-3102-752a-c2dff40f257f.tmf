@@ -1,0 +1,49 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+ff6c7ce5-77a4-3102-752a-c2dff40f257f src // SRC=edp_psr.c MJ= MN=
+#typev edp_psr_c236 10 "%0DP%10!d!: PSR v%11!d! enabled on source and sink, verify CRC: %12!d!, second frame:%13!d!, link training cycles at exit: %14!d!us, status: 0x%15!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=eDP_PSR_Init
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+pDeviceCtx->sSinkDPCDCap.sPSRCap.uVersion, ItemLong -- 11
+sHalConfig.bVerifyCRC, ItemLong -- 12
+sHalConfig.bCaptureSecondFrame, ItemLong -- 13
+sHalConfig.uExitTrainingCycles, ItemLong -- 14
+eStatus, ItemLong -- 15
+}
+#typev edp_psr_c351 13 "%0DP%10!d!:  PSR enter (update done) Source CRC and Sink CRC not matching" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceDP FUNC=eDP_PSR_Request
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}
+#typev edp_psr_c340 12 "%0DP%10!d!: Source CRC status : 0x%11!x!,0x%12!x!,0x%13!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceDP FUNC=eDP_PSR_Request
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->uControllerCRC[0], ItemLong -- 11
+pStreamCtx->uControllerCRC[1], ItemLong -- 12
+pStreamCtx->uControllerCRC[2], ItemLong -- 13
+}
+#typev edp_psr_c327 11 "%0DP%10!d!: PSR enter (update done), status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceDP FUNC=eDP_PSR_Request
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev edp_psr_c425 16 "%0DP%10!d!:  PSR exit (exit done) Source CRC and Sink CRC not matching" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=eDP_PSR_Request
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+}
+#typev edp_psr_c414 15 "%0DP%10!d!:  PSR exit (exit done) Source CRC status : 0x%11!x!,0x%12!x!,0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=eDP_PSR_Request
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+pStreamCtx->uControllerCRC[0], ItemLong -- 11
+pStreamCtx->uControllerCRC[1], ItemLong -- 12
+pStreamCtx->uControllerCRC[2], ItemLong -- 13
+}
+#typev edp_psr_c401 14 "%0DP%10!d!: PSR exit (exit done), status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceDP FUNC=eDP_PSR_Request
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev edp_psr_c463 17 "%0DP%10!d!: PSR exit (wait for video done), status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceDP FUNC=eDP_PSR_Request
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}

@@ -1,0 +1,527 @@
+// PDB:  qcadsprpc7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+25522fea-c3fc-3b19-0964-31b9dd9677cc driver // SRC=adsprpc_vcm_stage2.c MJ= MN=
+#typev adsprpc_vcm_stage2_c449 54 "%0%10!s!: failed with status:0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=CreateSMMUAtcuDMFInterfaceModule
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c445 53 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 445 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=CreateSMMUAtcuDMFInterfaceModule
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c430 52 "%0%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=CreateSMMUAtcuDMFInterfaceModule
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c859 100 "%0%10!s!:Created, mapped and cached buffer for: fileContext:0x%11!p! virtAddr:0x%12!p! pMdl:0x%13!p! ulResId:0x%14!I64x!, buffer size:%15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCAllocContiguous
+{
+__func__, ItemString -- 10
+fileContext, ItemPtr -- 11
+MmGetMdlVirtualAddress(buf->Mdl), ItemPtr -- 12
+buf->Mdl, ItemPtr -- 13
+buf->ulResId, ItemLongLongX -- 14
+buf->size, ItemLong -- 15
+}
+#typev adsprpc_vcm_stage2_c822 99 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 822 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NULL != buf->Mdl err=STATUS_FWP_NULL_POINTER FUNC=FastRPCAllocContiguous
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c807 98 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 807 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NULL != (buf->pv = ExAllocatePool2(POOL_FLAG_NON_PAGED,                                                (size + ALIGN_4k_SIZE-1) & ALIGN_4K_MASK,                                                RPC_TAG)) err=STATUS_INSUFFICIENT_RESOURCES FUNC=FastRPCAllocContiguous
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c796 96 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 796 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NULL != (buf = (PFASTRPC_BUF)ExAllocatePool2(POOL_FLAG_NON_PAGED,                                                       sizeof(FASTRPC_BUF),                                                       RPC_TAG)) err=STATUS_INSUFFICIENT_RESOURCES FUNC=FastRPCAllocContiguous
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c791 95 "%0%10!s! Using cached buffer and mappings for: fileContext:0x%11!p! virtAddr:0x%12!p! pMdl:0x%13!p! ulResId:0x%14!I64x!, buffer size:%15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_FILE FUNC=FastRPCAllocContiguous
+{
+__func__, ItemString -- 10
+fileContext, ItemPtr -- 11
+MmGetMdlVirtualAddress(sbuf->Mdl), ItemPtr -- 12
+sbuf->Mdl, ItemPtr -- 13
+sbuf->ulResId, ItemLongLongX -- 14
+sbuf->size, ItemLong -- 15
+}
+#typev adsprpc_vcm_stage2_c770 94 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 770 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NULL != pulResId err=STATUS_INVALID_PARAMETER_6 FUNC=FastRPCAllocContiguous
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c769 93 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 769 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NULL != pMdl err=STATUS_INVALID_PARAMETER_5 FUNC=FastRPCAllocContiguous
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c195 27 "%0%10!s!: failed with status:0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCGetChannelRegistryInfo
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c153 26 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 153 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCGetChannelRegistryInfo
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c150 25 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 150 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NULL != hSubKey err=STATUS_FWP_NULL_POINTER FUNC=FastRPCGetChannelRegistryInfo
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c144 24 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 144 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCGetChannelRegistryInfo
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c143 23 "%0%10!s!: DMF_Registry_HandleOpenById returned status:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCGetChannelRegistryInfo
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c137 22 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 137 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NULL != pDmfDeviceContext err=STATUS_FWP_NULL_POINTER FUNC=FastRPCGetChannelRegistryInfo
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c1054 108 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 1054 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=(bytesReturned > 0) && (TreeRsp.BytesWritten > 0) err=STATUS_INVALID_PARAMETER FUNC=FastRPCHypAssignPhys
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c1059 109 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 1059 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=scmResponse->status == 1 err=STATUS_UNSUCCESSFUL FUNC=FastRPCHypAssignPhys
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c1053 107 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 1053 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCHypAssignPhys
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c1021 106 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 1021 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=0 != ipaListPhysAddr.QuadPart err=STATUS_FWP_NULL_POINTER FUNC=FastRPCHypAssignPhys
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c1011 105 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 1011 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NULL != (ipaListVirtAddr = MmAllocateContiguousMemorySpecifyCache(         sizeof(hyp_memprot_ipa_info_t),         lowPhysicalAddress,         highPhysicalAddress,         boundaryAddressMultiple,         MmNonCached)) err=STATUS_FWP_NULL_POINTER FUNC=FastRPCHypAssignPhys
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c1009 104 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 1009 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NULL != treeIoTarget err=STATUS_FWP_NULL_POINTER FUNC=FastRPCHypAssignPhys
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c1005 103 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 1005 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NULL != pDmfDevContext err=STATUS_FWP_NULL_POINTER FUNC=FastRPCHypAssignPhys
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c89 17 "%0Type:0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_GLINK FUNC=FastRPCIOMMUCallback
+{
+pFaultInfo->Type, ItemLong -- 10
+}
+#typev adsprpc_vcm_stage2_c88 16 "%0PhysicalDeviceObject:0x%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_GLINK FUNC=FastRPCIOMMUCallback
+{
+pFaultInfo->PhysicalDeviceObject, ItemPtr -- 10
+}
+#typev adsprpc_vcm_stage2_c87 15 "%0InputMappingId:0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_GLINK FUNC=FastRPCIOMMUCallback
+{
+pFaultInfo->InputMappingId, ItemLong -- 10
+}
+#typev adsprpc_vcm_stage2_c86 14 "%0FaultAddress:0x%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_GLINK FUNC=FastRPCIOMMUCallback
+{
+pFaultInfo->FaultAddress, ItemPtr -- 10
+}
+#typev adsprpc_vcm_stage2_c85 13 "%0DomainHandle:0x%10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_GLINK FUNC=FastRPCIOMMUCallback
+{
+pFaultInfo->DomainHandle, ItemPtr -- 10
+}
+#typev adsprpc_vcm_stage2_c84 12 "%0IOMMU FAULT......." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_GLINK FUNC=FastRPCIOMMUCallback
+{
+}
+#typev adsprpc_vcm_stage2_c956 101 "%0FastRPC Received PassThrough Service Interface Arrival! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_FILE FUNC=FastRPCPassThroughEvtModuleOnDeviceNotificationPostOpen
+{
+}
+#typev adsprpc_vcm_stage2_c978 102 "%0PassThrough Service Interface has been removed! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_FILE FUNC=FastRPCPassThroughEvtModuleOnDeviceNotificationPreClose
+{
+}
+#typev adsprpc_vcm_stage2_c375 50 "%0%10!s! failed with status:0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c307 38 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 307 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c312 39 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 312 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c315 40 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 315 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c317 41 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 317 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c319 42 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 319 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c337 47 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 337 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=0 != (sess->smmu.ulVcmId = gFastRPCSMMUInterface.VcmCreate(               vcm_start_address,               ADSPRPC_VCM_CB_SIZE,               VCM_ATTRIB_PT_NO_CACHE)) err=STATUS_FWP_NULL_POINTER FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c359 48 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 359 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=0 != (sess->smmu.ulVcmCBAssocId = gFastRPCSMMUInterface.VcmAssoc(sess->smmu.ulVcmId,                                                                                  cbHandle,                                                                                  0)) err=STATUS_FWP_NULL_POINTER FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c294 36 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 294 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c368 49 "%0%10!s!: VcmActivate for cid:%11!d! sess:0x%12!p! index:%13!d! failed with status:0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+__func__, ItemString -- 10
+cid, ItemLong -- 11
+sess, ItemPtr -- 12
+session, ItemLong -- 13
+status, ItemLong -- 14
+}
+#typev adsprpc_vcm_stage2_c335 46 "%0%10!s!: Do not apply the SW WA, vcm_start_address: 0x%11!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+__func__, ItemString -- 10
+vcm_start_address, ItemLongLongX -- 11
+}
+#typev adsprpc_vcm_stage2_c331 45 "%0%10!s!: The Version is v1! vcm_start_address: 0x%11!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+__func__, ItemString -- 10
+vcm_start_address, ItemLongLongX -- 11
+}
+#typev adsprpc_vcm_stage2_c327 44 "%0%10!s!: The Version is v2!vcm_start_address :0x%11!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+__func__, ItemString -- 10
+vcm_start_address, ItemLongLongX -- 11
+}
+#typev adsprpc_vcm_stage2_c325 43 "%0%10!s!: The Chip is SDM1000" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c299 37 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 299 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c278 35 "%0Initialize smmu. " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+}
+#typev adsprpc_vcm_stage2_c273 34 "%0Exit as smmu is already configured. " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+}
+#typev adsprpc_vcm_stage2_c267 33 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 267 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c264 32 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 264 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c257 31 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 257 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NULL != smmuIoTarget err=STATUS_FWP_NULL_POINTER FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c253 30 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 253 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c249 29 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 249 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c233 28 "%0FastRPC Received SMMU ATCU Interface Arrival " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPostOpen
+{
+}
+#typev adsprpc_vcm_stage2_c402 51 "%0SMMU ATCU Interface has been removed. " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCSMMUAtcuEvtModuleOnDeviceNotificationPreClose
+{
+}
+#typev adsprpc_vcm_stage2_c118 21 "%0%10!s!: failed with Status:0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCSmmuCallback
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c110 20 "%0%10!s!: FSR:0x%11!x!, FaultAddress:0x%12!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCSmmuCallback
+{
+__func__, ItemString -- 10
+fInfo.FsrRaw, ItemLong -- 11
+(UINT_PTR)fInfo.FaultAddrReg, ItemLongLongX -- 12
+}
+#typev adsprpc_vcm_stage2_c109 19 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 109 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSmmuCallback
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c105 18 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 105 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCSmmuCallback
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c1138 112 "%0%10!s!:failed with status 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCUnMapContigBufs
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c1134 111 "%0%10!s!: Freeing MDL:%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCUnMapContigBufs
+{
+__func__, ItemString -- 10
+mdlLocal, ItemPtr -- 11
+}
+#typev adsprpc_vcm_stage2_c1121 110 "%0%10!s!: Unmapping buf:%11!p! from listbufs" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCUnMapContigBufs
+{
+__func__, ItemString -- 10
+buf, ItemPtr -- 11
+}
+#typev adsprpc_vcm_stage2_c1212 118 "%0%10!s!: VcmActivate for cid:%11!d! sess:0x%12!p! index:%13!d! failed with status:0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmActivate
+{
+__func__, ItemString -- 10
+cid, ItemLong -- 11
+sess, ItemPtr -- 12
+session, ItemLong -- 13
+status, ItemLong -- 14
+}
+#typev adsprpc_vcm_stage2_c1200 117 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 1200 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status = FastRPCVcmSetState(TRUE)) err=status FUNC=FastRPCVcmActivate
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c1198 116 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 1198 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmActivate
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c1174 115 "%0%10!s!: VcmDeactivate for cid:%11!d! sess:0x%12!p! index:%13!d! failed with status:0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmDeactivate
+{
+__func__, ItemString -- 10
+cid, ItemLong -- 11
+sess, ItemPtr -- 12
+session, ItemLong -- 13
+status, ItemLong -- 14
+}
+#typev adsprpc_vcm_stage2_c1162 114 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 1162 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status = FastRPCVcmSetState(TRUE)) err=status FUNC=FastRPCVcmDeactivate
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c1161 113 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 1161 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmDeactivate
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c494 60 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 494 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=0 != sess->smmu.ulVcmId err=STATUS_FWP_NULL_POINTER FUNC=FastRPCVcmDeinit
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c495 61 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 495 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=0 != sess->smmu.ulVcmCBAssocId err=STATUS_FWP_NULL_POINTER FUNC=FastRPCVcmDeinit
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c525 66 "%0%10!s! failed with status:0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCVcmDeinit
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c498 62 "%0%10!s!: VcmDeactivate for cid:%11!d! sess:0x%12!p! index:%13!d! failed with status:0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmDeinit
+{
+__func__, ItemString -- 10
+cid, ItemLong -- 11
+sess, ItemPtr -- 12
+session, ItemLong -- 13
+status, ItemLong -- 14
+}
+#typev adsprpc_vcm_stage2_c503 63 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 503 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmDeinit
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c506 64 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 506 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmDeinit
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c490 59 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 490 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmDeinit
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c511 65 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 511 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmDeinit
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c482 58 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 482 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status = FastRPCVcmSetState(TRUE)) err=status FUNC=FastRPCVcmDeinit
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c480 57 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 480 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmDeinit
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c734 91 "%0User context[%10!04X!.%11!04X!]%12!s!: fileContext:0x%13!p! Mapped nSize:0x%14!I64x! nPages:%15!d!ulResId:0x%16!I64x! nLen:%17!I64d! CpuVirtAddr:0x%18!I64x! MDLvirtAddr:0x%19!p! MDLphyAddr:0x%20!I64x! pMdl:0x%21!p! DevIPA:0x%22!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmGetAddr
+{
+(DWORD32)traceMsgSystemUserProcessId, ItemLong -- 10
+traceMsgSystemUserThreadId, ItemLong -- 11
+__func__, ItemString -- 12
+fileContext, ItemPtr -- 13
+smqPage->nSize, ItemLongLongX -- 14
+nNum, ItemLong -- 15
+ulResId, ItemLongLongX -- 16
+nLen, ItemLongLong -- 17
+pvAddr, ItemLongLongX -- 18
+MmGetMdlVirtualAddress(pMdl), ItemPtr -- 19
+(UINT64) MmGetPhysicalAddress(MmGetMdlVirtualAddress(pMdl)).LowPart, ItemLongLongX -- 20
+pMdl, ItemPtr -- 21
+smqPage->PhysAddr, ItemLongLongX -- 22
+}
+#typev adsprpc_vcm_stage2_c741 92 "%0User context[%10!04X!.%11!04X!]%12!s!: fileContext:0x%13!p! Failed to map nSize:0x%14!I64x! nPages:0x%15!x! virtAddr:%16!p! pMdl:%17!p! PhyAddr/IPA:0x%18!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCVcmGetAddr
+{
+(DWORD32)traceMsgSystemUserProcessId, ItemLong -- 10
+traceMsgSystemUserThreadId, ItemLong -- 11
+__func__, ItemString -- 12
+fileContext, ItemPtr -- 13
+smqPage->nSize, ItemLongLongX -- 14
+nNum, ItemLong -- 15
+MmGetMdlVirtualAddress(pMdl), ItemPtr -- 16
+pMdl, ItemPtr -- 17
+smqPage->PhysAddr, ItemLongLongX -- 18
+}
+#typev adsprpc_vcm_stage2_c716 90 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 716 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=1 != (dwAddr = gFastRPCSMMUInterface.VcmGetDevAddr(ulResId)) err=STATUS_NO_MEMORY FUNC=FastRPCVcmGetAddr
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c714 89 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 714 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=nPages >= 1 err=STATUS_INVALID_PARAMETER_4 FUNC=FastRPCVcmGetAddr
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c713 88 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 713 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmGetAddr
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c706 87 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 706 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=reqContext != NULL err=STATUS_FWP_NULL_POINTER FUNC=FastRPCVcmGetAddr
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c705 86 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 705 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=fileContext != NULL err=STATUS_FWP_NULL_POINTER FUNC=FastRPCVcmGetAddr
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c463 56 "%0%10!s! failed with status:0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCVcmInit
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c459 55 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 459 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmInit
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c601 75 "%0User context[%10!04X!.%11!04X!]%12!s!: fileContext:0x%13!p! Reserved nSize:%14!Id! nPages:%15!Iu! nPagesfrMDL: %16!Iu!ulResId:0x%17!I64x! CpuVirtAddr:0x%18!p! pMdl:0x%19!p! MdlVirtAddr:0x%20!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmMap
+{
+(DWORD32)traceMsgSystemUserProcessId, ItemLong -- 10
+traceMsgSystemUserThreadId, ItemLong -- 11
+__func__, ItemString -- 12
+fileContext, ItemPtr -- 13
+nSize, ItemPtr -- 14
+nPages, ItemPtr -- 15
+nNum, ItemPtr -- 16
+ulResId, ItemLongLongX -- 17
+pAddr, ItemPtr -- 18
+pMdl, ItemPtr -- 19
+MmGetMdlVirtualAddress(pMdl), ItemPtr -- 20
+}
+#typev adsprpc_vcm_stage2_c599 74 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 599 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(vcmStatus = gFastRPCSMMUInterface.VcmBack(ulResId, pMdl)) err=vcmStatus FUNC=FastRPCVcmMap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c598 73 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 598 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status=(FastRPCVcmSetState(TRUE))) err=status FUNC=FastRPCVcmMap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c592 72 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 592 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=0 != (ulResId = gFastRPCSMMUInterface.VcmReserveAligned(fileContext->sess->smmu.ulVcmId,                                                                   nPages * PAGE_SIZE,                                                   GetAlignShift((INT32)nSize),                                                   VCM_READWRITE | VCM_EXECUTE |                                                   vcmMemCacheType |                                                   VCM_SUPERVISOR | VCM_USER)) err=STATUS_FWP_NULL_POINTER FUNC=FastRPCVcmMap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c578 71 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 578 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=0 != nSize err=STATUS_INVALID_PARAMETER_3 FUNC=FastRPCVcmMap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c577 70 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 577 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NULL != pMdl err=STATUS_FWP_NULL_POINTER FUNC=FastRPCVcmMap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c576 69 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 576 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmMap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c572 68 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 572 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=reqContext != NULL err=STATUS_FWP_NULL_POINTER FUNC=FastRPCVcmMap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c607 76 "%0User context[%10!04X!.%11!04X!]%12!s!: fileContext:0x%13!p! failed to reserve memory of nSize:%14!Id! nPages:%15!Iu! nPagesfrMDL: %16!Iu!ulResId:0x%17!I64x! virtAddr:0x%18!p! pMdl:0x%19!p! with status:0x%20!x! vcmStatus:0x%21!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCVcmMap
+{
+(DWORD32)traceMsgSystemUserProcessId, ItemLong -- 10
+traceMsgSystemUserThreadId, ItemLong -- 11
+__func__, ItemString -- 12
+fileContext, ItemPtr -- 13
+nSize, ItemPtr -- 14
+nPages, ItemPtr -- 15
+nNum, ItemPtr -- 16
+ulResId, ItemLongLongX -- 17
+pAddr, ItemPtr -- 18
+pMdl, ItemPtr -- 19
+status, ItemLong -- 20
+vcmStatus, ItemLong -- 21
+}
+#typev adsprpc_vcm_stage2_c571 67 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 571 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=fileContext != NULL err=STATUS_FWP_NULL_POINTER FUNC=FastRPCVcmMap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c65 11 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 65 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=gFastRPCSMMUInterface.SmmuSetPowerState != NULL err=STATUS_FWP_NULL_POINTER FUNC=FastRPCVcmSetState
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c62 10 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 62 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmSetState
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c671 84 "%0User context[%10!04X!.%11!04X!]%12!s!: fileContext:0x%13!p! unlocked virtAddr:0x%14!p! pMdl:0x%15!p! ulResId:0x%16!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmUnmap
+{
+(DWORD32)traceMsgSystemUserProcessId, ItemLong -- 10
+traceMsgSystemUserThreadId, ItemLong -- 11
+__func__, ItemString -- 12
+fileContext, ItemPtr -- 13
+MmGetMdlVirtualAddress(bufMdl), ItemPtr -- 14
+bufMdl, ItemPtr -- 15
+ulResId, ItemLongLongX -- 16
+}
+#typev adsprpc_vcm_stage2_c676 85 "%0User context[%10!04X!.%11!04X!]%12!s!:fileContext:0x%13!p! status:0x%14!x! Failed to unmap ulResId:0x%15!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCVcmUnmap
+{
+(DWORD32)traceMsgSystemUserProcessId, ItemLong -- 10
+traceMsgSystemUserThreadId, ItemLong -- 11
+__func__, ItemString -- 12
+fileContext, ItemPtr -- 13
+status, ItemLong -- 14
+ulResId, ItemLongLongX -- 15
+}
+#typev adsprpc_vcm_stage2_c670 83 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 670 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmUnmap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c668 82 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 668 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmUnmap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c665 81 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 665 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmUnmap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c663 80 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 663 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=0 != bufMdl err=STATUS_FWP_NULL_POINTER FUNC=FastRPCVcmUnmap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c662 79 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 662 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=0 != ulResId err=STATUS_FWP_NULL_POINTER FUNC=FastRPCVcmUnmap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c661 78 "%0%!FUNC! : [ERROR] status=%10!s!(at line - 661 ) (in file - adsprpc_vcm_stage2.c) " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT cond=NT_SUCCESS(status) err=status FUNC=FastRPCVcmUnmap
+{
+err, ItemNTSTATUS -- 10
+}
+#typev adsprpc_vcm_stage2_c656 77 "%0User context[%10!04X!.%11!04X!]%12!s!:skipping unmapping for: fileContext:0x%13!p! virtAddr:0x%14!p! pMdl:0x%15!p! ulResId:0x%16!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmUnmap
+{
+(DWORD32)traceMsgSystemUserProcessId, ItemLong -- 10
+traceMsgSystemUserThreadId, ItemLong -- 11
+__func__, ItemString -- 12
+fileContext, ItemPtr -- 13
+MmGetMdlVirtualAddress(bufMdl), ItemPtr -- 14
+bufMdl, ItemPtr -- 15
+ulResId, ItemLongLongX -- 16
+}

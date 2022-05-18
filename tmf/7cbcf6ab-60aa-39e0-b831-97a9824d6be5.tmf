@@ -1,0 +1,285 @@
+// PDB:  qc5gnrcoexmgr7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+7cbcf6ab-60aa-39e0-b831-97a9824d6be5 latest // SRC=NrCoexMgrQmi.c MJ= MN=
+#typev Device_c421 52 "%0%!FUNC! Exit %10!s! Error %11!d! while releasing client" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrEvtDeInitializeQCCI
+{
+ntStatus, ItemNTSTATUS -- 10
+err, ItemLong -- 11
+}
+#typev Device_c421 51 "%0%!FUNC! %10!s! QMI client already released" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrEvtDeInitializeQCCI
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev Device_c421 50 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrEvtDeInitializeQCCI
+{
+}
+// PDB:  qc5gnrcoexmgr7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev NrCoexMgrQmi_c566 49 "%0%!FUNC! Exit: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrInitializeQMIClients
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrQmi_c621 48 "%0%!FUNC! Successfully allocated client for qmi_svc_id %10!d! pwlan_coex_context->qmi_client_handle.client_handle[SrvcType] : %11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrInitializeQMIClients
+{
+SrvcType, ItemLong -- 10
+pnrcoex_mgr_context->qmi_client_handle[SrvcType].client_handle, ItemPtr -- 11
+}
+#typev NrCoexMgrQmi_c566 47 "%0%!FUNC! ERROR: Error %10!d! while trying to initialize client" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrInitializeQMIClients
+{
+qmiErr, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c566 46 "%0%!FUNC! ERROR: Failed to get info for QMI service %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrInitializeQMIClients
+{
+SrvcType, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c566 45 "%0%!FUNC! ERROR: get_service_object_v01 returned NULL object for 0x%10!0x! Service" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrInitializeQMIClients
+{
+SrvcType, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c566 44 "%0%!FUNC! ERROR: Unknown QMI Client Type" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrInitializeQMIClients
+{
+}
+#typev NrCoexMgrQmi_c566 43 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrInitializeQMIClients
+{
+}
+#typev NrCoexMgrQmi_c198 20 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIClientErrorCb
+{
+}
+#typev NrCoexMgrQmi_c194 19 "%0%!FUNC! Failed the cancel the pended IOCTL with WLAN or it is already cancelled" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIClientErrorCb
+{
+}
+#typev NrCoexMgrQmi_c182 18 "%0%!FUNC! SSR has occurred" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIClientErrorCb
+{
+}
+#typev NrCoexMgrQmi_c182 17 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIClientErrorCb
+{
+}
+#typev NrCoexMgrQmi_c1108 86 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMICoexConfigNRReq
+{
+}
+#typev NrCoexMgrQmi_c1098 85 "%0%!FUNC! ERROR: QMI_COEX_CONFIGURE_NR_REQ_V01 Failed to send QMI request %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMICoexConfigNRReq
+{
+qmiErr, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c1092 84 "%0%!FUNC! QMI QMI_COEX_CONFIGURE_NR_REQ_V01 Succeeded and  Result:%10!d! Error:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMICoexConfigNRReq
+{
+coex_config_resp->resp.result, ItemLong -- 10
+coex_config_resp->resp.error, ItemLong -- 11
+}
+#typev NrCoexMgrQmi_c1077 83 "%0%!FUNC! Disabling modem 5G NR" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMICoexConfigNRReq
+{
+}
+#typev NrCoexMgrQmi_c1072 82 "%0%!FUNC! Enabling modem 5G NR" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMICoexConfigNRReq
+{
+}
+#typev NrCoexMgrQmi_c1065 81 "%0%!FUNC! ERROR: Memory Allocation failed for coex_ind_reg_req/rsp" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMICoexConfigNRReq
+{
+}
+#typev NrCoexMgrQmi_c1057 80 "%0%!FUNC! ERROR: Memory Allocation failed for coex_ind_reg_req/rsp" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMICoexConfigNRReq
+{
+}
+#typev NrCoexMgrQmi_c1051 79 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMICoexConfigNRReq
+{
+}
+#typev NrCoexMgrQmi_c1031 78 "%0%!FUNC! QMI QMI_COEX_CONFIGURE_NR_REQ_V01 Succeeded and  Result:%10!d! Error:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMICoexConfigureCB
+{
+rsp->resp.result, ItemLong -- 10
+rsp->resp.error, ItemLong -- 11
+}
+#typev NrCoexMgrQmi_c411 33 "%0%!FUNC! Exit: Modem NR Status : %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIExtractCoexNRStatus
+{
+pnrcoex_mgr_context->nr_status_context.modem5GinUse, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c411 32 "%0%!FUNC! 5G NR status is active" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIExtractCoexNRStatus
+{
+}
+#typev NrCoexMgrQmi_c398 31 "%0%!FUNC! Entry: nr_active_valid: %10!d!, nr_active: %11!d!, band_info_valid: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIExtractCoexNRStatus
+{
+coex_nr_status_ind->nr_active_valid, ItemLong -- 10
+coex_nr_status_ind->nr_active, ItemLong -- 11
+coex_nr_status_ind->band_info_valid, ItemLong -- 12
+}
+#typev NrCoexMgrQmi_c170 16 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIExtractMccMnc
+{
+}
+#typev NrCoexMgrQmi_c167 15 "%0%!FUNC! MCC: %10!s! and MNC : %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIExtractMccMnc
+{
+mcc_mnc_info->mcc, ItemString -- 10
+mcc_mnc_info->mnc, ItemString -- 11
+}
+#typev NrCoexMgrQmi_c100 14 "%0Unexpected primary_rat %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIExtractMccMnc
+{
+sys_info->primary_rat, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c100 13 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIExtractMccMnc
+{
+}
+#typev NrCoexMgrQmi_c865 63 "%0%!FUNC! Exit %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIGetNasSysInfo
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrQmi_c807 57 "%0%!FUNC! ERROR: Invalid handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIGetNasSysInfo
+{
+}
+#typev NrCoexMgrQmi_c847 61 "%0%!FUNC! MCC: %10!s! and MNC : %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIGetNasSysInfo
+{
+pnrcoex_mgr_context->nas_sys_mcc_mnc.mcc, ItemString -- 10
+pnrcoex_mgr_context->nas_sys_mcc_mnc.mnc, ItemString -- 11
+}
+#typev NrCoexMgrQmi_c834 60 "%0%!FUNC! QMI Request Succeeded and  Result:%10!d! Error:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIGetNasSysInfo
+{
+nas_info_rsp->resp.result, ItemLong -- 10
+nas_info_rsp->resp.error, ItemLong -- 11
+}
+#typev NrCoexMgrQmi_c815 62 "%0%!FUNC! ERROR: Failed to send QMI request 0x%10!0x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIGetNasSysInfo
+{
+qmiErr, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c821 59 "%0%!FUNC! pwlan_coex_context->qmi_client_handle.nas client_handle :%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIGetNasSysInfo
+{
+pClientContext->client_handle, ItemPtr -- 10
+}
+#typev NrCoexMgrQmi_c815 58 "%0%!FUNC! ERROR: Memory Allocation failed for nas rsp" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIGetNasSysInfo
+{
+}
+#typev NrCoexMgrQmi_c802 56 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIGetNasSysInfo
+{
+}
+#typev NrCoexMgrQmi_c438 42 "%0%!FUNC! Exit %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIIndicationCallback
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev NrCoexMgrQmi_c438 41 "%0%!FUNC! ERROR: Do Nothing.0x%10!0x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIIndicationCallback
+{
+qmiStatus, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c438 39 "%0%!FUNC! ERROR: Failed qmi_client_message_decode 0x%10!0x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIIndicationCallback
+{
+qmiStatus, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c485 38 "%0%!FUNC! MCC: %10!s! and MNC : %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIIndicationCallback
+{
+pNrCoexMgrCtx->nas_sys_mcc_mnc.mcc, ItemString -- 10
+pNrCoexMgrCtx->nas_sys_mcc_mnc.mnc, ItemString -- 11
+}
+#typev NrCoexMgrQmi_c485 37 "%0%!FUNC! ERROR: Failed to Send MCC/MNC Info to WLAN" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIIndicationCallback
+{
+}
+#typev NrCoexMgrQmi_c438 36 "%0%!FUNC! ERROR: Failed qmi_client_message_decode 0x%10!0x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIIndicationCallback
+{
+qmiStatus, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c438 40 "%0%!FUNC! ERROR: DO Nothing and msg_id: 0x%10!0x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIIndicationCallback
+{
+msg_id, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c438 35 "%0%!FUNC! msg id :0x%10!0x!, qmi client context %11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIIndicationCallback
+{
+msg_id, ItemLong -- 10
+qmiClient, ItemPtr -- 11
+}
+#typev NrCoexMgrQmi_c438 34 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIIndicationCallback
+{
+}
+#typev NrCoexMgrQmi_c388 30 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMINasSysInfoExtractInd
+{
+}
+#typev NrCoexMgrQmi_c294 29 "%0%!FUNC! ERROR: qmi_ind is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMINasSysInfoExtractInd
+{
+}
+#typev NrCoexMgrQmi_c290 28 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMINasSysInfoExtractInd
+{
+}
+#typev NrCoexMgrQmi_c792 55 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMINasSysInfoExtractRsp
+{
+}
+#typev NrCoexMgrQmi_c689 54 "%0%!FUNC! ERROR: qmi_rsp is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMINasSysInfoExtractRsp
+{
+}
+#typev NrCoexMgrQmi_c685 53 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMINasSysInfoExtractRsp
+{
+}
+#typev NrCoexMgrQmi_c91 12 "%0%!FUNC! Exit: Primary RAT is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMINasSysInfoGetPrimaryRAT
+{
+primary_rat, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c56 11 "%0%!FUNC! CDMA in service (%10!d!) but HDR not (%11!d!); CDMA is primary RAT" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMINasSysInfoGetPrimaryRAT
+{
+cdma_srv_status_info->srv_status, ItemLong -- 10
+hdr_srv_status_info->srv_status, ItemLong -- 11
+}
+#typev NrCoexMgrQmi_c41 10 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMINasSysInfoGetPrimaryRAT
+{
+}
+#typev NrCoexMgrQmi_c1007 77 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterCoexStatusInd
+{
+}
+#typev NrCoexMgrQmi_c993 76 "%0%!FUNC! ERROR: QMI_COEX_INDICATION_REGISTER_REQ_V01 Failed to send QMI request 0x%10!0x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterCoexStatusInd
+{
+qmiErr, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c988 75 "%0%!FUNC! QMI QMI_COEX_INDICATION_REGISTER_REQ_V01 Succeeded and  Result:%10!d! Error:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterCoexStatusInd
+{
+coex_ind_reg_resp->resp.result, ItemLong -- 10
+coex_ind_reg_resp->resp.error, ItemLong -- 11
+}
+#typev NrCoexMgrQmi_c972 74 "%0%!FUNC! ERROR: Memory Allocation failed for coex_ind_reg_req/rsp" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterCoexStatusInd
+{
+}
+#typev NrCoexMgrQmi_c964 73 "%0%!FUNC! ERROR: Memory Allocation failed for coex_ind_reg_req/rsp" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterCoexStatusInd
+{
+}
+#typev NrCoexMgrQmi_c957 72 "%0%!FUNC! ERROR: Invalid client handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterCoexStatusInd
+{
+}
+#typev NrCoexMgrQmi_c949 71 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterCoexStatusInd
+{
+}
+#typev NrCoexMgrQmi_c938 70 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterNasSysInd
+{
+}
+#typev NrCoexMgrQmi_c923 69 "%0%!FUNC! ERROR: QMI_NAS_INDICATION_REGISTER_REQ_MSG_V01 Failed to send QMI request 0x%10!0x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterNasSysInd
+{
+qmiErr, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c918 68 "%0%!FUNC! QMI QMI_NAS_INDICATION_REGISTER_REQ_MSG_V01 Succeeded and  Result:%10!d! Error:%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterNasSysInd
+{
+nas_ind_reg_resp->resp.result, ItemLong -- 10
+nas_ind_reg_resp->resp.error, ItemLong -- 11
+}
+#typev NrCoexMgrQmi_c899 67 "%0%!FUNC! ERROR: Memory Allocation failed for nas_register_ind_req/rsp" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterNasSysInd
+{
+}
+#typev NrCoexMgrQmi_c890 66 "%0%!FUNC! ERROR: Memory Allocation failed for nas_register_ind_req/rsp" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterNasSysInd
+{
+}
+#typev NrCoexMgrQmi_c882 65 "%0%!FUNC! ERROR: Invalid client handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterNasSysInd
+{
+}
+#typev NrCoexMgrQmi_c877 64 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIRegisterNasSysInd
+{
+}
+#typev NrCoexMgrQmi_c281 27 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIWaitForSvcThenGetInfo
+{
+}
+#typev NrCoexMgrQmi_c269 26 "%0%!FUNC! ERROR: Error %10!d! while releasing client notifier handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIWaitForSvcThenGetInfo
+{
+qmiErr, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c252 25 "%0%!FUNC! ERROR: Error %10!d! while trying to get service info" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIWaitForSvcThenGetInfo
+{
+qmiErr, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c239 24 "%0%!FUNC! ERROR: Timed out waiting for QMI client." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIWaitForSvcThenGetInfo
+{
+}
+#typev NrCoexMgrQmi_c230 23 "%0%!FUNC! qmi_client_notifier_init failed :%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIWaitForSvcThenGetInfo
+{
+qmiErr, ItemLong -- 10
+}
+#typev NrCoexMgrQmi_c215 22 "%0%!FUNC! ERROR: Memory Allocation failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIWaitForSvcThenGetInfo
+{
+}
+#typev NrCoexMgrQmi_c208 21 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=NrCoexMgrQMIWaitForSvcThenGetInfo
+{
+}

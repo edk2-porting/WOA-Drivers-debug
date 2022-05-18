@@ -1,0 +1,63 @@
+// PDB:  qcquadspi7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+ff6f35e5-e901-3225-cce8-50a077793f3e latest // SRC=quad_spi.c MJ= MN=
+#typev quad_spi_c1003 23 "%0%!FLAGS!: Transaction must contain one transfer for SPI. %10!s!" //   FLAGS=ERROR FUNC=handle_transfer_complete
+{
+dma_status, ItemNTSTATUS -- 10
+}
+#typev quad_spi_c429 11 "%0pio_transfer_next_desc: read, fragment = %10!d!" //   FLAGS=DATA FUNC=pio_transfer_next_desc
+{
+desc->fragment, ItemLong -- 10
+}
+#typev quad_spi_c424 10 "%0pio_transfer_next_desc: write, fragment = %10!d!" //   FLAGS=DATA FUNC=pio_transfer_next_desc
+{
+desc->fragment, ItemLong -- 10
+}
+// PDB:  qcquadspi7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev quad_spi_c840 21 "%0quadspi_read: buffer_va 0x%10!p!, num_bytes %11!d!" //   FLAGS=DATA FUNC=quadspi_read
+{
+buffer_va, ItemPtr -- 10
+num_bytes, ItemLong -- 11
+}
+#typev quad_spi_c863 22 "%0quadspi_write:buffer_va 0x%10!p!, num_bytes %11!d!" //   FLAGS=DATA FUNC=quadspi_write
+{
+buffer_va, ItemPtr -- 10
+num_bytes, ItemLong -- 11
+}
+#typev quad_spi_c745 16 "%0service_rx_fifo--" //   FLAGS=DATA FUNC=service_rx_fifo
+{
+}
+#typev quad_spi_c740 15 "%0service_rx_fifo: ptr[%10!d!] = 0x%11!x!" //   FLAGS=DATA FUNC=service_rx_fifo
+{
+i, ItemLong -- 10
+ptr[i], ItemLong -- 11
+}
+#typev quad_spi_c728 14 "%0service_rx_fifo: ptr[%10!d!] = 0x%11!x!" //   FLAGS=DATA FUNC=service_rx_fifo
+{
+i, ItemLong -- 10
+ptr[i], ItemLong -- 11
+}
+#typev quad_spi_c713 13 "%0service_rx_fifo: Before handle Read 0x%10!x!" //   FLAGS=DATA FUNC=service_rx_fifo
+{
+rd_fifo_status, ItemLong -- 10
+}
+#typev quad_spi_c708 12 "%0service_rx_fifo++" //   FLAGS=DATA FUNC=service_rx_fifo
+{
+}
+#typev quad_spi_c823 20 "%0service_tx_fifo--" //   FLAGS=DATA FUNC=service_tx_fifo
+{
+}
+#typev quad_spi_c797 19 "%0service_tx_fifo: ptr[%10!d!] = 0x%11!x!" //   FLAGS=DATA FUNC=service_tx_fifo
+{
+i, ItemLong -- 10
+ptr[0], ItemLong -- 11
+}
+#typev quad_spi_c787 18 "%0service_tx_fifo: ptr[%10!d!] = 0x%11!x!" //   FLAGS=DATA FUNC=service_tx_fifo
+{
+i, ItemLong -- 10
+ptr[i], ItemLong -- 11
+}
+#typev quad_spi_c771 17 "%0service_tx_fifo++" //   FLAGS=DATA FUNC=service_tx_fifo
+{
+}

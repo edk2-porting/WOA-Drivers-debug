@@ -1,0 +1,224 @@
+// PDB:  qcspmi7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+fb01face-5a53-3d78-87f8-64a9e82c1efa kmdf // SRC=Device.c MJ= MN=
+#typev Device_c1059 50 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDeviceD0Entry
+{
+}
+#typev Device_c1050 49 "%0WdfSpinLockCreate failed %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=SpmiEvtDeviceD0Entry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c1044 48 "%0%!FUNC! PreviousState: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDeviceD0Entry
+{
+PreviousState, ItemLong -- 10
+}
+#typev Device_c1040 47 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDeviceD0Entry
+{
+}
+#typev Device_c1074 53 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDeviceD0Exit
+{
+}
+#typev Device_c1072 52 "%0%!FUNC! TargetState: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDeviceD0Exit
+{
+TargetState, ItemLong -- 10
+}
+#typev Device_c1068 51 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDeviceD0Exit
+{
+}
+#typev Device_c880 34 "%0Error ACPI Signature - Signature %10!d!, BufferCount %11!d!, ArgumentType %12!d!, ArgumentDataLength %13!d!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=SpmiEvtDevicePrepareHardware
+{
+pOutputBuffer->Signature, ItemLong -- 10
+pOutputBuffer->Count, ItemLong -- 11
+pOutputBuffer->Argument[0].Type, ItemLong -- 12
+pOutputBuffer->Argument[0].DataLength, ItemLong -- 13
+}
+#typev Device_c962 41 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDevicePrepareHardware
+{
+}
+#typev Device_c955 40 "%0Error initialising  spmi bus core driver. Status %10!d!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=SpmiEvtDevicePrepareHardware
+{
+spmiBusResult, ItemLong -- 10
+}
+#typev Device_c945 39 "%0Private data not read from ACPI" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=SpmiEvtDevicePrepareHardware
+{
+}
+#typev Device_c920 35 "%0Mismatch between driver and library ACPI entries for memory mapping" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=SpmiEvtDevicePrepareHardware
+{
+}
+#typev Device_c940 38 "%0Unable to Map Memory" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=SpmiEvtDevicePrepareHardware
+{
+}
+#typev Device_c923 36 "%0Mapping Memory" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDevicePrepareHardware
+{
+}
+#typev Device_c930 37 "%0Unwanted Resource Descriptor encountered" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDevicePrepareHardware
+{
+}
+#typev Device_c867 33 "%0WdfIoTargetSendIoctlSynchronously to IOCTL_ACPI_EVAL_METHOD failed %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=SpmiEvtDevicePrepareHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c818 32 "%0Unable to get the device context from Device Handle" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=SpmiEvtDevicePrepareHardware
+{
+}
+#typev Device_c810 31 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDevicePrepareHardware
+{
+}
+#typev Device_c1028 46 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDeviceReleaseHardware
+{
+}
+#typev Device_c1011 45 "%0UnMapping Memory" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDeviceReleaseHardware
+{
+}
+#typev Device_c995 44 "%0Unable to get the device context from Device Handle" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=SpmiEvtDeviceReleaseHardware
+{
+}
+#typev Device_c979 42 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=SpmiEvtDeviceReleaseHardware
+{
+}
+#typev Device_c557 26 "%0SpmiIntrCtlr_ExtendedInterruptClear failed with status %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_CORE FUNC=Spmi_ExtendedInterruptClear
+{
+result, ItemLong -- 10
+}
+#typev Device_c548 25 "%0handling Spmi_ExtendedInterruptClear with peripheral id: 0x%10!X!, uIntrClearMask: 0x%11!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=Spmi_ExtendedInterruptClear
+{
+periphId, ItemLong -- 10
+uIntrClearMask, ItemLong -- 11
+}
+#typev Device_c510 24 "%0SpmiIntrCtlr_ExtendedInterruptStatus failed with status %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_CORE FUNC=Spmi_ExtendedInterruptStatus
+{
+result, ItemLong -- 10
+}
+#typev Device_c501 23 "%0handling Spmi_ExtendedInterruptStatus with peripheral id: 0x%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=Spmi_ExtendedInterruptStatus
+{
+periphId, ItemLong -- 10
+}
+#typev Device_c649 30 "%0SpmiIntrCtlr_InterruptClearAll failed with status %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_CORE FUNC=Spmi_InterruptClearAll
+{
+result, ItemLong -- 10
+}
+#typev Device_c640 29 "%0handling Spmi_InterruptClearAll" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=Spmi_InterruptClearAll
+{
+}
+#typev Device_c464 22 "%0SpmiIntrCtlr_InterruptDisable failed with status %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_CORE FUNC=Spmi_InterruptDisable
+{
+result, ItemLong -- 10
+}
+#typev Device_c455 21 "%0handling Spmi_InterruptDisable with peripheral id: 0x%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=Spmi_InterruptDisable
+{
+periphId, ItemLong -- 10
+}
+#typev Device_c418 20 "%0SpmiIntrCtlr_InterruptEnable failed with status %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_CORE FUNC=Spmi_InterruptEnable
+{
+result, ItemLong -- 10
+}
+#typev Device_c409 19 "%0handling Spmi_InterruptEnable with peripheral id: 0x%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=Spmi_InterruptEnable
+{
+periphId, ItemLong -- 10
+}
+#typev Device_c603 28 "%0SpmiIntrCtlr_IsInterruptEnabled failed with status %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_CORE FUNC=Spmi_IsInterruptEnabled
+{
+result, ItemLong -- 10
+}
+#typev Device_c594 27 "%0handling Spmi_IsInterruptEnabled with peripheral id: 0x%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=Spmi_IsInterruptEnabled
+{
+periphId, ItemLong -- 10
+}
+#typev Device_c171 12 "%0SpmiBus_ReadLong failed with status %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_CORE FUNC=Spmi_ReadLong
+{
+result, ItemLong -- 10
+}
+#typev Device_c151 11 "%0handling SPMI_READLONG with SlaveId %10!d!, Upper8BitAddress %11!d!, Lower8BitAddress %12!d!, AccessPriority %13!d!, NumBytes %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=Spmi_ReadLong
+{
+uSlaveId, ItemLong -- 10
+uUpper8BitRegisterAddress, ItemLong -- 11
+uRegisterAddress, ItemLong -- 12
+eAccessPriority, ItemLong -- 13
+uDataLen, ItemLong -- 14
+}
+#typev Device_c131 10 "%0handling SPMI_READLONG inputs uRegisterAddress = %10!d!, isSuperUser = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=Spmi_ReadLong
+{
+uRegisterAddress, ItemLong -- 10
+pClientCtxt->uIsSuperClient, ItemLong -- 11
+}
+#typev Device_c372 18 "%0SpmiBus_ReadModifyWriteLongByte failed with status %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_CORE FUNC=Spmi_ReadModifyWriteLongByte
+{
+result, ItemLong -- 10
+}
+#typev Device_c350 17 "%0handling IOCTL_SPMI_READ_MODIFY_WRITE_LONG_BYTE with SlaveId %10!d!, Upper8BitAddress %11!d!, Lower8BitAddress %12!d!, AccessPriority %13!d!, NumBytes %14!d!, DataByte %15!d! Mask %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=Spmi_ReadModifyWriteLongByte
+{
+uSlaveId, ItemLong -- 10
+uUpper8BitRegisterAddress, ItemLong -- 11
+uRegisterAddress, ItemLong -- 12
+eAccessPriority, ItemLong -- 13
+1, ItemLong -- 14
+uData, ItemLong -- 15
+uMask, ItemLong -- 16
+}
+#typev Device_c330 16 "%0handling SpmiRMD inputs uRegisterAddress = %10!d!, isSuperUser = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=Spmi_ReadModifyWriteLongByte
+{
+uRegisterAddress, ItemLong -- 10
+pClientCtxt->uIsSuperClient, ItemLong -- 11
+}
+#typev Device_c267 15 "%0SpmiBus_ReadLong failed with status %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_CORE FUNC=Spmi_WriteLong
+{
+result, ItemLong -- 10
+}
+#typev Device_c249 14 "%0handling SPMI_WRITELONG with SlaveId %10!d!,  Upper8BitAddress %11!d!, Lower8BitAddress %12!d!, AccessPriority %13!d!, NumBytes %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=Spmi_WriteLong
+{
+uSlaveId, ItemLong -- 10
+uUpper8BitRegisterAddress, ItemLong -- 11
+uRegisterAddress, ItemLong -- 12
+eAccessPriority, ItemLong -- 13
+uDataLen, ItemLong -- 14
+}
+#typev Device_c229 13 "%0handling SPMI_WriteLONG inputs uRegisterAddress = %10!d!, isSuperUser = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_QUEUE FUNC=Spmi_WriteLong
+{
+uRegisterAddress, ItemLong -- 10
+pClientCtxt->uIsSuperClient, ItemLong -- 11
+}
+#typev Device_c1334 65 "%0%!FUNC! Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=qcspmiCreateDevice
+{
+}
+#typev Device_c1327 64 "%0qcspmiQueueInitialize failed %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=qcspmiCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c1316 63 "%0WdfSpinLockCreate failed %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=qcspmiCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c1303 62 "%0WdfIoTargetOpen failed %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=qcspmiCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c1288 61 "%0WdfIoTargetCreate failed %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=qcspmiCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c1270 60 "%0WdfDeviceCreateSymbolicLink failed %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=qcspmiCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c1259 59 "%0WdfDeviceAddQueryInterface failed %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=qcspmiCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c1218 58 "%0WdfDeviceCreateDeviceInterface failed %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=qcspmiCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c1201 57 "%0Unable to get the Device context" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=qcspmiCreateDevice
+{
+}
+#typev Device_c1183 56 "%0WdfDeviceAssignS0IdleSettings failed %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=qcspmiCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c1152 55 "%0WdfDeviceCreate failed %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=TRACE_DEVICE FUNC=qcspmiCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c1121 54 "%0%!FUNC! Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DEVICE FUNC=qcspmiCreateDevice
+{
+}

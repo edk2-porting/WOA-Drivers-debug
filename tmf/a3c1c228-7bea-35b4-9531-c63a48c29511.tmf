@@ -1,0 +1,24 @@
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+a3c1c228-7bea-35b4-9531-c63a48c29511 Framework // SRC=npa_resource.c MJ= MN=
+#typev npa_resource_c181 11 "%0	request complete (handle: 0x%10!p!) (sequence: 0x%11!08x!) (request state:%12!d!) (active state:%13!d!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=client->log_handle FUNC=_npa_request_serviced
+{
+client, ItemPtr -- 10
+client->sequence, ItemLong -- 11
+resource->request_state, ItemLong -- 12
+resource->active_state, ItemLong -- 13
+}
+#typev npa_resource_c168 10 "%0	request complete (handle: 0x%10!p!) (sequence: 0x%11!08x!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=client->log_handle FUNC=_npa_request_serviced
+{
+client, ItemPtr -- 10
+client->sequence, ItemLong -- 11
+}
+#typev npa_resource_c865 17 "%0npa_resource_lock (resource: "%10!s!") (sequence: 0x%11!08x!)" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_resource_lock
+{
+resource->definition->name, ItemString -- 10
+resource->sequence, ItemLong -- 11
+}
+#typev npa_resource_c887 18 "%0npa_resource_unlock (resource: "%10!s!")" //   LEVEL=TRACE_LEVEL_CRITICAL NPAHANDLE=npa.log FUNC=npa_resource_unlock
+{
+resource->definition->name, ItemString -- 10
+}

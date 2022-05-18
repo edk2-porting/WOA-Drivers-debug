@@ -1,0 +1,168 @@
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+91fd92c8-c0e3-30e8-b1c2-7f6bc1b89909 NetAdapter // SRC=QmapRxQueue.cpp MJ= MN=
+#typev QmapHalIf_cpp404 32 "%0%!FUNC!::678:: Qmap HAL de-rallocate RX buffers with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapDeinitBuffers
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapHalIf_cpp404 31 "%0No Rx buffers allocated. Returning Status %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=QmapDeinitBuffers
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QmapHalIf_cpp404 30 "%0QMAP::%!FUNC! Freeing MDLs" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapDeinitBuffers
+{
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapHalIf_cpp376 29 "%0QMAP::%!FUNC! Base VA = %10!p!, LA = 0x%11!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapInitBuffers
+{
+pQmapCtx->qmapRxCtx[bufIndex].aggrBufVA, ItemPtr -- 10
+pQmapCtx->qmapRxCtx[bufIndex].aggrBufLA.QuadPart, ItemLongLongX -- 11
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapRxQueue_cpp740 35 "%0%!FUNC!::740 :: RSS::AdapterHdl = %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtAdapterReceiveScalingDisable
+{
+netAdapter, ItemPtr -- 10
+}
+#typev QmapRxQueue_cpp725 34 "%0%!FUNC!::725 :: RSS::AdapterHdl = %10!p! hashType = %11!d! protocolType = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtAdapterReceiveScalingEnable
+{
+netAdapter, ItemPtr -- 10
+hashType, ItemLong -- 11
+protocolType, ItemLong -- 12
+}
+#typev QmapRxQueue_cpp761 37 "%0%!FUNC!::761 :: RSS::AdapterHdl = %10!p! UINT32_Format %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtAdapterReceiveScalingSetHashSecretKey
+{
+netAdapter, ItemPtr -- 10
+hex_dump(pClientCtx->rssKey. hashSecretKey->Length), ItemHEXDump -- 11
+}
+#typev QmapRxQueue_cpp753 36 "%0%!FUNC!::753 :: RSS::AdapterHdl = %10!p! len = %11!I64d!  %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtAdapterReceiveScalingSetHashSecretKey
+{
+netAdapter, ItemPtr -- 10
+hashSecretKey->Length, ItemLongLong -- 11
+hex_dump(hashSecretKey->Key. hashSecretKey->Length), ItemHEXDump -- 12
+}
+#typev QmapRxQueue_cpp784 38 "%0%!FUNC!::784 :: RSS::AdapterHdl = %10!p! Table length = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtAdapterReceiveScalingSetIndirectionEntries
+{
+netAdapter, ItemPtr -- 10
+(int)indirectionEntries->Length, ItemLong -- 11
+}
+#typev QmapRxQueue_cpp413 21 "%0%!FUNC!::413:: Entry: AdapterHdl = %10!p!. Begin = %11!d!, End = %12!d!, Muxid = %13!d!, QueueIdx = %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Qmap FUNC=QmapEvtRxQueueAdvance
+{
+pClientCtx->netAdapter, ItemPtr -- 10
+fragRing->BeginIndex, ItemLong -- 11
+fragRing->EndIndex, ItemLong -- 12
+rx->muxid, ItemLong -- 13
+rx->rssQueueIdx, ItemLong -- 14
+}
+#typev QmapRxQueue_cpp600 28 "%0%!FUNC!::600:: Pktring: Begin %10!d!, End = %11!d! Fragring: Begin %12!d!, End = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtRxQueueCancel
+{
+packetRing->BeginIndex, ItemLong -- 10
+packetRing->EndIndex, ItemLong -- 11
+fragRing->BeginIndex, ItemLong -- 12
+fragRing->EndIndex, ItemLong -- 13
+}
+#typev QmapRxQueue_cpp589 27 "%0%!FUNC!::589:: AdapterHdl = %10!p!, Muxid = %11!d!, OSQueueId = %12!d! rssQueueId = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtRxQueueCancel
+{
+pClientCtx->netAdapter, ItemPtr -- 10
+rx->muxid, ItemLong -- 11
+rx->QueueId, ItemLong -- 12
+rx->rssQueueIdx, ItemLong -- 13
+}
+#typev QmapRxQueue_cpp542 24 "%0%!FUNC!::542::AdapterHdl = %10!p!, Muxid = %11!d!, OSQueueid = %12!d! rssQueueId = %13!d! pend_notify = %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtRxQueueDestroy
+{
+rx->adapter, ItemPtr -- 10
+rx->muxid, ItemLong -- 11
+rx->QueueId, ItemLong -- 12
+rx->rssQueueIdx, ItemLong -- 13
+pend_notify, ItemLong -- 14
+}
+#typev QmapRxQueue_cpp569 26 "%0%!FUNC!::569::Pending HW notificatoins for AdapterHdl = %10!p! Muxid = %11!d! QueueIdx = %12!d! pend_notify = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtRxQueueSetNotificationEnabled
+{
+rx->adapter, ItemPtr -- 10
+rx->muxid, ItemLong -- 11
+rx->rssQueueIdx, ItemLong -- 12
+pend_notify, ItemLong -- 13
+}
+#typev QmapRxQueue_cpp562 25 "%0%!FUNC!::562:: Enter Client %10!I64x!, SetNotification for RxQueue %11!d! OSQueueId = %12!d! rssQueueId = %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtRxQueueSetNotificationEnabled
+{
+rx->QmapClientHandle, ItemLongLongX -- 10
+notificationEnabled, ItemLong -- 11
+rx->QueueId, ItemLong -- 12
+rx->rssQueueIdx, ItemLong -- 13
+}
+#typev QmapRxQueue_cpp511 22 "%0%!FUNC!::511::AdapterHdl = %10!p!, Muxid = %11!d!, OSQueueId = %12!d! rssQueueId = %13!d! pend_notify = %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtRxQueueStart
+{
+rx->adapter, ItemPtr -- 10
+rx->muxid, ItemLong -- 11
+rx->QueueId, ItemLong -- 12
+rx->rssQueueIdx, ItemLong -- 13
+pend_notify, ItemLong -- 14
+}
+#typev QmapRxQueue_cpp528 23 "%0%!FUNC!::528::AdapterHdl = %10!p!, Muxid = %11!d!, OSQueueId = %12!d! rssQueueId = %13!d! pend_notify = %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtRxQueueStop
+{
+rx->adapter, ItemPtr -- 10
+rx->muxid, ItemLong -- 11
+rx->QueueId, ItemLong -- 12
+rx->rssQueueIdx, ItemLong -- 13
+pend_notify, ItemLong -- 14
+}
+#typev QmapRxQueue_cpp265 16 "%0%!FUNC!::265::##Invalid QMAP frame## -bufLen = %10!d! Padding = %11!d! Mux_id = %12!d!, packet no = %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapQueueRxComplete
+{
+bufLen, ItemLong -- 10
+vAddr[0], ItemLong -- 11
+vAddr[1], ItemLong -- 12
+count, ItemLong -- 13
+}
+#typev QmapRxQueue_cpp349 18 "%0%!FUNC!::349::##Unexpected QMAP frame## aggrbufLA=0x%10!I64x! bufLen = %11!d! Padding = %12!d! Mux_id = %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapQueueRxComplete
+{
+pQmapRxBuf->aggrBufLA.QuadPart, ItemLongLongX -- 10
+bufLen, ItemLong -- 11
+vAddr[0], ItemLong -- 12
+vAddr[1], ItemLong -- 13
+}
+#typev QmapRxQueue_cpp381 19 "%0%!FUNC!::381:: Aggr = %10!d!, pend_notify = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Qmap FUNC=QmapQueueRxComplete
+{
+count + 1, ItemLong -- 10
+pend_notify, ItemLong -- 11
+}
+#typev QmapRxQueue_cpp386 20 "%0%!FUNC!::386:: ##Invalid QMAP frame##!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapQueueRxComplete
+{
+}
+#typev QmapRxQueue_cpp317 17 "%0%!FUNC!::317:: ##Wake Pkt : Low Power QMAP frame!! pWakePkt=%10!p!, pWakePktLen=%11!u!, bWakePktNotify=%12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapQueueRxComplete
+{
+&vAddr[pQmapCtx->aggrTemplate.qmapRxHdrLen], ItemPtr -- 10
+pktLen, ItemLong -- 11
+pClientCtx->bWakePktNotify, ItemLong -- 12
+}
+#typev QmapRxQueue_cpp711 33 "%0%!FUNC!::711:: Failed to post DL buffer! Ctx %10!p! %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapReturnRxBuffer
+{
+pClientRxPktCtx->pQmapRxBuf, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev QmapRxQueue_cpp237 15 "%0%!FUNC!::237:: Failed to post DL buffer! Ctx %10!p! %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapReturnRxBufferInternal
+{
+pClientRxPktCtx->pQmapRxBuf, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev QmapRxQueue_cpp186 14 "%0%!FUNC!::186:Invalid packet!! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Qmap FUNC=QmapRxGetQueeuId
+{
+hex_dump(IpPacket. 48), ItemHEXDump -- 10
+}
+#typev QmapRxQueue_cpp100 13 "%0%!FUNC!::100:: Invalid Client handle %10!I64d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapRxQueueCreate
+{
+handle, ItemLongLong -- 10
+}
+#typev QmapRxQueue_cpp92 12 "%0%!FUNC!::92:: Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapRxQueueCreate
+{
+}
+#typev QmapRxQueue_cpp85 11 "%0%!FUNC!::85:: QueueId = %10!d!, Driver_QueueId = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapRxQueueInitialize
+{
+rx->QueueId, ItemLong -- 10
+rx->rssQueueIdx, ItemLong -- 11
+}
+#typev QmapRxQueue_cpp73 10 "%0%!FUNC!::73:: No Queue index available for allocation" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapRxQueueInitialize
+{
+}

@@ -1,0 +1,772 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+13b5e573-b174-3ca5-eb28-f55355807798 PEP // SRC=PEP_NativePState_Mgmt.c MJ= MN=
+#typev PEP_NativePState_Mgmt_c988 98 "%0PEP P-state change failed for Device: %10!s! component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c984 97 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::984 :PEP P-state change failed for Device: %10!s! component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c976 96 "%0 [Info] PEP_NativePState_Mgmt.c::%!FUNC! :PEP P State change for device : %10!s! , Component Index : %11!d! , PState Set Index: %12!d! , PState Index : %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=DriverStateTransition
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+StateSetID, ItemLong -- 12
+StateID, ItemLong -- 13
+}
+#typev PEP_NativePState_Mgmt_c953 95 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c950 94 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::950 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c923 93 "%0PoFx Power Management is already started for this device : %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c920 92 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::920 :PoFx Power Management is already started for this device : %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c913 91 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :%10!s! Device Requested P-State Transition through DDI" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=DriverStateTransition
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c906 90 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+}
+#typev PEP_NativePState_Mgmt_c905 89 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::905 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+}
+#typev PEP_NativePState_Mgmt_c894 88 "%0State Transition through this DDI is not supported at IRQL Level : %10!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+currIRQL, ItemLong -- 10
+}
+#typev PEP_NativePState_Mgmt_c891 87 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::891 :State Transition through this DDI is not supported at IRQL Level : %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+currIRQL, ItemLong -- 10
+}
+#typev PEP_NativePState_Mgmt_c881 86 "%0The DState/FState request is not supported through this DDI StateType : %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+((StateType == PEP_PSTATE) ? ('PEP_PSTATE') : ((StateType == PEP_FSTATE)                            ? ('PEP_FSTATE') : ('PEP_DSTATE'))), ItemString -- 10
+}
+#typev PEP_NativePState_Mgmt_c877 85 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::877 :The DState/FState request is not supported through this DDI StateType : %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+((StateType == PEP_PSTATE) ? ('PEP_PSTATE') : ((StateType == PEP_FSTATE)                                ? ('PEP_FSTATE') : ('PEP_DSTATE'))), ItemString -- 10
+}
+#typev PEP_NativePState_Mgmt_c866 84 "%0The device is not in a valid state to perform this request ACPIParsingCompleted : %10!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+ACPIParsingCompleted, ItemLong -- 10
+}
+#typev PEP_NativePState_Mgmt_c863 83 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::863 :The device is not in a valid state to perform this request ACPIParsingCompleted : %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=DriverStateTransition
+{
+ACPIParsingCompleted, ItemLong -- 10
+}
+#typev PEP_NativePState_Mgmt_c859 82 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=DriverStateTransition
+{
+}
+#typev PEP_NativePState_Mgmt_c160 20 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepQueryComponentPerfCapabilities
+{
+}
+#typev PEP_NativePState_Mgmt_c155 19 "%0 [Info] PEP_NativePState_Mgmt.c::%!FUNC! :Returning %10!d! as number of P-state sets for the component ID: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfCapabilities
+{
+PTempCompListNode->P_State->setArrayLen, ItemLong -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c147 18 "%0P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfCapabilities
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c144 17 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::144 :P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfCapabilities
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c136 16 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfCapabilities
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c133 15 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::133 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfCapabilities
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c114 14 "%0Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfCapabilities
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfCaps->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c111 13 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::111 :Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfCapabilities
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfCaps->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c103 12 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfCapabilities
+{
+}
+#typev PEP_NativePState_Mgmt_c102 11 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::102 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfCapabilities
+{
+}
+#typev PEP_NativePState_Mgmt_c92 10 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepQueryComponentPerfCapabilities
+{
+}
+#typev PEP_NativePState_Mgmt_c160 20 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=`PepQueryComponentPerfCapabilities'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c155 19 "%0 [Info] PEP_NativePState_Mgmt.c::%!FUNC! :Returning %10!d! as number of P-state sets for the component ID: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfCapabilities'::`1'::fin$0
+{
+PTempCompListNode->P_State->setArrayLen, ItemLong -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c147 18 "%0P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfCapabilities'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c144 17 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::144 :P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfCapabilities'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c136 16 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfCapabilities'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c133 15 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::133 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfCapabilities'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c114 14 "%0Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfCapabilities'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfCaps->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c111 13 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::111 :Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfCapabilities'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfCaps->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c103 12 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfCapabilities'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c102 11 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::102 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfCapabilities'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c92 10 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=`PepQueryComponentPerfCapabilities'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c329 33 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepQueryComponentPerfSet
+{
+}
+#typev PEP_NativePState_Mgmt_c323 32 "%0 [Info] PEP_NativePState_Mgmt.c::%!FUNC! :For Component %10!d!, Set %11!d!, Info Unit: %12!d!, Type: %13!d!, Discrete.Count = %14!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSet
+{
+QueryCompPerfSet->Component, ItemLong -- 10
+QueryCompPerfSet->Set, ItemLong -- 11
+QueryCompPerfSet->Unit, ItemLong -- 12
+QueryCompPerfSet->Type, ItemLong -- 13
+QueryCompPerfSet->Discrete.Count, ItemLong -- 14
+}
+#typev PEP_NativePState_Mgmt_c297 31 "%0P-State Set %10!d! is NULL for device: %11!s!, component ID = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSet
+{
+QueryCompPerfSet->Set, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+PTempCompListNode->CompIndex, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c293 30 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::293 :P-State Set %10!d! is NULL for device: %11!s!, component ID = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSet
+{
+QueryCompPerfSet->Set, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+PTempCompListNode->CompIndex, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c281 29 "%0P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSet
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c278 28 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::278 :P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSet
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c269 27 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSet
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c266 26 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::266 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSet
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c245 25 "%0Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSet
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfSet->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c242 24 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::242 :Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSet
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfSet->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c233 23 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSet
+{
+}
+#typev PEP_NativePState_Mgmt_c232 22 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::232 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSet
+{
+}
+#typev PEP_NativePState_Mgmt_c220 21 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepQueryComponentPerfSet
+{
+}
+#typev PEP_NativePState_Mgmt_c329 33 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c323 32 "%0 [Info] PEP_NativePState_Mgmt.c::%!FUNC! :For Component %10!d!, Set %11!d!, Info Unit: %12!d!, Type: %13!d!, Discrete.Count = %14!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+QueryCompPerfSet->Component, ItemLong -- 10
+QueryCompPerfSet->Set, ItemLong -- 11
+QueryCompPerfSet->Unit, ItemLong -- 12
+QueryCompPerfSet->Type, ItemLong -- 13
+QueryCompPerfSet->Discrete.Count, ItemLong -- 14
+}
+#typev PEP_NativePState_Mgmt_c297 31 "%0P-State Set %10!d! is NULL for device: %11!s!, component ID = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+QueryCompPerfSet->Set, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+PTempCompListNode->CompIndex, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c293 30 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::293 :P-State Set %10!d! is NULL for device: %11!s!, component ID = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+QueryCompPerfSet->Set, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+PTempCompListNode->CompIndex, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c281 29 "%0P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c278 28 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::278 :P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c269 27 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c266 26 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::266 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c245 25 "%0Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfSet->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c242 24 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::242 :Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfSet->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c233 23 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c232 22 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::232 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c220 21 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=`PepQueryComponentPerfSet'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c480 46 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepQueryComponentPerfSetName
+{
+}
+#typev PEP_NativePState_Mgmt_c474 45 "%0 [Info] PEP_NativePState_Mgmt.c::%!FUNC! :Returninf ComponentPerfSetName: %10!s!, for component ID = %11!d!, Set ID = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSetName
+{
+pPStateSet->VoterId, ItemString -- 10
+QueryCompPerfSetName->Component, ItemLong -- 11
+QueryCompPerfSetName->Set, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c450 44 "%0P-State Set %10!d! is NULL for device: %11!s!, component ID = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSetName
+{
+QueryCompPerfSetName->Set, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+PTempCompListNode->CompIndex, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c446 43 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::446 :P-State Set %10!d! is NULL for device: %11!s!, component ID = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSetName
+{
+QueryCompPerfSetName->Set, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+PTempCompListNode->CompIndex, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c434 42 "%0P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSetName
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c431 41 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::431 :P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSetName
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c422 40 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSetName
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c419 39 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::419 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSetName
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c398 38 "%0Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSetName
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfSetName->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c395 37 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::395 :Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSetName
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfSetName->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c386 36 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSetName
+{
+}
+#typev PEP_NativePState_Mgmt_c385 35 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::385 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfSetName
+{
+}
+#typev PEP_NativePState_Mgmt_c371 34 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepQueryComponentPerfSetName
+{
+}
+#typev PEP_NativePState_Mgmt_c480 46 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c474 45 "%0 [Info] PEP_NativePState_Mgmt.c::%!FUNC! :Returninf ComponentPerfSetName: %10!s!, for component ID = %11!d!, Set ID = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+pPStateSet->VoterId, ItemString -- 10
+QueryCompPerfSetName->Component, ItemLong -- 11
+QueryCompPerfSetName->Set, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c450 44 "%0P-State Set %10!d! is NULL for device: %11!s!, component ID = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+QueryCompPerfSetName->Set, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+PTempCompListNode->CompIndex, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c446 43 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::446 :P-State Set %10!d! is NULL for device: %11!s!, component ID = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+QueryCompPerfSetName->Set, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+PTempCompListNode->CompIndex, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c434 42 "%0P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c431 41 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::431 :P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c422 40 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c419 39 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::419 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c398 38 "%0Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfSetName->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c395 37 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::395 :Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfSetName->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c386 36 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c385 35 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::385 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c371 34 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=`PepQueryComponentPerfSetName'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c663 61 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepQueryComponentPerfStates
+{
+}
+#typev PEP_NativePState_Mgmt_c655 60 "%0PepQueryComponentPerfStates called with NULL Output buffer for component= %10!d!, Set= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+PTempCompListNode->CompIndex, ItemLong -- 10
+QueryCompPerfStates->Set, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c652 59 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::652 :PepQueryComponentPerfStates called with NULL Output buffer for component= %10!d!, Set= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+PTempCompListNode->CompIndex, ItemLong -- 10
+QueryCompPerfStates->Set, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c635 58 "%0 [Info] PEP_NativePState_Mgmt.c::%!FUNC! :Frequency: %10!I64u!, for component ID = %11!d!, Set ID = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+(uint64)pClkResourceNode->Frequency, ItemULongLong -- 10
+QueryCompPerfStates->Component, ItemLong -- 11
+QueryCompPerfStates->Set, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c616 57 "%0P-State Set %10!d! is NULL for device: %11!s!, component ID = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+QueryCompPerfStates->Set, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+PTempCompListNode->CompIndex, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c612 56 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::612 :P-State Set %10!d! is NULL for device: %11!s!, component ID = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+QueryCompPerfStates->Set, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+PTempCompListNode->CompIndex, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c600 55 "%0P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c597 54 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::597 :P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c588 53 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c585 52 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::585 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c564 51 "%0Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfStates->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c561 50 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::561 :Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfStates->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c552 49 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+}
+#typev PEP_NativePState_Mgmt_c551 48 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::551 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryComponentPerfStates
+{
+}
+#typev PEP_NativePState_Mgmt_c538 47 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepQueryComponentPerfStates
+{
+}
+#typev PEP_NativePState_Mgmt_c663 61 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c655 60 "%0PepQueryComponentPerfStates called with NULL Output buffer for component= %10!d!, Set= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+PTempCompListNode->CompIndex, ItemLong -- 10
+QueryCompPerfStates->Set, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c652 59 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::652 :PepQueryComponentPerfStates called with NULL Output buffer for component= %10!d!, Set= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+PTempCompListNode->CompIndex, ItemLong -- 10
+QueryCompPerfStates->Set, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c635 58 "%0 [Info] PEP_NativePState_Mgmt.c::%!FUNC! :Frequency: %10!I64u!, for component ID = %11!d!, Set ID = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+(uint64)pClkResourceNode->Frequency, ItemULongLong -- 10
+QueryCompPerfStates->Component, ItemLong -- 11
+QueryCompPerfStates->Set, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c616 57 "%0P-State Set %10!d! is NULL for device: %11!s!, component ID = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+QueryCompPerfStates->Set, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+PTempCompListNode->CompIndex, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c612 56 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::612 :P-State Set %10!d! is NULL for device: %11!s!, component ID = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+QueryCompPerfStates->Set, ItemLong -- 10
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 11
+PTempCompListNode->CompIndex, ItemLong -- 12
+}
+#typev PEP_NativePState_Mgmt_c600 55 "%0P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c597 54 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::597 :P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c588 53 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c585 52 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::585 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c564 51 "%0Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfStates->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c561 50 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::561 :Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCompPerfStates->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c552 49 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c551 48 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::551 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c538 47 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=`PepQueryComponentPerfStates'::`1'::fin$0
+{
+}
+#typev PEP_NativePState_Mgmt_c1403 133 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepQueryCurrentComponentPerfState
+{
+}
+#typev PEP_NativePState_Mgmt_c1394 132 "%0bad P-State Set pointer for device: %10!s!, Component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryCurrentComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1390 131 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1390 :bad P-State Set pointer for device: %10!s!, Component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryCurrentComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1379 130 "%0Invalid Set Index passed in for device: %10!s!, Component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryCurrentComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1375 129 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1375 :Invalid Set Index passed in for device: %10!s!, Component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryCurrentComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1365 128 "%0P_State Object Null for device: %10!s!, Component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryCurrentComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1361 127 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1361 :P_State Object Null for device: %10!s!, Component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryCurrentComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1353 126 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryCurrentComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c1350 125 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1350 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryCurrentComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c1330 124 "%0Invalid component index for device: %10!s!, Component ID queried: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryCurrentComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCurrentPerf->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1327 123 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1327 :Invalid component index for device: %10!s!, Component ID queried: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryCurrentComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+QueryCurrentPerf->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1319 122 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryCurrentComponentPerfState
+{
+}
+#typev PEP_NativePState_Mgmt_c1318 121 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1318 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepQueryCurrentComponentPerfState
+{
+}
+#typev PEP_NativePState_Mgmt_c1308 120 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepQueryCurrentComponentPerfState
+{
+}
+#typev PEP_NativePState_Mgmt_c834 81 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepRegisterComponentPerfStates
+{
+}
+#typev PEP_NativePState_Mgmt_c831 80 "%0Register Perf States for Device: %10!s! ComponentIndex: %11!d! passed" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+Reg->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c828 79 "%0 [Crit] PEP_NativePState_Mgmt.c::%!FUNC! :Register Perf States for Device: %10!s! ComponentIndex: %11!d! passed" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+Reg->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c808 78 "%0P-State state count mismatch for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c805 77 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::805 :P-State state count mismatch for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c797 76 "%0P-State Set NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c794 75 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::794 :P-State Set NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c782 74 "%0SetCount mismatch for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c779 73 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::779 :SetCount mismatch for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c770 72 "%0P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c767 71 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::767 :P_State object NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c759 70 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c756 69 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::756 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c736 68 "%0PerfStateInfo NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+Reg->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c733 67 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::733 :PerfStateInfo NULL for device: %10!s!, component ID = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+Reg->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c725 66 "%0Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+Reg->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c722 65 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::722 :Invalid component index for device: %10!s!, component ID in Register= %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+Reg->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c712 64 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+}
+#typev PEP_NativePState_Mgmt_c711 63 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::711 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRegisterComponentPerfStates
+{
+}
+#typev PEP_NativePState_Mgmt_c702 62 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepRegisterComponentPerfStates
+{
+}
+#typev PEP_NativePState_Mgmt_c1261 119 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepRequestComponentPerfState
+{
+}
+#typev PEP_NativePState_Mgmt_c1250 118 "%0Device: %10!s!,component: %11!d! RequestPEPWorker failed for Native P-states" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepRequestComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+ReqPerfState->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1246 117 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1246 :Device: %10!s!,component: %11!d!RequestPEPWorker failed for Native P-states" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepRequestComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+ReqPerfState->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1234 116 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Exiting function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_EXIT FUNC=PepRequestComponentPerfState
+{
+}
+#typev PEP_NativePState_Mgmt_c1223 115 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c1220 114 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1220 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c1200 113 "%0Invalid PerfRequestsCount for device: %10!s!, Component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+ReqPerfState->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1197 112 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1197 :Invalid PerfRequestsCount for device: %10!s!, Component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+ReqPerfState->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1188 111 "%0Invalid component index for device: %10!s!, Component ID requested for: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+ReqPerfState->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1185 110 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1185 :Invalid component index for device: %10!s!, Component ID requested for: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfState
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+ReqPerfState->Component, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1177 109 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfState
+{
+}
+#typev PEP_NativePState_Mgmt_c1176 108 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1176 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfState
+{
+}
+#typev PEP_NativePState_Mgmt_c1160 107 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepRequestComponentPerfState
+{
+}
+#typev PEP_NativePState_Mgmt_c1084 106 "%0PEP P-state change failed for Device: %10!s! component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfStateWork
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1081 105 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1081 :PEP P-state change failed for Device: %10!s! component ID: %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfStateWork
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+}
+#typev PEP_NativePState_Mgmt_c1074 104 "%0 [Info] PEP_NativePState_Mgmt.c::%!FUNC! :PEP P State change for device : %10!s! , Component Index : %11!d! , PState Set Index: %12!d! , PState Index : %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=PepRequestComponentPerfStateWork
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+PTempCompListNode->CompIndex, ItemLong -- 11
+ReqPerfState->PerfRequests[i].Set, ItemLong -- 12
+ReqPerfState->PerfRequests[i].StateIndex, ItemLong -- 13
+}
+#typev PEP_NativePState_Mgmt_c1052 103 "%0Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfStateWork
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c1049 102 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1049 :Could not find a relevant component for device: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfStateWork
+{
+&(PTempDevListNode->InstancePathAnsi), ItemPString -- 10
+}
+#typev PEP_NativePState_Mgmt_c1030 101 "%0PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfStateWork
+{
+}
+#typev PEP_NativePState_Mgmt_c1029 100 "%0 [Err ] PEP_NativePState_Mgmt.c::%!FUNC!::1029 :PTempDevListNode is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=PepRequestComponentPerfStateWork
+{
+}
+#typev PEP_NativePState_Mgmt_c1019 99 "%0 [Verb] PEP_NativePState_Mgmt.c::%!FUNC! :Entering function" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_FLAG_FRAMEWORK_ENTRY FUNC=PepRequestComponentPerfStateWork
+{
+}

@@ -1,0 +1,289 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+254798d9-fd5c-39fe-f7be-e38cc534ae13 PEP // SRC=ThermalDeviceManager.c MJ= MN=
+#typev ThermalDeviceManager_c450 28 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :aPsvK = %10!d!, aTemperatureReadK = %11!d!, Inverse value in Kelvin = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=CalculateInverseTemp
+{
+aPsvK, ItemLong -- 10
+aTemperatureReadK, ItemLong -- 11
+aInverseValueK, ItemLong -- 12
+}
+#typev ThermalDeviceManager_c495 34 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :Request 0x%10!p! completed Acpi_K %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=CompleteWdfRequestWithTemperature
+{
+aRequest, ItemPtr -- 10
+aTempACPI, ItemLong -- 11
+}
+#typev ThermalDeviceManager_c493 33 "%0Request 0x%10!p! completed Acpi_K %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=CompleteWdfRequestWithTemperature
+{
+aRequest, ItemPtr -- 10
+aTempACPI, ItemLong -- 11
+}
+#typev ThermalDeviceManager_c488 32 "%0Buffer length size is invalid" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=CompleteWdfRequestWithTemperature
+{
+}
+#typev ThermalDeviceManager_c487 31 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::487 :Buffer length size is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=CompleteWdfRequestWithTemperature
+{
+}
+#typev ThermalDeviceManager_c474 30 "%0WdfRequestRetrieveOutputBuffer failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=CompleteWdfRequestWithTemperature
+{
+status, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c472 29 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::472 :WdfRequestRetrieveOutputBuffer failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=CompleteWdfRequestWithTemperature
+{
+status, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c972 60 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::972 :Invalid, Request 0x%10!p! not matching with outstanding request 0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=EvtIoStop_Worker
+{
+ctxt->Request, ItemPtr -- 10
+dev_ctxt->Request, ItemPtr -- 11
+}
+#typev ThermalDeviceManager_c963 59 "%0device_idx %10!d! channel_%11!d! request 0x%12!p! unmark cancel failed" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=EvtIoStop_Worker
+{
+ctxt->dev_idx, ItemLong -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+dev_ctxt->Request, ItemPtr -- 12
+}
+#typev ThermalDeviceManager_c960 58 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :device_idx %10!d! channel_%11!d! request 0x%12!p! unmark cancel failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=EvtIoStop_Worker
+{
+ctxt->dev_idx, ItemLong -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+dev_ctxt->Request, ItemPtr -- 12
+}
+#typev ThermalDeviceManager_c943 57 "%0device_idx %10!d! channel_%11!d! request 0x%12!p! completed, Channel %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=EvtIoStop_Worker
+{
+ctxt->dev_idx, ItemLong -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+dev_ctxt->Request, ItemPtr -- 12
+Threshold_to_remove.channel.ChNum, ItemLong -- 13
+}
+#typev ThermalDeviceManager_c939 56 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :device_idx %10!d! channel_%11!d! request 0x%12!p! completed, Channel %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=EvtIoStop_Worker
+{
+ctxt->dev_idx, ItemLong -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+dev_ctxt->Request, ItemPtr -- 12
+Threshold_to_remove.channel.ChNum, ItemLong -- 13
+}
+#typev ThermalDeviceManager_c1155 72 "%0ADC DMF_ModulesCreate() failed!	status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmSensMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=TzDeviceDMFModuleCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ThermalDeviceManager_c1153 71 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::1153 :ADC DMF_ModulesCreate() failed!	status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_SENSMGR FUNC=TzDeviceDMFModuleCreate
+{
+status, ItemNTSTATUS -- 10
+}
+#typev ThermalDeviceManager_c1064 70 "%0ADCDMF_DmfDeviceInitAllocate Failed" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmSensMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=TzDeviceDMFModuleInit
+{
+}
+#typev ThermalDeviceManager_c1063 69 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::1063 :ADC DMF_DmfDeviceInitAllocate Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_SENSMGR FUNC=TzDeviceDMFModuleInit
+{
+}
+#typev ThermalDeviceManager_c830 51 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::830 :Invalid, Request 0x%10!p! not matching with outstanding request 0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=OSTM_CancelRequest
+{
+Request, ItemPtr -- 10
+dev_ctxt->Request, ItemPtr -- 11
+}
+#typev ThermalDeviceManager_c806 50 "%0device_idx %10!d! channel_%11!d! request 0x%12!p!, OSTM cancel completed" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=OSTM_CancelRequest
+{
+devExt->dev_idx, ItemLong -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+dev_ctxt->Request, ItemPtr -- 12
+}
+#typev ThermalDeviceManager_c803 49 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :device_idx %10!d! channel_%11!d! request 0x%12!p!, OSTM cancel completed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=OSTM_CancelRequest
+{
+devExt->dev_idx, ItemLong -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+dev_ctxt->Request, ItemPtr -- 12
+}
+#typev ThermalDeviceManager_c650 44 "%0device_idx %10!d! has outstanding request, return failure for request: 0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=OSTM_ReadRequest
+{
+devExt->dev_idx, ItemLong -- 10
+aRequest, ItemPtr -- 11
+}
+#typev ThermalDeviceManager_c647 43 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::647 :device_idx %10!d! has outstanding request, return failure for request: 0x%11!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=OSTM_ReadRequest
+{
+devExt->dev_idx, ItemLong -- 10
+aRequest, ItemPtr -- 11
+}
+#typev ThermalDeviceManager_c582 42 "%0%10!s! : channel_%11!d! device_idx %12!d! request 0x%13!p! Low:%14!d! High: %15!d! Timeout: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=OSTM_ReadRequest
+{
+SensorTypeEnum2Str[dev_ctxt->type], ItemString -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+devExt->dev_idx, ItemLong -- 12
+aRequest, ItemPtr -- 13
+thermalInput->LowTemperature, ItemLong -- 14
+thermalInput->HighTemperature, ItemLong -- 15
+thermalInput->Timeout, ItemLong -- 16
+}
+#typev ThermalDeviceManager_c574 41 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :%10!s! : channel_%11!d! device_idx %12!d! request 0x%13!p! Low:%14!d! High: %15!d! Timeout: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=OSTM_ReadRequest
+{
+SensorTypeEnum2Str[dev_ctxt->type], ItemString -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+devExt->dev_idx, ItemLong -- 12
+aRequest, ItemPtr -- 13
+thermalInput->LowTemperature, ItemLong -- 14
+thermalInput->HighTemperature, ItemLong -- 15
+thermalInput->Timeout, ItemLong -- 16
+}
+#typev ThermalDeviceManager_c560 40 "%0Invalid read buffer size" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=OSTM_ReadRequest
+{
+}
+#typev ThermalDeviceManager_c559 39 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::559 :Invalid read buffer size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=OSTM_ReadRequest
+{
+}
+#typev ThermalDeviceManager_c552 38 "%0Invalid InputBufferLength" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=OSTM_ReadRequest
+{
+}
+#typev ThermalDeviceManager_c551 37 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::551 :Invalid InputBufferLength" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=OSTM_ReadRequest
+{
+}
+#typev ThermalDeviceManager_c544 36 "%0WdfRequestRetrieveInputBuffer failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=OSTM_ReadRequest
+{
+status, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c542 35 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::542 :WdfRequestRetrieveInputBuffer failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=OSTM_ReadRequest
+{
+status, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c1043 68 "%0Enter device_idx %10!d! channel_%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalDeviceD0Entry
+{
+DevExt->dev_idx, ItemLong -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+}
+#typev ThermalDeviceManager_c1041 67 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :Enter device_idx %10!d! channel_%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalDeviceD0Entry
+{
+DevExt->dev_idx, ItemLong -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+}
+#typev ThermalDeviceManager_c1018 66 "%0Exit device_idx %10!d! channel_%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalDeviceD0Exit
+{
+DevExt->dev_idx, ItemLong -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+}
+#typev ThermalDeviceManager_c1016 65 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :Exit device_idx %10!d! channel_%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalDeviceD0Exit
+{
+DevExt->dev_idx, ItemLong -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+}
+#typev ThermalDeviceManager_c1010 64 "%0device_idx %10!d! IoStopWi-wait status 0x%11!x!, channel_%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalDeviceD0Exit
+{
+DevExt->dev_idx, ItemLong -- 10
+status, ItemLong -- 11
+Channel.ChNum, ItemLong -- 12
+}
+#typev ThermalDeviceManager_c1007 63 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :device_idx %10!d! IoStopWi-wait status 0x%11!x!, channel_%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalDeviceD0Exit
+{
+DevExt->dev_idx, ItemLong -- 10
+status, ItemLong -- 11
+Channel.ChNum, ItemLong -- 12
+}
+#typev ThermalDeviceManager_c998 62 "%0Enter device_idx %10!d! channel_%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalDeviceD0Exit
+{
+DevExt->dev_idx, ItemLong -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+}
+#typev ThermalDeviceManager_c996 61 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :Enter device_idx %10!d! channel_%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalDeviceD0Exit
+{
+DevExt->dev_idx, ItemLong -- 10
+dev_ctxt->Ch_num, ItemLong -- 11
+}
+#typev ThermalDeviceManager_c898 55 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :ActionFlags: WdfRequestStopActionPurge" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=ThermalDeviceEvtIoStop
+{
+}
+#typev ThermalDeviceManager_c892 54 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :ActionFlags: WdfRequestStopActionSuspend" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_GENERAL_FRAMEWORK FUNC=ThermalDeviceEvtIoStop
+{
+}
+#typev ThermalDeviceManager_c883 53 "%0device_idx %10!d! request 0x%11!p!, trigger Workitem ctxt 0x%12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalDeviceEvtIoStop
+{
+devExt->dev_idx, ItemLong -- 10
+dev_ctxt->Request, ItemPtr -- 11
+&(dev_ctxt->WiCtxt), ItemPtr -- 12
+}
+#typev ThermalDeviceManager_c879 52 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :device_idx %10!d! request 0x%11!p!, trigger Workitem ctxt 0x%12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalDeviceEvtIoStop
+{
+devExt->dev_idx, ItemLong -- 10
+dev_ctxt->Request, ItemPtr -- 11
+&(dev_ctxt->WiCtxt), ItemPtr -- 12
+}
+#typev ThermalDeviceManager_c325 27 "%0Cannot release SOC_CRITICAL thermal device" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalDeviceSurpriseRemoval
+{
+}
+#typev ThermalDeviceManager_c323 26 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::323 :Cannot release SOC_CRITICAL thermal device" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalDeviceSurpriseRemoval
+{
+}
+#typev ThermalDeviceManager_c303 25 "%0PepWorkitemCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalZoneDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c301 24 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::301 :PepWorkitemCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalZoneDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c282 23 "%0WdfIoQueueCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalZoneDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c280 22 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::280 :WdfIoQueueCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalZoneDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c257 21 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :Channel %10!d! supports Thermal Aggregation" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalZoneDeviceAdd
+{
+aChannel, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c224 20 "%0ThermalDeviceMgr_ctxt alloc failed" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalZoneDeviceAdd
+{
+}
+#typev ThermalDeviceManager_c222 19 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::222 :ThermalDeviceMgr_ctxt alloc failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalZoneDeviceAdd
+{
+}
+#typev ThermalDeviceManager_c208 18 "%0gThermalDevMgrArr alloc failed" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalZoneDeviceAdd
+{
+}
+#typev ThermalDeviceManager_c206 17 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::206 :gThermalDevMgrArr alloc failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalZoneDeviceAdd
+{
+}
+#typev ThermalDeviceManager_c176 16 "%0_CRT configuration for Inverted TZ not supported" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalZoneDeviceAdd
+{
+}
+#typev ThermalDeviceManager_c174 15 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::174 :_CRT configuration for Inverted TZ not supported" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalZoneDeviceAdd
+{
+}
+#typev ThermalDeviceManager_c170 14 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :Inverse Temperature zone, Channel %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalZoneDeviceAdd
+{
+aChannel, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c160 13 "%0WdfWaitLockCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalZoneDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c158 12 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::158 :WdfWaitLockCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalZoneDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c145 11 "%0WdfDeviceCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=ThermalZoneDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c143 10 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::143 :WdfDeviceCreate failed with status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=ThermalZoneDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev ThermalDeviceManager_c751 48 "%0WdfRequest 0x%10!p! UnmarkCancelable failed 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=Threshold_Notification
+{
+dev_ctxt->Request, ItemPtr -- 10
+status, ItemLong -- 11
+}
+#typev ThermalDeviceManager_c748 47 "%0 [Err ] ThermalDeviceManager.c::%!FUNC!::748 :WdfRequest 0x%10!p! UnmarkCancelable failed 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=Threshold_Notification
+{
+dev_ctxt->Request, ItemPtr -- 10
+status, ItemLong -- 11
+}
+#typev ThermalDeviceManager_c733 46 "%0device_idx %10!d! request 0x%11!p!, satisfies PSV" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepThrmDevMgrIFRHandle FLAGS=PEP_THERMAL_FLAG_MGR_IFR FUNC=Threshold_Notification
+{
+i, ItemLong -- 10
+dev_ctxt->Request, ItemPtr -- 11
+}
+#typev ThermalDeviceManager_c730 45 "%0 [Info] ThermalDeviceManager.c::%!FUNC! :device_idx %10!d! request 0x%11!p!, satisfies PSV" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_THERMAL_FLAG_DEVMGR FUNC=Threshold_Notification
+{
+i, ItemLong -- 10
+dev_ctxt->Request, ItemPtr -- 11
+}

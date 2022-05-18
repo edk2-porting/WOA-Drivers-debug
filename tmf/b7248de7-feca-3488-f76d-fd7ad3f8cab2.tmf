@@ -1,0 +1,50 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+b7248de7-feca-3488-f76d-fd7ad3f8cab2 build // SRC=ClockSources.c MJ= MN=
+#typev ClockSources_c782 19 "%0%10!s! (Freq: %11!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ConfigSource
+{
+pSource->szName, ItemString -- 10
+pFreqConfig->nFreqHz, ItemLong -- 11
+}
+#typev ClockSources_c590 18 "%0Unable to find client(%10!s!) for source: %11!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DisableSourceInternal
+{
+((ClockClientCtxt*)(pDrvCtxt->hClient))->szName, ItemString -- 10
+pSource->szName, ItemString -- 11
+}
+#typev ClockSources_c500 17 "%0Unable to find client(%10!s!) for source: %11!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_EnableSourceInternal
+{
+((ClockClientCtxt*)(pDrvCtxt->hClient))->szName, ItemString -- 10
+pSource->szName, ItemString -- 11
+}
+#typev ClockSources_c439 16 "%0%10!s! (Enabled: 0)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOff
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c349 15 "%0%10!s! (Enabled: 1)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOn
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c323 14 "%0Unable to enable source[%10!s!]" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOn
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c311 13 "%0Unable to enable source[%10!s!] vote" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOn
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c296 12 "%0Failed to calibrate source[%10!s!]." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOn
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c241 11 "%0Source[%10!s!] requires calibration, but no calibration config." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOn
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c215 10 "%0Cannot turn on source[%10!s!] that hasn't been configured." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOn
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c840 20 "%0Unable to create NPA handles for %10!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceResourceAvailableCallback
+{
+pSource->szName, ItemString -- 10
+}

@@ -1,0 +1,470 @@
+// PDB:  QcUsbFnSsFilter7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:21:288 (UTC) [tracepdb]
+3699faa9-1c01-35b1-b5c8-a443ae50cd6d 10.7 // SRC=hw.c MJ= MN=
+#typev Hw_c463 28 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=EvalAcpiMethod
+{
+}
+#typev Hw_c447 27 "%0Expect ACPI_METHOD_ARGUMENT_PACKAGE, but obtain 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=EvalAcpiMethod
+{
+pArgument->Type, ItemLong -- 10
+}
+#typev Hw_c441 26 "%0pArgument is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=EvalAcpiMethod
+{
+}
+#typev Hw_c432 25 "%0OutputBuffer Signature Invalid, 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=EvalAcpiMethod
+{
+pOutputBuffer->Signature, ItemLong -- 10
+}
+#typev Hw_c425 24 "%0pOutputBuffer is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=EvalAcpiMethod
+{
+}
+#typev Hw_c407 23 "%0EvalAcpiMethod failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=EvalAcpiMethod
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Hw_c370 22 "%0Unable to get IoTarget" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=EvalAcpiMethod
+{
+}
+#typev Hw_c353 21 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=EvalAcpiMethod
+{
+}
+#typev Hw_c947 59 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=InitSSUSBCommon
+{
+}
+#typev Hw_c940 58 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=InitSSUSBCommon
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c873 57 "%0Disabling SS PHY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=InitSSUSBCommon
+{
+}
+#typev Hw_c856 56 "%0QcUsbInitSsPhy failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=InitSSUSBCommon
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Hw_c846 55 "%0QcUsbInitHsPhy failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=InitSSUSBCommon
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Hw_c814 54 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=InitSSUSBCommon
+{
+}
+#typev Hw_c986 62 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=InitSSUSBDevice
+{
+}
+#typev Hw_c982 61 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=InitSSUSBDevice
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c967 60 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=InitSSUSBDevice
+{
+}
+#typev Hw_c290 20 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=ProcessAnArgument
+{
+}
+#typev Hw_c282 19 "%0Fail to add the PHY config value to the collection, %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=ProcessAnArgument
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Hw_c278 18 "%0Unknown Argument: Access Type %10!d!, Reg Addr 0x%11!x!, Val 0x%12!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=ProcessAnArgument
+{
+pPhyVal->AccessType, ItemLong -- 10
+pPhyVal->RegAddr, ItemLong -- 11
+pPhyVal->Value, ItemLong -- 12
+}
+#typev Hw_c258 17 "%0Missing Data Detected" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=ProcessAnArgument
+{
+}
+#typev Hw_c246 16 "%0Unmatched Data Detected" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=ProcessAnArgument
+{
+}
+#typev Hw_c232 15 "%0Idx value is invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=ProcessAnArgument
+{
+}
+#typev Hw_c214 14 "%0Expect ACPI_METHOD_ARGUMENT_INTEGER, but have 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=ProcessAnArgument
+{
+pArgument->Type, ItemLong -- 10
+}
+#typev Hw_c205 13 "%0pArgument is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=ProcessAnArgument
+{
+}
+#typev Hw_c202 12 "%0Idx = %10!d!, DataLen %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=ProcessAnArgument
+{
+Idx, ItemLong -- 10
+DataLen, ItemLong -- 11
+}
+#typev Hw_c183 11 "%0WdfMemoryCreate failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=ProcessAnArgument
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev Hw_c167 10 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=ProcessAnArgument
+{
+}
+#typev Hw_c729 47 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbCoreReadyForLPM
+{
+}
+#typev Hw_c723 46 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbCoreReadyForLPM
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c714 45 "%0HWIO_USB3_PRI_DSTS_OFFS = 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbCoreReadyForLPM
+{
+regval, ItemLong -- 10
+}
+#typev Hw_c703 44 "%0HWIO_USB3_PRI_SS_PHY_CTRL_OFFS = 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbCoreReadyForLPM
+{
+regval, ItemLong -- 10
+}
+#typev Hw_c689 43 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbCoreReadyForLPM
+{
+}
+#typev Hw_c800 53 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbDisableVbusOverride
+{
+}
+#typev Hw_c798 52 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbDisableVbusOverride
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c780 51 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbDisableVbusOverride
+{
+}
+#typev Hw_c766 50 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbEnableVbusOverride
+{
+}
+#typev Hw_c763 49 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbEnableVbusOverride
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c745 48 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbEnableVbusOverride
+{
+}
+#typev Hw_c1670 105 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbEnterLpm
+{
+}
+#typev Hw_c1651 104 "%0Cleared device mode active flag on CoreType %10!d!, Regval 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbEnterLpm
+{
+FilterExt->coreType, ItemLong -- 10
+reg, ItemLong -- 11
+}
+#typev Hw_c1626 103 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbEnterLpm
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c1613 102 "%0USB core not ready for D0 exit" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbEnterLpm
+{
+}
+#typev Hw_c1607 101 "%0Enter LPM: Cable Detach" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbEnterLpm
+{
+}
+#typev Hw_c1603 100 "%0Unexpected: Enter LPM: Suspend" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Hw FUNC=QcUsbEnterLpm
+{
+}
+#typev Hw_c1590 99 "%0Error: DCP/HVDCP/IDCP connected, but bConfigHardware is true" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbEnterLpm
+{
+}
+#typev Hw_c1588 98 "%0DCP/HVDCP/IDCP connected" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbEnterLpm
+{
+}
+#typev Hw_c1583 97 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbEnterLpm
+{
+}
+#typev Hw_c1912 123 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbExitLpm
+{
+}
+#typev Hw_c1887 122 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbExitLpm
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c1863 121 "%0Exit LPM: From Cable Attach" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbExitLpm
+{
+}
+#typev Hw_c1859 120 "%0Unexpected Exit LPM: From charger" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Hw FUNC=QcUsbExitLpm
+{
+}
+#typev Hw_c1854 119 "%0Unexpected: Exit LPM: From Suspend" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Hw FUNC=QcUsbExitLpm
+{
+}
+#typev Hw_c1850 118 "%0QcUsbExitLpm: Previous state: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Hw FUNC=QcUsbExitLpm
+{
+PowerState[PreviousState], ItemString -- 10
+}
+#typev Hw_c1846 117 "%0The hardware is not in LPM" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbExitLpm
+{
+}
+#typev Hw_c1842 116 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbExitLpm
+{
+}
+#typev Hw_c1410 90 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbHsPhyCheckLPM
+{
+}
+#typev Hw_c1408 89 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbHsPhyCheckLPM
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c1398 88 "%0QcUsbHsPhyCheckLPM - HS PHY/Link not in Disconnect state, still power down" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbHsPhyCheckLPM
+{
+}
+#typev Hw_c1384 87 "%0QcUsbHsPhyCheckLPM - HS PHY/Link not in L2 state, still power down" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbHsPhyCheckLPM
+{
+}
+#typev Hw_c1360 86 "%0QcUsbHsPhyCheckLPM - HS PHY not in L2 state, still power down" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbHsPhyCheckLPM
+{
+}
+#typev Hw_c1331 85 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbHsPhyCheckLPM
+{
+}
+#typev Hw_c1526 93 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbHsPhyEnterLpm
+{
+}
+#typev Hw_c1524 92 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbHsPhyEnterLpm
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c1431 91 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbHsPhyEnterLpm
+{
+}
+#typev Hw_c1789 112 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbHsPhyExitLpm
+{
+}
+#typev Hw_c1785 111 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbHsPhyExitLpm
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c1775 110 "%0PLL is not locked" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbHsPhyExitLpm
+{
+}
+#typev Hw_c1725 109 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbHsPhyExitLpm
+{
+}
+#typev Hw_c2023 132 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbInitHardwareForEnum
+{
+}
+#typev Hw_c1997 131 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbInitHardwareForEnum
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c1993 130 "%0Set device mode active flag on CoreType %10!d!, Regval 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbInitHardwareForEnum
+{
+FilterExt->coreType, ItemLong -- 10
+regval, ItemLong -- 11
+}
+#typev Hw_c1973 129 "%0Device context is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbInitHardwareForEnum
+{
+}
+#typev Hw_c1969 128 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbInitHardwareForEnum
+{
+}
+#typev Hw_c1153 74 "%0--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbPrepareHw
+{
+}
+#typev Hw_c1141 73 "%0QcUsbReadCCOut failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbPrepareHw
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Hw_c1133 72 "%0EvalAcpiMethod failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbPrepareHw
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Hw_c1121 71 "%0Invalid Context Handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbPrepareHw
+{
+}
+#typev Hw_c1117 70 "%0++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbPrepareHw
+{
+}
+#typev Hw_c1564 96 "%0Device_%10!s!, State: Cable_Disconnected(D3) SS: %11!s!, %12!s!, 0x%13!x!,  HS: %14!s!, %15!s!, 0x%16!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbPrintEnterLPMStatus
+{
+Core_Num[FilterExt->coreType], ItemString -- 10
+USB_Port_Link_State[SS_Port_Link_state], ItemString -- 11
+Port_Speed[SS_Port_Speed], ItemString -- 12
+ssPORTSC[0], ItemLong -- 13
+USB_Port_Link_State[HS_Port_Link_state], ItemString -- 14
+Port_Speed[HS_Port_Speed], ItemString -- 15
+hsPORTSC[0], ItemLong -- 16
+}
+#typev Hw_c1560 95 "%0Device_%10!s!, State: Suspended(D1) SS: %11!s!, %12!s!, 0x%13!x!,  HS: %14!s!, %15!s!, 0x%16!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbPrintEnterLPMStatus
+{
+Core_Num[FilterExt->coreType], ItemString -- 10
+USB_Port_Link_State[SS_Port_Link_state], ItemString -- 11
+Port_Speed[SS_Port_Speed], ItemString -- 12
+ssPORTSC[0], ItemLong -- 13
+USB_Port_Link_State[HS_Port_Link_state], ItemString -- 14
+Port_Speed[HS_Port_Speed], ItemString -- 15
+hsPORTSC[0], ItemLong -- 16
+}
+#typev Hw_c1547 94 "%0++ Core: %10!d! TargetState: %11!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbPrintEnterLPMStatus
+{
+FilterExt->coreType, ItemLong -- 10
+PowerState[TargetState], ItemString -- 11
+}
+#typev Hw_c1825 115 "%0Device_%10!s!, State: DisConnected(D0) SS: %11!s!, %12!s!, 0x%13!x!,  HS: %14!s!, %15!s!, 0x%16!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbPrintExitLPMStatus
+{
+Core_Num[FilterExt->coreType], ItemString -- 10
+USB_Port_Link_State[SS_Port_Link_state], ItemString -- 11
+Port_Speed[SS_Port_Speed], ItemString -- 12
+ssPORTSC[0], ItemLong -- 13
+USB_Port_Link_State[HS_Port_Link_state], ItemString -- 14
+Port_Speed[HS_Port_Speed], ItemString -- 15
+hsPORTSC[0], ItemLong -- 16
+}
+#typev Hw_c1822 114 "%0Device_%10!s!, State: Connected(D0) SS: %11!s!, %12!s!, 0x%13!x!,  HS: %14!s!, %15!s!, 0x%16!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbPrintExitLPMStatus
+{
+Core_Num[FilterExt->coreType], ItemString -- 10
+USB_Port_Link_State[SS_Port_Link_state], ItemString -- 11
+Port_Speed[SS_Port_Speed], ItemString -- 12
+ssPORTSC[0], ItemLong -- 13
+USB_Port_Link_State[HS_Port_Link_state], ItemString -- 14
+Port_Speed[HS_Port_Speed], ItemString -- 15
+hsPORTSC[0], ItemLong -- 16
+}
+#typev Hw_c1809 113 "%0++ Core: %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbPrintExitLPMStatus
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c1102 69 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbQueryRegDevSpeedMax
+{
+}
+#typev Hw_c1095 68 "%0CoreType = %10!s!, RegDevSpeedMax = %11!s!, DevSpeed = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbQueryRegDevSpeedMax
+{
+CoreType, ItemEnum(USB_CORE_TYPE) -- 10
+RegDevSpeedMax, ItemEnum(USB_REG_DEV_SPEED_TYPE) -- 11
+DevSpeed, ItemEnum(DEV_SPEED_TYPE) -- 12
+}
+#typev Hw_c1089 67 "%0Registry read for DevSpeedMax failed, status = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbQueryRegDevSpeedMax
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Hw_c1082 66 "%0Failed to open registry, status = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbQueryRegDevSpeedMax
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Hw_c1079 65 "%0Open registry key path = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbQueryRegDevSpeedMax
+{
+&keyPath, ItemPWString -- 10
+}
+#typev Hw_c1075 64 "%0Invalid CoreType = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbQueryRegDevSpeedMax
+{
+CoreType, ItemEnum(USB_CORE_TYPE) -- 10
+}
+#typev Hw_c1065 63 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbQueryRegDevSpeedMax
+{
+}
+#typev Hw_c665 42 "%0--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbReadCCOut
+{
+}
+#typev Hw_c651 41 "%0QcUsbReadCCOut - Invalid Buffer Size, failed with : %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbReadCCOut
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Hw_c644 40 "%0QcUsbReadCCOut - Invalid CC Lane reported : %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Hw FUNC=QcUsbReadCCOut
+{
+cc_lane, ItemEnum(_TYPEC_CC_OUT_STATUS_TYPE) -- 10
+}
+#typev Hw_c641 39 "%0Lane Number = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbReadCCOut
+{
+cc_lane, ItemEnum(_TYPEC_CC_OUT_STATUS_TYPE) -- 10
+}
+#typev Hw_c627 38 "%0UsbCUtilEvalAcpiMethod failed with : %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbReadCCOut
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Hw_c607 37 "%0RtlStringCbPrintf failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbReadCCOut
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Hw_c584 36 "%0Invalid Filter Extension" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QcUsbReadCCOut
+{
+}
+#typev Hw_c580 35 "%0++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbReadCCOut
+{
+}
+#typev Hw_c1236 80 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbSsPhyCheckLPM
+{
+}
+#typev Hw_c1232 79 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbSsPhyCheckLPM
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c1225 78 "%0QcUsbSsPhyCheckLPM - PHY is not in P3: USB30_STS = 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbSsPhyCheckLPM
+{
+regval, ItemLong -- 10
+}
+#typev Hw_c1217 77 "%0QcUsbSsPhyCheckLPM - Linestate is not in U3 or SS_DIS: 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbSsPhyCheckLPM
+{
+regval, ItemLong -- 10
+}
+#typev Hw_c1200 76 "%0QcUsbSsPhyCheckLPM - SS PHY not in P3 state, still power down" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbSsPhyCheckLPM
+{
+}
+#typev Hw_c1170 75 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbSsPhyCheckLPM
+{
+}
+#typev Hw_c1314 84 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbSsPhyEnterLpm
+{
+}
+#typev Hw_c1312 83 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbSsPhyEnterLpm
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c1263 82 "%0SS PHY suspend already enabled. Need to disable and enable it again" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=QcUsbSsPhyEnterLpm
+{
+}
+#typev Hw_c1253 81 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbSsPhyEnterLpm
+{
+}
+#typev Hw_c1711 108 "%0--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbSsPhyExitLpm
+{
+}
+#typev Hw_c1709 107 "%0Invalid USB Core Type %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=QcUsbSsPhyExitLpm
+{
+FilterExt->coreType, ItemLong -- 10
+}
+#typev Hw_c1684 106 "%0++" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=FuncTrace FUNC=QcUsbSsPhyExitLpm
+{
+}
+#typev Hw_c549 34 "%0--" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FuncTrace FUNC=UsbCUtilEvalAcpiMethod
+{
+}
+#typev Hw_c543 33 "%0UsbCUtilEvalAcpiMethod : OutputBuffer Signature Invalid, 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=UsbCUtilEvalAcpiMethod
+{
+((PACPI_EVAL_OUTPUT_BUFFER)pBuffer)->Signature, ItemLong -- 10
+}
+#typev Hw_c537 32 "%0UsbCUtilEvalAcpiMethod failed with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=UsbCUtilEvalAcpiMethod
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Hw_c523 31 "%0Unable to get IoTarget" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Hw FUNC=UsbCUtilEvalAcpiMethod
+{
+}
+#typev Hw_c501 30 "%0invalid parameter!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Hw FUNC=UsbCUtilEvalAcpiMethod
+{
+}
+#typev Hw_c492 29 "%0++" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=FuncTrace FUNC=UsbCUtilEvalAcpiMethod
+{
+}
+#enumv USB_CORE_TYPE
+{
+USB_CORE_SS1,0x0
+USB_CORE_MAX,0x1
+}
+#enumv USB_REG_DEV_SPEED_TYPE
+{
+USB_REG_DEV_SPEED_DEFAULT,0x0
+USB_REG_DEV_SPEED_FULL,0x1
+USB_REG_DEV_SPEED_HIGH,0x2
+USB_REG_DEV_SPEED_SUPER,0x3
+USB_REG_DEV_SPEED_SUPER_PLUS,0x4
+USB_REG_DEV_SPEED_MAX,0x5
+}
+#enumv DEV_SPEED_TYPE
+{
+DEV_SPEED_HIGH,0x0
+DEV_SPEED_FULL,0x1
+DEV_SPEED_SUPER,0x4
+DEV_SPEED_SUPER_PLUS,0x5
+}
+#enumv _TYPEC_CC_OUT_STATUS_TYPE
+{
+TYPEC_CC_OUT_CC1,0x0
+TYPEC_CC_OUT_CC2,0x1
+TYPEC_CC_OUT_CC_OPEN,0x2
+}

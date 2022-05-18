@@ -1,0 +1,468 @@
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+2f899211-7f12-38a0-d310-ca1b933808cf NetAdapter // SRC=Power.cpp MJ= MN=
+#typev Power_cpp1180 103 "%0%!FUNC!:: Exit,  wakeState=%10!d!, %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceArmWakeFromS0
+{
+pDeviceContext->PowerContext.wakeState, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev Power_cpp1177 102 "%0%!FUNC!:: CID queue is empty" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceArmWakeFromS0
+{
+}
+#typev Power_cpp1173 101 "%0%!FUNC!:: Wait-- CID queue is empty" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceArmWakeFromS0
+{
+}
+#typev Power_cpp1171 100 "%0%!FUNC!:: Wait-- CID queue is empty" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceArmWakeFromS0
+{
+}
+#typev Power_cpp1164 99 "%0%!FUNC!::ERROR: Wait-- CID queue is not empty. %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceArmWakeFromS0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp1160 98 "%0%!FUNC!:: Wait++ for CID queue to empty" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceArmWakeFromS0
+{
+}
+#typev Power_cpp1124 97 "%0%!FUNC!:: Entry, wakeState=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceArmWakeFromS0
+{
+pDeviceContext->PowerContext.wakeState, ItemLong -- 10
+}
+#typev Power_cpp1101 95 "%0%!FUNC!:: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceArmWakeFromSx
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp1240 107 "%0%!FUNC!:: Exit,  wakeState=%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceDisarmWakeFromS0
+{
+pDeviceContext->PowerContext.wakeState, ItemLong -- 10
+}
+#typev Power_cpp1234 106 "%0%!FUNC!:: Exit,  MbbDeviceResponseAvailable Dx, wakeCidIndex=%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceDisarmWakeFromS0
+{
+i, ItemLong -- 10
+}
+#typev Power_cpp1215 40 "%0NetAdapterPwrRemoveWakePatterns:: Complete." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=EvtDeviceDisarmWakeFromS0
+{
+}
+#typev Power_cpp1215 39 "%0NetAdapterPwrRemoveWakePatterns:: Deleted numWakePatterns=%10!u!, AdapterHandle=%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceDisarmWakeFromS0
+{
+pAdapterContext->numWakePatterns, ItemLong -- 10
+pDeviceContext->netAdapters[adapterId], ItemPtr -- 11
+}
+#typev Power_cpp1215 38 "%0NetAdapterPwrRemoveWakePatterns:: Delete Pattern: adapterId=%10!d!, Index=%11!u!, PatternId=%12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceDisarmWakeFromS0
+{
+adapterId, ItemLong -- 10
+i, ItemLong -- 11
+pAdapterContext->pWOLPattern[i].PatternId, ItemLong -- 12
+}
+#typev Power_cpp1212 105 "%0%!FUNC!:: wakeCidCount=%10!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceDisarmWakeFromS0
+{
+wakeCidCount, ItemLong -- 10
+}
+#typev Power_cpp1193 104 "%0%!FUNC!:: Entry, wakeState=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceDisarmWakeFromS0
+{
+pDeviceContext->PowerContext.wakeState, ItemLong -- 10
+}
+#typev Power_cpp1107 96 "%0%!FUNC!:: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceDisarmWakeFromSx
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp913 75 "%0%!FUNC!:: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDevicePrepareHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp907 74 "%0%!FUNC!:: ERROR:: DataIoInit %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDevicePrepareHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp879 73 "%0%!FUNC!:: RegisterRxCidCb %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDevicePrepareHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp867 72 "%0%!FUNC!:: RegisterEventsFromFilter %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDevicePrepareHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp857 71 "%0%!FUNC!:: Entry" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDevicePrepareHardware
+{
+}
+#typev Power_cpp838 70 "%0%!FUNC!:: Pattern - %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDevicePreviewBitmapPattern
+{
+hex_dump((PVOID)bitmapPattern.Pattern. bitmapPattern.PatternSize), ItemHEXDump -- 10
+}
+#typev Power_cpp837 69 "%0%!FUNC!:: Mask - %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDevicePreviewBitmapPattern
+{
+hex_dump((PVOID)bitmapPattern.Mask. bitmapPattern.MaskSize), ItemHEXDump -- 10
+}
+#typev Power_cpp835 68 "%0%!FUNC!:: adapter=%10!p!, MaskSize=%11!u!, PatternSize=%12!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDevicePreviewBitmapPattern
+{
+NetWakeSourceGetAdapter(WakeSource), ItemPtr -- 10
+(ULONG)bitmapPattern.MaskSize, ItemLong -- 11
+(ULONG)bitmapPattern.PatternSize, ItemLong -- 12
+}
+#typev Power_cpp828 67 "%0%!FUNC!:: Reject unsupported pattern type = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDevicePreviewBitmapPattern
+{
+NetWakeSourceGetType(WakeSource), ItemLong -- 10
+}
+#typev Power_cpp942 78 "%0%!FUNC!:: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceReleaseHardware
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev Power_cpp937 77 "%0%!FUNC!:: NotifyEventToFilter(QNET_CONTROL_INTERFACE_EVENT_STOP_COMMUNICATION) %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceReleaseHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp928 76 "%0%!FUNC!:: Entry" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceReleaseHardware
+{
+}
+#typev Power_cpp1091 94 "%0%!FUNC!:: Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceSelfManagedIoCleanup
+{
+}
+#typev Power_cpp1088 93 "%0%!FUNC!:: GUID_GLOBAL_USER_PRESENCE unregister failed. %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceSelfManagedIoCleanup
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp1083 92 "%0%!FUNC!:: Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceSelfManagedIoCleanup
+{
+}
+#typev Power_cpp1069 91 "%0%!FUNC!:: Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceSelfManagedIoInit
+{
+}
+#typev Power_cpp1066 90 "%0%!FUNC!:: GUID_GLOBAL_USER_PRESENCE register failed. %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceSelfManagedIoInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp1060 89 "%0%!FUNC!:: Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceSelfManagedIoInit
+{
+}
+#typev Power_cpp1248 108 "%0%!FUNC!:: Entry, wakeState=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceWakeFromS0Triggered
+{
+pDeviceContext->PowerContext.wakeState, ItemLong -- 10
+}
+#typev Power_cpp995 84 "%0%!FUNC!:: Exit: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterEvtDeviceD0Entry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp987 83 "%0%!FUNC!:: QNET_CONTROL_INTERFACE_EVENT_START_COMMUNICATION already processed." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterEvtDeviceD0Entry
+{
+}
+#typev Power_cpp982 82 "%0%!FUNC!:: DataIoD0Entry %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterEvtDeviceD0Entry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp978 81 "%0%!FUNC!:: ERROR:: DataIoD0Entry %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterEvtDeviceD0Entry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp973 80 "%0%!FUNC!:: NotifyEventToFilter(QNET_CONTROL_INTERFACE_EVENT_START_COMMUNICATION) %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterEvtDeviceD0Entry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp960 79 "%0%!FUNC!:: Device is wake armed. PreviousState %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterEvtDeviceD0Entry
+{
+PreviousState, ItemLong -- 10
+}
+#typev Power_cpp1047 88 "%0%!FUNC!:: Exit: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterEvtDeviceD0Exit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp1035 87 "%0%!FUNC!:: QNET_CONTROL_INTERFACE_EVENT_STOP_COMMUNICATION already stopped." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterEvtDeviceD0Exit
+{
+}
+#typev Power_cpp1026 86 "%0%!FUNC!:: NotifyEventToFilter(QNET_CONTROL_INTERFACE_EVENT_STOP_COMMUNICATION) %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterEvtDeviceD0Exit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp1014 60 "%0NetAdapterPwrPostIdleEvent:: Enqueue idleEvt=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterEvtDeviceD0Exit
+{
+idleEvent, ItemLong -- 10
+}
+#typev Power_cpp1014 59 "%0%!FUNC!:: Error: pIdleWorkRequest ran out of memory %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterEvtDeviceD0Exit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp1011 85 "%0%!FUNC!:: Device is wake armed. TargetState %10!s!(0x%11!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterEvtDeviceD0Exit
+{
+NetadapterUtilConvertWdfDevicePowerToString(TargetState), ItemString -- 10
+TargetState, ItemLong -- 11
+}
+#typev Power_cpp74 13 "%0%!FUNC!:: NetDeviceInitSetPowerPolicyEventCallbacks succeeded." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrCallbacksInit
+{
+}
+#typev Power_cpp69 12 "%0%!FUNC!:: WdfDeviceInitSetPowerPolicyEventCallbacks succeeded." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrCallbacksInit
+{
+}
+#typev Power_cpp60 11 "%0%!FUNC!:: WdfDeviceInitSetPnpPowerEventCallbacks succeeded." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrCallbacksInit
+{
+}
+#typev Power_cpp575 48 "%0%!FUNC!:: Pattern matches for id %10!d!, AdapterHandle=%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrGetMatchedPatternId
+{
+pWOLPattern->PatternId, ItemLong -- 10
+AdapterHandle, ItemPtr -- 11
+}
+#typev Power_cpp582 49 "%0%!FUNC!:: No matched wake pattern. AdapterHandle=%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrGetMatchedPatternId
+{
+AdapterHandle, ItemPtr -- 10
+}
+#typev Power_cpp564 47 "%0%!FUNC!:: Pattern id %10!d! did not match. AdapterHandle=%11!p!, maskIndex=%12!u!, bitIndex=%13!u!, PatternOffset=%14!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrGetMatchedPatternId
+{
+pWOLPattern->PatternId, ItemLong -- 10
+AdapterHandle, ItemPtr -- 11
+maskIndex, ItemLong -- 12
+bitIndex, ItemLong -- 13
+PatternOffset, ItemLong -- 14
+}
+#typev Power_cpp556 46 "%0%!FUNC!:: Pattern offset out of range.  PatternOffset=%10!d!, AdapterHandle=%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrGetMatchedPatternId
+{
+PatternOffset, ItemLong -- 10
+AdapterHandle, ItemPtr -- 11
+}
+#typev Power_cpp541 45 "%0%!FUNC!:: Pattern - %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrGetMatchedPatternId
+{
+hex_dump(pAdapterContext->pWOLPattern[i].BitMapPattern.PatternData. pAdapterContext->pWOLPattern[i].BitMapPattern.PatternSize), ItemHEXDump -- 10
+}
+#typev Power_cpp540 44 "%0%!FUNC!:: Mask - %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrGetMatchedPatternId
+{
+hex_dump(pAdapterContext->pWOLPattern[i].BitMapPattern.MaskData. pAdapterContext->pWOLPattern[i].BitMapPattern.MaskSize), ItemHEXDump -- 10
+}
+#typev Power_cpp538 43 "%0%!FUNC!:: Match Pattern: Index=%10!u!, PatternId=%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrGetMatchedPatternId
+{
+i, ItemLong -- 10
+pWOLPattern->PatternId, ItemLong -- 11
+}
+#typev Power_cpp531 42 "%0%!FUNC!:: Packet - %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrGetMatchedPatternId
+{
+hex_dump(pWakeDataPkt. (wakeDataPktSavedSize > 100 ? 100 : wakeDataPktSavedSize)), ItemHEXDump -- 10
+}
+#typev Power_cpp530 41 "%0%!FUNC!:: pWakeDataPkt=%10!p!, wakeDataPktSavedSize=%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrGetMatchedPatternId
+{
+pWakeDataPkt, ItemPtr -- 10
+wakeDataPktSavedSize, ItemLong -- 11
+}
+#typev Power_cpp813 66 "%0%!FUNC!:: Exit" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrIdleTimeoutManager
+{
+}
+#typev Power_cpp806 65 "%0%!FUNC!:: Process idleEvt=%10!d!, idleTimeout=%11!u!, userActive=%12!d!, datapathActive=%13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrIdleTimeoutManager
+{
+pIdleWorkRequest->idleEvent, ItemLong -- 10
+pDeviceContext->PowerContext.idleTimeout, ItemLong -- 11
+pDeviceContext->PowerContext.idleState.userActive, ItemLong -- 12
+pDeviceContext->PowerContext.idleState.datapathActive, ItemLong -- 13
+}
+#typev Power_cpp803 64 "%0%!FUNC!:: Invalid idleTimeout=%10!u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=NetAdapterPwrIdleTimeoutManager
+{
+pDeviceContext->PowerContext.idleTimeout, ItemLong -- 10
+}
+#typev Power_cpp798 10 "%0NetAdapterPwrSetIdleTimeout:: WdfDeviceAssignS0IdleSettings idleTimeout=%10!u!, %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrIdleTimeoutManager
+{
+uIdleTimeout, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev Power_cpp790 10 "%0NetAdapterPwrSetIdleTimeout:: WdfDeviceAssignS0IdleSettings idleTimeout=%10!u!, %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrIdleTimeoutManager
+{
+uIdleTimeout, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev Power_cpp781 63 "%0%!FUNC!:: Unhandled idleEvt=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrIdleTimeoutManager
+{
+pIdleWorkRequest->idleEvent, ItemLong -- 10
+}
+#typev Power_cpp745 62 "%0%!FUNC!:: Entry" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrIdleTimeoutManager
+{
+}
+#typev Power_cpp160 19 "%0%!FUNC!:: Error: WdfWorkItemCreate failed. %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=NetAdapterPwrInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp147 18 "%0%!FUNC!:: Error: WdfWaitLockCreate failed. %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=NetAdapterPwrInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp129 17 "%0%!FUNC!:: Error: WdfSpinLockCreate failed. %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=NetAdapterPwrInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp119 16 "%0%!FUNC!:: Error: WdfMemoryCreatePreallocated failed for hWakeDataPkt" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=NetAdapterPwrInit
+{
+}
+#typev Power_cpp110 15 "%0%!FUNC!:: Error: WdfMemoryCreate failed for pWakeDataPkt" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=NetAdapterPwrInit
+{
+}
+#typev Power_cpp101 10 "%0NetAdapterPwrSetIdleTimeout:: WdfDeviceAssignS0IdleSettings idleTimeout=%10!u!, %11!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrInit
+{
+uIdleTimeout, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev Power_cpp92 14 "%0%!FUNC!:: WdfDeviceSetPowerCapabilities" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrInit
+{
+}
+#typev Power_cpp736 60 "%0NetAdapterPwrPostIdleEvent:: Enqueue idleEvt=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrNotifyNewPkt
+{
+idleEvent, ItemLong -- 10
+}
+#typev Power_cpp736 59 "%0%!FUNC!:: Error: pIdleWorkRequest ran out of memory %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrNotifyNewPkt
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp734 61 "%0%!FUNC!:: dir=%10!d!, queueId=%11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrNotifyNewPkt
+{
+dir, ItemLong -- 10
+queueId, ItemLong -- 11
+}
+#typev Power_cpp619 53 "%0%!FUNC!:: Exit" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakeCid
+{
+}
+#typev Power_cpp617 29 "%0NetAdapterPwrReqWakeFromBus:: IOCTL_INTERNAL_QCWWAN_BUS_REQ_WAKE_QNET failed. %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakeCid
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp617 28 "%0NetAdapterPwrReqWakeFromBus:: IOCTL_INTERNAL_QCWWAN_BUS_REQ_WAKE_QNET successful. %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakeCid
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp614 30 "%0NetAdapterPwrUpdateWakeReasonCid:: Invalid argument. pBuffer %10!p! nBuffer %11!I64u!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakeCid
+{
+pBuffer, ItemPtr -- 10
+nBuffer, ItemULongLong -- 11
+}
+#typev Power_cpp614 33 "%0NetAdapterPwrUpdateWakeReasonCid:: Wake reason already updated. wakeReason=0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakeCid
+{
+pDeviceContext->PowerContext.wakeReason, ItemLong -- 10
+}
+#typev Power_cpp614 31 "%0NetAdapterPwrUpdateWakeReasonCid:: Matched wakeAdapter=%10!p!, SessionId=%11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakeCid
+{
+pDeviceContext->PowerContext.wakeAdapter, ItemPtr -- 10
+((PMBIM_CONNECT_INFO)pIndicateMsg)->SessionId, ItemLong -- 11
+}
+#typev Power_cpp614 32 "%0NetAdapterPwrUpdateWakeReasonCid:: wakeReason=0x%10!x!, mbimSvcId=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakeCid
+{
+pDeviceContext->PowerContext.wakeReason, ItemLong -- 10
+mbimSvcId, ItemLong -- 11
+}
+#typev Power_cpp611 52 "%0%!FUNC!:: Entry" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakeCid
+{
+}
+#typev Power_cpp604 51 "%0%!FUNC!:: Exit. bIsPatternMatch=%10!d!, wakePatternId=%11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakePkt
+{
+bIsPatternMatch, ItemLong -- 10
+wakePatternId, ItemLong -- 11
+}
+#typev Power_cpp601 29 "%0NetAdapterPwrReqWakeFromBus:: IOCTL_INTERNAL_QCWWAN_BUS_REQ_WAKE_QNET failed. %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakePkt
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp598 35 "%0NetAdapterPwrUpdateWakeReasonPkt:: Wake reason already updated. wakeReason=%10!d!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakePkt
+{
+pDeviceContext->PowerContext.wakeReason, ItemLong -- 10
+}
+#typev Power_cpp601 28 "%0NetAdapterPwrReqWakeFromBus:: IOCTL_INTERNAL_QCWWAN_BUS_REQ_WAKE_QNET successful. %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakePkt
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp598 34 "%0NetAdapterPwrUpdateWakeReasonPkt:: wakeReason=%10!d!, wakePatternId=%11!u!, wakeDataPktSavedSize=%12!u!, wakeDataPktActualSize=%13!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakePkt
+{
+pDeviceContext->PowerContext.wakeReason, ItemLong -- 10
+pDeviceContext->PowerContext.wakePatternId, ItemLong -- 11
+pDeviceContext->PowerContext.wakeDataPktSavedSize, ItemLong -- 12
+pDeviceContext->PowerContext.wakeDataPktActualSize, ItemLong -- 13
+}
+#typev Power_cpp591 50 "%0%!FUNC!:: Entry" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrNotifyRxWakePkt
+{
+}
+#typev Power_cpp490 37 "%0NetAdapterPwrQueryUpdateWakePatterns:: Add Pattern: AdapterHandle=%10!p!, wakeSourceIndex=%11!u!, wakeSourceType=%12!d!, PatternId=%13!u!, MaskSize=%14!u!, PatternSize=%15!u!, status=%16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrQueryUpdateWakePatterns
+{
+AdapterHandle, ItemPtr -- 10
+wakeSourceIndex, ItemLong -- 11
+wakeSourceType, ItemLong -- 12
+bitmapPattern.Id, ItemLong -- 13
+(ULONG)bitmapPattern.MaskSize, ItemLong -- 14
+(ULONG)bitmapPattern.PatternSize, ItemLong -- 15
+status, ItemLong -- 16
+}
+#typev Power_cpp472 36 "%0NetAdapterPwrQueryUpdateWakePatterns:: Skip unsupported wake source type %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrQueryUpdateWakePatterns
+{
+wakeSourceType, ItemLong -- 10
+}
+#typev Power_cpp296 27 "%0NetAdapterPwrSendIoctlAsync:: ASYNC_IOCTL_INTERNAL_QCWWAN_BUS_REQ_WAKE_QNET failed. %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrSendIoctlAsync
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp274 26 "%0Power.cpp::%!FUNC! WdfIoTargetFormatRequestForInternalIoctl returned status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrSendIoctlAsync
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp259 25 "%0Power.cpp::%!FUNC! WdfRequestCreate returned status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrSendIoctlAsync
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp687 56 "%0%!FUNC!:: No wake reason 0x%10!x!. Not sending wake reason ind" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=NetAdapterPwrSendWakeReasonInd
+{
+pDeviceContext->PowerContext.wakeReason, ItemLong -- 10
+}
+#typev Power_cpp682 55 "%0%!FUNC!:: Unspecified wake reason 0x%10!x!. Not sending wake reason ind" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=NetAdapterPwrSendWakeReasonInd
+{
+pDeviceContext->PowerContext.wakeReason, ItemLong -- 10
+}
+#typev Power_cpp701 58 "%0%!FUNC!:: Exit" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrSendWakeReasonInd
+{
+}
+#typev Power_cpp690 57 "%0%!FUNC!:: wakeReason=0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrSendWakeReasonInd
+{
+pDeviceContext->PowerContext.wakeReason, ItemLong -- 10
+}
+#typev Power_cpp627 54 "%0%!FUNC!:: Entry" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrSendWakeReasonInd
+{
+}
+#typev Power_cpp179 20 "%0%!FUNC!:: Complete." //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=Core FUNC=NetAdapterPwrSetWakeCapabilities
+{
+}
+#typev Power_cpp1286 111 "%0%!FUNC!:: Error: Unknown power setting guid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrUserStateChangeCb
+{
+}
+#typev Power_cpp1281 110 "%0%!FUNC!:: Error: Unhandled user state" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrUserStateChangeCb
+{
+}
+#typev Power_cpp1277 60 "%0NetAdapterPwrPostIdleEvent:: Enqueue idleEvt=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrUserStateChangeCb
+{
+idleEvent, ItemLong -- 10
+}
+#typev Power_cpp1277 59 "%0%!FUNC!:: Error: pIdleWorkRequest ran out of memory %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrUserStateChangeCb
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp1273 60 "%0NetAdapterPwrPostIdleEvent:: Enqueue idleEvt=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrUserStateChangeCb
+{
+idleEvent, ItemLong -- 10
+}
+#typev Power_cpp1273 59 "%0%!FUNC!:: Error: pIdleWorkRequest ran out of memory %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrUserStateChangeCb
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp1269 60 "%0NetAdapterPwrPostIdleEvent:: Enqueue idleEvt=%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrUserStateChangeCb
+{
+idleEvent, ItemLong -- 10
+}
+#typev Power_cpp1269 59 "%0%!FUNC!:: Error: pIdleWorkRequest ran out of memory %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrUserStateChangeCb
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp1264 109 "%0%!FUNC!:: userState=%10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrUserStateChangeCb
+{
+(*(PULONG)Value), ItemLong -- 10
+}
+#typev Power_cpp212 22 "%0%!FUNC!:: Error: PatternData ran out of memory %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrWakePatternsInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp221 23 "%0%!FUNC!:: Error: MaskData ran out of memory %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrWakePatternsInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp226 24 "%0%!FUNC!:: AdapterHandle=%10!p!, pWOLPattern=%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=NetAdapterPwrWakePatternsInit
+{
+AdapterHandle, ItemPtr -- 10
+pAdapterContext->pWOLPattern, ItemPtr -- 11
+}
+#typev Power_cpp199 21 "%0%!FUNC!:: Error: WOLPattern ran out of memory %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=NetAdapterPwrWakePatternsInit
+{
+status, ItemNTSTATUS -- 10
+}

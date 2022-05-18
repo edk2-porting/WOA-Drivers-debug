@@ -1,0 +1,216 @@
+// PDB:  qcgnss.pdb
+// PDB:  Last Updated :2021-10-17:21:53:26:418 (UTC) [tracepdb]
+5120d70f-eaef-34bc-20e2-d022d7cb5d26 10.7 // SRC=loc_api_v02_client.c MJ= MN=
+#typev loc_api_v02_client_c733 16 "%0loc_api_v02_client.c::733::%!FUNC! :qmi error = %10!d!, loc error = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=convertQmiErrorToLocError
+{
+error, ItemLong -- 10
+locError, ItemLong -- 11
+}
+#typev loc_api_v02_client_c704 15 "%0loc_api_v02_client.c::704::%!FUNC! : result = %10!d!, error = %11!d!, status = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=convertQmiResponseToLocStatus
+{
+pResponse->resp.result, ItemLong -- 10
+pResponse->resp.error, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev loc_api_v02_client_c660 14 "%0loc_api_v02_client.c::660::%!FUNC! :eventId %10!d! not found" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=isClientRegisteredForEvent
+{
+eventIndId, ItemLong -- 10
+}
+#typev loc_api_v02_client_c646 13 "%0loc_api_v02_client.c::646::%!FUNC! : eventId %10!d! registered mask = 0x%11!04x!%12!04x!, eventMask = 0x%13!04x!%14!04x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=isClientRegisteredForEvent
+{
+eventIndId, ItemLong -- 10
+(uint32_t)(eventRegMask>>32), ItemLong -- 11
+(uint32_t)(eventRegMask & 0xFFFFFFFF), ItemLong -- 12
+(uint32_t)(locClientEventIndTable[idx].eventMask >> 32), ItemLong -- 13
+(uint32_t)(locClientEventIndTable[idx].eventMask & 0xFFFFFFFF), ItemLong -- 14
+}
+#typev loc_api_v02_client_c2498 61 "%0loc_api_v02_client.c::2498::%!FUNC! :: qmi_client_release error %10!d! for client %11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientClose
+{
+rc, ItemLong -- 10
+pCallbackData->userHandle, ItemPtr -- 11
+}
+#typev loc_api_v02_client_c2483 60 "%0locClientClose releasing handle %10!p!, user handle %11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientClose
+{
+*pLocClientHandle, ItemPtr -- 10
+pCallbackData->userHandle, ItemPtr -- 11
+}
+#typev loc_api_v02_client_c2474 59 "%0loc_api_v02_client.c::2474::%!FUNC! :: invalid handle " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientClose
+{
+}
+#typev loc_api_v02_client_c2459 58 "%0loc_api_v02_client.c::2459::%!FUNC! :: invalid pointer to handle " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientClose
+{
+}
+#typev loc_api_v02_client_c1367 22 "%0loc_api_v02_client.c::1367::%!FUNC! : Service Error %10!d! received, pCallbackData = %11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientErrorCb
+{
+error, ItemLong -- 10
+err_cb_data, ItemPtr -- 11
+}
+#typev loc_api_v02_client_c614 12 "%0loc_api_v02_client.c::614::%!FUNC! : indId %10!d! not found" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientGetSizeAndTypeByIndId
+{
+indId, ItemLong -- 10
+}
+#typev loc_api_v02_client_c607 11 "%0loc_api_v02_client.c::607::%!FUNC! : indId %10!d! is a resp size = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientGetSizeAndTypeByIndId
+{
+indId, ItemLong -- 10
+(uint32_t)*pIndSize, ItemLong -- 11
+}
+#typev loc_api_v02_client_c595 10 "%0loc_api_v02_client.c::595::%!FUNC! : indId %10!d! is an event size = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientGetSizeAndTypeByIndId
+{
+indId, ItemLong -- 10
+(uint32_t)*pIndSize, ItemLong -- 11
+}
+#typev loc_api_v02_client_c2681 70 "%0loc_api_v02_client.c::2681::%!FUNC! :: event ind Id %10!d! size = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientGetSizeByEventIndId
+{
+eventIndId, ItemLong -- 10
+(uint32_t)*pEventIndSize, ItemLong -- 11
+}
+#typev loc_api_v02_client_c2646 69 "%0loc_api_v02_client.c::2646::%!FUNC! :: resp ind Id %10!d! size = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientGetSizeByRespIndId
+{
+respIndId, ItemLong -- 10
+(uint32_t)*pRespIndSize, ItemLong -- 11
+}
+#typev loc_api_v02_client_c849 20 "%0loc_api_v02_client.c::849::%!FUNC! :" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientHandleGetServiceRevisionRespInd
+{
+}
+#typev loc_api_v02_client_c1327 21 "%0loc_api_v02_client.c::1327::%!FUNC! : unknown ind id %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientHandleIndication
+{
+(uint32_t)indId, ItemLong -- 10
+}
+#typev loc_api_v02_client_c760 17 "%0loc_api_v02_client.c::760::%!FUNC! : len = %10!Iu! lat = %11!s!, lon = %12!s!, alt = %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientHandlePosReportInd
+{
+ind_buf_len, ItemPtr -- 10
+posReport->latitude, ItemDouble -- 11
+posReport->longitude, ItemDouble -- 12
+posReport->altitudeWrtEllipsoid, ItemDouble -- 13
+}
+#typev loc_api_v02_client_c803 19 "%0loc_api_v02_client.c::803::%!FUNC! : valid_mask = %10!x!, prn = %11!u!, system = %12!d!, status = %13!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientHandleSatReportInd
+{
+satReport->svList[idx].validMask, ItemLong -- 10
+satReport->svList[idx].gnssSvId, ItemLong -- 11
+satReport->svList[idx].system, ItemLong -- 12
+satReport->svList[idx].svStatus, ItemLong -- 13
+}
+#typev loc_api_v02_client_c792 18 "%0loc_api_v02_client.c::792::%!FUNC! : len = %10!Iu! , altitude assumed = %11!u!, num SV's = %12!u! validity = %13!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientHandleSatReportInd
+{
+ind_buf_len, ItemPtr -- 10
+satReport->altitudeAssumed, ItemLong -- 11
+satReport->svList_len, ItemLong -- 12
+satReport->svList_valid, ItemLong -- 13
+}
+#typev loc_api_v02_client_c1563 30 "%0loc_api_v02_client.c::1563::%!FUNC! :: Error indication not found %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientIndCb
+{
+(uint32_t)msg_id, ItemLong -- 10
+}
+#typev loc_api_v02_client_c1551 29 "%0loc_api_v02_client.c::1551::%!FUNC! :: Error decoding indication %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientIndCb
+{
+rc, ItemLong -- 10
+}
+#typev loc_api_v02_client_c1543 28 "%0loc_api_v02_client.c::1543::%!FUNC! :: Error handling the indication %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientIndCb
+{
+(uint32_t)msg_id, ItemLong -- 10
+}
+#typev loc_api_v02_client_c1461 27 "%0loc_api_v02_client.c::1461::%!FUNC! :: memory allocation failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientIndCb
+{
+}
+#typev loc_api_v02_client_c1451 26 "%0loc_api_v02_client.c::1451::%!FUNC! :: client is not registered for event %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientIndCb
+{
+(uint32_t)msg_id, ItemLong -- 10
+}
+#typev loc_api_v02_client_c1435 25 "%0loc_api_v02_client.c::1435::%!FUNC! :: invalid user_handle got %10!p! expected %11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientIndCb
+{
+user_handle, ItemPtr -- 10
+pCallbackData->userHandle, ItemPtr -- 11
+}
+#typev loc_api_v02_client_c1425 24 "%0loc_api_v02_client.c::1425::%!FUNC! :: invalid callback data" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientIndCb
+{
+}
+#typev loc_api_v02_client_c1418 23 "%0loc_api_v02_client.c::1418::%!FUNC! :: Indication: msg_id=%10!d! buf_len=%11!d! pCallbackData = %12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientIndCb
+{
+(uint32_t)msg_id, ItemLong -- 10
+ind_buf_len, ItemLong -- 11
+pCallbackData, ItemPtr -- 12
+}
+#typev loc_api_v02_client_c2429 57 "%0loc_api_v02_client.c::2429::%!FUNC! :: returning handle = %10!p!, user_handle=%11!p!, status = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientOpen
+{
+*pLocClientHandle, ItemPtr -- 10
+pCallbackData->userHandle, ItemPtr -- 11
+status, ItemLong -- 12
+}
+#typev loc_api_v02_client_c2421 56 "%0loc_api_v02_client.c::2421::%!FUNC! :: Error! status = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientOpen
+{
+status, ItemLong -- 10
+}
+#typev loc_api_v02_client_c2387 55 "%0loc_api_v02_client.c::2387::%!FUNC! :: Error sending registration mask" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientOpen
+{
+}
+#typev loc_api_v02_client_c2374 54 "%0loc_api_v02_client.c::2374::%!FUNC! : locClientQmiCtrlPointInit returned %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientOpen
+{
+status, ItemLong -- 10
+}
+#typev loc_api_v02_client_c2366 53 "%0loc_api_v02_client.c::2366::%!FUNC! : locClientQmiCtrlPointInit returned %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientOpen
+{
+status, ItemLong -- 10
+}
+#typev loc_api_v02_client_c2349 52 "%0loc_api_v02_client.c::2349::%!FUNC! :: Could not allocate memory for callback data " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientOpen
+{
+}
+#typev loc_api_v02_client_c2334 51 "%0loc_api_v02_client.c::2334::%!FUNC! :: Invalid parameters in locClientOpen" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientOpen
+{
+}
+#typev loc_api_v02_client_c2085 38 "%0loc_api_v02_client.c::2085::%!FUNC! :: could not register QCCI error callback error:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientQmiCtrlPointInit
+{
+rc, ItemLong -- 10
+}
+#typev loc_api_v02_client_c2073 37 "%0loc_api_v02_client.c::2073::%!FUNC! :: passing the pointer %10!p! toqmi_client_register_error_cb " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientQmiCtrlPointInit
+{
+pLocClientCbData, ItemPtr -- 10
+}
+#typev loc_api_v02_client_c2066 36 "%0loc_api_v02_client.c::2066::%!FUNC! :: qmi_client_init unsuccessful, status : %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientQmiCtrlPointInit
+{
+rc, ItemLong -- 10
+}
+#typev loc_api_v02_client_c2051 35 "%0loc_api_v02_client.c::2051::%!FUNC! :: qmiLoc_get_service_object_v02 failed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientQmiCtrlPointInit
+{
+}
+#typev loc_api_v02_client_c1597 31 "%0loc_api_v02_client.c::1597::%!FUNC! : status %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientRegisterEventMask
+{
+loc_get_v02_client_status_name(status), ItemString -- 10
+}
+#typev loc_api_v02_client_c2621 68 "%0loc_api_v02_client.c::2621::%!FUNC! :: ---> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientSendReq
+{
+}
+#typev loc_api_v02_client_c2603 67 "%0loc_api_v02_client.c::2603::%!FUNC! :: send_msg_sync error: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientSendReq
+{
+rc, ItemLong -- 10
+}
+#typev loc_api_v02_client_c2598 66 "%0loc_api_v02_client.c::2598::%!FUNC! : qmi_client_send_msg_sync returned %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientSendReq
+{
+rc, ItemLong -- 10
+}
+#typev loc_api_v02_client_c2581 65 "%0loc_api_v02_client.c::2581::%!FUNC! : sending reqId= %10!d!, len = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientSendReq
+{
+reqId, ItemLong -- 10
+reqLen, ItemLong -- 11
+}
+#typev loc_api_v02_client_c2574 64 "%0loc_api_v02_client.c::2574::%!FUNC! : error invalid request" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientSendReq
+{
+}
+#typev loc_api_v02_client_c2563 63 "%0loc_api_v02_client.c::2563::%!FUNC! :: invalid handle " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientSendReq
+{
+}
+#typev loc_api_v02_client_c2553 62 "%0loc_api_v02_client.c::2553::%!FUNC! :: ---> " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=locClientSendReq
+{
+}
+#typev loc_api_v02_client_c2024 34 "%0loc_api_v02_client.c::2024::%!FUNC! :: reqId=%10!d!, len = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=validateRequest
+{
+reqId, ItemLong -- 10
+*pOutLen, ItemLong -- 11
+}
+#typev loc_api_v02_client_c2008 33 "%0loc_api_v02_client.c::2008::%!FUNC! :: Error unknown reqId=%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=validateRequest
+{
+reqId, ItemLong -- 10
+}
+#typev loc_api_v02_client_c1624 32 "%0loc_api_v02_client.c::1624::%!FUNC! :: reqId = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INFO_HIGH FUNC=validateRequest
+{
+reqId, ItemLong -- 10
+}

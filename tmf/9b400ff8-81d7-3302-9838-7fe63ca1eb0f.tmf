@@ -1,0 +1,56 @@
+// PDB:  qc5gnrcoexmgr7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+9b400ff8-81d7-3302-9838-7fe63ca1eb0f latest // SRC=WorkerThread.c MJ= MN=
+#typev WorkerThread_c244 20 "%0%!FUNC! Cleaning up work queue for Thread ID: 0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WorkerThreadCleanup
+{
+GetCurrentThreadId(), ItemLong -- 10
+}
+#typev WorkerThread_c131 11 "%0%!FUNC! ERROR: Invalid thread context or WorkerThread terminating!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WorkerThreadEnqueue
+{
+}
+#typev WorkerThread_c384 24 "%0%!FUNC! Thread Creation successful. ThreadID = 0x%10!x!. Calling thread = 0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WorkerThreadInit
+{
+pThreadContext->dwThreadID, ItemLong -- 10
+GetCurrentThreadId(), ItemLong -- 11
+}
+#typev WorkerThread_c374 23 "%0%!FUNC! Thread Creation failed. Error = %10!u!. ThreadID = 0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WorkerThreadInit
+{
+GetLastError(), ItemLong -- 10
+GetCurrentThreadId(), ItemLong -- 11
+}
+#typev WorkerThread_c324 22 "%0%!FUNC! Terminate. Thread ID = 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WorkerThreadRunner
+{
+GetCurrentThreadId(), ItemLong -- 10
+}
+#typev WorkerThread_c302 21 "%0%!FUNC! bStopThread = TRUE. Thread ID = 0x%10!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WorkerThreadRunner
+{
+GetCurrentThreadId(), ItemLong -- 10
+}
+#typev WorkerThread_c204 15 "%0%!FUNC!  Error Code = 0x%10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WorkerThreadTerminate
+{
+dwErrorCode, ItemLong -- 10
+}
+#typev WorkerThread_c200 14 "%0%!FUNC! Failed to Exit the Thread. Thread Exit Code = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WorkerThreadTerminate
+{
+dwThreadExitCode, ItemLong -- 10
+}
+#typev WorkerThread_c186 13 "%0%!FUNC! Thread Exited Successfully, closing Thread handles and cleaning up Thread context." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=WorkerThreadTerminate
+{
+}
+#typev WorkerThread_c215 17 "%0%!FUNC! Wait for thread quit was abandoned." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WorkerThreadTerminate
+{
+}
+#typev WorkerThread_c220 18 "%0%!FUNC! wait for thread quit timed out." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WorkerThreadTerminate
+{
+}
+#typev WorkerThread_c211 16 "%0%!FUNC! Failed to wait for thread quit. Error code = 0x%10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WorkerThreadTerminate
+{
+dwErrorCode, ItemLong -- 10
+}
+#typev WorkerThread_c225 19 "%0%!FUNC! Failed to wait for the to quit." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=NRCOEX_MGR FUNC=WorkerThreadTerminate
+{
+}
+#typev WorkerThread_c169 12 "%0%!FUNC! Thread ID = 0x%10!x!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=NRCOEX_MGR FUNC=WorkerThreadTerminate
+{
+pThreadContext->dwThreadID, ItemLong -- 10
+}

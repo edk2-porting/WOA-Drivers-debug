@@ -1,0 +1,226 @@
+// PDB:  QcTrEE.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+bd961f75-1120-3e20-7126-ae6111abc8c3 latest // SRC=Memory.c MJ= MN=
+#typev Memory_c622 40 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=AllocMemFromTreeSMB
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev Memory_c424 31 "%0TrEE: Error: [%10!p!] Invalid parameters recieved for function %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=AllocMemFromTreeSMB
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c562 37 "%0TrEE: Verbose: UsedBytes in SMB after processing alloc request: 0x%10!X!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TREE FUNC=AllocMemFromTreeSMB
+{
+(UINT32)SmbInfo->UsedBytesInSmb, ItemLong -- 10
+}
+#typev Memory_c596 39 "%0TrEE: Verbose: UsedBytes in SMB after processing alloc request: 0x%10!X!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TREE FUNC=AllocMemFromTreeSMB
+{
+(UINT32)SmbInfo->UsedBytesInSmb, ItemLong -- 10
+}
+#typev Memory_c577 38 "%0TrEE: Error: [%10!p!] Unable to allocate Channel Info %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=AllocMemFromTreeSMB
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c502 36 "%0TrEE: Verbose: UsedBytes in SMB after processing alloc request: 0x%10!X!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TREE FUNC=AllocMemFromTreeSMB
+{
+(UINT32)SmbInfo->UsedBytesInSmb, ItemLong -- 10
+}
+#typev Memory_c489 35 "%0TrEE: Verbose: UsedBytes in SMB after processing alloc request: 0x%10!X!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TREE FUNC=AllocMemFromTreeSMB
+{
+(UINT32)SmbInfo->UsedBytesInSmb, ItemLong -- 10
+}
+#typev Memory_c470 34 "%0TrEE: Error: [%10!p!] Unable to allocate Channel Info %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=AllocMemFromTreeSMB
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c448 33 "%0TrEE: Error: [%10!p!] Requested allocation size 0x%11!X! more than available 0x%12!X! %13!s!:%14!d!: 0x%15!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=AllocMemFromTreeSMB
+{
+_TID(), ItemPtr -- 10
+(UINT32)ActualAllocationSize, ItemLong -- 11
+(UINT32)(SmbInfo->TotalBytesInSmb - SmbInfo->UsedBytesInSmb), ItemLong -- 12
+__FILE__, ItemString -- 13
+__LINE__, ItemLong -- 14
+Status, ItemLong -- 15
+}
+#typev Memory_c437 32 "%0TrEE: Error: [%10!p!] SMB memory pointer found null %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=AllocMemFromTreeSMB
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c419 30 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=AllocMemFromTreeSMB
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev Memory_c261 21 "%0TrEE: Error: [%10!p!] Invalid parameters passed for AllocateContiguousMemory %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=AllocateContiguousMemory
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c329 26 "%0TrEE: Error: [%10!p!] Wrong buffer type passed for allocation %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=AllocateContiguousMemory
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c320 25 "%0TrEE: Error: [%10!p!] Unable to allocated TZFast buffer %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=AllocateContiguousMemory
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c315 24 "%0TrEE: Allocated TZ FAST Buffer" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=AllocateContiguousMemory
+{
+}
+#typev Memory_c363 29 "%0TrEE: Allocated buffer from SMB with address 0x%10!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TREE FUNC=AllocateContiguousMemory
+{
+(UINT64)VirtualAddress, ItemLongLongX -- 10
+}
+#typev Memory_c354 28 "%0TrEE: Error: [%10!p!] SMB was not enabled on device %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=AllocateContiguousMemory
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c298 23 "%0TrEE: Allocated TZ OS Buffer" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=AllocateContiguousMemory
+{
+}
+#typev Memory_c281 22 "%0TrEE: Allocated TZ BSP Buffer" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=AllocateContiguousMemory
+{
+}
+#typev Memory_c664 42 "%0TrEE: Verbose: [%10!p!] -- %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=FindFreeChannelsInSMB
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev Memory_c651 41 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=FindFreeChannelsInSMB
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev Memory_c698 44 "%0TrEE: Verbose: [%10!p!] -- %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=FindNextFreeChannel
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev Memory_c674 43 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=FindNextFreeChannel
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev Memory_c171 16 "%0TrEE: Freed TZBSP Buffer" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=FreeContiguousMemory
+{
+}
+#typev Memory_c165 15 "%0TrEE: Error: [%10!p!] Freeing TZ BSP buffer failed in %11!s!:%12!d! with status %13!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=FreeContiguousMemory
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c186 18 "%0TrEE: Freed TZOS Buffer" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=FreeContiguousMemory
+{
+}
+#typev Memory_c180 17 "%0TrEE: Error: [%10!p!] Freeing TZ OS buffer failed in %11!s!:%12!d! with status %13!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=FreeContiguousMemory
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c201 20 "%0TrEE: Freed TZFAST Buffer" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=FreeContiguousMemory
+{
+}
+#typev Memory_c195 19 "%0TrEE: Error: [%10!p!] Freeing TZ FAST buffer failed in %11!s!:%12!d! with status %13!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=FreeContiguousMemory
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c155 14 "%0TrEE: Freed buffer from SMB with address 0x%10!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TREE FUNC=FreeContiguousMemory
+{
+(UINT64)VirtualAddress, ItemLongLongX -- 10
+}
+#typev Memory_c145 13 "%0TrEE: Error: [%10!p!] FreeMemFromTreeSMB failed in %11!s!:%12!d! with status %13!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=FreeContiguousMemory
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c776 50 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=FreeMemFromTreeSMB
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev Memory_c714 46 "%0TrEE: Error: [%10!p!] Invalid parameters %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=FreeMemFromTreeSMB
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c760 49 "%0TrEE: Error: [%10!p!] Wrong channel info received for free %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=FreeMemFromTreeSMB
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c742 48 "%0TrEE: Verbose: UsedBytes in SMB after processing free request: 0x%10!X!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TREE FUNC=FreeMemFromTreeSMB
+{
+(UINT32)SmbInfo->UsedBytesInSmb, ItemLong -- 10
+}
+#typev Memory_c727 47 "%0TrEE: Error: [%10!p!] SMB virtual address is NULL %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=FreeMemFromTreeSMB
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c709 45 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TREE FUNC=FreeMemFromTreeSMB
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev Memory_c97 12 "%0TrEE: Error: [%10!p!] Invalid buffer size error in VerifyMemoryAlignment %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=VerifyMemoryAlignment
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c89 11 "%0TrEE: Error: [%10!p!] Alignment error in VerifyMemoryAlignment %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=VerifyMemoryAlignment
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev Memory_c80 10 "%0TrEE: Error: [%10!p!] Alignment error in VerifyMemoryAlignment %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TREE FUNC=VerifyMemoryAlignment
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}

@@ -1,0 +1,99 @@
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+1f18f2c1-d1e2-38e9-4ff0-f12890a34a79 NetAdapter // SRC=QmapTxQueue.cpp MJ= MN=
+#typev QmapHalIf_cpp414 15 "%0%!FUNC!::147:: Qmap HAL de-rallocate TX buffers with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapDeinitBuffers
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapHalIf_cpp414 14 "%0No Tx buffers allocated. Returning Status %10!s!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=QmapDeinitBuffers
+{
+status, ItemNTSTATUS -- 10
+}
+#typev QmapHalIf_cpp414 13 "%0QMAP::%!FUNC! Freeing MDLs" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapDeinitBuffers
+{
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapHalIf_cpp384 12 "%0QMAP::%!FUNC! Base VA = %10!p!, LA = 0x%11!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapInitBuffers
+{
+txBufVAHead, ItemPtr -- 10
+txBufLAHead.QuadPart, ItemLongLongX -- 11
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapTxQueue_cpp250 20 "%0%!FUNC!::250:: Fail to get TX descriptor:%10!s! free_tx_desc %11!d!, no_of_ul_backoff = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Qmap FUNC=QmapEvtTxQueueAdvance
+{
+status, ItemNTSTATUS -- 10
+PQMAP_DEV_CONTEXT(pClientCtx->pQmapCtx)->total_free_tx_desc, ItemLong -- 11
+PQMAP_DEV_CONTEXT(pClientCtx->pQmapCtx)->no_of_ul_backoff, ItemLong -- 12
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapTxQueue_cpp318 21 "%0%!FUNC!::318:: Fail to transfer! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapEvtTxQueueAdvance
+{
+status, ItemNTSTATUS -- 10
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapTxQueue_cpp230 19 "%0%!FUNC!::230:: Skip Queue Advance as datapath is not in started state = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapEvtTxQueueAdvance
+{
+PQMAP_DEV_CONTEXT(pClientCtx->pQmapCtx)->qmapHalInfo.deviceState, ItemLong -- 10
+}
+#typev QmapTxQueue_cpp225 18 "%0%!FUNC!::225:: AdapterHdl = %10!p!, Begin = %11!d!, Next = %12!d!, End = %13!d! Muxid = %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Qmap FUNC=QmapEvtTxQueueAdvance
+{
+tx->adapter, ItemPtr -- 10
+packetRing->BeginIndex, ItemLong -- 11
+packetRing->NextIndex, ItemLong -- 12
+packetRing->EndIndex, ItemLong -- 13
+tx->muxid, ItemLong -- 14
+}
+#typev QmapTxQueue_cpp433 27 "%0%!FUNC!::433:: Pending UL packets to be cleaned up:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapEvtTxQueueCancel
+{
+}
+#typev QmapTxQueue_cpp424 26 "%0%!FUNC!::424:: AdapterHdl = %10!p!, Begin = %11!d!, Next = %12!d!, End = %13!d! Muxid = %14!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtTxQueueCancel
+{
+tx->adapter, ItemPtr -- 10
+packetRing->BeginIndex, ItemLong -- 11
+packetRing->NextIndex, ItemLong -- 12
+packetRing->EndIndex, ItemLong -- 13
+tx->muxid, ItemLong -- 14
+}
+#typev QmapTxQueue_cpp382 24 "%0%!FUNC!::382::AdapterHdl = %10!p!, Muxid = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtTxQueueDestroy
+{
+tx->adapter, ItemPtr -- 10
+tx->muxid, ItemLong -- 11
+}
+#typev QmapTxQueue_cpp405 25 "%0%!FUNC!::405::Pending HW notificatoins for AdapterHdl = %10!p!, MuxId = %11!d!, pend_notify %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtTxQueueSetNotificationEnabled
+{
+tx->adapter, ItemPtr -- 10
+tx->muxid, ItemLong -- 11
+pend_notify, ItemLong -- 12
+}
+#typev QmapTxQueue_cpp356 22 "%0%!FUNC!::356::AdapterHdl = %10!p!, Muxid = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtTxQueueStart
+{
+tx->adapter, ItemPtr -- 10
+tx->muxid, ItemLong -- 11
+}
+#typev QmapTxQueue_cpp371 23 "%0%!FUNC!::371::AdapterHdl = %10!p!, Muxid = %11!d! pend_notify = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtTxQueueStop
+{
+tx->adapter, ItemPtr -- 10
+tx->muxid, ItemLong -- 11
+pend_notify, ItemLong -- 12
+}
+#typev QmapTxQueue_cpp164 17 "%0%!FUNC!::164:: Invalid Client handle %10!I64d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapTxQueueCreate
+{
+handle, ItemLongLong -- 10
+}
+#typev QmapTxQueue_cpp156 16 "%0%!FUNC!::156:: Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapTxQueueCreate
+{
+}
+#typev QmapTxQueue_cpp76 11 "%0%!FUNC!::76:: QueueId = %10!d!, rssQueueId = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapTxQueueInitialize
+{
+tx->QueueId, ItemLong -- 10
+tx->rssQueueId, ItemLong -- 11
+}
+#typev QmapTxQueue_cpp64 10 "%0%!FUNC!::64:: No Queue index available for allocation" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapTxQueueInitialize
+{
+}

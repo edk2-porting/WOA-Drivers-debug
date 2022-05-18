@@ -1,0 +1,93 @@
+// PDB:  qcmbbnetadapterfilter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+5c50f3c5-0602-3083-2ba9-b52125e1226e NetAdapterFilter // SRC=QnetFilterControlPathQbiIface.c MJ= MN=
+#typev QnetFilterControlPathQbiIface_c74 11 "%0%!FUNC!::E:%!FUNC!:: QBI Thread up/resumed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIfaceInit
+{
+}
+#typev QnetFilterControlPathQbiIface_c125 12 "%0%!FUNC!::C:%!FUNC!:: QBI Create thread failure 0x%10!x!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIfaceInit
+{
+ntStatus, ItemLong -- 10
+}
+#typev QnetFilterControlPathQbiIface_c175 15 "%0%!FUNC!::I:%!FUNC!:: QBI handle=0x%10!p! thOb=0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIfaceInit
+{
+pQBIInfo->hThreadHandle, ItemPtr -- 10
+pQBIInfo->pThread, ItemPtr -- 11
+}
+#typev QnetFilterControlPathQbiIface_c163 14 "%0%!FUNC!::I:%!FUNC!:: QBI Thread ZwClose failed - 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIfaceInit
+{
+ntStatus, ItemLong -- 10
+}
+#typev QnetFilterControlPathQbiIface_c152 13 "%0%!FUNC!::C:%!FUNC!:: QBI: ObReferenceObjectByHandle failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIfaceInit
+{
+ntStatus, ItemLong -- 10
+}
+#typev QnetFilterControlPathQbiIface_c64 10 "%0%!FUNC!::E:%!FUNC!:: StartQBIThread - wrong IRQL::%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIfaceInit
+{
+KeGetCurrentIrql(), ItemLong -- 10
+}
+#typev QnetFilterControlPathQbiIface_c366 18 "%0%!FUNC!::I:QBI thread cancelled and terminated" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_CancelThread
+{
+}
+#typev QnetFilterControlPathQbiIface_c311 17 "%0%!FUNC!::E:QBI cxl in pro" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_CancelThread
+{
+}
+#typev QnetFilterControlPathQbiIface_c299 16 "%0%!FUNC!::C:BI Cxl: wrong IRQL" //   LEVEL=TRACE_LEVEL_CRITICAL FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_CancelThread
+{
+}
+#typev QnetFilterControlPathQbiIface_c484 24 "%0%!FUNC!::I:%!FUNC!::  error reading Verizon ERI file %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_CopyERIBinarytoBuffer
+{
+pERIDataFileName, ItemWString -- 10
+}
+#typev QnetFilterControlPathQbiIface_c493 25 "%0%!FUNC!::I:%!FUNC!::  Verizon ERI file %10!s! data copied to buffer, file size = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_CopyERIBinarytoBuffer
+{
+pERIDataFileName, ItemWString -- 10
+fileSize, ItemLong -- 11
+}
+#typev QnetFilterControlPathQbiIface_c470 23 "%0%!FUNC!::I:%!FUNC!:: QnetFilterControlpathQbiIface_ERIReadBinary error appending Verizon ERI binary file name 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_CopyERIBinarytoBuffer
+{
+ntStatus, ItemLong -- 10
+}
+#typev QnetFilterControlPathQbiIface_c411 20 "%0%!FUNC!::E:%!FUNC!::Read Registry: ERIDataFileName Failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_ERIRead
+{
+}
+#typev QnetFilterControlPathQbiIface_c431 22 "%0%!FUNC!::I:%!FUNC!:: Error reading Verizon ERI file to buffer " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_ERIRead
+{
+}
+#typev QnetFilterControlPathQbiIface_c415 21 "%0%!FUNC!::I:%!FUNC!:: MPMain_CheckIfERIEnabledAndInit() ERIDataFileName = %10!s! and ERIDataFileName length in bytes = %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_ERIRead
+{
+wcERIDataFileNameValue, ItemWString -- 10
+(unsigned int)ERIDataFileNameLength, ItemLong -- 11
+}
+#typev QnetFilterControlPathQbiIface_c406 32 "%0%!FUNC!::I:%!FUNC!:: Key %10!s! value = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_ERIRead
+{
+inputKey, ItemWString -- 10
+outBuffer, ItemWString -- 11
+}
+#typev QnetFilterControlPathQbiIface_c406 31 "%0%!FUNC!::I:%!FUNC!::  Insufficient buffer provided to copy the string value." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_ERIRead
+{
+}
+#typev QnetFilterControlPathQbiIface_c406 30 "%0%!FUNC!::I:%!FUNC!:: IoOpenDriverRegistryKey failed!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_ERIRead
+{
+}
+#typev QnetFilterControlPathQbiIface_c399 19 "%0%!FUNC!::I:%!FUNC!::  Reading Verizon ERI file to buffer " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterControlpathQbiIface_ERIRead
+{
+}
+#typev QnetFilterControlPathQbiIface_c600 29 "%0%!FUNC!::I:%!FUNC!::  FIle size = %10!u! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterReadFileContentsToByteBuffer
+{
+fileSize, ItemLong -- 10
+}
+#typev QnetFilterControlPathQbiIface_c587 28 "%0%!FUNC!::I:%!FUNC!::  UNABLE TO READ FILE status = %10!d!, IO_STATUS = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterReadFileContentsToByteBuffer
+{
+ntStatus, ItemLong -- 10
+FileStatusBlock.Status, ItemLong -- 11
+}
+#typev QnetFilterControlPathQbiIface_c564 27 "%0%!FUNC!::I:%!FUNC!::  UNABLE TO QUERY FILE INFO status = %10!d!, IO_STATUS = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterReadFileContentsToByteBuffer
+{
+ntStatus, ItemLong -- 10
+FileStatusBlock.Status, ItemLong -- 11
+}
+#typev QnetFilterControlPathQbiIface_c551 26 "%0%!FUNC!::I:%!FUNC!::  UNABLE TO READ FILE status = %10!d!, IO_STATUS = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterReadFileContentsToByteBuffer
+{
+ntStatus, ItemLong -- 10
+FileStatusBlock.Status, ItemLong -- 11
+}

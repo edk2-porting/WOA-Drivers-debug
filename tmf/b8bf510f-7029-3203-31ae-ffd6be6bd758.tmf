@@ -1,0 +1,79 @@
+// PDB:  qcadsprpc7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:878 (UTC) [tracepdb]
+b8bf510f-7029-3203-31ae-ffd6be6bd758 driver // SRC=adsprpc.c MJ= MN=
+#typev adsprpc_c401 12 "%0FastRPC Received Surprise Removal Notification" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_POWER FUNC=FastRPCDriverDeInit
+{
+}
+#typev adsprpc_c328 11 "%0FastRPC Glink Close failed for cid:%10!d! with status:0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_GLINK FUNC=FastRPCGLinkClose
+{
+cid, ItemLong -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_c317 10 "%0FastRPC Glink Close cid:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_GLINK FUNC=FastRPCGLinkClose
+{
+cid, ItemLong -- 10
+}
+#typev adsprpc_c569 14 "%0FastRPC Failed to attach to Glink Interface with status:%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_GLINK FUNC=FastRPCGlinkDriverNotify
+{
+status, ItemLong -- 10
+}
+#typev adsprpc_c538 13 "%0FastRPC Received Glink Interface Arrival " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_GLINK FUNC=FastRPCGlinkDriverNotify
+{
+}
+#typev adsprpc_c1142 25 "%0FastRPC GlinkOpen failed for cid:%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_GLINK FUNC=FastRPCGlinkOpen
+{
+cid, ItemLong -- 10
+}
+#typev adsprpc_c1126 24 "%0FastRPC Received Glink Connected event cid:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_GLINK FUNC=FastRPCGlinkOpen
+{
+cid, ItemLong -- 10
+}
+#typev adsprpc_c1099 23 "%0FastRPC Received Glink LinkUpEvent cid:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_GLINK FUNC=FastRPCGlinkOpen
+{
+cid, ItemLong -- 10
+}
+#typev adsprpc_c1094 22 "%0FastRPC Received Glink LinkUpEvent timeout" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_GLINK FUNC=FastRPCGlinkOpen
+{
+}
+#typev adsprpc_c1082 21 "%0FastRPC Glink Open cid:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_GLINK FUNC=FastRPCGlinkOpen
+{
+cid, ItemLong -- 10
+}
+#typev adsprpc_c1431 27 "%0%10!s!: Successfully pre-allocated remoteheap memory for audioPD with vaddr=0x%11!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_FILE FUNC=FastRPCPreAllocateRemoteHeapMemory
+{
+__func__, ItemString -- 10
+pContext->RemoteHeapBaseAddress, ItemPtr -- 11
+}
+#typev adsprpc_c1428 26 "%0%10!s!: Failed to pre-allocate remoteheap memory for audioPD with status=0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_FILE FUNC=FastRPCPreAllocateRemoteHeapMemory
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_c609 20 "%0%10!s!: failed with status:%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCReadDWORDFromINX
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_c605 19 "%0%10!s!: closing subKey:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCReadDWORDFromINX
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_c598 18 "%0%10!s!: WdfMemoryGetBuffer returned NULL size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=FastRPCReadDWORDFromINX
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_c594 17 "%0%10!s!: WdfRegistryQueryMemory returned status:%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=FastRPCReadDWORDFromINX
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_c590 16 "%0%10!s!: WdfRegistryOpenKey returned status:%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=FastRPCReadDWORDFromINX
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_c586 15 "%0%10!s!: WdfDeviceOpenRegistryKey returned status:%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_INIT FUNC=FastRPCReadDWORDFromINX
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}

@@ -1,0 +1,752 @@
+// PDB:  qcadcm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:24:338 (UTC) [tracepdb]
+baa6e53c-ad34-3c92-3fa8-8d614d8ee77e src // SRC=q6ad_lsm_main.c MJ= MN=
+#typev q6ad_lsm_main_c166 11 "%0ADCM.LSM.Q6ADLABSessionCaptureTimeStamp Time Stamp : %10!I64d!  Frequency : %11!I64d! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_DATA FLAGS=ADCM_LSM_DATA FUNC=Q6ADLABSessionCaptureTimeStamp
+{
+time_stamp.QuadPart, ItemLongLong -- 10
+frequency.QuadPart, ItemLongLong -- 11
+}
+#typev q6ad_lsm_main_c156 10 "%0ADCM.LSM.Err.Q6ADLABSessionCaptureTimeStamp : LSM Object is not initialized !!!! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=Q6ADLABSessionCaptureTimeStamp
+{
+}
+#typev q6ad_lsm_main_c196 13 "%0ADCM.LSM.Q6ADLABSessionUpdateElapsedticks Ticks : %10!I64u! Time Stamp : %11!I64u! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_DATA FLAGS=ADCM_LSM_DATA FUNC=Q6ADLABSessionUpdateElapsedticks
+{
+ticks, ItemULongLong -- 10
+lsm_obj->lab_info.time_stamp, ItemULongLong -- 11
+}
+#typev q6ad_lsm_main_c189 12 "%0ADCM.LSM.Err.Q6ADLABSessionUpdateElapsedticks : LSM Object is not initialized !!!! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=Q6ADLABSessionUpdateElapsedticks
+{
+}
+#typev q6ad_lsm_main_c1686 126 "%0ADCM.LSM.q6ad_lsm_atl_cb LSM_SESSION_EVENT_DETECTION_STATUS_V2 " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_atl_cb
+{
+}
+#typev q6ad_lsm_main_c1683 125 "%0ADCM.LSM.q6ad_lsm_atl_cb LSM_SESSION_EVENT_DETECTION_STATUS_V2 " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_atl_cb
+{
+}
+#typev q6ad_lsm_main_c1692 128 "%0ADCM.LSM.q6ad_lsm_atl_cb LSM_DATA_EVENT_READ_DONE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_DATA FLAGS=ADCM_LSM_DATA FUNC=q6ad_lsm_atl_cb
+{
+}
+#typev q6ad_lsm_main_c1690 127 "%0ADCM.LSM.q6ad_lsm_atl_cb LSM_DATA_EVENT_READ_DONE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_atl_cb
+{
+}
+#typev q6ad_lsm_main_c1697 130 "%0ADCM.LSM.q6ad_lsm_atl_cb LSM_DATA_EVENT_STATUS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_atl_cb
+{
+}
+#typev q6ad_lsm_main_c1696 122 "%0ADCM.LSM.Read OverFlow event" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_atl_cb
+{
+}
+#typev q6ad_lsm_main_c1695 129 "%0ADCM.LSM.q6ad_lsm_atl_cb LSM_DATA_EVENT_STATUS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_atl_cb
+{
+}
+#typev q6ad_lsm_main_c1679 124 "%0ADCM.LSM.q6ad_lsm_atl_cb LSM_PARAM_ID_DETECTION_ENGINE_EVENT_TYPE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_atl_cb
+{
+}
+#typev q6ad_lsm_main_c1676 123 "%0ADCM>LSM>q6ad_lsm_atl_cb LSM_PARAM_ID_DETECTION_ENGINE_EVENT_TYPE " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_atl_cb
+{
+}
+#typev q6ad_lsm_main_c1700 131 "%0ADCM.LSM.Err.main => received invalid Q6 event, op=%10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_atl_cb
+{
+received_msg->hdr.opcode, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1938 157 "%0ADCM.LSM.handle closed. LSM=0x%10!x!,rc=0x%11!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_close
+{
+handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1932 156 "%0ADCM.LSM.q6ad_lsm_closeLSM Handle[0x%10!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_close
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1930 155 "%0ADCM.LSM.Err. q6ad_lsm_do_close failed (rc=%10!d!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_close
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1923 154 "%0ADCM.LSM.Err. q6ad_atl_async_dereg failed (rc=%10!d!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_close
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1916 153 "%0ADCM.LSM.Err.q6ad_dealloc_physical_memory failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_close
+{
+}
+#typev q6ad_lsm_main_c1904 152 "%0ADCM.LSM.Err.q6ad_lsm_free_preallocate_memory q6ad_lsm_set_param_physical_mem failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_close
+{
+}
+#typev q6ad_lsm_main_c1894 151 "%0ADCM.LSM.Err.q6ad_mem_unmap failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_close
+{
+}
+#typev q6ad_lsm_main_c1888 150 "%0ADCM.LSM.q6ad_lsm_closeLSM Handle[0x%10!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_close
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1877 149 "%0ADCM.LSM.ac close ac=0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_close
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1159 79 "%0ADCM.LSM.q6ad_lsm_deregister_sound_model end - handle=0x%10!x!,rc=0x%11!x!,rc_adsp=0x%12!x!,rc_mmu=0x%13!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_deregister_sound_model
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+rc_adsp, ItemLong -- 12
+rc_mmu, ItemLong -- 13
+}
+#typev q6ad_lsm_main_c1151 78 "%0ADCM.LSM.Err.q6ad_dealloc_physical_memory failed Q6 error - ac-0x%10!x!, rc =0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_deregister_sound_model
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1136 77 "%0ADCM.LSM.Err.q6ad_lsm_free_preallocate_memory failed for sound model Q6 error - ac-0x%10!x!, rc =0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_deregister_sound_model
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1127 76 "%0ADCM.LSM.Err.q6ad_mem_unmap failed Q6 error - ac-0x%10!x!, rc_mmu =0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_deregister_sound_model
+{
+ac_obj->handle, ItemLong -- 10
+rc_mmu, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1119 75 "%0ADCM.LSM.Err.q6ad_lsm_deregister_sound_model Q6 error - ac=0x%10!x!, rsp_status=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_deregister_sound_model
+{
+ac_obj->handle, ItemLong -- 10
+q6_msg.u.rsp.status, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1112 74 "%0ADCM.LSM.Err.q6ad_lsm_deregister_sound_model failed - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_deregister_sound_model
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1099 73 "%0ADCM.LSM.DBGErr.q6ad_lsm_deregister_sound_model reserved: %10!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_deregister_sound_model
+{
+q6_msg.u.lsm_deregister_sound_model.set_lsm_param_data_deregister_sound_model.reserved, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1098 72 "%0ADCM.LSM.DBGErr.q6ad_lsm_deregister_sound_model param_size: %10!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_deregister_sound_model
+{
+q6_msg.u.lsm_deregister_sound_model.set_lsm_param_data_deregister_sound_model.param_size, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1097 71 "%0ADCM.LSM.DBGErr.q6ad_lsm_deregister_sound_model instancce_id: %10!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_deregister_sound_model
+{
+q6_msg.u.lsm_deregister_sound_model.set_lsm_param_data_deregister_sound_model.instance_id, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1096 70 "%0ADCM.LSM.DBGErr.q6ad_lsm_deregister_sound_model param_id: %10!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_deregister_sound_model
+{
+q6_msg.u.lsm_deregister_sound_model.set_lsm_param_data_deregister_sound_model.param_id, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1095 69 "%0ADCM.LSM.DBGErr.q6ad_lsm_deregister_sound_model module_id: %10!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_deregister_sound_model
+{
+q6_msg.u.lsm_deregister_sound_model.set_lsm_param_data_deregister_sound_model.module_id, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1080 68 "%0ADCM.LSM.Err.q6ad_lsm_deregister_sound_model Bad Param Recieved" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_deregister_sound_model
+{
+}
+#typev q6ad_lsm_main_c1075 67 "%0ADCM.LSM.q6ad_lsm_deregister_sound_model Q6AD_CMD_LSM_DEREGISTER_SOUND_MODEL " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_deregister_sound_model
+{
+}
+#typev q6ad_lsm_main_c2141 171 "%0ADCM.LSM.Err.q6ad_lsm_dinit failed q6ad_lsm_preallocate_deinit()" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_dinit
+{
+}
+#typev q6ad_lsm_main_c2139 177 "%0ADCM.LSM.q6ad_lsm_preallocate_deinit, lsm_sound_model_memory, q6ad_dealloc_physical_memory() status(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_dinit
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c2139 176 "%0ADCM.LSM.q6ad_lsm_preallocate_deinit, memory preallocated lsm_sound_model_memory msw(0x%10!Ix!), lsw(0x%11!Ix!), mdl(0x%12!p!), size(0x%13!Ix!) for session(%14!Id!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_dinit
+{
+p_gLsmPreallocatedMemory[i].lsm_sound_model_memory.bufInfo.buf_addr.physical_addr_lsw, ItemPtr -- 10
+p_gLsmPreallocatedMemory[i].lsm_sound_model_memory.bufInfo.buf_addr.physical_addr_msw, ItemPtr -- 11
+p_gLsmPreallocatedMemory[i].lsm_sound_model_memory.bufInfo.buf_addr.pMDL, ItemPtr -- 12
+p_gLsmPreallocatedMemory[i].lsm_sound_model_memory.bufInfo.buf_size, ItemPtr -- 13
+i, ItemPtr -- 14
+}
+#typev q6ad_lsm_main_c2139 175 "%0ADCM.LSM.Err.q6ad_lsm_preallocate_deinit, lsm_set_param_memory, q6ad_dealloc_physical_memory() status(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_dinit
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c2139 174 "%0ADCM.LSM.q6ad_lsm_preallocate_deinit, memory preallocated lsm_set_param_memory msw(0x%10!Ix!), lsw(0x%11!Ix!), mdl(0x%12!p!), size(0x%13!Ix!) for session(%14!Id!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_dinit
+{
+p_gLsmPreallocatedMemory[i].lsm_set_param_memory.bufInfo.buf_addr.physical_addr_lsw, ItemPtr -- 10
+p_gLsmPreallocatedMemory[i].lsm_set_param_memory.bufInfo.buf_addr.physical_addr_msw, ItemPtr -- 11
+p_gLsmPreallocatedMemory[i].lsm_set_param_memory.bufInfo.buf_addr.pMDL, ItemPtr -- 12
+p_gLsmPreallocatedMemory[i].lsm_set_param_memory.bufInfo.buf_size, ItemPtr -- 13
+i, ItemPtr -- 14
+}
+#typev q6ad_lsm_main_c336 21 "%0ADCM.LSM.q6ad_lsm_do_close end w/ ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_do_close
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c329 20 "%0ADCM.LSM.q6ad_lsm_do_close start w/ ac=0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_do_close
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c300 19 "%0ADCM.LSM.Err.q6ad_lsm_do_open: DSP returned error rsp.rc=0x%10!Ix!, opcode=0x%11!Ix!, first_boot_dynamic_modules_load_state= %12!Id!,current_boot_dynamic_modules_load_state = %13!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_do_open
+{
+msg.u.rsp.status, ItemPtr -- 10
+msg.hdr.opcode, ItemPtr -- 11
+first_boot_dynamic_modules_load_state, ItemPtr -- 12
+current_boot_dynamic_modules_load_state, ItemPtr -- 13
+}
+#typev q6ad_lsm_main_c295 18 "%0ADCM.LSM.Err.q6ad_lsm_do_open: LSM_SESSION_CMD_OPEN_TX_V2 failed handle=0x%10!Ix!, rc=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_do_open
+{
+lsm_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c283 17 "%0ADCM.LSM.q6ad_lsm_do_open stage = %10!Id!, topology id = 0x%11!x!, island_mode %12!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_do_open
+{
+i, ItemPtr -- 10
+lsm_obj->lsm_topo_id[i], ItemLong -- 11
+lsm_obj->lsm_island_mode[i], ItemPtr -- 12
+}
+// PDB:  qcadcm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:24:338 (UTC) [tracepdb]
+#typev q6ad_lsm_main_c274 16 "%0ADCM.LSM.Err.q6ad_lsm_do_open: Failed to get stage1_lsm_topo_id from ACDB for feature %10!Id!, Error code:%11!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_do_open
+{
+lsm_obj->lsm_feature[i], ItemPtr -- 10
+rc, ItemLong -- 11
+}
+// PDB:  qcadcm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:24:338 (UTC) [tracepdb]
+#typev q6ad_lsm_main_c263 15 "%0ADCM.LSM.q6ad_lsm_do_open: start w/ ac=0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_do_open
+{
+lsm_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c2424 181 "%0ADCM.LSM.q6ad_lsm_free_preallocate_memory, memory preallocated lsm_set_param_memory free idx(%10!Id!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_free_preallocate_memory
+{
+i, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c2440 182 "%0ADCM.LSM.q6ad_lsm_free_preallocate_memory, memory preallocated lsm_sound_model_memory free idx(%10!Id!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_free_preallocate_memory
+{
+i, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c2455 183 "%0ADCM.LSM.Err.q6ad_lsm_free_preallocate_memory, pre-allocated memory not available(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_free_preallocate_memory
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c2342 178 "%0ADCM.LSM.q6ad_lsm_get_preallocate_memory, memory preallocated lsm_set_param_memory msw(0x%10!Ix!), lsw(0x%11!Ix!), mdl(0x%12!p!), size(0x%13!Ix!), idx(%14!Id!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_get_preallocate_memory
+{
+pBufInfo->buf_addr.physical_addr_lsw, ItemPtr -- 10
+pBufInfo->buf_addr.physical_addr_msw, ItemPtr -- 11
+pBufInfo->buf_addr.pMDL, ItemPtr -- 12
+pBufInfo->buf_size, ItemPtr -- 13
+i, ItemPtr -- 14
+}
+#typev q6ad_lsm_main_c2362 179 "%0ADCM.LSM.q6ad_lsm_get_preallocate_memory, memory preallocated lsm_sound_model_memory msw(0x%10!Ix!), lsw(0x%11!Ix!), mdl(0x%12!p!), size(0x%13!Ix!), idx(%14!Id!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_get_preallocate_memory
+{
+pBufInfo->buf_addr.physical_addr_lsw, ItemPtr -- 10
+pBufInfo->buf_addr.physical_addr_msw, ItemPtr -- 11
+pBufInfo->buf_addr.pMDL, ItemPtr -- 12
+pBufInfo->buf_size, ItemPtr -- 13
+i, ItemPtr -- 14
+}
+#typev q6ad_lsm_main_c2380 180 "%0ADCM.LSM.q6ad_lsm_get_preallocate_memory, pre-allocated memory not available status(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_get_preallocate_memory
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c1560 120 "%0ADCM.LSM.Event detection event" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_handle_session_detection_event
+{
+}
+#typev q6ad_lsm_main_c1541 119 "%0ADCM.LSM.Err.q6ad_lsm_malloc failed  !!!! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_handle_session_detection_event
+{
+}
+#typev q6ad_lsm_main_c1473 114 "%0ADCM.LSM.Err.q6ad_lsm_malloc failed  !!!! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_handle_session_generic_detection_event
+{
+}
+#typev q6ad_lsm_main_c1517 118 "%0ADCM.LSM.Event detection event" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_handle_session_generic_detection_event
+{
+}
+#typev q6ad_lsm_main_c1509 117 "%0ADCM.LSM.DBG.q6ad_lsm_handle_session_detection_event event_detection_status.payload_size: %10!x! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_handle_session_generic_detection_event
+{
+event_detection_status.payload_size, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1508 116 "%0ADCM.LSM.DBG.q6ad_lsm_handle_session_detection_event imsg->u.lsm_generic_detection_status.payload_size: %10!x! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_handle_session_generic_detection_event
+{
+imsg->u.lsm_generic_detection_status.payload_size, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1501 115 "%0ADCM:q6ad_lsm_handle_session_generic_detection_event: Unknown keyId, skipping! %10!x! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_handle_session_generic_detection_event
+{
+header->keyId, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c2095 169 "%0ADCM.LSM.INIT.LSM mem map success" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_init
+{
+}
+#typev q6ad_lsm_main_c2089 168 "%0ADCM.LSM.Err.q6ad_lsm_init failed q6ad_lsm_preallocate_init()" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_init
+{
+}
+#typev q6ad_lsm_main_c2073 167 "%0ADCM.KMDF.q6ad_read_sva_package: num. of sessions = 0x%10!Ix! buffer size = 0x%11!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_lsm_init
+{
+q6ad_lsm_preallocated_memory_for_n_sessions, ItemPtr -- 10
+q6ad_lsm_preallocate_sound_model_buffer_size, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c2070 166 "%0ADCM.KMDF.q6ad_q6ad_read_sva_package: ADCMReadRegistryValueULong failed for SoundModelLibraryPreallocatedBufferSize with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_lsm_init
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c2064 165 "%0ADCM.KMDF.q6ad_q6ad_read_sva_package: ADCMReadRegistryValueULong failed for NoofPreallocatedBuffersforSVA with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_lsm_init
+{
+status, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c1423 113 "%0ADCM.LSM.q6ad_lsm_ioctl end - handle=0x%10!x!,ioctl=0x%11!x!,rc=0x%12!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_ioctl
+{
+handle, ItemLong -- 10
+cmd, ItemLong -- 11
+rc, ItemLong -- 12
+}
+#typev q6ad_lsm_main_c1382 106 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_STOP_SESSION " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1379 105 "%0ADCM.LSM.Err.Failed to do q6ad_lsm_stop_session, Error code:%10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1374 104 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_STOP_SESSION " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1411 112 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_DEREGISTER_SOUND_MODEL " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1408 111 "%0ADCM.LSM.Err.Failed to do q6ad_lsm_deregister_sound_model, Error code:%10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1402 110 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_DEREGISTER_SOUND_MODEL " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1396 109 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_STOP_LAB_SESSION " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1393 108 "%0ADCM.LSM.Err.Failed to do q6ad_lsm_stop_lab_session, Error code:%10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1388 107 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_STOP_LAB_SESSION " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1308 95 "%0ADCM.LSM.Err.Wrong playload size for Q6AD_CMD_LSM_SET_SESSION_PARAM!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_ioctl
+{
+}
+#typev q6ad_lsm_main_c1353 100 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_SET_SESSION_PARAM/Q6AD_CMD_LSM_SET_SESSION_PARAM_V2 " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1350 99 "%0ADCM.LSM.Err.Failed to do q6ad_lsm_set_session_param, Error code:%10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1343 98 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_SET_SESSION_PARAM_V3 " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1328 97 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_SET_SESSION_PARAM_V2 " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1315 96 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_SET_SESSION_PARAM " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1304 94 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_SET_SESSION_PARAM/Q6AD_CMD_LSM_SET_SESSION_PARAM_V2 size %11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+len, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1267 87 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!Ix!]  Q6AD_CMD_MEMORY_MAP " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_ioctl
+{
+handle, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c1262 86 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!Ix!]  Q6AD_CMD_MEMORY_MAP " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_ioctl
+{
+handle, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c1277 89 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!Ix!]  Q6AD_CMD_MEMORY_UNMAP " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_ioctl
+{
+handle, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c1273 88 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!Ix!]  Q6AD_CMD_MEMORY_UNMAP " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_ioctl
+{
+handle, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c1287 91 "%0ADCM.LSM.Err.Wrong playload size for Q6AD_CMD_LSM_REGISTER_SOUND_MODEL!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_ioctl
+{
+}
+#typev q6ad_lsm_main_c1297 93 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_REGISTER_SOUND_MODEL " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1294 92 "%0ADCM.LSM.Err.Failed to do q6ad_lsm_register_sound_model, Error code:%10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1283 90 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_REGISTER_SOUND_MODEL " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1368 103 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_START_SESSION " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1365 102 "%0ADCM.LSM.Err.Failed to do q6ad_lsm_start_session, Error code:%10!d!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_ioctl
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1359 101 "%0ADCM.LSM.q6ad_lsm_ioctl LSM Handle[0x%10!x!]  Q6AD_CMD_LSM_START_SESSION " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_ioctl
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1250 85 "%0ADCM.LSM.q6ad_lsm_ioctl - handle=0x%10!x!,ioctl=0x%11!x!,param_len=0x%12!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_ioctl
+{
+handle, ItemLong -- 10
+cmd, ItemLong -- 11
+len, ItemLong -- 12
+}
+#typev q6ad_lsm_main_c221 14 "%0ADCM.LSM.Err.q6ad_lsm_malloc: malloc failed (size=%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_malloc
+{
+size, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c1989 161 "%0ADCM.LSM.q6ad_lsm_obj_read LSM Handle[0x%10!Ix!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_obj_read
+{
+lsm_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c1986 160 "%0ADCM.LSM.Err.q6ad_lsm_obj_read failed  - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_obj_read
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1971 159 "%0ADCM.LSM.q6ad_lsm_obj_read LSM Handle[0x%10!Ix!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_obj_read
+{
+lsm_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c1966 158 "%0ADCM.LSM.Err.q6ad_lsm_obj_read failed  - wrong payload length, rc=0x%10!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_obj_read
+{
+rc, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1856 148 "%0Exiting q6ad_lsm_open! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_open
+{
+}
+#typev q6ad_lsm_main_c1840 147 "%0ADCM.LSM.Err.q6ad_dealloc_physical_memory failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_open
+{
+}
+#typev q6ad_lsm_main_c1829 146 "%0ADCM.LSM.Err.q6ad_lsm_free_preallocate_memory q6ad_lsm_set_param_physical_mem failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_open
+{
+}
+#typev q6ad_lsm_main_c1823 145 "%0ADCM.LSM.Err.q6ad_mem_map failed - ac=0x%10!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_open
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1809 144 "%0ADCM.LSM.Err.q6ad_alloc_physical_memory failed - ac=0x%10!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_open
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1791 143 "%0ADCM.LSM.Err.open - q6ad_atl_async_reg failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_open
+{
+}
+#typev q6ad_lsm_main_c1786 142 "%0ADCM.LSM.ac opened - handle=0x%10!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_open
+{
+ac_obj->handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1781 141 "%0ADCM.LSM.Err.open - q6ad_lsm_do_open failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_open
+{
+}
+#typev q6ad_lsm_main_c1767 140 "%0ADCM.LSM.Err.open: num stages more than allowed LSM_MAX_NUM_STAGES:%10!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_open
+{
+ac_obj->num_stages, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c1763 139 "%0ADCM.LSM.q6ad_lsm_open: dev_id =0x%10!Ix!, num_stages = %11!Id! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_open
+{
+ac_obj->dev_id, ItemPtr -- 10
+ac_obj->num_stages, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c1755 138 "%0ADCM.LSM.Err.open - ac_obj->handle is NULL" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_open
+{
+}
+#typev q6ad_lsm_main_c1747 137 "%0ADCM.LSM.Err.open - q6ad_db_get_obj returns NULL. No resource" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_open
+{
+}
+#typev q6ad_lsm_main_c1744 136 "%0Q6ADADCM.LSM.q6ad_lsm_open handle [0x%10!x!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_open
+{
+handle, ItemLong -- 10
+}
+#typev q6ad_lsm_main_c1741 135 "%0ADCM.LSM.Err.open handle alloc failed !!!! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_open
+{
+}
+#typev q6ad_lsm_main_c1735 134 "%0Q6ADADCM.LSM.q6ad_lsm_open lsm feature id 1st stage [0x%10!x!], lsm island mode 1st stage [0x%11!x!], Sample rate [%12!d!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_open
+{
+ac_open->lsm_feature[0], ItemLong -- 10
+ac_open->lsm_island_mode[0], ItemLong -- 11
+ac_open->sample_rate, ItemLong -- 12
+}
+#typev q6ad_lsm_main_c1730 133 "%0ADCM.LSM.Err.open failed-invalid input !!!! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_open
+{
+}
+#typev q6ad_lsm_main_c1722 132 "%0Entering q6ad_lsm_open! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_open
+{
+}
+#typev q6ad_lsm_main_c2208 173 "%0ADCM.LSM.q6ad_lsm_preallocate_init, memory preallocated lsm_sound_model_memory msw(0x%10!Ix!), lsw(0x%11!Ix!), mdl(0x%12!p!), size(0x%13!Ix!) for session(%14!Id!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_preallocate_init
+{
+p_gLsmPreallocatedMemory[i].lsm_sound_model_memory.bufInfo.buf_addr.physical_addr_lsw, ItemPtr -- 10
+p_gLsmPreallocatedMemory[i].lsm_sound_model_memory.bufInfo.buf_addr.physical_addr_msw, ItemPtr -- 11
+p_gLsmPreallocatedMemory[i].lsm_sound_model_memory.bufInfo.buf_addr.pMDL, ItemPtr -- 12
+p_gLsmPreallocatedMemory[i].lsm_sound_model_memory.bufInfo.buf_size, ItemPtr -- 13
+i, ItemPtr -- 14
+}
+#typev q6ad_lsm_main_c2189 172 "%0ADCM.LSM.q6ad_lsm_preallocate_init, memory preallocated lsm_set_param_memory msw(0x%10!Ix!), lsw(0x%11!Ix!), mdl(0x%12!p!), size(0x%13!Ix!) for session(%14!Id!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_preallocate_init
+{
+p_gLsmPreallocatedMemory[i].lsm_set_param_memory.bufInfo.buf_addr.physical_addr_lsw, ItemPtr -- 10
+p_gLsmPreallocatedMemory[i].lsm_set_param_memory.bufInfo.buf_addr.physical_addr_msw, ItemPtr -- 11
+p_gLsmPreallocatedMemory[i].lsm_set_param_memory.bufInfo.buf_addr.pMDL, ItemPtr -- 12
+p_gLsmPreallocatedMemory[i].lsm_set_param_memory.bufInfo.buf_size, ItemPtr -- 13
+i, ItemPtr -- 14
+}
+#typev q6ad_lsm_main_c2040 164 "%0ADCM.LSM. => LSM read returns status %10!Id!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_DATA FLAGS=ADCM_LSM_DATA FUNC=q6ad_lsm_read
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c2026 163 "%0ADCM.LSM.Err.read - ac_obj->handle is NULL" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_read
+{
+}
+#typev q6ad_lsm_main_c2017 162 "%0ADCM.LSM.Err.read - q6ad_db_get_obj returns NULL. No resource" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_read
+{
+}
+#typev q6ad_lsm_main_c1612 121 "%0ADCM.LSM.Read Done event" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_DATA FLAGS=ADCM_LSM_DATA FUNC=q6ad_lsm_read_done_event
+{
+}
+#typev q6ad_lsm_main_c443 28 "%0ADCM.LSM.q6ad_lsm_register_sound_model end - handle=0x%10!x!,rc=0x%11!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_register_sound_model
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c438 27 "%0ADCM.LSM.Err.q6ad_lsm_register_sound_model Q6 error - ac=0x%10!x!, rsp_status=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_register_sound_model
+{
+ac_obj->handle, ItemLong -- 10
+q6_msg.u.rsp.status, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c430 26 "%0ADCM.LSM.Err.q6ad_lsm_register_sound_model failed - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_register_sound_model
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c407 25 "%0ADCM.LSM.Err.q6ad_mem_map failed - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_register_sound_model
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c395 24 "%0ADCM.LSM.Err.q6ad_alloc_physical_memory failed - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_register_sound_model
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c384 23 "%0ADCM.LSM.q6ad_lsm_register_sound_model Q6AD_CMD_LSM_REGISTER_SOUND_MODEL ModelSize: 0x%10!x!, ModelAddress: %11!p!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_register_sound_model
+{
+sound_model->ModelSize, ItemLong -- 10
+sound_model->ModelAddress, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c369 22 "%0Entering q6ad_lsm_register_sound_model! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_register_sound_model
+{
+}
+#typev q6ad_lsm_main_c889 51 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_send_q6_cmd Q6 error lsm_session_param_kwd_user_enable - ac=0x%10!x!, rsp_status=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+q6_msg.u.rsp.status, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c885 50 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_send_q6_cmd failed lsm_session_param_kwd_user_enable - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c861 49 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_send_q6_cmd Q6 error lsm_session_param_media_fmt - ac=0x%10!x!, rsp_status=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+q6_msg.u.rsp.status, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c857 48 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_send_q6_cmd failed lsm_session_param_media_fmt - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c835 47 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_send_q6_cmd Q6 error for lsm_session_param_lab_chan_cfg - ac=0x%10!x!, rsp_status=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+q6_msg.u.rsp.status, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c831 46 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_send_q6_cmd failed for lsm_session_param_lab_chan_cfg - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c807 45 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_send_q6_cmd Q6 error for lsm_session_param - ac=0x%10!x!, rsp_status=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+q6_msg.u.rsp.status, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c803 44 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_send_q6_cmd failed for lsm_session_param - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c750 43 "%0ADCM.LSM.Err.q6ad_acdb_get_dev_channel_mapping - ACDB get device channel map info failed !!! rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c743 42 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_acdb_get_dev_info failed - ac=0x%10!x!, rc=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c738 41 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_adm_get_bf_out_channels failed - ac=0x%10!x!, rc=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c726 40 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_get_afe_bf_out_channels failed - ac=0x%10!x!, rc=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c590 39 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_get_port_id failed - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+// PDB:  qcadcm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:24:338 (UTC) [tracepdb]
+#typev q6ad_lsm_main_c578 38 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_malloc failed - ac=0x%10!x!, rc=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c564 37 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_malloc failed - ac=0x%10!x!, rc=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c553 36 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_malloc failed - ac=0x%10!x!, rc=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c543 35 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_malloc failed - ac=0x%10!x!, rc=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c919 52 "%0ADCM.LSM.q6ad_lsm_set_session_param: end - handle=0x%10!x!,rc=0x%11!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c533 34 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_malloc failed - ac=0x%10!x!, rc=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c516 33 "%0ADCM.LSM.q6ad_lsm_set_session_param: kwd_user_enable_padded_size is PRE 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_set_session_param
+{
+kwd_user_enable_padded_size, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c507 32 "%0ADCM.LSM.q6ad_lsm_set_session_param: media_fmt_padded_size is PRE 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_set_session_param
+{
+media_fmt_padded_size, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c499 31 "%0ADCM.LSM.q6ad_lsm_set_session_param: lab_output_channel_config_padded_size is PRE 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_set_session_param
+{
+lab_output_channel_config_padded_size, ItemPtr -- 10
+}
+#typev q6ad_lsm_main_c486 30 "%0ADCM.LSM.Err.q6ad_lsm_set_session_param: q6ad_lsm_set_topo_data failed - ac=0x%10!x!, rc=0x%11!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_session_param
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_lsm_main_c461 29 "%0Entering q6ad_lsm_set_session_param! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_set_session_param
+{
+}
+#typev q6ad_lsm_main_c1222 84 "%0ADCM.LSM.Err.q6ad_lsm_set_topo_data: q6ad_lsm_send_q6_cmd Q6 error - ac=0x%10!x!, rsp_status=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_topo_data
+{
+lsm_obj->handle, ItemLong -- 10
+q6_msg.u.rsp.status, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1218 83 "%0ADCM.LSM.Err.q6ad_lsm_set_topo_data: q6ad_lsm_send_q6_cmd failed - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_topo_data
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1198 82 "%0ADCM.LSM.Err.q6ad_lsm_set_topo_data: q6ad_lsm_acdb_get_table failed - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_topo_data
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+// PDB:  qcadcm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:24:338 (UTC) [tracepdb]
+#typev q6ad_lsm_main_c1189 81 "%0ADCM.LSM.Err.q6ad_lsm_set_topo_data: q6ad_lsm_malloc failed - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_topo_data
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1180 80 "%0ADCM.LSM.Err.q6ad_lsm_set_topo_data: q6ad_lsm_acdb_get_table_size failed - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_set_topo_data
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+// PDB:  qcadcm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:24:338 (UTC) [tracepdb]
+#typev q6ad_lsm_main_c961 58 "%0Exiting q6ad_lsm_start_session! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_start_session
+{
+}
+#typev q6ad_lsm_main_c960 57 "%0ADCM.LSM.q6ad_lsm_start_session: end - handle=0x%10!x!,rc=0x%11!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_start_session
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c955 56 "%0ADCM.LSM.Err.q6ad_lsm_start_session: Q6 error - ac=0x%10!x!, rsp_status=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_start_session
+{
+lsm_obj->handle, ItemLong -- 10
+q6_msg.u.rsp.status, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c950 55 "%0ADCM.LSM.Err.q6ad_lsm_start_session: failed - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_start_session
+{
+lsm_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c942 54 "%0ADCM.LSM.q6ad_lsm_start_session: Q6AD_CMD_LSM_START " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_start_session
+{
+}
+#typev q6ad_lsm_main_c938 53 "%0Entering q6ad_lsm_start_session! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_start_session
+{
+}
+#typev q6ad_lsm_main_c1049 66 "%0ADCM.LSM.q6ad_lsm_stop_lab_session end - handle=0x%10!x!,rc=0x%11!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_stop_lab_session
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1044 65 "%0ADCM.LSM.Err.q6ad_lsm_stop_lab_session Q6 error - ac=0x%10!x!, rsp_status=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_stop_lab_session
+{
+ac_obj->handle, ItemLong -- 10
+q6_msg.u.rsp.status, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1037 64 "%0ADCM.LSM.Err.q6ad_lsm_stop_lab_session failed - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_stop_lab_session
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1029 63 "%0ADCM.LSM.q6ad_lsm_stop_lab_session Q6AD_CMD_LSM_STOP_LAB_SESSION " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_stop_lab_session
+{
+}
+#typev q6ad_lsm_main_c1005 62 "%0ADCM.LSM.q6ad_lsm_stop_session end - handle=0x%10!x!,rc=0x%11!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_LSM_INFO FUNC=q6ad_lsm_stop_session
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c1000 61 "%0ADCM.LSM.Err.q6ad_lsm_stop_session Q6 error - ac=0x%10!x!, rsp_status=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_stop_session
+{
+ac_obj->handle, ItemLong -- 10
+q6_msg.u.rsp.status, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c993 60 "%0ADCM.LSM.Err.q6ad_lsm_stop_session failed - ac=0x%10!x!, rc=0x%11!x!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_LSM_ERROR FUNC=q6ad_lsm_stop_session
+{
+ac_obj->handle, ItemLong -- 10
+rc, ItemLong -- 11
+}
+#typev q6ad_lsm_main_c985 59 "%0ADCM.LSM.q6ad_lsm_stop_session Q6AD_CMD_LSM_STOP " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_LSM_VERBOSE FUNC=q6ad_lsm_stop_session
+{
+}

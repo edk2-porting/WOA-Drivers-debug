@@ -1,0 +1,826 @@
+// PDB:  qcadcm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:24:338 (UTC) [tracepdb]
+b98d8ba9-68ea-3a3a-f6b7-44a96b6f3365 src // SRC=adcm_driver.c MJ= MN=
+#typev adcm_driver_c4617 249 "%0ADCM.KMDF.ACDB.Err.Failed to read registry AcbdFilePath = %10!ld!, status:[0x%11!Ix!]" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ACDBReadRegistry
+{
+i, ItemLong -- 10
+status, ItemPtr -- 11
+}
+#typev adcm_driver_c4626 250 "%0ADCM.KMDF.ACDB: Number of files names read from the registry [%10!ld!]" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ACDBReadRegistry
+{
+acbd_init_params_default.nNoOfFiles, ItemLong -- 10
+}
+#typev adcm_driver_c4606 248 "%0ADCM.KMDF.ACDB:Err.Failed WdfRegistryOpenKey status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ACDBReadRegistry
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4633 251 "%0ADCM.KMDF.ACDB:Err number of files names read from the registry [%10!ld!]" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ACDBReadRegistry
+{
+acbd_init_params_default.nNoOfFiles, ItemLong -- 10
+}
+#typev adcm_driver_c4597 247 "%0ADCM.KMDF.ACDB.Err.WdfDeviceOpenRegistryKey::open regkey failed status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ACDBReadRegistry
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4512 246 "%0ADCM.KMDF.Err.ACDBReadRegistryKeyValue:Read file name from Registry:%10!s! size: %11!ld!, strSize:%12!ld! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ACDBReadRegistryKeyValue
+{
+pAcdbFileName->fileName, ItemString -- 10
+pAcdbFileName->fileNameLen, ItemLong -- 11
+readStr.Length, ItemLong -- 12
+}
+#typev adcm_driver_c4489 245 "%0ADCM.KMDF.Err.ACDBReadRegistryKeyValue: WdfRegistryQueryString failed status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ACDBReadRegistryKeyValue
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4480 244 "%0ADCM.KMDF.Err.ACDBReadRegistryKeyValue: registry WdfStringCreate failed status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ACDBReadRegistryKeyValue
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c1414 63 "%0ADCM.KMDF.ACDInterfaceDereference.refCount(%10!ld!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ACDInterfaceDereference
+{
+refCount, ItemLong -- 10
+}
+#typev adcm_driver_c1406 62 "%0ADCM.KMDF.ACDInterfaceReference.refCount(%10!ld!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ACDInterfaceReference
+{
+refCount, ItemLong -- 10
+}
+#typev adcm_driver_c3465 201 "%0ADCM.KMDF.ADCMDeviceD0Entry ADCMInitRoutineFromD3 SUCCESS " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMDeviceD0Entry
+{
+}
+#typev adcm_driver_c3461 200 "%0ADCM.KMDF.ADCMDeviceD0Entry ADCMInitRoutineFromD3 failed with status=0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMDeviceD0Entry
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3449 199 "%0ADCM.KMDF.ADCMDeviceD0Entry TargetState %10!d! SystemPowerAction %11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMDeviceD0Entry
+{
+PreviousState, ItemLong -- 10
+SysPowerAction, ItemLong -- 11
+}
+#typev adcm_driver_c3442 198 "%0ADCM.KMDF.ADCMDeviceD0Entry entered " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMDeviceD0Entry
+{
+}
+#typev adcm_driver_c3413 197 "%0ADCM.KMDF.ADCMDeviceD0Exit TargetState %10!d! SystemPowerAction %11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMDeviceD0Exit
+{
+TargetState, ItemLong -- 10
+SysPowerAction, ItemLong -- 11
+}
+#typev adcm_driver_c3406 196 "%0ADCM.KMDF.ADCMDeviceD0Exit entered " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMDeviceD0Exit
+{
+}
+#typev adcm_driver_c3855 218 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, creating child PDO failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtChildListCreateDevice
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3841 217 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Adding instance ID for PDO failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtChildListCreateDevice
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3834 216 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, pDesc->BusAddr=0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtChildListCreateDevice
+{
+pDesc->BusAddr, ItemPtr -- 10
+}
+#typev adcm_driver_c3829 215 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Adding Hwid_original is failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtChildListCreateDevice
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3822 214 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Adding Hwid_short is failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtChildListCreateDevice
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3814 213 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Adding Hwid_long is failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtChildListCreateDevice
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3806 212 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Assigning Hwid_long is failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtChildListCreateDevice
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3998 220 "%0ADCM.KMDF.ADCMEvtChildListIdentificationDescriptionCompare: lhs=x%10!x!, rhs=x%11!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtChildListIdentificationDescriptionCompare
+{
+lhs->BusAddr, ItemLong -- 10
+rhs->BusAddr, ItemLong -- 11
+}
+#typev adcm_driver_c3943 219 "%0ADCM.KMDF.ADCMEvtChildListIdentificationDescriptionDuplicate: dst=x%10!x!, src=x%11!x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtChildListIdentificationDescriptionDuplicate
+{
+dst->BusAddr, ItemLong -- 10
+src->BusAddr, ItemLong -- 11
+}
+#typev adcm_driver_c3700 211 "%0ADCM.KMDF.ADCMEvtDeviceAdd: Done enumerating Child Nodes" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtDeviceAdd
+{
+}
+#typev adcm_driver_c3691 210 "%0ADCM.KMDF.ADCMEvtDeviceAdd:Enumerating Child Nodes" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtDeviceAdd
+{
+}
+#typev adcm_driver_c3686 209 "%0ADCM.KMDF.Q6AD: q6ad_read_acpi failed. rc=0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtDeviceAdd
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3677 208 "%0ADCM.KMDF.ACDBReadRegistry failed, Device=(0x%10!08X!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c3670 207 "%0WppRecorderLogCreate success 0x%10!08x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c3669 206 "%0%!FUNC! Entry" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtDeviceAdd
+{
+}
+#typev adcm_driver_c3665 205 "%0WppRecorderLogCreate failed 0x%10!08x!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c3641 204 "%0ADCM.KMDF.Q6AD.ADCMReadRegistry.EnableAudioPDR.%10!d! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtDeviceAdd
+{
+deviceContext->EnableAudioPDR, ItemLong -- 10
+}
+#typev adcm_driver_c3594 203 "%0ADCM.KMDF.ADCMEvtDeviceAdd, WdfDeviceCreate succeeded, Device=0x%10!p!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtDeviceAdd
+{
+ADCMDevice, ItemPtr -- 10
+}
+#typev adcm_driver_c3587 202 "%0ADCM.KMDF.ADCMEvtDeviceAdd, WdfDeviceCreate0x%10!08X! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtDeviceAdd
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c674 22 "%0ADCM.KMDF.ADCMEvtDeviceReleaseHardware.Err.AlreadyRemoved" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtDeviceReleaseHardware
+{
+}
+#typev adcm_driver_c669 21 "%0ADCM.KMDF.ADCMEvtDeviceReleaseHardware" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtDeviceReleaseHardware
+{
+}
+#typev adcm_driver_c2279 118 "%0ADCM.KMDF.Set Calibration ioctl failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+}
+#typev adcm_driver_c2289 119 "%0ADCM.KMDF.Get Calibration ioctl failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+}
+#typev adcm_driver_c2299 120 "%0ADCM.KMDF.AVTimer Vote ioctl failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+}
+#typev adcm_driver_c2309 121 "%0ADCM.KMDF.AVTimer Vote ioctl failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+}
+#typev adcm_driver_c2216 113 "%0ADCM.KMDF.AFE port Encoder config params Q6adProcessIOCTL_AfeEncCfg failed (0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+rs, ItemPtr -- 10
+}
+#typev adcm_driver_c2190 111 "%0ADCM.KMDF.Get Function Ptr Table failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+}
+#typev adcm_driver_c2227 114 "%0ADCM.KMDF.AFE pp config failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+}
+#typev adcm_driver_c2203 112 "%0ADCM.KMDF.AFE port config failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+}
+#typev adcm_driver_c2240 115 "%0ADCM.KMDF.AFE start failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+}
+#typev adcm_driver_c2253 116 "%0ADCM.KMDF.AFE stop failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+}
+#typev adcm_driver_c2266 117 "%0ADCM.KMDF.AFE Loopback mode failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+}
+#typev adcm_driver_c2177 110 "%0ADCM.KMDF.ADCMEvtIoDeviceControl. ADCM driver blocks the IOCTL(0x%10!x!) usermode calls " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+IoControlCode, ItemLong -- 10
+}
+#typev adcm_driver_c2110 109 "%0ADCM.KMDF.ADCMEvtIoDeviceControl: device not ready" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceControl
+{
+}
+#typev adcm_driver_c2106 108 "%0ADCM.KMDF.ADCMEvtIoDeviceControl called" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtIoDeviceControl
+{
+}
+#typev adcm_driver_c1979 100 "%0ADCM.KMDF.ADCMEvtIoDeviceInternalControl.Err.Q6adProcessGetFuncPtrTable(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceInternalControl
+{
+rs, ItemPtr -- 10
+}
+#typev adcm_driver_c2068 107 "%0ADCM.KMDF.ADCMEvtIoDeviceInternalControl.Q6adProcessIOCTL_AddRemoveChildDrivers failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceInternalControl
+{
+}
+#typev adcm_driver_c2006 102 "%0ADCM.KMDF.ADCMEvtIoDeviceInternalControl.Err.Q6adProcessIOCTL_AfeEncCfg(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceInternalControl
+{
+rs, ItemPtr -- 10
+}
+#typev adcm_driver_c2056 106 "%0ADCM.KMDF.ADCMEvtIoDeviceInternalControl.AFE Loopback mode failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceInternalControl
+{
+}
+#typev adcm_driver_c2018 103 "%0ADCM.KMDF.ADCMEvtIoDeviceInternalControl.AFE config failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceInternalControl
+{
+}
+#typev adcm_driver_c1993 101 "%0ADCM.KMDF.ADCMEvtIoDeviceInternalControl.Err.Q6adProcessIOCTL_AfeCfg(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceInternalControl
+{
+rs, ItemPtr -- 10
+}
+#typev adcm_driver_c2031 104 "%0ADCM.KMDF.ADCMEvtIoDeviceInternalControl.AFE start failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceInternalControl
+{
+}
+#typev adcm_driver_c2044 105 "%0ADCM.KMDF.ADCMEvtIoDeviceInternalControl.AFE stop failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceInternalControl
+{
+}
+#typev adcm_driver_c1966 99 "%0ADCM.KMDF.ADCMEvtIoDeviceInternalControl. ADCM driver blocks all the IoDeviceInternalControl for usermode requests" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceInternalControl
+{
+}
+#typev adcm_driver_c1909 98 "%0ADCM.KMDF.ADCMEvtIoDeviceInternalControl: device not ready" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMEvtIoDeviceInternalControl
+{
+}
+#typev adcm_driver_c1904 97 "%0ADCM.KMDF.ADCMEvtIoDeviceInternalControl.KMDF.ADCMEvtIoDeviceControl called" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtIoDeviceInternalControl
+{
+}
+#typev adcm_driver_c3224 185 "%0ADCM.KMDF.CustomTimerDPC Request 0x%10!p! is STATUS_CANCELLED, not completing" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtTimerFunc
+{
+Request, ItemPtr -- 10
+}
+#typev adcm_driver_c3219 184 "%0ADCM.KMDF.CustomTimerDPC Completing request 0x%10!p!, Status 0x%11!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMEvtTimerFunc
+{
+Request, ItemPtr -- 10
+Status, ItemPtr -- 11
+}
+#typev adcm_driver_c1868 96 "%0ADCM.KMDF.Err.ADCMInitRoutineForD0 setting the IO status to NOT READY" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMInitRoutineForD0
+{
+}
+#typev adcm_driver_c1864 95 "%0ADCM.KMDF.ADCMInitRoutineForD0.ADCM up from D3 state" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMInitRoutineForD0
+{
+}
+#typev adcm_driver_c1857 94 "%0ADCM.KMDF.ADCMInitRoutineForD0.Err.Dynamic modules are not loaded (%10!Id!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMInitRoutineForD0
+{
+rc, ItemPtr -- 10
+}
+#typev adcm_driver_c1852 93 "%0ADCM.KMDF.ADCMInitRoutineForD0(All interface dependencies are satisfied)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMInitRoutineForD0
+{
+}
+#typev adcm_driver_c1846 92 "%0ADCM.KMDF.ADCMInitRoutineForD0.Err.acph_rtc_dsp_init(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMInitRoutineForD0
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c1835 91 "%0ADCM.KMDF.ADCMInitRoutineForD0.Err.q6ad_init" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMInitRoutineForD0
+{
+}
+#typev adcm_driver_c1826 90 "%0ADCM.KMDF.ADCMInitRoutineFromD3.acph_init(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMInitRoutineForD0
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c1816 89 "%0ADCM.KMDF.ADCMInitRoutineForD0.Err.acdb_ioctl(ACDB_CMD_INITIALIZE_V2)(0x%10!08X!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMInitRoutineForD0
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c1803 88 "%0ADCM.KMDF.ADCMInitRoutineForD0.Err.q6ad_vcm_smmu_get_interface(0x%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMInitRoutineForD0
+{
+rc, ItemLong -- 10
+}
+#typev adcm_driver_c1794 87 "%0ADCM.KMDF.ADCMInitRoutineForD0.Err.Atm_Init(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMInitRoutineForD0
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c1762 86 "%0ADCM.KMDF.Err.ADCMLoaderThread setting the IO status to NOT READY" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+}
+#typev adcm_driver_c1756 85 "%0ADCM.KMDF.ADCMLoaderThread.ADCMLoadedNRunning" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMLoaderThread
+{
+}
+#typev adcm_driver_c1742 84 "%0ADCM.KMDF.ADCMLoaderThread.Err.WdfDeviceAddQueryInterface(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c1713 83 "%0ADCM.KMDF.ADCMLoaderThread.Err.WdfDeviceCreateDeviceInterface(GUID_DEVINTERFACE_ACDB, 0x%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c1700 82 "%0ADCM.KMDF.ADCMLoaderThread.Err.WdfDeviceAddQueryInterface(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c1668 81 "%0ADCM.KMDF.ADCMLoaderThread.Err.WdfDeviceCreateDeviceInterface(0x%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c1648 80 "%0ADCM.KMDF.ADCMLoaderThread.Err.Dynamic modules are not loaded (%10!Id!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+rc, ItemPtr -- 10
+}
+#typev adcm_driver_c1642 79 "%0ADCM.KMDF.ADCMLoaderThread(All interface dependencies are satisfied)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMLoaderThread
+{
+}
+#typev adcm_driver_c1635 78 "%0ADCM.KMDF.ADCMLoaderThread.Err.acph_rtc_dsp_init(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c1623 77 "%0ADCM.KMDF.ADCMLoaderThread.Err.q6ad_init" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+}
+#typev adcm_driver_c1614 76 "%0ADCM.KMDF.ADCMLoaderThread.acph_init(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c1603 75 "%0ADCM.KMDF.ADCMLoaderThread.Err.acdb_ioctl(ACDB_CMD_INITIALIZE_V2)(0x%10!08X!) " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c1590 74 "%0ADCM.KMDF.ADCMLoaderThread.Err.q6ad_vcm_smmu_get_interface(0x%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+rc, ItemLong -- 10
+}
+#typev adcm_driver_c1579 73 "%0ADCM.KMDF.ADCMLoaderThread.Err.Atm_Init(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c1528 69 "%0ADCM.KMDF.ADCMLoaderThread.ADCM_PNP_STATUS_REMOVED" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMLoaderThread
+{
+}
+#typev adcm_driver_c2409 124 "%0ADCM.KMDF.ADCMQueueInitialize.Err.WdfWaitLockCreate(0x%10!08x!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMQueueInitialize
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c2387 123 "%0ADCM.KMDF.ADCMQueueInitialize.Err.WdfIoQueueCreate(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMQueueInitialize
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2343 122 "%0ADCM.KMDF.ADCMQueueInitialize" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMQueueInitialize
+{
+}
+#typev adcm_driver_c4316 235 "%0ADCM.KMDF.Err.ADCMReadPersistentRegistryValueULong:WdfRegistryQueryULong failed with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadPersistentRegistryValueULong
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4308 234 "%0ADCM.KMDF.Err.ADCMReadPersistentRegistryValueULong.WdfRegistryOpenKey::open regkey failed status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadPersistentRegistryValueULong
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4300 233 "%0ADCM.KMDF.Err.ADCMReadPersistentRegistryValueULong:WdfDriverOpenPersistentStateRegistryKey::open regkey failed status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadPersistentRegistryValueULong
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4438 243 "%0ADCM.KMDF.Err.ADCMReadRegistry.WdfRegistryQueryString failed status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadRegistry
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4432 242 "%0ADCM.KMDF.Err.ADCMReadRegistry.WdfRegistryOpenKey::open regkey failed status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadRegistry
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4425 241 "%0ADCM.KMDF.Err.ADCMReadRegistry.WdfFdoInitOpenRegistryKey::open regkey failed status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadRegistry
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4409 240 "%0ADCM.KMDF.Err.ADCMReadRegistry: registry WdfStringCreate failed status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadRegistry
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4368 238 "%0ADCM.KMDF.Err.ADCMReadRegistryValueULong: WdfRegistryQueryULong failed with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadRegistryValueULong
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4360 237 "%0ADCM.KMDF.Err.WdfRegistryOpenKey::open regkey failed status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadRegistryValueULong
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4381 239 "%0ADCM.KMDF.ADCMReadRegistryValueULong:KeyName %10!s! Value %11!Iu! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_KMDF_VERBOSE FUNC=ADCMReadRegistryValueULong
+{
+Name, ItemWString -- 10
+*Value, ItemPtr -- 11
+}
+#typev adcm_driver_c4352 236 "%0ADCM.KMDF.Err.WdfDeviceOpenRegistryKey::open regkey failed status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadRegistryValueULong
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c630 20 "%0ADCM.KMDF.ADCMReadyCleanup.Err.acph_deinit" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadyCleanup
+{
+}
+#typev adcm_driver_c611 19 "%0ADCM.KMDF.ADCMReadyCleanup.Err.q6ad_deinit" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadyCleanup
+{
+}
+#typev adcm_driver_c600 18 "%0ADCM.KMDF.ADCMReadyCleanup.Err.acph_rtc_dsp_deinit" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMReadyCleanup
+{
+}
+#typev adcm_driver_c3350 193 "%0ADCM.KMDF.ending ADCMSelfManagedIoRestart" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMSelfManagedIoRestart
+{
+}
+#typev adcm_driver_c3343 191 "%0ADCM.KMDF.Entering ADCMSelfManagedIoRestart setting the queue sate to ready" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMSelfManagedIoRestart
+{
+}
+#typev adcm_driver_c3347 192 "%0ADCM.KMDF.Entering ADCMSelfManagedIoRestart Queue is alreayd in ready state" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMSelfManagedIoRestart
+{
+}
+#typev adcm_driver_c3338 190 "%0ADCM.KMDF.Entering ADCMSelfManagedIoRestart Queue state - %10!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMSelfManagedIoRestart
+{
+queueState, ItemLong -- 10
+}
+#typev adcm_driver_c3331 189 "%0ADCM.KMDF.Entering ADCMSelfManagedIoRestart" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMSelfManagedIoRestart
+{
+}
+#typev adcm_driver_c3297 188 "%0ADCM.KMDF.ending ADCMSelfManagedIoSuspend" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMSelfManagedIoSuspend
+{
+}
+#typev adcm_driver_c3282 187 "%0ADCM.KMDF.Error creating timer 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMSelfManagedIoSuspend
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3262 186 "%0ADCM.KMDF.Entering ADCMSelfManagedIoSuspend" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMSelfManagedIoSuspend
+{
+}
+#typev adcm_driver_c3373 195 "%0ADCM.KMDF.ADCMSurpriseRemovalCallback : ADCM Device already in ADCM_PNP_STATUS_SURPRISE_REMOVED state " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMSurpriseRemovalCallback
+{
+}
+#typev adcm_driver_c3368 194 "%0ADCM.KMDF.ADCMSurpriseRemovalCallback entered " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=ADCMSurpriseRemovalCallback
+{
+}
+#typev adcm_driver_c4197 226 "%0ADCM.KMDF.Err.ADCMWritePersistentRegistryValueULong.WdfRegistryAssignULong failed with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMWritePersistentRegistryValueULong
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4189 225 "%0ADCM.KMDF.Err.ADCMWritePersistentRegistryValueULong.WdfRegistryCreateKey::open regkey for path = %10!s!, failed status:[0x%11!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMWritePersistentRegistryValueULong
+{
+RegistryPath, ItemWString -- 10
+status, ItemPtr -- 11
+}
+#typev adcm_driver_c4181 224 "%0ADCM.KMDF.Err.ADCMWritePersistentRegistryValueULong.WdfDriverOpenPersistentStateRegistryKey::open regkey failed status:[0x%10!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=ADCMWritePersistentRegistryValueULong
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c1428 64 "%0ADCM.KMDF.AddChildDevice.Child(0x%10!x!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=AddChildDevice
+{
+childAddr, ItemLong -- 10
+}
+#typev adcm_driver_c4109 222 "%0ADCM.KMDF.Err.WdfDriverCreate failed 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=DriverEntry
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c4087 221 "%0ADCM.KMDF.DriverEntry" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=DriverEntry
+{
+}
+// PDB:  qcadcm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:24:338 (UTC) [tracepdb]
+#typev adcm_driver_c4146 223 "%0ADCM.KMDF.DriverUnload" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=DriverUnload
+{
+}
+#typev adcm_driver_c525 16 "%0ADCM.KMDF.Err.PublishDeviceInterfaceClass.INTERFACE_REVOKE.AcquireInterfaceLock.failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=PublishDeviceInterfaceClass
+{
+}
+#typev adcm_driver_c516 15 "%0ADCM.KMDF.PublishDeviceInterfaceClass.ADCM.Interface.DISABLED" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=PublishDeviceInterfaceClass
+{
+}
+#typev adcm_driver_c495 14 "%0ADCM.KMDF.Err.PublishDeviceInterfaceClass.INTERFACE_PUBLISH.AcquireInterfaceLock.failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=PublishDeviceInterfaceClass
+{
+}
+#typev adcm_driver_c481 13 "%0ADCM.KMDF.Err.PublishDeviceInterfaceClass.WdfDeviceCreateSymbolicLink(0x%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=PublishDeviceInterfaceClass
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c475 12 "%0ADCM.KMDF.PublishDeviceInterfaceClass.ADCM.Interface.ENABLED" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=PublishDeviceInterfaceClass
+{
+}
+#typev adcm_driver_c1021 34 "%0ADCM.KMDF.Q6adProcessGetFuncPtrTable.OPEN(0x%10!p!).CLOSE(0x%11!p!).READ(0x%12!p!).WRITE(0x%13!p!).IOCTL(0x%14!p!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=Q6adProcessGetFuncPtrTable
+{
+q6ad_open, ItemPtr -- 10
+q6ad_close, ItemPtr -- 11
+q6ad_read, ItemPtr -- 12
+q6ad_write, ItemPtr -- 13
+q6ad_ioctl, ItemPtr -- 14
+}
+#typev adcm_driver_c1006 33 "%0ADCM.KMDF.Q6adProcessGetFuncPtrTable.Err.WdfRequestRetrieveOutputBuffer(%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessGetFuncPtrTable
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c1366 60 "%0ADCM.KMDF.Q6adProcessIOCTL_AVtimerQuery(0x%10!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=Q6adProcessIOCTL_AVtimerQuery
+{
+q6err, ItemPtr -- 10
+}
+#typev adcm_driver_c1358 59 "%0ADCM.KMDF.Q6adProcessIOCTL_AVtimerQuery.Err.WdfRequestRetrieveOutputBuffer(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AVtimerQuery
+{
+q6err, ItemPtr -- 10
+}
+#typev adcm_driver_c1351 58 "%0ADCM.KMDF.Q6adProcessIOCTL_AVtimerQuery.Err.q6ad_3rdparty_ioctl(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AVtimerQuery
+{
+q6err, ItemPtr -- 10
+}
+#typev adcm_driver_c1332 57 "%0ADCM.KMDF.Q6adProcessIOCTL_AVtimerQuery.Err.WdfRequestRetrieveInputBuffer(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AVtimerQuery
+{
+q6err, ItemPtr -- 10
+}
+#typev adcm_driver_c1319 56 "%0ADCM.KMDF.Q6adProcessIOCTL_AVtimerVote(0x%10!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=Q6adProcessIOCTL_AVtimerVote
+{
+q6err, ItemPtr -- 10
+}
+#typev adcm_driver_c1312 55 "%0ADCM.KMDF.Q6adProcessIOCTL_AVtimerVote.Err.WdfRequestRetrieveOutputBuffer(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AVtimerVote
+{
+q6err, ItemPtr -- 10
+}
+#typev adcm_driver_c1305 54 "%0ADCM.KMDF.Q6adProcessIOCTL_AVtimerVote.q6ad_3rdparty_ioctl.Err(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AVtimerVote
+{
+q6err, ItemPtr -- 10
+}
+#typev adcm_driver_c1291 53 "%0ADCM.KMDF.Q6adProcessIOCTL_AVtimerVote.Err.WdfRequestRetrieveInputBuffer(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AVtimerVote
+{
+q6err, ItemPtr -- 10
+}
+#typev adcm_driver_c983 32 "%0Q6adProcessIOCTL_AddRemoveChildDrivers Invalid request" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AddRemoveChildDrivers
+{
+}
+#typev adcm_driver_c944 31 "%0ADCM.KMDF.Q6adProcessIOCTL_AddRemoveChildDrivers.RequestedAction(%10!ld!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=Q6adProcessIOCTL_AddRemoveChildDrivers
+{
+pAddRemoveChildDriverInfo->RequestedAction, ItemLong -- 10
+}
+#typev adcm_driver_c937 30 "%0ADCM.KMDF.Q6adProcessIOCTL_AddRemoveChildDrivers.Err.WdfRequestRetrieveOutputBuffer(0x%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AddRemoveChildDrivers
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c1045 36 "%0ADCM.KMDF.Q6adProcessIOCTL_AfeCfg.Err.WdfRequestRetrieveInputBuffer(0x%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AfeCfg
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c1034 35 "%0ADCM.KMDF.Q6adProcessIOCTL_AfeCfg" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=Q6adProcessIOCTL_AfeCfg
+{
+}
+#typev adcm_driver_c1072 38 "%0ADCM.KMDF.Q6adProcessIOCTL_AfeEncCfgBlk.Err.WdfRequestRetrieveInputBuffer(0x%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AfeEncCfg
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c1062 37 "%0ADCM.KMDF.Q6adProcessIOCTL_AfeEncCfg" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=Q6adProcessIOCTL_AfeEncCfg
+{
+}
+#typev adcm_driver_c1187 46 "%0ADCM.KMDF.Q6adProcessIOCTL_AfeLoopBackMode.Err.WdfRequestRetrieveInputBuffer(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AfeLoopBackMode
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c1175 45 "%0ADCM.KMDF.Q6adProcessIOCTL_AfeLoopBackMode" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=Q6adProcessIOCTL_AfeLoopBackMode
+{
+}
+#typev adcm_driver_c1100 40 "%0ADCM.KMDF.Q6adProcessIOCTL_AfePPCfg.Err.WdfRequestRetrieveInputBuffer(0x%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AfePPCfg
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c1088 39 "%0ADCM.KMDF.Q6adProcessIOCTL_AfePPCfg" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=Q6adProcessIOCTL_AfePPCfg
+{
+}
+#typev adcm_driver_c1129 42 "%0ADCM.KMDF.Q6adProcessIOCTL_AfeStart.Err.WdfRequestRetrieveInputBuffer(0x%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AfeStart
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c1117 41 "%0ADCM.KMDF.Q6adProcessIOCTL_AfeStart" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=Q6adProcessIOCTL_AfeStart
+{
+}
+#typev adcm_driver_c1158 44 "%0ADCM.KMDF.Q6adProcessIOCTL_AfeStop.Err.WdfRequestRetrieveInputBuffer(0x%10!08X!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_AfeStop
+{
+status, ItemLong -- 10
+}
+#typev adcm_driver_c1146 43 "%0ADCM.KMDF.Q6adProcessIOCTL_AfeStop" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=Q6adProcessIOCTL_AfeStop
+{
+}
+#typev adcm_driver_c1278 52 "%0ADCM.KMDF.Q6adProcessIOCTL_configCalibration(0x%10!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=Q6adProcessIOCTL_configCalibration
+{
+q6err, ItemPtr -- 10
+}
+#typev adcm_driver_c1273 51 "%0ADCM.KMDF.Q6adProcessIOCTL_configCalibration.Err.InvalidCalibType(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_configCalibration
+{
+pCalibParamsPayload->calib_type, ItemPtr -- 10
+}
+#typev adcm_driver_c1255 50 "%0ADCM.KMDF.Q6adProcessIOCTL_configCalibration.Err.InvalidCalibType(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_configCalibration
+{
+pCalibParamsPayload->calib_type, ItemPtr -- 10
+}
+#typev adcm_driver_c1238 49 "%0ADCM.KMDF.Q6adProcessIOCTL_configCalibration.Err.data length check failed " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_configCalibration
+{
+}
+#typev adcm_driver_c1222 48 "%0ADCM.KMDF.Q6adProcessIOCTL_configCalibration.Err.WdfRequestRetrieveBuffer(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=Q6adProcessIOCTL_configCalibration
+{
+rc, ItemPtr -- 10
+}
+#typev adcm_driver_c1207 47 "%0ADCM.KMDF.Q6adProcessIOCTL_configCalibration" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_KMDF_VERBOSE FUNC=Q6adProcessIOCTL_configCalibration
+{
+}
+#typev adcm_driver_c2657 127 "%0ADCM.KMDF.q6ad_evaluate_acpi_method.Err.pOutputBuffer->Signature(0x%10!Ix!).pOutputBuffer->Count(0x%11!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_evaluate_acpi_method
+{
+pOutputBuffer->Signature, ItemPtr -- 10
+pOutputBuffer->Count, ItemPtr -- 11
+}
+#typev adcm_driver_c2651 126 "%0ADCM.KMDF.q6ad_evaluate_acpi_method.Err.pOutputBuffer(NULL)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_evaluate_acpi_method
+{
+}
+#typev adcm_driver_c2645 125 "%0ADCM.KMDF.q6ad_evaluate_acpi_method.Err.WdfIoTargetSendIoctlSynchronously(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_evaluate_acpi_method
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2926 162 "%0ADCM.KMDF.ExAllocatePool2() failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+}
+#typev adcm_driver_c2935 163 "%0ADCM.KMDF.ExAllocatePool2() failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+}
+#typev adcm_driver_c2958 164 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, RtlAnsiStringToUnicodeString failed for original hidwith error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3056 176 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, RtlAnsiStringToUnicodeString failed for original hidwith error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3063 177 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, copying MVHwId to Hwid_long failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2967 165 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Setting device ID for PDO failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2976 166 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Setting device ID for PDO failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2986 167 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Setting device ID for PDO failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2994 168 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Setting device ID for PDO failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3004 169 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Setting device ID for PDO failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3012 170 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Setting device ID for PDO failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3020 171 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Setting device ID for PDO failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3026 172 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, copying MVHwId to Hwid_long failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3033 173 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Setting device ID for PDO failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3041 174 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Setting device ID for PDO failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3047 175 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, copying MVHwId to Hwid_long failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3073 178 "%0ADCM.KMDF.q6ad_read_acpi_child_device_list: ACPI method argument is invalid or data length is wrong, type = 0x%10!Ix! length = 0x%11!Ix!, index=0x%12!Ix! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+pArg->Type, ItemPtr -- 10
+pArg->DataLength, ItemPtr -- 11
+childIndex, ItemPtr -- 12
+}
+#typev adcm_driver_c2910 161 "%0ADCM.KMDF.q6ad_read_acpi_child_device_list: HardwareIds Count is more than MAX_CHILD_COUNT" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+}
+#typev adcm_driver_c2904 160 "%0ADCM.KMDF.q6ad_read_acpi_child_device_list: q6ad_evaluate_acpi_method fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2894 159 "%0ADCM.KMDF.ADCMEvtChildListCreateDevice, Setting device ID for PDO failed with error code 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_acpi_child_device_list
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2766 144 "%0ADCM.KMDF.LpassAvtimerDenominatorFactor 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_avtimer_address_configuration
+{
+pDeviceContext->avtimer_package.LpassAvtimerDenominatorFactor, ItemPtr -- 10
+}
+#typev adcm_driver_c2763 143 "%0ADCM.KMDF.q6ad_read_avtimer_address_configuration: ADCMReadRegistryValueULong fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_avtimer_address_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2759 142 "%0ADCM.KMDF.LpassAvtimerNumeratorFactor 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_avtimer_address_configuration
+{
+pDeviceContext->avtimer_package.LpassAvtimerNumeratorFactor, ItemPtr -- 10
+}
+#typev adcm_driver_c2756 141 "%0ADCM.KMDF.q6ad_read_avtimer_address_configuration: ADCMReadRegistryValueULong fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_avtimer_address_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2752 140 "%0ADCM.KMDF.q6ad_lpass_avtimer_lsb 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_avtimer_address_configuration
+{
+pDeviceContext->avtimer_package.lpass_avtimer_lsb, ItemPtr -- 10
+}
+#typev adcm_driver_c2749 139 "%0ADCM.KMDF.q6ad_read_avtimer_address_configuration: ADCMReadRegistryValueULong fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_avtimer_address_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2745 138 "%0ADCM.KMDF.q6ad_lpass_avtimer_msb 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_avtimer_address_configuration
+{
+pDeviceContext->avtimer_package.lpass_avtimer_msb, ItemPtr -- 10
+}
+#typev adcm_driver_c2742 137 "%0ADCM.KMDF.q6ad_read_avtimer_address_configuration: ADCMReadRegistryValueULong fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_avtimer_address_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2738 136 "%0ADCM.KMDF.q6ad_lpass_avtimer_base 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_avtimer_address_configuration
+{
+pDeviceContext->avtimer_package.lpass_avtimer_base, ItemPtr -- 10
+}
+#typev adcm_driver_c2735 135 "%0ADCM.KMDF.q6ad_read_avtimer_address_configuration: ADCMReadRegistryValueULong fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_avtimer_address_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3138 183 "%0ADCM.KMDF.q6ad_read_acpi_child_device_list failed: 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_configurations
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3130 182 "%0ADCM.KMDF.q6ad_read_memory_info_configuration failed: 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_configurations
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3124 181 "%0ADCM.KMDF.q6ad_read_avtimer_address_configuration failed: 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_configurations
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3118 180 "%0ADCM.KMDF.[ADCM]:q6ad_read_smmu_configuration failed: 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_configurations
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c3108 179 "%0ADCM.KMDF.ExAllocatePool2() failed" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_configurations
+{
+}
+#typev adcm_driver_c2836 158 "%0ADCM.KMDF.memory cache type 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_memory_info_configuration
+{
+pDeviceContext->pmem_alloc_config_params.cacheType, ItemPtr -- 10
+}
+#typev adcm_driver_c2833 157 "%0ADCM.KMDF.q6ad_read_memory_info_configuration: q6ad_ADCMReadRegistryValueULong fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_memory_info_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2828 156 "%0ADCM.KMDF.ebi_boundaryaddressmultiple_msw 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_memory_info_configuration
+{
+pDeviceContext->pmem_alloc_config_params.boundaryaddressmultiple_msw, ItemPtr -- 10
+}
+#typev adcm_driver_c2825 155 "%0ADCM.KMDF.q6ad_read_memory_info_configuration: q6ad_ADCMReadRegistryValueULong fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_memory_info_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2820 154 "%0ADCM.KMDF.ebi_boundaryaddressmultiple_lsw 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_memory_info_configuration
+{
+pDeviceContext->pmem_alloc_config_params.boundaryaddressmultiple_lsw, ItemPtr -- 10
+}
+#typev adcm_driver_c2817 153 "%0ADCM.KMDF.q6ad_read_memory_info_configuration: q6ad_ADCMReadRegistryValueULong fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_memory_info_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2812 152 "%0ADCM.KMDF.ebi_end_msw 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_memory_info_configuration
+{
+pDeviceContext->pmem_alloc_config_params.ebi_end_msw, ItemPtr -- 10
+}
+#typev adcm_driver_c2809 151 "%0ADCM.KMDF.q6ad_read_memory_info_configuration: q6ad_ADCMReadRegistryValueULong fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_memory_info_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2804 150 "%0ADCM.KMDF.ebi_end_lsw 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_memory_info_configuration
+{
+pDeviceContext->pmem_alloc_config_params.ebi_end_lsw, ItemPtr -- 10
+}
+#typev adcm_driver_c2801 149 "%0ADCM.KMDF.q6ad_read_memory_info_configuration: q6ad_ADCMReadRegistryValueULong fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_memory_info_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2796 148 "%0ADCM.KMDF.ebi_start_msw 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_memory_info_configuration
+{
+pDeviceContext->pmem_alloc_config_params.ebi_start_msw, ItemPtr -- 10
+}
+#typev adcm_driver_c2793 147 "%0ADCM.KMDF.q6ad_read_memory_info_configuration: q6ad_ADCMReadRegistryValueULong fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_memory_info_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2788 146 "%0ADCM.KMDF.ebi_start_lsw 0x%10!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_memory_info_configuration
+{
+pDeviceContext->pmem_alloc_config_params.ebi_start_lsw, ItemPtr -- 10
+}
+#typev adcm_driver_c2785 145 "%0ADCM.KMDF.q6ad_read_memory_info_configuration: q6ad_ADCMReadRegistryValueULong fail with status 0x%10!Ix!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_memory_info_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2716 134 "%0ADCM.KMDF.q6ad_read_smmu_configuration: SMMU End Address is 0x%10!I64x!. " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_smmu_configuration
+{
+pDeviceContext->smmu_package.SmmuEndAddress, ItemLongLongX -- 10
+}
+#typev adcm_driver_c2712 133 "%0ADCM.KMDF.q6ad_read_smmu_configuration.Err.ADCMReadRegistryValueULong(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_smmu_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2706 132 "%0ADCM.KMDF.q6ad_read_smmu_configuration.Err.ADCMReadRegistryValueULong(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_smmu_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2701 131 "%0ADCM.KMDF.q6ad_read_smmu_configuration: SMMU Base Address is 0x%10!I64x!. " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_smmu_configuration
+{
+pDeviceContext->smmu_package.SmmuBaseAddress, ItemLongLongX -- 10
+}
+#typev adcm_driver_c2697 130 "%0ADCM.KMDF.q6ad_read_smmu_configuration.Err.ADCMReadRegistryValueULong(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_smmu_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2691 129 "%0ADCM.KMDF.q6ad_read_smmu_configuration.Err.ADCMReadRegistryValueULong(0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_KMDF_ERROR FUNC=q6ad_read_smmu_configuration
+{
+status, ItemPtr -- 10
+}
+#typev adcm_driver_c2681 128 "%0ADCM.KMDF.q6ad_read_smmu_configuration: chipInfoId=%10!d!, chipInfoVersion=%11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_KMDF_INFO FUNC=q6ad_read_smmu_configuration
+{
+chipInfoId, ItemLong -- 10
+chipInfoVersion, ItemLong -- 11
+}

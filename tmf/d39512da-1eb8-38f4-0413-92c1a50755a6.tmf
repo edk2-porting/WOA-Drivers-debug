@@ -1,0 +1,40 @@
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+d39512da-1eb8-38f4-0413-92c1a50755a6 build // SRC=ClockSources.c MJ= MN=
+#typev ClockSources_c839 17 "%0%10!s! (Freq: %11!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ConfigSource
+{
+pSource->szName, ItemString -- 10
+pFreqConfig->nFreqHz, ItemLong -- 11
+}
+#typev ClockSources_c416 16 "%0%10!s! (Enabled: 0)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOff
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c299 14 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to enable source[%10!s!]" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOn
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c325 15 "%0%10!s! (Enabled: 1)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOn
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c287 13 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to enable source[%10!s!] vote" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOn
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c272 12 "%0DALSYS_LOGEVENT_FATAL_ERROR: Failed to calibrate source[%10!s!]." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOn
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c224 11 "%0DALSYS_LOGEVENT_FATAL_ERROR: Source[%10!s!] requires calibration, but no calibration config." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOn
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c198 10 "%0DALSYS_LOGEVENT_FATAL_ERROR: Cannot turn on source[%10!s!] that hasn't been configured." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceOn
+{
+pSource->szName, ItemString -- 10
+}
+#typev ClockSources_c898 18 "%0DALSYS_LOGEVENT_FATAL_ERROR: Unable to create NPA handles for %10!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SourceResourceAvailableCallback
+{
+pSource->szName, ItemString -- 10
+}

@@ -1,0 +1,215 @@
+// PDB:  qcdiagrouter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+8faa7d57-2cfe-3d81-5e63-2de6efcc5b4b QCDiagRouter // SRC=DiagRouterIPC.c MJ= MN=
+#typev DiagRouterIPC_c690 29 "%0%!FUNC!: Invalid params for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=CreateReadRequests
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterIPC_c711 31 "%0%!FUNC!:WdfRequestCreate for port %10!u! func %11!u! failed with status 0x%12!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=CreateReadRequests
+{
+port_idx, ItemLong -- 10
+func_idx, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev DiagRouterIPC_c721 32 "%0%!FUNC!:WdfRequestCreate for Transport Write for port %10!u! func %11!u! failed with status 0x%12!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=CreateReadRequests
+{
+port_idx, ItemLong -- 10
+func_idx, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev DiagRouterIPC_c780 35 "%0%!FUNC!: IoAllocateIrp for port %10!u! func %11!u! failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=CreateReadRequests
+{
+port_idx, ItemLong -- 10
+func_idx, ItemLong -- 11
+}
+#typev DiagRouterIPC_c737 33 "%0%!FUNC!: WdfMemoryCreate for port %10!u! func %11!u! failed with status 0x%12!08X! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=CreateReadRequests
+{
+port_idx, ItemLong -- 10
+func_idx, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev DiagRouterIPC_c784 36 "%0%!FUNC!: Created request %10!u!: %11!p!, ReqContext=%12!p!, IRP=%13!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPC FUNC=CreateReadRequests
+{
+q_idx, ItemLong -- 10
+DiagRouterRecvRequest[port_idx][func_idx][q_idx], ItemPtr -- 11
+pReadReqContext, ItemPtr -- 12
+pReadReqContext->wskSendIrp, ItemPtr -- 13
+}
+#typev DiagRouterIPC_c751 34 "%0%!FUNC!: WdfMemoryCreate(HDLC Enc) for port %10!u! func %11!u! failed with status 0x%12!08X! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=CreateReadRequests
+{
+port_idx, ItemLong -- 10
+func_idx, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev DiagRouterIPC_c699 30 "%0%!FUNC!: Invalid func_idx" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=CreateReadRequests
+{
+}
+#typev DiagRouterIPC_c879 42 "%0%!FUNC!: Deleting Requests for port %10!u!" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=IPC FUNC=DeleteReadRequests
+{
+portIdx, ItemLong -- 10
+}
+#typev DiagRouterIPC_c1516 65 "%0%!FUNC!: Going to forward control packet." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPC FUNC=DiagIPCRSockFwdProcCtrlPkt
+{
+}
+#typev DiagRouterIPC_c1470 64 "%0%!FUNC!: Going to wait for flow enabled event for control packet forwarding." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPC FUNC=DiagIPCRSockFwdProcCtrlPkt
+{
+}
+#typev DiagRouterIPC_c1146 57 "%0%!FUNC!: Invalid Diag_IPC_Ctrl_Conn params for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterCheckFeatureMaskBit
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterIPC_c1355 62 "%0%!FUNC!: Invalid Diag_IPC_Ctrl_Conn.TransType for peripheral_id = %10!u!, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterGetPeriphBufSize
+{
+peripheralId, ItemLong -- 10
+}
+#typev DiagRouterIPC_c1346 61 "%0%!FUNC!: Invalid input for peripheral_id = %10!u!, quitting " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterGetPeriphBufSize
+{
+peripheralId, ItemLong -- 10
+}
+#typev DiagRouterIPC_c1340 60 "%0%!FUNC!: input buffer is null " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterGetPeriphBufSize
+{
+}
+#typev DiagRouterIPC_c188 13 "%0%!FUNC!: Error allocating sock context area " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterInitIPCConn
+{
+}
+#typev DiagRouterIPC_c200 14 "%0%!FUNC!: Error allocating non-paged pool for DiagIPCOpenCmdNotifyEvt for port" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterInitIPCConn
+{
+}
+#typev DiagRouterIPC_c221 15 "%0%!FUNC!: Error creating Ctrl work item status %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterInitIPCConn
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterIPC_c266 16 "%0%!FUNC!: WdfMemoryCreate failed for CtrlMemory, status %10!08x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterInitIPCConn
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterIPC_c175 12 "%0%!FUNC!: Error allocating sock context area " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterInitIPCConn
+{
+}
+#typev DiagRouterIPC_c1323 59 "%0DiagRouterMapPeripheralIdToPeripheralMask: Could not map peripheral id %10!d! to peripheral mask" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterMapPeripheralPortIdxToPeripheralMask
+{
+peripheral_id, ItemLong -- 10
+}
+// PDB:  qcdiagrouter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev DiagRouterIPC_c134 11 "%0%!FUNC!: error starting IPC set-up thread" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterSetupIPCInterface
+{
+}
+#typev DiagRouterIPC_c131 10 "%0%!FUNC!: started IPC set-up thread and closed HANDLE " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPC FUNC=DiagRouterSetupIPCInterface
+{
+}
+// PDB:  qcdiagrouter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev DiagRouterIPC_c569 27 "%0%!FUNC!: Error starting DiagIPCRSockFwdProcCtrlPkt" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterSetupIPCInterfaceThread
+{
+}
+#typev DiagRouterIPC_c548 26 "%0%!FUNC!: Error starting DiagIPCRSockFwdProcCmd" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterSetupIPCInterfaceThread
+{
+}
+#typev DiagRouterIPC_c535 25 "%0%!FUNC!: Created IPCR Ctrl Read thread " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPC FUNC=DiagRouterSetupIPCInterfaceThread
+{
+}
+#typev DiagRouterIPC_c527 24 "%0%!FUNC!: Error starting Socket read thread for control ports " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterSetupIPCInterfaceThread
+{
+}
+#typev DiagRouterIPC_c588 28 "%0%!FUNC!: Setting terminate event and waiting for SOCK read thread to terminate " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=DiagRouterSetupIPCInterfaceThread
+{
+}
+#typev DiagRouterIPC_c471 23 "%0%!FUNC!: Error starting Sock read thread for port = %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterSetupIPCInterfaceThread
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterIPC_c454 22 "%0%!FUNC!: Error allocating non-paged pool for DiagIPCReadTerminateEvt" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterSetupIPCInterfaceThread
+{
+}
+#typev DiagRouterIPC_c392 21 "%0%!FUNC!, Failed to Create data channel Socket Descriptor for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterSetupIPCInterfaceThread
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterIPC_c382 20 "%0%!FUNC!, Failed to open Socket Descriptor for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterSetupIPCInterfaceThread
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterIPC_c375 19 "%0%!FUNC!, Failed to Create Socket Descriptor for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterSetupIPCInterfaceThread
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterIPC_c361 18 "%0%!FUNC!: DiagIPC_Glink_Init failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterSetupIPCInterfaceThread
+{
+}
+#typev DiagRouterIPC_c354 17 "%0%!FUNC!, Failed to initialize IPC %10!0x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterSetupIPCInterfaceThread
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterIPC_c1109 55 "%0%!FUNC!: Invalid params for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=GetIPCCommandPortConnectionStatus
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterIPC_c1122 56 "%0%!FUNC!: Connected = %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPC FUNC=GetIPCCtrlPortConnectionStatus
+{
+connected, ItemLong -- 10
+}
+#typev DiagRouterIPC_c814 37 "%0%!FUNC!: Invalid TransType " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=QueueReadRequests
+{
+}
+#typev DiagRouterIPC_c862 41 "%0%!FUNC!:Request %10!u! is in failed status, marked it free for port and Q-ed RX intent to glink%11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=QueueReadRequests
+{
+q_idx, ItemLong -- 10
+port_idx, ItemLong -- 11
+}
+#typev DiagRouterIPC_c844 40 "%0%!FUNC!:Request %10!u! is in failed status, marked it free for port %11!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=QueueReadRequests
+{
+q_idx, ItemLong -- 10
+port_idx, ItemLong -- 11
+}
+#typev DiagRouterIPC_c830 39 "%0%!FUNC!: ExAcquireResourceExclusiveLite failed for port %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=QueueReadRequests
+{
+port_idx, ItemLong -- 10
+}
+#typev DiagRouterIPC_c822 38 "%0%!FUNC!: Invalid func_idx " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=QueueReadRequests
+{
+}
+#typev DiagRouterIPC_c928 43 "%0%!FUNC!: NULL  pReadReqContext or pDevContext" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=SendPeriphDataToTransport
+{
+}
+#typev DiagRouterIPC_c1024 50 "%0%!FUNC!: NULL Socket " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=SendPeriphDataToTransport
+{
+}
+#typev DiagRouterIPC_c1015 49 "%0%!FUNC!: WskSend Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=SendPeriphDataToTransport
+{
+}
+#typev DiagRouterIPC_c1003 48 "%0%!FUNC!: RxPtr NULL for glink port %10!u! func %11!u! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=SendPeriphDataToTransport
+{
+pReadReqContext->port_idx, ItemLong -- 10
+pReadReqContext->func_idx, ItemLong -- 11
+}
+#typev DiagRouterIPC_c991 47 "%0%!FUNC!: HDLC Encode failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=SendPeriphDataToTransport
+{
+}
+#typev DiagRouterIPC_c983 46 "%0%!FUNC!: No memory object " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=SendPeriphDataToTransport
+{
+}
+#typev DiagRouterIPC_c1082 54 "%0%!FUNC!: NULL TransportIOTarget " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=SendPeriphDataToTransport
+{
+}
+#typev DiagRouterIPC_c1073 53 "%0%!FUNC!: Transport Write failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=SendPeriphDataToTransport
+{
+}
+#typev DiagRouterIPC_c1066 52 "%0%!FUNC!: WdfIoTargetFormatRequestForWrite failed with USB/UART" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=SendPeriphDataToTransport
+{
+}
+#typev DiagRouterIPC_c1052 51 "%0%!FUNC!: HDLC Encode failed with USB/UART" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=SendPeriphDataToTransport
+{
+}
+#typev DiagRouterIPC_c944 45 "%0%!FUNC!: Failed to acquire Diag_Transport_Connection_Lock" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=SendPeriphDataToTransport
+{
+}
+#typev DiagRouterIPC_c937 44 "%0%!FUNC!: Couldn't acquire DiagRouter_HDLC_Protocol_Update_Lock " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=SendPeriphDataToTransport
+{
+}
+// PDB:  qcdiagrouter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev DiagRouterCtrl_c933 58 "%0DiagRouterMapPeripheralIdToPeripheralMask: Could not map peripheral id %10!d! to peripheral mask" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagRouterIPCCtrlRxWorkFunc
+{
+peripheral_id, ItemLong -- 10
+}

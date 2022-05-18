@@ -1,0 +1,349 @@
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+b6061d8d-d687-3b95-78e9-fb74ff283ecc 10.7 // SRC=ipa_api.c MJ= MN=
+#typev ipa_api_c567 21 "%0IPA::<----%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAAllocateMemoryBuffer
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_api_c521 20 "%0IPA::%10!s!:%11!d!: Allocated buffer of size %12!d! with VA = 0x%13!I64x! and DVA = 0x%14!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAAllocateMemoryBuffer
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+bufferSize, ItemLong -- 12
+(UINT64) *bufferVirtualAddress, ItemLongLongX -- 13
+*deviceVirtualAddress, ItemLongLongX -- 14
+}
+#typev ipa_api_c490 19 "%0IPA::%10!s!:%11!d!: returning status pending to client " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAAllocateMemoryBuffer
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c476 18 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAAllocateMemoryBuffer
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_api_c844 36 "%0IPA::<----%10!s!: status = %11!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAConnect
+{
+__FUNCTION__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev ipa_api_c830 35 "%0IPA::%10!s!:%11!d!: Failed setting doorbell for endpoint=%12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAConnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pEndpointContext->endpointType, ItemLong -- 12
+}
+#typev ipa_api_c823 34 "%0IPA::%10!s!:%11!d!: Set doorbell for endpoint=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAConnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pEndpointContext->endpointType, ItemLong -- 12
+}
+#typev ipa_api_c809 33 "%0IPA::%10!s!:%11!d!: GSI xDCI channl start succeeded. " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAConnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c788 32 "%0IPA::%10!s!:%11!d!: Disabling HOL blocking for IPA_HW_APP_TETHERED_DL_PIPE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAConnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c752 31 "%0IPA::%10!s!:%11!d!: Endpoint %12!d! has not been initialized . " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAConnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pEndpointContext->endpointId, ItemLong -- 12
+}
+#typev ipa_api_c744 30 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAConnect
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_api_c430 17 "%0IPA::<----%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPADeallocateMemoryBuffer
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_api_c419 16 "%0IPA::%10!s!:%11!d!: released memory at VA = 0x%12!I64x! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPADeallocateMemoryBuffer
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+*(UINT64 *)virtualAddress, ItemLongLongX -- 12
+}
+#typev ipa_api_c368 15 "%0IPA::%10!s!:%11!d!: returning status pending to client " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPADeallocateMemoryBuffer
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c352 14 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPADeallocateMemoryBuffer
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_api_c1254 59 "%0IPA::%10!s!:%11!d!:IPADisconnect returned with status %12!x! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPADisconnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev ipa_api_c1231 58 "%0IPA::%10!s!:%11!d!: Enabling HOL blocking for IPA_HW_APP_TETHERED_DL_PIPE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPADisconnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1217 57 "%0IPA::%10!s!:%11!d!: Out of wait" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPADisconnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1209 56 "%0IPA::%10!s!:%11!d!: Waiting for IPA_HW_APP_TETHERED_UL_PIPE to be empty." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPADisconnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1195 55 "%0IPA::%10!s!:%11!d!: IPA_HW_APP_TETHERED_UL_PIPE still not empty. Attempting to send QMI_IPA_ENABLE_FORCE_CLEAR_DATAPATH_REQ_V01" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPADisconnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1188 54 "%0IPA::%10!s!:%11!d!: IPA_HW_APP_TETHERED_UL_PIPE endpoint is not empty. Waiting for 1ms" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPADisconnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1172 53 "%0IPA::%10!s!:%11!d!: Pipe %12!d! has not been enabled . " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPADisconnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pEndpointContext->endpointId, ItemLong -- 12
+}
+#typev ipa_api_c1164 52 "%0IPA::%10!s!:%11!d!: Pipe %12!d! has not been initialized . " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPADisconnect
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pEndpointContext->endpointId, ItemLong -- 12
+}
+#typev ipa_api_c1713 70 "%0IPA::%10!s!:%11!d!: Failed! API cannot be called in GSI mode. " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAGetBAMIPAPhysicalAddr
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1708 69 "%0IPA::%10!s!:%11!d!: Device context is NULL " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPA FUNC=IPAGetBAMIPAPhysicalAddr
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1918 85 "%0IPA::<----%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAGetDoorBellAddress
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_api_c1878 81 "%0IPA::%10!s!:%11!d!: Error! pGsiChannelGetDoorBellAddress failed. " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAGetDoorBellAddress
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1872 80 "%0IPA::%10!s!:%11!d!: Returning doorbell address = %12!I64x! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAGetDoorBellAddress
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+doorBellPa, ItemLongLongX -- 12
+}
+#typev ipa_api_c1854 79 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAGetDoorBellAddress
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_api_c1056 45 "%0IPA::%10!s!:%11!d!: Error! Array size is set to 0 or sufficient memory not allocated on second call to API! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAGetSupportedTransferModes
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1123 51 "%0IPA::<----%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAGetSupportedTransferModes
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_api_c1077 47 "%0IPA::%10!s!:%11!d!: Sufficient memory allocated.Returning SYSTEM mode and xDCI as supported modes. " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAGetSupportedTransferModes
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1065 46 "%0IPA::%10!s!:%11!d!: Insufficient memory allocated.Returning only SYSTEM mode as supported mode. " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAGetSupportedTransferModes
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1045 44 "%0IPA::%10!s!:%11!d!: Interface mode is GSI. sizeofArr = %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAGetSupportedTransferModes
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+*sizeofArr, ItemLong -- 12
+}
+#typev ipa_api_c1014 41 "%0IPA::%10!s!:%11!d!: NULL value passed for sizeofArr!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAGetSupportedTransferModes
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1009 40 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAGetSupportedTransferModes
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_api_c926 39 "%0IPA::%10!s!:%11!d!: IPAUtilsVerifyTagOperationIsComplete Failed with status %12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAModifyEndPointSettings
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev ipa_api_c914 38 "%0IPA::%10!s!:%11!d!:New End point settings set " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAModifyEndPointSettings
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c908 37 "%0IPA::%10!s!:%11!d!: IPACoreSetNewEndpointSettings Failed with status %12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAModifyEndPointSettings
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+}
+#typev ipa_api_c318 13 "%0IPA::%10!s!:%11!d!:Client registration successful for channel.Handle is 0x%12!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPARegisterClient
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pEndpointContext, ItemPtr -- 12
+}
+#typev ipa_api_c298 12 "%0IPA::%10!s!:%11!d!: Client Type has already been allocated. %12!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPARegisterClient
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+clientType, ItemLong -- 12
+}
+#typev ipa_api_c285 11 "%0IPA::%10!s!:%11!d!: Unknown client type %12!d!  " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPARegisterClient
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+clientType, ItemLong -- 12
+}
+#typev ipa_api_c161 10 "%0IPA::%10!s!:%11!d!:Clent type is %12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPARegisterClient
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+clientType, ItemLong -- 12
+}
+#typev ipa_api_c706 29 "%0IPA::<----%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASetupConnection
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_api_c665 26 "%0IPA::%10!s!:%11!d!:Data pipe initialization successful " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASetupConnection
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c638 25 "%0IPA::%10!s!:%11!d!:Power manager registration failed on endpoint %12!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPASetupConnection
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pEndpointContext->endpointId, ItemLong -- 12
+}
+#typev ipa_api_c631 24 "%0IPA::%10!s!:%11!d!:client registration with PM successful " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASetupConnection
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c613 23 "%0IPA::%10!s!:%11!d!: IPASetupConnection is being called twice for endpointId %12!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPASetupConnection
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pEndpointContext->endpointId, ItemLong -- 12
+}
+#typev ipa_api_c607 22 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPASetupConnection
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_api_c1435 66 "%0IPA::%10!s!:%11!d!: IPAEndpointTransferData Failed with status %12!d! for pipe %13!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPATransferData
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+status, ItemLong -- 12
+pEndpointContext->endpointId, ItemLong -- 13
+}
+#typev ipa_api_c1328 62 "%0IPA::%10!s!:%11!d!: returning status pending to client " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPATransferData
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+}
+#typev ipa_api_c1317 61 "%0IPA::%10!s!:%11!d!: Pipe %12!d! has not been Enabled." //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPATransferData
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pEndpointContext->endpointId, ItemLong -- 12
+}
+#typev ipa_api_c1312 60 "%0IPA::%10!s!:%11!d!: EpId=%12!u!, Physical Address = 0x%13!I64x!, size = %14!d! " //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=IPA FUNC=IPATransferData
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pEndpointContext->endpointId, ItemLong -- 12
+buf_pa, ItemLongLongX -- 13
+buf_size, ItemLong -- 14
+}
+#typev ipa_api_c1820 78 "%0IPA::<----%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAUpdataXferRsrcIdx
+{
+__FUNCTION__, ItemString -- 10
+}
+#typev ipa_api_c1786 74 "%0IPA::%10!s!:%11!d!: updated transfer resource_id to %12!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=IPAUpdataXferRsrcIdx
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+xfer_rsrc_idx, ItemLong -- 12
+}
+#typev ipa_api_c1771 73 "%0IPA::---->%10!s!: " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=IPAUpdataXferRsrcIdx
+{
+__FUNCTION__, ItemString -- 10
+}
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+#typev qmap_main_c919 13 "%0IPA::%10!s!:%11!d!:Client registration successful for channel.Handle is 0x%12!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRegister
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pEndpointContext, ItemPtr -- 12
+}
+#typev qmap_main_c919 12 "%0IPA::%10!s!:%11!d!: Client Type has already been allocated. %12!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=QmapRegister
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+clientType, ItemLong -- 12
+}
+#typev qmap_main_c919 11 "%0IPA::%10!s!:%11!d!: Unknown client type %12!d!  " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=QmapRegister
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+clientType, ItemLong -- 12
+}
+#typev qmap_main_c919 10 "%0IPA::%10!s!:%11!d!:Clent type is %12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRegister
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+clientType, ItemLong -- 12
+}
+// PDB:  qcipa7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:27:458 (UTC) [tracepdb]
+#typev qmap_main_c894 13 "%0IPA::%10!s!:%11!d!:Client registration successful for channel.Handle is 0x%12!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRegister
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+pEndpointContext, ItemPtr -- 12
+}
+#typev qmap_main_c894 12 "%0IPA::%10!s!:%11!d!: Client Type has already been allocated. %12!d! " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=QmapRegister
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+clientType, ItemLong -- 12
+}
+#typev qmap_main_c894 11 "%0IPA::%10!s!:%11!d!: Unknown client type %12!d!  " //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=pDeviceContext->IFRlogHandle FLAGS=IPA FUNC=QmapRegister
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+clientType, ItemLong -- 12
+}
+#typev qmap_main_c894 10 "%0IPA::%10!s!:%11!d!:Clent type is %12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPA FUNC=QmapRegister
+{
+__FUNCTION__, ItemString -- 10
+__LINE__, ItemLong -- 11
+clientType, ItemLong -- 12
+}

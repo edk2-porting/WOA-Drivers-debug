@@ -1,0 +1,511 @@
+// PDB:  qcremotefs7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:57:728 (UTC) [tracepdb]
+b636b2b5-e848-3871-5666-94290c2f9e1d 10.7 // SRC=remotefs.c MJ= MN=
+#typev remotefs_c1039 50 "%0FileRW: Status = 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=FileRW
+{
+RmfsStatus, ItemLong -- 10
+}
+#typev remotefs_c981 48 "%0FileRW: Invalid direction" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=FileRW
+{
+}
+#typev remotefs_c925 43 "%0FileRW: Malloc failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=FileRW
+{
+}
+#typev remotefs_c1001 49 "%0FileRW: ZwReadFile/ZwWriteFile failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=FileRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c951 45 "%0FileRW: 1st read attempt- no error" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=FileRW
+{
+}
+#typev remotefs_c888 40 "%0FileRW: ZwWriteFile didn't transfer all bytes, requested: 0x%10!x! actual 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=FileRW
+{
+TransferSize, ItemLong -- 10
+(UINT32)IoStatus.Information, ItemLong -- 11
+}
+#typev remotefs_c904 42 "%0FileRW: ZwFlushBuffersFile failed status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=FileRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c969 47 "%0FileRW: ZwReadFile didn't transfer all bytes, requested: 0x%10!x! actual 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=FileRW
+{
+TransferSize, ItemLong -- 10
+(UINT32)IoStatus.Information, ItemLong -- 11
+}
+#typev remotefs_c965 46 "%0FileRW: ReadFile status %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=FileRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c938 44 "%0FileRW: DMF_SOCPartition_Read status %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=FileRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c900 41 "%0FileRW: FlushFile status %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=FileRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c884 39 "%0FileRW: WriteFile status %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=FileRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c877 38 "%0FileRW: DMF_SOCPartition_Write status %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=FileRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c850 37 "%0FileRW: MmMapIoSpaceEx failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=FileRW
+{
+}
+#typev remotefs_c308 19 "%0GetDiskAndPartNum: RtlStringCbPrintfW failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetDiskAndPartitionNum
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c326 20 "%0GetDiskAndPartNum: WdfIoTargetCreate failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetDiskAndPartitionNum
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c351 21 "%0GetDiskAndPartNum: WdfIoTargetOpen failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetDiskAndPartitionNum
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c370 22 "%0GetDiskAndPartNum: WdfRequestCreate failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetDiskAndPartitionNum
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c388 23 "%0GetDiskAndPartNum: WdfMemoryOut create failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetDiskAndPartitionNum
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c404 24 "%0GetDiskAndPartNum: WdfIoTargetFormatRequestForIoctl failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetDiskAndPartitionNum
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c419 25 "%0GetDiskAndPartNum: WdfRequestSend failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetDiskAndPartitionNum
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c437 26 "%0GetDiskAndPartNum: Bad WdfRequest, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetDiskAndPartitionNum
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c214 17 "%0GetStorageGeometry: Bad WdfRequest, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetStorageGeometry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c207 16 "%0GetStorageGeometry: WdfRequestSend failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetStorageGeometry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c221 18 "%0BytesPerSector = %10!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=GetStorageGeometry
+{
+IoCmdOut->Geometry.BytesPerSector, ItemULongLong -- 10
+}
+#typev remotefs_c192 15 "%0GetStorageGeometry: WdfIoTargetFormatRequestForIoctl failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetStorageGeometry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c177 14 "%0GetStorageGeometry: WdfMemoryOut create failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetStorageGeometry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c160 13 "%0GetStorageGeometry: WdfRequestCreate failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetStorageGeometry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c143 12 "%0GetStorageGeometry: WdfIoTargetOpen failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetStorageGeometry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c126 11 "%0GetStorageGeometry: WdfIoTargetCreate failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetStorageGeometry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c109 10 "%0GetStorageGeometry: RtlStringCbPrintfW failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GetStorageGeometry
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c665 32 "%0GppRW: Invalid direction" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GppRW
+{
+}
+#typev remotefs_c685 33 "%0GppRW: WdfIoTargetFormatRequestForIoctl failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GppRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c708 35 "%0GppRW: Bad WdfRequest, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GppRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c701 34 "%0GppRW: WdfRequestSend failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GppRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c634 31 "%0GppRW: WdfRequestReuse failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GppRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c616 30 "%0GppRW: WdfMemoryIn create failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GppRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c766 36 "%0GppRW: Status = 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=GppRW
+{
+RmfsStatus, ItemLong -- 10
+}
+#typev remotefs_c599 29 "%0GppRW: WdfMemoryOut create failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GppRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c575 28 "%0GppRW: WdfRequestCreate failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GppRW
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c560 27 "%0GppRW: MmMapIoSpaceEx failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GppRW
+{
+}
+#typev remotefs_c1190 58 "%0IsGPPSupported: Bad WdfRequest, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=IsGPPSupported
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1183 57 "%0IsGPPSupported: WdfRequestSend failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=IsGPPSupported
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1206 61 "%0GPP1Size = %10!I64u!, GPP2Size = %11!I64u!, GPP3Size = %12!I64u!, GPP4Size = %13!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=IsGPPSupported
+{
+IoCmdOut->Parameters.GppIsSupported.Gpp_1_SizeInBytes, ItemULongLong -- 10
+IoCmdOut->Parameters.GppIsSupported.Gpp_2_SizeInBytes, ItemULongLong -- 11
+IoCmdOut->Parameters.GppIsSupported.Gpp_3_SizeInBytes, ItemULongLong -- 12
+IoCmdOut->Parameters.GppIsSupported.Gpp_4_SizeInBytes, ItemULongLong -- 13
+}
+#typev remotefs_c1205 60 "%0IsGPPSupported: Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=IsGPPSupported
+{
+}
+#typev remotefs_c1199 59 "%0IsGPPSupported: False" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=IsGPPSupported
+{
+}
+#typev remotefs_c1168 56 "%0IsGPPSuported: WdfIoTargetFormatRequestForIoctl failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=IsGPPSupported
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1150 55 "%0IsGPPSupported: WdfMemoryIn create failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=IsGPPSupported
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1133 54 "%0IsGPPSupported: WdfMemoryOut create failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=IsGPPSupported
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1116 53 "%0IsGPPSupported: WdfRequestCreate failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=IsGPPSupported
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1098 52 "%0IsGPPSupported: WdfIoTargetOpen failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=IsGPPSupported
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1081 51 "%0IsGPPSupported: WdfIoTargetCreate failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=IsGPPSupported
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1283 64 "%0ParseGppPartitions: Read GPT header failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ParseGppPartitions
+{
+}
+#typev remotefs_c1327 67 "%0ParseGppPartitions: Reading GPT partition entry failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ParseGppPartitions
+{
+}
+#typev remotefs_c1370 72 "%0ParseGppPartitions: FS partitions found, FS1 = %10!I64u!, FS2 = %11!I64u!, FSG = %12!I64u!, FSC = %13!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ParseGppPartitions
+{
+FS1, ItemULongLong -- 10
+FS2, ItemULongLong -- 11
+FSG, ItemULongLong -- 12
+FSC, ItemULongLong -- 13
+}
+#typev remotefs_c1379 73 "%0ParseGppPartitions: Failed to find all the FS partitions" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ParseGppPartitions
+{
+}
+#typev remotefs_c1364 71 "%0ParseGppPartitions: Found PartitionFSC" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ParseGppPartitions
+{
+}
+#typev remotefs_c1357 70 "%0ParseGppPartitions: Found PartitionFSG" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ParseGppPartitions
+{
+}
+#typev remotefs_c1350 69 "%0ParseGppPartitions: Found PartitionFS2" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ParseGppPartitions
+{
+}
+#typev remotefs_c1343 68 "%0ParseGppPartitions: Found PartitionFS1" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=ParseGppPartitions
+{
+}
+#typev remotefs_c1317 66 "%0ParseGppPartitions: Reading backup GPT partition entry failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ParseGppPartitions
+{
+}
+#typev remotefs_c1295 65 "%0ParseGppPartitions: Failed to find valid GPT signature" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ParseGppPartitions
+{
+}
+#typev remotefs_c1274 63 "%0ParseGppPartitions: Read backup GPT header failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ParseGppPartitions
+{
+}
+#typev remotefs_c1263 62 "%0ParseGppPartitions: Invalid partition number" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ParseGppPartitions
+{
+}
+#typev remotefs_c2057 107 "%0Invalid RWIovec request: not within allocated shared buffer" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RWIovec
+{
+}
+#typev remotefs_c2076 108 "%0RWIovec: RW Error, result: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RWIovec
+{
+Result, ItemLong -- 10
+}
+#typev remotefs_c2045 106 "%0RWIovec operation: RHandle = %10!p!, Direction = %11!d!, SectAddr = %12!u!, PhyAddr = 0x%13!x!, NumSectors = %14!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=RWIovec
+{
+RHandle, ItemPtr -- 10
+Direction, ItemLong -- 11
+Iovec[Index].SectAddr, ItemLong -- 12
+Iovec[Index].DataPhyAddr, ItemLong -- 13
+Iovec[Index].NumSectors, ItemLong -- 14
+}
+#typev remotefs_c2033 105 "%0RWIovec" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RWIovec
+{
+}
+#typev remotefs_c1909 100 "%0RfsSrvClose partition handle failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvClose
+{
+}
+#typev remotefs_c1883 99 "%0RfsSrvClose" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RfsSrvClose
+{
+}
+#typev remotefs_c1852 98 "%0RfsSrvOpenFile: Handle = %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=RfsSrvOpenFile
+{
+RHandle, ItemPtr -- 10
+}
+#typev remotefs_c1842 97 "%0RfsSrvOpenFile: GetStorageGeometry failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenFile
+{
+}
+#typev remotefs_c1817 96 "%0RfsSrvOpenFile: Failed to create WorkItemDone event, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenFile
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1807 95 "%0RfsSrvOpenFile: Failed to create RWIovecDone lock, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenFile
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1799 94 "%0RfsSrvOpenFile failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenFile
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1725 92 "%0RfsSrvOpenFile: Path has been previously opened" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=RfsSrvOpenFile
+{
+}
+#typev remotefs_c1755 93 "%0RfsSrvOpenFile IoGetDriverDirectory failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenFile
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1713 91 "%0RfsSrvOpenFile: Ran out of handles" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenFile
+{
+}
+#typev remotefs_c1700 90 "%0RfsSrvOpenFile" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RfsSrvOpenFile
+{
+}
+#typev remotefs_c1660 89 "%0RfsSrvOpenPartition: Handle = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+HandleIndex, ItemLong -- 10
+}
+#typev remotefs_c1629 87 "%0RfsSrvOpenPartition: Invalid Partition number" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+}
+#typev remotefs_c1650 88 "%0RfsSrvOpenPartition: GetStorageGeometry failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+}
+#typev remotefs_c1616 86 "%0RfsSrvOpenPartition: Invalid Path name" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+}
+#typev remotefs_c1588 85 "%0RfsSrvOpenPartition: WorkItemDone creation failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1578 84 "%0RfsSrvOpenPartition: RWIovecDone creation failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1570 83 "%0RfsSrvOpenPartition: Invalid partition number" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+}
+#typev remotefs_c1516 79 "%0RfsSrvOpenPartition: Invalid Path name" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+}
+#typev remotefs_c1562 82 "%0RfsSrvOpenPartition: ZwCreateFile failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1540 81 "%0RfsSrvOpenPartition: RtlStringCbPrintfW failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1527 80 "%0RfsSrvOpenPartition: GetDiskAndPartitionNum failed, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c1484 78 "%0RfsSrvOpenPartition: ParseGppPartitions failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+}
+#typev remotefs_c1444 76 "%0RfsSrvOpenPartition: Path has been previously opened" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+}
+#typev remotefs_c1470 77 "%0RfsSrvOpenPartition: GPP partitions supported" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+}
+#typev remotefs_c1432 75 "%0RfsSrvOpenPartition: Ran out of handles" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvOpenPartition
+{
+}
+#typev remotefs_c1419 74 "%0RfsSrvOpenPartition" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RfsSrvOpenPartition
+{
+}
+#typev remotefs_c2184 112 "%0RfsSrvRWIovec: Status = 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=RfsSrvRWIovec
+{
+RmfsStatus, ItemLong -- 10
+}
+#typev remotefs_c2175 111 "%0RfsSrvRWIovec: RWIovec thread terminated" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=RfsSrvRWIovec
+{
+}
+#typev remotefs_c2156 110 "%0RfsSrvRWIovec: Error creating WorkItem, status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=RfsSrvRWIovec
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev remotefs_c2122 109 "%0RfsSrvRWIovec" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=RfsSrvRWIovec
+{
+}
+#typev remotefs_c2895 150 "%0qmi_rmtfs_connection_handle_cleanup: connection_handle = %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=qmi_rmtfs_connection_handle_cleanup
+{
+ConnectHandleList[Index].Client, ItemPtr -- 10
+}
+#typev remotefs_c2869 149 "%0qmi_rmtfs_register_service failed, status = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=qmi_rmtfs_register_service
+{
+rc, ItemLong -- 10
+}
+#typev remotefs_c2856 148 "%0qmi_rmtfs_register_service" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=qmi_rmtfs_register_service
+{
+}
+#typev remotefs_c2437 130 "%0rmtfs_alloc_buff_response: qmi_csi_send_resp finished" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_alloc_buff_response
+{
+}
+#typev remotefs_c2433 129 "%0rmtfs_alloc_buff_response: resp_err = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_alloc_buff_response
+{
+resp_err, ItemLong -- 10
+}
+#typev remotefs_c2421 128 "%0rmtfs_alloc_buff_response: PhyAddr = 0x%10!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_alloc_buff_response
+{
+PhyAddr, ItemULongLong -- 10
+}
+#typev remotefs_c2406 103 "%0RfsSrvAllocBuff: PhyAddr = 0x%10!I64u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_alloc_buff_response
+{
+RHandle->PhyAddr, ItemULongLong -- 10
+}
+#typev remotefs_c2414 127 "%0rmtfs_alloc_buff_response: bad physical address" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_alloc_buff_response
+{
+}
+#typev remotefs_c2406 102 "%0RfsSrvAllocBuff: BuffSize = 0; Invalid client" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_alloc_buff_response
+{
+}
+#typev remotefs_c2406 101 "%0RfsSrvAllocBuff" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=rmtfs_alloc_buff_response
+{
+}
+#typev remotefs_c2393 126 "%0rmtfs_alloc_buff_response" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=rmtfs_alloc_buff_response
+{
+}
+#typev remotefs_c2359 125 "%0rmtfs_close_response: qmi_csi_send_resp finished" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_close_response
+{
+}
+#typev remotefs_c2355 124 "%0rmtfs_close_response: resp_err = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_close_response
+{
+resp_err, ItemLong -- 10
+}
+#typev remotefs_c2346 123 "%0rmtfs_close_response: Device error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_close_response
+{
+}
+#typev remotefs_c2341 122 "%0rmtfs_close_response: Param Error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_close_response
+{
+}
+#typev remotefs_c2332 121 "%0rmtfs_close_response: No error" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_close_response
+{
+}
+#typev remotefs_c2312 120 "%0rmtfs_close_response" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=rmtfs_close_response
+{
+}
+#typev remotefs_c2691 143 "%0rmtfs_connect_cb: clnt_info = %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_connect_cb
+{
+clnt_info, ItemPtr -- 10
+}
+#typev remotefs_c2678 142 "%0rmtfs_connect_cb: qmi_cs_cb_conn_refused" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_connect_cb
+{
+}
+#typev remotefs_c2670 141 "%0rmtfs_connect_cb" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=rmtfs_connect_cb
+{
+}
+#typev remotefs_c2748 145 "%0rmtfs_disconnect_cb: connection_handle = %10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_disconnect_cb
+{
+connection_handle, ItemPtr -- 10
+}
+#typev remotefs_c2732 144 "%0rmtfs_disconnect_cb" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=rmtfs_disconnect_cb
+{
+}
+#typev remotefs_c2615 140 "%0rmtfs_get_dev_error_response: qmi_csi_send_resp finished" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_get_dev_error_response
+{
+}
+#typev remotefs_c2611 139 "%0rmtfs_get_dev_error_response: resp_err = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_get_dev_error_response
+{
+resp_err, ItemLong -- 10
+}
+#typev remotefs_c2601 104 "%0RfsSrvGetDevError" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=rmtfs_get_dev_error_response
+{
+}
+#typev remotefs_c2584 138 "%0rmtfs_get_dev_error_response" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=rmtfs_get_dev_error_response
+{
+}
+#typev remotefs_c2813 147 "%0rmtfs_handle_req_cb- Result = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_handle_req_cb
+{
+rc, ItemLong -- 10
+}
+#typev remotefs_c2799 146 "%0rmtfs_handle_req_cb" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=rmtfs_handle_req_cb
+{
+}
+#typev remotefs_c2280 119 "%0rmtfs_open_response: qmi_csi_send_resp finished" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_open_response
+{
+}
+#typev remotefs_c2276 118 "%0rmtfs_open_response: resp_err = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_open_response
+{
+resp_err, ItemLong -- 10
+}
+#typev remotefs_c2263 117 "%0rmtfs_open_response: open_resp.caller_id = 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_open_response
+{
+open_resp.caller_id, ItemLong -- 10
+}
+#typev remotefs_c2252 116 "%0rmtfs_open_response: NULL ClientHandle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_open_response
+{
+}
+#typev remotefs_c2232 115 "%0rmtfs_open: strncpy_s failed. Request path too long" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_open_response
+{
+}
+#typev remotefs_c2222 114 "%0rmtfs_open: NULL device context" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_open_response
+{
+}
+#typev remotefs_c2218 113 "%0rmtfs_open_response" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=rmtfs_open_response
+{
+}
+#typev remotefs_c2546 137 "%0rmtfs_rw_iovec_response: qmi_csi_send_resp finished" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_rw_iovec_response
+{
+}
+#typev remotefs_c2541 136 "%0rmtfs_rw_iovec_response: resp_err = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_rw_iovec_response
+{
+resp_err, ItemLong -- 10
+}
+#typev remotefs_c2528 135 "%0rmtfs_rw_iovec_response: Device error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_rw_iovec_response
+{
+}
+#typev remotefs_c2523 134 "%0rmtfs_rw_iovec_response: Param error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_rw_iovec_response
+{
+}
+#typev remotefs_c2514 133 "%0rmtfs_rw_iovec_response: No error" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=rmtfs_rw_iovec_response
+{
+}
+#typev remotefs_c2494 132 "%0rmtfs_rw_iovec_response: failed to allocate IovecStruct" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=rmtfs_rw_iovec_response
+{
+}
+#typev remotefs_c2473 131 "%0rmtfs_rw_iovec_response" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=EntryExit FUNC=rmtfs_rw_iovec_response
+{
+}

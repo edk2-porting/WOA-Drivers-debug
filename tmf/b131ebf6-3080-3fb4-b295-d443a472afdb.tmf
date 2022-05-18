@@ -1,0 +1,412 @@
+// PDB:  qcadcm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:24:338 (UTC) [tracepdb]
+b131ebf6-3080-3fb4-b295-d443a472afdb src // SRC=q6ad_adm_pp.c MJ= MN=
+#typev q6ad_adm_pp_c1885 88 "%0ADCM.ADM.Err.failed Min q6ad_adm_cal_per_channel_gain Device ID [%10!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_cal_min_max_device_gain
+{
+db_gain->dev_id, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1876 87 "%0ADCM.ADM.Err.failed MIN q6ad_get_pp_params_frm_acdb_buffer Device ID [%10!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_cal_min_max_device_gain
+{
+db_gain->dev_id, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1862 86 "%0ADCM.ADM.Err.failed MAX q6ad_adm_cal_per_channel_gain Device ID [%10!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_cal_min_max_device_gain
+{
+db_gain->dev_id, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1852 85 "%0ADCM.ADM.Err.failed MAX q6ad_get_pp_params_frm_acdb_buffer Device ID [%10!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_cal_min_max_device_gain
+{
+db_gain->dev_id, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c329 17 "%0ADCM.ADM.Err.failed/invalid to get ASM handle(s)handle_count: [%10!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_get_adm2asm_objects
+{
+asm_handles->asm_count, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c342 18 "%0ADCM.ADM.Err.failed to get ASM object for ASM handle: [%10!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_get_adm2asm_objects
+{
+asm_handles->asm_array[i], ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c320 16 "%0ADCM.ADM.Err.failed to get ASM info from ADM mask " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_get_adm2asm_objects
+{
+}
+#typev q6ad_adm_pp_c312 15 "%0ADCM.ADM.Err. Inwvalid ADM object passed !" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_get_adm2asm_objects
+{
+}
+#typev q6ad_adm_pp_c1135 47 "%0ADCM.ADM.Err.invalid number of channels %10!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_get_max_channel_gain_index
+{
+vol->u.multi_ch_db_gain.num_channels, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1158 48 "%0ADCM.ADM.Err.invalid number of channels %10!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_get_max_channel_gain_index
+{
+vol->u.multi_ch_device_db_gain.num_channels, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1110 46 "%0ADCM.ADM.Err.invalid number of channels %10!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_get_max_channel_gain_index
+{
+vol->u.multi_ch_gain.num_channels, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1926 90 "%0ADCM.ADM.q6ad_adm_get_min_max_db_gain level(%10!d!).Device(0x%11!Ix!).acdb_apptype(0x%12!Ix!).minDB(%13!d!).maxDB(%14!d!).rc(0x%15!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_get_min_max_db_gain
+{
+vol_levels.num_levels, ItemLong -- 10
+db_gain->dev_id, ItemPtr -- 11
+db_gain->acdb_apptype, ItemPtr -- 12
+db_gain->min_db_gain, ItemLong -- 13
+db_gain->max_db_gain, ItemLong -- 14
+rc, ItemPtr -- 15
+}
+#typev q6ad_adm_pp_c1911 89 "%0ADCM.ADM.Err.q6ad_adm_get_min_max_db_gain Failed q6ad_adm_acdb_get_vol_levels" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_get_min_max_db_gain
+{
+}
+#typev q6ad_adm_pp_c963 40 "%0ADCM.ADM.Err.Failed to apply the gain dependent common calibration for index (%10!Id!)!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_apply_gain_dependent_cal_for_q13_gain
+{
+gain_dep_cal_index, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c958 39 "%0ADCM.ADM.q6ad_adm_pp_apply_gain_dependent_cal_for_q13_gain -gain dep calibration unsupported in ACDB rc=0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_apply_gain_dependent_cal_for_q13_gain
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c950 38 "%0ADCM.ADM.Multichannel PP calib Q13 gain [%10!Iu!], gain_dep_cal_index [%11!Id!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_apply_gain_dependent_cal_for_q13_gain
+{
+max_vol_step_q13_gain, ItemPtr -- 10
+gain_dep_cal_index, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c943 37 "%0ADCM.ADM.Err.Failed Multichannel PP calib Q13 gain [%10!Iu!], gain_index [%11!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_apply_gain_dependent_cal_for_q13_gain
+{
+max_vol_step_q13_gain, ItemPtr -- 10
+gain_dep_cal_index, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c532 23 "%0ADCM.ADM.Err.Failed/invalid Volume sessCoppParamNum (%10!Id!) for adm handle (0x%11!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_gain
+{
+sessCoppParamNum, ItemPtr -- 10
+adm_obj->handle, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c521 22 "%0ADCM.ADM.Err.Failed to create Q6 Matrix gain(s) msg for adm handle (0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_gain
+{
+adm_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c575 26 "%0ADCM.ADM.Err.Failed to apply the gain dependent common calibration for COPP (%10!Id!), step (%11!Id!)!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_gain
+{
+adm_obj->copp_id, ItemPtr -- 10
+per_chnl_max_step, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c571 25 "%0ADCM.ADM.q6ad_adm_pp_create_n_apply_gain -gain dep calibration unsupported in ACDB rc=0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_create_n_apply_gain
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c553 24 "%0ADCM.ADM.Err.Failed to apply the Matrix gain(s) PSPCPD* ADM handle (0x%10!Ix!)                     and ASM handle (0x%11!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_gain
+{
+adm_obj->handle, ItemPtr -- 10
+asm_map_info.asm_obj_array[0]->handle, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c489 21 "%0ADCM.ADM.failed to allocate memory for q6ad msg buf of size (%10!Id!)!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_gain
+{
+q6msg_buf_size, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c673 29 "%0ADCM.ADM.Err.Failed/invalid Volume sessCoppParamNum (%10!Id!) for adm handle (0x%11!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_matrix_db_gain
+{
+sessCoppParamNum, ItemPtr -- 10
+adm_obj->handle, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c662 28 "%0ADCM.ADM.Err.Failed to create Q6 Matrix gain(s) msg for adm handle (0x%10!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_matrix_db_gain
+{
+adm_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c730 32 "%0ADCM.ADM.Err.Failed to apply the gain dependent common calibration for COPP (%10!Id!), step (%11!Id!)!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_matrix_db_gain
+{
+adm_obj->copp_id, ItemPtr -- 10
+per_chnl_max_step, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c726 31 "%0ADCM.ADM.q6ad_adm_pp_create_n_apply_matrix_db_gain -gain dep calibration unsupported in ACDB rc=0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_create_n_apply_matrix_db_gain
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c693 30 "%0ADCM.ADM.Err.Failed to apply the Matrix gain(s) PSPCPD* ADM handle (0x%10!Ix!)                     and ASM handle (0x%11!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_matrix_db_gain
+{
+adm_obj->handle, ItemPtr -- 10
+asm_map_info.asm_obj_array[0]->handle, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c630 27 "%0ADCM.ADM.failed to allocate memory for q6ad msg buf of size (%10!Id!)!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_matrix_db_gain
+{
+q6msg_buf_size, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1072 44 "%0ADCM.ADM.q6ad_adm_pp_create_n_apply_multichannel_device_db_gain.Err.Failed Multichannel gain: channel_gain DB to q28 : [%10!Id!], rc [%11!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_multichannel_device_db_gain
+{
+ac_obj->pp_data.vol.u.multi_ch_device_db_gain.gain_data[idx].channel_gain, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c1076 45 "%0ADCM.ADM.q6ad_adm_pp_create_n_apply_multichannel_device_db_gain: channel_type:[%10!Id!], DB gain: [%11!Id!], Q28 gain [0x%12!Ix!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_create_n_apply_multichannel_device_db_gain
+{
+msg->u.set_pp.data[0].u.multichannel_gain.gain_data[idx].channel_type, ItemPtr -- 10
+ac_obj->pp_data.vol.u.multi_ch_device_db_gain.gain_data[idx].channel_gain, ItemPtr -- 11
+msg->u.set_pp.data[0].u.multichannel_gain.gain_data[idx].gain, ItemPtr -- 12
+}
+#typev q6ad_adm_pp_c1058 43 "%0ADCM.ADM.q6ad_adm_pp_create_n_apply_multichannel_device_db_gain.Err.invalid number of channels %10!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_multichannel_device_db_gain
+{
+ac_obj->pp_data.vol.u.multi_ch_device_db_gain.num_channels, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1054 42 "%0ADCM.ADM.q6ad_adm_pp_create_n_apply_multichannel_device_db_gain: num_channels: [%10!Id!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_create_n_apply_multichannel_device_db_gain
+{
+msg->u.set_pp.data[0].u.multichannel_gain.num_channels, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c992 41 "%0ADCM.ADM.q6ad_adm_pp_create_n_apply_multichannel_device_db_gain softstepping is disabled " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_create_n_apply_multichannel_device_db_gain
+{
+}
+#typev q6ad_adm_pp_c908 35 "%0ADCM.ADM.q6ad_adm_pp_create_n_apply_multichannel_gain.Err.Failed Multichannel gain: channel_gain DB to q28 : [%10!Id!], rc [%11!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_multichannel_gain
+{
+ac_obj->pp_data.vol.u.multi_ch_db_gain.gain_data[idx].channel_gain, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c912 36 "%0ADCM.ADM.q6ad_adm_pp_create_n_apply_multichannel_gain: channel_type:[%10!Id!], DB gain: [%11!Id!], Q28 gain [0x%12!Ix!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_create_n_apply_multichannel_gain
+{
+msg->u.set_pp.data[0].u.multichannel_gain.gain_data[idx].channel_type, ItemPtr -- 10
+ac_obj->pp_data.vol.u.multi_ch_db_gain.gain_data[idx].channel_gain, ItemPtr -- 11
+msg->u.set_pp.data[0].u.multichannel_gain.gain_data[idx].gain, ItemPtr -- 12
+}
+#typev q6ad_adm_pp_c894 34 "%0ADCM.ADM.q6ad_adm_pp_create_n_apply_multichannel_gain.Err.invalid number of channels %10!Id!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_multichannel_gain
+{
+ac_obj->pp_data.vol.u.multi_ch_db_gain.num_channels, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c888 33 "%0ADCM.ADM.q6ad_adm_pp_create_n_apply_multichannel_gain: num_channels: [%10!Id!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_create_n_apply_multichannel_gain
+{
+msg->u.set_pp.data[0].u.multichannel_gain.num_channels, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c428 20 "%0ADCM.ADM.Err.Failed to apply the Matrix Mute PSPCPD* ADM handle (0x%10!Ix!)                         and ASM handle (0x%11!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_mute
+{
+adm_obj->handle, ItemPtr -- 10
+asm_handles.asm_obj_array[i]->handle, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c385 19 "%0ADCM.ADM.failed to allocate memory for q6ad msg buf of size (%10!Id!)!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_create_n_apply_mute
+{
+q6msg_buf_size, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1490 66 "%0ADCM.ADM.q6ad_adm_pp_set ADM Handle[0x%10!Ix!]  Q6AD_PP_TYPE_PEAK_METER,rc(0x%11!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c1486 65 "%0ADCM.ADM.q6ad_adm_pp_set ADM Handle[0x%10!Ix!]  Q6AD_PP_TYPE_PEAK_METER " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1480 64 "%0ADCM.ADM.q6ad_adm_pp_set ADM Handle[0x%10!Ix!]  Q6AD_PP_TYPE_VOL,rc(0x%11!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c1475 63 "%0ADCM.ADM.q6ad_adm_pp_set ADM Handle[0x%10!Ix!]  Q6AD_PP_TYPE_VOL " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1465 62 "%0ADCM.ADM.Err.q6ad_adm_pp_set unsupported for ULL ADM handle or LL NP ADM handle [0x%10!Ix!], ac_obj->port_mode [0x%11!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_set
+{
+ac_obj->handle, ItemPtr -- 10
+ac_obj->mode_of_op, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c1519 68 "%0ADCM.ADM.Err.q6ad_adm_pp_set_gain_dependent_common_cal unsupported for ULL ADM handle or LL NP ADM handle [0x%10!Ix!], ac_obj->mode_of_op [0x%11!Ix!] or ac_obj->topology_id = [0x%12!x!] is NULL " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_set_gain_dependent_common_cal
+{
+ac_obj->handle, ItemPtr -- 10
+ac_obj->mode_of_op, ItemPtr -- 11
+ac_obj->topology_id, ItemLong -- 12
+}
+#typev q6ad_adm_pp_c1550 71 "%0ADCM.ADM.Err.q6ad_adm_pp_set_gain_dependent_common_cal failed to fetch data: status (0x%10!Ix!) buf_len (0x%11!Ix!)" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_set_gain_dependent_common_cal
+{
+rc, ItemPtr -- 10
+buf_len, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c1544 70 "%0ADCM.ADM.q6ad_adm_pp_set_gain_dependent_common_cal unsupported gain dep common cal data: status (0x%10!Ix!) " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_set_gain_dependent_common_cal
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1606 75 "%0ADCM.ADM.q6ad_adm_pp_set_gain_dependent_common_cal ADM Handle[0x%10!Ix!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set_gain_dependent_common_cal
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1589 74 "%0ADCM.ADM.q6ad_adm_pp_set_gain_dependent_common_cal - sent to Q6 - ac_handle=0x%10!Ix!, vol_idx=0x%11!Ix!, rc=0x%12!Ix!, ACDB buf_len=0x%13!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_set_gain_dependent_common_cal
+{
+ac_obj->handle, ItemPtr -- 10
+vol_idx, ItemPtr -- 11
+rc, ItemPtr -- 12
+buf_len, ItemPtr -- 13
+}
+#typev q6ad_adm_pp_c1580 73 "%0ADCM.ADM.Err.failed q6ad_adm_pp_set_gain_dependent_common_cal - sent to Q6 - ac_handle=0x%10!Ix!, vol_idx=0x%11!Ix!, rc=0x%12!Ix!, ACDB buf_len=0x%13!Ix!,phy_lsw[0x%14!Ix!],phy_msw[0x%15!Ix!], mem_handle[0x%16!Ix!]" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_set_gain_dependent_common_cal
+{
+ac_obj->handle, ItemPtr -- 10
+vol_idx, ItemPtr -- 11
+rc, ItemPtr -- 12
+buf_len, ItemPtr -- 13
+msg->u.set_pp.hdr.data_payload_addr_lsw, ItemPtr -- 14
+msg->u.set_pp.hdr.data_payload_addr_msw, ItemPtr -- 15
+msg->u.set_pp.hdr.mem_map_handle, ItemPtr -- 16
+}
+#typev q6ad_adm_pp_c1555 72 "%0ADCM.ADM.q6ad_acdb_get_gain_dep_copp_common_cal_data" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set_gain_dependent_common_cal
+{
+}
+#typev q6ad_adm_pp_c1534 69 "%0ADCM.ADM.q6ad_acdb_get_gain_dep_copp_common_cal_data" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set_gain_dependent_common_cal
+{
+}
+#typev q6ad_adm_pp_c1512 67 "%0ADCM.ADM.q6ad_adm_pp_set_gain_dependent_common_cal ADM Handle[0x%10!Ix!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set_gain_dependent_common_cal
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1686 80 "%0ADCM.ADM.q6ad_adm_pp_set_gain_independent_common_cal ADM Handle[0x%10!Ix!],rc=0x%11!Ix! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_set_gain_independent_common_cal
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c1631 77 "%0ADCM.ADM.Err.q6ad_adm_pp_set_gain_independent_common_cal unsupported for ULL ADM handle or LL NP ADM handle [0x%10!Ix!], ac_obj->mode_of_op [0x%11!Ix!] or ac_obj->topology_id = [0x%12!x!] is NULL " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_set_gain_independent_common_cal
+{
+ac_obj->handle, ItemPtr -- 10
+ac_obj->mode_of_op, ItemPtr -- 11
+ac_obj->topology_id, ItemLong -- 12
+}
+#typev q6ad_adm_pp_c1649 78 "%0ADCM.ADM.Err.q6ad_adm_pp_set_gain_independent_common_cal ACDB failed rc = %10!Id!, ACDB buf_len = 0x%11!Ix!. " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_set_gain_independent_common_cal
+{
+rc, ItemPtr -- 10
+buf_len, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c1672 79 "%0ADCM.ADM.q6ad_adm_pp_set_gain_independent_common_cal sent to Q6 - rc=0x%10!Ix!
+." //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set_gain_independent_common_cal
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1623 76 "%0ADCM.ADM.q6ad_adm_pp_set_gain_independent_common_cal ADM Handle[0x%10!Ix!] " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set_gain_independent_common_cal
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1358 59 "%0ADCM.ADM.Err.q6ad_adm_pp_set_mute unsupported for ULL ADM handle or LL NP ADM handle [0x%10!Ix!], ac_obj->port_mode [0x%11!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_set_mute
+{
+adm_obj->handle, ItemPtr -- 10
+adm_obj->mode_of_op, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c1779 84 "%0ADCM.ADM.q6ad_adm_pp_set_peak_meter ADM Handle[0x%10!Ix!] Q6AD_PP_CMD_PARAM_ID_GET_PEAK_METER " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set_peak_meter
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1761 83 "%0ADCM.ADM.q6ad_adm_pp_set_peak_meter ADM Handle[0x%10!Ix!] Q6AD_PP_CMD_PARAM_ID_GET_PEAK_METER " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set_peak_meter
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1738 82 "%0ADCM.ADM.q6ad_adm_pp_set_peak_meter ADM Handle[0x%10!Ix!] Q6AD_PP_CMD_PARAM_ID_SET_PEAK_METER_INTERVAL " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_set_peak_meter
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1729 81 "%0ADCM.ADM.q6ad_adm_pp_set_peak_meter ADM Handle[0x%10!Ix!] Q6AD_PP_CMD_PARAM_ID_SET_PEAK_METER_INTERVAL " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_set_peak_meter
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1394 60 "%0ADCM.ADM.Err.q6ad_adm_pp_set_volume unsupported for ULL ADM handle or LL NP ADM handle [0x%10!Ix!], ac_obj->port_mode [0x%11!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_set_volume
+{
+adm_obj->handle, ItemPtr -- 10
+adm_obj->mode_of_op, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c1257 53 "%0ADCM.ADM.Err.adm gain q13 table is invalid rc = %10!Id!!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_vol_set
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1250 52 "%0ADCM.ADM.Err.Failed to apply the gain dependent common calibration for step (%10!Id!)!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_vol_set
+{
+max_vol_step, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1243 51 "%0ADCM.ADM.Err.q6ad_adm_pp_vol_set:q6ad_cal_db_to_q13: Failed  rc [%10!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_vol_set
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1232 50 "%0ADCM.ADM.Err.q6ad_adm_pp_vol_set:q6ad_adm_get_max_channel_gain_index: Failed  rc [%10!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_vol_set
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1224 49 "%0ADCM.ADM.Err.q6ad_adm_pp_vol_set:q6ad_adm_pp_create_n_apply_multichannel_gain: Failed to apply multichannel gain: rc [%10!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_vol_set
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1305 58 "%0ADCM.ADM.Err.adm gain q13 table is invalid rc = %10!Id!!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_vol_set
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1297 57 "%0ADCM.ADM.Err.Failed to apply the gain dependent common calibration for step (%10!Id!)!" //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_vol_set
+{
+max_vol_step, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1290 56 "%0ADCM.ADM.Err.q6ad_adm_pp_vol_set:q6ad_cal_db_to_q13: Failed for channel_db_gain  rc [%10!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_vol_set
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1278 55 "%0ADCM.ADM.Err.q6ad_adm_pp_vol_set:q6ad_adm_get_max_channel_gain_index: Failed for channel_db_gain  rc [%10!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_vol_set
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1271 54 "%0ADCM.ADM.Err.q6ad_adm_pp_vol_set: Failed to apply multichannel gain: rc [%10!Id!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_vol_set
+{
+rc, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c208 14 "%0ADCM.ADM.q6ad_adm_pp_vol_set_multichannel_mute end - sent to Q6 - ac_handle=0x%10!Ix!,rc=0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_vol_set_multichannel_mute
+{
+ac_obj->handle, ItemPtr -- 10
+rc, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c198 13 "%0ADCM.ADM.Err.Failed q6ad_adm_pp_vol_set_multichannel_mute  - ac_handle=0x%10!Ix! " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_pp_vol_set_multichannel_mute
+{
+ac_obj->handle, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c189 12 "%0ADCM.ADM.q6ad_adm_pp_vol_set_multichannel_mute begin - ac_handle=0x%10!Ix!,pkt_size=0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_vol_set_multichannel_mute
+{
+ac_obj->handle, ItemPtr -- 10
+cmd_byte_size, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c167 11 "%0ADCM.ADM.q6ad_adm_vol_set_mute end - sent to Q6 - ac_handl(0x%10!Ix!),mute(%11!Id!),rc(0x%12!Ix!)" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_pp_vol_set_mute
+{
+ac_obj->handle, ItemPtr -- 10
+mute->mute, ItemPtr -- 11
+rc, ItemPtr -- 12
+}
+#typev q6ad_adm_pp_c156 10 "%0ADCM.ADM.q6ad_adm_vol_set_mute begin - ac_handle=0x%10!Ix!,mute=%11!Id!,pkt_size=0x%12!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_pp_vol_set_mute
+{
+ac_obj->handle, ItemPtr -- 10
+mute->mute, ItemPtr -- 11
+cmd_byte_size, ItemPtr -- 12
+}
+#typev q6ad_adm_pp_c1431 61 "%0ADCM.ADM.Err.q6ad_adm_set_matix_db_gain_w_ramp unsupported for ULL ADM handle or ULL PP ADM handle or LL NP ADM handle [0x%10!Ix!], ac_obj->port_mode [0x%11!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_set_matix_db_gain_w_ramp
+{
+adm_obj->handle, ItemPtr -- 10
+adm_obj->mode_of_op, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c2026 99 "%0ADCM.ADM.q6ad_adm_set_matrix_pspd_channel_gain_params output_input_channel_gain[%10!d!][%11!d!] = 0x%12!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_set_matrix_pspd_channel_gain_params
+{
+counter1, ItemLong -- 10
+counter2, ItemLong -- 11
+*(((uint16_t *)variable_data_ptr)), ItemPtr -- 12
+}
+#typev q6ad_adm_pp_c2018 98 "%0ADCM.ADM.q6ad_adm_set_matrix_pspd_channel_gain_params input_channel_map[%10!d!] = 0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_set_matrix_pspd_channel_gain_params
+{
+counter1, ItemLong -- 10
+*(((uint16_t *)variable_data_ptr + counter1)), ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c2012 97 "%0ADCM.ADM.q6ad_adm_set_matrix_pspd_channel_gain_params output_channel_map[%10!d!] = 0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_set_matrix_pspd_channel_gain_params
+{
+counter1, ItemLong -- 10
+*(((uint16_t *)variable_data_ptr + counter1)), ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c2005 96 "%0ADCM.ADM.q6ad_adm_set_matrix_pspd_channel_gain_params no_of_input_channels = 0x%10!Ix! no_of_output_channels = 0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_set_matrix_pspd_channel_gain_params
+{
+temp_default_chmixer_param_id_coeff->num_input_channels, ItemPtr -- 10
+temp_default_chmixer_param_id_coeff->num_output_channels, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c1979 95 "%0ADCM.ADM.q6ad_adm_set_matrix_pspd_channel_gain_params q6 msg payload_length = 0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_set_matrix_pspd_channel_gain_params
+{
+payload_length, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1969 94 "%0ADCM.ADM.q6ad_adm_set_matrix_pspd_channel_gain_params variable_param_size = 0x%10!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=ADCM_ADM_VERBOSE FUNC=q6ad_adm_set_matrix_pspd_channel_gain_params
+{
+variable_param_size, ItemPtr -- 10
+}
+#typev q6ad_adm_pp_c1966 93 "%0ADCM.ADM.q6ad_adm_set_matrix_pspd_channel_gain_params no_of_output_channels = 0x%10!Ix! , no_of_input_channels = 0x%11!Ix!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=ADCM_ADM_INFO FUNC=q6ad_adm_set_matrix_pspd_channel_gain_params
+{
+no_of_output_channels, ItemPtr -- 10
+no_of_input_channels, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c1957 92 "%0ADCM.ADM.Err.q6ad_adm_set_matrix_pspd_channel_gain_params unsupported for ULL ADM handle or ULL PP ADM handle or LL NP ADM handle [0x%10!Ix!], ac_obj->mode_of_op [0x%11!Ix!] " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_set_matrix_pspd_channel_gain_params
+{
+adm_obj->handle, ItemPtr -- 10
+adm_obj->mode_of_op, ItemPtr -- 11
+}
+#typev q6ad_adm_pp_c1949 91 "%0ADCM.ADM.Err.Failed q6ad_adm_set_matrix_pspd_channel_gain_params incorrect ADM object " //   IFRLOG=ifr_log_handle LEVEL=TRACE_LEVEL_ERROR FLAGS=ADCM_ADM_ERROR FUNC=q6ad_adm_set_matrix_pspd_channel_gain_params
+{
+}

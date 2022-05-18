@@ -1,0 +1,225 @@
+// PDB:  QcTrEE.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+ae1bd999-9a0e-382b-68db-32070fda4ed4 latest // SRC=TZArmV8.c MJ= MN=
+#typev TZArmV8_c508 36 "%0TrEE: 32bit SMC Interface" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=InstallInternalSyscall
+{
+}
+#typev TZArmV8_c503 35 "%0TrEE: 64bit SMC Interface" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=InstallInternalSyscall
+{
+}
+#typev TZArmV8_c148 16 "%0TrEE: Error: [%10!p!] Invalid input parameters received for InternalArmV8Syscall32 %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TZV8 FUNC=InternalArmV8Syscall32
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev TZArmV8_c216 15 "%0TZ Syscall Returned: 0x%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=InternalArmV8Syscall32
+{
+SyscallErr, ItemLong -- 10
+}
+#typev TZArmV8_c216 12 "%0SMC Returned: 0x%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=InternalArmV8Syscall32
+{
+SmcErr, ItemLong -- 10
+}
+#typev TZArmV8_c177 19 "%0TrEE: Error: [%10!p!] Failed to allocate memory to hold SMC arguments %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TZV8 FUNC=InternalArmV8Syscall32
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev TZArmV8_c166 18 "%0TrEE: Error: [%10!p!] Excessive arguments received for SMC commands %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TZV8 FUNC=InternalArmV8Syscall32
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev TZArmV8_c155 17 "%0TrEE: InternalArmV8Syscall32 SMC ID: 0x%10!X!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=InternalArmV8Syscall32
+{
+SmcId, ItemLong -- 10
+}
+#typev TZArmV8_c465 34 "%0TrEE: Verbose: Freed address 0x%10!X! successfully." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=InternalArmV8Syscall64
+{
+(UINT32)IndirectParametersVa, ItemLong -- 10
+}
+#typev TZArmV8_c351 29 "%0TrEE: Error: [%10!p!] Invalid input parameters received for InternalArmV8Syscall64 %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TZV8 FUNC=InternalArmV8Syscall64
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev TZArmV8_c424 33 "%0TrEE: Verbose: SMC Id: 0x%10!X!, TZStatus: 0x%11!X!, (elapsed: %12!u! ms)." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=InternalArmV8Syscall64
+{
+SmcId, ItemLong -- 10
+TzStatus, ItemLong -- 11
+(ULONG)(elapsed/(10*1000)), ItemLong -- 12
+}
+#typev TZArmV8_c380 32 "%0TrEE: Verbose: Allocated address 0x%10!X! to send SMC command 0x%11!X! to TZ." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=InternalArmV8Syscall64
+{
+(UINT32)IndirectParametersVa, ItemLong -- 10
+SmcId, ItemLong -- 11
+}
+#typev TZArmV8_c376 31 "%0TrEE: Error: [%10!p!] Failed to allocate memory to hold SMC arguments %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TZV8 FUNC=InternalArmV8Syscall64
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev TZArmV8_c365 30 "%0TrEE: Error: [%10!p!] Excessive arguments recived for SMC %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TZV8 FUNC=InternalArmV8Syscall64
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev TZArmV8_c316 28 "%0TrEE: Verbose: destVMlist: 0x%10!I64x!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=PrintHypMemProtect
+{
+(uint64)phyAddr.QuadPart, ItemLongLongX -- 10
+}
+#typev TZArmV8_c309 27 "%0TrEE: Verbose: destVMlist[%10!d!] 0x%11!x!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=PrintHypMemProtect
+{
+i, ItemLong -- 10
+dstList[i].dstVM, ItemLong -- 11
+}
+#typev TZArmV8_c298 26 "%0TrEE: Verbose: destVMlist: 0x%10!I64x!, destVMlistsize: 0x%11!I64x!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=PrintHypMemProtect
+{
+(UINT64)assign_req->destVMlist, ItemLongLongX -- 10
+(UINT64)assign_req->destVMlistsize, ItemLongLongX -- 11
+}
+#typev TZArmV8_c295 25 "%0TrEE: Verbose: sourceVMlist: 0x%10!I64x!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=PrintHypMemProtect
+{
+(uint64)phyAddr.QuadPart, ItemLongLongX -- 10
+}
+#typev TZArmV8_c288 24 "%0TrEE: Verbose: sourceVMlist[%10!d!] 0x%11!x!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=PrintHypMemProtect
+{
+i, ItemLong -- 10
+srcList[i], ItemLong -- 11
+}
+#typev TZArmV8_c277 23 "%0TrEE: Verbose: sourceVMlist: 0x%10!I64x!, srcVMlistsize: 0x%11!I64x!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=PrintHypMemProtect
+{
+(UINT64)assign_req->sourceVMlist, ItemLongLongX -- 10
+(UINT64)assign_req->srcVMlistsize, ItemLongLongX -- 11
+}
+#typev TZArmV8_c274 22 "%0TrEE: Verbose: IPAinfolist: 0x%10!I64x!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=PrintHypMemProtect
+{
+(uint64)phyAddr.QuadPart, ItemLongLongX -- 10
+}
+#typev TZArmV8_c267 21 "%0TrEE: Verbose: IPAList[%10!d!] Addr: 0x%11!I64x! Size: 0x%12!I64x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=PrintHypMemProtect
+{
+i, ItemLong -- 10
+(uint64)ipaList[i].IPAaddr, ItemLongLongX -- 11
+(uint64)ipaList[i].IPAsize, ItemLongLongX -- 12
+}
+#typev TZArmV8_c255 20 "%0TrEE: Verbose: IPAList: 0x%10!I64x!, IPAListSize: 0x%11!I64x!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=PrintHypMemProtect
+{
+(UINT64)assign_req->IPAinfolist, ItemLongLongX -- 10
+(UINT64)assign_req->IPAinfolistsize, ItemLongLongX -- 11
+}
+#typev TZArmV8_c631 45 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=SipArmV8Syscall
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev TZArmV8_c623 44 "%0TrEE: Error: [%10!p!] Failure occured while waiting for Send data command event %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TZV8 FUNC=SipArmV8Syscall
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+WaitRetVal, ItemLong -- 13
+}
+#typev TZArmV8_c617 43 "%0TrEE: Send data command event triggered by completed listener." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=SipArmV8Syscall
+{
+}
+#typev TZArmV8_c611 42 "%0TrEE: Error: [%10!p!] STATUS_TIMEOUT occured for Send data command %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TZV8 FUNC=SipArmV8Syscall
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+WaitRetVal, ItemLong -- 13
+}
+#typev TZArmV8_c601 41 "%0TrEE: Send data command returned busy from TZ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=SipArmV8Syscall
+{
+}
+#typev TZArmV8_c595 40 "%0TrEE: Error: [%10!p!] Failure from InternalArmV8Syscall %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TZV8 FUNC=SipArmV8Syscall
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev TZArmV8_c575 39 "%0TrEE: Verbose: TZ Re-Entrancy scenario occured. " //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=SipArmV8Syscall
+{
+}
+#typev TZArmV8_c571 38 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=SipArmV8Syscall
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}
+#typev TZArmV8_c834 60 "%0TrEE: Verbose: [%10!p!] -- %11!s!(): 0x%12!X!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+Status, ItemLong -- 12
+}
+#typev TZArmV8_c728 53 "%0TrEE: Error: [%10!p!] STATUS_TIMEOUT occured event %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+WaitRetVal, ItemLong -- 13
+}
+#typev TZArmV8_c740 55 "%0TrEE: Error: [%10!p!] Failure occured while waiting on event %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+WaitRetVal, ItemLong -- 13
+}
+#typev TZArmV8_c695 49 "%0TrEE: Error: [%10!p!] Failure returned from InternalArmV8Syscall %11!s!:%12!d!: 0x%13!X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+_TID(), ItemPtr -- 10
+__FILE__, ItemString -- 11
+__LINE__, ItemLong -- 12
+Status, ItemLong -- 13
+}
+#typev TZArmV8_c782 59 "%0TrEE: Listener operation blocked by TZ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+}
+#typev TZArmV8_c777 58 "%0TrEE: Verbose: TZ Re-Entrancy window closed. " //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+}
+#typev TZArmV8_c757 57 "%0TrEE: Verbose: TZ Re-Entrancy Window opened. " //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+}
+#typev TZArmV8_c752 56 "%0TrEE: Verbose: Listener operation called by TZ." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+}
+#typev TZArmV8_c734 54 "%0TrEE: Event triggered by completed listener." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+}
+#typev TZArmV8_c717 52 "%0TrEE: Send data command returned busy from TZ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+}
+#typev TZArmV8_c711 51 "%0TrEE: App shutdown command returned busy from TZ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+}
+#typev TZArmV8_c705 50 "%0TrEE: App start command returned busy from TZ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+}
+#typev TZArmV8_c675 48 "%0TrEE: Send Data command received for app ID: %10!d!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+appId, ItemLong -- 10
+}
+#typev TZArmV8_c665 47 "%0TrEE: Verbose: TZ Re-Entrancy scenario occured. " //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+}
+#typev TZArmV8_c661 46 "%0TrEE: Verbose: [%10!p!] ++ %11!s!()" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_TZV8 FUNC=TzOsArmV8Syscall
+{
+_TID(), ItemPtr -- 10
+TEXT(__FUNCTION__), ItemString -- 11
+}

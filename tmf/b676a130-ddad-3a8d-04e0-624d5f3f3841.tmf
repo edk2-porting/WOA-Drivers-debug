@@ -1,0 +1,81 @@
+// PDB:  qcdiagrouter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+b676a130-ddad-3a8d-04e0-624d5f3f3841 QCDiagRouter // SRC=DiagRouterUART.c MJ= MN=
+#typev DiagRouterUART_c364 29 "%0ConfigureUARTPort: TIMEOUTS set,%10!u!l,%11!u!l,%12!u!l,%13!u!l,%14!u!l " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Transport FUNC=ConfigureUARTPort
+{
+pTimeout->ReadIntervalTimeout, ItemLong -- 10
+pTimeout->ReadTotalTimeoutMultiplier, ItemLong -- 11
+pTimeout->ReadTotalTimeoutConstant, ItemLong -- 12
+pTimeout->WriteTotalTimeoutMultiplier, ItemLong -- 13
+pTimeout->WriteTotalTimeoutConstant, ItemLong -- 14
+}
+#typev DiagRouterUART_c360 28 "%0ConfigureUARTPort:WdfRequestSend OK for SET_TIMEOUTS but UART driver failed with status 0x%10!08X! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=ConfigureUARTPort
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterUART_c352 27 "%0ConfigureUARTPort:WdfRequestSend for SET_TIMEOUTS failed with status 0x%10!08X! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=ConfigureUARTPort
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterUART_c345 26 "%0ConfigureUARTPort: WdfIoTargetFormatRequestForIoctl failed for SET_TIMEOUTS, status %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=ConfigureUARTPort
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterUART_c331 25 "%0ConfigureUARTPort: failed to create memory to set TIMEOUTS, status %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=ConfigureUARTPort
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterUART_c322 24 "%0ConfigureUARTPort: failed to create request to set TIMEOUTS " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=ConfigureUARTPort
+{
+}
+#typev DiagRouterUART_c116 12 "%0DiagRouterSetupUARTThread: Terminate event before UART driver is available " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSetupUARTThread
+{
+}
+#typev DiagRouterUART_c218 21 "%0DiagRouterSetupUARTThread: Fail Exit" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSetupUARTThread
+{
+}
+#typev DiagRouterUART_c209 20 "%0DiagRouterSetupUARTThread: DiagTransportCreateRx failed, status %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSetupUARTThread
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterUART_c186 19 "%0DiagRouterSetupUARTThread: DiagTransportCreateRx failed, status %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSetupUARTThread
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterUART_c178 18 "%0DiagRouterSetupUARTThread: ConfigureUARTPort failed, status %10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSetupUARTThread
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterUART_c171 17 "%0DiagRouterSetupUARTThread: SendUARTOpenPortRequest failed, status %10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSetupUARTThread
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterUART_c163 16 "%0DiagRouterSetupUARTThread: connection id not found " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSetupUARTThread
+{
+}
+#typev DiagRouterUART_c158 15 "%0DiagRouterSetupUARTThread: KeWaitForSingleObject failed, status %10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSetupUARTThread
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterUART_c133 13 "%0DiagRouterSetupUARTThread: UART Driver interface available, going to open port " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Transport FUNC=DiagRouterSetupUARTThread
+{
+}
+#typev DiagRouterUART_c148 14 "%0DiagRouterSetupUARTThread: KeWaitForMultipleObjects returned invalid status, status %10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSetupUARTThread
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterUART_c100 11 "%0DiagRouterSetupUARTThread: going to wait for UART driver interface " //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Transport FUNC=DiagRouterSetupUARTThread
+{
+}
+#typev DiagRouterUART_c97 10 "%0DiagRouterSetupUARTThread: IoRegisterPlugPlayNotification failed, status %10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=DiagRouterSetupUARTThread
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterUART_c291 23 "%0SendUARTOpenPortRequest: Open IoTarget Failed, Status 0x%10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=SendUARTOpenPortRequest
+{
+status, ItemLong -- 10
+}
+#typev DiagRouterUART_c284 22 "%0SendUARTOpenPortRequest: IoTargetCreate Failed, status 0x%10!08x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Transport FUNC=SendUARTOpenPortRequest
+{
+status, ItemLong -- 10
+}

@@ -1,0 +1,782 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+078c203a-4feb-3950-58bd-c3a280953870 PEP // SRC=PEP_ResourceAggr.c MJ= MN=
+#typev PEP_ResourceAggr_c975 47 "%0PEP: Match type mismatch for Client Name: %10!s!, Clock Name: %11!s!, Requested match type: %12!d!, Expected match type: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddClockResource
+{
+(clientInfo->clientName), ItemString -- 10
+clockNode->ClockName, ItemString -- 11
+clockNode->Match, ItemLong -- 12
+result.data.value, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c896 46 "%0PEP: Match type mismatch for Client Name: %10!s!, Clock Name: %11!s!, Requested match type: %12!d!, Expected match type: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddClockResource
+{
+(clientInfo->clientName), ItemString -- 10
+clockNode->ClockName, ItemString -- 11
+clockNode->Match, ItemLong -- 12
+result.data.value, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c1492 72 "%0Invalid FOOTSWITCH Name %10!s! for Client: (%11!s!)!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=Aggr_AddFsResource
+{
+name, ItemString -- 10
+clientInfo->clientName, ItemString -- 11
+}
+#typev PEP_ResourceAggr_c1490 71 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1490 :Invalid FOOTSWITCH Name %10!s! for Client: (%11!s!)!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=Aggr_AddFsResource
+{
+name, ItemString -- 10
+clientInfo->clientName, ItemString -- 11
+}
+#typev PEP_ResourceAggr_c1473 70 "%0Aggr_AddFsResource:  Name Length is 0 for Client: (%10!s!)" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=Aggr_AddFsResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1470 69 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1470 :Aggr_AddFsResource:  Name Length is 0 for Client: (%10!s!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=Aggr_AddFsResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1461 68 "%0Aggr_AddFsResource: NULL name for Client: (%10!s!)" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=Aggr_AddFsResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1459 67 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1459 :Aggr_AddFsResource: NULL name for Client: (%10!s!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=Aggr_AddFsResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2387 114 "%0Client: (%10!s!): PmicGpioV2 %11!s! config { %12!d!, %13!d!, %14!d!, %15!d!, %16!d!, %17!d!, %18!d!, %19!d!, %20!d!, %21!d!} different from other client(s) 							  using this shared resource. cached config { %22!d!, %23!d!, %24!d!, %25!d!, %26!d!, %27!d!, %28!d!, %29!d!, %30!d!, %31!d! }" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+GpioActionTypeEnum2Str[PmicGpioV2Node->Action], ItemString -- 11
+config->pmic_num, ItemLong -- 12
+config->gpio_id, ItemLong -- 13
+config->dir, ItemLong -- 14
+config->voltage_source, ItemLong -- 15
+config->source, ItemLong -- 16
+config->out_buffer_config, ItemLong -- 17
+config->out_buffer_strength, ItemLong -- 18
+config->inversion, ItemLong -- 19
+config->ext_pin_config, ItemLong -- 20
+config->i_source_pulls, ItemLong -- 21
+npa_res_data->pin_config[idx].pmic_num, ItemLong -- 22
+npa_res_data->pin_config[idx].gpio_id, ItemLong -- 23
+npa_res_data->pin_config[idx].dir, ItemLong -- 24
+npa_res_data->pin_config[idx].voltage_source, ItemLong -- 25
+npa_res_data->pin_config[idx].source, ItemLong -- 26
+npa_res_data->pin_config[idx].out_buffer_config, ItemLong -- 27
+npa_res_data->pin_config[idx].out_buffer_strength, ItemLong -- 28
+npa_res_data->pin_config[idx].inversion, ItemLong -- 29
+npa_res_data->pin_config[idx].ext_pin_config, ItemLong -- 30
+npa_res_data->pin_config[idx].i_source_pulls, ItemLong -- 31
+}
+#typev PEP_ResourceAggr_c2369 113 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2369 :Client: (%10!s!): PmicGpioV2 %11!s! config { %12!d!, %13!d!, %14!d!, %15!d!, %16!d!, %17!d!, %18!d!, %19!d!, %20!d!, %21!d!} different from other client(s) 								  using this shared resource. cached config { %22!d!, %23!d!, %24!d!, %25!d!, %26!d!, %27!d!, %28!d!, %29!d!, %30!d!, %31!d! }" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+GpioActionTypeEnum2Str[PmicGpioV2Node->Action], ItemString -- 11
+config->pmic_num, ItemLong -- 12
+config->gpio_id, ItemLong -- 13
+config->dir, ItemLong -- 14
+config->voltage_source, ItemLong -- 15
+config->source, ItemLong -- 16
+config->out_buffer_config, ItemLong -- 17
+config->out_buffer_strength, ItemLong -- 18
+config->inversion, ItemLong -- 19
+config->ext_pin_config, ItemLong -- 20
+config->i_source_pulls, ItemLong -- 21
+npa_res_data->pin_config[idx].pmic_num, ItemLong -- 22
+npa_res_data->pin_config[idx].gpio_id, ItemLong -- 23
+npa_res_data->pin_config[idx].dir, ItemLong -- 24
+npa_res_data->pin_config[idx].voltage_source, ItemLong -- 25
+npa_res_data->pin_config[idx].source, ItemLong -- 26
+npa_res_data->pin_config[idx].out_buffer_config, ItemLong -- 27
+npa_res_data->pin_config[idx].out_buffer_strength, ItemLong -- 28
+npa_res_data->pin_config[idx].inversion, ItemLong -- 29
+npa_res_data->pin_config[idx].ext_pin_config, ItemLong -- 30
+npa_res_data->pin_config[idx].i_source_pulls, ItemLong -- 31
+}
+#typev PEP_ResourceAggr_c2338 112 "%0Client: (%10!s!): PmicGpioV2 %11!s! config { %12!d!, %13!d!, %14!d!, %15!d!, %16!d!, %17!d!, %18!d!, %19!d!, %20!d!, %21!d!} cached" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+GpioActionTypeEnum2Str[PmicGpioV2Node->Action], ItemString -- 11
+config->pmic_num, ItemLong -- 12
+config->gpio_id, ItemLong -- 13
+config->dir, ItemLong -- 14
+config->voltage_source, ItemLong -- 15
+config->source, ItemLong -- 16
+config->out_buffer_config, ItemLong -- 17
+config->out_buffer_strength, ItemLong -- 18
+config->inversion, ItemLong -- 19
+config->ext_pin_config, ItemLong -- 20
+config->i_source_pulls, ItemLong -- 21
+}
+#typev PEP_ResourceAggr_c2331 111 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :Client: (%10!s!): PmicGpioV2 %11!s! config { %12!d!, %13!d!, %14!d!, %15!d!, %16!d!, %17!d!, %18!d!, %19!d!, %20!d!, %21!d!} cached" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+GpioActionTypeEnum2Str[PmicGpioV2Node->Action], ItemString -- 11
+config->pmic_num, ItemLong -- 12
+config->gpio_id, ItemLong -- 13
+config->dir, ItemLong -- 14
+config->voltage_source, ItemLong -- 15
+config->source, ItemLong -- 16
+config->out_buffer_config, ItemLong -- 17
+config->out_buffer_strength, ItemLong -- 18
+config->inversion, ItemLong -- 19
+config->ext_pin_config, ItemLong -- 20
+config->i_source_pulls, ItemLong -- 21
+}
+#typev PEP_ResourceAggr_c2259 110 "%0Client: (%10!s!)) npa_data is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2257 109 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2257 :Client: (%10!s!)) npa_data is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2240 108 "%0Client: (%10!s!)) npa_data is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2238 107 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2238 :Client: (%10!s!)) npa_data is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2226 106 "%0Client: (%10!s!)) resdef is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2224 105 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2224 :Client: (%10!s!)) resdef is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2210 104 "%0Client: (%10!s!)) resName is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2208 103 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2208 :Client: (%10!s!)) resName is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2184 102 "%0In-correct action %10!d! for Client: (%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=Aggr_AddPmicGpioV2Resource
+{
+PmicGpioV2Node->Action, ItemLong -- 10
+clientInfo->clientName, ItemString -- 11
+}
+#typev PEP_ResourceAggr_c2181 101 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2181 :In-correct action %10!d! for Client: (%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=Aggr_AddPmicGpioV2Resource
+{
+PmicGpioV2Node->Action, ItemLong -- 10
+clientInfo->clientName, ItemString -- 11
+}
+#typev PEP_ResourceAggr_c2750 133 "%0Client: (%10!s!): PmicWledV2 %11!s! config { %12!d!, %13!d!} different from other client(s) 							  using this shared resource. cached config { %14!d!, %15!d! }" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicWledV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+ActionTypeEnum2Str[PmicWledV2Node->Action], ItemString -- 11
+pWledInputBUffer.pmicnum, ItemLong -- 12
+pWledIoctlValue.PmicIoctlValue, ItemLong -- 13
+pPmicWledInPutBuffer->pmicnum, ItemLong -- 14
+pPmicWledIoctlValueAndBufferSize->PmicIoctlValue, ItemLong -- 15
+}
+#typev PEP_ResourceAggr_c2743 132 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2743 :Client: (%10!s!): PmicWledV2 %11!s! config { %12!d!, %13!d!} different from other client(s) 								   using this shared resource. cached config { %14!d!, %15!d! }" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicWledV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+ActionTypeEnum2Str[PmicWledV2Node->Action], ItemString -- 11
+pWledInputBUffer.pmicnum, ItemLong -- 12
+pWledIoctlValue.PmicIoctlValue, ItemLong -- 13
+pPmicWledInPutBuffer->pmicnum, ItemLong -- 14
+pPmicWledIoctlValueAndBufferSize->PmicIoctlValue, ItemLong -- 15
+}
+#typev PEP_ResourceAggr_c2718 131 "%0Client: (%10!s!): PmicWledV2 %11!s! config { %12!d!, %13!d! } cached" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicWledV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+ActionTypeEnum2Str[PmicWledV2Node->Action], ItemString -- 11
+pPmicWledInPutBuffer->pmicnum, ItemLong -- 12
+pPmicWledInPutBuffer->module_enable, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c2714 130 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :Client: (%10!s!): PmicWledV2 %11!s! config { %12!d!, %13!d! } cached" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicWledV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+ActionTypeEnum2Str[PmicWledV2Node->Action], ItemString -- 11
+pPmicWledInPutBuffer->pmicnum, ItemLong -- 12
+pPmicWledInPutBuffer->module_enable, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c2647 129 "%0Client: (%10!s!)) npa_data is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicWledV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2645 128 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2645 :Client: (%10!s!)) npa_data is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicWledV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2625 127 "%0Client: (%10!s!)) npa_data is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicWledV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2623 126 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2623 :Client: (%10!s!)) npa_data is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicWledV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2608 125 "%0Client: (%10!s!)) resdef is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicWledV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2606 124 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2606 :Client: (%10!s!)) resdef is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicWledV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2589 123 "%0Client: (%10!s!)) resName is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicWledV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2587 122 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2587 :Client: (%10!s!)) resName is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddPmicWledV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c2561 121 "%0In-correct action %10!d! for Client: (%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=Aggr_AddPmicWledV2Resource
+{
+PmicWledV2Node->Action, ItemLong -- 10
+clientInfo->clientName, ItemString -- 11
+}
+#typev PEP_ResourceAggr_c2558 120 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2558 :In-correct action %10!d! for Client: (%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=Aggr_AddPmicWledV2Resource
+{
+PmicWledV2Node->Action, ItemLong -- 10
+clientInfo->clientName, ItemString -- 11
+}
+#typev PEP_ResourceAggr_c1929 89 "%0Client: (%10!s!): TlmmGpioV2 %11!s! config { %12!d!, %13!d!, %14!d!, %15!d!, %16!d!, %17!d!, %18!d!, %19!d! } different from other client(s) 							  using this shared resource. cached config { %20!d!, %21!d!, %22!d!, %23!d!, %24!d!, %25!d!, %26!d!, %27!d! }" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddTlmmGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+GpioActionTypeEnum2Str[TlmmGpioV2Node->Action], ItemString -- 11
+config->PinNumber, ItemLong -- 12
+config->GPIOState, ItemLong -- 13
+config->FunctionSelect, ItemLong -- 14
+config->Direction, ItemLong -- 15
+config->PullValue, ItemLong -- 16
+config->DriveStrength, ItemLong -- 17
+config->EnableLPM, ItemLong -- 18
+config->LPIGpio, ItemLong -- 19
+npa_res_data->pin_config[idx].PinNumber, ItemLong -- 20
+npa_res_data->pin_config[idx].GPIOState, ItemLong -- 21
+npa_res_data->pin_config[idx].FunctionSelect, ItemLong -- 22
+npa_res_data->pin_config[idx].Direction, ItemLong -- 23
+npa_res_data->pin_config[idx].PullValue, ItemLong -- 24
+npa_res_data->pin_config[idx].DriveStrength, ItemLong -- 25
+npa_res_data->pin_config[idx].EnableLPM, ItemLong -- 26
+npa_res_data->pin_config[idx].LPIGpio, ItemLong -- 27
+}
+#typev PEP_ResourceAggr_c1913 88 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1913 :Client: (%10!s!): TlmmGpioV2 %11!s! config { %12!d!, %13!d!, %14!d!, %15!d!, %16!d!, %17!d!, %18!d!, %19!d!} different from other client(s) 								  using this shared resource. cached config { %20!d!, %21!d!, %22!d!, %23!d!, %24!d!, %25!d!, %26!d!, %27!d!}" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddTlmmGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+GpioActionTypeEnum2Str[TlmmGpioV2Node->Action], ItemString -- 11
+config->PinNumber, ItemLong -- 12
+config->GPIOState, ItemLong -- 13
+config->FunctionSelect, ItemLong -- 14
+config->Direction, ItemLong -- 15
+config->PullValue, ItemLong -- 16
+config->DriveStrength, ItemLong -- 17
+config->EnableLPM, ItemLong -- 18
+config->LPIGpio, ItemLong -- 19
+npa_res_data->pin_config[idx].PinNumber, ItemLong -- 20
+npa_res_data->pin_config[idx].GPIOState, ItemLong -- 21
+npa_res_data->pin_config[idx].FunctionSelect, ItemLong -- 22
+npa_res_data->pin_config[idx].Direction, ItemLong -- 23
+npa_res_data->pin_config[idx].PullValue, ItemLong -- 24
+npa_res_data->pin_config[idx].DriveStrength, ItemLong -- 25
+npa_res_data->pin_config[idx].EnableLPM, ItemLong -- 26
+npa_res_data->pin_config[idx].LPIGpio, ItemLong -- 27
+}
+#typev PEP_ResourceAggr_c1887 87 "%0Client: (%10!s!): TlmmGpioV2 %11!s! config { %12!d!, %13!d!, %14!d!, %15!d!, %16!d!, %17!d!, %18!d!, %19!d! } cached" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddTlmmGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+GpioActionTypeEnum2Str[TlmmGpioV2Node->Action], ItemString -- 11
+config->PinNumber, ItemLong -- 12
+config->GPIOState, ItemLong -- 13
+config->FunctionSelect, ItemLong -- 14
+config->Direction, ItemLong -- 15
+config->PullValue, ItemLong -- 16
+config->DriveStrength, ItemLong -- 17
+config->EnableLPM, ItemLong -- 18
+config->LPIGpio, ItemLong -- 19
+}
+#typev PEP_ResourceAggr_c1882 86 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :Client: (%10!s!): TlmmGpioV2 %11!s! config { %12!d!, %13!d!, %14!d!, %15!d!, %16!d!, %17!d!, %18!d!, %19!d! } cached" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddTlmmGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+GpioActionTypeEnum2Str[TlmmGpioV2Node->Action], ItemString -- 11
+config->PinNumber, ItemLong -- 12
+config->GPIOState, ItemLong -- 13
+config->FunctionSelect, ItemLong -- 14
+config->Direction, ItemLong -- 15
+config->PullValue, ItemLong -- 16
+config->DriveStrength, ItemLong -- 17
+config->EnableLPM, ItemLong -- 18
+config->LPIGpio, ItemLong -- 19
+}
+#typev PEP_ResourceAggr_c1816 85 "%0Client: (%10!s!)) NodeDef is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddTlmmGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1814 84 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1814 :Client: (%10!s!)) NodeDef is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddTlmmGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1797 83 "%0Client: (%10!s!)) npa_data is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddTlmmGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1795 82 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1795 :Client: (%10!s!)) npa_data is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddTlmmGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1783 81 "%0Client: (%10!s!)) resDef is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddTlmmGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1781 80 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1781 :Client: (%10!s!)) resDef is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddTlmmGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1767 79 "%0Client: (%10!s!)) resName is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddTlmmGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1765 78 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1765 :Client: (%10!s!)) resName is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=Aggr_AddTlmmGpioV2Resource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1742 77 "%0In-correct action %10!d! for Client: (%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=Aggr_AddTlmmGpioV2Resource
+{
+TlmmGpioV2Node->Action, ItemLong -- 10
+clientInfo->clientName, ItemString -- 11
+}
+#typev PEP_ResourceAggr_c1739 76 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1739 :In-correct action %10!d! for Client: (%11!s!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=Aggr_AddTlmmGpioV2Resource
+{
+TlmmGpioV2Node->Action, ItemLong -- 10
+clientInfo->clientName, ItemString -- 11
+}
+#typev PEP_ResourceAggr_c2978 139 "%0PEP: Match type mismatch for Client Name: %10!s!, Clock Name: %11!s!, Requested match type: %12!d!, Expected match type: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=CreateClockResourceNPAHandles
+{
+(clientInfo->clientName), ItemString -- 10
+clockNode->ClockName, ItemString -- 11
+clockNode->Match, ItemLong -- 12
+result.data.value, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c2904 138 "%0PEP: Match type mismatch for Client Name: %10!s!, Clock Name: %11!s!, Requested match type: %12!d!, Expected match type: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=CreateClockResourceNPAHandles
+{
+(clientInfo->clientName), ItemString -- 10
+clockNode->ClockName, ItemString -- 11
+clockNode->Match, ItemLong -- 12
+result.data.value, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c2816 137 "%0PEP: PepClockGetClockDebugId error %10!d! for Client Name: %11!s!, Clock Name: %12!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=CreateClockResourceNPAHandles
+{
+Status, ItemLong -- 10
+(clientInfo->clientName), ItemString -- 11
+clockNode->ClockName, ItemString -- 12
+}
+#typev PEP_ResourceAggr_c2813 136 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2813 :PEP: PepClockGetClockDebugId error %10!d! for Client Name: %11!s!, Clock Name: %12!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=CreateClockResourceNPAHandles
+{
+Status, ItemLong -- 10
+(clientInfo->clientName), ItemString -- 11
+clockNode->ClockName, ItemString -- 12
+}
+#typev PEP_ResourceAggr_c2802 135 "%0PEP: PepClockGetClockId error %10!d! for Client Name: %11!s!, Clock Name: %12!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_ACPI_PARSING FUNC=CreateClockResourceNPAHandles
+{
+Status, ItemLong -- 10
+(clientInfo->clientName), ItemString -- 11
+clockNode->ClockName, ItemString -- 12
+}
+#typev PEP_ResourceAggr_c2799 134 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2799 :PEP: PepClockGetClockId error %10!d! for Client Name: %11!s!, Clock Name: %12!s!!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_ACPI_PARSING FUNC=CreateClockResourceNPAHandles
+{
+Status, ItemLong -- 10
+(clientInfo->clientName), ItemString -- 11
+clockNode->ClockName, ItemString -- 12
+}
+#typev PEP_ResourceAggr_c3131 141 "%0Invalid FOOTSWITCH Name %10!s! for Client: (%11!s!) status 0x%12!x!!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=CreateFsResourceNPAHandles
+{
+FootswitchResourceNode->PowerDomainName, ItemString -- 10
+clientInfo->clientName, ItemString -- 11
+status, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c3128 140 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::3128 :Invalid FOOTSWITCH Name %10!s! for Client: (%11!s!) status 0x%12!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_COREBSP_FLAG_GENERIC FUNC=CreateFsResourceNPAHandles
+{
+FootswitchResourceNode->PowerDomainName, ItemString -- 10
+clientInfo->clientName, ItemString -- 11
+status, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c2135 100 "%0IOCTL_PM_GPIO_SET_EXT_PIN_CONFIG: PMICGPIO Resource configuration failed 0x%10!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicGpioV2_aggregation_driver
+{
+status, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c2132 99 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2132 :IOCTL_PM_GPIO_SET_EXT_PIN_CONFIG: PMICGPIO Resource configuration failed 0x%10!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicGpioV2_aggregation_driver
+{
+status, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c2111 98 "%0IOCTL_PM_GPIO_SET_INVERSION_CONFIGURATION: PMICGPIO Resource configuration failed 0x%10!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicGpioV2_aggregation_driver
+{
+status, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c2108 97 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2108 :IOCTL_PM_GPIO_SET_INVERSION_CONFIGURATION: PMICGPIO Resource configuration failed 0x%10!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicGpioV2_aggregation_driver
+{
+status, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c2087 96 "%0IOCTL_PM_GPIO_CONFIG_DIGITAL_OUTPUT: PMICGPIO Resource configuration failed 0x%10!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicGpioV2_aggregation_driver
+{
+status, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c2084 95 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2084 :IOCTL_PM_GPIO_CONFIG_DIGITAL_OUTPUT: PMICGPIO Resource configuration failed 0x%10!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicGpioV2_aggregation_driver
+{
+status, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c2055 94 "%0IOCTL_PM_GPIO_CONFIG_DIGITAL_INPUT: PMICGPIO Resource configuration failed 0x%10!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicGpioV2_aggregation_driver
+{
+status, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c2052 93 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2052 :IOCTL_PM_GPIO_CONFIG_DIGITAL_INPUT: PMICGPIO Resource configuration failed 0x%10!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicGpioV2_aggregation_driver
+{
+status, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c2029 92 "%0Invalid state for Client Name: %10!s!, Resource Name: %11!s!, Action: %12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicGpioV2_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+state, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c2026 91 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2026 :Invalid state for Client Name: %10!s!, Resource Name: %11!s!, Action: %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicGpioV2_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+state, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c2016 90 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :Client: %10!s! Resource: %11!s!, aggregated action %12!s! config { %13!d!, %14!d!, %15!d!, %16!d!, %17!d!, %18!d!, %19!d!, %20!d!, %21!d!, %22!d!}" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicGpioV2_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+GpioActionTypeEnum2Str[state], ItemString -- 12
+pinconfig.pmic_num, ItemLong -- 13
+pinconfig.gpio_id, ItemLong -- 14
+pinconfig.dir, ItemLong -- 15
+pinconfig.voltage_source, ItemLong -- 16
+pinconfig.source, ItemLong -- 17
+pinconfig.out_buffer_config, ItemLong -- 18
+pinconfig.out_buffer_strength, ItemLong -- 19
+pinconfig.inversion, ItemLong -- 20
+pinconfig.ext_pin_config, ItemLong -- 21
+pinconfig.i_source_pulls, ItemLong -- 22
+}
+#typev PEP_ResourceAggr_c2506 119 "%0PMICWLED_V2 Resource configuration failed 0x%10!x!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicWledV2_aggregation_driver
+{
+status, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c2503 118 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2503 :PMICWLED_V2 Resource configuration failed 0x%10!x!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicWledV2_aggregation_driver
+{
+status, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c2485 117 "%0Invalid state for Client Name: %10!s!, Resource Name: %11!s!, Action: %12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicWledV2_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+state, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c2482 116 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::2482 :Invalid state for Client Name: %10!s!, Resource Name: %11!s!, Action: %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicWledV2_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+state, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c2474 115 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :Client: %10!s! Resource: %11!s!, aggregated action %12!s! config { %13!d!, %14!d!}" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=PmicWledV2_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+ActionTypeEnum2Str[state], ItemString -- 12
+wledconfig.PmicWledInPutBuffer.pmicnum, ItemLong -- 13
+wledconfig.PmicWledInPutBuffer.module_enable, ItemLong -- 14
+}
+#typev PEP_ResourceAggr_c1671 75 "%0Invalid state for Client Name: %10!s!, Resource Name: %11!s!, Action: %12!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=TlmmGpioV2_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+state, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c1668 74 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1668 :Invalid state for Client Name: %10!s!, Resource Name: %11!s!, Action: %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=TlmmGpioV2_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+state, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c1660 73 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :Client: %10!s! Resource: %11!s!, aggregated action %12!s! config { %13!d!, %14!d!, %15!d!, %16!d!, %17!d!, %18!d!, %19!d!, %20!d! }" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=TlmmGpioV2_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+GpioActionTypeEnum2Str[state], ItemString -- 12
+pinconfig.PinNumber, ItemLong -- 13
+pinconfig.GPIOState, ItemLong -- 14
+pinconfig.FunctionSelect, ItemLong -- 15
+pinconfig.Direction, ItemLong -- 16
+pinconfig.PullValue, ItemLong -- 17
+pinconfig.DriveStrength, ItemLong -- 18
+pinconfig.EnableLPM, ItemLong -- 19
+pinconfig.LPIGpio, ItemLong -- 20
+}
+#typev PEP_ResourceAggr_c233 19 "%0CLKRGM Resource Disable failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_enable_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c230 18 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::230 :CLKRGM Resource Disable failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_enable_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c203 17 "%0CLKRGM Resource Enable failed 0x%10!x!! Name : %11!s!, for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_enable_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c197 16 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::197 :CLKRGM Resource Enable failed! Name : %10!s!, for Client Name: %11!s!, Action: %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_enable_aggregation_driver
+{
+resource->definition->name, ItemString -- 10
+client->name, ItemString -- 11
+resource->index, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c171 15 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::171 :cdat / client is NULL !!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_enable_aggregation_driver
+{
+}
+#typev PEP_ResourceAggr_c146 14 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::146 :Set frequency failed with status %10!x! for Client Name: %11!s!, Resource Name: %12!s!, Action: %13!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_frequency_aggregation_driver
+{
+stat, ItemLong -- 10
+client->name, ItemString -- 11
+client->resource_name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c141 13 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :Set Frequency Status: %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_frequency_aggregation_driver
+{
+stat, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c135 12 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :Match Type: %10!x!, Resulting Frequency: %11!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_frequency_aggregation_driver
+{
+cdat->Match, ItemLong -- 10
+nResultingFreq, ItemLong -- 11
+}
+#typev PEP_ResourceAggr_c115 11 "%0cdat / client is NULL !!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_frequency_aggregation_driver
+{
+}
+#typev PEP_ResourceAggr_c113 10 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::113 :cdat / client is NULL !!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_frequency_aggregation_driver
+{
+}
+#typev PEP_ResourceAggr_c307 26 "%0CLKRGM MEM Core Disable failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_memcore_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c304 25 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::304 :CLKRGM MEM Core Disable failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_memcore_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c298 24 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :PepClockConfigClock passed for disabling Mem core Status: %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_memcore_aggregation_driver
+{
+stat, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c284 23 "%0CLKRGM MEM Core Enable failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_memcore_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c281 22 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::281 :CLKRGM MEM Core Enable failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_memcore_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c275 21 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :PepClockConfigClock passed for enabling Mem core Status: %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_memcore_aggregation_driver
+{
+stat, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c259 20 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::259 :cdat / client is NULL !!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_memcore_aggregation_driver
+{
+}
+#typev PEP_ResourceAggr_c466 40 "%0CLKRGM Peripheral allow ON failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_off_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c463 39 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::463 :CLKRGM Peripheral allow ON failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_off_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c456 38 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :PepClockConfigClock passed for Peripheral allow ON Status: %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_off_aggregation_driver
+{
+stat, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c441 37 "%0CLKRGM PERIPHERAL_FORCE_OFF failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_off_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c438 36 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::438 :CLKRGM PERIPHERAL_FORCE_OFF failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_off_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c431 35 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :PepClockConfigClock passed for PERIPHERAL_FORCE_OFF Status: %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_off_aggregation_driver
+{
+stat, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c414 34 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::414 :cdat / client is NULL !!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_off_aggregation_driver
+{
+}
+#typev PEP_ResourceAggr_c386 33 "%0CLKRGM Peripheral allow OFF failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_on_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c383 32 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::383 :CLKRGM Peripheral allow OFF failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_on_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c376 31 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :PepClockConfigClock passed for Peripheral allow OFF Status: %10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_on_aggregation_driver
+{
+stat, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c361 30 "%0CLKRGM PERIPHERAL_FORCE_ON failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_on_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c358 29 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::358 :CLKRGM PERIPHERAL_FORCE_ON failed 0x%10!x!! Resource Name : %11!s! for Client Name: %12!s!, Action: %13!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_on_aggregation_driver
+{
+stat, ItemLong -- 10
+resource->definition->name, ItemString -- 11
+client->name, ItemString -- 12
+resource->index, ItemLong -- 13
+}
+#typev PEP_ResourceAggr_c351 28 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :PepClockConfigClock passed for PERIPHERAL_FORCE_ON Status: 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_on_aggregation_driver
+{
+stat, ItemLong -- 10
+}
+#typev PEP_ResourceAggr_c334 27 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::334 :cdat / client is NULL !!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=clock_peripheral_on_aggregation_driver
+{
+}
+#typev PEP_ResourceAggr_c768 45 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::768 :Client: (%10!s!))cdat is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createClockNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c754 44 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::754 :Device: (%10!s!))resDef is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createClockNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c736 43 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::736 :NPA Client name: (%10!s!))resEnableName is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createClockNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c729 42 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :NPA Client name: (%10!s!)), Clock Name: %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createClockNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+clockNode->ClockName, ItemString -- 11
+}
+#typev PEP_ResourceAggr_c719 41 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::719 :Client: (%10!s!))nodeDef is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createClockNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1430 66 "%0Client: (%10!s!)) nodeDef is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createFsNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1426 65 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1426 :Client: (%10!s!))nodeDef is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createFsNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1402 64 "%0Client: (%10!s!)) fsDat is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createFsNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1398 63 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1398 :Client: (%10!s!))fsDat is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createFsNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1386 62 "%0Client: (%10!s!)) resDef is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createFsNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1382 61 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1382 :Client: (%10!s!))resDef is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createFsNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1367 60 "%0Client: (%10!s!)) resName is NULL" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createFsNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1363 59 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1363 :Client: (%10!s!))resName is NULL" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=createFsNpaResource
+{
+clientInfo->clientName, ItemString -- 10
+}
+#typev PEP_ResourceAggr_c1273 58 "%0Invalid state for Client Name: %10!s!, Resource Name: %11!s!, Action: %12!d! !!!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=fs_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+state, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c1270 57 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1270 :Invalid state for Client Name: %10!s!, Resource Name: %11!s!, Action: %12!d! !!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=fs_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+state, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c1256 56 "%0Calling mdss_vbif_axi_halt for Client Name: %10!s!, Resource Name: %11!s! !!!" //   LEVEL=TRACE_LEVEL_CRITICAL IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_STATE_TRANSITIONS FUNC=fs_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+}
+#typev PEP_ResourceAggr_c1217 55 "%0Client Name: %10!s!, Resource Name: %11!s!, Action: %12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=fs_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+state, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c1214 54 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :Client Name: %10!s!, Resource Name: %11!s!, Action: %12!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=fs_aggregation_driver
+{
+client->name, ItemString -- 10
+client->resource_name, ItemString -- 11
+state, ItemLong -- 12
+}
+#typev PEP_ResourceAggr_c1209 53 "%0pFsTransitionNotifySt is NULL!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=fs_aggregation_driver
+{
+}
+#typev PEP_ResourceAggr_c1208 52 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1208 :pFsTransitionNotifySt is NULL!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=fs_aggregation_driver
+{
+}
+#typev PEP_ResourceAggr_c1190 51 "%0Cannot allocate memory for pFsTransitionNotifySt!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=gPepDrvIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=fs_aggregation_driver
+{
+}
+#typev PEP_ResourceAggr_c1188 50 "%0 [Err ] PEP_ResourceAggr.c::%!FUNC!::1188 :Cannot allocate memory for pFsTransitionNotifySt!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=fs_aggregation_driver
+{
+}
+#typev PEP_ResourceAggr_c1178 49 "%0Footswitch resource requires transition notification!" //   LEVEL=TRACE_LEVEL_INFORMATION IFRLOG=gPepFmwIfrHandle FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=fs_aggregation_driver
+{
+}
+#typev PEP_ResourceAggr_c1176 48 "%0 [Info] PEP_ResourceAggr.c::%!FUNC! :Footswitch resource requires transition notification!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_FLAG_RESOURCE_MANAGEMENT FUNC=fs_aggregation_driver
+{
+}

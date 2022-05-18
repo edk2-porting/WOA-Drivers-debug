@@ -1,0 +1,206 @@
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+3263b9f8-a6e5-397c-4db4-c426f68aa639 NetAdapter // SRC=qmap.cpp MJ= MN=
+#typev Dataio_api_cpp359 56 "%0%!FUNC!::1119:: client %10!p!, muxid %11!u!, wakeState %12!d!, bWakePktNotify %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=DataIOConfigureWakeState
+{
+pQmapClientCtx, ItemPtr -- 10
+pQmapClientCtx->muxId, ItemLong -- 11
+pQmapClientCtx->wakeState, ItemLong -- 12
+pQmapClientCtx->bWakePktNotify, ItemLong -- 13
+}
+#typev Dataio_api_cpp317 53 "%0%!FUNC!::1042:: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=DataIOGetDataFormatList
+{
+hex_dump(bufAddr. bufSize), ItemHEXDump -- 10
+}
+#typev Dataio_api_cpp260 30 "%0%!FUNC!::431:: Failed to setup Qmap HAL channels %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=DataIoD0Entry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Dataio_api_cpp260 29 "%0%!FUNC!::424:: PreviousState = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=DataIoD0Entry
+{
+PreviousState, ItemLong -- 10
+}
+#typev Dataio_api_cpp280 33 "%0%!FUNC!::477:: Failed to stop Qmap HAL channels %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=DataIoD0Exit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Dataio_api_cpp280 14 "%0%!FUNC!::188:: QmapCancel completed with %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=DataIoD0Exit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Dataio_api_cpp280 32 "%0%!FUNC!::469:: Failed to close Qmap Hal channels %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=DataIoD0Exit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Dataio_api_cpp280 13 "%0%!FUNC!::184:: QMAP Cancel Channels failed%10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=DataIoD0Exit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Dataio_api_cpp280 31 "%0%!FUNC!::461:: TargetState = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=DataIoD0Exit
+{
+TargetState, ItemLong -- 10
+}
+#typev Qmap_cpp513 34 "%0%!FUNC!::513:: Client registration failure for Adapter = %10!p! Session id = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapClientRegister
+{
+pAdapterHandle, ItemPtr -- 10
+SessionId, ItemLong -- 11
+}
+#typev Qmap_cpp546 35 "%0%!FUNC!::546:: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapClientRegister
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Qmap_cpp559 36 "%0%!FUNC!::559:: QMAP Client Registered with Mux id %10!d!, Client handle %11!I64x!, device %12!p!, netadapter %13!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapClientRegister
+{
+SessionId, ItemLong -- 10
+pQmapDevContext->clientCtx[SessionId].client_handle, ItemLongLongX -- 11
+pQmapDevContext->wdfDevice, ItemPtr -- 12
+pQmapDevContext->clientCtx[SessionId].netAdapter, ItemPtr -- 13
+}
+#typev Qmap_cpp1093 55 "%0%!FUNC!::1093:: %10!d!, %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapConfiguredDataFormat
+{
+pQmapCtx->dataFmt.dl_data_agg_protocol, ItemLong -- 10
+hex_dump(bufAddr. buflen), ItemHEXDump -- 11
+}
+#typev Qmap_cpp1090 54 "%0%!FUNC!::1090:: Fail to initialize Qmap protocol ! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapConfiguredDataFormat
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Qmap_cpp1087 51 "%0%!FUNC!::944:: Aggr Protocol %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapConfiguredDataFormat
+{
+Aggr_protocol, ItemLong -- 10
+}
+#typev Qmap_cpp759 44 "%0%!FUNC!::759:: Checksum Offloads enabled: IPV4 %10!d!, TCP %11!d!, UDP %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapEvtSetChecksum
+{
+pClientCtx->offloadCaps.IPv4, ItemLong -- 10
+pClientCtx->offloadCaps.Tcp, ItemLong -- 11
+pClientCtx->offloadCaps.Udp, ItemLong -- 12
+}
+#typev Qmap_cpp342 24 "%0%!FUNC!::342:: Exit, Status = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapInit
+{
+status, ItemLong -- 10
+}
+#typev Qmap_cpp338 23 "%0%!FUNC!::338:: QMAP already initaialized" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapInit
+{
+}
+#typev Qmap_cpp308 22 "%0%!FUNC!:: Buffer initialization failed with status %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Qmap_cpp301 21 "%0%!FUNC!:: QmapHal filter registration  failed with- %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Qmap_cpp283 20 "%0%!FUNC!:: WdfFdoQueryForInterface(GUID_QMAP_HAL_INTERFACE) - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapInit
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Qmap_cpp269 19 "%0%!FUNC!::269:: Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapInit
+{
+}
+#typev Qmap_cpp627 39 "%0%!FUNC!::627:: Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapSetDataPathCaps
+{
+}
+#typev Qmap_cpp614 38 "%0%!FUNC!::614:: RSS value = %10!d! %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapSetDataPathCaps
+{
+rssIntValue, ItemLong -- 10
+hex_dump(rssStrValue.Buffer. rssStrValue.MaximumLength), ItemHEXDump -- 11
+}
+#typev Qmap_cpp598 45 "%0%!FUNC!::774:: Checksum Offload Enable" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapSetDataPathCaps
+{
+}
+#typev Qmap_cpp586 37 "%0%!FUNC!::586:: Entry, Client handle %10!I64x!, device %11!p! , netadapter %12!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapSetDataPathCaps
+{
+qmap_client_handle, ItemLongLongX -- 10
+pClientCtx->device, ItemPtr -- 11
+pClientCtx->netAdapter, ItemPtr -- 12
+}
+#typev Qmap_cpp701 41 "%0%!FUNC!::701:: Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapSetLinkLayerCapabilities
+{
+}
+#typev Qmap_cpp672 40 "%0%!FUNC!::672:: Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapSetLinkLayerCapabilities
+{
+}
+#typev Qmap_cpp739 43 "%0%!FUNC!::739:: Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapSetTxRxCaps
+{
+}
+#typev Qmap_cpp706 42 "%0%!FUNC!::706:: Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=QmapSetTxRxCaps
+{
+}
+#typev Qmap_cpp202 15 "%0%!FUNC!: ERROR, inputKey or pOutValue NULL!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapUtilGetUlongRegistry
+{
+}
+#typev Qmap_cpp228 18 "%0QMAP::%!FUNC! ERROR, registry entry for %10!s! is missing" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=Core FUNC=QmapUtilGetUlongRegistry
+{
+inputKey, ItemWString -- 10
+}
+#typev Qmap_cpp220 17 "%0QMAP::%!FUNC! ERROR, RtlUnicodeStringPrintf for %10!s! failed with status 0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapUtilGetUlongRegistry
+{
+inputKey, ItemWString -- 10
+status, ItemLong -- 11
+}
+#typev Qmap_cpp213 16 "%0QMAP::%!FUNC! ERROR, WdfDriverOpenParametersRegistryKey for %10!s! failed with status 0x%11!x!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapUtilGetUlongRegistry
+{
+inputKey, ItemWString -- 10
+status, ItemLong -- 11
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QmapHalIf_cpp439 12 "%0%!FUNC!::153:: Failed to post DL buffer! Ctx %10!p! %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=QmapStateChangeCb
+{
+&pQmapCtx->qmapRxCtx[index], ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev Adapter_cpp427 57 "%0%!FUNC!::1142:: client %10!p!, muxid %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtMbbDeviceCreateAdapter
+{
+pQmapClientCtx, ItemPtr -- 10
+pQmapClientCtx->muxId, ItemLong -- 11
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev Adapter_cpp342 50 "%0%!FUNC!::879:: Client %10!I64x! deregistered" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtMbbDeviceDestroyAdapter
+{
+handle, ItemLongLongX -- 10
+}
+#typev Adapter_cpp342 49 "%0%!FUNC!::867:: Data is pending in pipes and needs to be cleaned up" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtMbbDeviceDestroyAdapter
+{
+}
+#typev Adapter_cpp342 48 "%0%!FUNC!::857:: Invalid Client handle %10!I64d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtMbbDeviceDestroyAdapter
+{
+handle, ItemLongLong -- 10
+}
+#typev Adapter_cpp342 47 "%0%!FUNC!::850:: Invalid client handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtMbbDeviceDestroyAdapter
+{
+}
+#typev Adapter_cpp341 59 "%0%!FUNC!::1168:: client %10!p!, muxid %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtMbbDeviceDestroyAdapter
+{
+pQmapClientCtx, ItemPtr -- 10
+pQmapClientCtx->muxId, ItemLong -- 11
+}
+#typev Adapter_cpp341 58 "%0%!FUNC!::1161:: Invalid client handle" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtMbbDeviceDestroyAdapter
+{
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev CidHandling_cpp267 52 "%0%!FUNC!::976:: bufSize = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=CidHandlingMbimOpenDonePacketHandling
+{
+bufSize, ItemLong -- 10
+}
+// PDB:  qcmbbnetadapter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev Power_cpp940 28 "%0%!FUNC!::386:: Qmap HAL de-registration failure with %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceReleaseHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp940 27 "%0%!FUNC!:: Buffer deinitialization failed with status %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceReleaseHardware
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Power_cpp940 26 "%0%!FUNC!::373:: Invalid device %10!p!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=EvtDeviceReleaseHardware
+{
+wdfdevice, ItemPtr -- 10
+}
+#typev Power_cpp940 25 "%0%!FUNC!::369::" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=EvtDeviceReleaseHardware
+{
+}

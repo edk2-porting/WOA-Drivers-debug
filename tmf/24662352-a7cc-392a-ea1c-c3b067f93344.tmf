@@ -1,0 +1,164 @@
+// PDB:  qcdiagcsi7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+24662352-a7cc-392a-ea1c-c3b067f93344 QCDiagCSI // SRC=DiagCSIIPCRSockets.c MJ= MN=
+#typev DiagCSIIPCRSockets_c851 52 "%0%!FUNC!: Self Terminate." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockFwdProcCmd
+{
+}
+#typev DiagCSIIPCRSockets_c796 48 "%0%!FUNC!: Going to forward command ." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPC FUNC=DiagCSIIPCRSockFwdProcCmd
+{
+}
+#typev DiagCSIIPCRSockets_c785 47 "%0%!FUNC!: SYNCH Timer expired without receiving response " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockFwdProcCmd
+{
+}
+#typev DiagCSIIPCRSockets_c768 46 "%0%!FUNC!: Going to wait for an event to handle QEAGAIN error in command forwarding." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPC FUNC=DiagCSIIPCRSockFwdProcCmd
+{
+}
+#typev DiagCSIIPCRSockets_c870 54 "%0%!FUNC!, Failed to open Socket Descriptor for data port %10!d! funcIdx = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockOpenPort
+{
+portIdx, ItemLong -- 10
+funcIdx, ItemLong -- 11
+}
+#typev DiagCSIIPCRSockets_c863 53 "%0%!FUNC!, Failed to Create Socket Descriptor for data port %10!d! , funcIdx = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockOpenPort
+{
+portIdx, ItemLong -- 10
+funcIdx, ItemLong -- 11
+}
+#typev DiagCSIIPCRSockets_c706 45 "%0%!FUNC!: self-terminate 0x%10!08X! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockReadProcModem
+{
+status, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c684 44 "%0%!FUNC!: Failed to open command channel on SSR again " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockReadProcModem
+{
+}
+#typev DiagCSIIPCRSockets_c544 38 "%0%!FUNC!: qpoll failed with error %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSockReadProcModem
+{
+poll_rc, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c636 43 "%0%!FUNC!: No more data to read on both the ports " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockReadProcModem
+{
+}
+#typev DiagCSIIPCRSockets_c621 42 "%0%!FUNC!: Error while reading on func_Idx = %10!d!, error = %11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockReadProcModem
+{
+func_idx, ItemLong -- 10
+recv_rc, ItemLong -- 11
+}
+#typev DiagCSIIPCRSockets_c617 41 "%0%!FUNC!: Signal writers flow is enabled for DIAGCSI_IPC_MODEM_IDX command channel" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockReadProcModem
+{
+}
+#typev DiagCSIIPCRSockets_c604 40 "%0%!FUNC!: Received data, recv_rc = %10!d!, func_idx = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPC FUNC=DiagCSIIPCRSockReadProcModem
+{
+recv_rc, ItemLong -- 10
+func_idx, ItemLong -- 11
+}
+#typev DiagCSIIPCRSockets_c582 39 "%0%!FUNC!: PeekLen = %10!d!, func_idx = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockReadProcModem
+{
+peekLen, ItemLong -- 10
+func_idx, ItemLong -- 11
+}
+#typev DiagCSIIPCRSockets_c534 37 "%0%!FUNC!: Queuing Read Requests to cmd-resp port failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSockReadProcModem
+{
+status, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c526 36 "%0%!FUNC!: Queuing Read Requests to Data port failed with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSockReadProcModem
+{
+status, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c517 35 "%0%!FUNC!: Creation of Read Requests failed for cmd resp Port with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSockReadProcModem
+{
+status, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c508 34 "%0%!FUNC!, Creation of Read Requests failed for Data Port with status 0x%10!08X!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSockReadProcModem
+{
+status, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c479 33 "%0%!FUNC!: DiagCSIIPCRSockOpenPort failed for CMD-RESP port, status %10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockReadProcModem
+{
+status, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c453 32 "%0%!FUNC!: going wait for control packets before opening cmd-resp port " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockReadProcModem
+{
+}
+#typev DiagCSIIPCRSockets_c447 31 "%0%!FUNC!: exiting, NULL context ?!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockReadProcModem
+{
+}
+#typev DiagCSIIPCRSockets_c441 30 "%0%!FUNC!: exiting, un-recoverable error ?!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSIIPCRSockReadProcModem
+{
+}
+#typev DiagCSIIPCRSockets_c231 22 "%0%!FUNC!: Close sock desc %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPCR FUNC=DiagCSIIPCRSock_Close
+{
+*((int *)desc), ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c81 11 "%0%!FUNC!, Failed to create Socket Descriptor error %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Create
+{
+desc, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c72 10 "%0%!FUNC!, NULL Socket Descriptor " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Create
+{
+}
+#typev DiagCSIIPCRSockets_c108 12 "%0%!FUNC!, Invalid input params " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Open
+{
+}
+#typev DiagCSIIPCRSockets_c185 19 "%0%!FUNC!:poll returned error = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Open
+{
+rc, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c191 20 "%0%!FUNC!:poll timedout!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Open
+{
+}
+#typev DiagCSIIPCRSockets_c208 21 "%0%!FUNC!: qconnect failed for port %10!u!, func %11!u!, rc = %12!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Open
+{
+pIPCR->peripheral, ItemLong -- 10
+pIPCR->channelType, ItemLong -- 11
+rc, ItemLong -- 12
+}
+#typev DiagCSIIPCRSockets_c174 18 "%0%!FUNC!:Got service with addr <%10!u!,%11!u!>" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Open
+{
+srvAddr.address.addr.port_addr.node_id, ItemLong -- 10
+srvAddr.address.addr.port_addr.port_id, ItemLong -- 11
+}
+#typev DiagCSIIPCRSockets_c154 17 "%0%!FUNC!:Setting socket type pref failed with rc= %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Open
+{
+rc, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c144 16 "%0%!FUNC!:Setting socket option failed with rc = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Open
+{
+rc, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c136 15 "%0%!FUNC!: socket creation failed for port %10!u!, func %11!u! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Open
+{
+pIPCR->peripheral, ItemLong -- 10
+pIPCR->channelType, ItemLong -- 11
+}
+#typev DiagCSIIPCRSockets_c122 14 "%0%!FUNC!: qbind failed for port %10!u!, func %11!u! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Open
+{
+pIPCR->peripheral, ItemLong -- 10
+pIPCR->channelType, ItemLong -- 11
+}
+#typev DiagCSIIPCRSockets_c113 13 "%0%!FUNC!, Invalid Socket Descriptor " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Open
+{
+}
+#typev DiagCSIIPCRSockets_c288 24 "%0%!FUNC!, NULL Socket Descriptor " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Read
+{
+}
+#typev DiagCSIIPCRSockets_c282 23 "%0%!FUNC!, NULL input params " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPCR FUNC=DiagCSIIPCRSock_Read
+{
+}
+#typev DiagCSIIPCRSockets_c401 29 "%0%!FUNC!: Error starting Cmd Fwd thread " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSISetupIPCRSockInterfaceThread
+{
+}
+#typev DiagCSIIPCRSockets_c383 28 "%0%!FUNC!, Read thread created for port %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPC FUNC=DiagCSISetupIPCRSockInterfaceThread
+{
+portIdx, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c374 27 "%0%!FUNC!: Error starting Sock read thread for port = %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSISetupIPCRSockInterfaceThread
+{
+portIdx, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c352 26 "%0%!FUNC!, Data socket opened for port %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=IPC FUNC=DiagCSISetupIPCRSockInterfaceThread
+{
+portIdx, ItemLong -- 10
+}
+#typev DiagCSIIPCRSockets_c349 25 "%0%!FUNC!, Failed to Open QSockets for data channel for port %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=IPC FUNC=DiagCSISetupIPCRSockInterfaceThread
+{
+portIdx, ItemLong -- 10
+}

@@ -1,0 +1,38 @@
+// PDB:  qcccidbridge7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:30:818 (UTC) [tracepdb]
+cb393a2f-ff63-3d52-1f25-0f85c39aebbb CCID // SRC=CcidBrgUtilWdf.c MJ= MN=
+#typev CcidBrgUtilWdf_c123 13 "%0%!FUNC!::E:Invalid IF Type. Unable to fetch notification entry." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgPnpNotificationCb
+{
+}
+#typev CcidBrgUtilWdf_c104 11 "%0%!FUNC!::E:Invalid IF Type. Unable to fetch GUID." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgPnpNotificationCb
+{
+}
+#typev CcidBrgUtilWdf_c163 15 "%0%!FUNC!::E:Error registering PluPlayNotification for USB CCID interface" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgRegisterPnpNotification
+{
+}
+#typev CcidBrgUtilWdf_c143 14 "%0%!FUNC!::I:Registering PNP Notification for IF: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgRegisterPnpNotification
+{
+IfType, ItemEnum(_CCID_IF_TYPE) -- 10
+}
+#typev CcidBrgUtilWdf_c189 17 "%0%!FUNC!::E:Error unregistering PnP Notificationfor IF: %10!s!, Status: %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgUnregisterPnpNotification
+{
+IfType, ItemEnum(_CCID_IF_TYPE) -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev CcidBrgUtilWdf_c181 16 "%0%!FUNC!::I:Unregistering PNP Notification for IF: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CCIDBRG_TRACE_WPP FUNC=CcidBrgUnregisterPnpNotification
+{
+IfType, ItemEnum(_CCID_IF_TYPE) -- 10
+}
+#typev CcidBrgUtilWdf_c32 10 "%0%!FUNC!::E:Invalid IF Type. Unable to fetch GUID." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=GetIfaceGuid
+{
+}
+#typev CcidBrgUtilWdf_c81 12 "%0%!FUNC!::E:Invalid IF Type. Unable to fetch notification entry." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CCIDBRG_TRACE_WPP FUNC=GetIfaceNotificationEntry
+{
+}
+#enumv _CCID_IF_TYPE
+{
+CCID_IF_TYPE_MIN,0x0
+CCID_IF_TYPE_USB,0x1
+CCID_IF_TYPE_QMI,0x2
+CCID_IF_TYPE_MAX,0x3
+}

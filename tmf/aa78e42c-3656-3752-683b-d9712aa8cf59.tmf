@@ -1,0 +1,41 @@
+// PDB:  qcipcrouter7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:25:018 (UTC) [tracepdb]
+aa78e42c-3656-3752-683b-d9712aa8cf59 core // SRC=qsocket_ipcr.c MJ= MN=
+#typev qsocket_ipcr_c1085 10 "%0[QSOC]: SEND CONF failed! client:%10!p!, addr:(0x%11!x!:0x%12!x!), tid=0x%13!x! tt=0x%14!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TracePkt FUNC=qrecvfrom
+{
+client, ItemPtr -- 10
+((addr!=NULL)?addr->processor_id:-1), ItemLong -- 11
+((addr!=NULL)?addr->port_id:-1), ItemLong -- 12
+(uint32)KeGetCurrentThread(), ItemLong -- 13
+ipc_os_get_timetick(), ItemLongLongX -- 14
+}
+#typev qsocket_ipcr_c578 11 "%0[QSOC]: RX_CB return Validation failed! Src:(0x%10!x!:0x%11!x!) Conf:%12!u! Size:%13!u! tid=0x%14!x! tt=0x%15!I64x!, connected:%16!u!, active:%17!u!, type:%18!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TracePkt FUNC=sock_rx_cb
+{
+src_addr->processor_id, ItemLong -- 10
+src_addr->port_id, ItemLong -- 11
+confirm_rx, ItemLong -- 12
+len, ItemLong -- 13
+(uint32)KeGetCurrentThread(), ItemLong -- 14
+ipc_os_get_timetick(), ItemLongLongX -- 15
+sock->connected, ItemLong -- 16
+sock->active, ItemLong -- 17
+sock->type, ItemLong -- 18
+}
+#typev qsocket_ipcr_c602 12 "%0[QSOC]: RX_CB return calloc failed! Src:(0x%10!x!:0x%11!x!) Conf:%12!u! Size:%13!u! tid=0x%14!x! tt=0x%15!I64x!, size:%16!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TracePkt FUNC=sock_rx_cb
+{
+src_addr->processor_id, ItemLong -- 10
+src_addr->port_id, ItemLong -- 11
+confirm_rx, ItemLong -- 12
+len, ItemLong -- 13
+(uint32)KeGetCurrentThread(), ItemLong -- 14
+ipc_os_get_timetick(), ItemLongLongX -- 15
+sizeof(*buf), ItemLong -- 16
+}
+#typev qsocket_ipcr_c200 10 "%0[QSOC]: SEND CONF failed! client:%10!p!, addr:(0x%11!x!:0x%12!x!), tid=0x%13!x! tt=0x%14!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TracePkt FUNC=sock_send_conf
+{
+client, ItemPtr -- 10
+((addr!=NULL)?addr->processor_id:-1), ItemLong -- 11
+((addr!=NULL)?addr->port_id:-1), ItemLong -- 12
+(uint32)KeGetCurrentThread(), ItemLong -- 13
+ipc_os_get_timetick(), ItemLongLongX -- 14
+}

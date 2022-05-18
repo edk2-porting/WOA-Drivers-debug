@@ -1,0 +1,85 @@
+// PDB:  qcpsautoreg7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+85737cfd-5b4c-3c76-7464-493b61249f6e latest // SRC=Device.c MJ= MN=
+#typev Device_c55 18 "%0%!FUNC!:: %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PSAutoRegCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c55 17 "%0%!FUNC!:: WdfDeviceAssignS0IdleSettings with status = %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PSAutoRegCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c55 16 "%0%!FUNC!:: WdfDeviceAssignS0IdleSettings(IdleCannotWakeFromS0) with status = %10!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PSAutoRegCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c99 15 "%0%!FUNC!:: IdleCanWakeFromS0 with IdleTimeout %10!d! ms." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PSAutoRegCreateDevice
+{
+PCIE_SUSPEND_TIMEOUT, ItemLong -- 10
+}
+#typev Device_c94 14 "%0%!FUNC!:: WdfDeviceAssignSxWakeSettings with status = %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PSAutoRegCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c90 13 "%0%!FUNC!:: ERROR:: WdfDeviceAssignSxWakeSettings failed with status = %10!s!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PSAutoRegCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c77 12 "%0%!FUNC!:: ERROR:: WdfDeviceCreateDeviceInterface  %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=PSAutoRegCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c70 11 "%0%!FUNC!:: ERROR:: pDeviceContext NULL  %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=PSAutoRegCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c54 10 "%0%!FUNC!:: ERROR:: WdfDeviceCreate %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=PSAutoRegCreateDevice
+{
+status, ItemNTSTATUS -- 10
+}
+#typev Device_c261 27 "%0%!FUNC!:: Exit, PreviousState = %10!s!(%11!d!). bIsArmWakeFromS0 %12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PSAutoRegEvtD0Entry
+{
+PARUtils_ConvertWdfDevicePowerToString(PreviousState), ItemString -- 10
+PreviousState, ItemLong -- 11
+pDeviceContext->bIsArmWakeFromS0, ItemListLong(false,true) -- 12
+}
+#typev Device_c251 26 "%0%!FUNC!:: Exit, PreviousState %10!s!(%11!d!). bIsArmWakeFromS0 %12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PSAutoRegEvtD0Entry
+{
+PARUtils_ConvertWdfDevicePowerToString(PreviousState), ItemString -- 10
+PreviousState, ItemLong -- 11
+pDeviceContext->bIsArmWakeFromS0, ItemListLong(false,true) -- 12
+}
+#typev Device_c246 25 "%0%!FUNC!:: Entry. PreviousState %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PSAutoRegEvtD0Entry
+{
+PreviousState, ItemLong -- 10
+}
+#typev Device_c306 29 "%0%!FUNC!:: Exit, TargetState = %10!s!(%11!d!). bIsArmWakeFromS0 %12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PSAutoRegEvtD0Exit
+{
+PARUtils_ConvertWdfDevicePowerToString(TargetState), ItemString -- 10
+TargetState, ItemLong -- 11
+pDeviceContext->bIsArmWakeFromS0, ItemListLong(false,true) -- 12
+}
+#typev Device_c295 28 "%0%!FUNC!:: Entry/Exit, TargetState = %10!s!(%11!d!). bIsArmWakeFromS0 %12!s!." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PSAutoRegEvtD0Exit
+{
+PARUtils_ConvertWdfDevicePowerToString(TargetState), ItemString -- 10
+TargetState, ItemLong -- 11
+pDeviceContext->bIsArmWakeFromS0, ItemListLong(false,true) -- 12
+}
+#typev Device_c156 20 "%0%!FUNC!:: Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PSAutoRegEvtPrepareHardware
+{
+}
+#typev Device_c156 19 "%0%!FUNC!:: Entry!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=PSAutoRegEvtPrepareHardware
+{
+}
+#typev Device_c215 24 "%0%!FUNC!:: Exit!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=PSAutoRegEvtQueryRemove
+{
+}
+#typev Device_c213 23 "%0%!FUNC!:: Entry!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=PSAutoRegEvtQueryRemove
+{
+}
+#typev Device_c196 22 "%0%!FUNC!:: Exit." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=PSAutoRegEvtReleaseHardware
+{
+}
+#typev Device_c196 21 "%0%!FUNC!:: Entry" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=PSAutoRegEvtReleaseHardware
+{
+}

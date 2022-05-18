@@ -1,0 +1,35 @@
+// PDB:  qcpil.pdb
+// PDB:  Last Updated :2021-10-17:21:53:58:868 (UTC) [tracepdb]
+619c1483-763f-37fd-5202-7ec4db87b609 PIL-Rel // SRC=debug_malloc.c MJ= MN=
+#typev debug_malloc_c59 10 "%0Error: WdfWaitLockCreate for allocation records failed with status 0x%10!08X!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_INIT FUNC=InitAllocationRecords
+{
+status, ItemLong -- 10
+}
+#typev debug_malloc_c113 13 "%0Memory is allocated at: 0x%10!p!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ALLOCS FUNC=IsAllocated
+{
+Address, ItemPtr -- 10
+}
+#typev debug_malloc_c93 12 "%0Warning: Unable to save the memory allocation record ALLOCATED at (file: %10!s!, line: %11!d!).  Out of space in the record buffer." //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_ALLOCS FUNC=RecordAllocation
+{
+FileName, ItemString -- 10
+LineNumber, ItemLong -- 11
+}
+#typev debug_malloc_c85 11 "%0ALLOCATED (file: %10!s!, line: %11!d!, allocation count: %12!d!): Memory at: 0x%13!p!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ALLOCS FUNC=RecordAllocation
+{
+FileName, ItemString -- 10
+LineNumber, ItemLong -- 11
+g_TotalNumAllocations, ItemLong -- 12
+Address, ItemPtr -- 13
+}
+#typev debug_malloc_c151 15 "%0Warning: Unable to remove the memory allocation record ALLOCATED at (file: %10!s!, line: %11!d!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=DBG_ALLOCS FUNC=RecordDeallocation
+{
+FileName, ItemString -- 10
+LineNumber, ItemLong -- 11
+}
+#typev debug_malloc_c139 14 "%0FREED (file: %10!s!, line: %11!d!, allocation count: %12!d!): Memory at: 0x%13!p!." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DBG_ALLOCS FUNC=RecordDeallocation
+{
+s_AllocationRecords[recordIndex].FileName, ItemString -- 10
+s_AllocationRecords[recordIndex].LineNumber, ItemLong -- 11
+g_TotalNumAllocations, ItemLong -- 12
+Address, ItemPtr -- 13
+}

@@ -1,0 +1,33 @@
+// PDB:  qcdxkm7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:02:688 (UTC) [tracepdb]
+83ead21b-c8c8-3cee-2371-f14855f87e80 src // SRC=edp_psr.c MJ= MN=
+#typev edp_psr_c212 10 "%0DP%10!d!: PSR enabled on source and sink, verify CRC: %11!d!, second frame:%12!d!, link training at exit: %13!d!, status: 0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=eDP_PSR_Init
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+sHalConfig.bVerifyCRC, ItemLong -- 11
+sHalConfig.bCaptureSecondFrame, ItemLong -- 12
+sHalConfig.bTrainingOnExit, ItemLong -- 13
+eStatus, ItemLong -- 14
+}
+#typev edp_psr_c307 12 "%0Diag (EDP%10!d!): Source CRC status : 0x%11!x!,0x%12!x!,0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDiag FUNC=eDP_PSR_Request
+{
+pDeviceCtx->eControllerID, ItemLong -- 10
+uControllerCRC[0], ItemLong -- 11
+uControllerCRC[1], ItemLong -- 12
+uControllerCRC[2], ItemLong -- 13
+}
+#typev edp_psr_c293 11 "%0DP%10!d!: PSR enter (update done), status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceDP FUNC=eDP_PSR_Request
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev edp_psr_c353 13 "%0DP%10!d!: PSR exit (exit done), status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceDP FUNC=eDP_PSR_Request
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}
+#typev edp_psr_c387 14 "%0DP%10!d!: PSR exit (wait for video done), status: 0x%11!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceDP FUNC=eDP_PSR_Request
+{
+pDeviceCtx->eDisplayID, ItemLong -- 10
+eStatus, ItemLong -- 11
+}

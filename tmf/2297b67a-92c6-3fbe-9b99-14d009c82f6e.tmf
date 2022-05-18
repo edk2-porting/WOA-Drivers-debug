@@ -1,0 +1,214 @@
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+2297b67a-92c6-3fbe-9b99-14d009c82f6e build // SRC=ClockBIST.c MJ= MN=
+#typev ClockBIST_c1037 67 "%0Clock BIST Passed!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_BIST
+{
+}
+#typev ClockBIST_c1042 68 "%0Clock BIST Failed %10!d! out of %11!d! tests!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_BIST
+{
+nFailedTests, ItemLong -- 10
+nClockIndex, ItemLong -- 11
+}
+#typev ClockBIST_c1020 66 "%0   Failure Anticipated -- Ignoring Result." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_BIST
+{
+}
+#typev ClockBIST_c971 65 "%0Failed to enable %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_BIST
+{
+pPowerDomain->szName, ItemString -- 10
+}
+#typev ClockBIST_c937 64 "%0Failed to retrieve ID for BIST dependency clock %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_BIST
+{
+pBISTDependencies[i].szName, ItemString -- 10
+}
+#typev ClockBIST_c930 63 "%0Failed to enable BIST dependency clock %10!s!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_BIST
+{
+pBISTDependencies[i].szName, ItemString -- 10
+}
+#typev ClockBIST_c923 62 "%0Failed to retrieve clock pointer for ID %10!d! for BIST dependency clock %11!s!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_BIST
+{
+(int)ClockId, ItemLong -- 10
+pBISTDependencies[i].szName, ItemString -- 11
+}
+#typev ClockBIST_c806 59 "%0   EnableClock: NOT SUPPORTED" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+}
+#typev ClockBIST_c788 58 "%0   IsClockOn: status mismatch -- test aborted" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+}
+#typev ClockBIST_c775 57 "%0   IsClockOn: %10!d!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+bStatus, ItemLong -- 10
+}
+#typev ClockBIST_c771 56 "%0   IsClockOn: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+}
+#typev ClockBIST_c750 55 "%0   CalcClockFrequency: NOT SUPPORTED" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+}
+#typev ClockBIST_c822 61 "%0   Clock %10!s! BIST Failed!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockBIST_c741 53 "%0   CalcClockFrequency: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+}
+#typev ClockBIST_c816 60 "%0   Clock %10!s! BIST Passed!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockBIST_c745 54 "%0   CalcClockFrequency: %10!d! Hz" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+nFreqHz, ItemLong -- 10
+}
+#typev ClockBIST_c732 52 "%0   IsClockOn: NOT SUPPORTED" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+}
+#typev ClockBIST_c726 51 "%0   IsClockOn: status mismatch" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+}
+#typev ClockBIST_c717 50 "%0   IsClockOn: %10!d!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+bStatus, ItemLong -- 10
+}
+#typev ClockBIST_c713 49 "%0   IsClockOn: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+}
+#typev ClockBIST_c703 48 "%0   IsClockEnabled: %10!d!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+bStatus, ItemLong -- 10
+}
+#typev ClockBIST_c690 47 "%0   IsClockEnabled: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+}
+#typev ClockBIST_c658 46 "%0Testing %10!s!..." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockBIST_c644 45 "%0   INVALID CONFIGURATION DETECTED -- test aborted" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClock
+{
+}
+#typev ClockBIST_c590 44 "%0   Unable to turn OFF clock: %10!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockBIST_c575 42 "%0   IsClockOn: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c582 43 "%0   IsClockOn: %10!d!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+bStatus, ItemLong -- 10
+}
+#typev ClockBIST_c548 41 "%0   IsClockEnabled: %10!d!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+bStatus, ItemLong -- 10
+}
+#typev ClockBIST_c544 40 "%0   IsClockEnabled: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c533 39 "%0   DisableClock: SUCCESS" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c388 26 "%0   CalcClockFrequency: NOT SUPPORTED" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c383 25 "%0   CalcClockFrequency: %10!d! Hz" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+nFreqHz, ItemLong -- 10
+}
+#typev ClockBIST_c379 24 "%0   CalcClockFrequency: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c369 23 "%0   SetClockFrequency: NOT SUPPORTED" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c365 22 "%0   SetClockFrequency: Skipping due to DFS control" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c528 38 "%0   DisableClock: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c514 37 "%0   CalcClockFrequency: NOT SUPPORTED" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c507 36 "%0   Frequency error %10!d! Hz is within error tolerance of %11!d! Hz" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+nFreqError, ItemLong -- 10
+CLOCK_BIST_ERROR_MINIMUM_TOLERANCE, ItemLong -- 11
+}
+#typev ClockBIST_c500 35 "%0   Frequency error %10!d! Hz is within error margin of %11!d! Hz" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+nFreqError, ItemLong -- 10
+nFreqErrorMargin, ItemLong -- 11
+}
+#typev ClockBIST_c494 34 "%0   Frequency error %10!d! Hz exceeds error margin of %11!d! Hz" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+nFreqError, ItemLong -- 10
+nFreqErrorMargin, ItemLong -- 11
+}
+#typev ClockBIST_c476 32 "%0   CalcClockFrequency: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c449 30 "%0   IsClockOn: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c480 33 "%0   CalcClockFrequency: %10!d! Hz" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+nFreqHz, ItemLong -- 10
+}
+#typev ClockBIST_c461 31 "%0   Unable to turn ON clock: %10!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockBIST_c426 29 "%0   Frequency mismatch -- wanted: %10!d! Hz vs got: %11!d! Hz" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+pBSPConfig->nFreqHz, ItemLong -- 10
+nFreqHz, ItemLong -- 11
+}
+#typev ClockBIST_c419 28 "%0   SetClockFrequency:  %10!d! Hz" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+nFreqHz, ItemLong -- 10
+}
+#typev ClockBIST_c415 27 "%0   SetClockFrequency: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c348 21 "%0   IsClockOn: NOT SUPPORTED" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c342 20 "%0   IsClockOn: status mismatch" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c333 19 "%0   IsClockOn: %10!d!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+bStatus, ItemLong -- 10
+}
+#typev ClockBIST_c329 18 "%0   IsClockOn: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c311 17 "%0   IsClockEnabled: %10!d!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+bStatus, ItemLong -- 10
+}
+#typev ClockBIST_c307 16 "%0   IsClockEnabled: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c296 15 "%0   EnableClock: SUCCESS" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c272 13 "%0   Frequency mismatch -- wanted: %10!d! Hz vs got: %11!d! Hz" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+pBSPConfig->nFreqHz, ItemLong -- 10
+nFreqHz, ItemLong -- 11
+}
+#typev ClockBIST_c265 12 "%0   SetClockFrequency:  %10!d! Hz" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+nFreqHz, ItemLong -- 10
+}
+#typev ClockBIST_c261 11 "%0   SetClockFrequency: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c289 14 "%0   EnableClock: ERROR" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}
+#typev ClockBIST_c237 10 "%0   Initializing clock domain" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockBISTLog FUNC=Clock_TestClockFunctions
+{
+}

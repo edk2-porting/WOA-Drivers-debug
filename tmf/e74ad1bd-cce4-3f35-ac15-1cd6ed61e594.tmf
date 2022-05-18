@@ -1,0 +1,89 @@
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+e74ad1bd-cce4-3f35-ac15-1cd6ed61e594 10.7 // SRC=RevDSDClient.c MJ= MN=
+#typev RevDSDClient_c204 23 "%0<%!FUNC!>:: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDSDClient_DeInit
+{
+}
+#typev RevDSDClient_c217 26 "%0<%!FUNC!>:: success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDSDClient_DeInit
+{
+}
+#typev RevDSDClient_c212 25 "%0%10!s! <%!FUNC!>:: error releasing 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDSDClient_DeInit
+{
+pClient->PortName, ItemString -- 10
+qmiErr, ItemLong -- 11
+}
+#typev RevDSDClient_c208 24 "%0<%!FUNC!>:: Releasing DSD client" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevDSDClient_DeInit
+{
+}
+#typev RevDSDClient_c191 22 "%0%10!s! <%!FUNC!>:: pClient = 0x%11!p!, status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevDSDClient_Init
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevDSDClient_c184 21 "%0%10!s! <%!FUNC!>:: FAILED, QmiType=%11!d!" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=RevRmnet_GetIFRLogHandle() FLAGS=RVRM_WPP FUNC=RevDSDClient_Init
+{
+pClient->PortName, ItemString -- 10
+QmiType, ItemLong -- 11
+}
+#typev RevDSDClient_c162 20 "%0<%!FUNC!>:: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR IFRLOG=RevRmnet_GetIFRLogHandle() FLAGS=RVRM_WPP FUNC=RevDSDClient_Init
+{
+}
+#typev RevDSDClient_c283 30 "%0<%!FUNC!>:: pClient/pQMIInd/Handle = NULL." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDSDIndication
+{
+}
+#typev RevDSDClient_c301 32 "%0%10!s! <%!FUNC!>:: MsgId 0x%11!x!. Invalid DSD IND." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDSDIndication
+{
+pClient->PortName, ItemString -- 10
+pQMIInd->uMsgId, ItemLong -- 11
+}
+#typev RevDSDClient_c291 31 "%0%10!s! <%!FUNC!>:: SSR in progress. Exiting DSD indication processing." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_ProcessInboundQDSDIndication
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevDSDClient_c48 11 "%0%10!s! <%!FUNC!>:: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDSDNotifyDataSettingReq
+{
+pClient->PortName, ItemString -- 10
+}
+#typev RevDSDClient_c59 12 "%0%10!s! <%!FUNC!>:: END. pClient = 0x%11!p!. status = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDSDNotifyDataSettingReq
+{
+pClient->PortName, ItemString -- 10
+pClient, ItemPtr -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RevDSDClient_c41 10 "%0<%!FUNC!>:: STATUS_INVALID_PARAMETER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDSDNotifyDataSettingReq
+{
+}
+#typev RevDSDClient_c85 14 "%0<%!FUNC!>:: Response success." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDSDNotifyDataSettingResp
+{
+}
+#typev RevDSDClient_c80 13 "%0<%!FUNC!>:: Error in Response. Error = 0x%10!x!, Result = 0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmQMI_SendDSDNotifyDataSettingResp
+{
+pResp->resp.error, ItemLong -- 10
+pResp->resp.result, ItemLong -- 11
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmQCCI_c137 29 "%0<%!FUNC!>:: MsgId 0x%10!x! and status = %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QCCI_AllocateQMIRequest
+{
+uMsgId, ItemLong -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RevRmQCCI_c137 27 "%0<%!FUNC!>:: MsgId 0x%10!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRm_QCCI_AllocateQMIRequest
+{
+uMsgId, ItemLong -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmQCCI_c354 33 "%0<%!FUNC!>:: uQMIType 0x%10!x!. Invalid DSD Response." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRm_QMI_ProcessInboundQMIResponse
+{
+pQMIElement->uQMIType, ItemLong -- 10
+}
+// PDB:  qcrevrmnet.pdb
+// PDB:  Last Updated :2021-10-17:21:53:25:788 (UTC) [tracepdb]
+#typev RevRmnet_c2121 16 "%0<%!FUNC!>:: STATUS_NO_MEMORY" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=RVRM_WPP FUNC=RevRmnet_InitContexts
+{
+}
+#typev RevRmnet_c2121 15 "%0<%!FUNC!>:: Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=RVRM_WPP FUNC=RevRmnet_InitContexts
+{
+}

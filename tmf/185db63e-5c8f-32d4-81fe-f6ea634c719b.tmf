@@ -1,0 +1,103 @@
+// PDB:  qci2c7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:11:248 (UTC) [tracepdb]
+185db63e-5c8f-32d4-81fe-f6ea634c719b 10.7 // SRC=driver.c MJ= MN=
+#typev driver_c81 13 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=DriverEntry
+{
+}
+#typev driver_c73 12 "%0Created WDFDRIVER %10!p!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=DriverEntry
+{
+fxDriver, ItemPtr -- 10
+}
+#typev driver_c64 11 "%0Error creating WDF driver object - %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=DriverEntry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev driver_c47 10 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=DriverEntry
+{
+}
+// PDB:  qci2c7180.pdb
+// PDB:  Last Updated :2021-10-17:21:54:11:248 (UTC) [tracepdb]
+#typev driver_c706 34 "%0 [%!FUNC!] <--" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+}
+#typev driver_c691 33 "%0Failed to initalize S0 idle settings for WDFDEVICE %10!p!- %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+pDevice->FxDevice, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev driver_c656 32 "%0Failed to create device spinlock for WDFDEVICE %10!p! - %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+pDevice->FxDevice, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev driver_c629 31 "%0Failed to create cancel timer for WDFDEVICE %10!p! - %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+pDevice->FxDevice, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev driver_c598 30 "%0Failed to create delay timer for WDFDEVICE %10!p! - %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+pDevice->FxDevice, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev driver_c570 29 "%0WdfDpcCreate(BuildScatterGatherDpc) failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+status, ItemNTSTATUS -- 10
+}
+#typev driver_c551 28 "%0Failed to create interrupt object for WDFDEVICE %10!p! - %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+pDevice->FxDevice, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev driver_c522 27 "%0Failed to create interrupt spinlock for WDFDEVICE %10!p! - %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+pDevice->FxDevice, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev driver_c461 26 "%0Failed SpbDeviceInitialize() for WDFDEVICE %10!p! - %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+pDevice->FxDevice, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev driver_c419 25 "%0WdfDeviceCreateDeviceInterface failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+status, ItemNTSTATUS -- 10
+}
+#typev driver_c388 24 "%0Failed to create WDFDEVICE from WDFDEVICE_INIT %10!p! - %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+FxDeviceInit, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev driver_c335 23 "%0Failed to get PDO from WDFDEVICE_INIT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+}
+#typev driver_c322 22 "%0Failed SpbDeviceInitConfig() for WDFDEVICE_INIT %10!p! - %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+FxDeviceInit, ItemPtr -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev driver_c310 21 "%0 [%!FUNC!] --> entry" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_FLAG_WDFLOADING FUNC=OnDeviceAdd
+{
+}
+#typev driver_c222 20 "%0IOCTL_ACPI_EVAL_METHOD failed (0x%10!08X!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=QueryAcpiMethod
+{
+status, ItemLong -- 10
+}
+#typev driver_c208 19 "%0WdfMemoryGetBuffer() failed while symbolic link creation" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=QueryAcpiMethod
+{
+}
+#typev driver_c197 18 "%0WdfMemoryCreate() failed while symbolic link creation" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=QueryAcpiMethod
+{
+}
+#typev driver_c174 17 "%0WdfMemoryGetBuffer() failed while symbolic link creation" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=QueryAcpiMethod
+{
+}
+#typev driver_c163 16 "%0WdfMemoryCreate() failed while symbolic link creation" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=QueryAcpiMethod
+{
+}
+#typev driver_c126 15 "%0IoCallDriver(IOCTL_ACPI_EVAL_METHOD) returned STATUS_PENDING... waiting" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=SendIoctlIrp
+{
+}
+#typev driver_c115 14 "%0IoBuildDeviceIoControlRequest() failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_FLAG_WDFLOADING FUNC=SendIoctlIrp
+{
+}

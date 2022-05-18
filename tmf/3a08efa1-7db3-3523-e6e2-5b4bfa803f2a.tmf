@@ -1,0 +1,96 @@
+// PDB:  qcslimbus7180.pdb
+// PDB:  Last Updated :2021-10-17:21:55:09:341 (UTC) [tracepdb]
+3a08efa1-7db3-3523-e6e2-5b4bfa803f2a kmdf // SRC=SlimBusBamDdi.c MJ= MN=
+#typev SlimBusBamDdi_c331 12 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 331] %!FUNC!::Got port BAM error callback!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusBamPipeHandler
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBusBamDdi_c275 11 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 275] %!FUNC!::Got invalid BAM Rx message callback!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBusBamRxCb
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBusBamDdi_c917 14 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 917] %!FUNC!::No room for new BAM descriptor xfer (head: 0x%11!x!) (tail: 0x%12!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_BamTransferIOVec
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pCtxt->uXferHead, ItemLong -- 11
+pCtxt->uXferTail, ItemLong -- 12
+}
+#typev SlimBusBamDdi_c1314 22 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 1314] %!FUNC!::Failure to set BAM pipe IRQ mode (client: 0x%11!x!) (hport: 0x%12!x!) (hpipe: 0x%13!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_ConfigMasterPipe
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+hPort, ItemLong -- 12
+(uint32)pPort->pBamCtxt, ItemLong -- 13
+}
+#typev SlimBusBamDdi_c1300 21 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 1300] %!FUNC!::Failure to initialize BAM pipe (client: 0x%11!x!) (hport: 0x%12!x!) (hpipe: 0x%13!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_ConfigMasterPipe
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+hPort, ItemLong -- 12
+(uint32)pPort->pBamCtxt, ItemLong -- 13
+}
+#typev SlimBusBamDdi_c1210 20 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 1210] %!FUNC!::Change of BAM configuration for a connected port not allowed (client: 0x%11!x!) (h: 0x%12!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_ConfigMasterPipe
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+hPort, ItemLong -- 12
+}
+#typev SlimBusBamDdi_c1202 19 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 1202] %!FUNC!::Timeout waiting for port disconnection event (client: 0x%11!x!) (resource: 0x%12!x!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_ConfigMasterPipe
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pPort->handle, ItemLong -- 12
+pPort->portNum, ItemLong -- 13
+}
+#typev SlimBusBamDdi_c1188 18 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 1188] %!FUNC!::Waiting for port disconnection during config pipe (client: 0x%11!x!) (resource: 0x%12!x!) (port: %13!ld!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=CORE FUNC=SlimBus_ConfigMasterPipe
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pPort->handle, ItemLong -- 12
+pPort->portNum, ItemLong -- 13
+}
+#typev SlimBusBamDdi_c1180 17 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 1180] %!FUNC!::Error initializing BAM handle during config pipe (client: 0x%11!x!) (h: 0x%12!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_ConfigMasterPipe
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+hPort, ItemLong -- 12
+}
+#typev SlimBusBamDdi_c1156 16 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 1156] %!FUNC!::Configure master pipe (client: 0x%11!x!) (hport: 0x%12!x!) (flow: Sink)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_ConfigMasterPipe
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+hPort, ItemLong -- 12
+}
+#typev SlimBusBamDdi_c1151 15 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 1151] %!FUNC!::Configure master pipe (client: 0x%11!x!) (hport: 0x%12!x!) (flow: Source)" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=CORE FUNC=SlimBus_ConfigMasterPipe
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+hPort, ItemLong -- 12
+}
+#typev SlimBusBamDdi_c1099 10 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 213] %!FUNC!::Got invalid BAM Tx message callback!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_EmptyBamIOVec
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBusBamDdi_c698 10 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 213] %!FUNC!::Got invalid BAM Tx message callback!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_GetTxBamMsgBuffer
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBusBamDdi_c862 13 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 862] %!FUNC!::Disabling message queues due to BAM error" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SetupMsgQueues
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+}
+#typev SlimBusBamDdi_c1629 24 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 1629] %!FUNC!::[WARN] Detected port overflow/underflow during submit transfer (client: 0x%11!x!) (port: %12!ld!) (bIntDis: %13!d!)" //   LEVEL=TRACE_LEVEL_WARNING FLAGS=CORE FUNC=SlimBus_SubmitBamTransfer
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+(uint32)pClientCtxt, ItemLong -- 11
+pPort->portNum, ItemLong -- 12
+(uIntMask & uEnMask), ItemLong -- 13
+}
+#typev SlimBusBamDdi_c1610 23 "%0[DevId: 0x%10!x!][SlimBusBamDdi.c 1610] %!FUNC!::%11!s! (client: 0x%12!p!) (portres: 0x%13!x!) (chanres: 0x%14!x!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=CORE FUNC=SlimBus_SubmitBamTransfer
+{
+(unsigned int)pDevCtxt, ItemLong -- 10
+pszErrStr, ItemString -- 11
+pClientCtxt, ItemPtr -- 12
+pPort->handle, ItemLong -- 13
+((NULL!=pChannel)?pChannel->handle:0), ItemLong -- 14
+}

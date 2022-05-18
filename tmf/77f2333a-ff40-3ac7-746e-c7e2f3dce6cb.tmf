@@ -1,0 +1,709 @@
+// PDB:  qcSubsysThermalMgr.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+77f2333a-ff40-3ac7-746e-c7e2f3dce6cb SubsysThermalMgr // SRC=utils.c MJ= MN=
+#typev utils_c1262 114 "%0 [%!LEVEL!] utils.c::%!FUNC!::No thread handle found for QMI instance ID :0x%10!X!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=CheckIfQmiMonitoringThreadExists
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+}
+#typev utils_c1252 113 "%0 [%!LEVEL!] utils.c::%!FUNC!::Found a valid thread handle for QMI instance ID :0x%10!X!" //   LEVEL=VERB FLAGS=TRACE_QMI FUNC=CheckIfQmiMonitoringThreadExists
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+}
+#typev utils_c1233 112 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common driver context!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=CheckIfQmiMonitoringThreadExists
+{
+}
+#typev utils_c1225 111 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid driver handle!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=CheckIfQmiMonitoringThreadExists
+{
+}
+#typev utils_c1275 115 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit with %10!s!" //   LEVEL=INFO FLAGS=EntryExit FUNC=CheckIfQmiMonitoringThreadExists
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1218 110 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid subsys thermal device context!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=CheckIfQmiMonitoringThreadExists
+{
+}
+#typev utils_c1210 109 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=CheckIfQmiMonitoringThreadExists
+{
+}
+#typev utils_c1203 108 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=CheckIfQmiMonitoringThreadExists
+{
+}
+#typev utils_c1262 114 "%0 [%!LEVEL!] utils.c::%!FUNC!::No thread handle found for QMI instance ID :0x%10!X!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=CheckIfQmiMonitoringThreadExists$fin$0
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+}
+#typev utils_c1252 113 "%0 [%!LEVEL!] utils.c::%!FUNC!::Found a valid thread handle for QMI instance ID :0x%10!X!" //   LEVEL=VERB FLAGS=TRACE_QMI FUNC=CheckIfQmiMonitoringThreadExists$fin$0
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+}
+#typev utils_c1233 112 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common driver context!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=CheckIfQmiMonitoringThreadExists$fin$0
+{
+}
+#typev utils_c1225 111 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid driver handle!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=CheckIfQmiMonitoringThreadExists$fin$0
+{
+}
+#typev utils_c1275 115 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit with %10!s!" //   LEVEL=INFO FLAGS=EntryExit FUNC=CheckIfQmiMonitoringThreadExists$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1218 110 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid subsys thermal device context!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=CheckIfQmiMonitoringThreadExists$fin$0
+{
+}
+#typev utils_c1210 109 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=CheckIfQmiMonitoringThreadExists$fin$0
+{
+}
+#typev utils_c1203 108 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=CheckIfQmiMonitoringThreadExists$fin$0
+{
+}
+#typev utils_c1178 107 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit with %10!s! " //   LEVEL=INFO FLAGS=EntryExit FUNC=GetMaxMitigationLevel
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1094 101 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid QMI client info context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel
+{
+}
+#typev utils_c1156 106 "%0 [%!LEVEL!] utils.c::%!FUNC!::No matching device found for mitigation-device :%10!s!!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev utils_c1145 105 "%0 [%!LEVEL!] utils.c::%!FUNC!::Found matching mitigation device :%10!s! with max-mitigation level :0x%11!x!" //   LEVEL=VERB FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+ptmd_get_device_list_resp->mitigation_device_list[index].max_mitigation_level, ItemLong -- 11
+}
+#typev utils_c1132 104 "%0 [%!LEVEL!] utils.c::%!FUNC!::Mitigation-device: %10!s!, QMI_TMD_GET_MITIGATION_DEVICE_LIST_REQ_V01 retured error code 0x%11!x!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+ptmd_get_device_list_resp->resp.error, ItemLong -- 11
+}
+#typev utils_c1123 103 "%0 [%!LEVEL!] utils.c::%!FUNC!::Mitigation-device: %10!s!, qmi_client_send_msg_sync is unsuccessful with %11!d!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+qmiRet, ItemLong -- 11
+}
+#typev utils_c1108 102 "%0 [%!LEVEL!] utils.c::%!FUNC!::WdfMemoryCreate failed for device list response with %10!s! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1082 100 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid mitigation device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel
+{
+}
+#typev utils_c1073 99 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid driver context !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel
+{
+}
+#typev utils_c1066 98 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid driver handle !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel
+{
+}
+#typev utils_c1059 97 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel
+{
+}
+#typev utils_c1051 96 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel
+{
+}
+#typev utils_c1044 95 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=GetMaxMitigationLevel
+{
+}
+#typev utils_c1178 107 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit with %10!s! " //   LEVEL=INFO FLAGS=EntryExit FUNC=GetMaxMitigationLevel$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1094 101 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid QMI client info context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel$fin$0
+{
+}
+#typev utils_c1156 106 "%0 [%!LEVEL!] utils.c::%!FUNC!::No matching device found for mitigation-device :%10!s!!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev utils_c1145 105 "%0 [%!LEVEL!] utils.c::%!FUNC!::Found matching mitigation device :%10!s! with max-mitigation level :0x%11!x!" //   LEVEL=VERB FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+ptmd_get_device_list_resp->mitigation_device_list[index].max_mitigation_level, ItemLong -- 11
+}
+#typev utils_c1132 104 "%0 [%!LEVEL!] utils.c::%!FUNC!::Mitigation-device: %10!s!, QMI_TMD_GET_MITIGATION_DEVICE_LIST_REQ_V01 retured error code 0x%11!x!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+ptmd_get_device_list_resp->resp.error, ItemLong -- 11
+}
+#typev utils_c1123 103 "%0 [%!LEVEL!] utils.c::%!FUNC!::Mitigation-device: %10!s!, qmi_client_send_msg_sync is unsuccessful with %11!d!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+qmiRet, ItemLong -- 11
+}
+#typev utils_c1108 102 "%0 [%!LEVEL!] utils.c::%!FUNC!::WdfMemoryCreate failed for device list response with %10!s! " //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c1082 100 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid mitigation device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel$fin$0
+{
+}
+#typev utils_c1073 99 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid driver context !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel$fin$0
+{
+}
+#typev utils_c1066 98 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid driver handle !" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel$fin$0
+{
+}
+#typev utils_c1059 97 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel$fin$0
+{
+}
+#typev utils_c1051 96 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMaxMitigationLevel$fin$0
+{
+}
+#typev utils_c1044 95 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=GetMaxMitigationLevel$fin$0
+{
+}
+#typev utils_c787 74 "%0 [%!LEVEL!] utils.c::%!FUNC!::Mitigation-device %10!s!, applicable mitigation level: %11!u!" //   LEVEL=VERB FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+*pLevel, ItemLong -- 11
+}
+#typev utils_c779 73 "%0 [%!LEVEL!] utils.c::%!FUNC!::As requested percentage is 100%%, corresponding level: %10!u!" //   LEVEL=VERB FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage
+{
+*pLevel, ItemLong -- 10
+}
+#typev utils_c774 72 "%0 [%!LEVEL!] utils.c::%!FUNC!::No static-mappings found for Mitigation-device :%10!s!" //   LEVEL=VERB FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev utils_c760 71 "%0 [%!LEVEL!] utils.c::%!FUNC!::Mitigation-device %10!s! applicable mitigation level: %11!u!" //   LEVEL=VERB FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+*pLevel, ItemLong -- 11
+}
+#typev utils_c749 70 "%0 [%!LEVEL!] utils.c::%!FUNC!::Detected static-mappings for mitigation-device :%10!s!" //   LEVEL=VERB FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev utils_c740 69 "%0 [%!LEVEL!] utils.c::%!FUNC!::Mitigation-device %10!s!, RequestedPercentage to apply %11!u!, Max supported level: %12!u!" //   LEVEL=INFO FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+requestedPercentage, ItemLong -- 11
+pMitigationDeviceContext->maxMitigationLevel, ItemLong -- 12
+}
+#typev utils_c735 68 "%0 [%!LEVEL!] utils.c::%!FUNC!::Max-mitigationLevel is zero for mitigation-device %10!s!!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev utils_c728 67 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid mitigation device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage
+{
+}
+#typev utils_c720 66 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage
+{
+}
+#typev utils_c712 65 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage
+{
+}
+#typev utils_c799 75 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit with %10!s! " //   LEVEL=INFO FLAGS=EntryExit FUNC=GetMitigationLevelFromPercentage
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c704 64 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid level parameter!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage
+{
+}
+#typev utils_c697 63 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=GetMitigationLevelFromPercentage
+{
+}
+#typev utils_c787 74 "%0 [%!LEVEL!] utils.c::%!FUNC!::Mitigation-device %10!s!, applicable mitigation level: %11!u!" //   LEVEL=VERB FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+*pLevel, ItemLong -- 11
+}
+#typev utils_c779 73 "%0 [%!LEVEL!] utils.c::%!FUNC!::As requested percentage is 100%%, corresponding level: %10!u!" //   LEVEL=VERB FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+*pLevel, ItemLong -- 10
+}
+#typev utils_c774 72 "%0 [%!LEVEL!] utils.c::%!FUNC!::No static-mappings found for Mitigation-device :%10!s!" //   LEVEL=VERB FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev utils_c760 71 "%0 [%!LEVEL!] utils.c::%!FUNC!::Mitigation-device %10!s! applicable mitigation level: %11!u!" //   LEVEL=VERB FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+*pLevel, ItemLong -- 11
+}
+#typev utils_c749 70 "%0 [%!LEVEL!] utils.c::%!FUNC!::Detected static-mappings for mitigation-device :%10!s!" //   LEVEL=VERB FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev utils_c740 69 "%0 [%!LEVEL!] utils.c::%!FUNC!::Mitigation-device %10!s!, RequestedPercentage to apply %11!u!, Max supported level: %12!u!" //   LEVEL=INFO FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+requestedPercentage, ItemLong -- 11
+pMitigationDeviceContext->maxMitigationLevel, ItemLong -- 12
+}
+#typev utils_c735 68 "%0 [%!LEVEL!] utils.c::%!FUNC!::Max-mitigationLevel is zero for mitigation-device %10!s!!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev utils_c728 67 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid mitigation device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+}
+#typev utils_c720 66 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common device context!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+}
+#typev utils_c712 65 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+}
+#typev utils_c799 75 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit with %10!s! " //   LEVEL=INFO FLAGS=EntryExit FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c704 64 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid level parameter!" //   LEVEL=ERR_ FLAGS=TRACE_MITIGATION FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+}
+#typev utils_c697 63 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=GetMitigationLevelFromPercentage$fin$0
+{
+}
+#typev utils_c1000 93 "%0 [%!LEVEL!] utils.c::%!FUNC!::No entry found for QMI instance ID :0x%10!x!, QMI-device name: %11!s! in collection" //   LEVEL=WARN FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+pCommonDeviceContext->qmiDeviceName, ItemString -- 11
+}
+#typev utils_c990 92 "%0 [%!LEVEL!] utils.c::%!FUNC!::Found entry for QMI-Instance ID 0x%10!x! for QMI-device name :%11!s! in collection" //   LEVEL=VERB FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+pCommonDeviceContext->qmiDeviceName, ItemString -- 11
+}
+#typev utils_c977 91 "%0 [%!LEVEL!] utils.c::%!FUNC!::QMI instance ID collection is empty!" //   LEVEL=WARN FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection
+{
+}
+#typev utils_c966 90 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid WDF QMI instance ID collection!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection
+{
+}
+#typev utils_c958 89 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common driver context!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection
+{
+}
+#typev utils_c951 88 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid driver handle !" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection
+{
+}
+#typev utils_c1015 94 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit with %10!s!" //   LEVEL=INFO FLAGS=EntryExit FUNC=GetQMIInfoFromCollection
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c944 87 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common device context!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection
+{
+}
+#typev utils_c936 86 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection
+{
+}
+#typev utils_c929 85 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=GetQMIInfoFromCollection
+{
+}
+#typev utils_c1000 93 "%0 [%!LEVEL!] utils.c::%!FUNC!::No entry found for QMI instance ID :0x%10!x!, QMI-device name: %11!s! in collection" //   LEVEL=WARN FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection$fin$0
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+pCommonDeviceContext->qmiDeviceName, ItemString -- 11
+}
+#typev utils_c990 92 "%0 [%!LEVEL!] utils.c::%!FUNC!::Found entry for QMI-Instance ID 0x%10!x! for QMI-device name :%11!s! in collection" //   LEVEL=VERB FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection$fin$0
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+pCommonDeviceContext->qmiDeviceName, ItemString -- 11
+}
+#typev utils_c977 91 "%0 [%!LEVEL!] utils.c::%!FUNC!::QMI instance ID collection is empty!" //   LEVEL=WARN FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection$fin$0
+{
+}
+#typev utils_c966 90 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid WDF QMI instance ID collection!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection$fin$0
+{
+}
+#typev utils_c958 89 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common driver context!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection$fin$0
+{
+}
+#typev utils_c951 88 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid driver handle !" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection$fin$0
+{
+}
+#typev utils_c1015 94 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit with %10!s!" //   LEVEL=INFO FLAGS=EntryExit FUNC=GetQMIInfoFromCollection$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c944 87 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common device context!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection$fin$0
+{
+}
+#typev utils_c936 86 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=GetQMIInfoFromCollection$fin$0
+{
+}
+#typev utils_c929 85 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=GetQMIInfoFromCollection$fin$0
+{
+}
+#typev utils_c903 84 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit with %10!s!" //   LEVEL=INFO FLAGS=EntryExit FUNC=QueryQmiClientInfoCollection
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c890 83 "%0 [%!LEVEL!] utils.c::%!FUNC!::No matching entry found for QMI instance ID :0x%10!x!, QMI-device name: %11!s! in collection" //   LEVEL=WARN FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+pCommonDeviceContext->qmiDeviceName, ItemString -- 11
+}
+#typev utils_c880 82 "%0 [%!LEVEL!] utils.c::%!FUNC!::Found an entry for QMI-Instance ID 0x%10!x! for QMI-device name :%11!s! in collection" //   LEVEL=VERB FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+pCommonDeviceContext->qmiDeviceName, ItemString -- 11
+}
+#typev utils_c865 81 "%0 [%!LEVEL!] utils.c::%!FUNC!::QMI instance ID collection is empty !" //   LEVEL=WARN FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection
+{
+}
+#typev utils_c854 80 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid WDF QMI instance ID collection !" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection
+{
+}
+#typev utils_c846 79 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common driver context !" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection
+{
+}
+#typev utils_c839 78 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid driver handle !" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection
+{
+}
+#typev utils_c832 77 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid subsys thermal device context!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection
+{
+}
+#typev utils_c825 76 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=QueryQmiClientInfoCollection
+{
+}
+#typev utils_c903 84 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit with %10!s!" //   LEVEL=INFO FLAGS=EntryExit FUNC=QueryQmiClientInfoCollection$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c890 83 "%0 [%!LEVEL!] utils.c::%!FUNC!::No matching entry found for QMI instance ID :0x%10!x!, QMI-device name: %11!s! in collection" //   LEVEL=WARN FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection$fin$0
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+pCommonDeviceContext->qmiDeviceName, ItemString -- 11
+}
+#typev utils_c880 82 "%0 [%!LEVEL!] utils.c::%!FUNC!::Found an entry for QMI-Instance ID 0x%10!x! for QMI-device name :%11!s! in collection" //   LEVEL=VERB FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection$fin$0
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+pCommonDeviceContext->qmiDeviceName, ItemString -- 11
+}
+#typev utils_c865 81 "%0 [%!LEVEL!] utils.c::%!FUNC!::QMI instance ID collection is empty !" //   LEVEL=WARN FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection$fin$0
+{
+}
+#typev utils_c854 80 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid WDF QMI instance ID collection !" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection$fin$0
+{
+}
+#typev utils_c846 79 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common driver context !" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection$fin$0
+{
+}
+#typev utils_c839 78 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid driver handle !" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection$fin$0
+{
+}
+#typev utils_c832 77 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid subsys thermal device context!" //   LEVEL=ERR_ FLAGS=TRACE_QMI FUNC=QueryQmiClientInfoCollection$fin$0
+{
+}
+#typev utils_c825 76 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=QueryQmiClientInfoCollection$fin$0
+{
+}
+#typev utils_c665 62 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit with %10!s!" //   LEVEL=INFO FLAGS=EntryExit FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c562 52 "%0 [%!LEVEL!] utils.c::%!FUNC!::Failed to convert QMIDeviceName using wcstombs!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+}
+#typev utils_c647 61 "%0 [%!LEVEL!] utils.c::%!FUNC!::WdfMemoryCreate for mitigationLevels failed with %10!s!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c635 60 "%0 [%!LEVEL!] utils.c::%!FUNC!::WdfMemoryCreate for mitigationPercentages failed with %10!s!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c621 59 "%0 [%!LEVEL!] utils.c::%!FUNC!::FAILURE: mitigationNumValues is 0, will not init thermal mitigation information!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+}
+#typev utils_c615 58 "%0 [%!LEVEL!] utils.c::%!FUNC!::Successfully read Maptable key, bytesRead :%10!u! " //   LEVEL=INFO FLAGS=TRACE_MITIGATION FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+bytesRead, ItemLong -- 10
+}
+#typev utils_c610 57 "%0 [%!LEVEL!] utils.c::%!FUNC!::Reading of MapTable failed with %10!s!.Ignoring as this is optional." //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c593 56 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid mitigation device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+}
+#typev utils_c583 55 "%0 [%!LEVEL!] utils.c::%!FUNC!::Read QMIInstanceID :0x%10!X! from registry" //   LEVEL=INFO FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+}
+#typev utils_c565 53 "%0 [%!LEVEL!] utils.c::%!FUNC!::Read QMIDeviceName :%10!s! from registry" //   LEVEL=INFO FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev utils_c554 51 "%0 [%!LEVEL!] utils.c::%!FUNC!::Failure to read QMIDeviceName registry" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+}
+#typev utils_c539 50 "%0 [%!LEVEL!] utils.c::%!FUNC!::Failed RegistryOpenDriverKey with %10!s!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c532 49 "%0 [%!LEVEL!] utils.c::%!FUNC!::Unable to retrieve DMF registry module from device" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+}
+#typev utils_c524 48 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid DMF device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+}
+#typev utils_c516 47 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+}
+#typev utils_c508 46 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+}
+#typev utils_c501 45 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=ReadMitigationConfiguratiomFromRegistry
+{
+}
+#typev utils_c665 62 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit with %10!s!" //   LEVEL=INFO FLAGS=EntryExit FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c562 52 "%0 [%!LEVEL!] utils.c::%!FUNC!::Failed to convert QMIDeviceName using wcstombs!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+}
+#typev utils_c647 61 "%0 [%!LEVEL!] utils.c::%!FUNC!::WdfMemoryCreate for mitigationLevels failed with %10!s!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c635 60 "%0 [%!LEVEL!] utils.c::%!FUNC!::WdfMemoryCreate for mitigationPercentages failed with %10!s!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c621 59 "%0 [%!LEVEL!] utils.c::%!FUNC!::FAILURE: mitigationNumValues is 0, will not init thermal mitigation information!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+}
+#typev utils_c615 58 "%0 [%!LEVEL!] utils.c::%!FUNC!::Successfully read Maptable key, bytesRead :%10!u! " //   LEVEL=INFO FLAGS=TRACE_MITIGATION FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+bytesRead, ItemLong -- 10
+}
+#typev utils_c610 57 "%0 [%!LEVEL!] utils.c::%!FUNC!::Reading of MapTable failed with %10!s!.Ignoring as this is optional." //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c593 56 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid mitigation device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+}
+#typev utils_c583 55 "%0 [%!LEVEL!] utils.c::%!FUNC!::Read QMIInstanceID :0x%10!X! from registry" //   LEVEL=INFO FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+pCommonDeviceContext->qmiInstanceID, ItemLong -- 10
+}
+#typev utils_c565 53 "%0 [%!LEVEL!] utils.c::%!FUNC!::Read QMIDeviceName :%10!s! from registry" //   LEVEL=INFO FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+pCommonDeviceContext->qmiDeviceName, ItemString -- 10
+}
+#typev utils_c554 51 "%0 [%!LEVEL!] utils.c::%!FUNC!::Failure to read QMIDeviceName registry" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+}
+#typev utils_c539 50 "%0 [%!LEVEL!] utils.c::%!FUNC!::Failed RegistryOpenDriverKey with %10!s!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev utils_c532 49 "%0 [%!LEVEL!] utils.c::%!FUNC!::Unable to retrieve DMF registry module from device" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+}
+#typev utils_c524 48 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid DMF device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+}
+#typev utils_c516 47 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid common device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+}
+#typev utils_c508 46 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid device handle!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+}
+#typev utils_c501 45 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=ReadMitigationConfiguratiomFromRegistry$fin$0
+{
+}
+#typev utils_c457 44 "%0 [%!LEVEL!] utils.c::%!FUNC!::Unable to retrieve DMF registry module from device" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryCloseKey
+{
+}
+#typev utils_c450 43 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid DMF device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryCloseKey
+{
+}
+#typev utils_c443 42 "%0 [%!LEVEL!] utils.c::%!FUNC!::Pointer to registry key handle is NULL." //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryCloseKey
+{
+}
+#typev utils_c457 44 "%0 [%!LEVEL!] utils.c::%!FUNC!::Unable to retrieve DMF registry module from device" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryCloseKey$fin$0
+{
+}
+#typev utils_c450 43 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid DMF device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryCloseKey$fin$0
+{
+}
+#typev utils_c443 42 "%0 [%!LEVEL!] utils.c::%!FUNC!::Pointer to registry key handle is NULL." //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryCloseKey$fin$0
+{
+}
+#typev utils_c396 41 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryOpenHandleByPlugPlayID
+{
+}
+#typev utils_c388 40 "%0 [%!LEVEL!] utils.c::%!FUNC!:: Failed to open the plugplay registry key via ID %10!u!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryOpenHandleByPlugPlayID
+{
+regPlugPlayID, ItemLong -- 10
+}
+#typev utils_c376 39 "%0 [%!LEVEL!] utils.c::%!FUNC!::Unable to retrieve DMF registry module from device" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryOpenHandleByPlugPlayID
+{
+}
+#typev utils_c369 38 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid DMF device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryOpenHandleByPlugPlayID
+{
+}
+#typev utils_c359 37 "%0 [%!LEVEL!] utils.c::%!FUNC!::Pointer to key handle is NULL." //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryOpenHandleByPlugPlayID
+{
+}
+#typev utils_c353 36 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryOpenHandleByPlugPlayID
+{
+}
+#typev utils_c396 41 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryOpenHandleByPlugPlayID$fin$0
+{
+}
+#typev utils_c388 40 "%0 [%!LEVEL!] utils.c::%!FUNC!:: Failed to open the plugplay registry key via ID %10!u!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryOpenHandleByPlugPlayID$fin$0
+{
+regPlugPlayID, ItemLong -- 10
+}
+#typev utils_c376 39 "%0 [%!LEVEL!] utils.c::%!FUNC!::Unable to retrieve DMF registry module from device" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryOpenHandleByPlugPlayID$fin$0
+{
+}
+#typev utils_c369 38 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid DMF device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryOpenHandleByPlugPlayID$fin$0
+{
+}
+#typev utils_c359 37 "%0 [%!LEVEL!] utils.c::%!FUNC!::Pointer to key handle is NULL." //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryOpenHandleByPlugPlayID$fin$0
+{
+}
+#typev utils_c353 36 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryOpenHandleByPlugPlayID$fin$0
+{
+}
+#typev utils_c329 35 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryReadString
+{
+}
+#typev utils_c321 34 "%0 [%!LEVEL!] utils.c::%!FUNC!::REGISTRY: %10!s! = %11!s!" //   LEVEL=VERB FLAGS=TRACE_DEVICE FUNC=RegistryReadString
+{
+parameterName, ItemWString -- 10
+valueBuffer, ItemWString -- 11
+}
+#typev utils_c317 33 "%0 [%!LEVEL!] utils.c::%!FUNC!::DMF_Registry_ValueReadString() failed for %10!s!, status = %11!s!" //   LEVEL=INFO FLAGS=TRACE_DEVICE FUNC=RegistryReadString
+{
+parameterName, ItemWString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev utils_c282 31 "%0 [%!LEVEL!] utils.c::%!FUNC!::Unable to retrieve DMF registry module from device" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadString
+{
+}
+#typev utils_c275 30 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid DMF device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadString
+{
+}
+#typev utils_c259 28 "%0 [%!LEVEL!] utils.c::%!FUNC!::Registry key handle invalid!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadString
+{
+}
+#typev utils_c251 27 "%0 [%!LEVEL!] utils.c::%!FUNC!::Parameter value output pointer invalid!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadString
+{
+}
+#typev utils_c245 26 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryReadString
+{
+}
+#typev utils_c329 35 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryReadString$fin$0
+{
+}
+#typev utils_c321 34 "%0 [%!LEVEL!] utils.c::%!FUNC!::REGISTRY: %10!s! = %11!s!" //   LEVEL=VERB FLAGS=TRACE_DEVICE FUNC=RegistryReadString$fin$0
+{
+parameterName, ItemWString -- 10
+valueBuffer, ItemWString -- 11
+}
+#typev utils_c317 33 "%0 [%!LEVEL!] utils.c::%!FUNC!::DMF_Registry_ValueReadString() failed for %10!s!, status = %11!s!" //   LEVEL=INFO FLAGS=TRACE_DEVICE FUNC=RegistryReadString$fin$0
+{
+parameterName, ItemWString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev utils_c282 31 "%0 [%!LEVEL!] utils.c::%!FUNC!::Unable to retrieve DMF registry module from device" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadString$fin$0
+{
+}
+#typev utils_c275 30 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid DMF device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadString$fin$0
+{
+}
+#typev utils_c259 28 "%0 [%!LEVEL!] utils.c::%!FUNC!::Registry key handle invalid!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadString$fin$0
+{
+}
+#typev utils_c251 27 "%0 [%!LEVEL!] utils.c::%!FUNC!::Parameter value output pointer invalid!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadString$fin$0
+{
+}
+#typev utils_c245 26 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryReadString$fin$0
+{
+}
+#typev utils_c145 19 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryReadUlong
+{
+}
+#typev utils_c137 18 "%0 [%!LEVEL!] utils.c::%!FUNC!::REGISTRY: %10!s! = %11!u!" //   LEVEL=VERB FLAGS=TRACE_DEVICE FUNC=RegistryReadUlong
+{
+parameterName, ItemWString -- 10
+*parameterValue, ItemLong -- 11
+}
+#typev utils_c133 17 "%0 [%!LEVEL!] utils.c::%!FUNC!::DMF_Registry_ValueReadDword() failed for %10!s!, status = %11!s!" //   LEVEL=INFO FLAGS=TRACE_DEVICE FUNC=RegistryReadUlong
+{
+parameterName, ItemWString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev utils_c102 15 "%0 [%!LEVEL!] utils.c::%!FUNC!::Unable to retrieve DMF registry module from device" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadUlong
+{
+}
+#typev utils_c95 14 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid DMF device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadUlong
+{
+}
+#typev utils_c79 12 "%0 [%!LEVEL!] utils.c::%!FUNC!::Registry key handle invalid!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadUlong
+{
+}
+#typev utils_c71 11 "%0 [%!LEVEL!] utils.c::%!FUNC!::Parameter output pointer invalid!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadUlong
+{
+}
+#typev utils_c65 10 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryReadUlong
+{
+}
+#typev utils_c145 19 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryReadUlong$fin$0
+{
+}
+#typev utils_c137 18 "%0 [%!LEVEL!] utils.c::%!FUNC!::REGISTRY: %10!s! = %11!u!" //   LEVEL=VERB FLAGS=TRACE_DEVICE FUNC=RegistryReadUlong$fin$0
+{
+parameterName, ItemWString -- 10
+*parameterValue, ItemLong -- 11
+}
+#typev utils_c133 17 "%0 [%!LEVEL!] utils.c::%!FUNC!::DMF_Registry_ValueReadDword() failed for %10!s!, status = %11!s!" //   LEVEL=INFO FLAGS=TRACE_DEVICE FUNC=RegistryReadUlong$fin$0
+{
+parameterName, ItemWString -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev utils_c102 15 "%0 [%!LEVEL!] utils.c::%!FUNC!::Unable to retrieve DMF registry module from device" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadUlong$fin$0
+{
+}
+#typev utils_c95 14 "%0 [%!LEVEL!] utils.c::%!FUNC!::Invalid DMF device context!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadUlong$fin$0
+{
+}
+#typev utils_c79 12 "%0 [%!LEVEL!] utils.c::%!FUNC!::Registry key handle invalid!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadUlong$fin$0
+{
+}
+#typev utils_c71 11 "%0 [%!LEVEL!] utils.c::%!FUNC!::Parameter output pointer invalid!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadUlong$fin$0
+{
+}
+#typev utils_c65 10 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryReadUlong$fin$0
+{
+}
+#typev utils_c212 25 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryReadUlongWithDefault
+{
+}
+#typev utils_c211 24 "%0 [%!LEVEL!] utils.c::%!FUNC!::REGISTRY: %10!s! = %11!u!" //   LEVEL=VERB FLAGS=TRACE_DEVICE FUNC=RegistryReadUlongWithDefault
+{
+parameterName, ItemWString -- 10
+rval, ItemLong -- 11
+}
+#typev utils_c193 23 "%0 [%!LEVEL!] utils.c::%!FUNC!::Device handle invalid!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadUlongWithDefault
+{
+}
+#typev utils_c179 21 "%0 [%!LEVEL!] utils.c::%!FUNC!::Registry key handle invalid!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadUlongWithDefault
+{
+}
+#typev utils_c173 20 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryReadUlongWithDefault
+{
+}
+#typev utils_c212 25 "%0 [%!LEVEL!] utils.c::%!FUNC!::Exit" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryReadUlongWithDefault$fin$0
+{
+}
+#typev utils_c211 24 "%0 [%!LEVEL!] utils.c::%!FUNC!::REGISTRY: %10!s! = %11!u!" //   LEVEL=VERB FLAGS=TRACE_DEVICE FUNC=RegistryReadUlongWithDefault$fin$0
+{
+parameterName, ItemWString -- 10
+rval, ItemLong -- 11
+}
+#typev utils_c193 23 "%0 [%!LEVEL!] utils.c::%!FUNC!::Device handle invalid!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadUlongWithDefault$fin$0
+{
+}
+#typev utils_c179 21 "%0 [%!LEVEL!] utils.c::%!FUNC!::Registry key handle invalid!" //   LEVEL=ERR_ FLAGS=TRACE_DEVICE FUNC=RegistryReadUlongWithDefault$fin$0
+{
+}
+#typev utils_c173 20 "%0 [%!LEVEL!] utils.c::%!FUNC!::Entry" //   LEVEL=INFO FLAGS=EntryExit FUNC=RegistryReadUlongWithDefault$fin$0
+{
+}

@@ -1,0 +1,462 @@
+// PDB:  ProximityDriver.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+26966492-30d0-385d-1519-5af879e2a8ba ProximityDriver // SRC=client.cpp MJ= MN=
+#typev client_cpp160 22 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::GetData
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp156 21 "%0PROX SAR%10!d! %!FUNC! Read Data but Not started" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::GetData
+{
+(m_HWID + 1), ItemLong -- 10
+}
+#typev client_cpp144 19 "%0PROX SAR%10!d! %!FUNC! Data should have been sent!!!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::GetData
+{
+(m_HWID + 1), ItemLong -- 10
+}
+#typev client_cpp112 18 "%0 PROX SAR%10!d! Setting NearState to 1" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::GetData
+{
+(m_HWID + 1), ItemLong -- 10
+}
+#typev client_cpp107 17 "%0 PROX SAR%10!d! Setting NearState to 0" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::GetData
+{
+(m_HWID + 1), ItemLong -- 10
+}
+#typev client_cpp91 16 "%0PROX SAR%10!d! %!FUNC! Channel: %11!d! USE: %12!d! AVG: %13!d! DIFF: %14!d! OFFSET: %15!d! SARTHRESH: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::GetData
+{
+(m_HWID + 1), ItemLong -- 10
+rawData.Channel, ItemLong -- 11
+rawData.Useful, ItemLong -- 12
+rawData.Average, ItemLong -- 13
+rawData.Diff, ItemLong -- 14
+rawData.Offset, ItemLong -- 15
+rawData.SarThresh, ItemLong -- 16
+}
+#typev client_cpp54 15 "%0PROX SAR%10!d! %!FUNC! Touch Stat Reg 0x%11!02x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::GetData
+{
+(m_HWID + 1), ItemLong -- 10
+DataBuffer[0], ItemLong -- 11
+}
+#typev client_cpp51 14 "%0PROX SAR%10!d! %!FUNC! Reg 0x%11!02x! TouchStat_ph0 = %12!d!, TouchStat_ph2 = %13!d!, SteadyStat_ph0 = %14!d!, SteadyStat_ph1 = %15!d!, SteadyStat_ph2 = %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::GetData
+{
+(m_HWID + 1), ItemLong -- 10
+DataBuffer[0], ItemLong -- 11
+(BYTE)touchStatus_ph0, ItemLong -- 12
+(BYTE)touchStatus_ph2, ItemLong -- 13
+(BYTE)steadyStatus_ph0, ItemLong -- 14
+(BYTE)steadyStatus_ph1, ItemLong -- 15
+(BYTE)steadyStatus_ph2, ItemLong -- 16
+}
+#typev client_cpp41 13 "%0PROX SAR%10!d! %!FUNC! I2CSensorReadRegister from 0x%11!02x! is successful ! %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::GetData
+{
+(m_HWID + 1), ItemLong -- 10
+SX932x_STAT0_REG, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp36 12 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::GetData
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp35 11 "%0PROX SAR%10!d! %!FUNC! I2CSensorReadRegister from 0x%11!02x! failed! %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::GetData
+{
+(m_HWID + 1), ItemLong -- 10
+SX932x_STAT0_REG, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp26 10 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::GetData
+{
+}
+#typev client_cpp590 70 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnGetDataFieldProperties
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp552 66 "%0PROX %!FUNC! Invalid parameters! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetDataFieldProperties
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp560 67 "%0PROX SAR%10!d! %!FUNC! SX932x does NOT have properties for this data field. Failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetDataFieldProperties
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp580 69 "%0PROX SAR%10!d! %!FUNC! CollectionsListCopyAndMarshall failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetDataFieldProperties
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp572 68 "%0PROX SAR%10!d! %!FUNC! Buffer is too small. Failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetDataFieldProperties
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp541 65 "%0PROX %!FUNC! pSize: Invalid parameter! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetDataFieldProperties
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp536 64 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::OnGetDataFieldProperties
+{
+}
+#typev client_cpp620 75 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnGetDataInterval
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp617 74 "%0SAR%10!d! %!FUNC! giving data rate %11!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::OnGetDataInterval
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+*pDataRateMs, ItemLong -- 11
+}
+#typev client_cpp612 73 "%0PROX SAR%10!d! %!FUNC! Invalid parameters! %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetDataInterval
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp607 72 "%0PROX %!FUNC! Invalid parameters! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetDataInterval
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp601 71 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::OnGetDataInterval
+{
+}
+#typev client_cpp710 85 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnGetDataThresholds
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp701 84 "%0PROX SAR%10!d! %!FUNC! CollectionsListCopyAndMarshall failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetDataThresholds
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp693 83 "%0PROX SAR%10!d! %!FUNC! Buffer is too small. Failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetDataThresholds
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp681 82 "%0PROX %!FUNC! Invalid parameters! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetDataThresholds
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp671 81 "%0PROX %!FUNC! pSize: Invalid parameter! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetDataThresholds
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp667 80 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::OnGetDataThresholds
+{
+}
+#typev client_cpp520 63 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnGetProperties
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp510 62 "%0PROX SAR%10!d! %!FUNC! CollectionsListCopyAndMarshall failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetProperties
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp502 61 "%0PROX SAR%10!d! %!FUNC! Buffer is too small. Failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetProperties
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp490 60 "%0PROX %!FUNC! Invalid parameters! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetProperties
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp479 59 "%0PROX %!FUNC! pSize: Invalid parameter! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetProperties
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp474 58 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::OnGetProperties
+{
+}
+#typev client_cpp459 57 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnGetSupportedDataFields
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp449 56 "%0PROX SAR%10!d! %!FUNC! PropertiesListCopy failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetSupportedDataFields
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp441 55 "%0PROX SAR%10!d! %!FUNC! Buffer is too small. Failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetSupportedDataFields
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp429 54 "%0PROX %!FUNC! Invalid parameters! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetSupportedDataFields
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp418 53 "%0PROX %!FUNC! pSize: Invalid parameter! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnGetSupportedDataFields
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp413 52 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::OnGetSupportedDataFields
+{
+}
+#typev client_cpp222 30 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnInterruptIsr
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp218 29 "%0SAR%10!d! %!FUNC! Work item %11!s! queued for interrupt" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=Verbose FUNC=_SX932xProxDevice::OnInterruptIsr
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+WorkItemQueued ? '' : ' already', ItemString -- 11
+}
+#typev client_cpp215 28 "%0PROX SAR%10!d! %!FUNC! I2CSensorReadRegister from 0x%11!02x! is successful ! %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::OnInterruptIsr
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+SX932x_IRQSTAT_REG, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp211 27 "%0SAR%10!d! %!FUNC! Interrupt source not recognized" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnInterruptIsr
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+}
+#typev client_cpp207 26 "%0PROX SAR%10!d! %!FUNC! I2CSensorReadRegister from 0x%11!02x! failed! %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnInterruptIsr
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+SX932x_IRQSTAT_REG, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp183 24 "%0PROX %!FUNC! SensorsCxDeviceGetSensorList failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnInterruptIsr
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp193 25 "%0PROX %!FUNC! GetSX932xProxContextFromSensorInstance failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnInterruptIsr
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp174 23 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::OnInterruptIsr
+{
+}
+#typev client_cpp272 35 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnInterruptWorkItem
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp265 34 "%0PROX SAR%10!d! %!FUNC! GetData failed %11!s! Trying one more time" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnInterruptWorkItem
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp243 32 "%0PROX %!FUNC! SensorsCxDeviceGetSensorList failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnInterruptWorkItem
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp253 33 "%0PROX %!FUNC! GetSX932xProxContextFromSensorInstance failed %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnInterruptWorkItem
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp234 31 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::OnInterruptWorkItem
+{
+}
+#typev client_cpp791 96 "%0PROX SAR%10!d! %!FUNC! Sensor(%11!08p!) Request for Input Buffer Failed %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnIoControl
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+SensorInstance, ItemPtr -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp881 106 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnIoControl
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp788 95 "%0PROX SAR%10!d! %!FUNC! Sensor(%11!08p!) I2C Sensor Write Register Failed %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnIoControl
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+SensorInstance, ItemPtr -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp785 94 "%0SAR%10!d! Going to Write to Reg: 0x%11!02x! with Value: 0x%12!02x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::OnIoControl
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+registerConfig->Register, ItemLong -- 11
+registerConfig->Value, ItemLong -- 12
+}
+#typev client_cpp816 101 "%0PROX SAR%10!d! %!FUNC! Sensor(%11!08p!) I2C Sensor Read Register Failed %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnIoControl
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+SensorInstance, ItemPtr -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp812 100 "%0SAR%10!d! We Should see Reg: 0x%11!02x! with Value: 0x%12!02x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::OnIoControl
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+registerConfig->Register, ItemLong -- 11
+registerConfig->Value, ItemLong -- 12
+}
+#typev client_cpp808 99 "%0PROX SAR%10!d! %!FUNC! Sensor(%11!08p!) Request for Output Buffer Failed %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnIoControl
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+SensorInstance, ItemPtr -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp805 98 "%0SAR%10!d! We Read Reg: 0x%11!02x! with Value: 0x%12!02x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::OnIoControl
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+readRegisterData.Register, ItemLong -- 11
+readRegisterData.Value, ItemLong -- 12
+}
+#typev client_cpp800 97 "%0SAR%10!d! Going to Read Reg: 0x%11!02x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::OnIoControl
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+registerConfig->Register, ItemLong -- 11
+}
+#typev client_cpp871 105 "%0PROX SAR%10!d! %!FUNC! Sensor(%11!08p!) I2C Sensor Write/Read Registers (for Raw Data) Failed %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnIoControl
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+SensorInstance, ItemPtr -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp865 104 "%0PROX SAR%10!d! %!FUNC! Sensor(%11!08p!) Request for Output Buffer Failed %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnIoControl
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+SensorInstance, ItemPtr -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp857 103 "%0SAR%10!d! Channel: %11!d! USE: %12!d! AVG: %13!d! DIFF: %14!d! OFFSET: %15!d! SARTHRESH: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::OnIoControl
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+rawData.Channel, ItemLong -- 11
+rawData.Useful, ItemLong -- 12
+rawData.Average, ItemLong -- 13
+rawData.Diff, ItemLong -- 14
+rawData.Offset, ItemLong -- 15
+rawData.SarThresh, ItemLong -- 16
+}
+#typev client_cpp828 102 "%0SAR%10!d! Going to Read Channel: 0x%11!02x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::OnIoControl
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+rawData.Channel, ItemLong -- 11
+}
+#typev client_cpp774 93 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnIoControl
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp773 92 "%0PROX %!FUNC! Sensor(%10!08p!) parameter is invalid %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnIoControl
+{
+SensorInstance, ItemPtr -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp766 91 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::OnIoControl
+{
+}
+#typev client_cpp651 79 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnSetDataInterval
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp639 77 "%0PROX %!FUNC! Invalid parameters! %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnSetDataInterval
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev client_cpp643 78 "%0PROX SAR%10!d! %!FUNC! Setting Data Rate Interval to %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnSetDataInterval
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+DataRateMs, ItemLong -- 11
+}
+#typev client_cpp632 76 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::OnSetDataInterval
+{
+}
+#typev client_cpp751 90 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnSetDataThresholds
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp748 89 "%0PROX SAR%10!d! %!FUNC! PropKeyFindKeyGetFloat for Touch failed! %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnSetDataThresholds
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp737 88 "%0PROX SAR%10!d! %!FUNC! SX932x does NOT have threshold for this data field. Failed %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnSetDataThresholds
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp726 87 "%0PROX %!FUNC! Sensor(%10!p!) parameter is invalid %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnSetDataThresholds
+{
+SensorInstance, ItemPtr -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp720 86 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::OnSetDataThresholds
+{
+}
+#typev client_cpp341 44 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnStart
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp336 43 "%0PROX SAR%10!d! %!FUNC! Failed to GetData() OnStart! %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnStart
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp322 42 "%0PROX SAR%10!d! %!FUNC! I2CSensorWriteRegister to 0x%11!02x! with value 0x%12!02x! is successful ! %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::OnStart
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+RegisterSetting.Register, ItemLong -- 11
+RegisterSetting.Value, ItemLong -- 12
+Status, ItemNTSTATUS -- 13
+}
+#typev client_cpp318 41 "%0PROX SAR%10!d! %!FUNC! I2CSensorWriteRegister to 0x%11!02x! with value 0x%12!02x! failed! %13!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnStart
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+RegisterSetting.Register, ItemLong -- 11
+RegisterSetting.Value, ItemLong -- 12
+Status, ItemNTSTATUS -- 13
+}
+#typev client_cpp313 40 "%0PROX SAR%10!d! %!FUNC! I2CSensorReadRegister from 0x%11!02x! is successful ! %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::OnStart
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+SX932x_IRQSTAT_REG, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp309 39 "%0PROX SAR%10!d! %!FUNC! I2CSensorReadRegister to 0x%11!02x! failed! %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnStart
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+SX932x_IRQSTAT_REG, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp293 38 "%0PROX SAR%10!d! %!FUNC! Sensor is not powered on! %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnStart
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp288 37 "%0PROX %!FUNC! Sensor(%10!08p!) parameter is invalid %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnStart
+{
+SensorInstance, ItemPtr -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp281 36 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::OnStart
+{
+}
+#typev client_cpp398 51 "%0 SENSOR %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=Status FUNC=_SX932xProxDevice::OnStop
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev client_cpp390 50 "%0PROX SAR%10!d! %!FUNC! I2CSensorReadRegister from 0x%11!02x! is successful ! %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::OnStop
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+SX932x_IRQSTAT_REG, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp386 49 "%0PROX SAR%10!d! %!FUNC! I2CSensorReadRegister from 0x%11!02x! failed! %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnStop
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+SX932x_IRQSTAT_REG, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp380 48 "%0PROX SAR%10!d! %!FUNC! I2CSensorWriteRegister to 0x%11!02x! with value 0x%12!02x! is successful ! %13!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Information FUNC=_SX932xProxDevice::OnStop
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+RegisterSetting.Register, ItemLong -- 11
+RegisterSetting.Value, ItemLong -- 12
+Status, ItemNTSTATUS -- 13
+}
+#typev client_cpp375 47 "%0PROX SAR%10!d! %!FUNC! I2CSensorWriteRegister to 0x%11!02x! failed! %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnStop
+{
+(pProxDevice->m_HWID + 1), ItemLong -- 10
+RegisterSetting.Register, ItemLong -- 11
+Status, ItemNTSTATUS -- 12
+}
+#typev client_cpp358 46 "%0PROX %!FUNC! Sensor(%10!p!) parameter is invalid %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Error FUNC=_SX932xProxDevice::OnStop
+{
+SensorInstance, ItemPtr -- 10
+Status, ItemNTSTATUS -- 11
+}
+#typev client_cpp351 45 "%0 SENSOR %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=_SX932xProxDevice::OnStop
+{
+}

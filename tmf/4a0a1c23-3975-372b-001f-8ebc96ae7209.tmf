@@ -1,0 +1,54 @@
+// PDB:  qchwnled7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+4a0a1c23-3975-372b-001f-8ebc96ae7209 latest // SRC=hwnledstatemachine.c MJ= MN=
+#typev hwnledstatemachine_c351 20 "%0(-) HwnConfigDisablePWM, HwnId: %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DRIVER FUNC=HwnConfigDisablePWM
+{
+hwnId, ItemLong -- 10
+}
+#typev hwnledstatemachine_c347 19 "%0HwnConfigDisablePWM failed, HwnId = %10!d!, requested state = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=HwnConfigDisablePWM
+{
+hwnId, ItemLong -- 10
+threadContext->ThreadRequestedState.OffOnBlink, ItemLong -- 11
+}
+#typev hwnledstatemachine_c315 18 "%0(-) HwnConfigPWM, HwnId: %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DRIVER FUNC=HwnConfigPWM
+{
+hwnId, ItemLong -- 10
+}
+#typev hwnledstatemachine_c311 17 "%0HwnConfigPWM failed, HwnId = %10!d!, requested state = %11!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=HwnConfigPWM
+{
+hwnId, ItemLong -- 10
+threadContext->ThreadRequestedState.OffOnBlink, ItemLong -- 11
+}
+#typev hwnledstatemachine_c117 10 "%0HwnLedBlinkTimerFunc: HwnId = %10!d!, Disabling PWM" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=HwnLedBlinkTimerFunc
+{
+idx, ItemLong -- 10
+}
+#typev hwnledstatemachine_c232 16 "%0HwnLedDutyCycleTimerFunc: Turned off LED, HwnId: %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DRIVER FUNC=HwnLedDutyCycleTimerFunc
+{
+idx, ItemLong -- 10
+}
+// PDB:  qchwnled7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev hwnledstatemachine_c229 15 "%0HwnLedDutyCycleTimerFunc: Could not turn OFF LED, HwnId: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=HwnLedDutyCycleTimerFunc
+{
+idx, ItemLong -- 10
+}
+// PDB:  qchwnled7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev hwnledstatemachine_c203 14 "%0HwnLedPeriodTimerFunc: HwnId = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_DRIVER FUNC=HwnLedPeriodTimerFunc
+{
+idx, ItemLong -- 10
+}
+#typev hwnledstatemachine_c194 13 "%0HwnLedPeriodTimerFunc: Could not turn ON LED, HwnId: %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=HwnLedPeriodTimerFunc
+{
+idx, ItemLong -- 10
+}
+// PDB:  qchwnled7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev hwnledstatemachine_c166 12 "%0HwnLedSyncBlinkTimerFunc: HwnId = %10!d!, shutting down the sync blink" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_DRIVER FUNC=HwnLedSyncBlinkTimerFunc
+{
+idx, ItemLong -- 10
+}
+#typev hwnledstatemachine_c162 11 "%0HwnLedSyncBlinkTimerFunc: Failed to disable syncblink" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_DRIVER FUNC=HwnLedSyncBlinkTimerFunc
+{
+}

@@ -1,0 +1,248 @@
+// PDB:  qcadsprpc7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:878 (UTC) [tracepdb]
+b31d7a70-7759-35a2-7df7-68f6d2d4bdda driver // SRC=adsprpc_vcm_stage2.c MJ= MN=
+#typev adsprpc_vcm_stage2_c822 48 "%0AwaitTrEEInterface: EXIT." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=AwaitTrEEInterface
+{
+}
+#typev adsprpc_vcm_stage2_c819 47 "%0AwaitTrEEInterface: Successfully subscribed for TrEE interface." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=AwaitTrEEInterface
+{
+}
+#typev adsprpc_vcm_stage2_c816 46 "%0AwaitTrEEInterface: Failure subscribing to TrEE interface(error code:0x%10!x!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=AwaitTrEEInterface
+{
+status, ItemLong -- 10
+}
+#typev adsprpc_vcm_stage2_c802 45 "%0AwaitTrEEInterface: ENTER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=AwaitTrEEInterface
+{
+}
+#typev adsprpc_vcm_stage2_c177 17 "%0%10!s!: failed with status:%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCGetChannelRegistryInfo
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c173 16 "%0%10!s!: closing subKey:" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCGetChannelRegistryInfo
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c139 15 "%0%10!s!: WdfMemoryGetBuffer returned NULL size" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCGetChannelRegistryInfo
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c135 14 "%0%10!s!: WdfRegistryQueryMemory returned status:%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCGetChannelRegistryInfo
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c131 13 "%0%10!s!: WdfRegistryOpenKey returned status:%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCGetChannelRegistryInfo
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c127 12 "%0%10!s!: WdfDeviceOpenRegistryKey returned status:%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCGetChannelRegistryInfo
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c864 49 "%0FastRPC Failed to attach to Tree Interface with status:0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCOpenTreeTarget
+{
+status, ItemLong -- 10
+}
+#typev adsprpc_vcm_stage2_c106 11 "%0FastRPCSmmuCallback failed with Status:%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCSmmuCallback
+{
+status, ItemLong -- 10
+}
+#typev adsprpc_vcm_stage2_c99 10 "%0FastRPCSmmuCallback: FSR:0x%10!x!, FaultAddress:0x%11!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCSmmuCallback
+{
+fInfo.FsrRaw, ItemLong -- 10
+(UINT_PTR)fInfo.FaultAddrReg, ItemLongLongX -- 11
+}
+#typev adsprpc_vcm_stage2_c1340 52 "%0Freeing MDL:%10!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCUnMapContigBufs
+{
+buf->Mdl, ItemPtr -- 10
+}
+#typev adsprpc_vcm_stage2_c1335 51 "%0Unmapping buf:%10!p! from listbufs" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCUnMapContigBufs
+{
+buf, ItemPtr -- 10
+}
+#typev adsprpc_vcm_stage2_c352 23 "%0FastRPC VcmDeInit failed with status:%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCVcmDeinit
+{
+status, ItemLong -- 10
+}
+#typev adsprpc_vcm_stage2_c673 32 "%0FastRPCVcmGetAddr: fileContext:0x%10!p! Locked nSize:0x%11!I64x! nPages:0x%12!x! virtAddr:%13!p! pMdl:%14!p! PhyAddr:0x%15!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmGetAddr
+{
+fileContext, ItemPtr -- 10
+smqPage->nSize, ItemLongLongX -- 11
+nNum, ItemLong -- 12
+MmGetMdlVirtualAddress(pMdl), ItemPtr -- 13
+pMdl, ItemPtr -- 14
+smqPage->PhysAddr, ItemLongLongX -- 15
+}
+#typev adsprpc_vcm_stage2_c684 33 "%0FastRPCVcmGetAddr: fileContext:0x%10!p! Failed to map nSize:0x%11!I64x! nPages:0x%12!x! virtAddr:%13!p! pMdl:%14!p! PhyAddr/IPA:0x%15!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCVcmGetAddr
+{
+fileContext, ItemPtr -- 10
+smqPage->nSize, ItemLongLongX -- 11
+nNum, ItemLong -- 12
+MmGetMdlVirtualAddress(pMdl), ItemPtr -- 13
+pMdl, ItemPtr -- 14
+smqPage->PhysAddr, ItemLongLongX -- 15
+}
+#typev adsprpc_vcm_stage2_c610 31 "%0FastRPCVcmGetAddr:  fileContext:0x%10!p! Mapped nSize:0x%11!I64x! nPages:%12!d!ulResId:0x%13!I64x! virtAddr:0x%14!p! pMdl:0x%15!p! IPA:0x%16!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmGetAddr
+{
+fileContext, ItemPtr -- 10
+smqPage->nSize, ItemLongLongX -- 11
+nNum, ItemLong -- 12
+ulResId, ItemLongLongX -- 13
+MmGetMdlVirtualAddress(pMdl), ItemPtr -- 14
+pMdl, ItemPtr -- 15
+smqPage->PhysAddr, ItemLongLongX -- 16
+}
+#typev adsprpc_vcm_stage2_c308 22 "%0FastRPC VcmInit failed with status:%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCVcmInit
+{
+status, ItemLong -- 10
+}
+#typev adsprpc_vcm_stage2_c272 21 "%0FastRPCVcmInit: Do not apply the SW WA, vcm_start_address: 0x%10!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmInit
+{
+vcm_start_address, ItemLongLongX -- 10
+}
+#typev adsprpc_vcm_stage2_c268 20 "%0FastRPCVcmInit: The Version is v1! vcm_start_address: 0x%10!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmInit
+{
+vcm_start_address, ItemLongLongX -- 10
+}
+#typev adsprpc_vcm_stage2_c264 19 "%0FastRPCVcmInit: The Version is v2!vcm_start_address :0x%10!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmInit
+{
+vcm_start_address, ItemLongLongX -- 10
+}
+#typev adsprpc_vcm_stage2_c262 18 "%0FastRPCVcmInit: The Chip is SDM1000" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmInit
+{
+}
+#typev adsprpc_vcm_stage2_c423 25 "%0FastRPCVcmMap: fileContext:0x%10!p! failed to reserve memory of nSize:%11!Id! nPages:%12!Iu! withulResId:0x%13!I64x! virtAddr:0x%14!p! pMdl:0x%15!p! with status:0x%16!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCVcmMap
+{
+fileContext, ItemPtr -- 10
+nSize, ItemPtr -- 11
+nPages, ItemPtr -- 12
+ulResId, ItemLongLongX -- 13
+pAddr, ItemPtr -- 14
+pMdl, ItemPtr -- 15
+status, ItemLong -- 16
+}
+#typev adsprpc_vcm_stage2_c417 24 "%0FastRPCVcmMap: fileContext:0x%10!p! Reserved nSize:%11!Id! nPages:%12!Iu! ulResId:0x%13!I64x! virtAddr:0x%14!p! pMdl:0x%15!p!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmMap
+{
+fileContext, ItemPtr -- 10
+nSize, ItemPtr -- 11
+nPages, ItemPtr -- 12
+ulResId, ItemLongLongX -- 13
+pAddr, ItemPtr -- 14
+pMdl, ItemPtr -- 15
+}
+#typev adsprpc_vcm_stage2_c555 30 "%0FastRPCVcmUnmap: fileContext:0x%10!p! status:0x%11!x! Failed to unmap nSize:0x%12!I64x! nPages:0x%13!x! virtAddr:0x%14!p! pMdl:0x%15!p! PhyAddr:0x%16!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCVcmUnmap
+{
+fileContext, ItemPtr -- 10
+status, ItemLong -- 11
+nSize, ItemLongLongX -- 12
+nNum, ItemLong -- 13
+MmGetMdlVirtualAddress(pMdl), ItemPtr -- 14
+pMdl, ItemPtr -- 15
+PhysAddr, ItemLongLongX -- 16
+}
+#typev adsprpc_vcm_stage2_c545 28 "%0FastRPCVcmUnmap: fileContext:0x%10!p! unlocked ulResId:0x%11!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmUnmap
+{
+fileContext, ItemPtr -- 10
+ulResId, ItemLongLongX -- 11
+}
+#typev adsprpc_vcm_stage2_c534 27 "%0FastRPCVcmUnmap: fileContext:0x%10!p! unlocked nSize:0x%11!I64x! nPages:0x%12!x! virtAddr:0x%13!p! pMdl:0x%14!p! PhyAddr:0x%15!I64x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=FastRPCVcmUnmap
+{
+fileContext, ItemPtr -- 10
+nSize, ItemLongLongX -- 11
+nNum, ItemLong -- 12
+MmGetMdlVirtualAddress(pMdl), ItemPtr -- 13
+pMdl, ItemPtr -- 14
+PhysAddr, ItemLongLongX -- 15
+}
+#typev adsprpc_vcm_stage2_c551 29 "%0FastRPCVcmUnmap:fileContext:0x%10!p! status:0x%11!x! Failed to unmap ulResId:0x%12!I64x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCVcmUnmap
+{
+fileContext, ItemPtr -- 10
+status, ItemLong -- 11
+ulResId, ItemLongLongX -- 12
+}
+#typev adsprpc_vcm_stage2_c502 26 "%0FastRPCVcmUnmap: !buf->lock NOT calling into FastRPCHypAssignPhys" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=FastRPCVcmUnmap
+{
+}
+#typev adsprpc_vcm_stage2_c791 44 "%0TrEEInterfaceNotificationCB: EXIT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB
+{
+}
+#typev adsprpc_vcm_stage2_c726 35 "%0TrEEInterfaceNotificationCB: One or more input parameters are not valid, baling out..." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB
+{
+}
+#typev adsprpc_vcm_stage2_c780 43 "%0TrEEInterfaceNotificationCB: Received invalid interface notification callback (not GUID_TREE_SK_INTERFACE). returning STATUS_INVALID_PARAMETER..." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB
+{
+}
+#typev adsprpc_vcm_stage2_c772 42 "%0%10!s!: Received interface removal notification for GUID_TREE_SK_INTERFACE, stopping the queue..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c770 41 "%0%10!s!: Received interface removal notification for GUID_TREE_SK_INTERFACE, disabled fastRPC Device Interface..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c763 40 "%0%10!s!: Successfully published fastRPC interface as SK interface is available now" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c760 39 "%0%10!s!: Enabling fastRPC Device Interface " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c755 38 "%0%10!s!: Failed to create fastRPC Device Interface with status:0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c752 37 "%0%10!s!: Successfully created fastRPC Device Interface " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c737 36 "%0TrEEInterfaceNotificationCB: Received interface arrival notification for GUID_TREE_SK_INTERFACE, starting the queue..." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB
+{
+}
+#typev adsprpc_vcm_stage2_c719 34 "%0TrEEInterfaceNotificationCB: ENTER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB
+{
+}
+#typev adsprpc_vcm_stage2_c791 44 "%0TrEEInterfaceNotificationCB: EXIT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB$fin$0
+{
+}
+#typev adsprpc_vcm_stage2_c726 35 "%0TrEEInterfaceNotificationCB: One or more input parameters are not valid, baling out..." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB$fin$0
+{
+}
+#typev adsprpc_vcm_stage2_c780 43 "%0TrEEInterfaceNotificationCB: Received invalid interface notification callback (not GUID_TREE_SK_INTERFACE). returning STATUS_INVALID_PARAMETER..." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB$fin$0
+{
+}
+#typev adsprpc_vcm_stage2_c772 42 "%0%10!s!: Received interface removal notification for GUID_TREE_SK_INTERFACE, stopping the queue..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB$fin$0
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c770 41 "%0%10!s!: Received interface removal notification for GUID_TREE_SK_INTERFACE, disabled fastRPC Device Interface..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB$fin$0
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c763 40 "%0%10!s!: Successfully published fastRPC interface as SK interface is available now" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB$fin$0
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c760 39 "%0%10!s!: Enabling fastRPC Device Interface " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB$fin$0
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c755 38 "%0%10!s!: Failed to create fastRPC Device Interface with status:0x%11!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB$fin$0
+{
+__func__, ItemString -- 10
+status, ItemLong -- 11
+}
+#typev adsprpc_vcm_stage2_c752 37 "%0%10!s!: Successfully created fastRPC Device Interface " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB$fin$0
+{
+__func__, ItemString -- 10
+}
+#typev adsprpc_vcm_stage2_c737 36 "%0TrEEInterfaceNotificationCB: Received interface arrival notification for GUID_TREE_SK_INTERFACE, starting the queue..." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB$fin$0
+{
+}
+#typev adsprpc_vcm_stage2_c719 34 "%0TrEEInterfaceNotificationCB: ENTER" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DBG_SMMU FUNC=TrEEInterfaceNotificationCB$fin$0
+{
+}

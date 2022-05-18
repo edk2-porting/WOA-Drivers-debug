@@ -1,0 +1,92 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+0d9660a7-236e-337e-2671-34d00e56e9f0 src // SRC=dp_system.c MJ= MN=
+#typev dp_host_c1823 23 "%0DP%10!d!: Enabling DP controller#%11!d! clocks - Pstate set: %12!d!, status:0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_Host_Open
+{
+eDisplayID, ItemLong -- 10
+eControllerID, ItemLong -- 11
+uDPMonitorRefreshType, ItemLong -- 12
+eLocalStatus, ItemLong -- 13
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dp_system_c1018 20 "%0DP%10!d!: Connection status - polarity:%11!d!, pin_assignment:%12!d!, status:0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CheckConnectionStatus
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+(uint32)pDeviceCtx->eConnectionPolarity, ItemLong -- 11
+(uint32)pDeviceCtx->ePinAssignment, ItemLong -- 12
+(uint32)eStatus, ItemLong -- 13
+}
+#typev dp_system_c990 19 "%0DP%10!d!: Tunneled Mode - DP AUX and MainLink path is disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CheckConnectionStatus
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_system_c926 16 "%0DP%10!d!: Panel HPD never went high after %11!d!ms, ignore HPD status." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CheckConnectionStatus
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+EDP_HPD_ENABLE_WAIT_TIME_MS, ItemLong -- 11
+}
+#typev dp_system_c881 15 "%0DP%10!d!: Panel is in simulation mode, ignoring HPD check." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_CheckConnectionStatus
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_system_c1737 25 "%0DP%10!d!: DP_GetDisplayContainerGUID() eStatus = 0x%11!x! : Display Container GUID {%12!4x!-%13!2x!-%14!2x!-%15!x!%16!x!%17!x!%18!x!%19!x!%20!x!%21!x!%22!x!}" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_GetDisplayContainerGUID
+{
+eDisplayId, ItemLong -- 10
+eStatus, ItemLong -- 11
+((GUID*)pGUID)->Data1, ItemLong -- 12
+((GUID*)pGUID)->Data2, ItemLong -- 13
+((GUID*)pGUID)->Data3, ItemLong -- 14
+((GUID*)pGUID)->Data4[0], ItemLong -- 15
+((GUID*)pGUID)->Data4[1], ItemLong -- 16
+((GUID*)pGUID)->Data4[2], ItemLong -- 17
+((GUID*)pGUID)->Data4[3], ItemLong -- 18
+((GUID*)pGUID)->Data4[4], ItemLong -- 19
+((GUID*)pGUID)->Data4[5], ItemLong -- 20
+((GUID*)pGUID)->Data4[6], ItemLong -- 21
+((GUID*)pGUID)->Data4[7], ItemLong -- 22
+}
+#typev dp_system_c365 11 "%0DP%10!d!: Parking DP link clock ID %11!d! on CXO" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_LinkClockEnable
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+sClockSource.eClockId, ItemLong -- 11
+}
+#typev dp_system_c354 10 "%0DP%10!d!: Setting clock source for DP link clock ID %11!d!, freq = %12!d!hz" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_LinkClockEnable
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+sClockSource.eClockId, ItemLong -- 11
+sClockSource.uFrequencyHz, ItemLong -- 12
+}
+#typev dp_system_c456 12 "%0DP%10!d!: Setting clock source for DP pixel clock ID %11!d!, freq = %12!d!hz" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_PixelClockEnable
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+sClockSource.eClockId, ItemLong -- 11
+sClockSource.uFrequencyHz, ItemLong -- 12
+}
+#typev dp_system_c1247 21 "%0DP: DP_ReadRegKeyUint32- Reg key type=%10!d!, Reg value read=%11!d!, status=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_ReadRegKeyUint32
+{
+eRegKeyType, ItemLong -- 10
+uRegKeyValue, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_system_c780 13 "%0DP%10!d!: Failed to acquire AUX connection handle" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_SetAuxPolarityGPIO
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+}
+#typev dp_system_c784 14 "%0DP%10!d!: Failed to set GPIO status to level %11!d! with status(0x%12!x!)!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_SetAuxPolarityGPIO
+{
+pStreamCtx->eDisplayID, ItemLong -- 10
+uGpioValue, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dp_system_c1286 22 "%0DP%10!d!: Generating soft HPD-%11!s!, status: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_SoftHPDInterrupt
+{
+eDisplayId, ItemLong -- 10
+(TRUE==bPlugIn)?'in':'out', ItemString -- 11
+eQDIStatus, ItemLong -- 12
+}
+#typev dp_system_c1565 24 "%0DP%10!d!: Parking DP pixel clock ID:%11!d! on CXO" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=ParkPixelClock
+{
+eDisplayID, ItemLong -- 10
+sClockSource.eClockId, ItemLong -- 11
+}

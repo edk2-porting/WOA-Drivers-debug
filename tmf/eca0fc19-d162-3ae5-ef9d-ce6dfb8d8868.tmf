@@ -1,0 +1,117 @@
+// PDB:  qcaucd7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+eca0fc19-d162-3ae5-ef9d-ce6dfb8d8868 vcxproj // SRC=GPIOManager.c MJ= MN=
+#typev GPIOManager_c316 34 "%0CodecDr:GPIOConfig: GPIO Value %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GPIOConfig
+{
+*value, ItemPtr -- 10
+}
+#typev GPIOManager_c257 28 "%0CodecDr:GPIOConfig: ReadGPIO failed with status 0x%10!Ix!n" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GPIOConfig
+{
+status, ItemPtr -- 10
+}
+#typev GPIOManager_c307 32 "%0CodecDr:GPIOConfig: GPIOUID %10!Iu! Type %11!Iu!, index %12!Iu!, CurrentState %13!Id!, setvalue %14!Id! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=GPIOConfig
+{
+GPIOUID, ItemPtr -- 10
+GPIOType, ItemPtr -- 11
+GPIOIndex, ItemPtr -- 12
+GPIOInfo[GPIOIndex].CurrentState, ItemPtr -- 13
+*value, ItemPtr -- 14
+}
+#typev GPIOManager_c302 31 "%0CodecDr:GPIOConfig: SwitchGPIO failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GPIOConfig
+{
+status, ItemPtr -- 10
+}
+#typev GPIOManager_c268 29 "%0CodecDr:GPIOConfig: failed, GPIO in unknown state, can`t flip GPIO, status 0x%10!Ix! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GPIOConfig
+{
+status, ItemPtr -- 10
+}
+#typev GPIOManager_c293 30 "%0CodecDr:GPIOConfig: GPIOValue not supported" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GPIOConfig
+{
+}
+#typev GPIOManager_c311 33 "%0CodecDr:GPIOConfig: GPIOType not supported" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GPIOConfig
+{
+}
+#typev GPIOManager_c249 27 "%0CodecDr:GPIOConfig: GPIOUID %10!Iu! Type %11!Iu!, index %12!Iu!, CurrentState %13!Id!, setvalue %14!Id! " //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=GPIOConfig
+{
+GPIOUID, ItemPtr -- 10
+GPIOType, ItemPtr -- 11
+GPIOIndex, ItemPtr -- 12
+GPIOInfo[GPIOIndex].CurrentState, ItemPtr -- 13
+*value, ItemPtr -- 14
+}
+#typev GPIOManager_c244 26 "%0CodecDr:GPIOConfig: GetGPIOIndex failed for GPIOUID %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GPIOConfig
+{
+GPIOUID, ItemPtr -- 10
+}
+#typev GPIOManager_c196 23 "%0CodecDr:GPIOEvtRemoveComplete called for IOTarget %10!p!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GPIOEvtRemoveComplete
+{
+IoTarget, ItemPtr -- 10
+}
+#typev GPIOManager_c224 25 "%0CodecDr:GPIOInit: OsalConnectToDevice failed with status 0x%10!Ix! for GPIO Index 0x%11!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=GPIOInit
+{
+status, ItemPtr -- 10
+i, ItemPtr -- 11
+}
+#typev GPIOManager_c215 24 "%0CodecDr:GPIOInit, Entering method " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=GPIOInit
+{
+}
+#typev GPIOManager_c48 10 "%0CodecDr: GetGPIOIndex returning with Index %10!d! for GPIOUID %11!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=GetGPIOIndex
+{
+Index, ItemLong -- 10
+GPIOUID, ItemPtr -- 11
+}
+#typev GPIOManager_c82 13 "%0CodecDr:ReadGPIO: ReadFromDevice failed for resource id %10!Iu! with status 0x%11!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ReadGPIO
+{
+GPIOInfo[Index].UID, ItemPtr -- 10
+status, ItemPtr -- 11
+}
+#typev GPIOManager_c79 11 "%0CodecDr:WriteToDevice: OsalSendIoctl IOCTL_GPIO_READ_PINS failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ReadGPIO
+{
+status, ItemPtr -- 10
+}
+#typev GPIOManager_c74 12 "%0CodecDr:ReadGPIO: GetGPIOIndex failed for GPIOUID %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=ReadGPIO
+{
+GPIOUID, ItemPtr -- 10
+}
+#typev GPIOManager_c155 22 "%0CodecDr:SwitchGPIO: Switch check failed for GPIOUID %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SwitchGPIO
+{
+GPIOUID, ItemPtr -- 10
+}
+#typev GPIOManager_c144 21 "%0CodecDr:SwitchGPIO: Write to device failed for resource id %10!Iu! with status 0x%11!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SwitchGPIO
+{
+GPIOInfo[Index].UID, ItemPtr -- 10
+status, ItemPtr -- 11
+}
+#typev GPIOManager_c139 20 "%0CodecDr:SwitchGPIO: Actually switching off GPIO" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SwitchGPIO
+{
+}
+#typev GPIOManager_c136 19 "%0CodecDr:SwitchGPIO: Index %10!Iu!, GPIOUID %11!Iu!, Switch %12!Id! GPIOInfo[Index].UseCount %13!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SwitchGPIO
+{
+Index, ItemPtr -- 10
+GPIOUID, ItemPtr -- 11
+Switch, ItemPtr -- 12
+GPIOInfo[Index].UseCount, ItemPtr -- 13
+}
+#typev GPIOManager_c128 18 "%0CodecDr:SwitchGPIO: Write to device failed for resource id %10!Iu! with status 0x%11!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SwitchGPIO
+{
+GPIOInfo[Index].UID, ItemPtr -- 10
+status, ItemPtr -- 11
+}
+#typev GPIOManager_c123 17 "%0CodecDr:SwitchGPIO: Actually switching on GPIO" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SwitchGPIO
+{
+}
+#typev GPIOManager_c120 16 "%0CodecDr:SwitchGPIO: Index %10!Iu!, GPIOUID %11!Iu!, Switch %12!Id! GPIOInfo[Index].UseCount %13!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=SwitchGPIO
+{
+Index, ItemPtr -- 10
+GPIOUID, ItemPtr -- 11
+Switch, ItemPtr -- 12
+GPIOInfo[Index].UseCount, ItemPtr -- 13
+}
+#typev GPIOManager_c113 15 "%0CodecDr:SwitchGPIO: GetGPIOIndex failed for GPIOUID %10!Iu!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=SwitchGPIO
+{
+GPIOUID, ItemPtr -- 10
+}
+#typev GPIOManager_c98 14 "%0CodecDr:WriteToDevice: OsalSendIoctl IOCTL_GPIO_WRITE_PINS failed with status 0x%10!Ix!" //   IFRLOG=IFR_LOG_HANDLE LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WriteToDevice
+{
+status, ItemPtr -- 10
+}

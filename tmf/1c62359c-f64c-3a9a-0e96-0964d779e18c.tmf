@@ -1,0 +1,63 @@
+// PDB:  qcaudminiport7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+1c62359c-f64c-3a9a-0e96-0964d779e18c latest // SRC=AdspHelper.cpp MJ= MN=
+#typev AdspHelper_cpp1433 19 "%0%!FUNC! AudioEffectId = %10!d! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCAUDRT_INFO FUNC=CAdspHelper::ConvertFxGuidToAudioEffect
+{
+AudioEffectId, ItemLong -- 10
+}
+#typev AdspHelper_cpp477 15 "%0CAdspStream::ExtractFromDspBuffer StreamType %10!d! BufferSize %11!d!, handle %12!p!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QCAUDRT_VERBOSE FUNC=CAdspHelper::ExtractFromDspBuffer
+{
+streamType, ItemLong -- 10
+(pDspBufferInfo->BuffInfo).Size, ItemLong -- 11
+(pDspBufferInfo->BuffInfo).Handle, ItemPtr -- 12
+}
+#typev AdspHelper_cpp587 17 "%0CAdspStream::ExtractFromDspBufferMetaData BufferSize %10!d!, BufferDataSize %11!d!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QCAUDRT_VERBOSE FUNC=CAdspHelper::ExtractFromDspBufferMetaData
+{
+pDspBufferMetaData->BuffSize, ItemLong -- 10
+pDspBufferMetaData->BufferDataSize, ItemLong -- 11
+}
+#typev AdspHelper_cpp1118 18 "%0CAdspHelper::GetChMask: pDspChannelMask[%10!ld!] = %11!d! " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCAUDRT_INFO FUNC=CAdspHelper::GetChMask
+{
+iChannel, ItemLong -- 10
+pDspChannelMask[iChannel], ItemLong -- 11
+}
+#typev AdspHelper_cpp254 11 "%0EncInfo: Type SBC, SamplePerSecond 0x%10!08X!, BitsPerSecond %11!d!, ChannelMode 0x%12!08X!, BlockLength 0x%13!08X!, NumSubBands 0x%14!08X!, AllocMethod 0x%15!08X!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCAUDRT_INFO FUNC=CAdspHelper::GetEncoderInfo
+{
+pEncFmt->u.Sbc.SamplePerSecond, ItemLong -- 10
+pEncFmt->u.Sbc.BitsPerSecond, ItemLong -- 11
+pEncFmt->u.Sbc.ChannelMode, ItemLong -- 12
+pEncFmt->u.Sbc.BlockLength, ItemLong -- 13
+pEncFmt->u.Sbc.NumSubBands, ItemLong -- 14
+pEncFmt->u.Sbc.AllocMethod, ItemLong -- 15
+}
+#typev AdspHelper_cpp266 12 "%0EncInfo: Type AAC, SamplePerSecond 0x%10!08X!, BitsPerSecond %11!d!, ChannelConfig 0x%12!08X!, AACFmtFlag 0x%13!08X!, EncoderMode 0x%14!08X!, FrameSizeControlValue 0x%15!08X!, BitRateMode 0x%16!08X!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCAUDRT_INFO FUNC=CAdspHelper::GetEncoderInfo
+{
+pEncFmt->u.AacV1.SamplePerSecond, ItemLong -- 10
+pEncFmt->u.AacV1.BitsPerSecond, ItemLong -- 11
+pEncFmt->u.AacV1.ChannelConfig, ItemLong -- 12
+pEncFmt->u.AacV1.AacFmtFlag, ItemLong -- 13
+pEncFmt->u.AacV1.EncoderMode, ItemLong -- 14
+pEncFmt->u.AacV1.FrameSizeControlValue, ItemLong -- 15
+pEncFmt->u.AacV1.BitRateMode, ItemLong -- 16
+}
+#typev AdspHelper_cpp278 14 "%0EncInfo: ChannelType[%10!d!] 0x%11!08X!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCAUDRT_INFO FUNC=CAdspHelper::GetEncoderInfo
+{
+i, ItemLong -- 10
+pEncFmt->u.Aptx.ChannelType[i], ItemLong -- 11
+}
+#typev AdspHelper_cpp273 13 "%0EncInfo: Type APTX, SamplePerSecond 0x%10!08X!, NumChannels 0x%11!08X!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCAUDRT_INFO FUNC=CAdspHelper::GetEncoderInfo
+{
+pEncFmt->u.Aptx.SamplePerSecond, ItemLong -- 10
+pEncFmt->u.Aptx.NumChannels, ItemLong -- 11
+}
+#typev AdspHelper_cpp44 10 "%0CAdspHelper GetInstance " //   IFRLOG=NULL LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QCAUDRT_INFO FUNC=CAdspHelper::GetInstance
+{
+}
+// PDB:  qcaudminiport7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev ListenSession_cpp522 15 "%0CAdspStream::ExtractFromDspBuffer StreamType %10!d! BufferSize %11!d!, handle %12!p!" //   IFRLOG=NULL LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QCAUDRT_VERBOSE FUNC=CListenSession::AllocateLABBuffer
+{
+streamType, ItemLong -- 10
+(pDspBufferInfo->BuffInfo).Size, ItemLong -- 11
+(pDspBufferInfo->BuffInfo).Handle, ItemPtr -- 12
+}

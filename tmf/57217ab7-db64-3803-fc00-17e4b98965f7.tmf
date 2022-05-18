@@ -1,0 +1,132 @@
+// PDB:  qcSensors.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+57217ab7-db64-3803-fc00-17e4b98965f7 qcSensors // SRC=sensor_factory.cpp MJ= MN=
+#typev sensor_factory_cpp157 29 "%0 %!FUNC! : event[%10!d!] msg_id=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=<lambda_e309c6b0e673ed1f07ff20a7027e898d>::operator()
+{
+i, ItemLong -- 10
+pb_event.msg_id(), ItemLong -- 11
+}
+#typev sensor_factory_cpp52 13 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=sensor_factory::InsertSuidIntoQueue
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev sensor_factory_cpp47 12 "%0 %!FUNC! : Pushing data to queue datatype %10!s! suid hi 0x%11!I64x! suid lo 0x%12!I64x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=sensor_factory::InsertSuidIntoQueue
+{
+qdata->m_qDatatype.c_str(), ItemString -- 10
+qdata->m_qSuid.high, ItemLongLongX -- 11
+qdata->m_qSuid.low, ItemLongLongX -- 12
+}
+#typev sensor_factory_cpp44 11 "%0 %!FUNC! : [ERROR] (at line - 44 ) -Failed to get sensor device context!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=sensor_factory::InsertSuidIntoQueue
+{
+}
+#typev sensor_factory_cpp36 10 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=sensor_factory::InsertSuidIntoQueue
+{
+}
+#typev sensor_factory_cpp144 27 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=sensor_factory::create_attr_request
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev sensor_factory_cpp130 26 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=sensor_factory::create_attr_request
+{
+}
+#typev sensor_factory_cpp125 25 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=sensor_factory::discover_sensors
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev sensor_factory_cpp123 24 "%0 %!FUNC! : Not waiting for suids in discover_sensors(). Lookup object is global and callbacks will come dynamically*****" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=sensor_factory::discover_sensors
+{
+}
+#typev sensor_factory_cpp119 23 "%0 %!FUNC! : requesting %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=sensor_factory::discover_sensors
+{
+dt.c_str(), ItemString -- 10
+}
+#typev sensor_factory_cpp116 22 "%0 %!FUNC! : discovering available sensors..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=sensor_factory::discover_sensors
+{
+}
+#typev sensor_factory_cpp113 21 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=sensor_factory::discover_sensors
+{
+}
+#typev sensor_factory_cpp235 42 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_UNSUCCESSFUL FUNC=sensor_factory::get_suids
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev sensor_factory_cpp230 41 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=sensor_factory::get_suids
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev sensor_factory_cpp225 40 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=sensor_factory::get_suids
+{
+}
+#typev sensor_factory_cpp220 39 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=sensor_factory::handle_attribute_event
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev sensor_factory_cpp216 38 "%0 %!FUNC! : handle_attribute_event _pending_attributes = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=sensor_factory::handle_attribute_event
+{
+_pendingAttributes, ItemLong -- 10
+}
+#typev sensor_factory_cpp201 37 "%0 %!FUNC! : Suid = 0x%10!I64x! 0x%11!I64x! 
+ attributes = %12!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=sensor_factory::handle_attribute_event
+{
+suid.high, ItemLongLongX -- 10
+suid.low, ItemLongLongX -- 11
+pb_attr_event.DebugString().c_str(), ItemString -- 12
+}
+#typev sensor_factory_cpp198 36 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=sensor_factory::handle_attribute_event
+{
+}
+#typev sensor_factory_cpp192 35 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=sensor_factory::retrieve_attributes
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev sensor_factory_cpp191 34 "%0 %!FUNC! : attributes received" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=sensor_factory::retrieve_attributes
+{
+}
+#typev sensor_factory_cpp186 33 "%0 %!FUNC! : [ERROR] (at line - 186 ) - timeout while waiting for attributes, pending = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=sensor_factory::retrieve_attributes
+{
+_pendingAttributes, ItemLong -- 10
+}
+#typev sensor_factory_cpp179 32 "%0 %!FUNC! : waiting for attributes..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=sensor_factory::retrieve_attributes
+{
+}
+#typev sensor_factory_cpp174 31 "%0 %!FUNC! : requesting attributes for suid 0x%10!I64x! 0x%11!I64x! _pendingAttributes=%12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=sensor_factory::retrieve_attributes
+{
+suid.high, ItemLongLongX -- 10
+suid.low, ItemLongLongX -- 11
+_pendingAttributes, ItemLong -- 12
+}
+#typev sensor_factory_cpp167 30 "%0 %!FUNC! : Not requesting attributes for suid 0" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=DEBUG_SPEW FUNC=sensor_factory::retrieve_attributes
+{
+}
+#typev sensor_factory_cpp150 28 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=sensor_factory::retrieve_attributes
+{
+}
+#typev sensor_factory_cpp108 20 "%0 %!FUNC! FunctionExit: %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit SENSOREXIT=STATUS_SUCCESS FUNC=sensor_factory::suid_callback_fn
+{
+__status, ItemNTSTATUS -- 10
+}
+#typev sensor_factory_cpp105 19 "%0 %!FUNC! : suidEvent is NULL" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=sensor_factory::suid_callback_fn
+{
+}
+#typev sensor_factory_cpp101 18 "%0 %!FUNC! : Triggering suid event from callback function _cb. status %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=sensor_factory::suid_callback_fn
+{
+evStatus, ItemLong -- 10
+}
+#typev sensor_factory_cpp95 17 "%0 %!FUNC! : Printout datatype %10!s! SUID High 0x%11!I64x! SUID low 0x%12!I64x! from _suidMap." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=sensor_factory::suid_callback_fn
+{
+datatype.c_str(), ItemString -- 10
+_suidMap.find(datatype)->second.at(suidsNum).high, ItemLongLongX -- 11
+_suidMap.find(datatype)->second.at(suidsNum).low, ItemLongLongX -- 12
+}
+#typev sensor_factory_cpp69 16 "%0 %!FUNC! : Received indication for sensor %10!s! SUID High 0x%11!I64x! SUID Low 0x%12!I64x! received from indication." //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=DEBUG_SPEW FUNC=sensor_factory::suid_callback_fn
+{
+datatype.c_str(), ItemString -- 10
+suids.at(suidsNum).high, ItemLongLongX -- 11
+suids.at(suidsNum).low, ItemLongLongX -- 12
+}
+#typev sensor_factory_cpp62 15 "%0 %!FUNC! : [ERROR] (at line - 62 ) -Failed to get sensor device context!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=DEBUG_SPEW FUNC=sensor_factory::suid_callback_fn
+{
+}
+#typev sensor_factory_cpp58 14 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=EntryExit FUNC=sensor_factory::suid_callback_fn
+{
+}

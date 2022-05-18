@@ -1,0 +1,283 @@
+// PDB:  qcpep7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:20:368 (UTC) [tracepdb]
+60bc5e98-1513-3309-3fe0-5f3f0d977c7f AOP // SRC=PepAop.c MJ= MN=
+#typev PepAop_c951 71 "%0Exit from %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=ReadSubsystemRegistry
+{
+}
+#typev PepAop_c931 70 "%0The val size is large " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=ReadSubsystemRegistry
+{
+}
+#typev PepAop_c924 69 "%0The val is not a valid string " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=ReadSubsystemRegistry
+{
+}
+#typev PepAop_c915 68 "%0Val Key under subsystem key cannot be accessed. Status =  %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=ReadSubsystemRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PepAop_c886 67 "%0The Name value size is large " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=ReadSubsystemRegistry
+{
+}
+#typev PepAop_c879 66 "%0The Name is not a valid string " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=ReadSubsystemRegistry
+{
+}
+#typev PepAop_c870 65 "%0Name key under subsystem key cannot be accessed. Status =  %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=ReadSubsystemRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PepAop_c854 64 "%0Subsystem key cannot be opened. Status =  %10!s! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=ReadSubsystemRegistry
+{
+status, ItemNTSTATUS -- 10
+}
+#typev PepAop_c794 63 "%0Entry to %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=ReadSubsystemRegistry
+{
+}
+#typev PepAop_c979 74 "%0Exit from %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=SendAoPMessagesFromCache
+{
+}
+#typev PepAop_c974 73 "%0Sending AOP message for subsystem %10!s! with value %11!s! read from the cache" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=SendAoPMessagesFromCache
+{
+ss_states[index].strName, ItemString -- 10
+ss_states[index].strVal, ItemString -- 11
+}
+#typev PepAop_c956 72 "%0Entry to %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=SendAoPMessagesFromCache
+{
+}
+#typev PepAop_c650 43 "%0Channel setup is successful " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=connect
+{
+}
+#typev PepAop_c645 42 "%0Unable to queue rx intent. Status = %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=connect
+{
+glinkRetStatus, ItemLong -- 10
+}
+#typev PepAop_c633 41 "%0Pep Aop setup channel connection failure. Status = %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=connect
+{
+glinkRetStatus, ItemLong -- 10
+}
+#typev PepAop_c623 40 "%0Pep Aop link setup failed. Status = %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=connect
+{
+glinkRetStatus, ItemLong -- 10
+}
+#typev PepAop_c613 39 "%0Pep Aop link setup failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=connect
+{
+}
+#typev PepAop_c607 38 "%0Pep Aop setup is not yet initialized " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=connect
+{
+}
+#typev PepAop_c601 37 "%0Pep Aop setup successful " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=connect
+{
+}
+#typev PepAop_c410 21 "%0The DALSYS link_down event is created. Status = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=create_events
+{
+dalResult, ItemLong -- 10
+}
+#typev PepAop_c402 20 "%0The DALSYS link_up event is created. Status = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=create_events
+{
+dalResult, ItemLong -- 10
+}
+#typev PepAop_c394 19 "%0The DALSYS tx event is created. Status = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=create_events
+{
+dalResult, ItemLong -- 10
+}
+#typev PepAop_c385 18 "%0The DALSYS rx event is created. Status = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=create_events
+{
+dalResult, ItemLong -- 10
+}
+#typev PepAop_c377 17 "%0The DALSYS r_disconnect event is created. Status = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=create_events
+{
+dalResult, ItemLong -- 10
+}
+#typev PepAop_c368 16 "%0The DALSYS l_disconnect event is created. Status = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=create_events
+{
+dalResult, ItemLong -- 10
+}
+#typev PepAop_c360 15 "%0The DALSYS connect event is created. Status = %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=create_events
+{
+dalResult, ItemLong -- 10
+}
+#typev PepAop_c478 28 "%0The DALSYS link_down event is destroyed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=delete_events
+{
+}
+#typev PepAop_c471 27 "%0The DALSYS link_up event is destroyed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=delete_events
+{
+}
+#typev PepAop_c463 26 "%0The DALSYS tx event is destroyed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=delete_events
+{
+}
+#typev PepAop_c456 25 "%0The DALSYS rx event is destroyed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=delete_events
+{
+}
+#typev PepAop_c448 24 "%0The DALSYS r_disconnect event is destroyed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=delete_events
+{
+}
+#typev PepAop_c441 23 "%0The DALSYS l_disconnect event is destroyed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=delete_events
+{
+}
+#typev PepAop_c434 22 "%0The DALSYS connect event is destroyed" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=delete_events
+{
+}
+#typev PepAop_c583 36 "%0Glink link setup is successful " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=link
+{
+}
+#typev PepAop_c576 35 "%0unable to bring glink link up. Status = %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=link
+{
+glinkRetStatus, ItemLong -- 10
+}
+#typev PepAop_c566 34 "%0AOP Glink link registration failed. Status = %10!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=link
+{
+glinkRetStatus, ItemLong -- 10
+}
+#typev PepAop_c557 33 "%0Pep AOP state not initialized " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=link
+{
+}
+#typev PepAop_c551 32 "%0Pep Aop Link is already up " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=link
+{
+}
+#typev PepAop_c184 11 "%0The link state received is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=link_state_notification_cb
+{
+link_info->link_state, ItemLong -- 10
+}
+#typev PepAop_c227 12 "%0Rx notification is received " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=rx_notification_cb
+{
+}
+#typev PepAop_c100 10 "%0The state to be set is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=set_state
+{
+newState, ItemLong -- 10
+}
+#typev PepAop_c277 14 "%0The channel event received is %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=state_notification_cb
+{
+channelEvent, ItemLong -- 10
+}
+#typev PepAop_c261 13 "%0Tx notification is received " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=tx_notification_cb
+{
+}
+#typev PepAop_c1078 90 "%0Exit from %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopDDRCapped
+{
+}
+#typev PepAop_c1073 89 "%0Sending AOP message for capped ddr with value %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopDDRCapped
+{
+value, ItemLong -- 10
+}
+#typev PepAop_c1062 88 "%0Entry to %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopDDRCapped
+{
+}
+#typev PepAop_c1056 87 "%0Exit from %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopDDRFixed
+{
+}
+#typev PepAop_c1051 86 "%0Sending AOP message for fixed ddr with value %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopDDRFixed
+{
+value, ItemLong -- 10
+}
+#typev PepAop_c1039 85 "%0Entry to %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopDDRFixed
+{
+}
+#typev PepAop_c788 62 "%0Exit from %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopDeinit
+{
+}
+#typev PepAop_c787 61 "%0PepAop Deinit is successful " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopDeinit
+{
+}
+#typev PepAop_c775 60 "%0Entry to %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopDeinit
+{
+}
+#typev PepAop_c1156 97 "%0Exit from %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopEnableACD
+{
+}
+#typev PepAop_c1150 96 "%0Sending AOP message for Enabling GPU ACD with value %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopEnableACD
+{
+enable, ItemLong -- 10
+}
+#typev PepAop_c1136 95 "%0Entry to %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopEnableACD
+{
+}
+#typev PepAop_c696 49 "%0Exit from %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopInit
+{
+}
+#typev PepAop_c695 48 "%0PepAop Init is successful " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopInit
+{
+}
+#typev PepAop_c686 47 "%0channel connection and open failed. Status = %10!d!  " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopInit
+{
+result, ItemLong -- 10
+}
+#typev PepAop_c677 46 "%0Glink link setup failed. Status = %10!d!  " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopInit
+{
+result, ItemLong -- 10
+}
+#typev PepAop_c668 45 "%0Pep Aop setup initializaion failed. Status  " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopInit
+{
+}
+#typev PepAop_c665 31 "%0AOP Glink sync create failed  " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopInit
+{
+}
+#typev PepAop_c665 30 "%0Pep AOP state initialization failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopInit
+{
+}
+#typev PepAop_c665 29 "%0Pep AOP state is initialized " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopInit
+{
+}
+#typev PepAop_c661 44 "%0Entry to %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopInit
+{
+}
+#typev PepAop_c1129 94 "%0Exit from %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopIsSubsystemEnabled
+{
+}
+#typev PepAop_c1125 93 "%0The subsystem %10!d! is not enabled " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopIsSubsystemEnabled
+{
+mapped_subsys, ItemLong -- 10
+}
+#typev PepAop_c1120 92 "%0The subsystem %10!d! is enabled " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopIsSubsystemEnabled
+{
+mapped_subsys, ItemLong -- 10
+}
+#typev PepAop_c1084 91 "%0Entry to %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopIsSubsystemEnabled
+{
+}
+#typev PepAop_c992 76 "%0Exit from %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopReadSubsystemRegistry
+{
+}
+#typev PepAop_c984 75 "%0Entry to %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopReadSubsystemRegistry
+{
+}
+#typev PepAop_c767 59 "%0Exit from %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSendMessage
+{
+}
+#typev PepAop_c766 58 "%0The AOP message is sent successfully " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSendMessage
+{
+}
+#typev PepAop_c747 57 "%0The AOP message to be sent is %10!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSendMessage
+{
+(char*)data, ItemString -- 10
+}
+#typev PepAop_c743 56 "%0Pep AOP connection failure " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSendMessage
+{
+}
+#typev PepAop_c737 55 "%0AOP transmit connection failure " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSendMessage
+{
+}
+#typev PepAop_c731 54 "%0AOP transmit not initialized " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSendMessage
+{
+}
+#typev PepAop_c725 53 "%0AOP is busy " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSendMessage
+{
+}
+#typev PepAop_c719 52 "%0Message size is too large " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSendMessage
+{
+}
+#typev PepAop_c713 51 "%0Data is null " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSendMessage
+{
+}
+#typev PepAop_c703 50 "%0Entry to %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSendMessage
+{
+}
+#typev PepAop_c1001 78 "%0Exit from %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSubsystemHWDRIPSInit
+{
+}
+#typev PepAop_c997 77 "%0Entry to %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSubsystemHWDRIPSInit
+{
+}
+#typev PepAop_c1010 80 "%0Exit from %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSubsystemPowerStateInit
+{
+}
+#typev PepAop_c1006 79 "%0Entry to %!FUNC!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=PEP_AOP_FLAG_COMMON FUNC=PepAopSubsystemPowerStateInit
+{
+}

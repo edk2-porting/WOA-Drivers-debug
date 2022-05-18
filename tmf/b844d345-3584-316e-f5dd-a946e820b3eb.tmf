@@ -1,0 +1,45 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+b844d345-3584-316e-f5dd-a946e820b3eb RPMh // SRC=rpmh_tcs.c MJ= MN=
+#typev rpmh_tcs_c342 14 "%0!!!!TCS STUCK!!!! drv_id:%10!d! tcs_id:%11!d!" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=is_tcs_stuck
+{
+drv->drv_id, ItemLong -- 10
+tcs_id, ItemLong -- 11
+}
+#typev rpmh_tcs_c310 13 "%0		(CMD #: %10!d!) (CMD ADDRESS: 0x%11!08x!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=log_cmd_set
+{
+i, ItemLong -- 10
+cmds->details[i].address, ItemLong -- 11
+}
+#typev rpmh_tcs_c307 12 "%0	NUM_RESOURCE_COMMANDS: %10!d!" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=log_cmd_set
+{
+cmds->num_rcs, ItemLong -- 10
+}
+#typev rpmh_tcs_c304 11 "%0	CLIENT_NAME: %10!s!" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=log_cmd_set
+{
+cmds->client->name, ItemString -- 10
+}
+#typev rpmh_tcs_c301 10 "%0	REQ_ID: %10!d!" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=log_cmd_set
+{
+cmds->req_id, ItemLong -- 10
+}
+#typev rpmh_tcs_c644 15 "%0	TCS IDLE (TCS_ID: %10!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=tcs_clean_up
+{
+finished_amc->id, ItemLong -- 10
+}
+#typev rpmh_tcs_c960 18 "%0	TCS SENT (TCS INDEX: %10!d!) (TCS_ID: %11!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=tcs_send_internal
+{
+tcs_index, ItemLong -- 10
+tcs_id, ItemLong -- 11
+}
+#typev rpmh_tcs_c930 17 "%0		 (CMD ADDRESS: 0x%10!08x!) (CMD DATA: 0x%11!08x!) (COMPLETION? %12!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=tcs_send_internal
+{
+cmd->details[i].address, ItemLong -- 10
+msg_data, ItemLong -- 11
+cmd->details[i].type, ItemLong -- 12
+}
+#typev rpmh_tcs_c902 16 "%0	Configuring command set (SET: %10!d!) (AMC: %11!d!)" //   LEVEL=TRACE_LEVEL_ALL FLAGS=RPMH_LOG_LEVEL_CRITICAL FUNC=tcs_send_internal
+{
+cmd->set, ItemLong -- 10
+cmd->amc, ItemLong -- 11
+}

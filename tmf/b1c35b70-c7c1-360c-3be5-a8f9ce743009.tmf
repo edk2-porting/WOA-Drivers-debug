@@ -1,0 +1,88 @@
+// PDB:  qcquadspi7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:45:698 (UTC) [tracepdb]
+b1c35b70-c7c1-360c-3be5-a8f9ce743009 10.7 // SRC=driver.c MJ= MN=
+#typev driver_c197 18 "%0%!FLAGS!: WdfCollectionCreate(DmaTransactionCollection) failed %10!s!" //   FLAGS=ERROR FUNC=CreateDevice
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c187 17 "%0%!FLAGS!: WdfObjectAllocateContext() failed %10!s!" //   FLAGS=ERROR FUNC=CreateDevice
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c178 16 "%0%!FLAGS!: WdfDeviceCreate() failed %10!s!" //   FLAGS=ERROR FUNC=CreateDevice
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c167 15 "%0%!FLAGS!: WdfDeviceInitAssignSDDLString() failed %10!s!" //   FLAGS=ERROR FUNC=CreateDevice
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c255 20 "%0%!FLAGS!: WdfTimerCreate() failed for abort timer %10!s!" //   FLAGS=ERROR FUNC=CreateTimers
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c240 19 "%0%!FLAGS!: WdfTimerCreate() failed for delay timer %10!s!" //   FLAGS=ERROR FUNC=CreateTimers
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c83 12 "%0-%!FUNC!(0x%10!X!)" //   FLAGS=FUNCTION FUNC=DriverEntry
+{
+status, ItemLong -- 10
+}
+#typev driver_c72 11 "%0registry path = "%10!s!"" //   FLAGS=INFO FUNC=DriverEntry
+{
+RegistryPath->Buffer, ItemWString -- 10
+}
+#typev driver_c71 10 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=DriverEntry
+{
+DriverObject, ItemPtr -- 10
+RegistryPath, ItemPtr -- 11
+}
+// PDB:  qcquadspi7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:45:698 (UTC) [tracepdb]
+#typev driver_c414 23 "%0ChipFamily %10!d!, ChipID = %11!s![0x%12!x!], ChipVersion = 0x%13!x!" //   FLAGS=INFO FUNC=InitDeviceContext
+{
+device_ctxt->ChipFamily, ItemLong -- 10
+buffer, ItemString -- 11
+device_ctxt->ChipId, ItemLong -- 12
+device_ctxt->ChipVersion, ItemLong -- 13
+}
+#typev driver_c410 21 "%0%!FLAGS!: WdfSpinLockCreate() for device lock failed %10!s!" //   FLAGS=ERROR FUNC=InitDeviceContext
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c402 22 "%0%!FLAGS!: WdfInterruptCreate() for device lock failed %10!s!" //   FLAGS=ERROR FUNC=InitDeviceContext
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c610 29 "%0-%!FUNC!(%10!s!)" //   FLAGS=FUNCTION FUNC=OnDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c601 25 "%0%!FLAGS!: SpbDeviceInitialize() failed (0x%10!08X!)" //   FLAGS=ERROR FUNC=OnDeviceAdd
+{
+Status, ItemLong -- 10
+}
+#typev driver_c597 24 "%0%!FLAGS!: WdfDeviceAssignS0IdleSettings() failed %10!s!" //   FLAGS=ERROR FUNC=OnDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c579 28 "%0%!FLAGS!: WdfFdoInitWdmGetPhysicalDevice() failed" //   FLAGS=ERROR FUNC=OnDeviceAdd
+{
+}
+#typev driver_c572 27 "%0%!FLAGS!: SpbDeviceInitConfig failed %10!s!" //   FLAGS=ERROR FUNC=OnDeviceAdd
+{
+Status, ItemNTSTATUS -- 10
+}
+#typev driver_c567 26 "%0+%!FUNC!(0x%10!p!, 0x%11!p!)" //   FLAGS=FUNCTION FUNC=OnDeviceAdd
+{
+Driver, ItemPtr -- 10
+DeviceInit, ItemPtr -- 11
+}
+#typev driver_c107 14 "%0-%!FUNC!(void)" //   FLAGS=FUNCTION FUNC=OnDriverCleanup
+{
+}
+#typev driver_c106 13 "%0+%!FUNC!(0x%10!p!)" //   FLAGS=FUNCTION FUNC=OnDriverCleanup
+{
+Object, ItemPtr -- 10
+}

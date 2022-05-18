@@ -1,0 +1,177 @@
+// PDB:  qcpsautoreg7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+865f27e5-121e-32dd-2bbf-8958979247cf latest // SRC=WlanInterfaceChangeNotification.c MJ= MN=
+#typev PSAutoReg_c347 46 "%0%!FUNC!:: UnicastIpChangeNotificationDeRegister:: ERROR: Invalid Argument." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARServiceDeInitProcess
+{
+}
+#typev PSAutoReg_c351 45 "%0%!FUNC!:: UnicastIpChangeNotificationDeRegister:: status = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARServiceDeInitProcess
+{
+status, ItemLong -- 10
+}
+#typev PSAutoReg_c347 48 "%0%!FUNC!::InterfaceChangeNotificationDeRegister:: ERROR: Invalid Argument." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARServiceDeInitProcess
+{
+}
+#typev PSAutoReg_c347 47 "%0%!FUNC!::InterfaceChangeNotificationDeRegister:: status = %10!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARServiceDeInitProcess
+{
+status, ItemLong -- 10
+}
+// PDB:  qcpsautoreg7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PSAutoReg_c235 38 "%0%!FUNC!:: ERROR: PSAutoReg service not running or Invalid Argument." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARServiceInitProcess
+{
+}
+// PDB:  qcpsautoreg7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev PSAutoReg_c235 37 "%0%!FUNC!::WlanUnicastIpAddressChangeNotificationRegister:: status = %10!d!. error code = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=PARServiceInitProcess
+{
+status, ItemLong -- 10
+GetLastError(), ItemLong -- 11
+}
+// PDB:  qcpsautoreg7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev WlanInterfaceChangeNotification_c229 29 "%0%!FUNC!:: UnicastIpAddressChangeNotification:: ERROR. Unable to enqueue Worker thread!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=UnicastIpAddressChangeNotification
+{
+}
+#typev WlanInterfaceChangeNotification_c217 28 "%0%!FUNC!:: Enqueuing Wi-Fi indication(%10!d!) on interface (index = %11!I64u!, type = %12!I64u!). Connected = %13!d!, NotificationType = %14!d!, status = 0x%15!x!, IP Family = %16!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=UnicastIpAddressChangeNotification
+{
+NotificationType, ItemLong -- 10
+pRow->InterfaceIndex, ItemULongLong -- 11
+pRow->InterfaceLuid.Info.IfType, ItemULongLong -- 12
+Row.Connected, ItemLong -- 13
+NotificationType, ItemLong -- 14
+status, ItemLong -- 15
+pRow->Address.si_family, ItemLong -- 16
+}
+#typev WlanInterfaceChangeNotification_c207 27 "%0%!FUNC!:: Disconnect on interface (index = %10!I64u!) is the recorded connected interface (index = %11!I64u!), reset recorded connected interface to 0" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=UnicastIpAddressChangeNotification
+{
+pRow->InterfaceIndex, ItemULongLong -- 10
+pPARContext->ConnectedWiFiInterface, ItemULongLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c201 26 "%0%!FUNC!:: Disconnect on interface (index = %10!I64u!) is not the recorded connected interface (index = %11!I64u!), skip further processing" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=UnicastIpAddressChangeNotification
+{
+pRow->InterfaceIndex, ItemULongLong -- 10
+pPARContext->ConnectedWiFiInterface, ItemULongLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c188 25 "%0%!FUNC!:: UnicastIpAddressChangeNotification on interface (index = %10!I64u!, type = %11!I64u!). NotificationType = %12!d!, IP Family = %13!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=UnicastIpAddressChangeNotification
+{
+pRow->InterfaceIndex, ItemULongLong -- 10
+pRow->InterfaceLuid.Info.IfType, ItemULongLong -- 11
+NotificationType, ItemLong -- 12
+pRow->Address.si_family, ItemLong -- 13
+}
+#typev WlanInterfaceChangeNotification_c181 24 "%0%!FUNC!:: Ignoring non-Wifi indication(%10!d!) on interface (%11!I64u!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=UnicastIpAddressChangeNotification
+{
+NotificationType, ItemLong -- 10
+pRow->InterfaceLuid.Info.IfType, ItemULongLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c170 23 "%0%!FUNC!:: UnicastIpAddressChangeNotification:: ERROR. Invalid parameters!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=UnicastIpAddressChangeNotification
+{
+}
+#typev WlanInterfaceChangeNotification_c302 36 "%0%!FUNC!:: Enqueue WlanProcessNotification failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceChangeNotification
+{
+}
+#typev WlanInterfaceChangeNotification_c290 35 "%0%!FUNC!:: Enqueuing Wi-Fi indication(%10!d!) on interface (index = %11!I64u!, type = %12!I64u!). Connected = %13!d!, NotificationType = %14!d! status = 0x%15!x!, IP Family = %16!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceChangeNotification
+{
+NotificationType, ItemLong -- 10
+pRow->InterfaceIndex, ItemULongLong -- 11
+pRow->InterfaceLuid.Info.IfType, ItemULongLong -- 12
+Row.Connected, ItemLong -- 13
+NotificationType, ItemLong -- 14
+status, ItemLong -- 15
+pRow->Family, ItemLong -- 16
+}
+#typev WlanInterfaceChangeNotification_c280 34 "%0%!FUNC!:: Disconnect on interface (index = %10!I64u!) is the recorded connected interface (index = %11!I64u!), reset recorded connected interface to 0" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceChangeNotification
+{
+pRow->InterfaceIndex, ItemULongLong -- 10
+pPARContext->ConnectedWiFiInterface, ItemULongLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c274 33 "%0%!FUNC!:: Disconnect on interface (index = %10!I64u!) is not the recorded connected interface (index = %11!I64u!), skip further processing" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceChangeNotification
+{
+pRow->InterfaceIndex, ItemULongLong -- 10
+pPARContext->ConnectedWiFiInterface, ItemULongLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c261 32 "%0%!FUNC!:: WlanInterfaceChangeNotification on interface (index = %10!I64u!, type = %11!I64u!). NotificationType = %12!d!, IP Family = %13!u!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInterfaceChangeNotification
+{
+pRow->InterfaceIndex, ItemULongLong -- 10
+pRow->InterfaceLuid.Info.IfType, ItemULongLong -- 11
+NotificationType, ItemLong -- 12
+pRow->Family, ItemLong -- 13
+}
+#typev WlanInterfaceChangeNotification_c253 31 "%0%!FUNC!:: Ignoring non-Wifi indication(%10!d!) on interface (%11!I64u!)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceChangeNotification
+{
+NotificationType, ItemLong -- 10
+pRow->InterfaceLuid.Info.IfType, ItemULongLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c242 30 "%0%!FUNC!:: WlanInterfaceChangeNotification:: ERROR. Invalid parameters!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceChangeNotification
+{
+}
+#typev WlanInterfaceChangeNotification_c403 44 "%0%!FUNC!:: ERROR: PSAutoReg service not running or Invalid Argument" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceChangeNotificationRegister
+{
+}
+#typev WlanInterfaceChangeNotification_c356 43 "%0%!FUNC!:: WlanInterfaceChangeNotificationRegister status = %10!d!. error code = %11!u!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceChangeNotificationRegister
+{
+status, ItemLong -- 10
+GetLastError(), ItemLong -- 11
+}
+#typev WlanInterfaceChangeNotification_c376 41 "%0%!FUNC!:: Event set." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=Core FUNC=WlanInterfaceChangeNotificationRegister
+{
+}
+#typev WlanInterfaceChangeNotification_c371 42 "%0%!FUNC!:: ERROR:: Invalid waitStatus!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceChangeNotificationRegister
+{
+}
+#typev WlanInterfaceChangeNotification_c369 40 "%0%!FUNC!:: ERROR:: Notification register failed! Retrying in 1 sec." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceChangeNotificationRegister
+{
+}
+#typev WlanInterfaceChangeNotification_c351 39 "%0%!FUNC!:: ERROR:: CreateEvent failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceChangeNotificationRegister
+{
+}
+#typev WlanInterfaceChangeNotification_c59 12 "%0%!FUNC!:: Cleaning timer queue (DeleteTimerQueueTimer)." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceIncompleteInfoTimerProc
+{
+}
+#typev WlanInterfaceChangeNotification_c54 11 "%0%!FUNC!:: Enqueuing WNServiceQueryWifiStatusAndNotifyModem call." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceIncompleteInfoTimerProc
+{
+}
+#typev WlanInterfaceChangeNotification_c40 10 "%0%!FUNC!:: WlanInterfaceIncompleteInfoTimerProc:: ERROR. Invalid Parameter!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanInterfaceIncompleteInfoTimerProc
+{
+}
+#typev WlanInterfaceChangeNotification_c102 22 "%0%!FUNC!:: Timer already fired!!!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanProcessNotification
+{
+}
+#typev WlanInterfaceChangeNotification_c150 21 "%0%!FUNC!:: Timer fired for %10!u!ms interval." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanProcessNotification
+{
+INCOMPLETE_INFO_TIMEOUT, ItemLong -- 10
+}
+#typev WlanInterfaceChangeNotification_c146 20 "%0%!FUNC!:: ERROR: CreateTimerQueueTimer failed (%10!d!)" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanProcessNotification
+{
+GetLastError(), ItemLong -- 10
+}
+#typev WlanInterfaceChangeNotification_c102 19 "%0%!FUNC!:: INCOMPLETE_WIFI_INFO!!!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanProcessNotification
+{
+}
+// PDB:  qcpsautoreg7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev WlanInterfaceChangeNotification_c102 17 "%0%!FUNC!:: Wi-Fi Connected indication received but contains incomplete info to send to modem." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanProcessNotification
+{
+}
+// PDB:  qcpsautoreg7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev WlanInterfaceChangeNotification_c102 16 "%0%!FUNC!:: Wi-Fi Connected!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanProcessNotification
+{
+}
+// PDB:  qcpsautoreg7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev WlanInterfaceChangeNotification_c120 18 "%0%!FUNC!:: Wi-Fi Disconnected!!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanProcessNotification
+{
+}
+#typev WlanInterfaceChangeNotification_c90 15 "%0%!FUNC!:: SSR in process. Do not process interface change notification." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanProcessNotification
+{
+}
+#typev WlanInterfaceChangeNotification_c85 14 "%0%!FUNC!:: bConnected = %10!d!, NotificationType = %11!d!, SSR State = %12!d!." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanProcessNotification
+{
+bConnected, ItemLong -- 10
+NotificationType, ItemLong -- 11
+MssrState, ItemLong -- 12
+}
+#typev WlanInterfaceChangeNotification_c74 13 "%0%!FUNC!:: WlanProcessNotification:: Invalid parameter!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=Core FUNC=WlanProcessNotification
+{
+}

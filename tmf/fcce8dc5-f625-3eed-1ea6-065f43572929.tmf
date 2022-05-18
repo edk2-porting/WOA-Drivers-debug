@@ -1,0 +1,119 @@
+// PDB:  qcuart7180.pdb
+// PDB:  Last Updated :2021-10-17:21:53:52:688 (UTC) [tracepdb]
+fcce8dc5-f625-3eed-1ea6-065f43572929 10.7 // SRC=resource_hub.c MJ= MN=
+#typev resource_hub_c198 12 "%0invalid response to resource hub query" //   FLAGS=ERROR FUNC=get_uart_descriptor
+{
+}
+#typev resource_hub_c207 13 "%0ExAllocatePoolWithTag() failed" //   FLAGS=ERROR FUNC=get_uart_descriptor
+{
+}
+#typev resource_hub_c185 11 "%0ZwDeviceIoControlFile() failed (0x%10!08X!): Status = 0x%11!08X!, Info = 0x%12!IX!)" //   FLAGS=ERROR FUNC=get_uart_descriptor
+{
+status, ItemLong -- 10
+io_status.Status, ItemLong -- 11
+io_status.Information, ItemPtr -- 12
+}
+#typev resource_hub_c169 10 "%0ZwOpenFile() failed (0x%10!08X!): Status = 0x%11!08X!, Info = 0x%12!IX!)" //   FLAGS=ERROR FUNC=get_uart_descriptor
+{
+status, ItemLong -- 10
+io_status.Status, ItemLong -- 11
+io_status.Information, ItemPtr -- 12
+}
+#typev resource_hub_c328 35 "%0invalid bus descriptor" //   FLAGS=ERROR FUNC=parse_uart_descriptor
+{
+}
+#typev resource_hub_c378 39 "%0invalid flow control" //   FLAGS=ERROR FUNC=parse_uart_descriptor
+{
+}
+#typev resource_hub_c360 38 "%0invalid data bits" //   FLAGS=ERROR FUNC=parse_uart_descriptor
+{
+}
+#typev resource_hub_c350 37 "%0invalid parity" //   FLAGS=ERROR FUNC=parse_uart_descriptor
+{
+}
+#typev resource_hub_c340 36 "%0invalid stop bits" //   FLAGS=ERROR FUNC=parse_uart_descriptor
+{
+}
+#typev resource_hub_c318 34 "%0   resource_name             = "%10!s!"" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+resource_name, ItemString -- 10
+}
+#typev resource_hub_c317 33 "%0   serial_lines_enabled      = 0x%10!02X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->serial_lines_enabled, ItemLong -- 10
+}
+#typev resource_hub_c316 32 "%0   parity                    = 0x%10!02X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->parity, ItemLong -- 10
+}
+#typev resource_hub_c315 31 "%0   tx_buffer_size            = 0x%10!04X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->tx_buffer_size, ItemLong -- 10
+}
+#typev resource_hub_c314 30 "%0   rx_buffer_size            = 0x%10!04X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->rx_buffer_size, ItemLong -- 10
+}
+#typev resource_hub_c313 29 "%0   baud_rate                 = 0x%10!08X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->baud_rate, ItemLong -- 10
+}
+#typev resource_hub_c312 28 "%0   type_data_length          = 0x%10!04X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->type_data_length, ItemLong -- 10
+}
+#typev resource_hub_c311 27 "%0   type_specific_revision_id = 0x%10!02X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->type_specific_revision_id, ItemLong -- 10
+}
+#typev resource_hub_c310 26 "%0   type_specific_flags       = 0x%10!04X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->type_specific_flags, ItemLong -- 10
+}
+#typev resource_hub_c309 25 "%0   general_flags             = 0x%10!02X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->general_flags, ItemLong -- 10
+}
+#typev resource_hub_c308 24 "%0   serial_bus_type           = 0x%10!02X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->serial_bus_type, ItemLong -- 10
+}
+#typev resource_hub_c307 23 "%0   resource_source_index     = 0x%10!02X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->resource_source_index, ItemLong -- 10
+}
+#typev resource_hub_c306 22 "%0   revision_id               = 0x%10!02X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->revision_id, ItemLong -- 10
+}
+#typev resource_hub_c305 21 "%0   length                    = 0x%10!04X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->length, ItemLong -- 10
+}
+#typev resource_hub_c304 20 "%0   tag                       = 0x%10!02X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->tag, ItemLong -- 10
+}
+#typev resource_hub_c303 19 "%0   properties_length         = 0x%10!08X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->properties_length, ItemLong -- 10
+}
+#typev resource_hub_c302 18 "%0   version                   = 0x%10!08X!" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+ud->version, ItemLong -- 10
+}
+#typev resource_hub_c301 17 "%0resource hub connection properties:" //   FLAGS=INFO FUNC=parse_uart_descriptor
+{
+}
+#typev resource_hub_c295 16 "%0uart descriptor too small" //   FLAGS=ERROR FUNC=parse_uart_descriptor
+{
+}
+#typev resource_hub_c409 15 "%0parse_filename: invalid character: 0x%10!04X! (%11!hd!)" //   FLAGS=ERROR FUNC=resource_hub_query
+{
+ptr[i], ItemLong -- 10
+ptr[i], ItemShort -- 11
+}
+#typev resource_hub_c409 14 "%0parse_filename: string too long (%10!d! characters)" //   FLAGS=ERROR FUNC=resource_hub_query
+{
+num_chars, ItemLong -- 10
+}

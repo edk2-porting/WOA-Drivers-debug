@@ -1,0 +1,63 @@
+// PDB:  qcmbbnetadapterfilter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+f358c35a-d8c5-325a-3886-edcd6132a347 NetAdapterFilter // SRC=QnetFilterDevice.c MJ= MN=
+#typev QnetFilterDevice_c205 22 "%0%!FUNC!::E:Failed to init queue" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFilterCreateDevice
+{
+}
+// PDB:  qcmbbnetadapterfilter7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev QnetFilterDevice_c186 21 "%0%!FUNC!::E:WdfDeviceCreate failed with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFilterCreateDevice
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev QnetFilterDevice_c106 17 "%0%!FUNC!::I:Requested power transition state = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterEvtDeviceD0Entry
+{
+wdfPwrDeviceState, ItemEnum(_WDF_POWER_DEVICE_STATE) -- 10
+}
+#typev QnetFilterDevice_c145 20 "%0%!FUNC!::I:Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterEvtDeviceD0Exit
+{
+}
+#typev QnetFilterDevice_c141 19 "%0%!FUNC!::I:MBIM_CLOSE is complete or timed out: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterEvtDeviceD0Exit
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev QnetFilterDevice_c126 18 "%0%!FUNC!::I:Entry: Requested power transition state = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterEvtDeviceD0Exit
+{
+wdfPwrDeviceState, ItemEnum(_WDF_POWER_DEVICE_STATE) -- 10
+}
+#typev QnetFilterDevice_c64 12 "%0%!FUNC!::I:Exit: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterEvtDevicePrepareHardware
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev QnetFilterDevice_c54 11 "%0%!FUNC!::E:Invalid Devive Context." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFilterEvtDevicePrepareHardware
+{
+}
+#typev QnetFilterDevice_c49 10 "%0%!FUNC!::I:Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterEvtDevicePrepareHardware
+{
+}
+#typev QnetFilterDevice_c94 16 "%0%!FUNC!::I:Exit: %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterEvtDeviceReleaseHardware
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev QnetFilterDevice_c91 15 "%0%!FUNC!::E:Failed to teardown datapath with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFilterEvtDeviceReleaseHardware
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev QnetFilterDevice_c85 14 "%0%!FUNC!::E:Failed to teardown controlpath with status %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=QNET_FLTR FUNC=QnetFilterEvtDeviceReleaseHardware
+{
+ntStatus, ItemNTSTATUS -- 10
+}
+#typev QnetFilterDevice_c79 13 "%0%!FUNC!::I:Entry" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QNET_FLTR FUNC=QnetFilterEvtDeviceReleaseHardware
+{
+}
+#enumv _WDF_POWER_DEVICE_STATE
+{
+WdfPowerDeviceInvalid,0x0
+WdfPowerDeviceD0,0x1
+WdfPowerDeviceD1,0x2
+WdfPowerDeviceD2,0x3
+WdfPowerDeviceD3,0x4
+WdfPowerDeviceD3Final,0x5
+WdfPowerDevicePrepareForHibernation,0x6
+WdfPowerDeviceMaximum,0x7
+}

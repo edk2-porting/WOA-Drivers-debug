@@ -1,0 +1,385 @@
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+566b29a1-818f-33e9-7513-128286eeaf54 src // SRC=dpdriver.c MJ= MN=
+#typev dpdriver_c2901 31 "%0DPDrv%10!d!: Driver Interrupt Decode, AUX interrupt (0x%11!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_DecodeAndClearInterrupts
+{
+eDisplayId, ItemLong -- 10
+(sPropGet.uInterruptList & DP_AUX_TRANSACTION_INTR_ALL), ItemLong -- 11
+}
+#typev dpdriver_c2887 30 "%0DPDrv%10!d!: Driver Interrupt Decode, HPD unplug" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_DecodeAndClearInterrupts
+{
+eDisplayId, ItemLong -- 10
+}
+#typev dpdriver_c2867 29 "%0DPDrv%10!d!: Driver Interrupt Decode, HPD replug." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_DecodeAndClearInterrupts
+{
+eDisplayId, ItemLong -- 10
+}
+#typev dpdriver_c2859 28 "%0DPDrv%10!d!: Driver Interrupt Decode, IRQ_HPD." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_DecodeAndClearInterrupts
+{
+eDisplayId, ItemLong -- 10
+}
+#typev dpdriver_c2851 27 "%0DPDrv%10!d!: Driver Interrupt Decode, HDCP interrupt (%11!x!)." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_DecodeAndClearInterrupts
+{
+eDisplayId, ItemLong -- 10
+(sPropGet.uInterruptList & DP_HDCP_INTR_ALL), ItemLong -- 11
+}
+#typev dpdriver_c3790 46 "%0DPDrv%10!d!: Driver Audio Mode, audio mode#:%11!d!, Speaker Layout: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetAudioModeInfo
+{
+eDisplayId, ItemLong -- 10
+psAudioModeInfo->uAudioModeIndex, ItemLong -- 11
+psAudioModeInfo->uSupportedSpeakerLocationMask, ItemLong -- 12
+}
+#typev dpdriver_c3785 45 "%0DPDrv%10!d!: Driver Audio Mode, audio mode#:%11!d!, Channels: %12!s! (0x%13!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetAudioModeInfo
+{
+eDisplayId, ItemLong -- 10
+psAudioModeInfo->uAudioModeIndex, ItemLong -- 11
+sDecodedName, ItemString -- 12
+psAudioModeInfo->uSupportedAudioChannelMask, ItemLong -- 13
+}
+#typev dpdriver_c3754 44 "%0DPDrv%10!d!: Driver Audio Mode, audio mode#:%11!d!, BitDepths: %12!s! (0x%13!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetAudioModeInfo
+{
+eDisplayId, ItemLong -- 10
+psAudioModeInfo->uAudioModeIndex, ItemLong -- 11
+sDecodedName, ItemString -- 12
+psAudioModeInfo->audioStreamInfo.uSupportedAudioSampleBitDepthMask, ItemLong -- 13
+}
+#typev dpdriver_c3727 43 "%0DPDrv%10!d!: Driver Audio Mode, audio mode#:%11!d!, Sample Rates: %12!s! (0x%13!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetAudioModeInfo
+{
+eDisplayId, ItemLong -- 10
+psAudioModeInfo->uAudioModeIndex, ItemLong -- 11
+sDecodedName, ItemString -- 12
+psAudioModeInfo->uSupportedAudioSampleRateMask, ItemLong -- 13
+}
+#typev dpdriver_c3686 42 "%0DPDrv%10!d!: Driver Audio Mode, audio mode#:%11!d!, Format:%12!s! (0x%13!x!)" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetAudioModeInfo
+{
+eDisplayId, ItemLong -- 10
+psAudioModeInfo->uAudioModeIndex, ItemLong -- 11
+sDecodedName, ItemString -- 12
+psAudioModeInfo->eAudioFormat, ItemLong -- 13
+}
+#typev dpdriver_c3670 41 "%0DPDrv%10!d!: Driver Audio Mode, audio mode#:%11!d!, status: %12!d! - Invalid or last available mode." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetAudioModeInfo
+{
+eDisplayId, ItemLong -- 10
+psAudioModeInfo->uAudioModeIndex, ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dpdriver_c2644 25 "%0DPDrv%10!d!: Driver Connection Status, connected: %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetConnectionStatus
+{
+eDisplayId, ItemLong -- 10
+*pbConnected, ItemLong -- 11
+}
+#typev dpdriver_c4733 66 "%0DPDrv%10!d!: KSV [%11!02x! %12!02x! %13!02x! %14!02x! %15!02x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetDownstreamKSVList
+{
+eDisplayId, ItemLong -- 10
+psKSVList->psKSV[i].uKSV[0], ItemLong -- 11
+psKSVList->psKSV[i].uKSV[1], ItemLong -- 12
+psKSVList->psKSV[i].uKSV[2], ItemLong -- 13
+psKSVList->psKSV[i].uKSV[3], ItemLong -- 14
+psKSVList->psKSV[i].uKSV[4], ItemLong -- 15
+}
+#typev dpdriver_c4724 65 "%0DPDrv%10!d!: Driver Get KSV List, Entries: %11!d!, status: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetDownstreamKSVList
+{
+eDisplayId, ItemLong -- 10
+psKSVList->uBufferSize/5, ItemLong -- 11
+eRetStatus, ItemLong -- 12
+}
+#typev dpdriver_c3528 39 "%0DPDrv%10!d!: EDID [%11!02x! %12!02x! %13!02x! %14!02x! %15!02x! %16!02x! %17!02x! %18!02x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetEDID
+{
+eDisplayId, ItemLong -- 10
+pEDID[uIndex+0], ItemLong -- 11
+pEDID[uIndex+1], ItemLong -- 12
+pEDID[uIndex+2], ItemLong -- 13
+pEDID[uIndex+3], ItemLong -- 14
+pEDID[uIndex+4], ItemLong -- 15
+pEDID[uIndex+5], ItemLong -- 16
+pEDID[uIndex+6], ItemLong -- 17
+pEDID[uIndex+7], ItemLong -- 18
+}
+#typev dpdriver_c3519 38 "%0DPDrv%10!d!: Driver EDID Get, EDID size: %11!d! bytes, status 0x%12!x!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetEDID
+{
+eDisplayId, ItemLong -- 10
+*pEDIDSize, ItemLong -- 11
+eRetStatus, ItemLong -- 12
+}
+#typev dpdriver_c3510 36 "%0DPDrv%10!d!: Display failure status added to EDID." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetEDID
+{
+eDisplayId, ItemLong -- 10
+}
+#typev dpdriver_c4603 62 "%0DPDrv%10!d!: Driver HDCP Info, repeater: %11!d!, device count: %12!d!, ksv: %13!02x! %14!02x! %15!02x! %16!02x! %17!02x!, status: 0x%18!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetHDCPInfo
+{
+eDisplayId, ItemLong -- 10
+psHDCPInfo->bRepeater, ItemLong -- 11
+psHDCPInfo->uDevCount, ItemLong -- 12
+psHDCPInfo->uKSV[0], ItemLong -- 13
+psHDCPInfo->uKSV[1], ItemLong -- 14
+psHDCPInfo->uKSV[2], ItemLong -- 15
+psHDCPInfo->uKSV[3], ItemLong -- 16
+psHDCPInfo->uKSV[4], ItemLong -- 17
+eStatus, ItemLong -- 18
+}
+#typev dpdriver_c4678 64 "%0DPDrv%10!d!: Driver HDCP Level Query, HDCP Level: %11!s!, status: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetHDCPStatus
+{
+eDisplayId, ItemLong -- 10
+sHDCPLevel[DS_MIN(*peHDCPLevel. QDI_DISPLAY_HDCP_LEVEL_MAX)], ItemString -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dpdriver_c4663 63 "%0DPDrv%10!d!: Driver HDCP Status Query, Link Status: %11!s!, status: 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetHDCPStatus
+{
+eDisplayId, ItemLong -- 10
+sHDCPStatus[DS_MIN(*peHDCPStatus. QDI_DISPLAY_HDCP_STATUS_MAX)], ItemString -- 11
+eStatus, ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dpdriver_c2548 24 "%0DPDrv%10!d!: Driver GetMode, mode: %11!d! (%12!d!x%13!d! @ %14!d!Hz, PixelClk: %15!d!Hz), format: %16!d!, audio support: %17!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetModeInfo
+{
+eDisplayId, ItemLong -- 10
+sDPProp.sPanelInfo.uModeIndex, ItemLong -- 11
+psModeInfo->uWidthPx, ItemLong -- 12
+psModeInfo->uHeightPx, ItemLong -- 13
+(psModeInfo->uRefreshRate >> 16), ItemLong -- 14
+psModeInfo->uPixelRate, ItemLong -- 15
+psModeInfo->eColorFormat, ItemLong -- 16
+psModeInfo->bAudioSupported ? 1 : 0, ItemLong -- 17
+}
+#typev dpdriver_c1688 16 "%0DPDrv%10!d!: Mapping MST stream %11!d! to DP controller: %12!d!, status 0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_GetRoutingInfo
+{
+eDisplayId, ItemLong -- 10
+pDPRoutingInfo->uStreamId, ItemLong -- 11
+pDPRoutingInfo->uControllerId, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dpdriver_c8551 74 "%0DPDrv%10!d!: HDCP_Deinit, HDCPEnable:%11!d!, flags: %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_HDCPDeInit
+{
+eDisplayId, ItemLong -- 10
+FALSE, ItemLong -- 11
+sProcessParams.uFlags, ItemLong -- 12
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dpdriver_c1776 17 "%0DPDrv%10!d!: Parsing panel configuration from EDID (detected %11!d!x%12!d!), status 0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_Init
+{
+eDisplayId, ItemLong -- 10
+pPhyDisplayInfo->sPanelAttr.iVisWidthPx, ItemLong -- 11
+pPhyDisplayInfo->sPanelAttr.iVisHeightPx, ItemLong -- 12
+eStatus, ItemLong -- 13
+}
+#typev dpdriver_c1565 14 "%0DPDrv%10!d!: Driver Open, status:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_Open
+{
+eDisplayId, ItemLong -- 10
+eRetStatus, ItemLong -- 11
+}
+#typev dpdriver_c1391 13 "%0Failed to allocate client for display id :%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_Open
+{
+eDisplayId, ItemLong -- 10
+}
+#typev dpdriver_c4480 61 "%0DPDrv%10!d!: DPDriver_PostModeSetOps, Allocated %11!d! x %12!d! frame buffer with pixel format = %13!d! for Link CTS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_PostModeSetOps
+{
+eDisplayId, ItemLong -- 10
+sSurfInfo.uWidthInPixel, ItemLong -- 11
+sSurfInfo.uHeightInPixel, ItemLong -- 12
+sSurfInfo.ePixelFormat, ItemLong -- 13
+}
+#typev dpdriver_c2297 23 "%0DPDrv%10!d!: Driver Power %11!s!, status 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_Power
+{
+eDisplayId, ItemLong -- 10
+(TRUE==bPowerEnable)?'Up':'Down', ItemString -- 11
+eRetStatus, ItemLong -- 12
+}
+#typev dpdriver_c2184 22 "%0DPDrv%10!d!: HPD connection lost before completing power up." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_Power
+{
+eDisplayId, ItemLong -- 10
+}
+#typev dpdriver_c5965 69 "%0DPDrv%10!d!: Send command sequence, type=%11!d!, status:0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SendCommandSequence
+{
+eDisplayId, ItemLong -- 10
+eCommandType, ItemLong -- 11
+eStatusRet, ItemLong -- 12
+}
+#typev dpdriver_c7638 70 "%0DPDrv%10!d!: Driver Set Backlight, Level %11!d!%%, status:0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetBrightness
+{
+eDisplayId, ItemLong -- 10
+DS_FLOAT_TO_INT_IN_RANGE(fNewLevel. 100), ItemLong -- 11
+eStatus, ItemLong -- 12
+}
+#typev dpdriver_c7860 71 "%0DPDrv%10!d!: Driver SetInfo(Blend Space) Failed on device index %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetColorSpace
+{
+eDisplayId, ItemLong -- 10
+uDeviceIndex, ItemLong -- 11
+}
+#typev dpdriver_c7865 72 "%0DPDrv%10!d!: Driver SetInfo: Color Blend Space %11!d! on device index %12!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetColorSpace
+{
+eDisplayId, ItemLong -- 10
+eColorSpace, ItemLong -- 11
+uDeviceIndex, ItemLong -- 12
+}
+#typev dpdriver_c3625 40 "%0DPDrv%10!d!: Setting %11!s! status for stream %12!d!, status 0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetConnectionStatus
+{
+eDisplayId, ItemLong -- 10
+bConnected ? 'connected' : 'disconnected', ItemString -- 11
+pDPConfig->sRoutingInfo.uStreamId, ItemLong -- 12
+eRetStatus, ItemLong -- 13
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dpdriver_c2739 26 "%0DPDrv%10!d!: Driver Set Event (0x%11!x!), status 0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetEvent
+{
+eDisplayId, ItemLong -- 10
+uIntEvent, ItemLong -- 11
+eDPStatus, ItemLong -- 12
+}
+#typev dpdriver_c4037 60 "%0DPDrv%10!d!: Driver SetInfo(Adaptive Vsync) Failed on device index %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+uDeviceIndex, ItemLong -- 11
+}
+#typev dpdriver_c4022 59 "%0DPDrv%10!d!: Driver SetInfo(Cache_Min_Enc_Level), Cached Content type = %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+pDPConfig->eHDCPContentType, ItemLong -- 11
+}
+#typev dpdriver_c4011 58 "%0DPDrv%10!d!: Driver SetInfo(Test Pattern), pattern: %11!d!, mode: %12!d!, status:0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+psDPAttr->uTestPatternType, ItemLong -- 11
+pDPConfig->uModeIndex, ItemLong -- 12
+eRetStatus, ItemLong -- 13
+}
+#typev dpdriver_c4000 57 "%0DPDrv%10!d!: Driver SetInfo(Test Pattern) Failed on device index %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+uDeviceIndex, ItemLong -- 11
+}
+#typev dpdriver_c3985 56 "%0DPDrv%10!d!: Driver SetInfo(Voltage Swing), level:%11!d!, status:0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+psDPAttr->uLaneSwingLevel, ItemLong -- 11
+eRetStatus, ItemLong -- 12
+}
+#typev dpdriver_c3980 55 "%0DPDrv%10!d!: Driver SetInfo(Voltage Swing) Failed on device index %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+uDeviceIndex, ItemLong -- 11
+}
+#typev dpdriver_c3966 54 "%0DPDrv%10!d!: Driver SetInfo(PreEmphasis), level:%11!d!, status:0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+psDPAttr->uPreemphasisLevel, ItemLong -- 11
+eRetStatus, ItemLong -- 12
+}
+#typev dpdriver_c3961 53 "%0DPDrv%10!d!: Driver SetInfo(PreEmphasis) Failed on device index %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+uDeviceIndex, ItemLong -- 11
+}
+#typev dpdriver_c3947 52 "%0DP: DPDriver_SetInfo set lane number [Display:%10!d! NumberOfLanes:%11!d!  Status:%12!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+psDPAttr->uNumberOfLanes, ItemLong -- 11
+eRetStatus, ItemLong -- 12
+}
+#typev dpdriver_c3942 51 "%0DPDrv%10!d!: Driver SetInfo(Lane Count) Failed on device index %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+uDeviceIndex, ItemLong -- 11
+}
+#typev dpdriver_c3928 50 "%0DPDrv%10!d!: Driver SetInfo(Link Rate), LinkRate: %11!d!Khz, status:0x%12!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+psDPAttr->uLinkRateInKhz, ItemLong -- 11
+eRetStatus, ItemLong -- 12
+}
+#typev dpdriver_c3923 49 "%0DPDrv%10!d!: Driver SetInfo(Link Rate) Failed on device index %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+uDeviceIndex, ItemLong -- 11
+}
+#typev dpdriver_c3907 48 "%0DPDrv%10!d!: HDCP [Driver SetInfo(HDCP), Enable:%11!d!  Autheticaion Type: %12!d! Content type: %13!d! sts: %14!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+psDPAttr->bContentProtectionEnable, ItemLong -- 11
+sProcessParams.eHDCPAuthType, ItemLong -- 12
+sProcessParams.eStreamContentType, ItemLong -- 13
+eRetStatus, ItemLong -- 14
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dpdriver_c3846 47 "%0DPDrv%10!d!: Driver SetInfo(Audio) Failed on device index %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetInfo
+{
+eDisplayId, ItemLong -- 10
+uDeviceIndex, ItemLong -- 11
+}
+#typev dpdriver_c2095 20 "%0DPDrv%10!d!: HDCP_Init, controller Id: %11!d!, stream Id: %12!d!,  HDCPEnable: %13!d!, autheticaion Type: %14!d! content type: %15!d!, flags: %16!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetMode
+{
+eDisplayId, ItemLong -- 10
+pDPConfig->sRoutingInfo.uControllerId, ItemLong -- 11
+pDPConfig->sRoutingInfo.uStreamId, ItemLong -- 12
+TRUE, ItemLong -- 13
+sProcessParams.eHDCPAuthType, ItemLong -- 14
+sProcessParams.eStreamContentType, ItemLong -- 15
+sProcessParams.uFlags, ItemLong -- 16
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dpdriver_c2108 21 "%0DPDrv%10!d!: Driver SetMode, controller Id: %11!d!, stream Id: %12!d!, mode#:%13!d!, status 0x%14!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetMode
+{
+eDisplayId, ItemLong -- 10
+pDPConfig->sRoutingInfo.uControllerId, ItemLong -- 11
+pDPConfig->sRoutingInfo.uStreamId, ItemLong -- 12
+uModeIndex, ItemLong -- 13
+eStatus, ItemLong -- 14
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dpdriver_c1329 12 "%0DPDrv%10!d!: Overriding link training type to %11!d!, devidx %12!d!, status 0x%13!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetPanelOverrides
+{
+eDisplayId, ItemLong -- 10
+sPropertyData.eLinkTrainingType, ItemLong -- 11
+uDeviceIndex, ItemLong -- 12
+eLocalStatus, ItemLong -- 13
+}
+#typev dpdriver_c1262 11 "%0DP: Panel override enable flag not set, skipping setting the panel overrides [Display:%10!d!]" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_SetPanelOverrides
+{
+eDisplayId, ItemLong -- 10
+}
+#typev dpdriver_c1898 18 "%0DPDrv%10!d!: Driver Term, status 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_Term
+{
+eDisplayId, ItemLong -- 10
+eRetStatus, ItemLong -- 11
+}
+#typev dpdriver_c1966 19 "%0DPDrv%10!d!: Tunneled Mode - Driver Close, status:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_TunneledClose
+{
+pDPConfig->eDisplayId, ItemLong -- 10
+eStatusRet, ItemLong -- 11
+}
+#typev dpdriver_c1637 15 "%0DPDrv%10!d!: Tunneled Mode - Driver Open, status:0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DPDriver_TunneledOpen
+{
+pDPConfig->eDisplayId, ItemLong -- 10
+eStatusRet, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dpdriver_c5318 68 "%0DPDrv%10!d!: PPS DPC End" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_PPS_DPCCleanup
+{
+pDPConfig->eDisplayId, ItemLong -- 10
+}
+#typev dpdriver_c5262 67 "%0DPDrv%10!d!: PPS DPC Start, MaxPPSCount=%11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=DP_PPS_Init
+{
+pDPConfig->eDisplayId, ItemLong -- 10
+uDPCCbCount, ItemLong -- 11
+}
+// PDB:  qcdxkm7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev dpdriver_c8205 73 "%0USB4DPInterruptDPCHandler: Skipping work item enqueue of USB4 DP interrupt event: %10!d! for display: %11!d! since host router is in D3 state" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=QdiTraceDP FUNC=USB4DPInterruptDPCHandler
+{
+uEventId, ItemLong -- 10
+eDisplayId, ItemLong -- 11
+}
+#typev dpdriver_c925 10 "%0DPDrv%10!d!: Voting all clocks %11!s!, status 0x%12!x!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=QdiTraceDP FUNC=VotePerfLevelsOn
+{
+eDisplayId, ItemLong -- 10
+(TRUE==bVoteOn)?'on':'off', ItemString -- 11
+eRetStatus, ItemLong -- 12
+}

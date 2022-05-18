@@ -1,0 +1,820 @@
+// PDB:  qSarMgr.pdb
+// PDB:  Last Updated :2021-10-17:21:53:34:128 (UTC) [tracepdb]
+82c37882-1979-37bf-54fe-59f895b68adc qSarMgr // SRC=RegistryPopulator.cpp MJ= MN=
+#typev RegistryPopulator_cpp491 75 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyCountCallback
+{
+}
+#typev RegistryPopulator_cpp487 74 "%0 %!FUNC! : Not a ChannelNum subkey, so not incrementing the count" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyCountCallback
+{
+}
+#typev RegistryPopulator_cpp483 73 "%0 %!FUNC! : Updated ChannelNum Subkey count = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyCountCallback
+{
+*(ULONG*)pChannelNumSubkeyCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp479 72 "%0 %!FUNC! : Subkey Name = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyCountCallback
+{
+KeyName, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp475 71 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyCountCallback
+{
+}
+#typev RegistryPopulator_cpp456 68 "%0 %!FUNC! : [ERROR] (at line - 456 ) - Exception Occured and GetLastError() = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+GetLastError(), ItemWINERROR -- 10
+}
+#typev RegistryPopulator_cpp452 67 "%0 %!FUNC! : [ERROR] (at line - 452 ) - Exception occurred, Exception reason = %10!s! and GetLastError() = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+}
+#typev RegistryPopulator_cpp469 70 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp465 69 "%0 %!FUNC! : Wdf memory object deleted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp444 66 "%0 %!FUNC! : Not a ChannelNum subkey, so not reading its subkey values" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp438 65 "%0 %!FUNC! : DMF_Registry_AllSubKeysFromHandleEnumerate for ChannelSensorInfoSubkey is successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp419 64 "%0 %!FUNC! : [ERROR] (at line - 419 ) - ReadSarDataMapping failed and status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RegistryPopulator_cpp406 63 "%0 %!FUNC! : Total number of SensorInfo subkeys present under current ChannelNum key = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+pCurrentChannelInfo->SensorCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp405 62 "%0 %!FUNC! : DMF_Registry_AllSubKeysFromHandleEnumerate for SensorInfo subkey count is successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp397 61 "%0 %!FUNC! : Opening SensorInfo subkey to count under ChannelNum Key using DMF" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp394 60 "%0 %!FUNC! :pChannelInfo->CType = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+pCurrentChannelInfo->CType, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp384 59 "%0 %!FUNC! : currentValidSubkey = %10!ld!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+currentValidSubkey, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp364 58 "%0 %!FUNC! : Subkey Name = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+KeyName, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp351 57 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelNumSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp456 68 "%0 %!FUNC! : [ERROR] (at line - 456 ) - Exception Occured and GetLastError() = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+GetLastError(), ItemWINERROR -- 10
+}
+#typev RegistryPopulator_cpp452 67 "%0 %!FUNC! : [ERROR] (at line - 452 ) - Exception occurred, Exception reason = %10!s! and GetLastError() = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+}
+#typev RegistryPopulator_cpp469 70 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp465 69 "%0 %!FUNC! : Wdf memory object deleted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp444 66 "%0 %!FUNC! : Not a ChannelNum subkey, so not reading its subkey values" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp438 65 "%0 %!FUNC! : DMF_Registry_AllSubKeysFromHandleEnumerate for ChannelSensorInfoSubkey is successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp419 64 "%0 %!FUNC! : [ERROR] (at line - 419 ) - ReadSarDataMapping failed and status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RegistryPopulator_cpp406 63 "%0 %!FUNC! : Total number of SensorInfo subkeys present under current ChannelNum key = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+pCurrentChannelInfo->SensorCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp405 62 "%0 %!FUNC! : DMF_Registry_AllSubKeysFromHandleEnumerate for SensorInfo subkey count is successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp397 61 "%0 %!FUNC! : Opening SensorInfo subkey to count under ChannelNum Key using DMF" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp394 60 "%0 %!FUNC! :pChannelInfo->CType = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+pCurrentChannelInfo->CType, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp384 59 "%0 %!FUNC! : currentValidSubkey = %10!ld!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+currentValidSubkey, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp364 58 "%0 %!FUNC! : Subkey Name = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+KeyName, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp351 57 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp456 68 "%0 %!FUNC! : [ERROR] (at line - 456 ) - Exception Occured and GetLastError() = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+GetLastError(), ItemWINERROR -- 10
+}
+#typev RegistryPopulator_cpp452 67 "%0 %!FUNC! : [ERROR] (at line - 452 ) - Exception occurred, Exception reason = %10!s! and GetLastError() = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+}
+#typev RegistryPopulator_cpp469 70 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp465 69 "%0 %!FUNC! : Wdf memory object deleted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp444 66 "%0 %!FUNC! : Not a ChannelNum subkey, so not reading its subkey values" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp438 65 "%0 %!FUNC! : DMF_Registry_AllSubKeysFromHandleEnumerate for ChannelSensorInfoSubkey is successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp419 64 "%0 %!FUNC! : [ERROR] (at line - 419 ) - ReadSarDataMapping failed and status = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+status, ItemNTSTATUS -- 10
+}
+#typev RegistryPopulator_cpp406 63 "%0 %!FUNC! : Total number of SensorInfo subkeys present under current ChannelNum key = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+pCurrentChannelInfo->SensorCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp405 62 "%0 %!FUNC! : DMF_Registry_AllSubKeysFromHandleEnumerate for SensorInfo subkey count is successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp397 61 "%0 %!FUNC! : Opening SensorInfo subkey to count under ChannelNum Key using DMF" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp394 60 "%0 %!FUNC! :pChannelInfo->CType = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+pCurrentChannelInfo->CType, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp384 59 "%0 %!FUNC! : currentValidSubkey = %10!ld!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+currentValidSubkey, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp364 58 "%0 %!FUNC! : Subkey Name = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+KeyName, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp351 57 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelNumSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp345 56 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyCountCallback
+{
+}
+#typev RegistryPopulator_cpp343 55 "%0 %!FUNC! : Updated SensorInfo Subkey count = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyCountCallback
+{
+*(ULONG*)pSensorInfoSubkeyCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp341 54 "%0 %!FUNC! : Subkey Name = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyCountCallback
+{
+KeyName, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp338 53 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyCountCallback
+{
+}
+#typev RegistryPopulator_cpp329 51 "%0 %!FUNC! : [ERROR] (at line - 329 ) - Exception Occured and GetLastError() = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+GetLastError(), ItemWINERROR -- 10
+}
+#typev RegistryPopulator_cpp325 50 "%0 %!FUNC! : [ERROR] (at line - 325 ) - Exception occurred, Exception reason = %10!s! and GetLastError() = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+}
+#typev RegistryPopulator_cpp331 52 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp318 49 "%0 %!FUNC! : This is not a WLAN channel, checking next channel" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp313 48 "%0 %!FUNC! : [ERROR] (at line - 313 ) - WlanAntMask is greater than %10!d!, Only last %11!d! bits will be considered as antenna mask" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+WLAN_ANTENNA_MASK_ALL, ItemLong -- 10
+WLAN_ANTENNA_COUNT, ItemLong -- 11
+}
+#typev RegistryPopulator_cpp309 47 "%0 %!FUNC! : [ERROR] (at line - 309 ) - WlanAntMask is set to 0 - Backoff index will not be applied for any of the antennas" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp306 46 "%0 %!FUNC! : WlanAntMask = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+pChannelInfo->wlanAntennaInfo->AntennaMask, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp277 45 "%0 %!FUNC! : Updated value in data->valid  = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+data->valid, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp273 44 "%0 %!FUNC! : Sensor type or Sensor ID is invalid, setting data->valid flag to flase" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp270 43 "%0 %!FUNC! : Updated value in data->Id  = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+data->Id, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp260 42 "%0 %!FUNC! : Updated value in data->Type = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+data->Type, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp249 40 "%0 %!FUNC! : Updating  data->Type to %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+mapping->type, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp248 39 "%0 %!FUNC! : Found sensor type mapping" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp256 41 "%0 %!FUNC! : Current gSensorMapping didn't match, checking with next gSensorMapping" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp245 38 "%0 %!FUNC! : Current gSensorMapping under check = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+mapping->name->Buffer, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp239 37 "%0 %!FUNC! : SensorType string read from registry = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+sensortype, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp211 36 "%0 %!FUNC! : Subkey int = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+KeyNameint, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp209 35 "%0 %!FUNC! : Subkey Name = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+KeyName, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp193 34 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ChannelSensorInfoSubkeyReadCallback
+{
+}
+#typev RegistryPopulator_cpp329 51 "%0 %!FUNC! : [ERROR] (at line - 329 ) - Exception Occured and GetLastError() = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+GetLastError(), ItemWINERROR -- 10
+}
+#typev RegistryPopulator_cpp325 50 "%0 %!FUNC! : [ERROR] (at line - 325 ) - Exception occurred, Exception reason = %10!s! and GetLastError() = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+}
+#typev RegistryPopulator_cpp331 52 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp318 49 "%0 %!FUNC! : This is not a WLAN channel, checking next channel" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp313 48 "%0 %!FUNC! : [ERROR] (at line - 313 ) - WlanAntMask is greater than %10!d!, Only last %11!d! bits will be considered as antenna mask" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+WLAN_ANTENNA_MASK_ALL, ItemLong -- 10
+WLAN_ANTENNA_COUNT, ItemLong -- 11
+}
+#typev RegistryPopulator_cpp309 47 "%0 %!FUNC! : [ERROR] (at line - 309 ) - WlanAntMask is set to 0 - Backoff index will not be applied for any of the antennas" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp306 46 "%0 %!FUNC! : WlanAntMask = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+pChannelInfo->wlanAntennaInfo->AntennaMask, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp277 45 "%0 %!FUNC! : Updated value in data->valid  = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+data->valid, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp273 44 "%0 %!FUNC! : Sensor type or Sensor ID is invalid, setting data->valid flag to flase" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp270 43 "%0 %!FUNC! : Updated value in data->Id  = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+data->Id, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp260 42 "%0 %!FUNC! : Updated value in data->Type = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+data->Type, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp249 40 "%0 %!FUNC! : Updating  data->Type to %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+mapping->type, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp248 39 "%0 %!FUNC! : Found sensor type mapping" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp256 41 "%0 %!FUNC! : Current gSensorMapping didn't match, checking with next gSensorMapping" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp245 38 "%0 %!FUNC! : Current gSensorMapping under check = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+mapping->name->Buffer, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp239 37 "%0 %!FUNC! : SensorType string read from registry = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+sensortype, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp211 36 "%0 %!FUNC! : Subkey int = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+KeyNameint, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp209 35 "%0 %!FUNC! : Subkey Name = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+KeyName, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp193 34 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp329 51 "%0 %!FUNC! : [ERROR] (at line - 329 ) - Exception Occured and GetLastError() = %10!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+GetLastError(), ItemWINERROR -- 10
+}
+#typev RegistryPopulator_cpp325 50 "%0 %!FUNC! : [ERROR] (at line - 325 ) - Exception occurred, Exception reason = %10!s! and GetLastError() = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+}
+#typev RegistryPopulator_cpp331 52 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp318 49 "%0 %!FUNC! : This is not a WLAN channel, checking next channel" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp313 48 "%0 %!FUNC! : [ERROR] (at line - 313 ) - WlanAntMask is greater than %10!d!, Only last %11!d! bits will be considered as antenna mask" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+WLAN_ANTENNA_MASK_ALL, ItemLong -- 10
+WLAN_ANTENNA_COUNT, ItemLong -- 11
+}
+#typev RegistryPopulator_cpp309 47 "%0 %!FUNC! : [ERROR] (at line - 309 ) - WlanAntMask is set to 0 - Backoff index will not be applied for any of the antennas" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp306 46 "%0 %!FUNC! : WlanAntMask = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+pChannelInfo->wlanAntennaInfo->AntennaMask, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp277 45 "%0 %!FUNC! : Updated value in data->valid  = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+data->valid, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp273 44 "%0 %!FUNC! : Sensor type or Sensor ID is invalid, setting data->valid flag to flase" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp270 43 "%0 %!FUNC! : Updated value in data->Id  = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+data->Id, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp260 42 "%0 %!FUNC! : Updated value in data->Type = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+data->Type, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp249 40 "%0 %!FUNC! : Updating  data->Type to %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+mapping->type, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp248 39 "%0 %!FUNC! : Found sensor type mapping" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp256 41 "%0 %!FUNC! : Current gSensorMapping didn't match, checking with next gSensorMapping" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp245 38 "%0 %!FUNC! : Current gSensorMapping under check = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+mapping->name->Buffer, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp239 37 "%0 %!FUNC! : SensorType string read from registry = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+sensortype, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp211 36 "%0 %!FUNC! : Subkey int = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+KeyNameint, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp209 35 "%0 %!FUNC! : Subkey Name = %10!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+KeyName, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp193 34 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ChannelSensorInfoSubkeyReadCallback'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp599 89 "%0 %!FUNC! : [ERROR] (at line - 599 ) - Exception Occured and GetLastError() = %10!s! and Last Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+GetLastError(), ItemWINERROR -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RegistryPopulator_cpp595 88 "%0 %!FUNC! : [ERROR] (at line - 595 ) - Exception occurred, Exception reason : %10!s!, GetLastError() = %11!s! and Last status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RegistryPopulator_cpp617 91 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+}
+#typev RegistryPopulator_cpp614 90 "%0 %!FUNC! : Wdf memory object deleted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+}
+#typev RegistryPopulator_cpp590 87 "%0 %!FUNC! : DMF_Registry_AllSubKeysFromHandleEnumerate for ChannelNum to read is successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+}
+#typev RegistryPopulator_cpp582 86 "%0 %!FUNC! : Opening ChannelNum subkey to read under Device Parameters Key using DMF" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+}
+#typev RegistryPopulator_cpp562 85 "%0 %!FUNC! : Total number of ChannelNum subkeys present = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+ChannelNumSubkeyCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp561 84 "%0 %!FUNC! : DMF_Registry_AllSubKeysFromHandleEnumerate for ChannelNum to count is successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+}
+#typev RegistryPopulator_cpp553 83 "%0 %!FUNC! : Opening ChannelNum subkey to count under Device Parameters Key using DMF" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+}
+#typev RegistryPopulator_cpp551 82 "%0 %!FUNC! : Number of WLAN Antennas from registry in device context deviceContext->WlanAntennaCount = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+deviceContext->WlanAntennaCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp545 81 "%0 %!FUNC! : [ERROR] (at line - 545 ) - Valid WlanAntennaCount is %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+WLAN_ANTENNA_COUNT, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp544 80 "%0 %!FUNC! : [ERROR] (at line - 544 ) - WlanAntennaCount set in the registry = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+deviceContext->WlanAntennaCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp543 79 "%0 %!FUNC! : [ERROR] (at line - 543 ) - WlanAntennaCount is invalid, so all WLAN channels are considered as invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+}
+#typev RegistryPopulator_cpp537 78 "%0 %!FUNC! : Number of channels from registry in device context deviceContext->NumberOfChannels = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+deviceContext->NumberOfChannels, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp528 77 "%0 %!FUNC! : DMF_Registry_HandleOpenById successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+}
+#typev RegistryPopulator_cpp497 76 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=LoadChannelConfiguration
+{
+}
+#typev RegistryPopulator_cpp599 89 "%0 %!FUNC! : [ERROR] (at line - 599 ) - Exception Occured and GetLastError() = %10!s! and Last Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+GetLastError(), ItemWINERROR -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RegistryPopulator_cpp595 88 "%0 %!FUNC! : [ERROR] (at line - 595 ) - Exception occurred, Exception reason : %10!s!, GetLastError() = %11!s! and Last status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RegistryPopulator_cpp617 91 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp614 90 "%0 %!FUNC! : Wdf memory object deleted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp590 87 "%0 %!FUNC! : DMF_Registry_AllSubKeysFromHandleEnumerate for ChannelNum to read is successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp582 86 "%0 %!FUNC! : Opening ChannelNum subkey to read under Device Parameters Key using DMF" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp562 85 "%0 %!FUNC! : Total number of ChannelNum subkeys present = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+ChannelNumSubkeyCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp561 84 "%0 %!FUNC! : DMF_Registry_AllSubKeysFromHandleEnumerate for ChannelNum to count is successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp553 83 "%0 %!FUNC! : Opening ChannelNum subkey to count under Device Parameters Key using DMF" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp551 82 "%0 %!FUNC! : Number of WLAN Antennas from registry in device context deviceContext->WlanAntennaCount = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+deviceContext->WlanAntennaCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp545 81 "%0 %!FUNC! : [ERROR] (at line - 545 ) - Valid WlanAntennaCount is %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+WLAN_ANTENNA_COUNT, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp544 80 "%0 %!FUNC! : [ERROR] (at line - 544 ) - WlanAntennaCount set in the registry = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+deviceContext->WlanAntennaCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp543 79 "%0 %!FUNC! : [ERROR] (at line - 543 ) - WlanAntennaCount is invalid, so all WLAN channels are considered as invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp537 78 "%0 %!FUNC! : Number of channels from registry in device context deviceContext->NumberOfChannels = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+deviceContext->NumberOfChannels, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp528 77 "%0 %!FUNC! : DMF_Registry_HandleOpenById successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp497 76 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp599 89 "%0 %!FUNC! : [ERROR] (at line - 599 ) - Exception Occured and GetLastError() = %10!s! and Last Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+GetLastError(), ItemWINERROR -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RegistryPopulator_cpp595 88 "%0 %!FUNC! : [ERROR] (at line - 595 ) - Exception occurred, Exception reason : %10!s!, GetLastError() = %11!s! and Last status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RegistryPopulator_cpp617 91 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp614 90 "%0 %!FUNC! : Wdf memory object deleted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp590 87 "%0 %!FUNC! : DMF_Registry_AllSubKeysFromHandleEnumerate for ChannelNum to read is successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp582 86 "%0 %!FUNC! : Opening ChannelNum subkey to read under Device Parameters Key using DMF" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp562 85 "%0 %!FUNC! : Total number of ChannelNum subkeys present = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+ChannelNumSubkeyCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp561 84 "%0 %!FUNC! : DMF_Registry_AllSubKeysFromHandleEnumerate for ChannelNum to count is successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp553 83 "%0 %!FUNC! : Opening ChannelNum subkey to count under Device Parameters Key using DMF" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp551 82 "%0 %!FUNC! : Number of WLAN Antennas from registry in device context deviceContext->WlanAntennaCount = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+deviceContext->WlanAntennaCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp545 81 "%0 %!FUNC! : [ERROR] (at line - 545 ) - Valid WlanAntennaCount is %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+WLAN_ANTENNA_COUNT, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp544 80 "%0 %!FUNC! : [ERROR] (at line - 544 ) - WlanAntennaCount set in the registry = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+deviceContext->WlanAntennaCount, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp543 79 "%0 %!FUNC! : [ERROR] (at line - 543 ) - WlanAntennaCount is invalid, so all WLAN channels are considered as invalid" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp537 78 "%0 %!FUNC! : Number of channels from registry in device context deviceContext->NumberOfChannels = %10!ld!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+deviceContext->NumberOfChannels, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp528 77 "%0 %!FUNC! : DMF_Registry_HandleOpenById successful" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp497 76 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`LoadChannelConfiguration'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp98 21 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ReadChannelCount
+{
+}
+#typev RegistryPopulator_cpp89 20 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ReadChannelCount
+{
+}
+#typev RegistryPopulator_cpp81 18 "%0 %!FUNC! : [ERROR] (at line - 81 ) - Exception Occured and GetLastError() = %10!s! and Last Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=ReadChannelType
+{
+GetLastError(), ItemWINERROR -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RegistryPopulator_cpp77 17 "%0 %!FUNC! : [ERROR] (at line - 77 ) - Exception occurred, Exception reason : %10!s!, GetLastError() = %11!s! and Last status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=ReadChannelType
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RegistryPopulator_cpp83 19 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ReadChannelType
+{
+}
+#typev RegistryPopulator_cpp68 16 "%0 %!FUNC! : Updated value in pChannelInfo->CType = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ReadChannelType
+{
+pChannelInfo->CType, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp57 14 "%0 %!FUNC! : Updating pChannelInfo->CType to %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ReadChannelType
+{
+mapping->type, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp56 13 "%0 %!FUNC! : Found channel type mapping" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ReadChannelType
+{
+}
+#typev RegistryPopulator_cpp64 15 "%0 %!FUNC! : Current gChannelMapping didn't match, checking with next gChannelMapping" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ReadChannelType
+{
+}
+#typev RegistryPopulator_cpp53 12 "%0 %!FUNC! : Current gChannelMapping under check = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ReadChannelType
+{
+mapping->name->Buffer, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp49 11 "%0 %!FUNC! : String read from registry = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ReadChannelType
+{
+channelname, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp33 10 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ReadChannelType
+{
+}
+#typev RegistryPopulator_cpp81 18 "%0 %!FUNC! : [ERROR] (at line - 81 ) - Exception Occured and GetLastError() = %10!s! and Last Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$0
+{
+GetLastError(), ItemWINERROR -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RegistryPopulator_cpp77 17 "%0 %!FUNC! : [ERROR] (at line - 77 ) - Exception occurred, Exception reason : %10!s!, GetLastError() = %11!s! and Last status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$0
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RegistryPopulator_cpp83 19 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp68 16 "%0 %!FUNC! : Updated value in pChannelInfo->CType = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$0
+{
+pChannelInfo->CType, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp57 14 "%0 %!FUNC! : Updating pChannelInfo->CType to %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$0
+{
+mapping->type, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp56 13 "%0 %!FUNC! : Found channel type mapping" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp64 15 "%0 %!FUNC! : Current gChannelMapping didn't match, checking with next gChannelMapping" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp53 12 "%0 %!FUNC! : Current gChannelMapping under check = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$0
+{
+mapping->name->Buffer, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp49 11 "%0 %!FUNC! : String read from registry = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$0
+{
+channelname, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp33 10 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp81 18 "%0 %!FUNC! : [ERROR] (at line - 81 ) - Exception Occured and GetLastError() = %10!s! and Last Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$1
+{
+GetLastError(), ItemWINERROR -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RegistryPopulator_cpp77 17 "%0 %!FUNC! : [ERROR] (at line - 77 ) - Exception occurred, Exception reason : %10!s!, GetLastError() = %11!s! and Last status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$1
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RegistryPopulator_cpp83 19 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp68 16 "%0 %!FUNC! : Updated value in pChannelInfo->CType = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$1
+{
+pChannelInfo->CType, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp57 14 "%0 %!FUNC! : Updating pChannelInfo->CType to %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$1
+{
+mapping->type, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp56 13 "%0 %!FUNC! : Found channel type mapping" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp64 15 "%0 %!FUNC! : Current gChannelMapping didn't match, checking with next gChannelMapping" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp53 12 "%0 %!FUNC! : Current gChannelMapping under check = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$1
+{
+mapping->name->Buffer, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp49 11 "%0 %!FUNC! : String read from registry = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$1
+{
+channelname, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp33 10 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ReadChannelType'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp170 31 "%0 %!FUNC! : [ERROR] (at line - 170 ) - Exception Occured and GetLastError() = %10!s! and Last Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=ReadSarDataMapping
+{
+GetLastError(), ItemWINERROR -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RegistryPopulator_cpp166 30 "%0 %!FUNC! : [ERROR] (at line - 166 ) - Exception occurred, Exception reason : %10!s!, GetLastError() = %11!s! and Last status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=ReadSarDataMapping
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RegistryPopulator_cpp186 33 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ReadSarDataMapping
+{
+}
+#typev RegistryPopulator_cpp181 32 "%0 %!FUNC! : Wdf memory object deleted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ReadSarDataMapping
+{
+}
+#typev RegistryPopulator_cpp159 29 "%0 %!FUNC! : [ERROR] (at line - 159 ) - Could not find SAR data mapping value for index %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=ReadSarDataMapping
+{
+itr, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp154 28 "%0 %!FUNC! : Updated value in pChannelInfo->SarDataLookUp.Count = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ReadSarDataMapping
+{
+pChannelInfo->SarDataLookUp.Count, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp153 27 "%0 %!FUNC! : Updated value in pChannelInfo->SarDataLookUp.DataMap[itr].key = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ReadSarDataMapping
+{
+pChannelInfo->SarDataLookUp.DataMap[itr].key, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp152 26 "%0 %!FUNC! : Updated value in pChannelInfo->SarDataLookUp.DataMap[itr].value = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ReadSarDataMapping
+{
+pChannelInfo->SarDataLookUp.DataMap[itr].value, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp146 25 "%0 %!FUNC! : key = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=ReadSarDataMapping
+{
+key, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp117 24 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ReadSarDataMapping
+{
+}
+#typev RegistryPopulator_cpp170 31 "%0 %!FUNC! : [ERROR] (at line - 170 ) - Exception Occured and GetLastError() = %10!s! and Last Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$0
+{
+GetLastError(), ItemWINERROR -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RegistryPopulator_cpp166 30 "%0 %!FUNC! : [ERROR] (at line - 166 ) - Exception occurred, Exception reason : %10!s!, GetLastError() = %11!s! and Last status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$0
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RegistryPopulator_cpp186 33 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp181 32 "%0 %!FUNC! : Wdf memory object deleted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp159 29 "%0 %!FUNC! : [ERROR] (at line - 159 ) - Could not find SAR data mapping value for index %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$0
+{
+itr, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp154 28 "%0 %!FUNC! : Updated value in pChannelInfo->SarDataLookUp.Count = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$0
+{
+pChannelInfo->SarDataLookUp.Count, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp153 27 "%0 %!FUNC! : Updated value in pChannelInfo->SarDataLookUp.DataMap[itr].key = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$0
+{
+pChannelInfo->SarDataLookUp.DataMap[itr].key, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp152 26 "%0 %!FUNC! : Updated value in pChannelInfo->SarDataLookUp.DataMap[itr].value = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$0
+{
+pChannelInfo->SarDataLookUp.DataMap[itr].value, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp146 25 "%0 %!FUNC! : key = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$0
+{
+key, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp117 24 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$0
+{
+}
+#typev RegistryPopulator_cpp170 31 "%0 %!FUNC! : [ERROR] (at line - 170 ) - Exception Occured and GetLastError() = %10!s! and Last Status = %11!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$1
+{
+GetLastError(), ItemWINERROR -- 10
+status, ItemNTSTATUS -- 11
+}
+#typev RegistryPopulator_cpp166 30 "%0 %!FUNC! : [ERROR] (at line - 166 ) - Exception occurred, Exception reason : %10!s!, GetLastError() = %11!s! and Last status = %12!s!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$1
+{
+e.what(), ItemString -- 10
+GetLastError(), ItemWINERROR -- 11
+status, ItemNTSTATUS -- 12
+}
+#typev RegistryPopulator_cpp186 33 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp181 32 "%0 %!FUNC! : Wdf memory object deleted" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp159 29 "%0 %!FUNC! : [ERROR] (at line - 159 ) - Could not find SAR data mapping value for index %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$1
+{
+itr, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp154 28 "%0 %!FUNC! : Updated value in pChannelInfo->SarDataLookUp.Count = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$1
+{
+pChannelInfo->SarDataLookUp.Count, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp153 27 "%0 %!FUNC! : Updated value in pChannelInfo->SarDataLookUp.DataMap[itr].key = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$1
+{
+pChannelInfo->SarDataLookUp.DataMap[itr].key, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp152 26 "%0 %!FUNC! : Updated value in pChannelInfo->SarDataLookUp.DataMap[itr].value = %10!d!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$1
+{
+pChannelInfo->SarDataLookUp.DataMap[itr].value, ItemLong -- 10
+}
+#typev RegistryPopulator_cpp146 25 "%0 %!FUNC! : key = %10!s!" //   LEVEL=TRACE_LEVEL_VERBOSE FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$1
+{
+key, ItemWString -- 10
+}
+#typev RegistryPopulator_cpp117 24 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=`ReadSarDataMapping'::`1'::catch$1
+{
+}
+#typev RegistryPopulator_cpp112 23 "%0 %!FUNC! FunctionExit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ReadWlanAntCount
+{
+}
+#typev RegistryPopulator_cpp103 22 "%0 %!FUNC! FunctionEnter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=TRACE_SARMGR FUNC=ReadWlanAntCount
+{
+}

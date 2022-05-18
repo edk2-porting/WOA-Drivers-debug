@@ -1,0 +1,210 @@
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+d89d490a-e7f9-3894-1db2-9fd1b1462f7d build // SRC=ClockDriver.c MJ= MN=
+#typev PEPClock_c488 35 "%0%10!s! (Inverted: %11!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=PepClockInvertClock
+{
+pClock->szName, ItemString -- 10
+(uint32_t)bInvert, ItemLong -- 11
+}
+// PDB:  qcpep7280.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+#typev ClockDriver_c130 10 "%0Unable to configure: %10!s! to External Source with Mux Select: %11!u!, Divider: %12!u!, nM: %13!u!, nN: %14!u!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ConfigClockMux
+{
+pDomain->szName, ItemString -- 10
+pHALConfig->nMuxSel, ItemLong -- 11
+pHALConfig->nDiv2x, ItemLong -- 12
+pHALConfig->nM, ItemLong -- 13
+pHALConfig->nN, ItemLong -- 14
+}
+#typev ClockDriver_c4735 48 "%0Unable to resolve source ID for the %10!s! source name" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ConfigureClock
+{
+CLOCK_XO_NAME, ItemString -- 10
+}
+#typev ClockDriver_c4773 49 "%0Unable to resolve source ID for the %10!s! source name" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ConfigureClock
+{
+CLOCK_XO_NAME, ItemString -- 10
+}
+#typev ClockDriver_c4658 47 "%0Unable to find client(%10!s!) for source: %11!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ConfigureClock
+{
+((ClockClientCtxt*)(pDrvCtxt->hClient))->szName, ItemString -- 10
+pClock->szName, ItemString -- 11
+}
+#typev ClockDriver_c4610 46 "%0Unable to find client(%10!s!) for source: %11!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ConfigureClock
+{
+((ClockClientCtxt*)(pDrvCtxt->hClient))->szName, ItemString -- 10
+pClock->szName, ItemString -- 11
+}
+#typev ClockDriver_c1963 26 "%0Clock domain root did not turn off after all domain clocks are off" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DisableClockDomain
+{
+}
+#typev ClockDriver_c2302 31 "%0%10!s! (Enabled: 0)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DisableClockEx
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c2269 30 "%0Unable to find client(%10!s!) for source: %11!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DisableClockEx
+{
+((ClockClientCtxt*)(pDrvCtxt->hClient))->szName, ItemString -- 10
+pClock->szName, ItemString -- 11
+}
+#typev ClockDriver_c4494 45 "%0%10!s! (Enabled: 0)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DisablePowerDomain
+{
+pPowerDomain->szName, ItemString -- 10
+}
+#typev ClockDriver_c4406 44 "%0Unable to find client(%10!s!) for power domain: %11!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DisablePowerDomain
+{
+((ClockClientCtxt*)(pDrvCtxt->hClient))->szName, ItemString -- 10
+pPowerDomain->szName, ItemString -- 11
+}
+#typev ClockDriver_c6796 70 "%0Clock_InitNPA failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c6772 68 "%0Clock_InitDFSDomains failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c6784 69 "%0Clock_InitTarget failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c6760 67 "%0Clock_InitVoltage failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c6749 66 "%0Clock_InitSourcesSoft failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c6735 65 "%0Clock_Attach failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c6709 64 "%0Clock_InitBases failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c6696 63 "%0DALSYS_SyncCreate failed." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c6659 62 "%0Missing clock log defaults. Logging is disabled." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_DriverInit
+{
+}
+#typev ClockDriver_c2157 29 "%0Unable to turn ON clock: %10!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_EnableClockEx
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c2136 28 "%0%10!s! (Enabled: 1)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_EnableClockEx
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c2100 27 "%0Unable to find client(%10!s!) for source: %11!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_EnableClockEx
+{
+((ClockClientCtxt*)(pDrvCtxt->hClient))->szName, ItemString -- 10
+pClock->szName, ItemString -- 11
+}
+#typev ClockDriver_c4303 43 "%0%10!s! (Enabled: 1)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_EnablePowerDomain
+{
+pPowerDomain->szName, ItemString -- 10
+}
+#typev ClockDriver_c4249 42 "%0Unable to find client(%10!s!) for power domain: %11!s!." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_EnablePowerDomain
+{
+((ClockClientCtxt*)(pDrvCtxt->hClient))->szName, ItemString -- 10
+pPowerDomain->szName, ItemString -- 11
+}
+#typev ClockDriver_c1730 25 "%0Unable to allocate %10!u! bytes for detected initial domain config." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_InitClockDomain
+{
+nSize, ItemLong -- 10
+}
+#typev ClockDriver_c1420 23 "%0Unable to initialize mux config from HW values." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_InitDFSDomain
+{
+}
+#typev ClockDriver_c1445 24 "%0DFS frequency exceeds known max. Assuming Turbo." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_InitDFSDomain
+{
+}
+#typev ClockDriver_c1401 22 "%0Unable to allocate %10!u! bytes for Clock DFS array." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_InitDFSDomain
+{
+nSize, ItemLong -- 10
+}
+#typev ClockDriver_c831 15 "%0Unable to allocate %10!u! bytes for new reference count node." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_InsertRefCountClient
+{
+sizeof(ClockClientRefCountType), ItemLong -- 10
+}
+#typev ClockDriver_c513 14 "%0Callback 0x%10!p! end for event %11!u! and resource ID 0x%12!x!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_InvokeClientCallbacks
+{
+(void*)pTemp->pfnCallback, ItemPtr -- 10
+eEvent, ItemLong -- 11
+nId, ItemLong -- 12
+}
+#typev ClockDriver_c499 13 "%0Callback 0x%10!p! start for event %11!u! and resource ID 0x%12!x!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_InvokeClientCallbacks
+{
+(void*)pTemp->pfnCallback, ItemPtr -- 10
+eEvent, ItemLong -- 11
+nId, ItemLong -- 12
+}
+#typev ClockDriver_c7433 72 "%0Unable to allocate %10!u! bytes for callback linked list node" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_RegisterCallback
+{
+nSize, ItemLong -- 10
+}
+#typev ClockDriver_c3274 39 "%0%10!s! (ResetBranch: 0)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_Reset
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c3261 38 "%0%10!s! (ResetBranch: 1)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_Reset
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c3180 37 "%0%10!s! (Reset: 0)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ResetBlockEx
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c3162 36 "%0%10!s! (Reset: 1)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_ResetBlockEx
+{
+pClock->szName, ItemString -- 10
+}
+#typev ClockDriver_c3780 41 "%0%10!s! (ExternalSource: %11!u!, %12!u!, %13!u!, %14!u!, %15!u!) @ %16!u! Hz, @ %17!u! voltage" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SelectExternalSourceEx
+{
+pClock->szName, ItemString -- 10
+nSource, ItemLong -- 11
+nDiv2x, ItemLong -- 12
+nM, ItemLong -- 13
+nN, ItemLong -- 14
+n2D, ItemLong -- 15
+nFreqHz, ItemLong -- 16
+eVRegLevel, ItemLong -- 17
+}
+#typev ClockDriver_c3742 40 "%0Unable to allocate %10!u! bytes for external source configuration." //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SelectExternalSourceEx
+{
+sizeof(*pNewConfig), ItemLong -- 10
+}
+#typev ClockDriver_c2726 12 "%0Callback 0x%10!p! end for event %11!u! and resource ID 0x%12!x!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SetClockConfig
+{
+(void*)pTemp->pfnCallback, ItemPtr -- 10
+eEvent, ItemLong -- 11
+pTemp->nResourceID, ItemLong -- 12
+}
+#typev ClockDriver_c2726 11 "%0Callback 0x%10!p! start for event %11!u!d and resource ID 0x%12!x!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SetClockConfig
+{
+(void*)pTemp->pfnCallback, ItemPtr -- 10
+eEvent, ItemLong -- 11
+pTemp->nResourceID, ItemLong -- 12
+}
+#typev ClockDriver_c2611 12 "%0Callback 0x%10!p! end for event %11!u! and resource ID 0x%12!x!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SetClockConfig
+{
+(void*)pTemp->pfnCallback, ItemPtr -- 10
+eEvent, ItemLong -- 11
+pTemp->nResourceID, ItemLong -- 12
+}
+#typev ClockDriver_c2611 11 "%0Callback 0x%10!p! start for event %11!u!d and resource ID 0x%12!x!" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SetClockConfig
+{
+(void*)pTemp->pfnCallback, ItemPtr -- 10
+eEvent, ItemLong -- 11
+pTemp->nResourceID, ItemLong -- 12
+}
+#typev ClockDriver_c2995 34 "%0%10!s! (Clock Divider: %11!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SetClockDivider
+{
+pClock->szName, ItemString -- 10
+nDivider, ItemLong -- 11
+}
+#typev ClockDriver_c2901 33 "%0%10!s! (Freq: %11!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SetClockFrequency
+{
+pClock->szName, ItemString -- 10
+pNewConfig->nFreqHz, ItemLong -- 11
+}
+#typev ClockDriver_c5351 57 "%0%10!s! (Freq: %11!u!)" //   LEVEL=TRACE_LEVEL_CRITICAL CLKHANDLE=pDrvCtxt->hClockLog FUNC=Clock_SetSourceFrequency
+{
+pSource->szName, ItemString -- 10
+pNewConfig->nFreqHz, ItemLong -- 11
+}

@@ -1,0 +1,1030 @@
+// PDB:  qcgnss.pdb
+// PDB:  Last Updated :2022-05-17:11:06:06:456 (UTC) [tracepdb]
+fb9a2322-b04b-36b8-05d8-d9303f6c2210 latest // SRC=gpsdrivergeofence.c MJ= MN=
+#typev gpsdrivergeofence_c1669 155 "%0gpsdrivergeofence.c::1669 [TELY] E_GEOFENCE_ERROR Add Geofence" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=AddGeofence
+{
+}
+#typev gpsdrivergeofence_c1668 154 "%0gpsdrivergeofence.c::1668 QCGNSS_GF:  Add Geofence ERROR" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=AddGeofence
+{
+}
+#typev gpsdrivergeofence_c1657 153 "%0gpsdrivergeofence.c::1657 #GFAddrep:%10!c!%11!05d!.%12!08d!,%13!c!%14!05d!.%15!08d!,%16!d!,%17!d!,%18!d!,%19!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=AddGeofence
+{
+sign, ItemChar -- 10
+(int)addCircularGeofenceReq.circularGeofenceArgs.latitude, ItemLong -- 11
+abs((int)(1.0e8 * (addCircularGeofenceReq.circularGeofenceArgs.latitude - (int)(addCircularGeofenceReq.circularGeofenceArgs.latitude)))), ItemLong -- 12
+sign1, ItemChar -- 13
+(int)addCircularGeofenceReq.circularGeofenceArgs.longitude, ItemLong -- 14
+abs((int)(1.0e8 * (addCircularGeofenceReq.circularGeofenceArgs.longitude - (int)(addCircularGeofenceReq.circularGeofenceArgs.longitude)))), ItemLong -- 15
+addCircularGeofenceReq.circularGeofenceArgs.radius, ItemLong -- 16
+addCircularGeofenceReq.responsiveness, ItemLong -- 17
+addCircularGeofenceReq.confidence, ItemLong -- 18
+pGNSSGeofenceCreateResponseParam->GeofenceID, ItemLong -- 19
+}
+#typev gpsdrivergeofence_c1651 152 "%0gpsdrivergeofence.c::1651 QCGNSS_GF:  Add Geofence SUCCESS GeofenceID %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=AddGeofence
+{
+pGNSSGeofenceCreateResponseParam->GeofenceID, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1641 151 "%0gpsdrivergeofence.c::1641 QCGNSS_GF: GF Counter Houskeeping  %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=AddGeofence
+{
+GFCounter, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1640 150 "%0gpsdrivergeofence.c::1640 START GF Lock released 1 " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=AddGeofence
+{
+}
+#typev gpsdrivergeofence_c1637 149 "%0gpsdrivergeofence.c::1637 START GF Lock released " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=AddGeofence
+{
+}
+#typev gpsdrivergeofence_c1632 148 "%0gpsdrivergeofence.c::1632 Wips_wlan_init calling now " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=AddGeofence
+{
+}
+#typev gpsdrivergeofence_c1619 147 "%0gpsdrivergeofence.c::1619 locClientSendReq QMI_LOC_ADD_CIRCULAR_GEOFENCE_REQ_V02 %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=AddGeofence
+{
+qstatus, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1610 146 "%0gpsdrivergeofence.c::1610 START GF Lock Acquired " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=AddGeofence
+{
+}
+#typev gpsdrivergeofence_c1600 145 "%0gpsdrivergeofence.c::1600 QCGNSS_GF: Geofence Responsivness :  %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=AddGeofence
+{
+g_nGeofenceResponsivness, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1597 144 "%0gpsdrivergeofence.c::1597 QCGNSS_GF: Conversion from Geofence Responsivness UNICODE String to Int Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=AddGeofence
+{
+}
+#typev gpsdrivergeofence_c1593 143 "%0gpsdrivergeofence.c::1593 QCGNSS_GF :  Registry Read for Geofence Responsivness String = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=AddGeofence
+{
+&nGeofenceResponsivness, ItemPWString -- 10
+}
+#typev gpsdrivergeofence_c1589 142 "%0gpsdrivergeofence.c::1589 QCGNSS_GF: Registry Read for Geofence Responsivness Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=AddGeofence
+{
+}
+#typev gpsdrivergeofence_c1580 141 "%0gpsdrivergeofence.c::1580 QCGNSS_GF: nGeofenceResponsivness.Buffer failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=AddGeofence
+{
+}
+#typev gpsdrivergeofence_c1543 140 "%0gpsdrivergeofence.c::1543 QCGPS: Invalid Geofence Radius" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=AddGeofence
+{
+}
+#typev gpsdrivergeofence_c1536 139 "%0gpsdrivergeofence.c::1536 QCGPS: One of the input parameters is NULL!!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=AddGeofence
+{
+}
+#typev gpsdrivergeofence_c1524 138 "%0gpsdrivergeofence.c::1524 QCGPS: WdfRequestRetrieveOutputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=AddGeofence
+{
+OutputBufferLength, ItemPtr -- 10
+sizeof(GNSS_GEOFENCE_CREATE_RESPONSE), ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1517 137 "%0gpsdrivergeofence.c::1517 QCGPS: WdfRequestRetrieveOutputBuffer failed 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=AddGeofence
+{
+status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1506 136 "%0gpsdrivergeofence.c::1506 QCGPS: WdfRequestRetrieveInputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=AddGeofence
+{
+InputBufferLength, ItemPtr -- 10
+sizeof(GNSS_GEOFENCE_CREATE_PARAM), ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1498 135 "%0gpsdrivergeofence.c::1498 QCGPS: WdfRequestRetrieveInputBuffer failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=AddGeofence
+{
+status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1247 115 "%0gpsdrivergeofence.c::1247 QCGNSS_GF:  malloc failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=CreateSSRTrackingStatusNode
+{
+}
+#typev gpsdrivergeofence_c1244 114 "%0gpsdrivergeofence.c::1244 QCGNSS_GF:  CreateSSRTrackingStatusNode:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=CreateSSRTrackingStatusNode
+{
+status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1742 162 "%0gpsdrivergeofence.c::1742 QCGNSS_GF:  Delete Geofence ID %10!d!  FAILURE" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=DeleteGeofence
+{
+pGNSSGeofenceDeleteParam->GeofenceID, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1737 161 "%0gpsdrivergeofence.c::1737 QCGNSS_GF:  Delete Geofence ID %10!d!  SUCCESS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=DeleteGeofence
+{
+pGNSSGeofenceDeleteParam->GeofenceID, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1735 160 "%0gpsdrivergeofence.c::1735 QCGNSS_GF: All GF Deleted. GF State Available " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=DeleteGeofence
+{
+}
+#typev gpsdrivergeofence_c1732 159 "%0gpsdrivergeofence.c::1732 QCGNSS_GF:  Error in GF Counter Houskeeping" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=DeleteGeofence
+{
+}
+#typev gpsdrivergeofence_c1730 158 "%0gpsdrivergeofence.c::1730 QCGNSS_GF: GF Counter Houskeeping  %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=DeleteGeofence
+{
+GFCounter, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1719 157 "%0gpsdrivergeofence.c::1719 QCGNSS_GF: locClientSendReq done for QMI_LOC_DELETE_GEOFENCE_REQ_V02 status %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=DeleteGeofence
+{
+qstatus, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1694 156 "%0gpsdrivergeofence.c::1694 QCGNSS_GF: WdfRequestRetrieveInputBuffer failed 0x%10!x!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=DeleteGeofence
+{
+status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2886 271 "%0gpsdrivergeofence.c::2886 InjectWiFiAPDataIndThread : UNKNOWN ERROR !!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=EvtWifiAppDataWorkItem
+{
+}
+#typev gpsdrivergeofence_c2882 270 "%0gpsdrivergeofence.c::2882 InjectWiFiAPDataIndThread : ERROR_NDIS_DOT11_POWER_STATE_INVALID !!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=EvtWifiAppDataWorkItem
+{
+}
+#typev gpsdrivergeofence_c2858 269 "%0gpsdrivergeofence.c::2858 InjectWiFiAPDataIndThread : Default wireless adapter(interface:%10!d!) disabled !!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=EvtWifiAppDataWorkItem
+{
+i, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2852 268 "%0gpsdrivergeofence.c::2852 InjectWiFiAPDataIndThread : [x] Scan success for interface:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=EvtWifiAppDataWorkItem
+{
+i, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2849 267 "%0gpsdrivergeofence.c::2849 InjectWiFiAPDataIndThread : [i] Scanning for nearby networks..." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=EvtWifiAppDataWorkItem
+{
+}
+#typev gpsdrivergeofence_c2832 266 "%0gpsdrivergeofence.c::2832 InjectWiFiAPDataIndThread : Unable to enum wireless interface !!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=EvtWifiAppDataWorkItem
+{
+}
+#typev gpsdrivergeofence_c2824 265 "%0gpsdrivergeofence.c::2824 InjectWiFiAPDataIndThread : RADIO_DISABLED !!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=EvtWifiAppDataWorkItem
+{
+}
+#typev gpsdrivergeofence_c2818 264 "%0gpsdrivergeofence.c::2818 Wips_wlan_init calling now " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=EvtWifiAppDataWorkItem
+{
+}
+#typev gpsdrivergeofence_c209 16 "%0gpsdrivergeofence.c::209 QCGNSS_GF:: WdfWaitLockAcquire() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GFEvtIndLock
+{
+}
+#typev gpsdrivergeofence_c217 17 "%0gpsdrivergeofence.c::217 QCGNSS_GF:: WdfWaitLockRelease() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GFEvtIndUnlock
+{
+}
+#typev gpsdrivergeofence_c162 10 "%0gpsdrivergeofence.c::162 QCGNSS_GF:: WdfWaitLockAcquire() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GFHandleLock
+{
+}
+#typev gpsdrivergeofence_c170 11 "%0gpsdrivergeofence.c::170 QCGNSS_GF:: WdfWaitLockRelease() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GFHandleUnlock
+{
+}
+#typev gpsdrivergeofence_c178 12 "%0gpsdrivergeofence.c::178 QCGNSS_GF:: WdfWaitLockAcquire() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GFLock
+{
+}
+#typev gpsdrivergeofence_c193 14 "%0gpsdrivergeofence.c::193 QCGNSS_GF:: WdfWaitLockAcquire() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GFRespLock
+{
+}
+#typev gpsdrivergeofence_c201 15 "%0gpsdrivergeofence.c::201 QCGNSS_GF:: WdfWaitLockRelease() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GFRespUnlock
+{
+}
+#typev gpsdrivergeofence_c186 13 "%0gpsdrivergeofence.c::186 QCGNSS_GF:: WdfWaitLockRelease() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GFUnlock
+{
+}
+#typev gpsdrivergeofence_c754 63 "%0WlanRegisterNotification: Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GPSDriverGeofenceDeregisterWLAN
+{
+}
+#typev gpsdrivergeofence_c751 62 "%0Wips_wlan_init: Error in the WlanRegisterNotification() function call deregistration" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GPSDriverGeofenceDeregisterWLAN
+{
+}
+#typev gpsdrivergeofence_c826 71 "%0gpsdrivergeofence.c::826 GPSDriverGeofenceModuleDeinit: deinit list" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=GPSDriverGeofenceModuleDeinit
+{
+}
+#typev gpsdrivergeofence_c807 70 "%0gpsdrivergeofence.c::807 deInitList failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GPSDriverGeofenceModuleDeinit
+{
+}
+#typev gpsdrivergeofence_c804 69 "%0gpsdrivergeofence.c::804 deInitList success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GPSDriverGeofenceModuleDeinit
+{
+}
+#typev gpsdrivergeofence_c791 68 "%0gpsdrivergeofence.c::791 deInitList failed!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GPSDriverGeofenceModuleDeinit
+{
+}
+#typev gpsdrivergeofence_c788 67 "%0gpsdrivergeofence.c::788 deInitList success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GPSDriverGeofenceModuleDeinit
+{
+}
+#typev gpsdrivergeofence_c781 66 "%0gpsdrivergeofence.c::781 GPSDriverGeofenceModuleDeinit: locClientClose returned %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GPSDriverGeofenceModuleDeinit
+{
+status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c773 65 "%0WlanRegisterNotification: Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GPSDriverGeofenceModuleDeinit
+{
+}
+#typev gpsdrivergeofence_c770 64 "%0Wips_wlan_init: Error in the WlanRegisterNotification() function call deregistration" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GPSDriverGeofenceModuleDeinit
+{
+}
+#typev gpsdrivergeofence_c595 47 "%0gpsdrivergeofence.c::595 ProcessGFThread Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=GPSDriverGeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c591 46 "%0gpsdrivergeofence.c::591 Failed to create ProcessGFThread thread" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GPSDriverGeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c578 45 "%0gpsdrivergeofence.c::578::%!FUNC! initialization failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GPSDriverGeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c574 44 "%0gpsdrivergeofence.c::574::%!FUNC! --->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=GPSDriverGeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c898 79 "%0WlanRegisterNotification: Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=GPSDriverGeofenceModuleReInit
+{
+}
+#typev gpsdrivergeofence_c895 78 "%0Wips_wlan_init: Error in the WlanRegisterNotification() function registration call" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GPSDriverGeofenceModuleReInit
+{
+}
+#typev gpsdrivergeofence_c887 77 "%0gpsdrivergeofence.c::887 QCGNSS_GF: GF Counter Houskeeping  %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GPSDriverGeofenceModuleReInit
+{
+GFCounter, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c867 76 "%0gpsdrivergeofence.c::867 QCGNSS_GF: g_DBT_EngineState  %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GPSDriverGeofenceModuleReInit
+{
+g_DBT_EngineState, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c846 75 "%0gpsdrivergeofence.c::846 QCGPS: GPSDriverGeofenceModuleReInit <---locClientOpen returned ERROR " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GPSDriverGeofenceModuleReInit
+{
+}
+#typev gpsdrivergeofence_c842 74 "%0gpsdrivergeofence.c::842 GPSDriverGeofenceModuleReInit <---locClientOpen returned %10!d! 0x%11!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=GPSDriverGeofenceModuleReInit
+{
+status, ItemLong -- 10
+g_handleGeofence, ItemPtr -- 11
+}
+#typev gpsdrivergeofence_c840 73 "%0gpsdrivergeofence.c::840 GPSDriverGeofenceReInit --->locClientOpen " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_WARNING FUNC=GPSDriverGeofenceModuleReInit
+{
+}
+#typev gpsdrivergeofence_c838 72 "%0gpsdrivergeofence.c::838 QCGPS: GPSDriverGeofenceModuleReInit  start" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_WARNING FUNC=GPSDriverGeofenceModuleReInit
+{
+}
+#typev gpsdrivergeofence_c922 81 "%0gpsdrivergeofence.c::922::%!FUNC! : status %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GPSDriverGeofenceModuleUnRegisterMask
+{
+status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c909 80 "%0GPSDriverGeofenceModuleUnRegisterMask" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=GPSDriverGeofenceModuleUnRegisterMask
+{
+}
+#typev gpsdrivergeofence_c976 85 "%0gpsdrivergeofence.c::976 QCGPS:  ---> GPSDriverGeofenceProcessIOCTL DELETE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=GPSDriverGeofenceProcessIOCTL
+{
+}
+#typev gpsdrivergeofence_c971 84 "%0gpsdrivergeofence.c::971 QCGPS:  ---> GPSDriverGeofenceProcessIOCTL ADD" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=GPSDriverGeofenceProcessIOCTL
+{
+}
+#typev gpsdrivergeofence_c965 83 "%0gpsdrivergeofence.c::965 QCGPS:  ---> GPSDriverGeofenceProcessIOCTL " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=GPSDriverGeofenceProcessIOCTL
+{
+}
+#typev gpsdrivergeofence_c964 82 "%0gpsdrivergeofence.c::964 QCGPS: --> HandleIOCTLRequest " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=GPSDriverGeofenceProcessIOCTL
+{
+}
+#typev gpsdrivergeofence_c1267 116 "%0gpsdrivergeofence.c::1267 QCGPS: GPS driver GeofenceErrorIndCb error %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GeofenceErrorIndCb
+{
+errorId, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1094 95 "%0gpsdrivergeofence.c::1094 QCGNSS_GF:  malloc failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GeofenceEventIndCb
+{
+}
+#typev gpsdrivergeofence_c1089 94 "%0gpsdrivergeofence.c::1089 QCGNSS_GF:  geofenceIdContinuousList_len %10!d!,  geofenceIdDiscreteList_len =%11!d! breachType = %12!d!, Confidencelevel : %13!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceEventIndCb
+{
+eventIndPayload.pGeofenceBatchedBreachEvent->geofenceIdContinuousList_len, ItemLong -- 10
+eventIndPayload.pGeofenceBatchedBreachEvent->geofenceIdDiscreteList_len, ItemLong -- 11
+eventIndPayload.pGeofenceBatchedBreachEvent->breachType, ItemLong -- 12
+eventIndPayload.pGeofenceBatchedBreachEvent->breachConfidence, ItemLong -- 13
+}
+#typev gpsdrivergeofence_c1068 93 "%0gpsdrivergeofence.c::1068 QCGNSS_GF:  EventIndCb  received QMI_LOC_EVENT_GEOFENCE_GEN_ALERT, MO events " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceEventIndCb
+{
+}
+#typev gpsdrivergeofence_c1058 92 "%0gpsdrivergeofence.c::1058 QCGNSS_GF:  EventIndCb  received tracking status event Alert %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceEventIndCb
+{
+eventIndPayload.pGeofenceGenAlertEvent->geofenceAlert, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1052 91 "%0gpsdrivergeofence.c::1052 QCGNSS_GF:  malloc failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=GeofenceEventIndCb
+{
+}
+#typev gpsdrivergeofence_c1038 90 "%0gpsdrivergeofence.c::1038 QCGNSS_GF:  EventIndCb  received QMI_LOC_EVENT_GEOFENCE_GEN_ALERT " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceEventIndCb
+{
+}
+#typev gpsdrivergeofence_c1027 89 "%0gpsdrivergeofence.c::1027 QCGPS:  GeofenceEventIndCb  received QMI_LOC_EVENT_INJECT_WIFI_AP_DATA_REQ_IND_V02 Request " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceEventIndCb
+{
+}
+#typev gpsdrivergeofence_c1022 88 "%0gpsdrivergeofence.c::1022 QCGNSS_GF: GeofenceEventIndCb received ind %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=GeofenceEventIndCb
+{
+eventIndId, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1232 113 "%0gpsdrivergeofence.c::1232 QCGNSS_GF: GeofenceRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pNotifyWifiApDataStatusInd->status, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1226 112 "%0gpsdrivergeofence.c::1226 QCGNSS_GF: GeofenceRespIndCb received ind QMI_LOC_INJECT_WIFI_AP_DATA_IND_V02 status %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndPayload.pNotifyWifiApDataStatusInd->status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1221 111 "%0gpsdrivergeofence.c::1221 QCGNSS_GF: GeofenceRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pGetServiceRevisionInd->status, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1213 110 "%0gpsdrivergeofence.c::1213 QCGNSS_GF: GeofenceRespIndCb received ind QMI_LOC_GET_SERVICE_REVISION_IND_V02 status %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndPayload.pGetServiceRevisionInd->status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1208 109 "%0gpsdrivergeofence.c::1208 QCGNSS_GF: GeofenceRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pNotifyWifiEnabledStatusInd->status, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1200 108 "%0gpsdrivergeofence.c::1200 QCGNSS_GF: GeofenceRespIndCb received ind QMI_LOC_NOTIFY_WIFI_ENABLED_STATUS_IND_V02 status %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndPayload.pNotifyWifiEnabledStatusInd->status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1194 107 "%0gpsdrivergeofence.c::1194 QCGNSS_GF: GeofenceRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pNotifyWifiAttachmentStatusInd->status, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1186 106 "%0gpsdrivergeofence.c::1186 QCGNSS_GF: GeofenceRespIndCb received ind QMI_LOC_NOTIFY_WIFI_ATTACHMENT_STATUS_IND_V02 status %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndPayload.pNotifyWifiAttachmentStatusInd->status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1180 105 "%0gpsdrivergeofence.c::1180 QCGNSS_GF: GeofenceRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSetGeofenceEngineConfigInd->status, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1176 104 "%0gpsdrivergeofence.c::1176 QCGNSS_GF: GeofenceRespIndCb received ind QMI_LOC_INJECT_WIFI_POSITION_IND_V02 status %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndPayload.pSetGeofenceEngineConfigInd->status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1170 103 "%0gpsdrivergeofence.c::1170 QCGNSS_GF: GeofenceRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pSetGeofenceEngineConfigInd->status, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1161 102 "%0gpsdrivergeofence.c::1161 QCGNSS_GF: GeofenceRespIndCb received ind QMI_LOC_SET_GEOFENCE_ENGINE_CONFIG_IND_V02 status %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndPayload.pSetGeofenceEngineConfigInd->status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1157 101 "%0gpsdrivergeofence.c::1157 QCGPS: QCGNSS_GF: GeofenceRespIndCb  received ind %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndId, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1150 100 "%0gpsdrivergeofence.c::1150 QCGNSS_GF: GeofenceRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pDeleteGeofenceInd->status, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1142 99 "%0gpsdrivergeofence.c::1142 QCGNSS_GF: GeofenceRespIndCb received ind QMI_LOC_DELETE_GEOFENCE_IND_V02 status %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndPayload.pDeleteGeofenceInd->status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1136 98 "%0gpsdrivergeofence.c::1136 QCGNSS_GF: GeofenceRespIndCb received ind %10!d! status %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndId, ItemLong -- 10
+respIndPayload.pAddCircularGeofenceInd->status, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1128 97 "%0gpsdrivergeofence.c::1128 QCGNSS_GF: GeofenceRespIndCb received ind QMI_LOC_ADD_CIRCULAR_GEOFENCE_IND_V02 status %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=GeofenceRespIndCb
+{
+respIndPayload.pAddCircularGeofenceInd->status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1122 96 "%0gpsdrivergeofence.c::1122 QCGNSS_GF: GeofenceRespIndCb received" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=GeofenceRespIndCb
+{
+}
+#typev gpsdrivergeofence_c2362 230 "%0QCGPS: MUK Sending InjectGFWifiScanMsrment information " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=InjectGFWifiScanMsrment
+{
+}
+#typev gpsdrivergeofence_c2351 229 "%0QCGPS:  InjectGFWifiScanMsrment: MAC ADD %10!d!:%11!d!:%12!d!:%13!d!:%14!d!:%15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=InjectGFWifiScanMsrment
+{
+injectWifiScanResult.apInfo[count].macAddr[0], ItemLong -- 10
+injectWifiScanResult.apInfo[count].macAddr[1], ItemLong -- 11
+injectWifiScanResult.apInfo[count].macAddr[2], ItemLong -- 12
+injectWifiScanResult.apInfo[count].macAddr[3], ItemLong -- 13
+injectWifiScanResult.apInfo[count].macAddr[4], ItemLong -- 14
+injectWifiScanResult.apInfo[count].macAddr[5], ItemLong -- 15
+}
+#typev gpsdrivergeofence_c2350 228 "%0QCGPS:  InjectGFWifiScanMsrment: Copied SSID: %10!s! of max length %11!d! for %12!d! SCAN " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=InjectGFWifiScanMsrment
+{
+injectWifiScanResult.wifiApSsidInfo[count].ssid, ItemString -- 10
+QMI_LOC_MAX_WIFI_AP_SSID_STR_LENGTH_V02, ItemLong -- 11
+count, ItemLong -- 12
+}
+#typev gpsdrivergeofence_c2349 227 "%0QCGPS:  InjectGFWifiScanMsrment: SSID: %10!s! of length %11!d! for %12!d! SCAN " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=InjectGFWifiScanMsrment
+{
+pGnssInjectWifiScan->wifiScanReport[count].ssid, ItemString -- 10
+pGnssInjectWifiScan->wifiScanReport[count].ssidLength, ItemLong -- 11
+count, ItemLong -- 12
+}
+#typev gpsdrivergeofence_c2348 226 "%0QCGPS:  InjectGFWifiScanMsrment: CHANNEL: %10!d! for %11!d! SCAN " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=InjectGFWifiScanMsrment
+{
+injectWifiScanResult.apInfo[count].channel, ItemLong -- 10
+count, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c2347 225 "%0QCGPS:  InjectGFWifiScanMsrment: RSSI: %10!d! for %11!d! SCAN " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=InjectGFWifiScanMsrment
+{
+injectWifiScanResult.apInfo[count].rssi, ItemLong -- 10
+count, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c2339 224 "%0QCGPS:  InjectGFWifiScanMsrment: Frequency: %10!d! for %11!d! SCAN " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=InjectGFWifiScanMsrment
+{
+pGnssInjectWifiScan->wifiScanReport[count].frequency, ItemLong -- 10
+count, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c2336 223 "%0QCGPS:  InjectGFWifiScanMsrment: Total Wifi Scan Report %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=InjectGFWifiScanMsrment
+{
+pGnssInjectWifiScan->numMsrReport, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2328 222 "%0QCGPS: MK InjectGFWifiScanMsrment " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=InjectGFWifiScanMsrment
+{
+}
+#typev gpsdrivergeofence_c2233 215 "%0QCGPS: Sending InjectWifiAPdataScanMsrment Error information " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=InjectGFWifiScanMsrmentError
+{
+}
+#typev gpsdrivergeofence_c2220 214 "%0QCGPS: InjectGFWifiScanMsrmentError " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=InjectGFWifiScanMsrmentError
+{
+}
+#typev gpsdrivergeofence_c2304 221 "%0QCGPS: MUK Sending InjectWifiAPdataScanMsrment information " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=InjectWifiAPdataScanMsrment
+{
+}
+#typev gpsdrivergeofence_c2276 220 "%0QCGPS:  InjectWifiAPdataScanMsrment: MAC ADD %10!d!:%11!d!:%12!d!:%13!d!:%14!d!:%15!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=InjectWifiAPdataScanMsrment
+{
+injectWifiAPDataScanResult.wifiApInfo[count].macAddress[0], ItemLong -- 10
+injectWifiAPDataScanResult.wifiApInfo[count].macAddress[1], ItemLong -- 11
+injectWifiAPDataScanResult.wifiApInfo[count].macAddress[2], ItemLong -- 12
+injectWifiAPDataScanResult.wifiApInfo[count].macAddress[3], ItemLong -- 13
+injectWifiAPDataScanResult.wifiApInfo[count].macAddress[4], ItemLong -- 14
+injectWifiAPDataScanResult.wifiApInfo[count].macAddress[5], ItemLong -- 15
+}
+#typev gpsdrivergeofence_c2275 219 "%0QCGPS:  InjectWifiAPdataScanMsrment: CHANNEL: %10!d! for %11!d! SCAN " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=InjectWifiAPdataScanMsrment
+{
+injectWifiAPDataScanResult.wifiApInfo[count].apChannel, ItemLong -- 10
+count, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c2274 218 "%0QCGPS:  InjectWifiAPdataScanMsrment: RSSI: %10!d! for %11!d! SCAN " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=InjectWifiAPdataScanMsrment
+{
+injectWifiAPDataScanResult.wifiApInfo[count].apRssi, ItemLong -- 10
+count, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c2262 217 "%0QCGPS:  InjectWifiAPdataScanMsrment: Total Wifi Scan Report %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=InjectWifiAPdataScanMsrment
+{
+pGnssInjectWifiScan->numMsrReport, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2254 216 "%0QCGPS: MK InjectWifiAPdataScanMsrment " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=InjectWifiAPdataScanMsrment
+{
+}
+#typev gpsdrivergeofence_c1929 190 "%0gpsdrivergeofence.c::1929 QCGNSS_device:: GPSDriverGeofenceModuleReInit() Failed to reinit --- %10!d! try " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_WARNING FUNC=PAResetGeofencesTracking
+{
+ctr, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1925 189 "%0gpsdrivergeofence.c::1925 QCGPS: Calling GPSDriverGeofenceModuleReInit to reopen the client handle" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=PAResetGeofencesTracking
+{
+}
+#typev gpsdrivergeofence_c1920 188 "%0gpsdrivergeofence.c::1920 QCGPS: Calling GPSDriverGeofenceModuleDeinit to close the client handle" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=PAResetGeofencesTracking
+{
+}
+#typev gpsdrivergeofence_c1915 187 "%0gpsdrivergeofence.c::1915 QCGPS: Ignore the ResetGeofence as no Geofence is active after bootup " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=PAResetGeofencesTracking
+{
+}
+#typev gpsdrivergeofence_c2558 241 "%0QCGPS: MUK Sending WiFi Attachment Status information " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=ProcessCDHNotifications
+{
+}
+#typev gpsdrivergeofence_c2509 240 "%0QCGPS: MUK Sending WiFi Enabled Status information " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=ProcessCDHNotifications
+{
+}
+#typev gpsdrivergeofence_c2499 239 "%0QCGPS: MK ProcessCDHNotifications " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=ProcessCDHNotifications
+{
+}
+#typev gpsdrivergeofence_c2473 238 "%0 QCGPSHS: WIFI_AP_DATA_INJECT NOT supported : %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=ProcessDiscoveryScanResult
+{
+supportedFeature, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2468 237 "%0 QCGPSHS: WIFI_AP_DATA_INJECT supported : %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=ProcessDiscoveryScanResult
+{
+supportedFeature, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2443 236 "%0 QCGPSHS: Wlan number of BSS list dwNumberOfItems: %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=ProcessDiscoveryScanResult
+{
+pWlanBssList->dwNumberOfItems, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2420 235 "%0 QCGPSHS: WlanGetAvailableNetworkList failed with error: %10!u!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=ProcessDiscoveryScanResult
+{
+dwResult, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2414 234 "%0 QCGPSHS: Retriving wlan networks in: %10!u! interface" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=ProcessDiscoveryScanResult
+{
+i, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2412 233 "%0 QCGPSHS: pIfList->dwNumberOfItems: %10!u! interfaces" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=ProcessDiscoveryScanResult
+{
+pIfList->dwNumberOfItems, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2407 232 "%0 QCGPSHS: WlanEnumInterfaces failed with error: %10!u! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=ProcessDiscoveryScanResult
+{
+dwResult, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2396 231 "%0QCGPS: Skipping the wifi app data injection, GFCounter:%10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=ProcessDiscoveryScanResult
+{
+GFCounter, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1452 129 "%0gpsdrivergeofence.c::1452 GeofenceEventIndEvent exit:%10!x!!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=ProcessGFThread
+{
+TerminatedThread, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1441 128 "%0gpsdrivergeofence.c::1441 DriverUnloadEvent!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=ProcessGFThread
+{
+}
+#typev gpsdrivergeofence_c1428 127 "%0gpsdrivergeofence.c::1428::%!FUNC! list empty" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=ProcessGFThread
+{
+}
+#typev gpsdrivergeofence_c1416 126 "%0gpsdrivergeofence.c::1416::%!FUNC! QMI_LOC_EVENT_GEOFENCE_BATCHED_BREACH_NOTIFICATION_IND_V02" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=ProcessGFThread
+{
+}
+#typev gpsdrivergeofence_c1412 125 "%0gpsdrivergeofence.c::1412::%!FUNC! QMI_LOC_EVENT_GEOFENCE_GEN_ALERT_IND_V02" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=ProcessGFThread
+{
+}
+#typev gpsdrivergeofence_c1396 124 "%0gpsdrivergeofence.c::1396 GeofenceEventIndEvent Event Received " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=ProcessGFThread
+{
+}
+#typev gpsdrivergeofence_c1384 123 "%0gpsdrivergeofence.c::1384::%!FUNC! --->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=ProcessGFThread
+{
+}
+#typev gpsdrivergeofence_c2791 263 "%0gpsdrivergeofence.c::2791 leaving ProcessGeofenceAlertWorkItem!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=ProcessGeofenceAlertWorkItem
+{
+}
+#typev gpsdrivergeofence_c2782 262 "%0gpsdrivergeofence.c::2782 GNSS_RemoveHeadList failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=ProcessGeofenceAlertWorkItem
+{
+}
+#typev gpsdrivergeofence_c2778 261 "%0gpsdrivergeofence.c::2778 GNSS_RemoveHeadList failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=ProcessGeofenceAlertWorkItem
+{
+}
+#typev gpsdrivergeofence_c2774 260 "%0gpsdrivergeofence.c::2774 SendGFBreachEventToOS  DONE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_WARNING FUNC=ProcessGeofenceAlertWorkItem
+{
+}
+#typev gpsdrivergeofence_c2761 259 "%0gpsdrivergeofence.c::2761 QCGPS:  ProcessGeofenceAlert checking  pending ioctls available. sending to OS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_WARNING FUNC=ProcessGeofenceAlertWorkItem
+{
+}
+#typev gpsdrivergeofence_c2755 258 "%0gpsdrivergeofence.c::2755 DriverUnloadEvent!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=ProcessGeofenceAlertWorkItem
+{
+}
+#typev gpsdrivergeofence_c2747 257 "%0gpsdrivergeofence.c::2747 QCGPS:  ProcessGeofenceAlert  no more pending IOCTLs, wait for pending IOCTLs " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=ProcessGeofenceAlertWorkItem
+{
+}
+#typev gpsdrivergeofence_c2742 256 "%0gpsdrivergeofence.c::2742 QCGPS:  ProcessGeofenceAlert checking for pending ioctls" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_WARNING FUNC=ProcessGeofenceAlertWorkItem
+{
+}
+#typev gpsdrivergeofence_c2737 255 "%0gpsdrivergeofence.c::2737 QCGPS:  ProcessGeofenceAlert, failed Queue head is Null. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=ProcessGeofenceAlertWorkItem
+{
+}
+#typev gpsdrivergeofence_c2734 254 "%0gpsdrivergeofence.c::2734 entering ProcessGeofenceAlertWorkItem!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=ProcessGeofenceAlertWorkItem
+{
+}
+#typev gpsdrivergeofence_c735 61 "%0gpsdrivergeofence.c::735: %!FUNC! QCGNSS_GF:: WdfWorkItemCreate() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_GeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c726 60 "%0gpsdrivergeofence.c::726: %!FUNC! QCGNSS_GF:: WdfWorkItemCreate() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_GeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c715 59 "%0gpsdrivergeofence.c::715 GPSDriverGeofenceModuleInit, pGfEventInfohead failed!! Driver load stopped. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_GeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c712 58 "%0gpsdrivergeofence.c::712 GPSDriverGeofenceModuleInit,pGfEventInfohead success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=QCGNSS_GeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c706 57 "%0gpsdrivergeofence.c::706 GPSDriverGeofenceModuleInit, GNSS_InitializeListHead success!! Driver load stopped. " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_GeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c703 56 "%0gpsdrivergeofence.c::703 GPSDriverGeofenceModuleInit,GNSS_InitializeListHead success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=QCGNSS_GeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c665 55 "%0gpsdrivergeofence.c::665: %!FUNC! QCGNSS_GF:: WdfWaitLockCreate() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_GeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c658 54 "%0gpsdrivergeofence.c::658: %!FUNC! QCGNSS_GF:: WdfWaitLockCreate() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_GeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c651 53 "%0gpsdrivergeofence.c::651: %!FUNC! QCGNSS_GF:: WdfWaitLockCreate() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_GeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c644 52 "%0gpsdrivergeofence.c::644: %!FUNC! QCGNSS_GF:: WdfWaitLockCreate() Failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_GeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c636 51 "%0gpsdrivergeofence.c::636: %!FUNC! <--- locClientOpen returned ERROR " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_GeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c630 50 "%0gpsdrivergeofence.c::630: %!FUNC! locClientOpen returned %10!d! 0x%11!p! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=QCGNSS_GeofenceModuleInit
+{
+status, ItemLong -- 10
+g_handleGeofence, ItemPtr -- 11
+}
+#typev gpsdrivergeofence_c623 49 "%0gpsdrivergeofence.c::623: %!FUNC! Failed to init --- %10!d! try " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_GeofenceModuleInit
+{
+ctr, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c617 48 "%0gpsdrivergeofence.c::617: %!FUNC! --->locClientOpen " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=QCGNSS_GeofenceModuleInit
+{
+}
+#typev gpsdrivergeofence_c1471 134 "%0gpsdrivergeofence.c::1471 QCGPS:  SendGFTrackingStatusToOS  DONE" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_WARNING FUNC=QCGNSS_ProcessGfAlertIndications
+{
+}
+#typev gpsdrivergeofence_c1469 133 "%0gpsdrivergeofence.c::1469 QCGPS:  ProcessGeofencetrackingAlert checking  pending ioctls available. sending to OS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_WARNING FUNC=QCGNSS_ProcessGfAlertIndications
+{
+}
+#typev gpsdrivergeofence_c1465 132 "%0gpsdrivergeofence.c::1465 [TELY] E_PENDING_IOCTL_UNAVAILABLE IOCTL_GNSS_LISTEN_GEOFENCES_TRACKINGSTATUS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=QCGNSS_ProcessGfAlertIndications
+{
+}
+#typev gpsdrivergeofence_c1464 131 "%0gpsdrivergeofence.c::1464 QCGPS:  ProcessGeofencetrackingAlert  no more pending IOCTLs, return immediately " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_ProcessGfAlertIndications
+{
+}
+#typev gpsdrivergeofence_c1461 130 "%0gpsdrivergeofence.c::1461 ProcessGFtrackingIndThread Event Received " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=QCGNSS_ProcessGfAlertIndications
+{
+}
+#typev gpsdrivergeofence_c1369 122 "%0gpsdrivergeofence.c::1369  GF workitem already running!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=QCGNSS_ProcessGfBatchedBreachIndications
+{
+}
+#typev gpsdrivergeofence_c1366 121 "%0gpsdrivergeofence.c::1366  GF workitem queued!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=QCGNSS_ProcessGfBatchedBreachIndications
+{
+}
+#typev gpsdrivergeofence_c1356 120 "%0gpsdrivergeofence.c::1356 QCGNSS_GF:  EventIndCb  received batched Breach event  Dropped_2" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=QCGNSS_ProcessGfBatchedBreachIndications
+{
+}
+#typev gpsdrivergeofence_c1336 119 "%0gpsdrivergeofence.c::1336 #GFPosrep@QMI:%10!I64u!,%11!c!%12!05d!.%13!08d!,%14!c!%15!05d!.%16!08d!,%17!d!,%18!s!,%19!s!,%20!d!,%21!s!,%22!d!,%23!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=QCGNSS_ProcessGfBatchedBreachIndications
+{
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.timestampUtc, ItemULongLong -- 10
+sign, ItemChar -- 11
+(int)eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.latitude, ItemLong -- 12
+abs((int)(1.0e8 * (eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.latitude - (int)(eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.latitude)))), ItemLong -- 13
+sign1, ItemChar -- 14
+(int)eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.longitude, ItemLong -- 15
+abs((int)(1.0e8 * (eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.longitude - (int)(eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.longitude)))), ItemLong -- 16
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.vertUnc_valid, ItemLong -- 17
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.altitudeWrtEllipsoid, ItemDouble -- 18
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.horUncEllipseSemiMajor, ItemDouble -- 19
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.speedHorizontal_valid, ItemLong -- 20
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.speedHorizontal, ItemDouble -- 21
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofenceIdDiscreteList[index], ItemLong -- 22
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.breachType, ItemLong -- 23
+}
+#typev gpsdrivergeofence_c1323 118 "%0gpsdrivergeofence.c::1323 QCGNSS_GF:  EventIndCb  received batched Breach event  Dropped _ 1" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=QCGNSS_ProcessGfBatchedBreachIndications
+{
+}
+#typev gpsdrivergeofence_c1303 117 "%0gpsdrivergeofence.c::1303 #GFPosrep@QMI:%10!I64u!,%11!c!%12!05d!.%13!08d!,%14!c!%15!05d!.%16!08d!,%17!d!,%18!s!,%19!s!,%20!d!,%21!s!,%22!d!,%23!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=QCGNSS_ProcessGfBatchedBreachIndications
+{
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.timestampUtc, ItemULongLong -- 10
+sign, ItemChar -- 11
+(int)eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.latitude, ItemLong -- 12
+abs((int)(1.0e8 * (eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.latitude - (int)(eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.latitude)))), ItemLong -- 13
+sign1, ItemChar -- 14
+(int)eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.longitude, ItemLong -- 15
+abs((int)(1.0e8 * (eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.longitude - (int)(eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.longitude)))), ItemLong -- 16
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.vertUnc_valid, ItemLong -- 17
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.altitudeWrtEllipsoid, ItemDouble -- 18
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.horUncEllipseSemiMajor, ItemDouble -- 19
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.speedHorizontal_valid, ItemLong -- 20
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.geofencePosition.speedHorizontal, ItemDouble -- 21
+gfid, ItemLong -- 22
+eventBatchBreachInfo.eventIndGFBatchBreachPayload.breachType, ItemLong -- 23
+}
+#typev gpsdrivergeofence_c2954 280 "%0gpsdrivergeofence.c::2954 QCGNSS_GF: Free wifi scan skip frequency %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=QCGNSS_ReadGfFreeWifiScanConfig
+{
+g_WifiSkipFreq, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2951 279 "%0gpsdrivergeofence.c::2951 QCGNSS_GF: Conversion from UNICODE String to Int Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_ReadGfFreeWifiScanConfig
+{
+}
+#typev gpsdrivergeofence_c2947 278 "%0gpsdrivergeofence.c::2947 QCGNSS_ReadGfFreeWifiScanConfig: Printing GfFreeWifiScan(FreeWifiScanSkipFreq) = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=QCGNSS_ReadGfFreeWifiScanConfig
+{
+&GfFreeWifiScan, ItemPWString -- 10
+}
+#typev gpsdrivergeofence_c2943 277 "%0gpsdrivergeofence.c::2943 QCGNSS_GF: Read FreeWifiScanSkipFreq Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_ReadGfFreeWifiScanConfig
+{
+}
+#typev gpsdrivergeofence_c2933 276 "%0gpsdrivergeofence.c::2933 QCGNSS_GF: GfFreeWifiScan %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=QCGNSS_ReadGfFreeWifiScanConfig
+{
+g_nGfFreeWifiScan, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2930 275 "%0gpsdrivergeofence.c::2930 QCGNSS_GF: Conversion from UNICODE String to Int Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_ReadGfFreeWifiScanConfig
+{
+}
+#typev gpsdrivergeofence_c2926 274 "%0gpsdrivergeofence.c::2926 QCGNSS_ReadGfFreeWifiScanConfig: Printing GfFreeWifiScan(EnableGfFreeWifiScan) = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=QCGNSS_ReadGfFreeWifiScanConfig
+{
+&GfFreeWifiScan, ItemPWString -- 10
+}
+#typev gpsdrivergeofence_c2922 273 "%0gpsdrivergeofence.c::2922 QCGNSS_GF: Read EnableGfFreeWifiScan Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_ReadGfFreeWifiScanConfig
+{
+}
+#typev gpsdrivergeofence_c2912 272 "%0gpsdrivergeofence.c::2912 QCGNSS_GF: GfFreeWifiScan.Buffer failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=QCGNSS_ReadGfFreeWifiScanConfig
+{
+}
+#typev gpsdrivergeofence_c2084 208 "%0gpsdrivergeofence.c::2084 QCGPS:  SendGFBreachEventToOS  BufLength bytes %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=SendGFBreachEventToOS
+{
+bytes, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2066 207 "%0gpsdrivergeofence.c::2066 #GFPosrep:%10!I64u!,%11!c!%12!05d!.%13!08d!,%14!c!%15!05d!.%16!08d!,%17!d!,%18!u!,%19!s!,%20!u!,%21!d!,%22!s!,%23!s!,%24!d!,%25!d!,%26!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=SendGFBreachEventToOS
+{
+pEventBreachInfoCopy->eventIndGFBreachPayload.geofencePosition.timestampUtc, ItemULongLong -- 10
+sign, ItemChar -- 11
+(int)pGnssFixEvent->GeofenceAlertData.FixBasicData.Latitude, ItemLong -- 12
+abs((int)(1.0e8 * (pGnssFixEvent->GeofenceAlertData.FixBasicData.Latitude - (int)(pGnssFixEvent->GeofenceAlertData.FixBasicData.Latitude)))), ItemLong -- 13
+sign1, ItemChar -- 14
+(int)pGnssFixEvent->GeofenceAlertData.FixBasicData.Longitude, ItemLong -- 15
+abs((int)(1.0e8 * (pGnssFixEvent->GeofenceAlertData.FixBasicData.Longitude - (int)(pGnssFixEvent->GeofenceAlertData.FixBasicData.Longitude)))), ItemLong -- 16
+pEventBreachInfoCopy->eventIndGFBreachPayload.geofencePosition.vertUnc_valid, ItemLong -- 17
+pGnssFixEvent->GeofenceAlertData.FixAccuracyData.AltitudeAccuracy, ItemLong -- 18
+pGnssFixEvent->GeofenceAlertData.FixBasicData.Altitude, ItemDouble -- 19
+pGnssFixEvent->GeofenceAlertData.FixAccuracyData.HorizontalAccuracy, ItemLong -- 20
+pEventBreachInfoCopy->eventIndGFBreachPayload.geofencePosition.speedHorizontal_valid, ItemLong -- 21
+pGnssFixEvent->GeofenceAlertData.FixBasicData.Speed, ItemDouble -- 22
+pGnssFixEvent->GeofenceAlertData.FixBasicData.Heading, ItemDouble -- 23
+pEventBreachInfoCopy->eventIndGFBreachPayload.geofenceId, ItemLong -- 24
+pEventBreachInfoCopy->eventIndGFBreachPayload.breachType, ItemLong -- 25
+pEventBreachInfoCopy->eventIndGFBreachPayload.breachConfidence, ItemLong -- 26
+}
+#typev gpsdrivergeofence_c2058 206 "%0gpsdrivergeofence.c::2058 QCGPS:  *****************************" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+}
+#typev gpsdrivergeofence_c2056 205 "%0gpsdrivergeofence.c::2056 QCGPS:  HOR_UNC:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+pEventBreachInfoCopy->eventIndGFBreachPayload.geofencePosition.horUncEllipseSemiMajor * 1.414, ItemDouble -- 10
+}
+#typev gpsdrivergeofence_c2055 204 "%0gpsdrivergeofence.c::2055 QCGPS:  VERT_UNC:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+pEventBreachInfoCopy->eventIndGFBreachPayload.geofencePosition.vertUnc, ItemDouble -- 10
+}
+#typev gpsdrivergeofence_c2054 203 "%0gpsdrivergeofence.c::2054 QCGPS:  ALT:%10!s! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+pEventBreachInfoCopy->eventIndGFBreachPayload.geofencePosition.altitudeWrtEllipsoid, ItemDouble -- 10
+}
+#typev gpsdrivergeofence_c2053 202 "%0gpsdrivergeofence.c::2053 QCGPS:  LONG:%10!d!.%11!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+ulTestInt, ItemLong -- 10
+ulTestDec, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c2047 201 "%0gpsdrivergeofence.c::2047 QCGPS:  LAT:%10!d!.%11!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+ulTestInt, ItemLong -- 10
+ulTestDec, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c2040 200 "%0gpsdrivergeofence.c::2040 QCGPS:  BREACH :%10!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+pEventBreachInfoCopy->eventIndGFBreachPayload.breachType, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2039 199 "%0gpsdrivergeofence.c::2039 QCGPS:  GEOFENCE ID:%10!d! 	" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+pEventBreachInfoCopy->eventIndGFBreachPayload.geofenceId, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2038 198 "%0gpsdrivergeofence.c::2038 QCGPS:  GEOFENCE_BREACH:		" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+}
+#typev gpsdrivergeofence_c2037 197 "%0gpsdrivergeofence.c::2037 QCGPS:  ****************************" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+}
+#typev gpsdrivergeofence_c2007 196 "%0gpsdrivergeofence.c::2007 QCGPS:  Pos info Altitude %10!s! Speed %11!s! Heading %12!s! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+pGnssFixEvent->GeofenceAlertData.FixBasicData.Altitude, ItemDouble -- 10
+pGnssFixEvent->GeofenceAlertData.FixBasicData.Speed, ItemDouble -- 11
+pGnssFixEvent->GeofenceAlertData.FixBasicData.Heading, ItemDouble -- 12
+}
+#typev gpsdrivergeofence_c1994 195 "%0gpsdrivergeofence.c::1994 QCGPS:  Pos info lat %10!s! lon %11!s!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+pGnssFixEvent->GeofenceAlertData.FixBasicData.Latitude, ItemDouble -- 10
+pGnssFixEvent->GeofenceAlertData.FixBasicData.Longitude, ItemDouble -- 11
+}
+#typev gpsdrivergeofence_c1972 194 "%0gpsdrivergeofence.c::1972 QCGPS:  SendGFBreachEventToOS  BufLength %10!Iu! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFBreachEventToOS
+{
+bufLength, ItemPtr -- 10
+}
+#typev gpsdrivergeofence_c1964 193 "%0gpsdrivergeofence.c::1964 QCGPS: WdfRequestRetrieveOutputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected atleast:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SendGFBreachEventToOS
+{
+bufLength, ItemPtr -- 10
+sizeof(GNSS_EVENT), ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1958 192 "%0gpsdrivergeofence.c::1958 QCGPS: WdfRequestRetrieveOutputBuffer failed 0x%10!x! B" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SendGFBreachEventToOS
+{
+status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1955 191 "%0gpsdrivergeofence.c::1955 QCGPS:  SendGFBreachEventToOS -->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=SendGFBreachEventToOS
+{
+}
+#typev gpsdrivergeofence_c2151 213 "%0gpsdrivergeofence.c::2151 QCGPS:  SendGFTrackingStatusToOS  SystemTimeToFileTime failed " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SendGFTrackingStatusToOS
+{
+}
+#typev gpsdrivergeofence_c2125 212 "%0gpsdrivergeofence.c::2125 QCGPS:  SendGFTrackingStatusToOS  BufLength %10!Iu! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SendGFTrackingStatusToOS
+{
+bufLength, ItemPtr -- 10
+}
+#typev gpsdrivergeofence_c2116 211 "%0gpsdrivergeofence.c::2116 QCGPS: WdfRequestRetrieveOutputBuffer Buffer length mismatch!! BufferLength: %10!Iu!, expected atleast:%11!d! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SendGFTrackingStatusToOS
+{
+bufLength, ItemPtr -- 10
+sizeof(GNSS_EVENT), ItemLong -- 11
+}
+#typev gpsdrivergeofence_c2110 210 "%0gpsdrivergeofence.c::2110 QCGPS: WdfRequestRetrieveOutputBuffer failed 0x%10!x! " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SendGFTrackingStatusToOS
+{
+status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2107 209 "%0gpsdrivergeofence.c::2107 QCGPS:  SendGFTrackingStatusToOS -->" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=SendGFTrackingStatusToOS
+{
+}
+#typev gpsdrivergeofence_c568 43 "%0gpsdrivergeofence.c::568 QCGNSS_GF:: SetGeofenceEngineConfig Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=SetGeofenceEngineConfig
+{
+}
+#typev gpsdrivergeofence_c565 42 "%0gpsdrivergeofence.c::565 QCGNSS_GF: QMI_LOC_SET_GEOFENCE_ENGINE_CONFIG_REQ_V02 Operation %10!d! FAILURE" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetGeofenceEngineConfig
+{
+(int)operation, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c560 41 "%0gpsdrivergeofence.c::560 QCGNSS_GF: QMI_LOC_SET_GEOFENCE_ENGINE_CONFIG_REQ_V02 Operation %10!d!  SUCCESS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SetGeofenceEngineConfig
+{
+(int)operation, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c550 40 "%0gpsdrivergeofence.c::550 QCGNSS_GF: locClientSendReq failed qstatus:%10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetGeofenceEngineConfig
+{
+qstatus, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c446 39 "%0gpsdrivergeofence.c::446 QCGNSS_GF: Geofence operation %10!d! registry Read value  %11!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SetGeofenceEngineConfig
+{
+(int)operation, ItemLong -- 10
+g_nRegValue, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c443 38 "%0gpsdrivergeofence.c::443 QCGNSS_GF: Conversion from  UNICODE String to Int Failed Operation %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetGeofenceEngineConfig
+{
+(int)operation, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c439 37 "%0gpsdrivergeofence.c::439 QCGNSS_GF :  Registry Read for operation %10!d! String = %11!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=SetGeofenceEngineConfig
+{
+(int)operation, ItemLong -- 10
+&nRegValue, ItemPWString -- 11
+}
+#typev gpsdrivergeofence_c434 36 "%0gpsdrivergeofence.c::434 QCGNSS_GF: Registry Read for Operation %10!d! Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetGeofenceEngineConfig
+{
+(int)operation, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c429 35 "%0gpsdrivergeofence.c::429 QCGNSS_GF: It should not come here Operation %10!d! Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetGeofenceEngineConfig
+{
+(int)operation, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c411 34 "%0gpsdrivergeofence.c::411 QCGNSS_GF: nRegValue.Buffer failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetGeofenceEngineConfig
+{
+}
+#typev gpsdrivergeofence_c396 33 "%0gpsdrivergeofence.c::396 QCGNSS_GF: nRegValue.Buffer failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetGeofenceEngineConfig
+{
+}
+#typev gpsdrivergeofence_c381 32 "%0gpsdrivergeofence.c::381 QCGNSS_GF: nRegValue.Buffer failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetGeofenceEngineConfig
+{
+}
+#typev gpsdrivergeofence_c366 31 "%0gpsdrivergeofence.c::366 QCGNSS_GF: nRegValue.Buffer failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetGeofenceEngineConfig
+{
+}
+#typev gpsdrivergeofence_c351 30 "%0gpsdrivergeofence.c::351 QCGNSS_GF: nRegValue.Buffer failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetGeofenceEngineConfig
+{
+}
+#typev gpsdrivergeofence_c336 29 "%0gpsdrivergeofence.c::336 QCGNSS_GF: nRegValue.Buffer failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetGeofenceEngineConfig
+{
+}
+#typev gpsdrivergeofence_c321 28 "%0gpsdrivergeofence.c::321 QCGNSS_GF: nRegValue.Buffer failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetGeofenceEngineConfig
+{
+}
+#typev gpsdrivergeofence_c311 27 "%0gpsdrivergeofence.c::311 QCGNSS_GF:: SetGeofenceEngineConfig Enter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=SetGeofenceEngineConfig
+{
+}
+#typev gpsdrivergeofence_c294 26 "%0gpsdrivergeofence.c::294 QCGNSS_GF:: SetSuplConfig Exit" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=SetSuplConfig
+{
+}
+#typev gpsdrivergeofence_c292 25 "%0gpsdrivergeofence.c::292 QCGNSS_GF: QMI_LOC_SET_PROTOCOL_CONFIG_PARAMETERS_REQ_V02 wifiScanInjectTimeout FAILURE" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetSuplConfig
+{
+}
+#typev gpsdrivergeofence_c288 24 "%0gpsdrivergeofence.c::288 QCGNSS_GF: QMI_LOC_SET_PROTOCOL_CONFIG_PARAMETERS_REQ_V02 Operation wifiScanInjectTimeout  SUCCESS" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=SetSuplConfig
+{
+}
+#typev gpsdrivergeofence_c266 23 "%0gpsdrivergeofence.c::266 QCGNSS_GF: SUPL_WIFI_INJECT_TIMEOUT registry Read value  %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=SetSuplConfig
+{
+g_nRegValue, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c263 22 "%0gpsdrivergeofence.c::263 QCGNSS_GF: Conversion from  UNICODE String to Int Failed for SUPL_WIFI_INJECT_TIMEOUT" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetSuplConfig
+{
+}
+#typev gpsdrivergeofence_c259 21 "%0gpsdrivergeofence.c::259 QCGNSS_GF :  Registry Read for SUPL_WIFI_INJECT_TIMEOUT String = %10!s! 
+" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=SetSuplConfig
+{
+&nRegValue, ItemPWString -- 10
+}
+#typev gpsdrivergeofence_c254 20 "%0gpsdrivergeofence.c::254 QCGNSS_GF: Registry Read for SUPL_WIFI_INJECT_TIMEOUT Failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetSuplConfig
+{
+}
+#typev gpsdrivergeofence_c243 19 "%0gpsdrivergeofence.c::243 QCGNSS_GF: nRegValue.Buffer failed" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=SetSuplConfig
+{
+}
+#typev gpsdrivergeofence_c234 18 "%0gpsdrivergeofence.c::234 QCGNSS_GF:: SetSuplConfig Enter" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=SetSuplConfig
+{
+}
+#typev gpsdrivergeofence_c1856 180 "%0gpsdrivergeofence.c::1856 <-- WaitForGFCmdDone  FAILED." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=WaitForGFCmdDone
+{
+}
+#typev gpsdrivergeofence_c1852 179 "%0gpsdrivergeofence.c::1852 <-- WaitForGFCmdDone SUCCESS." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForGFCmdDone
+{
+}
+#typev gpsdrivergeofence_c1847 178 "%0gpsdrivergeofence.c::1847 WaitForGFCmdDone default!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForGFCmdDone
+{
+}
+#typev gpsdrivergeofence_c1843 177 "%0gpsdrivergeofence.c::1843 WaitForGFCmdDone WAIT_TIMEOUT!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForGFCmdDone
+{
+}
+#typev gpsdrivergeofence_c1833 176 "%0gpsdrivergeofence.c::1833 QCGPS:  WaitForGFCmdDone  QMI_LOC_DELETE_GEOFENCE_IND_V02  Status %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForGFCmdDone
+{
+status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1829 175 "%0gpsdrivergeofence.c::1829 QCGPS:  WaitForGFCmdDone  QMI_LOC_ADD_CIRCULAR_GEOFENCE_IND_V02  Status %10!d! GID :  %11!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForGFCmdDone
+{
+status, ItemLong -- 10
+g_ulGeofenceId, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1823 174 "%0gpsdrivergeofence.c::1823 QCGNSS_GF:  WaitForGFCmdDone Event Received %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=WaitForGFCmdDone
+{
+g_GfrespIndId, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1898 186 "%0gpsdrivergeofence.c::1898 <-- WaitForGFConfigCmdDone  FAILED." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=WaitForGFConfigCmdDone
+{
+}
+#typev gpsdrivergeofence_c1894 185 "%0gpsdrivergeofence.c::1894 <-- WaitForGFConfigCmdDone SUCCESS." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForGFConfigCmdDone
+{
+}
+#typev gpsdrivergeofence_c1889 184 "%0gpsdrivergeofence.c::1889 WaitForGFConfigCmdDone default!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForGFConfigCmdDone
+{
+}
+#typev gpsdrivergeofence_c1885 183 "%0gpsdrivergeofence.c::1885 WaitForGFConfigCmdDone WAIT_TIMEOUT!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForGFConfigCmdDone
+{
+}
+#typev gpsdrivergeofence_c1875 182 "%0gpsdrivergeofence.c::1875 QCGPS:  WaitForGFConfigCmdDone  QMI_LOC_SET_GEOFENCE_ENGINE_CONFIG_IND_V02  TID :  %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForGFConfigCmdDone
+{
+g_resp_set_geofence_config_info.respSetGeofenceEngineConfigIndPayload.transactionId, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1870 181 "%0gpsdrivergeofence.c::1870 QCGNSS_GF:  WaitForGFConfigCmdDone Event Received %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=WaitForGFConfigCmdDone
+{
+g_GfrespIndId, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1809 173 "%0gpsdrivergeofence.c::1809 <-- WaitForWiFiAPCmdDone  FAILED." //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=WaitForWiFiAPCmdDone
+{
+}
+#typev gpsdrivergeofence_c1805 172 "%0gpsdrivergeofence.c::1805 <-- WaitForWiFiAPCmdDone SUCCESS." //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForWiFiAPCmdDone
+{
+}
+#typev gpsdrivergeofence_c1800 171 "%0gpsdrivergeofence.c::1800 WaitForWiFiAPCmdDone default!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForWiFiAPCmdDone
+{
+}
+#typev gpsdrivergeofence_c1796 170 "%0gpsdrivergeofence.c::1796 WaitForWiFiAPCmdDone WAIT_TIMEOUT!!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForWiFiAPCmdDone
+{
+}
+#typev gpsdrivergeofence_c1786 169 "%0gpsdrivergeofence.c::1786 QCGPS:  WaitForWiFiAPCmdDone  QMI_LOC_INJECT_WIFI_AP_DATA_IND_V02  Status :  %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForWiFiAPCmdDone
+{
+g_resp_notify_wifi_ap_data_inject_status.respNotifyWifiAPDataInjectStatusIndPayload.status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1776 168 "%0gpsdrivergeofence.c::1776 QCGPS:  WaitForWiFiAPCmdDone  QMI_LOC_GET_SERVICE_REVISION_IND_V02  Status :  %10!d!  Minor revision : 0x%11!x!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForWiFiAPCmdDone
+{
+g_resp_get_service_revision_status.respGetServiceRevisionIndPayload.status, ItemLong -- 10
+g_resp_get_service_revision_status.respGetServiceRevisionIndPayload.revision, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c1772 167 "%0gpsdrivergeofence.c::1772 QCGPS:  WaitForWiFiAPCmdDone  QMI_LOC_NOTIFY_WIFI_ATTACHMENT_STATUS_IND_V02  Status :  %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForWiFiAPCmdDone
+{
+g_resp_notify_wifi_attachment_status.respNotifyWifiAttachmentStatusIndPayload.status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1768 166 "%0gpsdrivergeofence.c::1768 QCGPS:  WaitForWiFiAPCmdDone  QMI_LOC_NOTIFY_WIFI_ENABLED_STATUS_IND_V02  Status :  %10!d! " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForWiFiAPCmdDone
+{
+g_resp_notify_wifi_enabled_status.respNotifyWifiEnabledStatusIndPayload.status, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1764 165 "%0gpsdrivergeofence.c::1764 QCGPS:  WaitForWiFiAPCmdDone  QMI_LOC_INJECT_WIFI_POSITION_IND_V02  Success " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WaitForWiFiAPCmdDone
+{
+}
+#typev gpsdrivergeofence_c1758 164 "%0gpsdrivergeofence.c::1758 QCGNSS_GF:  WaitForWiFiAPCmdDone Event Received Ind : %10!d!" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_LOW FUNC=WaitForWiFiAPCmdDone
+{
+g_GfwifiAprespIndId, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c1753 163 "%0gpsdrivergeofence.c::1753 QCGNSS_GF: --> WaitForWiFiAPCmdDone" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=WaitForWiFiAPCmdDone
+{
+}
+#typev gpsdrivergeofence_c2663 245 "%0WiFiNotificationCallback" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WiFiNotificationCallback
+{
+}
+#typev gpsdrivergeofence_c2585 244 "%0WiFiNotificationCallback for C/D/H" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WiFiNotificationCallback
+{
+}
+#typev gpsdrivergeofence_c2580 243 "%0WiFiNotificationCallback free wifi scan disabled" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=WiFiNotificationCallback
+{
+}
+#typev gpsdrivergeofence_c2577 242 "%0[MUKU]************ WiFiNotificationCallback Notification Source :  %10!d!  Notification Code : %11!d!  " //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=WiFiNotificationCallback
+{
+Data->NotificationSource, ItemLong -- 10
+Data->NotificationCode, ItemLong -- 11
+}
+#typev gpsdrivergeofence_c2709 253 "%0Wips_wlan_close: Error in the WlanCloseHandle() function call" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=Wips_wlan_cleanup
+{
+}
+#typev gpsdrivergeofence_c2702 252 "%0Wips_wlan_init: Error in the WlanRegisterNotification() function call" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=Wips_wlan_cleanup
+{
+}
+#typev gpsdrivergeofence_c2696 251 "%0Wips_wlan_cleanup: Called" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=Wips_wlan_cleanup
+{
+}
+#typev gpsdrivergeofence_c2688 250 "%0WlanRegisterNotification: Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=Wips_wlan_init
+{
+}
+#typev gpsdrivergeofence_c2686 249 "%0Wips_wlan_init: Error in the WlanRegisterNotification() function call" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=Wips_wlan_init
+{
+}
+#typev gpsdrivergeofence_c2682 248 "%0WlanOpenHandle: Success" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_MEDIUM FUNC=Wips_wlan_init
+{
+}
+#typev gpsdrivergeofence_c2678 247 "%0Wips_wlan_init: Error in the WlanOpenHandle() function call Error code = %10!d!" //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=Wips_wlan_init
+{
+Error, ItemLong -- 10
+}
+#typev gpsdrivergeofence_c2674 246 "%0Opening the WLAN handle" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=Wips_wlan_init
+{
+}
+#typev gpsdrivergeofence_c1012 87 "%0gpsdrivergeofence.c::1012 QCGNSS_GF:  Unable to allocate memory for geofence alert queue " //   LEVEL=TRACE_LEVEL_ERROR FLAGS=GF_DBG_ERR FUNC=processGFBreach
+{
+}
+#typev gpsdrivergeofence_c1008 86 "%0gpsdrivergeofence.c::1008 QCGNSS_GF:  Added breach information to a queue" //   LEVEL=TRACE_LEVEL_INFORMATION FLAGS=GF_DBG_INFO_HIGH FUNC=processGFBreach
+{
+}
